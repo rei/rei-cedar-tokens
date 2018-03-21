@@ -4,7 +4,9 @@
       v-for="group in grouped"
       :key="group[0].type"
     >
-      <h3>{{group[0].type}}</h3>
+      <h3>
+        <span class="type-title">{{group[0].type}}</span>
+      </h3>
 
       <table>
         <thead>
@@ -14,7 +16,7 @@
             <th>Example:</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="category-tbody">
           <prop-sorter
             v-for="prop in group"
             :key="prop.name"
@@ -48,5 +50,13 @@ export default {
 </script>
 
 <style>
+  .type-title {
+    display: inline-block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+  }
 
+  .category-tbody > tr td {
+    padding: 10px 5px;
+  }
 </style>

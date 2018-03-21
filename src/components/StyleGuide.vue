@@ -4,7 +4,8 @@
       v-for="(values, category) in data"
       :key="category"
     >
-      <h2>{{category}}</h2>
+      <hr>
+      <h2 class="category-title">{{category}}</h2>
       <category :tokens="values" />
     </div>
   </section>
@@ -27,5 +28,7 @@ export default {
 </script>
 
 <style>
-
+  .category-title {
+    margin-bottom: 16px;
+  }
 </style>

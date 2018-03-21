@@ -3,14 +3,14 @@
     <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
     <td>
-      <div class="color-example" :style="{backgroundColor: prop.value}"/>
+      <div class="prominence-example" :style="{boxShadow: prop.value}"/>
     </td>
   </tr>
 </template>
 
 <script>
 export default {
-  name: 'TypeColor',
+  name: 'TypeProminence',
   props: {
     prop: Object,
   },
@@ -18,8 +18,9 @@ export default {
 </script>
 
 <style>
-  .color-example {
-    height: 32px;
+  .prominence-example {
+    border: 1px solid black;
     width: 32px;
+    height: 32px;
   }
 </style>

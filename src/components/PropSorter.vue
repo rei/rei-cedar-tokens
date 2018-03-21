@@ -1,6 +1,8 @@
 <script>
 import TypeColor from './TypeColor';
 import TypeSpace from './TypeSpace';
+import TypeRadius from './TypeRadius';
+import TypeProminence from './TypeProminence';
 import TypeTypography from './TypeTypography';
 import TypeToken from './TypeToken';
 
@@ -15,6 +17,8 @@ export default {
     function tokenComponent() {
       if (ctx.props.type === 'color') return TypeColor;
       if (ctx.props.type === 'spacing') return TypeSpace;
+      if (ctx.props.type === 'radius') return TypeRadius;
+      if (ctx.props.type === 'prominence') return TypeProminence;
       if (ctx.props.type === 'typography') return TypeTypography;
 
       return TypeToken;

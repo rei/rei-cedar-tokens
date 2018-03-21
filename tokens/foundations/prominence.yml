@@ -1,0 +1,21 @@
+aliases: &prominence
+  # Prominence
+  # Value is 'offset-x | offset-y | blur-radius | spread-radius | color | opacity'
+  # All values are required. Color will be transformed to proper rgba
+  prominence-flat:
+    value: '0 0 0 0 {!lost-in-space} 0.2'
+  prominence-raised:
+    value: '2px 2px 2px 0 {!lost-in-space} 0.2'
+  prominence-elevated:
+    value: '4px 4px 4px 0 {!lost-in-space} 0.2'
+  prominence-floating:
+    value: '8px 8px 8px 0 {!lost-in-space} 0.2'
+  prominence-lifted:
+    value: '16px 16px 16px 0 {!lost-in-space} 0.2'
+
+props: *prominence
+global:
+  category: foundations
+  type: prominence
+imports: 
+  - ./colors.yml

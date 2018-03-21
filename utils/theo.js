@@ -4,8 +4,24 @@ const theo = require('theo');
 const path = require('path');
 const fs = require('fs-extra');
 const groupBy = require('lodash/groupBy');
+const tinycolor = require('tinycolor2');
 
-theo.registerTransform('cedar-web', ['color/hex']);
+
+theo.registerValueTransform(
+  'prominence/web',
+  prop => prop.get('type') === 'prominence',
+  (prop) => {
+    const [x, y, blur, spread, color, opacity] = prop.get('value').split(' ');
+    const rgbColor = tinycolor(color);
+    rgbColor.toRgbString();
+    rgbColor.setAlpha(opacity);
+    const str = rgbColor.toRgbString();
+
+    return `${x} ${y} ${blur} ${spread} ${str}`;
+  },
+);
+
+theo.registerTransform('cedar-web', ['color/hex', 'prominence/web']);
 
 theo.registerFormat('styleguide', (result) => {
   const r = result.toJS();

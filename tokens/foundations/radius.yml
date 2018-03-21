@@ -1,0 +1,17 @@
+aliases: &radius
+  # Prominence
+  radius-sharp:
+    value: '0'
+  radius-soft:
+    value: '2px'
+  radius-softer:
+    value: '4px'
+  radius-round:
+    value: '50%'
+
+props: *radius
+global:
+  category: foundations
+  type: radius
+imports: 
+  - ./colors.yml
