@@ -1,0 +1,14 @@
+aliases: &breakpoint
+  breakpoint-xs: 
+    value: 0
+  breakpoint-sm: 
+    value: 768px
+  breakpoint-md: 
+    value: 992px
+  breakpoint-lg: 
+    value: 1200px
+
+props: *breakpoint
+global:
+  category: foundations
+  type: spacing
