@@ -5,6 +5,7 @@ import TypeRadius from './TypeRadius';
 import TypeProminence from './TypeProminence';
 import TypeTypography from './TypeTypography';
 import TypeToken from './TypeToken';
+import TypeInset from './TypeInset';
 
 export default {
   name: 'PropSorter',
@@ -20,6 +21,7 @@ export default {
       if (ctx.props.type === 'radius') return TypeRadius;
       if (ctx.props.type === 'prominence') return TypeProminence;
       if (ctx.props.type === 'typography') return TypeTypography;
+      if (ctx.props.type === 'inset') return TypeInset;
 
       return TypeToken;
     }
