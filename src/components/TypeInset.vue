@@ -3,7 +3,7 @@
     <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
     <td>
-      <div class="inset-example" :style="{borderWidth: prop.value}"/>
+      <div class="inset-example" :style="{boxShadow: `${prop.value}`}"/>
     </td>
   </tr>
 </template>
