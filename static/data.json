@@ -227,15 +227,15 @@
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(2px * 1.5)",
-      "originalValue": "({!space-eighth-x} * {!space-modifier-stretch})",
+      "value": "calc(2px * 1.5)",
+      "originalValue": "calc({!space-eighth-x} * {!space-modifier-stretch})",
       "name": "space-eighth-x-stretch"
     },
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(4px * 0.5)",
-      "originalValue": "({!space-quarter-x} * {!space-modifier-squish})",
+      "value": "calc(4px * 0.5)",
+      "originalValue": "calc({!space-quarter-x} * {!space-modifier-squish})",
       "name": "space-quarter-x-squish"
     },
     {
@@ -248,15 +248,15 @@
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(4px * 1.5)",
-      "originalValue": "({!space-quarter-x} * {!space-modifier-stretch})",
+      "value": "calc(4px * 1.5)",
+      "originalValue": "calc({!space-quarter-x} * {!space-modifier-stretch})",
       "name": "space-quarter-x-stretch"
     },
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(2px * 0.5)",
-      "originalValue": "({!space-eighth-x} * {!space-modifier-squish})",
+      "value": "calc(2px * 0.5)",
+      "originalValue": "calc({!space-eighth-x} * {!space-modifier-squish})",
       "name": "space-eighth-x-squish"
     },
     {
@@ -269,22 +269,22 @@
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(16px * 1.5)",
-      "originalValue": "({!space-1-x} * {!space-modifier-stretch})",
+      "value": "calc(16px * 1.5)",
+      "originalValue": "calc({!space-1-x} * {!space-modifier-stretch})",
       "name": "space-1-x-stretch"
     },
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(32px * 1.5)",
-      "originalValue": "({!space-2-x} * {!space-modifier-stretch})",
+      "value": "calc(32px * 1.5)",
+      "originalValue": "calc({!space-2-x} * {!space-modifier-stretch})",
       "name": "space-2-x-stretch"
     },
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(8px * 0.5)",
-      "originalValue": "({!space-half-x} * {!space-modifier-squish})",
+      "value": "calc(8px * 0.5)",
+      "originalValue": "calc({!space-half-x} * {!space-modifier-squish})",
       "name": "space-half-x-squish"
     },
     {
@@ -297,8 +297,8 @@
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(64px * 1.5)",
-      "originalValue": "({!space-4-x} * {!space-modifier-stretch})",
+      "value": "calc(64px * 1.5)",
+      "originalValue": "calc({!space-4-x} * {!space-modifier-stretch})",
       "name": "space-4-x-stretch"
     },
     {
@@ -339,8 +339,8 @@
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(64px * 0.5)",
-      "originalValue": "({!space-4-x} * {!space-modifier-squish})",
+      "value": "calc(64px * 0.5)",
+      "originalValue": "calc({!space-4-x} * {!space-modifier-squish})",
       "name": "space-4-x-squish"
     },
     {
@@ -353,22 +353,22 @@
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(8px * 1.5)",
-      "originalValue": "({!space-half-x} * {!space-modifier-stretch})",
+      "value": "calc(8px * 1.5)",
+      "originalValue": "calc({!space-half-x} * {!space-modifier-stretch})",
       "name": "space-half-x-stretch"
     },
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(32px * 0.5)",
-      "originalValue": "({!space-2-x} * {!space-modifier-squish})",
+      "value": "calc(32px * 0.5)",
+      "originalValue": "calc({!space-2-x} * {!space-modifier-squish})",
       "name": "space-2-x-squish"
     },
     {
       "category": "foundations",
       "type": "spacing",
-      "value": "(16px * 0.5)",
-      "originalValue": "({!space-1-x} * {!space-modifier-squish})",
+      "value": "calc(16px * 0.5)",
+      "originalValue": "calc({!space-1-x} * {!space-modifier-squish})",
       "name": "space-1-x-squish"
     },
     {
@@ -437,49 +437,49 @@
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(2px * 0.5) 2px",
+      "value": "calc(2px * 0.5) 2px",
       "originalValue": "{!space-eighth-x-squish} {!space-eighth-x}",
       "name": "inset-eighth-x-squish"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(16px * 1.5) 16px",
+      "value": "calc(16px * 1.5) 16px",
       "originalValue": "{!space-1-x-stretch} {!space-1-x}",
       "name": "inset-1-x-stretch"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(32px * 1.5) 32px",
+      "value": "calc(32px * 1.5) 32px",
       "originalValue": "{!space-2-x-stretch} {!space-2-x}",
       "name": "inset-2-x-stretch"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(64px * 0.5) 64px",
+      "value": "calc(64px * 0.5) 64px",
       "originalValue": "{!space-4-x-squish} {!space-4-x}",
       "name": "inset-4-x-squish"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(8px * 1.5) 8px",
+      "value": "calc(8px * 1.5) 8px",
       "originalValue": "{!space-half-x-stretch} {!space-half-x}",
       "name": "inset-half-x-stretch"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(8px * 0.5) 8px",
+      "value": "calc(8px * 0.5) 8px",
       "originalValue": "{!space-half-x-squish} {!space-half-x}",
       "name": "inset-half-x-squish"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(32px * 0.5) 32px",
+      "value": "calc(32px * 0.5) 32px",
       "originalValue": "{!space-2-x-squish} {!space-2-x}",
       "name": "inset-2-x-squish"
     },
@@ -493,14 +493,14 @@
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(64px * 1.5) 64px",
+      "value": "calc(64px * 1.5) 64px",
       "originalValue": "{!space-4-x-stretch} {!space-4-x}",
       "name": "inset-4-x-stretch"
     },
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(16px * 0.5) 16px",
+      "value": "calc(16px * 0.5) 16px",
       "originalValue": "{!space-1-x-squish} {!space-1-x}",
       "name": "inset-1-x-squish"
     },
@@ -514,7 +514,7 @@
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(2px * 1.5) 2px",
+      "value": "calc(2px * 1.5) 2px",
       "originalValue": "{!space-eighth-x-stretch} {!space-eighth-x}",
       "name": "inset-eighth-x-stretch"
     },
@@ -528,7 +528,7 @@
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(4px * 0.5) 4px",
+      "value": "calc(4px * 0.5) 4px",
       "originalValue": "{!space-quarter-x-squish} {!space-quarter-x}",
       "name": "inset-quarter-x-squish"
     },
@@ -556,7 +556,7 @@
     {
       "category": "foundations",
       "type": "inset",
-      "value": "(4px * 1.5) 4px",
+      "value": "calc(4px * 1.5) 4px",
       "originalValue": "{!space-quarter-x-stretch} {!space-quarter-x}",
       "name": "inset-quarter-x-stretch"
     }
