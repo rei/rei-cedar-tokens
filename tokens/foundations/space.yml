@@ -1,0 +1,55 @@
+aliases: &spacing
+  space-eighth-x: 
+    value: 2px
+  space-quarter-x: 
+    value: 4px
+  space-half-x: 
+    value: 8px
+  space-1-x: 
+    value: 16px
+  space-2-x: 
+    value: 32px
+  space-4-x: 
+    value: 64px
+  space-8-x: 
+    value: 128px
+  # modifiers
+  space-modifier-stretch: 
+    value: 1.5
+  space-modifier-squish: 
+    value: 0.5
+  # extra extra small
+  space-eighth-x-squish: 
+    value: '({!space-eighth-x} * {!space-modifier-squish})'
+  space-eighth-x-stretch: 
+    value: '({!space-eighth-x} * {!space-modifier-stretch})'
+  # extra small
+  space-quarter-x-squish: 
+    value: '({!space-quarter-x} * {!space-modifier-squish})'
+  space-quarter-x-stretch: 
+    value: '({!space-quarter-x} * {!space-modifier-stretch})'
+  # small
+  space-half-x-squish: 
+    value: '({!space-half-x} * {!space-modifier-squish})'
+  space-half-x-stretch: 
+    value: '({!space-half-x} * {!space-modifier-stretch})'
+  # medium
+  space-1-x-squish: 
+    value: '({!space-1-x} * {!space-modifier-squish})'
+  space-1-x-stretch: 
+    value: '({!space-1-x} * {!space-modifier-stretch})'
+  # large
+  space-2-x-squish: 
+    value: '({!space-2-x} * {!space-modifier-squish})'
+  space-2-x-stretch: 
+    value: '({!space-2-x} * {!space-modifier-stretch})'
+  # extra large
+  space-4-x-squish: 
+    value: '({!space-4-x} * {!space-modifier-squish})'
+  space-4-x-stretch: 
+    value: '({!space-4-x} * {!space-modifier-stretch})'
+
+props: *spacing
+global:
+  category: foundations
+  type: spacing
