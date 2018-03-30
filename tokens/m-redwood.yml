@@ -25,10 +25,14 @@ aliases:
   body-variant: normal
   body-weight: 400
   body-spacing: normal
-  body-30-size: 20px
-  body-30-height: 32px
-  body-20-size: 18px
-  body-20-height: 28px
+  body-40-size: 20px
+  body-40-height: 32px
+  body-30-size: 18px
+  body-30-height: 28px
+  body-20-size: 16px
+  body-20-height: 26px
+  body-10-size: 14px
+  body-10-height: 24px
 props:
   # Display
   redwood-display-70:
@@ -95,6 +99,15 @@ props:
       line-height: "{!display-10-height}"
       letter-spacing: "{!display-spacing}"
   # body
+  redwood-body-40:
+    value:
+      font-style: "{!body-style}"
+      font-variant: "{!body-variant}"
+      font-weight: "{!body-weight}"
+      font-size: "{!body-40-size}"
+      line-height: "{!body-40-height}"
+      font-family: "{!redwood-family}"
+      letter-spacing: "{!body-spacing}"
   redwood-body-30:
     value:
       font-style: "{!body-style}"
@@ -111,6 +124,15 @@ props:
       font-weight: "{!body-weight}"
       font-size: "{!body-20-size}"
       line-height: "{!body-20-height}"
+      font-family: "{!redwood-family}"
+      letter-spacing: "{!body-spacing}"
+  redwood-body-10:
+    value:
+      font-style: "{!body-style}"
+      font-variant: "{!body-variant}"
+      font-weight: "{!body-weight}"
+      font-size: "{!body-10-size}"
+      line-height: "{!body-10-height}"
       font-family: "{!redwood-family}"
       letter-spacing: "{!body-spacing}"
 global:
