@@ -6,6 +6,7 @@ import TypeProminence from './TypeProminence';
 import TypeTypography from './TypeTypography';
 import TypeToken from './TypeToken';
 import TypeInset from './TypeInset';
+import TypeBreakpoint from './TypeBreakpoint';
 
 export default {
   name: 'PropSorter',
@@ -22,6 +23,7 @@ export default {
       if (ctx.props.type === 'prominence') return TypeProminence;
       if (ctx.props.type === 'typography') return TypeTypography;
       if (ctx.props.type === 'inset') return TypeInset;
+      if (ctx.props.type === 'breakpoint') return TypeBreakpoint;
 
       return TypeToken;
     }

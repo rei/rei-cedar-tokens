@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     getInset(posy, posx, negy, negx) {
-      console.log(posx, posy, negx, negy);
+      // console.log(posx, posy, negx, negy);
       return `inset ${negx} ${negy} 0 rgb(199, 220, 191), inset ${posx} ${posy} 0 rgb(199, 220, 191)`;
     },
   },
