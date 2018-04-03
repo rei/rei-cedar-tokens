@@ -62,9 +62,6 @@ props:
   button-secondary-hover-background-color:
     value: "{!moon-shot}"
     type: color
-  button-secondary-focus-color:
-    value: "{!heart-of-darkness}"
-    type: color
   ## disabled
   button-secondary-disabled-background-color:
     value: "{!clean-slate}"
@@ -95,12 +92,6 @@ props:
   button-cta-brand-hover-background-color:
     value: '{!closed-on-monday}'
     type: color
-  button-cta-brand-focus-color:
-    value: "{!clean-slate}"
-    type: color
-  button-cta-brand-focus-background-color:
-    value: '{!easily-excited}'
-    type: color
 
 #  ==========================================================================
 # CTA-Dark
@@ -115,12 +106,13 @@ props:
     value: 'inset 0 0 0 1px {!threat-level-midnight}'
   # States
   ## Hover & Active
+  button-cta-dark-hover-color:
+    value: "{!clean-slate}"
+    type: color
   button-cta-dark-hover-background-color:
     value: '{!threat-level-midnight}'
     type: color
-  button-cta-dark-focus-background-color:
-    value: '{!heart-of-darkness}'
-    type: color
+
 
 #  ==========================================================================
 # CTA-Light
@@ -141,12 +133,6 @@ props:
   button-cta-light-hover-background-color:
     value: '{!moon-shot}'
     type: color
-  button-cta-light-focus-color:
-    value: "{!heart-of-darkness}"
-    type: color
-  button-cta-light-focus-background-color:
-    value: '{!clean-slate}'
-    type: color
 
 #  ==========================================================================
 # CTA-Sale
@@ -166,12 +152,6 @@ props:
     type: color
   button-cta-sale-hover-background-color:
     value: '{!quick-fixe}'
-    type: color
-  button-cta-sale-focus-color:
-    value: "{!clean-slate}"
-    type: color
-  button-cta-sale-focus-background-color:
-    value: '{!high-stakes}'
     type: color
 
 global:
