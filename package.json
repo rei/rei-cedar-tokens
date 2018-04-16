@@ -8,10 +8,10 @@
     "tokens"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "dev": "npm run theo && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run theo && npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js",
+    "build": "npm run theo && node build/build.js",
     "theo": "node utils/theo.js"
   },
   "devDependencies": {
