@@ -5,45 +5,57 @@ aliases: &spacing
     value: 4px
   space-half-x: 
     value: 8px
+  space-three-quarter-x: 
+    value: 12px
   space-1-x: 
     value: 16px
+  space-1-and-a-half-x: 
+    value: 24px
   space-2-x: 
     value: 32px
   space-4-x: 
     value: 64px
-  space-8-x: 
-    value: 128px
   # modifiers
   space-modifier-stretch: 
     value: 1.5
   space-modifier-squish: 
     value: 0.5
-  # extra extra small
+  # eighth-x
   space-eighth-x-squish: 
     value: 'calc({!space-eighth-x} * {!space-modifier-squish})'
   space-eighth-x-stretch: 
     value: 'calc({!space-eighth-x} * {!space-modifier-stretch})'
-  # extra small
+  # quarter-x
   space-quarter-x-squish: 
     value: 'calc({!space-quarter-x} * {!space-modifier-squish})'
   space-quarter-x-stretch: 
     value: 'calc({!space-quarter-x} * {!space-modifier-stretch})'
-  # small
+  # half-x
   space-half-x-squish: 
     value: 'calc({!space-half-x} * {!space-modifier-squish})'
   space-half-x-stretch: 
     value: 'calc({!space-half-x} * {!space-modifier-stretch})'
-  # medium
+  # three-quarter-x
+  space-three-quarter-x-squish: 
+    value: 'calc({!space-three-quarter-x} * {!space-modifier-squish})'
+  space-three-quarter-x-stretch: 
+    value: 'calc({!space-three-quarter-x} * {!space-modifier-stretch})'
+  # 1-x
   space-1-x-squish: 
     value: 'calc({!space-1-x} * {!space-modifier-squish})'
   space-1-x-stretch: 
     value: 'calc({!space-1-x} * {!space-modifier-stretch})'
-  # large
+  # 1-and-a-half-x
+  space-1-and-a-half-x-squish: 
+    value: 'calc({!space-1-and-a-half-x} * {!space-modifier-squish})'
+  space-1-and-a-half-x-stretch: 
+    value: 'calc({!space-1-and-a-half-x} * {!space-modifier-stretch})'
+  # 2-x
   space-2-x-squish: 
     value: 'calc({!space-2-x} * {!space-modifier-squish})'
   space-2-x-stretch: 
     value: 'calc({!space-2-x} * {!space-modifier-stretch})'
-  # extra large
+  # 4-x
   space-4-x-squish: 
     value: 'calc({!space-4-x} * {!space-modifier-squish})'
   space-4-x-stretch: 
