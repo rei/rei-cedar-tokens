@@ -1,0 +1,18 @@
+props:
+  icon-fill:
+    value: "{!heart-of-darkness}"
+    type: color
+  icon-size:
+    value: 24px
+    type: spacing
+  icon-size-sm:
+    value: 16px
+    type: spacing
+  icon-size-lg:
+    value: 32px
+    type: spacing
+global:
+  category: icon
+  type: token
+imports:
+  - ./foundations/_index.yml
