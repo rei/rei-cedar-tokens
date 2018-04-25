@@ -1,0 +1,73 @@
+props:
+  # radio DEFAULTS
+  radio-label-color:
+    value: "{!heart-of-darkness}"
+    type: color
+  radio-figure-size:
+    value: "16px"
+    type: spacing
+  radio-figure-radius:
+    value: "{!radius-round}"
+    type: radius
+  radio-figure-space-top:
+    value: "{!space-quarter-x}"
+    type: spacing
+  radio-figure-space-right:
+    value: "{!space-half-x}"
+    type: spacing
+  radio-figure-background-color:
+    value: "white"
+    type: color
+  radio-figure-border-color:
+    value: "{!holy-smoke}"
+    type: color
+  radio-figure-selected-size:
+    value: "8px"
+    type: spacing
+  # radio COMPACT
+  radio-compact-figure-space-top:
+    value: "{!space-eighth-x}"
+    type: spacing
+  # radio CHECKED state
+  radio-figure-checked-background-color:
+    value: "{!easily-excited}"
+    type: color
+  radio-figure-checked-border-color:
+    value: "{!easily-excited}"
+    type: color
+  # radio HOVER state
+  radio-figure-hover-border-color:
+    value: "{!holy-smoke}"
+    type: color
+  # radio CHECKED + HOVER state
+  radio-figure-checked-hover-background-color:
+    value: "{!closed-on-monday}"
+    type: color
+  radio-figure-checked-hover-border-color:
+    value: "{!closed-on-monday}"
+    type: color
+  # radio DISABLED state
+  radio-figure-disabled-border-color:
+    value: "{!partly-cloudy}"
+    type: color
+  radio-figure-disabled-background-color:
+    value: "{!partly-cloudy}"
+    type: color
+  radio-label-disabled-color:
+    value: "{!grey-matter}"
+    type: color
+  # radio FOCUS state
+  radio-focus-outline:
+    value: 0 0 8px 0 {!suede-shoes} 1
+    type: prominence
+  radio-figure-focus-border-color:
+    value: "{!suede-shoes}"
+    type: color
+  # radio ACTIVE state
+  radio-figure-active-border-color:
+    value: "{!suede-shoes}"
+    type: color
+global:
+  category: radio
+imports:
+  - ./foundations/_index.yml
