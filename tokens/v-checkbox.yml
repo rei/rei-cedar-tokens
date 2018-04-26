@@ -7,7 +7,7 @@ props:
     value: "16px"
     type: spacing
   checkbox-figure-radius:
-    value: "{!radius-soft}"
+    value: "{!radius-softer}"
     type: radius
   checkbox-figure-space-top:
     value: "{!space-quarter-x}"
@@ -16,13 +16,13 @@ props:
     value: "{!space-half-x}"
     type: spacing
   checkbox-figure-background-color:
-    value: "white"
+    value: "{!clean-slate}"
     type: color
   checkbox-figure-border-color:
-    value: "{!holy-smoke}"
+    value: "{!taken-for-granite}"
     type: color
   checkbox-figure-icon-fill:
-    value: "white"
+    value: "{!clean-slate}"
     type: color
   # checkbox COMPACT
   checkbox-compact-figure-space-top:
@@ -37,7 +37,10 @@ props:
     type: color
   # checkbox HOVER state
   checkbox-figure-hover-border-color:
-    value: "{!holy-smoke}"
+    value: "{!taken-for-granite}"
+    type: color
+  checkbox-figure-hover-background-color:
+    value: "{!moon-shot}"
     type: color
   # checkbox CHECKED + HOVER state
   checkbox-figure-checked-hover-background-color:
@@ -50,22 +53,25 @@ props:
   checkbox-figure-disabled-border-color:
     value: "{!partly-cloudy}"
     type: color
-  checkbox-figure-disabled-background-color:
+  checkbox-figure-checked-disabled-background-color:
     value: "{!partly-cloudy}"
+    type: color
+  checkbox-figure-disabled-background-color:
+    value: "{!moon-shot}"
     type: color
   checkbox-label-disabled-color:
     value: "{!grey-matter}"
     type: color
   # checkbox FOCUS state
   checkbox-focus-outline:
-    value: 0 0 8px 0 {!suede-shoes} 1
+    value: 0 0 8px 0 {!easily-excited} 1
     type: prominence
   checkbox-figure-focus-border-color:
-    value: "{!suede-shoes}"
+    value: "{!easily-excited}"
     type: color
   # checkbox ACTIVE state
   checkbox-figure-active-border-color:
-    value: "{!suede-shoes}"
+    value: "{!easily-excited}"
     type: color
   # checkbox INDETERMINATE state
   checkbox-figure-indeterminate-background-color:
@@ -74,6 +80,9 @@ props:
   checkbox-figure-indeterminate-border-color:
     value: "{!easily-excited}"
     type: color
+  checkbox-figure-indeterminate-border-radius:
+    value: "{!radius-soft}"
+    type: radius
   checkbox-figure-indeterminate-size:
     value: "8px"
     type: spacing

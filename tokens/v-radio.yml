@@ -16,10 +16,10 @@ props:
     value: "{!space-half-x}"
     type: spacing
   radio-figure-background-color:
-    value: "white"
+    value: "{!clean-slate}"
     type: color
   radio-figure-border-color:
-    value: "{!holy-smoke}"
+    value: "{!taken-for-granite}"
     type: color
   radio-figure-selected-size:
     value: "8px"
@@ -37,7 +37,10 @@ props:
     type: color
   # radio HOVER state
   radio-figure-hover-border-color:
-    value: "{!holy-smoke}"
+    value: "{!taken-for-granite}"
+    type: color
+  radio-figure-hover-background-color:
+    value: "{!moon-shot}"
     type: color
   # radio CHECKED + HOVER state
   radio-figure-checked-hover-background-color:
@@ -50,22 +53,25 @@ props:
   radio-figure-disabled-border-color:
     value: "{!partly-cloudy}"
     type: color
-  radio-figure-disabled-background-color:
+  radio-figure-checked-disabled-background-color:
     value: "{!partly-cloudy}"
+    type: color
+  radio-figure-disabled-background-color:
+    value: "{!moon-shot}"
     type: color
   radio-label-disabled-color:
     value: "{!grey-matter}"
     type: color
   # radio FOCUS state
   radio-focus-outline:
-    value: 0 0 8px 0 {!suede-shoes} 1
+    value: 0 0 8px 0 {!easily-excited} 1
     type: prominence
   radio-figure-focus-border-color:
-    value: "{!suede-shoes}"
+    value: "{!easily-excited}"
     type: color
   # radio ACTIVE state
   radio-figure-active-border-color:
-    value: "{!suede-shoes}"
+    value: "{!easily-excited}"
     type: color
 global:
   category: radio
