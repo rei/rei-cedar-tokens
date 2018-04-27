@@ -30,9 +30,10 @@ If you are only updating an existing file, make changes and begin at step 3.
 
 `tokens/foundations/_index.yml` for foundations. `tokens/m_index.yml` for mixins. `tokens/v_index.yml` for variables.
 
-3. `npm run theo` to test that the files are valid and can be processed.
-4. `npm run dev` to start a dev server and verify the values generated are what are expected.
-5. Start a PR
+3. Add tokens
+4. `npm run theo` to test that the files are valid and can be processed.
+5. `npm run dev` to start a dev server and verify the values generated are what are expected.
+6. Start a PR
 
 ## Merging a PR/Releasing tokens
 
