@@ -1,0 +1,28 @@
+#  ==========================================================================
+# breadcrumb.yml
+#
+#   TOC:
+#
+#  Base
+#  Size Variants
+#    @MD-LG
+#    @XS-SM
+#  ==========================================================================
+props:
+  breadcrumb-text-color:
+    value: "{!taken-for-granite}"
+    type: color
+  breadcrumb-last-child-text-color:
+    value: "{!heart-of-darkness}"
+    type: color
+  breadcrumb-hover-text-color:
+    value: "{!heart-of-darkness}"
+    type: color
+  breadcrumb-delimiter-text-color:
+    value: "{!heart-of-darkness}"
+    type: color
+global:
+  category: breadcrumb
+  type: token
+imports:
+  - ./foundations/_index.yml
