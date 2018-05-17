@@ -11,18 +11,14 @@
 props:
   breadcrumb-text-color:
     value: "{!taken-for-granite}"
-    type: color
   breadcrumb-last-child-text-color:
     value: "{!heart-of-darkness}"
-    type: color
   breadcrumb-hover-text-color:
     value: "{!heart-of-darkness}"
-    type: color
   breadcrumb-delimiter-text-color:
-    value: "{!heart-of-darkness}"
-    type: color
+    value: "{!taken-for-granite}"
 global:
   category: breadcrumb
-  type: token
+  type: color
 imports:
   - ./foundations/_index.yml
