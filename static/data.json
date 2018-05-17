@@ -934,59 +934,6 @@
       "name": "button-background-color"
     }
   ],
-  "paragraph": [
-    {
-      "category": "paragraph",
-      "type": "token",
-      "value": "634px",
-      "originalValue": "634px",
-      "name": "body-paragraph-max-width"
-    },
-    {
-      "category": "paragraph",
-      "type": "token",
-      "value": "16px",
-      "originalValue": "{!space-1-x}",
-      "name": "body-paragraph-stack"
-    },
-    {
-      "category": "paragraph",
-      "type": "token",
-      "value": "32px",
-      "originalValue": "{!space-2-x}",
-      "name": "body-paragraph-stack_sm"
-    }
-  ],
-  "icon": [
-    {
-      "category": "icon",
-      "type": "color",
-      "value": "#292929",
-      "originalValue": "{!heart-of-darkness}",
-      "name": "icon-fill"
-    },
-    {
-      "category": "icon",
-      "type": "spacing",
-      "value": "24px",
-      "originalValue": "24px",
-      "name": "icon-size"
-    },
-    {
-      "category": "icon",
-      "type": "spacing",
-      "value": "16px",
-      "originalValue": "16px",
-      "name": "icon-size-sm"
-    },
-    {
-      "category": "icon",
-      "type": "spacing",
-      "value": "32px",
-      "originalValue": "32px",
-      "name": "icon-size-lg"
-    }
-  ],
   "checkbox": [
     {
       "category": "checkbox",
@@ -1169,6 +1116,159 @@
       "type": "color",
       "originalValue": "{!closed-on-monday}",
       "name": "checkbox-figure-checked-hover-background-color"
+    }
+  ],
+  "icon": [
+    {
+      "category": "icon",
+      "type": "color",
+      "value": "#292929",
+      "originalValue": "{!heart-of-darkness}",
+      "name": "icon-fill"
+    },
+    {
+      "category": "icon",
+      "type": "spacing",
+      "value": "24px",
+      "originalValue": "24px",
+      "name": "icon-size"
+    },
+    {
+      "category": "icon",
+      "type": "spacing",
+      "value": "16px",
+      "originalValue": "16px",
+      "name": "icon-size-sm"
+    },
+    {
+      "category": "icon",
+      "type": "spacing",
+      "value": "32px",
+      "originalValue": "32px",
+      "name": "icon-size-lg"
+    }
+  ],
+  "list": [
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{2013}",
+      "originalValue": "{2013}",
+      "name": "nested-unordered-list-item-decorator"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{1em}",
+      "originalValue": "{1em}",
+      "name": "inline-list-item-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{1em}",
+      "originalValue": "{1em}",
+      "name": "nested-list-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{1.5em}",
+      "originalValue": "{1.5em}",
+      "name": "inline-unordered-list-item-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{0}",
+      "originalValue": "{0}",
+      "name": "inline-list-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{1em}",
+      "originalValue": "{1em}",
+      "name": "unordered-list-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "8px",
+      "originalValue": "{!space-half-x}",
+      "name": "nested-list-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "4px",
+      "originalValue": "{!space-quarter-x}",
+      "name": "compact-list-item-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{1.5em}",
+      "originalValue": "{1.5em}",
+      "name": "ordered-list-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{0}",
+      "originalValue": "{0}",
+      "name": "list-item-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{2022}",
+      "originalValue": "{2022}",
+      "name": "unordered-list-item-decorator"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{0.5em}",
+      "originalValue": "{0.5em}",
+      "name": "inline-compact-list-item-indentation-space"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "{2013}",
+      "originalValue": "{2013}",
+      "name": "nested-ordered-list-item-decorator"
+    },
+    {
+      "category": "list",
+      "type": "token",
+      "value": "8px",
+      "originalValue": "{!space-half-x}",
+      "name": "list-item-space"
+    }
+  ],
+  "paragraph": [
+    {
+      "category": "paragraph",
+      "type": "token",
+      "value": "634px",
+      "originalValue": "634px",
+      "name": "body-paragraph-max-width"
+    },
+    {
+      "category": "paragraph",
+      "type": "token",
+      "value": "16px",
+      "originalValue": "{!space-1-x}",
+      "name": "body-paragraph-stack"
+    },
+    {
+      "category": "paragraph",
+      "type": "token",
+      "value": "32px",
+      "originalValue": "{!space-2-x}",
+      "name": "body-paragraph-stack_sm"
     }
   ],
   "radio": [
@@ -1885,7 +1985,7 @@
       "type": "typography",
       "value": {
         "font-style": "normal",
-        "font-family": "Roboto Condensed, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "font-family": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "font-variant": "normal",
         "font-weight": "400",
         "font-size": "28px",
@@ -1954,7 +2054,7 @@
       "type": "typography",
       "value": {
         "font-style": "normal",
-        "font-family": "Roboto Condensed, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "font-family": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "font-variant": "normal",
         "font-weight": "400",
         "font-size": "18px",
@@ -1977,7 +2077,7 @@
       "type": "typography",
       "value": {
         "font-style": "normal",
-        "font-family": "Roboto Condensed, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "font-family": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "font-variant": "normal",
         "font-weight": "400",
         "font-size": "16px",
@@ -2000,7 +2100,7 @@
       "type": "typography",
       "value": {
         "font-style": "normal",
-        "font-family": "Roboto Condensed, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "font-family": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "font-variant": "normal",
         "font-weight": "400",
         "font-size": "14px",
@@ -2023,7 +2123,7 @@
       "type": "typography",
       "value": {
         "font-style": "normal",
-        "font-family": "Roboto Condensed, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "font-family": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "font-variant": "normal",
         "font-weight": "400",
         "font-size": "12px",
