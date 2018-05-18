@@ -1,0 +1,53 @@
+#  ==========================================================================
+# list.yml
+#
+# TOC:
+#  Item space
+#  Indentation space
+#  List item decorator
+#
+#  ==========================================================================
+props:
+#  ==========================================================================
+# Item space
+#  ==========================================================================
+  list-item-space:
+    value: "{!space-half-x}"
+  nested-list-space:
+    value: "{!space-half-x}"
+  compact-list-item-space:
+    value: "{!space-quarter-x}"
+  inline-list-space: 
+    value: 0
+#  ==========================================================================
+# Indentation space
+#  ==========================================================================
+  list-item-indentation-space: 
+    value: 0
+  nested-list-indentation-space: 
+    value: 1em
+  unordered-list-indentation-space: 
+    value: 1em
+  ordered-list-indentation-space: 
+    value: 1.5em
+  inline-list-item-indentation-space: 
+    value: 1em
+  inline-compact-list-item-indentation-space: 
+    value: 0.5em
+  inline-unordered-list-item-indentation-space: 
+    value: 1.5em
+#  ==========================================================================
+# List item decorator
+#  ==========================================================================
+  unordered-list-item-decorator: 
+    value: 2022
+  nested-unordered-list-item-decorator: 
+    value: 2013
+  nested-ordered-list-item-decorator: 
+    value: 2013
+
+global:
+  category: list
+  type: token
+imports:
+  - ./foundations/_index.yml
