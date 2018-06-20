@@ -1,18 +1,29 @@
 {
-  "name": "rei-cedar-tokens",
-  "version": "1.1.0",
-  "description": "tokens for cedar design system",
+  "name": "@rei/cdr-tokens",
+  "version": "0.1.6",
+  "description": "Tokens for REI cedar design system",
   "author": "REI Software Engineering",
-  "private": true,
+  "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rei/rei-cedar-tokens.git"
+  },
+  "license": "ISC",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "tokens"
+    "dist"
   ],
+  "main": "dist/cdr-tokens.common.js",
   "scripts": {
+    "prepublishOnly": "npm run theo",
     "dev": "npm run theo && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run theo && npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "npm run theo && node build/build.js",
-    "theo": "node utils/theo.js"
+    "theo": "node theo/theo.js"
   },
   "devDependencies": {
     "@rei/cdr-assets": "0.0.2",
