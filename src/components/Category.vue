@@ -43,7 +43,33 @@ export default {
   },
   computed: {
     grouped() {
-      return groupBy(this.tokens, 'type');
+      const grouped = groupBy(this.tokens, 'type');
+
+      if (grouped.motion) {
+        grouped.motion = this.reorderMotionTokens(grouped.motion);
+      }
+
+      return grouped;
+    },
+  },
+  methods: {
+    reorderMotionTokens(tokens) {
+      const duration = [];
+      const timing = [];
+      const rotation = [];
+
+      tokens.forEach((token) => {
+        const name = token.name.split('-')[0];
+        if (name === 'duration') {
+          duration.push(token);
+        } else if (name === 'timing') {
+          timing.push(token);
+        } else {
+          rotation.push(token);
+        }
+      });
+
+      return duration.concat(timing, rotation);
     },
   },
 };

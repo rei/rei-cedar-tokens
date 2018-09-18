@@ -7,6 +7,7 @@ import TypeTypography from './TypeTypography';
 import TypeToken from './TypeToken';
 import TypeInset from './TypeInset';
 import TypeBreakpoint from './TypeBreakpoint';
+import TypeMotion from './TypeMotion';
 
 export default {
   name: 'PropSorter',
@@ -24,6 +25,7 @@ export default {
       if (ctx.props.type === 'typography') return TypeTypography;
       if (ctx.props.type === 'inset') return TypeInset;
       if (ctx.props.type === 'breakpoint') return TypeBreakpoint;
+      if (ctx.props.type === 'motion') return TypeMotion;
 
       return TypeToken;
     }
