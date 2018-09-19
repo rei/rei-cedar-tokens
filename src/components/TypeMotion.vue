@@ -2,17 +2,17 @@
   <tr>
     <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
-    <td v-show="prop.name.split('-')[0] === 'duration'">
+    <td v-if="type === 'duration'">
       <div
         class="motion-example duration"
         :style="{
           'transition-duration': prop.value,
-          'transition-property': 'color',
+          'transition-property': 'background-color',
         }"
       />
     </td>
-    <td v-show="prop.name.split('-')[0] === 'timing'">
-      <!-- <div
+    <td v-if="type === 'timing'">
+      <div
         class="motion-example"
         :style="{
           'left': `${left}px`,
@@ -20,16 +20,17 @@
           'transition-duration': '500ms',
           'transition-property': 'left',
         }"
-      /> -->
+      />
     </td>
-    <td v-show="prop.name.split('-')[0] === 'rotation'">
+    <td v-if="type === 'rotation'">
       <div
         class="motion-example rotation"
         v-on:mouseover="rotate()"
         :style="{
-          'transition-duration': '400ms',
+          'transition-duration': '500ms',
           'transition-property': 'transform',
-          'transform': rotate(`${deg}deg`),
+          'transform': `rotate(${deg}deg)`,
+          'transition-timing-function': 'linear',
         }"
       />
     </td>
@@ -49,6 +50,11 @@ export default {
       left: 0,
       deg: 0,
     };
+  },
+  computed: {
+    type() {
+      return this.prop.name.split('-')[0];
+    },
   },
   methods: {
     slide() {
@@ -74,13 +80,21 @@ export default {
 .motion-example {
   width: 100px;
   height: 100px;
-  background-color: #b5292b;
+  background-color: #434343;
   position: relative;
   left: 0;
 }
 
+.motion-example.duration {
+  background-color: #3278ae;
+}
+
 .motion-example.duration:hover {
-  background-color: #367c3c;
+  background-color: #b5292b;
+}
+
+.motion-example.rotation {
+  background-color: #6c9f71;
 }
 
 </style>
