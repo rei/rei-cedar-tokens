@@ -1,5 +1,5 @@
 #  ==========================================================================
-# light.yml
+# dark.yml
 #
 #   TOC:
 #
@@ -8,16 +8,16 @@
 #  ==========================================================================
 props:
   text-color-default:
-    value: "{!text-color-primary-on-light}"
+    value: "{!text-color-primary-on-dark}"
     type: color
   text-color-primary:
-    value: "{!text-color-primary-on-light}"
+    value: "{!text-color-primary-on-dark}"
     type: color
   text-color-secondary:
-    value: "{!text-color-secondary-on-light}"
+    value: "{!text-color-secondary-on-dark}"
     type: color
 global:
-  category: theme-light
+  category: theme-dark
   type: token
 imports:
   - ./foundations/_index.yml
