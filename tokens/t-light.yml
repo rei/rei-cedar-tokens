@@ -1,0 +1,23 @@
+#  ==========================================================================
+# on-light.yml
+#
+#   TOC:
+#
+#  text-color
+#
+#  ==========================================================================
+props:
+  text-color-default:
+    value: "{!text-color-primary-on-light}"
+    type: color
+  text-color-primary:
+    value: "{!text-color-primary-on-light}"
+    type: color
+  text-color-secondary:
+    value: "{!text-color-secondary-on-light}"
+    type: color
+global:
+  category: theme-light
+  type: token
+imports:
+  - ./foundations/_index.yml
