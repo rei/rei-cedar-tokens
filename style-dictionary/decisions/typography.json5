@@ -1,0 +1,89 @@
+{
+  typography: {
+    spruce: {
+      display: {
+        // defaults
+        family: 'Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
+        style: 'normal',
+        variant: 'normal',
+        weight: '600',
+        spacing: '0.2px',
+        // specific values
+        '100': {
+          family: {
+            value: '{typography.spruce.display.family}',
+            mixin: 'spruceDisplay100',
+            property: 'font-family',
+          },
+          style: {
+            value: '{typography.spruce.display.style}',
+            mixin: 'spruceDisplay100',
+            property: 'font-style',
+          },
+          variant: {
+            value: '{typography.spruce.display.variant}',
+            mixin: 'spruceDisplay100',
+            property: 'font-variant',
+          },
+          weight: {
+            value: '{typography.spruce.display.weight}',
+            mixin: 'spruceDisplay100',
+            property: 'font-weight',
+          },
+          spacing: {
+            value: '{typography.spruce.display.spacing}',
+            mixin: 'spruceDisplay100',
+            property: 'letter-spacing',
+          },
+          size: {
+            value: '96px',
+            mixin: 'spruceDisplay100',
+            property: 'font-size',
+          },
+          height: {
+            value: '104px',
+            mixin: 'spruceDisplay100',
+            property: 'line-height',
+          },
+        },
+        '90': {
+          family: {
+            value: '{typography.spruce.display.family}',
+            mixin: 'spruceDisplay90',
+            property: 'font-family',
+          },
+          style: {
+            value: '{typography.spruce.display.style}',
+            mixin: 'spruceDisplay90',
+            property: 'font-style',
+          },
+          variant: {
+            value: '{typography.spruce.display.variant}',
+            mixin: 'spruceDisplay90',
+            property: 'font-variant',
+          },
+          weight: {
+            value: '{typography.spruce.display.weight}',
+            mixin: 'spruceDisplay90',
+            property: 'font-weight',
+          },
+          spacing: {
+            value: '{typography.spruce.display.spacing}',
+            mixin: 'spruceDisplay90',
+            property: 'letter-spacing',
+          },
+          size: {
+            value: '76px',
+            mixin: 'spruceDisplay90',
+            property: 'font-size',
+          },
+          height: {
+            value: '84px',
+            mixin: 'spruceDisplay90',
+            property: 'line-height',
+          },
+        },
+      }
+    }
+  }
+}

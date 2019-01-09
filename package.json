@@ -24,7 +24,9 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "npm run theo && node build/build.js",
     "theo": "node theo/theo.js",
-    "style": "style-dictionary build"
+    "build:tokens": "node ./build.js",
+    "clean": "rimraf sd-dist/",
+    "dict": "npm run clean && npm run build:tokens"
   },
   "devDependencies": {
     "@rei/cdr-assets": "0.0.2",

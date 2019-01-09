@@ -1,0 +1,57 @@
+{
+  "source": ["style-dictionary/**/*.json5", "style-dictionary/**/*.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "sd-dist/scss/",
+      "files": [
+        {
+          "destination": "cdr-variable.scss",
+          "format": "scss/variables"
+        },
+        {
+          "destination": "cdr-mixins.scss",
+          "format": "scss/mixin"
+        },
+      ]
+    },
+    "less": {
+      "transformGroup": "less",
+      "buildPath": "sd-dist/less/",
+      "files": [
+        {
+          "destination": "cdr-variable.less",
+          "format": "less/variables"
+        },
+        {
+          "destination": "cdr-mixins.less",
+          "format": "less/mixin"
+        },
+      ]
+    },
+    // "js": {
+    //   "transformGroup": "js",
+    //   "buildPath": "sd-dist/js/",
+    //   "files": [{
+    //     "destination": "cdr-tokens.js",
+    //     "format": "javascript/module"
+    //   }]
+    // },
+    // "android": {
+    //   "transformGroup": "android",
+    //   "buildPath": "sd-dist/android/",
+    //   "files": [{
+    //     "destination": "colors.xml",
+    //     "format": "android/colors"
+    //   }]
+    // },
+    // "ios": {
+    //   "transformGroup": "ios",
+    //   "buildPath": "sd-dist/ios/",
+    //   "files": [{
+    //     "destination": "colors.m",
+    //     "format": "ios/colors.m"
+    //   }]
+    // }
+  }
+}
