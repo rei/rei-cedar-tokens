@@ -20,8 +20,7 @@ StyleDictionary.registerFormat({
       let mixin = '';
 
       singleMixinProps.forEach((o) => {
-        console.log(o);
-        declarations.push(`${_.kebabCase(o.property)}: ${o.value};`)
+        declarations.push(`${o.property}: ${o.value};`)
       });
 
       mixin = `@mixin ${_.kebabCase(name)}() {
@@ -49,7 +48,7 @@ StyleDictionary.registerFormat({
       let mixin = '';
 
       singleMixinProps.forEach((o) => {
-        declarations.push(`${_.kebabCase(o.property)}: ${o.value};`)
+        declarations.push(`${o.property}: ${o.value};`)
       });
 
       mixin = `.${_.kebabCase(name)}() {
