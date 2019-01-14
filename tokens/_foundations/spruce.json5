@@ -1,0 +1,94 @@
+{
+  foundations: {
+    typography: {
+      spruce: {
+        family: {
+          value: 'Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
+        },
+        display: {
+          '100': {
+            family: { 
+              value: "{foundations.typography.spruce.family.value}",
+            },
+            style: {
+              value: 'normal',
+            },
+            variant: {
+              value: 'normal',
+            },
+            weight: {
+              value: '600',
+            },
+            spacing: {
+              value: '0.2',
+              category: 'size',
+            },
+            size: {
+              value: '96',
+              category: 'size',
+              type: 'font',
+            },
+            height: {
+              value: '104',
+              category: 'size',
+            },
+          },
+        },
+        body: {
+          '30': {
+            family: { 
+              value: "{foundations.typography.spruce.family.value}",
+            },
+            style: {
+              value: 'normal',
+            },
+            variant: {
+              value: 'normal',
+            },
+            weight: {
+              value: '400',
+            },
+            spacing: {
+              value: 'normal',
+            },
+            size: {
+              value: '20',
+              category: 'size',
+              type: 'font'
+            },
+            height: {
+              value: '32',
+              category: 'size',
+            },
+          },
+          '20': {
+            family: { 
+              value: "{foundations.typography.spruce.family.value}",
+            },
+            style: {
+              value: 'normal',
+            },
+            variant: {
+              value: 'normal',
+            },
+            weight: {
+              value: '400',
+            },
+            spacing: {
+              value: 'normal',
+            },
+            size: {
+              value: '18',
+              category: 'size',
+              type: 'font',
+            },
+            height: {
+              value: '28',
+              category: 'size',
+            },
+          },
+        },
+      }
+    }
+  }
+}

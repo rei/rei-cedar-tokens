@@ -1,56 +1,121 @@
 {
-  "source": ["style-dictionary/**/*.json5", "style-dictionary/**/*.json"],
-  "platforms": {
-    "scss": {
-      "transformGroup": "scss",
-      "buildPath": "sd-dist/scss/",
-      "files": [
+  source: ["tokens/**/*.json5", "tokens/**/*.json"],
+  platforms: {
+    
+    // SCSS
+    scss: {
+      transformGroup: "custom/scss",
+      buildPath: "dist/scss/",
+      prefix: "cdr",
+      files: [
         {
-          "destination": "cdr-variable.scss",
-          "format": "scss/variables"
+          destination: "cdr-variable.scss",
+          format: "scss/variables",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
         },
         {
-          "destination": "cdr-mixins.scss",
-          "format": "scss/mixin"
+          destination: "cdr-mixins.scss",
+          format: "scss/mixin"
         },
+      ],
+      actions: ['concat_files'],
+    },
+
+    // LESS
+    less: {
+      transformGroup: "custom/less",
+      buildPath: "dist/less/",
+      prefix: "cdr",
+      files: [
+        {
+          destination: "cdr-variable.less",
+          format: "less/variables",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
+        },
+        {
+          destination: "cdr-mixins.less",
+          format: "less/mixin"
+        },
+      ],
+      actions: ['concat_files'],
+    },
+
+    // JS
+    js: {
+      transformGroup: "js",
+      buildPath: "dist/js/",
+      files: [{
+        destination: "cdr-tokens.js",
+        format: "javascript/module"
+      }]
+    },
+
+    // ANDROID
+    android: {
+      transformGroup: "custom/android",
+      buildPath: "dist/android/",
+      files: [
+        {
+          destination: "colors.xml",
+          format: "android/colors",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
+        },
+        {
+          destination: "font_dimens.xml",
+          format: "android/fontDimens",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
+        },
+        {
+          destination: "dimens.xml",
+          format: "android/dimens",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
+        },
+        {
+          destination: "integers.xml",
+          format: "android/integers",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
+        },
+        {
+          destination: "strings.xml",
+          format: "android/strings",
+          filter: {
+            attributes: {
+              foundation: false
+            }
+          }
+        }
       ]
     },
-    "less": {
-      "transformGroup": "less",
-      "buildPath": "sd-dist/less/",
-      "files": [
-        {
-          "destination": "cdr-variable.less",
-          "format": "less/variables"
-        },
-        {
-          "destination": "cdr-mixins.less",
-          "format": "less/mixin"
-        },
-      ]
-    },
-    // "js": {
-    //   "transformGroup": "js",
-    //   "buildPath": "sd-dist/js/",
-    //   "files": [{
-    //     "destination": "cdr-tokens.js",
-    //     "format": "javascript/module"
-    //   }]
-    // },
-    // "android": {
-    //   "transformGroup": "android",
-    //   "buildPath": "sd-dist/android/",
-    //   "files": [{
-    //     "destination": "colors.xml",
-    //     "format": "android/colors"
-    //   }]
-    // },
-    // "ios": {
-    //   "transformGroup": "ios",
-    //   "buildPath": "sd-dist/ios/",
-    //   "files": [{
-    //     "destination": "colors.m",
-    //     "format": "ios/colors.m"
+    // ios: {
+    //   transformGroup: "ios",
+    //   buildPath: "dist/ios/",
+    //   files: [{
+    //     destination: "colors.m",
+    //     format: "ios/colors.m"
     //   }]
     // }
   }
