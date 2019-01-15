@@ -28,7 +28,7 @@ console.log('\n=============================================='); // eslint-disab
 // APPLY THE CONFIGURATION
 // Very important: the registration of custom transforms
 // needs to be done _before_ applying the configuration
-const StyleDictionaryExtended = StyleDictionary.extend(path.join(__dirname, '../config.json5'));
+const StyleDictionaryExtended = StyleDictionary.extend(path.join(__dirname, './configs/_index.js'));
 
 
 // FINALLY, BUILD ALL THE PLATFORMS
