@@ -1,6 +1,6 @@
 module.exports = {
   js: {
-    transformGroup: 'js',
+    transformGroup: 'custom/js',
     buildPath: 'dist/js/',
     files: [{
       destination: 'cdr-tokens.js',

@@ -11,6 +11,7 @@ require('./transforms/px-to-rem')(StyleDictionary);
 require('./transformGroups/scss')(StyleDictionary);
 require('./transformGroups/less')(StyleDictionary);
 require('./transformGroups/android')(StyleDictionary);
+require('./transformGroups/js')(StyleDictionary);
 
 // ==== Include custom formats ====
 require('./formats/scss')(StyleDictionary);
