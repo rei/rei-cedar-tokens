@@ -5,7 +5,9 @@
       :key="group[0].type"
     >
       <h3>
-        <span class="type-title">{{group[0].type}}</span>
+        <span class="type-title">
+          {{group[0].type}}
+        </span>
       </h3>
 
       <table>
