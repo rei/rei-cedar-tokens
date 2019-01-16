@@ -16,6 +16,7 @@ require('./transformGroups/js')(StyleDictionary);
 // ==== Include custom formats ====
 require('./formats/scss')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
+require('./formats/js')(StyleDictionary);
 
 // ==== Include custom actions
 require('./actions/concat_files')(StyleDictionary);
