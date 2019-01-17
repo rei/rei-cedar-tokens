@@ -3,9 +3,9 @@ const path = require('path');
 // const _ = require('lodash');
 
 // ==== Include custom transforms ====
-require('./transforms/foundation')(StyleDictionary);
-require('./transforms/cdr-cti')(StyleDictionary);
-require('./transforms/px-to-rem')(StyleDictionary);
+require('./transforms/attribute/foundation')(StyleDictionary);
+require('./transforms/attribute/cdr-cti')(StyleDictionary);
+require('./transforms/size/px-to-rem')(StyleDictionary);
 
 // ==== Include custom transform groups ====
 require('./transformGroups/scss')(StyleDictionary);
