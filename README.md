@@ -44,9 +44,9 @@ We follow the basic structure of style-dictionary with the exception being that 
 
 Found in `tokens/_foundations/`
 
-Tokens in foundations are ignored in the output but can be used in generating the output by referencing them. These are our "options".
+Tokens in foundations are skipped and do not get exported for consumers. However they can be [referenced](#referencing-foundations-or-other-values) in creating tokens that will be exported. These are our "options".
 
-**NOTE:** "foundations" needs to be the root key in the file. Tokens are not ignored by simply adding them to the `_foundations/` directory.
+**NOTE:** "foundations" needs to be the root key in the file. Tokens are not ignored by simply adding them to the `_foundations/` folder.
 
 ```
 {
@@ -55,12 +55,13 @@ Tokens in foundations are ignored in the output but can be used in generating th
       'easily-excited': {
         value: '#3278ae',
         category: 'color',
-      }
-    },
-    text: {
+      },
+      'heart-of-darkness': {
+        value: '#292929',
+        category: 'color',
+      },
       ...
-    }
-    ...
+    },
   }
 }
 ```
@@ -116,6 +117,21 @@ Categories are one of the following:
 #### Referencing Foundations (or other values)
 
 See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties?id=attribute-reference-alias)
+
+```
+{
+  color: {
+    text: {
+      primary: {
+        'on-dark': {
+          value: '{foundations.color.heart-of-darkness}',
+          category: 'color',
+        }
+      }
+    }
+  }
+}
+```
 
 ### Style Dictionary
 
