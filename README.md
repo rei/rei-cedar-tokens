@@ -26,9 +26,9 @@ Tokens are generated using [Style Dictionary](https://amzn.github.io/style-dicti
 ### Project structure
 The project is made of these files and folders:
 
-* `/tokens` contains the design tokens input files (in JSON5 format)
-* `/style-dictionary` contains the build script, configs, transforms,actions, and formats used to generate the output files
-* `/dist` contains the generated output files (in different formats)
+* `tokens/` contains the design tokens input files (in JSON5 format)
+* `style-dictionary/` contains the build script, configs, transforms,actions, and formats used to generate the output files
+* `dist/` contains the generated output files (in different formats)
 
 ### Tokens
 
