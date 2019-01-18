@@ -44,7 +44,7 @@ We follow the basic structure of style-dictionary with the exception being that 
 
 Found in `tokens/_foundations/`
 
-Tokens in foundations are skipped and do not get exported for consumers. However they can be [referenced](#referencing-foundations-or-other-values) in creating tokens that will be exported. These are our "options".
+Foundational tokens are skipped and do not get exported for consumers. However they can be [referenced](#referencing-foundations-or-other-values) in creating tokens that will be exported. These are our "options".
 
 **NOTE:** "foundations" needs to be the root key in the file. Tokens are not ignored by simply adding them to the `_foundations/` folder.
 
