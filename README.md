@@ -2,63 +2,163 @@
 
 > tokens for cedar design system
 
-## Token structure
+## Consuming
 
-We are using [Theo](https://github.com/salesforce-ux/theo) for managing design tokens.
+1. Install the package `npm i -D @rei/cdr-tokens` (may need to remove the '-D' depending on your use case).
+2. Import/require the tokens in your needed format. Platforms specific formats are available in each directory with the same name -- i.e. `dist/scss/cdr-tokens.scss`.
+    - JS: commonjs (default) and es module
+    - SCSS: variable and mixins
+    - LESS: variable and mixins
+    - Android: (WIP)
+    - iOS: (WIP)
 
-Tokens are stored in the `tokens/` directory. The rest of the files are for outputting a simple site to visually display the tokens.
 
-Tokens are 1 of 3 types:
-1. Foundational (`tokens/foundations/`)
+## Contributing
 
-Colors, spacing, etc. values that will be shared globally
-  
-2. Mixins (`tokens/m-*.yml`)
+### Initial set up
 
-Groups of css declarations (for things like typography)
+1. Clone repo
+2. `npm install`
+3. `npm run dict` (output tokens)
 
-3. Variables (`tokens/v-*.yml`)
+Tokens are generated using [Style Dictionary](https://amzn.github.io/style-dictionary/#/).
 
-Component specific variables that are single value.
+### Project structure
+The project is made of these files and folders:
 
-## Adding/updating tokens
+* `/tokens` contains the design tokens input files (in JSON5 format)
+* `/style-dictionary` contains the build script, configs, transforms,actions, and formats used to generate the output files
+* `/dist` contains the generated output files (in different formats)
 
-If you are only updating an existing file, make changes and begin at step 3.
+### Tokens
 
-1. Create the new yml file.
-2. Add the file to the appropriate index
+> In the `tokens/` directory. Files are in [JSON5](https://json5.org/).
 
-`tokens/foundations/_index.yml` for foundations. `tokens/m_index.yml` for mixins. `tokens/v_index.yml` for variables.
+#### Token Structure
 
-3. Add tokens
-4. `npm run theo` to test that the files are valid and can be processed.
-5. `npm run dev` to start a dev server and verify the values generated are what are expected.
-6. Start a PR
+See [style-dictionary properties docs](https://amzn.github.io/style-dictionary/#/properties).
 
-## Merging a PR/Releasing tokens
+We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit CTI structure and we abstract that into a separate "category" attribute.
 
-1. Review the PR
-2. Update the static site
+##### Foundations
 
-`npm run build` on the branch prior to merge (this will eventually be automated)
+Found in `tokens/_foundations/`
 
-3. Merge PR
-4. Create a new release tag (following semver)
+Tokens in foundations are ignored in the output but can be used in generating the output by referencing them. These are our "options".
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```
+{
+  foundations: { <-- anything beneath this will be ignored in output
+    color: {
+      'easily-excited': {
+        value: '#3278ae',
+        category: 'color',
+      }
+    },
+    text: {
+      ...
+    }
+    ...
+  }
+}
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Output **won't** have a token named `foundations-color-easily-excited`.
+
+##### Naming
+
+Token names are defined by the hierarchy of the object:
+
+```
+{
+  text: {
+    body: {
+      default: {
+        size: {
+          value: '23',
+          category: 'font-size',
+        },
+        height: {
+          value: '25',
+          category: 'size',
+        },
+      },
+    },
+  }
+}
+```
+
+Token output of above:
+
+`text-body-default-size: 23px;`
+
+`text-body-default-height: 25px;`
+
+#### Categories
+
+> Categories need to be attached to **both** foundations and tokens (due to limitations of style-dictionary resolve order. [This may change in the future](https://github.com/amzn/style-dictionary/issues/208))
+
+Categories define how style-dictionary should transform values between platforms.
+
+For example, a category of "size" will transform to 'rem' for SCSS/LESS but 'dp' for Android. A category of "font-size" will still transform values to 'rem' for SCSS/LESS but 'sp' for Android.
+
+Categories are one of the following:
+
+- size
+    - Anything that would have a value in px. With the exception of...
+- font-size
+    - Anything that defines a text size
+- color
+    - Anything that defines a color
+
+#### Referencing Foundations (or other values)
+
+See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties?id=attribute-reference-alias)
+
+### Style Dictionary
+
+#### Build
+
+Main build script that is executed with `npm run dict` is at `style-dictionary/build.js`. Logic to only build certain platforms or extending brands/themes will likely be done here.
+
+All actions, configs, formats, etc are imported in this file and it [extends](https://amzn.github.io/style-dictionary/#/extending) the base style-dictionary functionality.
+
+#### Actions
+
+Found in `style-dictionary/actions`
+
+See API for [creating an action](https://amzn.github.io/style-dictionary/#/api?id=registeraction)
+
+See [actions docs](https://amzn.github.io/style-dictionary/#/actions)
+
+#### Configs
+
+Found in `style-dictionary/configs`
+
+See [config docs](https://amzn.github.io/style-dictionary/#/config).
+
+Configs follow standard config options. They are organized separately by platform and are required into the `_index.js` file where they all have a filter for foundations applied.
+
+#### Formats
+
+Found in `style-dictionary/formats`
+
+See API for [creating a format](https://amzn.github.io/style-dictionary/#/api?id=registerformat)
+
+See [format docs](https://amzn.github.io/style-dictionary/#/formats).
+
+#### Transform Groups
+
+Found in `style-dictionary/transformGroups`
+
+See API for [creating a transform group](https://amzn.github.io/style-dictionary/#/api?id=registertransformgroup)
+
+See [transform group docs](https://amzn.github.io/style-dictionary/#/transform_groups).
+
+#### Transforms
+
+Found in `style-dictionary/transforms`
+
+See API for [creating a transform](https://amzn.github.io/style-dictionary/#/api?id=registertransform)
+
+See [transform docs](https://amzn.github.io/style-dictionary/#/transforms).
