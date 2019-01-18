@@ -1,6 +1,7 @@
 const _ = require('lodash');
 
 module.exports = (StyleDictionary) => {
+  // Abstract out CTI from naming by using a separate "category" key
   StyleDictionary.registerTransform({
     name: 'attribute/cdr-cti',
     type: 'attribute',
@@ -8,8 +9,8 @@ module.exports = (StyleDictionary) => {
       const attrs = {};
       if (_.has(prop, 'category')) {
         switch (prop.category) {
-          // split font-size to category and type
           case 'font-size':
+            // split font-size to category and type
             attrs.category = 'size';
             attrs.type = 'font';
             break;

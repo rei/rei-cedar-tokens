@@ -6,7 +6,7 @@ module.exports = (StyleDictionary) => {
       return prop.attributes.category === 'size';
     },
     transformer(prop) {
-      // update what this is divided by if body font-size changes in cdr-core.css
+      // update what this is divided by if body font-size changes in rei-cedar
       return `${(parseFloat(prop.value, 10) / 10).toFixed(2)}rem`;
     },
   });

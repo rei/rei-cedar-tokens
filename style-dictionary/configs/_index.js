@@ -7,6 +7,7 @@ const jsConfig = require('./js');
 const androidConfig = require('./android');
 
 // this is the filter for excluding "foundation" tokens
+// and works in concert with transforms/attribute/foundation.js
 const filterObj = {
   filter: {
     attributes: {
