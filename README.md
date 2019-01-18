@@ -19,7 +19,7 @@
 
 1. Clone repo
 2. `npm install`
-3. `npm run dict` (output tokens)
+3. `npm run build` (output tokens)
 
 Tokens are generated using [Style Dictionary](https://amzn.github.io/style-dictionary/#/).
 
@@ -40,17 +40,17 @@ See [style-dictionary properties docs](https://amzn.github.io/style-dictionary/#
 
 We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit CTI structure and we abstract that into a separate "category" key.
 
-##### Foundations
+##### Options
 
-Found in `tokens/_foundations/`
+Found in `tokens/_options/`
 
-Foundational tokens are skipped and do not get exported for consumers. However they can be [referenced](#referencing-foundations-or-other-values) in creating tokens that will be exported. These are our "options".
+Optional tokens are skipped and do not get exported for consumers. However they can be [referenced](#referencing-options-or-other-values) in creating tokens that will be exported. These are our "options".
 
-**NOTE:** "foundations" needs to be the root key in the file.
+**NOTE:** "options" needs to be the root key in the file.
 
 ```
 {
-  foundations: { <-- anything beneath this will be ignored in output
+  options: { <-- anything beneath this will be ignored in output
     color: {
       'easily-excited': {
         value: '#3278ae',
@@ -66,7 +66,7 @@ Foundational tokens are skipped and do not get exported for consumers. However t
 }
 ```
 
-Output **won't** have a token named `foundations-color-easily-excited`.
+Output **won't** have a token named `options-color-easily-excited`.
 
 ##### Naming
 
@@ -99,7 +99,7 @@ Token output of above:
 
 #### Categories
 
-> Categories need to be attached to **both** foundations and tokens (due to limitations of style-dictionary resolve order. [This may change in the future](https://github.com/amzn/style-dictionary/issues/208))
+> Categories need to be attached to **both** options and tokens (due to limitations of style-dictionary resolve order. [This may change in the future](https://github.com/amzn/style-dictionary/issues/208))
 
 Categories define how style-dictionary should transform values between platforms.
 
@@ -114,7 +114,7 @@ Categories are one of the following:
 - color
     - Anything that defines a color
 
-#### Referencing Foundations (or other values)
+#### Referencing Options (or other values)
 
 See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties?id=attribute-reference-alias)
 
@@ -124,7 +124,7 @@ See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties
     text: {
       primary: {
         'on-dark': {
-          value: '{foundations.color.heart-of-darkness}',
+          value: '{options.color.heart-of-darkness}',
           category: 'color',
         }
       }
@@ -155,7 +155,7 @@ Found in `style-dictionary/configs`
 
 See [config docs](https://amzn.github.io/style-dictionary/#/config).
 
-Configs follow standard config options. They are organized separately by platform and are required into the `_index.js` file where they all have a filter for foundations applied.
+Configs follow standard config options. They are organized separately by platform and are required into the `_index.js` file where they all have a filter for options applied.
 
 #### Formats
 

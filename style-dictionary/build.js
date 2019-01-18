@@ -3,7 +3,7 @@ const path = require('path');
 // const _ = require('lodash');
 
 // ==== Include custom transforms ====
-require('./transforms/attribute/foundation')(StyleDictionary);
+require('./transforms/attribute/options')(StyleDictionary);
 require('./transforms/attribute/cdr-cti')(StyleDictionary);
 require('./transforms/size/px-to-rem')(StyleDictionary);
 
