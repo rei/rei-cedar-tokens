@@ -44,7 +44,7 @@ We follow the basic structure of style-dictionary with the exception being that 
 
 Found in `tokens/_options/`
 
-Options are skipped and do not get exported for consumers. However they can be [referenced](#referencing-options-or-other-values) in creating tokens that will be exported. These are our "options".
+Options are skipped and do not get exported for consumers. However they can be [referenced](#referencing-options-or-other-values) in creating tokens that will be exported.
 
 **NOTE:** "options" needs to be the root key in the file.
 
