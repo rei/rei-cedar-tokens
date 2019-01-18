@@ -38,13 +38,15 @@ The project is made of these files and folders:
 
 See [style-dictionary properties docs](https://amzn.github.io/style-dictionary/#/properties).
 
-We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit CTI structure and we abstract that into a separate "category" attribute.
+We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit CTI structure and we abstract that into a separate "category" key.
 
 ##### Foundations
 
 Found in `tokens/_foundations/`
 
 Tokens in foundations are ignored in the output but can be used in generating the output by referencing them. These are our "options".
+
+**NOTE:** "foundations" needs to be the root key in the file. Tokens are not ignored by simply adding them to the `_foundations/` directory.
 
 ```
 {
