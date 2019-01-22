@@ -2,7 +2,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransformGroup({
     name: 'custom/android',
     transforms: [
-      'attribute/foundation',
+      'attribute/option',
       'attribute/cdr-cti',
       'name/cti/snake',
       'color/hex8android',

@@ -6,17 +6,18 @@ const lessConfig = require('./less');
 const jsConfig = require('./js');
 const androidConfig = require('./android');
 
-// this is the filter for excluding "foundation" tokens
+// this is the filter for excluding "option" tokens
+// and works in concert with transforms/attribute/option.js
 const filterObj = {
   filter: {
     attributes: {
-      foundation: false,
+      option: false,
     },
   },
 };
 
-// adds filter for "foundations" to all file outputs
-function filterFoundations(platforms) {
+// adds filter for "options" to all file outputs
+function filterOptions(platforms) {
   const platformObj = {};
   platforms.map(p => Object.assign(platformObj, p));
   Object.keys(platformObj).forEach((p) => {
@@ -25,10 +26,8 @@ function filterFoundations(platforms) {
   return platformObj;
 }
 
-// console.log(filterFoundations([scssConfig, lessConfig, jsConfig]));
-
 module.exports = {
   source: ['tokens/**/*.json5', 'tokens/**/*.json'],
   // add platform configs to array below
-  platforms: filterFoundations([scssConfig, lessConfig, jsConfig, androidConfig]),
+  platforms: filterOptions([scssConfig, lessConfig, jsConfig, androidConfig]),
 };

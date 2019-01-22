@@ -2,7 +2,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransformGroup({
     name: 'custom/less',
     transforms: [
-      'attribute/foundation',
+      'attribute/option',
       'attribute/cdr-cti',
       'name/cti/kebab',
       'size/px-to-rem',

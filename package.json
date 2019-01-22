@@ -21,7 +21,7 @@
     "prepublishOnly": "npm run dict",
     "build:tokens": "node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
-    "dict": "npm run clean && npm run build:tokens"
+    "build": "npm run clean && npm run build:tokens"
   },
   "devDependencies": {
     "concat": "^1.0.3",
