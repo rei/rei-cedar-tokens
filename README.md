@@ -38,7 +38,7 @@ The project is made of these files and folders:
 
 See [style-dictionary properties docs](https://amzn.github.io/style-dictionary/#/properties).
 
-We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit CTI structure and we abstract that into a separate "category" key.
+We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit [CTI](https://amzn.github.io/style-dictionary/#/properties?id=category-type-item) structure and we abstract that into a separate "category" key.
 
 ##### Options
 
