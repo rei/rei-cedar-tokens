@@ -1,5 +1,6 @@
 const StyleDictionary = require('style-dictionary');
 const path = require('path');
+const getPlatformConfig = require('./configs')
 // const _ = require('lodash');
 
 // ==== Include custom transforms ====
@@ -27,14 +28,18 @@ require('./actions/concat_files')(StyleDictionary);
 console.log('Build started...'); // eslint-disable-line no-console
 console.log('\n=============================================='); // eslint-disable-line no-console
 
-// APPLY THE CONFIGURATION
-// Very important: the registration of custom transforms
-// needs to be done _before_ applying the configuration
-const StyleDictionaryExtended = StyleDictionary.extend(path.join(__dirname, './configs/_index.js'));
+['web', 'android'].map(platform => {
+
+  // APPLY THE CONFIGURATION
+  // Very important: the registration of custom transforms
+  // needs to be done _before_ applying the configuration
+  const StyleDictionaryExtended = StyleDictionary.extend(getPlatformConfig(platform));
 
 
-// FINALLY, BUILD ALL THE PLATFORMS
-StyleDictionaryExtended.buildAllPlatforms();
+  // FINALLY, BUILD ALL THE PLATFORMS
+  StyleDictionaryExtended.buildAllPlatforms();
+
+});
 
 
 console.log('\n=============================================='); // eslint-disable-line no-console

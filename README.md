@@ -27,6 +27,9 @@ Tokens are generated using [Style Dictionary](https://amzn.github.io/style-dicti
 The project is made of these files and folders:
 
 * `tokens/` contains the design tokens input files (in JSON5 format)
+    * `tokens/_options/` contains "option" tokens [see below](#options)
+    * `tokens/global/` contains design tokens that are output for all platforms
+    * `tokens/<platform>/` contains design tokens specific to a platform (like mixins for scss/less that others can't use)
 * `style-dictionary/` contains the build script, configs, transforms,actions, and formats used to generate the output files
 * `dist/` contains the generated output files (in different formats)
 
@@ -137,7 +140,7 @@ See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties
 
 #### Build
 
-Main build script that is executed with `npm run dict` is at `style-dictionary/build.js`. Logic to only build certain platforms or extending brands/themes will likely be done here.
+Main build script that is executed with `npm run build` is at `style-dictionary/build.js`. Logic to only build certain platforms or extending brands/themes will likely be done here.
 
 All actions, configs, formats, etc are imported in this file and it [extends](https://amzn.github.io/style-dictionary/#/extending) the base style-dictionary functionality.
 
