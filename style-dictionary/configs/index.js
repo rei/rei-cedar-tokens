@@ -26,8 +26,18 @@ function filterOptions(platforms) {
   return platformObj;
 }
 
-module.exports = {
-  source: ['tokens/**/*.json5', 'tokens/**/*.json'],
-  // add platform configs to array below
-  platforms: filterOptions([scssConfig, lessConfig, jsConfig, androidConfig]),
+function getConfigs(platform) {
+  if(platform === 'web') {
+    return filterOptions([scssConfig, lessConfig, jsConfig]);
+  }
+  if (platform === 'android') {
+    return filterOptions([androidConfig])
+  }
+}
+
+module.exports = (platform) => {
+  return {
+    source: ['tokens/_options/**/*.json5', 'tokens/global/**/*.json5', `tokens/${platform}/**/*.json5`],
+    platforms: getConfigs(platform),
+  }
 };

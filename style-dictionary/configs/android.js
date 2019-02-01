@@ -2,6 +2,7 @@ module.exports = {
   android: {
     transformGroup: 'custom/android',
     buildPath: 'dist/android/',
+    prefix: 'cdr',
     files: [
       {
         destination: 'colors.xml',
