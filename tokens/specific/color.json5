@@ -1,0 +1,39 @@
+{
+  color: {
+    // Text
+    text: {
+      form: {
+        label: {
+          'lightmode': {
+            value: '{color.text.primary.lightmode.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.text.primary.darkmode.value}',
+            category: 'color',
+          },
+        },
+        placeholder: {
+          'lightmode': {
+            value: '{color.text.secondary.lightmode.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.text.secondary.darkmode.value}',
+            category: 'color',
+          },
+        },
+        disabled: {
+          'lightmode': {
+            value: '{color.text.disabled.lightmode.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.text.disabled.darkmode.value}',
+            category: 'color',
+          },
+        },
+      },
+    },
+  },
+}

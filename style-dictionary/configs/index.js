@@ -37,7 +37,12 @@ function getConfigs(platform) {
 
 module.exports = (platform) => {
   return {
-    source: ['tokens/_options/**/*.json5', 'tokens/global/**/*.json5', `tokens/${platform}/**/*.json5`],
-    platforms: getConfigs(platform),
-  }
+    source: [
+      'tokens/_options/**/*.json5',
+      'tokens/generic/**/*.json5',
+      'tokens/specific/**/*.json5',
+      `tokens/${platform}/**/*.json5`
+    ],
+    platforms: getConfigs(platform)
+  };
 };
