@@ -52,6 +52,38 @@
           category: 'color',
         },
       },
+      form: {
+        label: {
+          'lightmode': {
+            value: '{color.text.primary.lightmode.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.text.primary.darkmode.value}',
+            category: 'color',
+          },
+        },
+        placeholder: {
+          'lightmode': {
+            value: '{color.text.secondary.lightmode.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.text.secondary.darkmode.value}',
+            category: 'color',
+          },
+        },
+        disabled: {
+          'lightmode': {
+            value: '{color.text.disabled.lightmode.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.text.disabled.darkmode.value}',
+            category: 'color',
+          },
+        },
+      },
     },
     background: {
       'dark': {
@@ -73,6 +105,26 @@
       'lightest': {
         value: '{options.color.clean-slate.value}',
         category: 'color',
+      },
+      form: {
+        'lightmode': {
+          value: '{color.background.lightest.value}',
+          category: 'color',
+        },
+        'darkmode': {
+          value: '{color.background.dark.value}',
+          category: 'color',
+        },
+        input: {
+          'lightmode': {
+            value: '{color.background.lightest.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.background.dark.value}',
+            category: 'color',
+          },
+        },
       },
     },
     border: {
