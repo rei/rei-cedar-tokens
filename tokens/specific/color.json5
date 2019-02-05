@@ -34,6 +34,28 @@
           },
         },
       },
+      background: {
+        form: {
+          'lightmode': {
+            value: '{color.background.lightest.value}',
+            category: 'color',
+          },
+          'darkmode': {
+            value: '{color.background.dark.value}',
+            category: 'color',
+          },
+          input: {
+            'lightmode': {
+              value: '{color.background.lightest.value}',
+              category: 'color',
+            },
+            'darkmode': {
+              value: '{color.background.dark.value}',
+              category: 'color',
+            },
+          },
+        },
+      },
     },
   },
 }
