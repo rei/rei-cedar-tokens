@@ -8,10 +8,8 @@ module.exports = (StyleDictionary) => {
       let cleanVal = prop.value;
       if (_.endsWith(prop.value, 'px')) {
         cleanVal = prop.value.slice(0, -2);
-        // console.log(prop.value, cleanVal);
       }
 
-      // update what this is divided by if body font-size changes in rei-cedar
       return cleanVal;
     },
   });

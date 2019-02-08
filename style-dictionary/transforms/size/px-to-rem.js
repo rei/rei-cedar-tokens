@@ -8,8 +8,6 @@ module.exports = (StyleDictionary) => {
       return prop.attributes.category === 'size';
     },
     transformer(prop) {
-      console.log(prop.name);
-      console.log(prop.value, `${(parseFloat(prop.value, 10) / 10).toFixed(2)}rem`);
       // update what this is divided by if body font-size changes in rei-cedar
       return `${(parseFloat(prop.value, 10) / 10)}rem`;
     },
