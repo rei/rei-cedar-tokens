@@ -67,100 +67,172 @@
       },
     },
     inset: {
+      // 1/8th
       'eighth-x': {
         value: '{space.eighth-x.value}',
         category: 'size',
       },
-      'eighth-x-squish': {
-        value: '0 2px',
+      'eighth-x-squish-top-bottom': {
+          value: '0',
+          category: 'size',
+      },
+      'eighth-x-squish-left-right': {
+        value: '2px',
         category: 'size',
       },
-      'eighth-x-stretch': {
-        value: '4px 2px',
+      'eighth-x-stretch-top-bottom': {
+        value: '4px',
         category: 'size',
       },
+      'eighth-x-stretch-left-right': {
+        value: '2px',
+        category: 'size',
+      },
+      // 1/4
       'quarter-x': {
         value: '{space.quarter-x.value}',
         category: 'size',
       },
-      'quarter-x-squish': {
-        value: '2px 4px',
+      'quarter-x-squish-top-bottom': {
+          value: '2px',
+          category: 'size',
+      },
+      'quarter-x-squish-left-right': {
+        value: '4px',
         category: 'size',
       },
-      'quarter-x-stretch': {
-        value: '6px 4px',
+      'quarter-x-stretch-top-bottom': {
+        value: '6px',
         category: 'size',
       },
+      'quarter-x-stretch-left-right': {
+        value: '4px',
+        category: 'size',
+      },
+      // 1/2
       'half-x': {
         value: '{space.half-x.value}',
         category: 'size',
       },
-      'half-x-squish': {
-        value: '4px 8px',
+      'half-x-squish-top-bottom': {
+          value: '4px',
+          category: 'size',
+      },
+      'half-x-squish-left-right': {
+        value: '8px',
         category: 'size',
       },
-      'half-x-stretch': {
-        value: '12px 8px',
+      'half-x-stretch-top-bottom': {
+        value: '12px',
         category: 'size',
       },
+      'half-x-stretch-left-right': {
+        value: '8px',
+        category: 'size',
+      },
+      // 3/4
       'three-quarter-x': {
         value: '{space.three-quarter-x.value}',
         category: 'size',
       },
-      'three-quarter-x-squish': {
-        value: '6px 12px',
+      'three-quarter-x-squish-top-bottom': {
+          value: '6px',
+          category: 'size',
+      },
+      'three-quarter-x-squish-left-right': {
+        value: '12px',
         category: 'size',
       },
-      'three-quarter-x-stretch': {
-        value: '18px 12px',
+      'three-quarter-x-stretch-top-bottom': {
+        value: '18px',
         category: 'size',
       },
+      'three-quarter-x-stretch-left-right': {
+        value: '12px',
+        category: 'size',
+      },
+      // 1
       'one-x': {
         value: '{space.one-x.value}',
         category: 'size',
       },
-      'one-x-squish': {
-        value: '8px 16px',
+      'one-x-squish-top-bottom': {
+          value: '8px',
+          category: 'size',
+      },
+      'one-x-squish-left-right': {
+        value: '16px',
         category: 'size',
       },
-      'one-x-stretch': {
-        value: '24px 16px',
+      'one-x-stretch-top-bottom': {
+        value: '24px',
         category: 'size',
       },
+      'one-x-stretch-left-right': {
+        value: '16px',
+        category: 'size',
+      },
+      // 1 1/2
       'one-and-a-half-x': {
         value: '{space.one-and-a-half-x.value}',
         category: 'size',
       },
-      'one-and-a-half-x-squish': {
-        value: '12px 24px',
+      'one-and-a-half-x-squish-top-bottom': {
+          value: '12px',
+          category: 'size',
+      },
+      'one-and-a-half-x-squish-left-right': {
+        value: '24px',
         category: 'size',
       },
-      'one-and-a-half-x-stretch': {
-        value: '36px 24px',
+      'one-and-a-half-x-stretch-top-bottom': {
+        value: '36px',
         category: 'size',
       },
+      'one-and-a-half-x-stretch-left-right': {
+        value: '24px',
+        category: 'size',
+      },
+      // 2
       'two-x': {
         value: '{space.two-x.value}',
         category: 'size',
       },
-      'two-x-squish': {
-        value: '16px 32px',
+      'two-x-squish-top-bottom': {
+          value: '16px',
+          category: 'size',
+      },
+      'two-x-squish-left-right': {
+        value: '32px',
         category: 'size',
       },
-      'two-x-stretch': {
-        value: '48px 32px',
+      'two-x-stretch-top-bottom': {
+        value: '48px',
         category: 'size',
       },
+      'two-x-stretch-left-right': {
+        value: '32px',
+        category: 'size',
+      },
+      // 4
       'four-x': {
         value: '{space.four-x.value}',
         category: 'size',
       },
-      'four-x-squish': {
-        value: '32px 64px',
+      'four-x-squish-top-bottom': {
+          value: '32px',
+          category: 'size',
+      },
+      'four-x-squish-left-right': {
+        value: '64px',
         category: 'size',
       },
-      'four-x-stretch': {
-        value: '96px 64px',
+      'four-x-stretch-top-bottom': {
+        value: '96px',
+        category: 'size',
+      },
+      'four-x-stretch-left-right': {
+        value: '64px',
         category: 'size',
       },
     },
