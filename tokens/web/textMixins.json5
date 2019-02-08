@@ -1,46 +1,153 @@
 {
   text: {
-    body: {
-      default: {
-        family: { 
+    // default
+    default: {
+      // body
+      body: {
+        family: {
+          value: "{options.typography.redwood.body.20.family.value}",
+          mixin: 'textDefaultBody',
+          property: 'font-family',
+        },
+        style: {
+          value: '{options.typography.redwood.body.20.style.value}',
+          mixin: 'textDefaultBody',
+          property: 'font-style',
+        },
+        weight: {
+          value: '{options.typography.redwood.body.20.weight.value}',
+          mixin: 'textDefaultBody',
+          property: 'font-weight',
+        },
+        spacing: {
+          value: '{options.typography.redwood.body.20.spacing.value}',
+          mixin: 'textDefaultBody',
+          property: 'letter-spacing',
+        },
+        size: {
+          value: '{options.typography.redwood.body.20.size.value}',
+          category: 'font-size',
+          mixin: 'textDefaultBody',
+          property: 'font-size',
+        },
+        height: {
+          value: '{options.typography.redwood.body.20.height.value}',
+          category: 'size',
+          mixin: 'textDefaultBody',
+          property: 'line-height',
+        },
+      },
+
+      // body-compact
+      'body-compact': {
+        family: {
+          value: "{options.typography.redwood.body.10.family.value}",
+          mixin: 'textDefaultBodyCompact',
+          property: 'font-family',
+        },
+        style: {
+          value: '{options.typography.redwood.body.10.style.value}',
+          mixin: 'textDefaultBodyCompact',
+          property: 'font-style',
+        },
+        weight: {
+          value: '{options.typography.redwood.body.10.weight.value}',
+          mixin: 'textDefaultBodyCompact',
+          property: 'font-weight',
+        },
+        spacing: {
+          value: '{options.typography.redwood.body.10.spacing.value}',
+          mixin: 'textDefaultBodyCompact',
+          property: 'letter-spacing',
+        },
+        size: {
+          value: '{options.typography.redwood.body.10.size.value}',
+          category: 'font-size',
+          mixin: 'textDefaultBodyCompact',
+          property: 'font-size',
+        },
+        height: {
+          value: '{options.typography.redwood.body.10.height.value}',
+          category: 'size',
+          mixin: 'textDefaultBodyCompact',
+          property: 'line-height',
+        },
+      },
+    },
+
+    // editorial
+    editorial: {
+      // body
+      body: {
+        family: {
           value: "{options.typography.spruce.body.30.family.value}",
-          mixin: 'textBodyDefault',
+          mixin: 'textEditorialBody',
           property: 'font-family',
         },
         style: {
           value: '{options.typography.spruce.body.30.style.value}',
-          mixin: 'textBodyDefault',
+          mixin: 'textEditorialBody',
           property: 'font-style',
-        },
-        variant: {
-          value: '{options.typography.spruce.body.30.variant.value}',
-          mixin: 'textBodyDefault',
-          property: 'font-variant',
         },
         weight: {
           value: '{options.typography.spruce.body.30.weight.value}',
-          mixin: 'textBodyDefault',
+          mixin: 'textEditorialBody',
           property: 'font-weight',
         },
         spacing: {
           value: '{options.typography.spruce.body.30.spacing.value}',
-          mixin: 'textBodyDefault',
+          mixin: 'textEditorialBody',
           property: 'letter-spacing',
         },
         size: {
           value: '{options.typography.spruce.body.30.size.value}',
           category: 'font-size',
-          mixin: 'textBodyDefault',
+          mixin: 'textEditorialBody',
           property: 'font-size',
         },
         height: {
           value: '{options.typography.spruce.body.30.height.value}',
           category: 'size',
-          mixin: 'textBodyDefault',
+          mixin: 'textEditorialBody',
           property: 'line-height',
         },
       },
-      
-    }
+
+      // body-compact
+      'body-compact': {
+        family: {
+          value: "{options.typography.spruce.body.20.family.value}",
+          mixin: 'textEditorialBodyCompact',
+          property: 'font-family',
+        },
+        style: {
+          value: '{options.typography.spruce.body.20.style.value}',
+          mixin: 'textEditorialBodyCompact',
+          property: 'font-style',
+        },
+        weight: {
+          value: '{options.typography.spruce.body.20.weight.value}',
+          mixin: 'textEditorialBodyCompact',
+          property: 'font-weight',
+        },
+        spacing: {
+          value: '{options.typography.spruce.body.20.spacing.value}',
+          mixin: 'textEditorialBodyCompact',
+          property: 'letter-spacing',
+        },
+        size: {
+          value: '{options.typography.spruce.body.20.size.value}',
+          category: 'font-size',
+          mixin: 'textEditorialBodyCompact',
+          property: 'font-size',
+        },
+        height: {
+          value: '{options.typography.spruce.body.20.height.value}',
+          category: 'size',
+          mixin: 'textEditorialBodyCompact',
+          property: 'line-height',
+        },
+      },
+    },
   }
 }

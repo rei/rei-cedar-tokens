@@ -1,0 +1,57 @@
+{
+  options: {
+    typography: {
+      redwood: {
+        family: {
+          value: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
+        },
+        body: {
+          '20': {
+            family: { 
+              value: "{options.typography.redwood.family.value}",
+            },
+            style: {
+              value: 'normal',
+            },
+            weight: {
+              value: '400',
+            },
+            spacing: {
+              value: 'normal',
+            },
+            size: {
+              value: '16px',
+              category: 'font-size',
+            },
+            height: {
+              value: '26px',
+              category: 'size',
+            },
+          },
+          '10': {
+            family: { 
+              value: "{options.typography.redwood.family.value}",
+            },
+            style: {
+              value: 'normal',
+            },
+            weight: {
+              value: '400',
+            },
+            spacing: {
+              value: 'normal',
+            },
+            size: {
+              value: '14px',
+              category: 'font-size',
+            },
+            height: {
+              value: '24px',
+              category: 'size',
+            },
+          },
+        },
+      }
+    }
+  }
+}
