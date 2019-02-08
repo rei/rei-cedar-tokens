@@ -12,8 +12,9 @@ require('./transforms/size/strip-px')(StyleDictionary);
 // ==== Include custom transform groups ====
 require('./transformGroups/scss')(StyleDictionary);
 require('./transformGroups/less')(StyleDictionary);
-require('./transformGroups/android')(StyleDictionary);
 require('./transformGroups/js')(StyleDictionary);
+require('./transformGroups/android')(StyleDictionary);
+require('./transformGroups/ios')(StyleDictionary);
 
 // ==== Include custom formats ====
 require('./formats/scss')(StyleDictionary);
@@ -29,7 +30,7 @@ require('./actions/concat_files')(StyleDictionary);
 console.log('Build started...'); // eslint-disable-line no-console
 console.log('\n=============================================='); // eslint-disable-line no-console
 
-['web', 'android'].map(platform => {
+['web', 'android', 'ios'].map(platform => {
 
   // APPLY THE CONFIGURATION
   // Very important: the registration of custom transforms

@@ -5,6 +5,7 @@ const scssConfig = require('./scss');
 const lessConfig = require('./less');
 const jsConfig = require('./js');
 const androidConfig = require('./android');
+const iosConfig = require('./ios');
 
 // this is the filter for excluding "option" tokens
 // and works in concert with transforms/attribute/option.js
@@ -32,6 +33,9 @@ function getConfigs(platform) {
   }
   if (platform === 'android') {
     return filterOptions([androidConfig])
+  }
+  if (platform === 'ios') {
+    return filterOptions([iosConfig])
   }
 }
 
