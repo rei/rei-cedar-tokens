@@ -5,6 +5,7 @@ module.exports = (StyleDictionary) => {
       'attribute/option',
       'attribute/cdr-cti',
       'name/cti/pascal',
+      'size/strip-px',
       'size/px-to-rem',
       'color/hex',
     ],

@@ -7,6 +7,7 @@ const getPlatformConfig = require('./configs')
 require('./transforms/attribute/options')(StyleDictionary);
 require('./transforms/attribute/cdr-cti')(StyleDictionary);
 require('./transforms/size/px-to-rem')(StyleDictionary);
+require('./transforms/size/strip-px')(StyleDictionary);
 
 // ==== Include custom transform groups ====
 require('./transformGroups/scss')(StyleDictionary);
