@@ -111,7 +111,7 @@ For example, a category of "size" will transform to 'rem' for SCSS/LESS but 'dp'
 Categories are one of the following:
 
 - size
-    - Anything that would have a value in px. With the exception of...
+    - Anything that would have a value in px. With the exception of font-size
 - font-size
     - Anything that defines a text size
 - color
