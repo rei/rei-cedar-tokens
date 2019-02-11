@@ -116,6 +116,8 @@ Categories are one of the following:
     - Anything that defines a text size
 - color
     - Anything that defines a color
+- time
+    - Anything the defines a timing
 
 #### Referencing Options (or other values)
 
