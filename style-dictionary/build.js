@@ -20,6 +20,7 @@ require('./transformGroups/ios')(StyleDictionary);
 require('./formats/scss')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
+require('./formats/site')(StyleDictionary);
 
 // ==== Include custom actions
 require('./actions/concat_files')(StyleDictionary);
@@ -30,7 +31,7 @@ require('./actions/concat_files')(StyleDictionary);
 console.log('Build started...'); // eslint-disable-line no-console
 console.log('\n=============================================='); // eslint-disable-line no-console
 
-['web', 'android', 'ios'].map(platform => {
+['web', 'android', 'ios', 'json'].map(platform => {
 
   // APPLY THE CONFIGURATION
   // Very important: the registration of custom transforms
