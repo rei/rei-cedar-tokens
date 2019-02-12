@@ -18,7 +18,7 @@
   ],
   "main": "dist/js/cdr-tokens.common.js",
   "scripts": {
-    "prepublishOnly": "npm run dict",
+    "prepublishOnly": "npm run build",
     "build:tokens": "node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
     "build": "npm run clean && npm run build:tokens"
