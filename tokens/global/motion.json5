@@ -1,0 +1,42 @@
+{
+  // duration
+  duration: {
+    '1-x': {
+      value: '100ms',
+      category: 'time',
+    },
+    '2-x': {
+      value: '200ms',
+      category: 'time',
+    },
+    '3-x': {
+      value: '300ms',
+      category: 'time',
+    },
+    '4-x': {
+      value: '400ms',
+      category: 'time',
+    },
+    '5-x': {
+      value: '500ms',
+      category: 'time',
+    },
+    '6-x': {
+      value: '600ms',
+      category: 'time',
+    },
+  },
+
+  // Timing
+  timing: {
+    'function-ease-out': {
+      value: 'cubic-bezier(0.32, 0.94, 0.60, 1)',
+    },
+    'function-ease': {
+      value: 'cubic-bezier(0.15, 0, 0.15, 0)',
+    },
+    'function-linear': {
+      value: 'cubic-bezier(0, 0, 1, 1)',
+    },
+  },
+}

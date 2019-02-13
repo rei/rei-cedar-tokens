@@ -1,13 +1,15 @@
 module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransformGroup({
-    name: 'custom/js',
+    name: 'custom/ios',
     transforms: [
       'attribute/option',
       'attribute/cdr-cti',
       'name/cti/pascal',
-      'size/strip-px',
-      'size/px-to-rem',
-      'color/hex',
+      'color/UIColor',
+      'content/objC/literal',
+      'asset/objC/literal',
+      'size/remToPt',
+      'font/objC/literal'
     ],
   });
 };
