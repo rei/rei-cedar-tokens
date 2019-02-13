@@ -10,7 +10,7 @@ module.exports = (StyleDictionary) => {
     transformer(prop) {
       // update what this is divided by if body font-size changes in rei-cedar
       const num = (parseFloat(prop.value, 10) / 10);
-      const unit = num > 0 ? 'rem' : ''
+      const unit = num !== 0 ? 'rem' : ''
       return `${num}${unit}`;
     },
   });
