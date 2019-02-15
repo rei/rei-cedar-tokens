@@ -1,20 +1,30 @@
 {
   radius: {
+    docCategory: 'radius',
+    docExample: 'radius',
     sharp: {
       value: '0',
       category: 'size',
+      docCategory: '{radius.docCategory}',
+      docExample: '{radius.docExample}',
     },
     soft: {
       value: '2px',
       category: 'size',
+      docCategory: '{radius.docCategory}',
+      docExample: '{radius.docExample}',
     },
     softer: {
       value: '4px',
       category: 'size',
+      docCategory: '{radius.docCategory}',
+      docExample: '{radius.docExample}',
     },
     round: {
       value: '50%',
       // category: 'size',
+      docCategory: '{radius.docCategory}',
+      docExample: '{radius.docExample}',
     },
   }
 }

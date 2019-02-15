@@ -3,7 +3,7 @@
 // CdrProperties.m
 //
 // Do not edit directly
-// Generated on Mon, 11 Feb 2019 22:20:27 GMT
+// Generated on Thu, 14 Feb 2019 18:49:01 GMT
 //
 
 #import "CdrProperties.h"
@@ -365,13 +365,9 @@
       @"category": @"size"
       },
     @"raised-color": @{
-      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
       @"name": @"CdrProminenceRaisedColor",
       @"category": @"color"
-      },
-    @"raised-opacity": @{
-      @"value": 0.2,
-      @"name": @"CdrProminenceRaisedOpacity"
       },
     @"elevated-x": @{
       @"value": @64.00f,
@@ -394,13 +390,9 @@
       @"category": @"size"
       },
     @"elevated-color": @{
-      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
       @"name": @"CdrProminenceElevatedColor",
       @"category": @"color"
-      },
-    @"elevated-opacity": @{
-      @"value": 0.2,
-      @"name": @"CdrProminenceElevatedOpacity"
       },
     @"floating-x": @{
       @"value": @128.00f,
@@ -423,13 +415,9 @@
       @"category": @"size"
       },
     @"floating-color": @{
-      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
       @"name": @"CdrProminenceFloatingColor",
       @"category": @"color"
-      },
-    @"floating-opacity": @{
-      @"value": 0.2,
-      @"name": @"CdrProminenceFloatingOpacity"
       },
     @"lifted-x": @{
       @"value": @256.00f,
@@ -452,13 +440,9 @@
       @"category": @"size"
       },
     @"lifted-color": @{
-      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+      @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
       @"name": @"CdrProminenceLiftedColor",
       @"category": @"color"
-      },
-    @"lifted-opacity": @{
-      @"value": 0.2,
-      @"name": @"CdrProminenceLiftedOpacity"
       }
     },
   @"radius": @{

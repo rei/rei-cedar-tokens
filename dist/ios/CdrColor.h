@@ -3,7 +3,7 @@
 // CdrColor.h
 //
 // Do not edit directly
-// Generated on Mon, 11 Feb 2019 22:20:27 GMT
+// Generated on Thu, 14 Feb 2019 18:49:01 GMT
 //
 
 #import <UIKit/UIKit.h>

@@ -3,7 +3,7 @@
 // CdrColor.m
 //
 // Do not edit directly
-// Generated on Mon, 11 Feb 2019 22:20:27 GMT
+// Generated on Thu, 14 Feb 2019 18:49:01 GMT
 //
 
 #import "CdrColor.h"
@@ -55,10 +55,10 @@
 [UIColor colorWithRed:0.91f green:0.41f blue:0.41f alpha:1.00f],
 [UIColor colorWithRed:0.17f green:0.40f blue:0.57f alpha:1.00f],
 [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
-[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
-[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
-[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
-[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]
+[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
+[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
+[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f],
+[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f]
     ];
   });
 
