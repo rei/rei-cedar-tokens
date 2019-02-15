@@ -4,9 +4,9 @@ module.exports = (StyleDictionary) => {
   /* js module */
   StyleDictionary.registerFormat({
     name: 'json/site',
-    formatter(dictionary) {
+    formatter(dictionary, config) {
       const toRet = {};
-      const grouped = _.groupBy(dictionary.allProperties, 'category');
+      const grouped = _.groupBy(dictionary.allProperties, 'docCategory');
       const keys = Object.keys(grouped)
       for(const key of keys) {
         const newKey = key === 'undefined' ? 'misc' : key;
@@ -14,9 +14,15 @@ module.exports = (StyleDictionary) => {
         toRet[newKey] = {};
 
         for (let i = 0, len = catArr.length; i < len; i++) {
-          let {name, value} = catArr[i];
+          const current = catArr[i];
+          let {name, value} = current;
           name = _.kebabCase(name);
-          toRet[newKey][name] = value;
+          toRet[newKey][name] = current;
+          // toRet[newKey][name].value = value;
+
+          // if (_.has(current, 'docExample')) {
+          //   toRet[newKey][name].example = current.docExample;
+          // }
         }
       }
 

@@ -1,42 +1,64 @@
 {
   // duration
   duration: {
+    docCategory: 'motion',
+    docExample: 'duration',
     '1-x': {
       value: '100ms',
       category: 'time',
+      docCategory: '{duration.docCategory}',
+      docExample: '{duration.docExample}',
     },
     '2-x': {
       value: '200ms',
       category: 'time',
+      docCategory: '{duration.docCategory}',
+      docExample: '{duration.docExample}',
     },
     '3-x': {
       value: '300ms',
       category: 'time',
+      docCategory: '{duration.docCategory}',
+      docExample: '{duration.docExample}',
     },
     '4-x': {
       value: '400ms',
       category: 'time',
+      docCategory: '{duration.docCategory}',
+      docExample: '{duration.docExample}',
     },
     '5-x': {
       value: '500ms',
       category: 'time',
+      docCategory: '{duration.docCategory}',
+      docExample: '{duration.docExample}',
     },
     '6-x': {
       value: '600ms',
       category: 'time',
+      docCategory: '{duration.docCategory}',
+      docExample: '{duration.docExample}',
     },
   },
 
   // Timing
   timing: {
+    docCategory: 'motion',
+    docExample: 'timing',
     'function-ease-out': {
       value: 'cubic-bezier(0.32, 0.94, 0.60, 1)',
+      docCategory: '{timing.docCategory}',
+      docExample: '{timing.docExample}',
     },
     'function-ease': {
       value: 'cubic-bezier(0.15, 0, 0.15, 0)',
+      docCategory: '{timing.docCategory}',
+      docExample: '{timing.docExample}',
     },
     'function-linear': {
       value: 'cubic-bezier(0, 0, 1, 1)',
+      docCategory: '{timing.docCategory}',
+      docExample: '{timing.docExample}',
     },
   },
 }

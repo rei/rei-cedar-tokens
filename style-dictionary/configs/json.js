@@ -1,7 +1,7 @@
 module.exports = {
   js: {
     transformGroup: 'custom/js',
-    buildPath: 'dist/json/',
+    buildPath: 'docs/src/assets/',
     // prefix: 'cdr',
     files: [
       {
