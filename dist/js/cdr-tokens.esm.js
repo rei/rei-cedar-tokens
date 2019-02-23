@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 15 Feb 2019 21:54:07 GMT
+ * Generated on Sat, 23 Feb 2019 15:52:35 GMT
  */
 
 export const CdrBreakpointXs = "0";
@@ -23,6 +23,8 @@ export const CdrColorTextFormPlaceholderLightmode = "#616161";
 export const CdrColorTextFormPlaceholderDarkmode = "#999999";
 export const CdrColorTextFormDisabledLightmode = "#b8b8b8";
 export const CdrColorTextFormDisabledDarkmode = "#616161";
+export const CdrColorIconPrimaryLightmode = "#292929";
+export const CdrColorIconPrimaryDarkmode = "#fafafa";
 export const CdrColorBackgroundDark = "#1a1a1a";
 export const CdrColorBackgroundDarker = "#292929";
 export const CdrColorBackgroundLight = "#f7f7f7";

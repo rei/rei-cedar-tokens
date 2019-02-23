@@ -3,7 +3,7 @@
 // CdrProperties.h
 //
 // Do not edit directly
-// Generated on Fri, 15 Feb 2019 21:54:07 GMT
+// Generated on Sat, 23 Feb 2019 15:52:35 GMT
 //
 
 #import <Foundation/Foundation.h>
