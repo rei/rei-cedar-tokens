@@ -19,15 +19,18 @@
   "main": "dist/js/cdr-tokens.common.js",
   "scripts": {
     "prepublishOnly": "npm run build",
+    "postpublish": "npm run build:docs",
     "build:tokens": "node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
-    "build": "npm run clean && npm run build:tokens"
+    "build": "npm run clean && npm run build:tokens",
+    "build:docs": "node ./deploy.js"
   },
   "devDependencies": {
     "concat": "^1.0.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^11.3.0",
     "fs-extra": "^5.0.0",
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "rimraf": "^2.6.0",
     "style-dictionary": "^2.6.2"

@@ -32,6 +32,7 @@ The project is made of these files and folders:
     * `tokens/<platform>/` contains design tokens specific to a platform (like mixins for scss/less that others can't use)
 * `style-dictionary/` contains the build script, configs, transforms,actions, and formats used to generate the output files
 * `dist/` contains the generated output files (in different formats)
+* `docs/` contains app that is generated for [gh-pages examples](https://rei.github.io/rei-cedar-tokens/)
 
 ### Tokens
 
@@ -131,12 +132,20 @@ See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties
         'on-dark': {
           value: '{options.color.heart-of-darkness}',
           category: 'color',
+          docCategory: 'colors',
+          docExample: 'color'
         }
       }
     }
   }
 }
 ```
+
+- docCategory: The category to groups tokens under in the [gh-pages token examples](https://rei.github.io/rei-cedar-tokens/)
+
+- docExample: Used to generate different visual examples for tokens (i.e. a color swatch vs. inset padding)
+    - Current example types are: color, spacing, sizing, radius, prominence, text, inset, and breakpoint
+    - More can be easily added in the `docs/` directory
 
 ### Style Dictionary
 
