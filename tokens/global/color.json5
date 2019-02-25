@@ -119,6 +119,23 @@
         },
       },
     },
+    //Icons
+    icon: {
+      primary: {
+        'lightmode' : {
+          value: '{options.color.heart-of-darkness.value}',
+          category: 'color',
+          docCategory: '{color.docCategory}',
+          docExample: '{color.docExample}'
+        },
+        'darkmode' : {
+          value: '{options.color.moon-shot.value}',
+          category: 'color',
+          docCategory: '{color.docCategory}',
+          docExample: '{color.docExample}'
+        },
+      },
+    },
     background: {
       'dark': {
         value: '{options.color.lost-in-space.value}',

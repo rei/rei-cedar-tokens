@@ -19,6 +19,8 @@ module.exports = {
   cdrColorTextFormPlaceholderDarkmode: "#999999",
   cdrColorTextFormDisabledLightmode: "#b8b8b8",
   cdrColorTextFormDisabledDarkmode: "#616161",
+  cdrColorIconPrimaryLightmode: "#292929",
+  cdrColorIconPrimaryDarkmode: "#fafafa",
   cdrColorBackgroundDark: "#1a1a1a",
   cdrColorBackgroundDarker: "#292929",
   cdrColorBackgroundLight: "#f7f7f7",
