@@ -22,11 +22,17 @@
 </template>
 
 <script>
+import kebabCase from 'lodash/kebabCase';
+
 export default {
   name: 'TypeMotion',
   props: {
-    name: String,
     prop: Object,
+  },
+  computed: {
+    name() {
+      return kebabCase(this.prop.name);
+    }
   },
 };
 </script>

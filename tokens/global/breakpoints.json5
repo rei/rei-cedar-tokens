@@ -5,26 +5,34 @@
     xs: {
       value: '0',
       category: 'size',
-      docCategory: '{breakpoint.docCategory}',
-      docExample: '{breakpoint.docExample}',
+      docs: {
+        category: '{breakpoint.docCategory}',
+        example: '{breakpoint.docExample}',
+      },
     },
     sm: {
       value: '768px',
       category: 'size',
-      docCategory: '{breakpoint.docCategory}',
-      docExample: '{breakpoint.docExample}',
+      docs: {
+        category: '{breakpoint.docCategory}',
+        example: '{breakpoint.docExample}',
+      },
     },
     md: {
       value: '992px',
       category: 'size',
-      docCategory: '{breakpoint.docCategory}',
-      docExample: '{breakpoint.docExample}',
+      docs: {
+        category: '{breakpoint.docCategory}',
+        example: '{breakpoint.docExample}',
+      },
     },
     lg: {
       value: '1200px',
       category: 'size',
-      docCategory: '{breakpoint.docCategory}',
-      docExample: '{breakpoint.docExample}',
+      docs: {
+        category: '{breakpoint.docCategory}',
+        example: '{breakpoint.docExample}',
+      },
     },
   }
 }

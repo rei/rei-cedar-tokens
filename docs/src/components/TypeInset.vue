@@ -9,13 +9,17 @@
 </template>
 
 <script>
+import kebabCase from 'lodash/kebabCase';
+
 export default {
   name: 'TypeInset',
   props: {
-    name: String,
     prop: Object,
   },
   computed: {
+    name() {
+      return kebabCase(this.prop.name);
+    },
     pad() {
       const val = this.prop.value;
       if (val.indexOf(' ') <= 0) {

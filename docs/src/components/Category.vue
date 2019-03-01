@@ -1,7 +1,13 @@
 <template>
   <div class="cdr-container">
     <h2 class="type-title">{{ categoryTitle }}</h2>
-    <table>
+    <div
+      v-for="(v,k) in typeData"
+      :key="k"
+    >
+      <h3 v-if="k !== 'undefined'">---{{k}}---</h3>
+
+      <table>
         <thead>
           <tr>
             <th>Name:</th>
@@ -11,12 +17,11 @@
         </thead>
         <tbody class="category-tbody">
           <prop-sorter
-            v-for="(v,k) in categoryData"
+            v-for="(v,k) in v"
             :key="k"
-            :name="k"
             :prop="v"
           />
-          <template v-if="categoryTitle === 'text'">
+          <!-- <template v-if="categoryTitle === 'text'">
             <p>---------</p>
             <type-mixin
               v-for="(v,k) in mixinTokens"
@@ -24,17 +29,18 @@
               :name="kebab(k)"
               :prop="v"
             />
-          </template>
+          </template> -->
         </tbody>
       </table>
+    </div>
   </div>
 </template>
 
 <script>
 import PropSorter from './PropSorter';
-import TypeMixin from './TypeMixin';
+// import TypeMixin from './TypeMixin';
 import groupBy from 'lodash/groupBy';
-import kebabCase from 'lodash/kebabCase';
+
 
 export default {
   name: 'Category',
@@ -44,16 +50,14 @@ export default {
   },
   components: {
     PropSorter,
-    TypeMixin,
+    // TypeMixin,
   },
   computed: {
     mixinTokens() {
       return groupBy(this.categoryData, 'mixin');
-    }
-  },
-  methods: {
-    kebab(s) {
-      return kebabCase(s);
+    },
+    typeData() {
+      return groupBy(this.categoryData, 'docs.type');
     }
   },
 }

@@ -3,10 +3,10 @@ const _ = require('lodash');
 module.exports = (StyleDictionary) => {
   /* js module */
   StyleDictionary.registerFormat({
-    name: 'json/site',
+    name: 'site',
     formatter(dictionary, config) {
       const toRet = {};
-      const grouped = _.groupBy(dictionary.allProperties, 'docCategory');
+      const grouped = _.groupBy(dictionary.allProperties, 'docs.category');
       const keys = Object.keys(grouped)
       for(const key of keys) {
         const newKey = key === 'undefined' ? 'misc' : key;
@@ -18,11 +18,6 @@ module.exports = (StyleDictionary) => {
           let {name, value} = current;
           name = _.kebabCase(name);
           toRet[newKey][name] = current;
-          // toRet[newKey][name].value = value;
-
-          // if (_.has(current, 'docExample')) {
-          //   toRet[newKey][name].example = current.docExample;
-          // }
         }
       }
 

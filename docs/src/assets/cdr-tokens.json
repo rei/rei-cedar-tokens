@@ -3,13 +3,17 @@
     "breakpoint-xs": {
       "value": "0",
       "category": "size",
-      "docCategory": "breakpoints",
-      "docExample": "breakpoint",
+      "docs": {
+        "category": "breakpoints",
+        "example": "breakpoint"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{breakpoint.docCategory}",
-        "docExample": "{breakpoint.docExample}"
+        "docs": {
+          "category": "breakpoints",
+          "example": "breakpoint"
+        }
       },
       "name": "BreakpointXs",
       "attributes": {
@@ -24,13 +28,17 @@
     "breakpoint-sm": {
       "value": "76.8rem",
       "category": "size",
-      "docCategory": "breakpoints",
-      "docExample": "breakpoint",
+      "docs": {
+        "category": "breakpoints",
+        "example": "breakpoint"
+      },
       "original": {
         "value": "768px",
         "category": "size",
-        "docCategory": "{breakpoint.docCategory}",
-        "docExample": "{breakpoint.docExample}"
+        "docs": {
+          "category": "breakpoints",
+          "example": "breakpoint"
+        }
       },
       "name": "BreakpointSm",
       "attributes": {
@@ -45,13 +53,17 @@
     "breakpoint-md": {
       "value": "99.2rem",
       "category": "size",
-      "docCategory": "breakpoints",
-      "docExample": "breakpoint",
+      "docs": {
+        "category": "breakpoints",
+        "example": "breakpoint"
+      },
       "original": {
         "value": "992px",
         "category": "size",
-        "docCategory": "{breakpoint.docCategory}",
-        "docExample": "{breakpoint.docExample}"
+        "docs": {
+          "category": "breakpoints",
+          "example": "breakpoint"
+        }
       },
       "name": "BreakpointMd",
       "attributes": {
@@ -66,13 +78,17 @@
     "breakpoint-lg": {
       "value": "120rem",
       "category": "size",
-      "docCategory": "breakpoints",
-      "docExample": "breakpoint",
+      "docs": {
+        "category": "breakpoints",
+        "example": "breakpoint"
+      },
       "original": {
         "value": "1200px",
         "category": "size",
-        "docCategory": "{breakpoint.docCategory}",
-        "docExample": "{breakpoint.docExample}"
+        "docs": {
+          "category": "breakpoints",
+          "example": "breakpoint"
+        }
       },
       "name": "BreakpointLg",
       "attributes": {
@@ -89,13 +105,19 @@
     "color-text-primary-lightmode": {
       "value": "#292929",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.heart-of-darkness.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextPrimaryLightmode",
       "attributes": {
@@ -112,13 +134,19 @@
     "color-text-primary-darkmode": {
       "value": "#fafafa",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.moon-shot.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextPrimaryDarkmode",
       "attributes": {
@@ -135,13 +163,19 @@
     "color-text-secondary-lightmode": {
       "value": "#616161",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.taken-for-granite.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextSecondaryLightmode",
       "attributes": {
@@ -158,13 +192,19 @@
     "color-text-secondary-darkmode": {
       "value": "#999999",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.holy-smoke.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextSecondaryDarkmode",
       "attributes": {
@@ -181,13 +221,19 @@
     "color-text-disabled-lightmode": {
       "value": "#b8b8b8",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.grey-matter.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextDisabledLightmode",
       "attributes": {
@@ -204,13 +250,19 @@
     "color-text-disabled-darkmode": {
       "value": "#616161",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.taken-for-granite.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextDisabledDarkmode",
       "attributes": {
@@ -227,13 +279,19 @@
     "color-text-link-lightmode": {
       "value": "#3278ae",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.easily-excited.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextLinkLightmode",
       "attributes": {
@@ -250,13 +308,19 @@
     "color-text-link-darkmode": {
       "value": "#5197cd",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.suede-shoes.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextLinkDarkmode",
       "attributes": {
@@ -273,13 +337,19 @@
     "color-text-error-lightmode": {
       "value": "#b5292b",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.high-stakes.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextErrorLightmode",
       "attributes": {
@@ -296,13 +366,19 @@
     "color-text-error-darkmode": {
       "value": "#e86868",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.snap-decision.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextErrorDarkmode",
       "attributes": {
@@ -319,13 +395,19 @@
     "color-text-form-label-lightmode": {
       "value": "#292929",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{color.text.primary.lightmode.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextFormLabelLightmode",
       "attributes": {
@@ -343,13 +425,19 @@
     "color-text-form-label-darkmode": {
       "value": "#fafafa",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{color.text.primary.darkmode.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextFormLabelDarkmode",
       "attributes": {
@@ -367,13 +455,19 @@
     "color-text-form-placeholder-lightmode": {
       "value": "#616161",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{color.text.secondary.lightmode.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextFormPlaceholderLightmode",
       "attributes": {
@@ -391,13 +485,19 @@
     "color-text-form-placeholder-darkmode": {
       "value": "#999999",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{color.text.secondary.darkmode.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextFormPlaceholderDarkmode",
       "attributes": {
@@ -415,13 +515,19 @@
     "color-text-form-disabled-lightmode": {
       "value": "#b8b8b8",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{color.text.disabled.lightmode.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextFormDisabledLightmode",
       "attributes": {
@@ -439,13 +545,19 @@
     "color-text-form-disabled-darkmode": {
       "value": "#616161",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color"
+      },
       "original": {
         "value": "{color.text.disabled.darkmode.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color"
+        }
       },
       "name": "ColorTextFormDisabledDarkmode",
       "attributes": {
@@ -463,13 +575,19 @@
     "color-icon-primary-lightmode": {
       "value": "#292929",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.heart-of-darkness.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color"
+        }
       },
       "name": "ColorIconPrimaryLightmode",
       "attributes": {
@@ -486,13 +604,19 @@
     "color-icon-primary-darkmode": {
       "value": "#fafafa",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.moon-shot.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color"
+        }
       },
       "name": "ColorIconPrimaryDarkmode",
       "attributes": {
@@ -509,13 +633,19 @@
     "color-background-dark": {
       "value": "#1a1a1a",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.lost-in-space.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundDark",
       "attributes": {
@@ -531,13 +661,19 @@
     "color-background-darker": {
       "value": "#292929",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.heart-of-darkness.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundDarker",
       "attributes": {
@@ -553,13 +689,19 @@
     "color-background-light": {
       "value": "#f7f7f7",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.the-tooth.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundLight",
       "attributes": {
@@ -575,13 +717,19 @@
     "color-background-lighter": {
       "value": "#fafafa",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.moon-shot.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundLighter",
       "attributes": {
@@ -597,13 +745,19 @@
     "color-background-lightest": {
       "value": "#ffffff",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.clean-slate.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundLightest",
       "attributes": {
@@ -619,13 +773,19 @@
     "color-background-form-lightmode": {
       "value": "#ffffff",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{color.background.lightest.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundFormLightmode",
       "attributes": {
@@ -642,13 +802,19 @@
     "color-background-form-darkmode": {
       "value": "#1a1a1a",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{color.background.dark.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundFormDarkmode",
       "attributes": {
@@ -665,13 +831,19 @@
     "color-background-form-input-lightmode": {
       "value": "#ffffff",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{color.background.lightest.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundFormInputLightmode",
       "attributes": {
@@ -689,13 +861,19 @@
     "color-background-form-input-darkmode": {
       "value": "#1a1a1a",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color"
+      },
       "original": {
         "value": "{color.background.dark.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color"
+        }
       },
       "name": "ColorBackgroundFormInputDarkmode",
       "attributes": {
@@ -713,13 +891,19 @@
     "color-border-primary-lightmode": {
       "value": "#616161",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.taken-for-granite.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderPrimaryLightmode",
       "attributes": {
@@ -736,13 +920,19 @@
     "color-border-primary-darkmode": {
       "value": "#fafafa",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.moon-shot.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderPrimaryDarkmode",
       "attributes": {
@@ -759,13 +949,19 @@
     "color-border-secondary-lightmode": {
       "value": "#b8b8b8",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.grey-matter.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderSecondaryLightmode",
       "attributes": {
@@ -782,13 +978,19 @@
     "color-border-secondary-darkmode": {
       "value": "#999999",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.holy-smoke.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderSecondaryDarkmode",
       "attributes": {
@@ -805,13 +1007,19 @@
     "color-border-disabled-lightmode": {
       "value": "#dadada",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.partly-cloudy.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderDisabledLightmode",
       "attributes": {
@@ -828,13 +1036,19 @@
     "color-border-disabled-darkmode": {
       "value": "#dadada",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.partly-cloudy.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderDisabledDarkmode",
       "attributes": {
@@ -851,13 +1065,19 @@
     "color-border-error-lightmode": {
       "value": "#e86868",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.snap-decision.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderErrorLightmode",
       "attributes": {
@@ -874,13 +1094,19 @@
     "color-border-selected-lightmode": {
       "value": "#2b6692",
       "category": "color",
-      "docCategory": "colors",
-      "docExample": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color"
+      },
       "original": {
         "value": "{options.color.closed-on-monday.value}",
         "category": "color",
-        "docCategory": "{color.docCategory}",
-        "docExample": "{color.docExample}"
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color"
+        }
       },
       "name": "ColorBorderSelectedLightmode",
       "attributes": {
@@ -899,13 +1125,19 @@
     "icon-size-sm": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "sizing",
-      "docExample": "sizing",
+      "docs": {
+        "category": "sizing",
+        "type": "icon",
+        "example": "sizing"
+      },
       "original": {
         "value": "{space.one-x.value}",
         "category": "size",
-        "docCategory": "{icon.docCategory}",
-        "docExample": "{icon.docExample}"
+        "docs": {
+          "category": "sizing",
+          "type": "icon",
+          "example": "sizing"
+        }
       },
       "name": "IconSizeSm",
       "attributes": {
@@ -920,13 +1152,19 @@
     "icon-size": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "sizing",
-      "docExample": "sizing",
+      "docs": {
+        "category": "sizing",
+        "type": "icon",
+        "example": "sizing"
+      },
       "original": {
         "value": "{space.one-and-a-half-x.value}",
         "category": "size",
-        "docCategory": "{icon.docCategory}",
-        "docExample": "{icon.docExample}"
+        "docs": {
+          "category": "sizing",
+          "type": "icon",
+          "example": "sizing"
+        }
       },
       "name": "IconSize",
       "attributes": {
@@ -941,13 +1179,19 @@
     "icon-size-lg": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "sizing",
-      "docExample": "sizing",
+      "docs": {
+        "category": "sizing",
+        "type": "icon",
+        "example": "sizing"
+      },
       "original": {
         "value": "{space.two-x.value}",
         "category": "size",
-        "docCategory": "{icon.docCategory}",
-        "docExample": "{icon.docExample}"
+        "docs": {
+          "category": "sizing",
+          "type": "icon",
+          "example": "sizing"
+        }
       },
       "name": "IconSizeLg",
       "attributes": {
@@ -964,13 +1208,19 @@
     "duration-1-x": {
       "value": "100ms",
       "category": "time",
-      "docCategory": "motion",
-      "docExample": "duration",
+      "docs": {
+        "category": "motion",
+        "type": "duration",
+        "example": "duration"
+      },
       "original": {
         "value": "100ms",
         "category": "time",
-        "docCategory": "{duration.docCategory}",
-        "docExample": "{duration.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "duration",
+          "example": "duration"
+        }
       },
       "name": "Duration1X",
       "attributes": {
@@ -985,13 +1235,19 @@
     "duration-2-x": {
       "value": "200ms",
       "category": "time",
-      "docCategory": "motion",
-      "docExample": "duration",
+      "docs": {
+        "category": "motion",
+        "type": "duration",
+        "example": "duration"
+      },
       "original": {
         "value": "200ms",
         "category": "time",
-        "docCategory": "{duration.docCategory}",
-        "docExample": "{duration.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "duration",
+          "example": "duration"
+        }
       },
       "name": "Duration2X",
       "attributes": {
@@ -1006,13 +1262,19 @@
     "duration-3-x": {
       "value": "300ms",
       "category": "time",
-      "docCategory": "motion",
-      "docExample": "duration",
+      "docs": {
+        "category": "motion",
+        "type": "duration",
+        "example": "duration"
+      },
       "original": {
         "value": "300ms",
         "category": "time",
-        "docCategory": "{duration.docCategory}",
-        "docExample": "{duration.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "duration",
+          "example": "duration"
+        }
       },
       "name": "Duration3X",
       "attributes": {
@@ -1027,13 +1289,19 @@
     "duration-4-x": {
       "value": "400ms",
       "category": "time",
-      "docCategory": "motion",
-      "docExample": "duration",
+      "docs": {
+        "category": "motion",
+        "type": "duration",
+        "example": "duration"
+      },
       "original": {
         "value": "400ms",
         "category": "time",
-        "docCategory": "{duration.docCategory}",
-        "docExample": "{duration.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "duration",
+          "example": "duration"
+        }
       },
       "name": "Duration4X",
       "attributes": {
@@ -1048,13 +1316,19 @@
     "duration-5-x": {
       "value": "500ms",
       "category": "time",
-      "docCategory": "motion",
-      "docExample": "duration",
+      "docs": {
+        "category": "motion",
+        "type": "duration",
+        "example": "duration"
+      },
       "original": {
         "value": "500ms",
         "category": "time",
-        "docCategory": "{duration.docCategory}",
-        "docExample": "{duration.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "duration",
+          "example": "duration"
+        }
       },
       "name": "Duration5X",
       "attributes": {
@@ -1069,13 +1343,19 @@
     "duration-6-x": {
       "value": "600ms",
       "category": "time",
-      "docCategory": "motion",
-      "docExample": "duration",
+      "docs": {
+        "category": "motion",
+        "type": "duration",
+        "example": "duration"
+      },
       "original": {
         "value": "600ms",
         "category": "time",
-        "docCategory": "{duration.docCategory}",
-        "docExample": "{duration.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "duration",
+          "example": "duration"
+        }
       },
       "name": "Duration6X",
       "attributes": {
@@ -1089,12 +1369,18 @@
     },
     "timing-function-ease-out": {
       "value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
-      "docCategory": "motion",
-      "docExample": "timing",
+      "docs": {
+        "category": "motion",
+        "type": "timing",
+        "example": "timing"
+      },
       "original": {
         "value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
-        "docCategory": "{timing.docCategory}",
-        "docExample": "{timing.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "timing",
+          "example": "timing"
+        }
       },
       "name": "TimingFunctionEaseOut",
       "attributes": {
@@ -1107,12 +1393,18 @@
     },
     "timing-function-ease": {
       "value": "cubic-bezier(0.15, 0, 0.15, 0)",
-      "docCategory": "motion",
-      "docExample": "timing",
+      "docs": {
+        "category": "motion",
+        "type": "timing",
+        "example": "timing"
+      },
       "original": {
         "value": "cubic-bezier(0.15, 0, 0.15, 0)",
-        "docCategory": "{timing.docCategory}",
-        "docExample": "{timing.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "timing",
+          "example": "timing"
+        }
       },
       "name": "TimingFunctionEase",
       "attributes": {
@@ -1125,12 +1417,18 @@
     },
     "timing-function-linear": {
       "value": "cubic-bezier(0, 0, 1, 1)",
-      "docCategory": "motion",
-      "docExample": "timing",
+      "docs": {
+        "category": "motion",
+        "type": "timing",
+        "example": "timing"
+      },
       "original": {
         "value": "cubic-bezier(0, 0, 1, 1)",
-        "docCategory": "{timing.docCategory}",
-        "docExample": "{timing.docExample}"
+        "docs": {
+          "category": "motion",
+          "type": "timing",
+          "example": "timing"
+        }
       },
       "name": "TimingFunctionLinear",
       "attributes": {
@@ -1146,11 +1444,15 @@
     "prominence-flat-x": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFlatX",
       "attributes": {
@@ -1165,11 +1467,15 @@
     "prominence-flat-y": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFlatY",
       "attributes": {
@@ -1184,11 +1490,15 @@
     "prominence-flat-blur": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFlatBlur",
       "attributes": {
@@ -1203,11 +1513,15 @@
     "prominence-flat-spread": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFlatSpread",
       "attributes": {
@@ -1222,11 +1536,15 @@
     "prominence-flat-color": {
       "value": "#1a1a1a",
       "category": "color",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "{options.color.lost-in-space.value}",
         "category": "color",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFlatColor",
       "attributes": {
@@ -1240,10 +1558,14 @@
     },
     "prominence-flat-opacity": {
       "value": "0.2",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0.2",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFlatOpacity",
       "attributes": {
@@ -1257,11 +1579,15 @@
     "prominence-raised-x": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceRaisedX",
       "attributes": {
@@ -1276,11 +1602,15 @@
     "prominence-raised-y": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceRaisedY",
       "attributes": {
@@ -1295,11 +1625,15 @@
     "prominence-raised-blur": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceRaisedBlur",
       "attributes": {
@@ -1314,11 +1648,15 @@
     "prominence-raised-spread": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceRaisedSpread",
       "attributes": {
@@ -1333,11 +1671,15 @@
     "prominence-raised-color": {
       "value": "rgba(26, 26, 26, 0.2)",
       "category": "color",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "{options.color.lost-in-space-20.value}",
         "category": "color",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceRaisedColor",
       "attributes": {
@@ -1352,11 +1694,15 @@
     "prominence-elevated-x": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceElevatedX",
       "attributes": {
@@ -1371,11 +1717,15 @@
     "prominence-elevated-y": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceElevatedY",
       "attributes": {
@@ -1390,11 +1740,15 @@
     "prominence-elevated-blur": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceElevatedBlur",
       "attributes": {
@@ -1409,11 +1763,15 @@
     "prominence-elevated-spread": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceElevatedSpread",
       "attributes": {
@@ -1428,11 +1786,15 @@
     "prominence-elevated-color": {
       "value": "rgba(26, 26, 26, 0.2)",
       "category": "color",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "{options.color.lost-in-space-20.value}",
         "category": "color",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceElevatedColor",
       "attributes": {
@@ -1447,11 +1809,15 @@
     "prominence-floating-x": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFloatingX",
       "attributes": {
@@ -1466,11 +1832,15 @@
     "prominence-floating-y": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFloatingY",
       "attributes": {
@@ -1485,11 +1855,15 @@
     "prominence-floating-blur": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFloatingBlur",
       "attributes": {
@@ -1504,11 +1878,15 @@
     "prominence-floating-spread": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFloatingSpread",
       "attributes": {
@@ -1523,11 +1901,15 @@
     "prominence-floating-color": {
       "value": "rgba(26, 26, 26, 0.2)",
       "category": "color",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "{options.color.lost-in-space-20.value}",
         "category": "color",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceFloatingColor",
       "attributes": {
@@ -1542,11 +1924,15 @@
     "prominence-lifted-x": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceLiftedX",
       "attributes": {
@@ -1561,11 +1947,15 @@
     "prominence-lifted-y": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceLiftedY",
       "attributes": {
@@ -1580,11 +1970,15 @@
     "prominence-lifted-blur": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceLiftedBlur",
       "attributes": {
@@ -1599,11 +1993,15 @@
     "prominence-lifted-spread": {
       "value": "0",
       "category": "size",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceLiftedSpread",
       "attributes": {
@@ -1618,11 +2016,15 @@
     "prominence-lifted-color": {
       "value": "rgba(26, 26, 26, 0.2)",
       "category": "color",
-      "docCategory": "prominence",
+      "docs": {
+        "category": "prominence"
+      },
       "original": {
         "value": "{options.color.lost-in-space-20.value}",
         "category": "color",
-        "docCategory": "{prominence.docCategory}"
+        "docs": {
+          "category": "prominence"
+        }
       },
       "name": "ProminenceLiftedColor",
       "attributes": {
@@ -1636,12 +2038,16 @@
     },
     "prominence-flat": {
       "value": "0 0 0 0 #1a1a1a",
-      "docCategory": "prominence",
-      "docExample": "prominence",
+      "docs": {
+        "category": "prominence",
+        "example": "prominence"
+      },
       "original": {
         "value": "{prominence.flat-x.value} {prominence.flat-y.value} {prominence.flat-blur.value} {prominence.flat-spread.value} {prominence.flat-color.value}",
-        "docCategory": "{prominence.docCategory}",
-        "docExample": "{prominence.docExample}"
+        "docs": {
+          "category": "prominence",
+          "example": "prominence"
+        }
       },
       "name": "ProminenceFlat",
       "attributes": {
@@ -1654,12 +2060,16 @@
     },
     "prominence-raised": {
       "value": "0.2rem 0.2rem 0.2rem 0 rgba(26, 26, 26, 0.2)",
-      "docCategory": "prominence",
-      "docExample": "prominence",
+      "docs": {
+        "category": "prominence",
+        "example": "prominence"
+      },
       "original": {
         "value": "{prominence.raised-x.value} {prominence.raised-y.value} {prominence.raised-blur.value} {prominence.raised-spread.value} {prominence.raised-color.value}",
-        "docCategory": "{prominence.docCategory}",
-        "docExample": "{prominence.docExample}"
+        "docs": {
+          "category": "prominence",
+          "example": "prominence"
+        }
       },
       "name": "ProminenceRaised",
       "attributes": {
@@ -1672,12 +2082,16 @@
     },
     "prominence-elevated": {
       "value": "0.4rem 0.4rem 0.4rem 0 rgba(26, 26, 26, 0.2)",
-      "docCategory": "prominence",
-      "docExample": "prominence",
+      "docs": {
+        "category": "prominence",
+        "example": "prominence"
+      },
       "original": {
         "value": "{prominence.elevated-x.value} {prominence.elevated-y.value} {prominence.elevated-blur.value} {prominence.elevated-spread.value} {prominence.elevated-color.value}",
-        "docCategory": "{prominence.docCategory}",
-        "docExample": "{prominence.docExample}"
+        "docs": {
+          "category": "prominence",
+          "example": "prominence"
+        }
       },
       "name": "ProminenceElevated",
       "attributes": {
@@ -1690,12 +2104,16 @@
     },
     "prominence-floating": {
       "value": "0.8rem 0.8rem 0.8rem 0 rgba(26, 26, 26, 0.2)",
-      "docCategory": "prominence",
-      "docExample": "prominence",
+      "docs": {
+        "category": "prominence",
+        "example": "prominence"
+      },
       "original": {
         "value": "{prominence.floating-x.value} {prominence.floating-y.value} {prominence.floating-blur.value} {prominence.floating-spread.value} {prominence.floating-color.value}",
-        "docCategory": "{prominence.docCategory}",
-        "docExample": "{prominence.docExample}"
+        "docs": {
+          "category": "prominence",
+          "example": "prominence"
+        }
       },
       "name": "ProminenceFloating",
       "attributes": {
@@ -1708,12 +2126,16 @@
     },
     "prominence-lifted": {
       "value": "1.6rem 1.6rem 1.6rem 0 rgba(26, 26, 26, 0.2)",
-      "docCategory": "prominence",
-      "docExample": "prominence",
+      "docs": {
+        "category": "prominence",
+        "example": "prominence"
+      },
       "original": {
         "value": "{prominence.lifted-x.value} {prominence.lifted-y.value} {prominence.lifted-blur.value} {prominence.lifted-spread.value} {prominence.lifted-color.value}",
-        "docCategory": "{prominence.docCategory}",
-        "docExample": "{prominence.docExample}"
+        "docs": {
+          "category": "prominence",
+          "example": "prominence"
+        }
       },
       "name": "ProminenceLifted",
       "attributes": {
@@ -1729,13 +2151,17 @@
     "radius-sharp": {
       "value": "0",
       "category": "size",
-      "docCategory": "radius",
-      "docExample": "radius",
+      "docs": {
+        "category": "radius",
+        "example": "radius"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{radius.docCategory}",
-        "docExample": "{radius.docExample}"
+        "docs": {
+          "category": "radius",
+          "example": "radius"
+        }
       },
       "name": "RadiusSharp",
       "attributes": {
@@ -1750,13 +2176,17 @@
     "radius-soft": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "radius",
-      "docExample": "radius",
+      "docs": {
+        "category": "radius",
+        "example": "radius"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{radius.docCategory}",
-        "docExample": "{radius.docExample}"
+        "docs": {
+          "category": "radius",
+          "example": "radius"
+        }
       },
       "name": "RadiusSoft",
       "attributes": {
@@ -1771,13 +2201,17 @@
     "radius-softer": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "radius",
-      "docExample": "radius",
+      "docs": {
+        "category": "radius",
+        "example": "radius"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{radius.docCategory}",
-        "docExample": "{radius.docExample}"
+        "docs": {
+          "category": "radius",
+          "example": "radius"
+        }
       },
       "name": "RadiusSofter",
       "attributes": {
@@ -1791,12 +2225,16 @@
     },
     "radius-round": {
       "value": "50%",
-      "docCategory": "radius",
-      "docExample": "radius",
+      "docs": {
+        "category": "radius",
+        "example": "radius"
+      },
       "original": {
         "value": "50%",
-        "docCategory": "{radius.docCategory}",
-        "docExample": "{radius.docExample}"
+        "docs": {
+          "category": "radius",
+          "example": "radius"
+        }
       },
       "name": "RadiusRound",
       "attributes": {
@@ -1812,13 +2250,17 @@
     "space-eighth-x": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceEighthX",
       "attributes": {
@@ -1833,13 +2275,17 @@
     "space-quarter-x": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceQuarterX",
       "attributes": {
@@ -1854,13 +2300,17 @@
     "space-half-x": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceHalfX",
       "attributes": {
@@ -1875,13 +2325,17 @@
     "space-three-quarter-x": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "12px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceThreeQuarterX",
       "attributes": {
@@ -1896,13 +2350,17 @@
     "space-one-x": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceOneX",
       "attributes": {
@@ -1917,13 +2375,17 @@
     "space-one-and-a-half-x": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "24px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceOneAndAHalfX",
       "attributes": {
@@ -1938,13 +2400,17 @@
     "space-two-x": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "32px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceTwoX",
       "attributes": {
@@ -1959,13 +2425,17 @@
     "space-four-x": {
       "value": "6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "64px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceFourX",
       "attributes": {
@@ -1980,13 +2450,17 @@
     "space-inline-eighth-x": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.eighth-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineEighthX",
       "attributes": {
@@ -2002,13 +2476,17 @@
     "space-inline-quarter-x": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.quarter-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineQuarterX",
       "attributes": {
@@ -2024,13 +2502,17 @@
     "space-inline-half-x": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.half-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineHalfX",
       "attributes": {
@@ -2046,13 +2528,17 @@
     "space-inline-three-quarter-x": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.three-quarter-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineThreeQuarterX",
       "attributes": {
@@ -2068,13 +2554,17 @@
     "space-inline-one-x": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.one-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineOneX",
       "attributes": {
@@ -2090,13 +2580,17 @@
     "space-inline-one-and-a-half-x": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.one-and-a-half-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineOneAndAHalfX",
       "attributes": {
@@ -2112,13 +2606,17 @@
     "space-inline-two-x": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.two-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineTwoX",
       "attributes": {
@@ -2134,13 +2632,17 @@
     "space-inline-four-x": {
       "value": "6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.four-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInlineFourX",
       "attributes": {
@@ -2156,13 +2658,17 @@
     "space-inset-eighth-x": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.eighth-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetEighthX",
       "attributes": {
@@ -2178,13 +2684,17 @@
     "space-inset-eighth-x-squish-top-bottom": {
       "value": "0",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "0",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetEighthXSquishTopBottom",
       "attributes": {
@@ -2200,13 +2710,17 @@
     "space-inset-eighth-x-squish-left-right": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetEighthXSquishLeftRight",
       "attributes": {
@@ -2222,13 +2736,17 @@
     "space-inset-eighth-x-stretch-top-bottom": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetEighthXStretchTopBottom",
       "attributes": {
@@ -2244,13 +2762,17 @@
     "space-inset-eighth-x-stretch-left-right": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetEighthXStretchLeftRight",
       "attributes": {
@@ -2266,13 +2788,17 @@
     "space-inset-quarter-x": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.quarter-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetQuarterX",
       "attributes": {
@@ -2288,13 +2814,17 @@
     "space-inset-quarter-x-squish-top-bottom": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "2px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetQuarterXSquishTopBottom",
       "attributes": {
@@ -2310,13 +2840,17 @@
     "space-inset-quarter-x-squish-left-right": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetQuarterXSquishLeftRight",
       "attributes": {
@@ -2332,13 +2866,17 @@
     "space-inset-quarter-x-stretch-top-bottom": {
       "value": "0.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "6px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetQuarterXStretchTopBottom",
       "attributes": {
@@ -2354,13 +2892,17 @@
     "space-inset-quarter-x-stretch-left-right": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetQuarterXStretchLeftRight",
       "attributes": {
@@ -2376,13 +2918,17 @@
     "space-inset-half-x": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.half-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetHalfX",
       "attributes": {
@@ -2398,13 +2944,17 @@
     "space-inset-half-x-squish-top-bottom": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "4px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetHalfXSquishTopBottom",
       "attributes": {
@@ -2420,13 +2970,17 @@
     "space-inset-half-x-squish-left-right": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetHalfXSquishLeftRight",
       "attributes": {
@@ -2442,13 +2996,17 @@
     "space-inset-half-x-stretch-top-bottom": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "12px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetHalfXStretchTopBottom",
       "attributes": {
@@ -2464,13 +3022,17 @@
     "space-inset-half-x-stretch-left-right": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetHalfXStretchLeftRight",
       "attributes": {
@@ -2486,13 +3048,17 @@
     "space-inset-three-quarter-x": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.three-quarter-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetThreeQuarterX",
       "attributes": {
@@ -2508,13 +3074,17 @@
     "space-inset-three-quarter-x-squish-top-bottom": {
       "value": "0.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "6px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetThreeQuarterXSquishTopBottom",
       "attributes": {
@@ -2530,13 +3100,17 @@
     "space-inset-three-quarter-x-squish-left-right": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "12px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetThreeQuarterXSquishLeftRight",
       "attributes": {
@@ -2552,13 +3126,17 @@
     "space-inset-three-quarter-x-stretch-top-bottom": {
       "value": "1.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "18px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetThreeQuarterXStretchTopBottom",
       "attributes": {
@@ -2574,13 +3152,17 @@
     "space-inset-three-quarter-x-stretch-left-right": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "12px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetThreeQuarterXStretchLeftRight",
       "attributes": {
@@ -2596,13 +3178,17 @@
     "space-inset-one-x": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.one-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneX",
       "attributes": {
@@ -2618,13 +3204,17 @@
     "space-inset-one-x-squish-top-bottom": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "8px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneXSquishTopBottom",
       "attributes": {
@@ -2640,13 +3230,17 @@
     "space-inset-one-x-squish-left-right": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneXSquishLeftRight",
       "attributes": {
@@ -2662,13 +3256,17 @@
     "space-inset-one-x-stretch-top-bottom": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "24px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneXStretchTopBottom",
       "attributes": {
@@ -2684,13 +3282,17 @@
     "space-inset-one-x-stretch-left-right": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneXStretchLeftRight",
       "attributes": {
@@ -2706,13 +3308,17 @@
     "space-inset-one-and-a-half-x": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.one-and-a-half-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneAndAHalfX",
       "attributes": {
@@ -2728,13 +3334,17 @@
     "space-inset-one-and-a-half-x-squish-top-bottom": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "12px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneAndAHalfXSquishTopBottom",
       "attributes": {
@@ -2750,13 +3360,17 @@
     "space-inset-one-and-a-half-x-squish-left-right": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "24px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneAndAHalfXSquishLeftRight",
       "attributes": {
@@ -2772,13 +3386,17 @@
     "space-inset-one-and-a-half-x-stretch-top-bottom": {
       "value": "3.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "36px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneAndAHalfXStretchTopBottom",
       "attributes": {
@@ -2794,13 +3412,17 @@
     "space-inset-one-and-a-half-x-stretch-left-right": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "24px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetOneAndAHalfXStretchLeftRight",
       "attributes": {
@@ -2816,13 +3438,17 @@
     "space-inset-two-x": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.two-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetTwoX",
       "attributes": {
@@ -2838,13 +3464,17 @@
     "space-inset-two-x-squish-top-bottom": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "16px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetTwoXSquishTopBottom",
       "attributes": {
@@ -2860,13 +3490,17 @@
     "space-inset-two-x-squish-left-right": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "32px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetTwoXSquishLeftRight",
       "attributes": {
@@ -2882,13 +3516,17 @@
     "space-inset-two-x-stretch-top-bottom": {
       "value": "4.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "48px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetTwoXStretchTopBottom",
       "attributes": {
@@ -2904,13 +3542,17 @@
     "space-inset-two-x-stretch-left-right": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "32px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetTwoXStretchLeftRight",
       "attributes": {
@@ -2926,13 +3568,17 @@
     "space-inset-four-x": {
       "value": "6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.four-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetFourX",
       "attributes": {
@@ -2948,13 +3594,17 @@
     "space-inset-four-x-squish-top-bottom": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "32px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetFourXSquishTopBottom",
       "attributes": {
@@ -2970,13 +3620,17 @@
     "space-inset-four-x-squish-left-right": {
       "value": "6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "64px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetFourXSquishLeftRight",
       "attributes": {
@@ -2992,13 +3646,17 @@
     "space-inset-four-x-stretch-top-bottom": {
       "value": "9.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "96px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetFourXStretchTopBottom",
       "attributes": {
@@ -3014,13 +3672,17 @@
     "space-inset-four-x-stretch-left-right": {
       "value": "6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "64px",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceInsetFourXStretchLeftRight",
       "attributes": {
@@ -3036,13 +3698,17 @@
     "space-inset-eighth-x-squish": {
       "value": "0 0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.eighth-x-squish-top-bottom.value} {space.inset.eighth-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetEighthXSquish",
       "attributes": {
@@ -3058,13 +3724,17 @@
     "space-inset-eighth-x-stretch": {
       "value": "0.4rem 0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.eighth-x-stretch-top-bottom.value} {space.inset.eighth-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetEighthXStretch",
       "attributes": {
@@ -3080,13 +3750,17 @@
     "space-inset-quarter-x-squish": {
       "value": "0.2rem 0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.quarter-x-squish-top-bottom.value} {space.inset.quarter-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetQuarterXSquish",
       "attributes": {
@@ -3102,13 +3776,17 @@
     "space-inset-quarter-x-stretch": {
       "value": "0.6rem 0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.quarter-x-stretch-top-bottom.value} {space.inset.quarter-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetQuarterXStretch",
       "attributes": {
@@ -3124,13 +3802,17 @@
     "space-inset-half-x-squish": {
       "value": "0.4rem 0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.half-x-squish-top-bottom.value} {space.inset.half-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetHalfXSquish",
       "attributes": {
@@ -3146,13 +3828,17 @@
     "space-inset-half-x-stretch": {
       "value": "1.2rem 0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.half-x-stretch-top-bottom.value} {space.inset.half-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetHalfXStretch",
       "attributes": {
@@ -3168,13 +3854,17 @@
     "space-inset-three-quarter-x-squish": {
       "value": "0.6rem 1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.three-quarter-x-squish-top-bottom.value} {space.inset.three-quarter-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetThreeQuarterXSquish",
       "attributes": {
@@ -3190,13 +3880,17 @@
     "space-inset-three-quarter-x-stretch": {
       "value": "1.8rem 1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.three-quarter-x-stretch-top-bottom.value} {space.inset.three-quarter-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetThreeQuarterXStretch",
       "attributes": {
@@ -3212,13 +3906,17 @@
     "space-inset-one-x-squish": {
       "value": "0.8rem 1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.one-x-squish-top-bottom.value} {space.inset.one-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetOneXSquish",
       "attributes": {
@@ -3234,13 +3932,17 @@
     "space-inset-one-x-stretch": {
       "value": "2.4rem 1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.one-x-stretch-top-bottom.value} {space.inset.one-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetOneXStretch",
       "attributes": {
@@ -3256,13 +3958,17 @@
     "space-inset-one-and-a-half-x-squish": {
       "value": "1.2rem 2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.one-and-a-half-x-squish-top-bottom.value} {space.inset.one-and-a-half-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetOneAndAHalfXSquish",
       "attributes": {
@@ -3278,13 +3984,17 @@
     "space-inset-one-and-a-half-x-stretch": {
       "value": "3.6rem 2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.one-and-a-half-x-stretch-top-bottom.value} {space.inset.one-and-a-half-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetOneAndAHalfXStretch",
       "attributes": {
@@ -3300,13 +4010,17 @@
     "space-inset-two-x-squish": {
       "value": "1.6rem 3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.two-x-squish-top-bottom.value} {space.inset.two-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetTwoXSquish",
       "attributes": {
@@ -3322,13 +4036,17 @@
     "space-inset-two-x-stretch": {
       "value": "4.8rem 3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.two-x-stretch-top-bottom.value} {space.inset.two-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetTwoXStretch",
       "attributes": {
@@ -3344,13 +4062,17 @@
     "space-inset-four-x-squish": {
       "value": "3.2rem 6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.four-x-squish-top-bottom.value} {space.inset.four-x-squish-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetFourXSquish",
       "attributes": {
@@ -3366,13 +4088,17 @@
     "space-inset-four-x-stretch": {
       "value": "9.6rem 6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "inset",
+      "docs": {
+        "category": "spacing",
+        "example": "inset"
+      },
       "original": {
         "value": "{space.inset.four-x-stretch-top-bottom.value} {space.inset.four-x-stretch-left-right.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.inset.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "inset"
+        }
       },
       "name": "SpaceInsetFourXStretch",
       "attributes": {
@@ -3388,13 +4114,17 @@
     "space-stack-eighth-x": {
       "value": "0.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.eighth-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackEighthX",
       "attributes": {
@@ -3410,13 +4140,17 @@
     "space-stack-quarter-x": {
       "value": "0.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.quarter-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackQuarterX",
       "attributes": {
@@ -3432,13 +4166,17 @@
     "space-stack-half-x": {
       "value": "0.8rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.half-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackHalfX",
       "attributes": {
@@ -3454,13 +4192,17 @@
     "space-stack-three-quarter-x": {
       "value": "1.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.three-quarter-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackThreeQuarterX",
       "attributes": {
@@ -3476,13 +4218,17 @@
     "space-stack-one-x": {
       "value": "1.6rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.one-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackOneX",
       "attributes": {
@@ -3498,13 +4244,17 @@
     "space-stack-one-and-a-half-x": {
       "value": "2.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.one-and-a-half-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackOneAndAHalfX",
       "attributes": {
@@ -3520,13 +4270,17 @@
     "space-stack-two-x": {
       "value": "3.2rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.two-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackTwoX",
       "attributes": {
@@ -3542,13 +4296,17 @@
     "space-stack-four-x": {
       "value": "6.4rem",
       "category": "size",
-      "docCategory": "spacing",
-      "docExample": "spacing",
+      "docs": {
+        "category": "spacing",
+        "example": "spacing"
+      },
       "original": {
         "value": "{space.four-x.value}",
         "category": "size",
-        "docCategory": "{space.docCategory}",
-        "docExample": "{space.docExample}"
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        }
       },
       "name": "SpaceStackFourX",
       "attributes": {
@@ -3567,14 +4325,18 @@
       "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "textDefaultBody",
       "property": "font-family",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.20.family.value}",
         "mixin": "textDefaultBody",
         "property": "font-family",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyFamily",
       "attributes": {
@@ -3591,14 +4353,18 @@
       "value": "normal",
       "mixin": "textDefaultBody",
       "property": "font-style",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.20.style.value}",
         "mixin": "textDefaultBody",
         "property": "font-style",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyStyle",
       "attributes": {
@@ -3615,14 +4381,18 @@
       "value": "400",
       "mixin": "textDefaultBody",
       "property": "font-weight",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.20.weight.value}",
         "mixin": "textDefaultBody",
         "property": "font-weight",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyWeight",
       "attributes": {
@@ -3639,14 +4409,18 @@
       "value": "normal",
       "mixin": "textDefaultBody",
       "property": "letter-spacing",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.20.spacing.value}",
         "mixin": "textDefaultBody",
         "property": "letter-spacing",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodySpacing",
       "attributes": {
@@ -3664,15 +4438,19 @@
       "category": "font-size",
       "mixin": "textDefaultBody",
       "property": "font-size",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.20.size.value}",
         "category": "font-size",
         "mixin": "textDefaultBody",
         "property": "font-size",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodySize",
       "attributes": {
@@ -3692,15 +4470,19 @@
       "category": "size",
       "mixin": "textDefaultBody",
       "property": "line-height",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.20.height.value}",
         "category": "size",
         "mixin": "textDefaultBody",
         "property": "line-height",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyHeight",
       "attributes": {
@@ -3718,14 +4500,18 @@
       "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "textDefaultBodyCompact",
       "property": "font-family",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.10.family.value}",
         "mixin": "textDefaultBodyCompact",
         "property": "font-family",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyCompactFamily",
       "attributes": {
@@ -3742,14 +4528,18 @@
       "value": "normal",
       "mixin": "textDefaultBodyCompact",
       "property": "font-style",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.10.style.value}",
         "mixin": "textDefaultBodyCompact",
         "property": "font-style",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyCompactStyle",
       "attributes": {
@@ -3766,14 +4556,18 @@
       "value": "400",
       "mixin": "textDefaultBodyCompact",
       "property": "font-weight",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.10.weight.value}",
         "mixin": "textDefaultBodyCompact",
         "property": "font-weight",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyCompactWeight",
       "attributes": {
@@ -3790,14 +4584,18 @@
       "value": "normal",
       "mixin": "textDefaultBodyCompact",
       "property": "letter-spacing",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.10.spacing.value}",
         "mixin": "textDefaultBodyCompact",
         "property": "letter-spacing",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyCompactSpacing",
       "attributes": {
@@ -3815,15 +4613,19 @@
       "category": "font-size",
       "mixin": "textDefaultBodyCompact",
       "property": "font-size",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.10.size.value}",
         "category": "font-size",
         "mixin": "textDefaultBodyCompact",
         "property": "font-size",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyCompactSize",
       "attributes": {
@@ -3843,15 +4645,19 @@
       "category": "size",
       "mixin": "textDefaultBodyCompact",
       "property": "line-height",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.redwood.body.10.height.value}",
         "category": "size",
         "mixin": "textDefaultBodyCompact",
         "property": "line-height",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextDefaultBodyCompactHeight",
       "attributes": {
@@ -3869,14 +4675,18 @@
       "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "textEditorialBody",
       "property": "font-family",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.30.family.value}",
         "mixin": "textEditorialBody",
         "property": "font-family",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyFamily",
       "attributes": {
@@ -3893,14 +4703,18 @@
       "value": "normal",
       "mixin": "textEditorialBody",
       "property": "font-style",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.30.style.value}",
         "mixin": "textEditorialBody",
         "property": "font-style",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyStyle",
       "attributes": {
@@ -3917,14 +4731,18 @@
       "value": "400",
       "mixin": "textEditorialBody",
       "property": "font-weight",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.30.weight.value}",
         "mixin": "textEditorialBody",
         "property": "font-weight",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyWeight",
       "attributes": {
@@ -3941,14 +4759,18 @@
       "value": "normal",
       "mixin": "textEditorialBody",
       "property": "letter-spacing",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.30.spacing.value}",
         "mixin": "textEditorialBody",
         "property": "letter-spacing",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodySpacing",
       "attributes": {
@@ -3966,15 +4788,19 @@
       "category": "font-size",
       "mixin": "textEditorialBody",
       "property": "font-size",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.30.size.value}",
         "category": "font-size",
         "mixin": "textEditorialBody",
         "property": "font-size",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodySize",
       "attributes": {
@@ -3994,15 +4820,19 @@
       "category": "size",
       "mixin": "textEditorialBody",
       "property": "line-height",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.30.height.value}",
         "category": "size",
         "mixin": "textEditorialBody",
         "property": "line-height",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyHeight",
       "attributes": {
@@ -4020,14 +4850,18 @@
       "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "textEditorialBodyCompact",
       "property": "font-family",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.20.family.value}",
         "mixin": "textEditorialBodyCompact",
         "property": "font-family",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyCompactFamily",
       "attributes": {
@@ -4044,14 +4878,18 @@
       "value": "normal",
       "mixin": "textEditorialBodyCompact",
       "property": "font-style",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.20.style.value}",
         "mixin": "textEditorialBodyCompact",
         "property": "font-style",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyCompactStyle",
       "attributes": {
@@ -4068,14 +4906,18 @@
       "value": "400",
       "mixin": "textEditorialBodyCompact",
       "property": "font-weight",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.20.weight.value}",
         "mixin": "textEditorialBodyCompact",
         "property": "font-weight",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyCompactWeight",
       "attributes": {
@@ -4092,14 +4934,18 @@
       "value": "normal",
       "mixin": "textEditorialBodyCompact",
       "property": "letter-spacing",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.20.spacing.value}",
         "mixin": "textEditorialBodyCompact",
         "property": "letter-spacing",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyCompactSpacing",
       "attributes": {
@@ -4117,15 +4963,19 @@
       "category": "font-size",
       "mixin": "textEditorialBodyCompact",
       "property": "font-size",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.20.size.value}",
         "category": "font-size",
         "mixin": "textEditorialBodyCompact",
         "property": "font-size",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyCompactSize",
       "attributes": {
@@ -4145,15 +4995,19 @@
       "category": "size",
       "mixin": "textEditorialBodyCompact",
       "property": "line-height",
-      "docCategory": "text",
-      "docExample": "text",
+      "docs": {
+        "category": "text",
+        "example": "text"
+      },
       "original": {
         "value": "{options.typography.spruce.body.20.height.value}",
         "category": "size",
         "mixin": "textEditorialBodyCompact",
         "property": "line-height",
-        "docCategory": "{text.docCategory}",
-        "docExample": "{text.docExample}"
+        "docs": {
+          "category": "text",
+          "example": "text"
+        }
       },
       "name": "TextEditorialBodyCompactHeight",
       "attributes": {

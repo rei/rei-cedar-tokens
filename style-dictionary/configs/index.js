@@ -6,7 +6,7 @@ const lessConfig = require('./less');
 const jsConfig = require('./js');
 const androidConfig = require('./android');
 const iosConfig = require('./ios');
-const jsonConfig = require('./json');
+const siteConfig = require('./site');
 
 // this is the filter for excluding "option" tokens
 // and works in concert with transforms/attribute/option.js
@@ -29,7 +29,7 @@ function filterOptions(platforms) {
 }
 
 function getSources(platform) {
-  if (platform === 'web' || platform === 'json') {
+  if (platform === 'web') {
     return [`tokens/web/**/*.json5`];
   }
   if (platform === 'android') {
@@ -37,6 +37,9 @@ function getSources(platform) {
   }
   if (platform === 'ios') {
     return [`tokens/ios/**/*.json5`];
+  }
+  if (platform === 'site') {
+    return [`tokens/web/*.json5`];
   }
 }
 
@@ -50,8 +53,8 @@ function getConfigs(platform) {
   if (platform === 'ios') {
     return filterOptions([iosConfig])
   }
-  if (platform === 'json') {
-    return filterOptions([jsonConfig])
+  if (platform === 'site') {
+    return filterOptions([siteConfig])
   }
 }
 
