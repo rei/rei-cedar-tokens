@@ -11,6 +11,9 @@ const siteConfig = require('./site');
 // this is the filter for excluding "option" tokens
 // and works in concert with transforms/attribute/option.js
 const filterObj = {
+  options: {
+    showFileHeader: false,
+  },
   filter: {
     attributes: {
       option: false,

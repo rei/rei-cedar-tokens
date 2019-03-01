@@ -1,8 +1,3 @@
-/**
- * Do not edit directly
- * Generated on Sat, 23 Feb 2019 15:59:44 GMT
- */
-
 export const CdrBreakpointXs = "0";
 export const CdrBreakpointSm = "76.8rem";
 export const CdrBreakpointMd = "99.2rem";
