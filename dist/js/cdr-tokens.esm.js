@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 23 Feb 2019 15:59:44 GMT
+ * Generated on Mon, 04 Mar 2019 18:17:32 GMT
  */
 
 export const CdrBreakpointXs = "0";
@@ -25,15 +25,15 @@ export const CdrColorTextFormDisabledLightmode = "#b8b8b8";
 export const CdrColorTextFormDisabledDarkmode = "#616161";
 export const CdrColorIconPrimaryLightmode = "#292929";
 export const CdrColorIconPrimaryDarkmode = "#fafafa";
-export const CdrColorBackgroundDark = "#1a1a1a";
-export const CdrColorBackgroundDarker = "#292929";
+export const CdrColorBackgroundDark = "#292929";
+export const CdrColorBackgroundDarker = "#1a1a1a";
 export const CdrColorBackgroundLight = "#f7f7f7";
 export const CdrColorBackgroundLighter = "#fafafa";
 export const CdrColorBackgroundLightest = "#ffffff";
 export const CdrColorBackgroundFormLightmode = "#ffffff";
-export const CdrColorBackgroundFormDarkmode = "#1a1a1a";
+export const CdrColorBackgroundFormDarkmode = "#292929";
 export const CdrColorBackgroundFormInputLightmode = "#ffffff";
-export const CdrColorBackgroundFormInputDarkmode = "#1a1a1a";
+export const CdrColorBackgroundFormInputDarkmode = "#292929";
 export const CdrColorBorderPrimaryLightmode = "#616161";
 export const CdrColorBorderPrimaryDarkmode = "#fafafa";
 export const CdrColorBorderSecondaryLightmode = "#b8b8b8";

@@ -3,7 +3,7 @@
 // CdrProperties.m
 //
 // Do not edit directly
-// Generated on Sat, 23 Feb 2019 15:59:44 GMT
+// Generated on Mon, 04 Mar 2019 18:17:32 GMT
 //
 
 #import "CdrProperties.h"
@@ -163,12 +163,12 @@
       },
     @"background": @{
       @"dark": @{
-        @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+        @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
         @"name": @"CdrColorBackgroundDark",
         @"category": @"color"
         },
       @"darker": @{
-        @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
+        @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
         @"name": @"CdrColorBackgroundDarker",
         @"category": @"color"
         },
@@ -194,7 +194,7 @@
           @"category": @"color"
           },
         @"darkmode": @{
-          @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+          @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
           @"name": @"CdrColorBackgroundFormDarkmode",
           @"category": @"color"
           },
@@ -205,7 +205,7 @@
             @"category": @"color"
             },
           @"darkmode": @{
-            @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+            @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
             @"name": @"CdrColorBackgroundFormInputDarkmode",
             @"category": @"color"
             }
