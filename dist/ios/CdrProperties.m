@@ -23,28 +23,6 @@
 
   dispatch_once(&onceToken, ^{
     dictionary = @{
-  @"breakpoint": @{
-    @"xs": @{
-      @"value": @0.00f,
-      @"name": @"CdrBreakpointXs",
-      @"category": @"size"
-      },
-    @"sm": @{
-      @"value": @12288.00f,
-      @"name": @"CdrBreakpointSm",
-      @"category": @"size"
-      },
-    @"md": @{
-      @"value": @15872.00f,
-      @"name": @"CdrBreakpointMd",
-      @"category": @"size"
-      },
-    @"lg": @{
-      @"value": @19200.00f,
-      @"name": @"CdrBreakpointLg",
-      @"category": @"size"
-      }
-    },
   @"color": @{
     @"text": @{
       @"primary": @{

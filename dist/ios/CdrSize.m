@@ -9,10 +9,6 @@
 
 
 
-float const CdrBreakpointXs = 0.00f;
-float const CdrBreakpointSm = 12288.00f;
-float const CdrBreakpointMd = 15872.00f;
-float const CdrBreakpointLg = 19200.00f;
 float const CdrIconSizeSm = 256.00f;
 float const CdrIconSize = 384.00f;
 float const CdrIconSizeLg = 512.00f;
