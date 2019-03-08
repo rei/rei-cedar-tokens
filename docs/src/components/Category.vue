@@ -7,39 +7,48 @@
     >
       <h3 v-if="k !== 'undefined'">---{{k}}---</h3>
 
-      <table class="prop-table">
-        <!-- <thead>
-          <tr>
-            <th>Name:</th>
-            <th>Value:</th>
-            <th>Example:</th>
-          </tr>
-        </thead> -->
+      <table
+        v-if="otherTokens(v).length > 0"
+        class="prop-table"
+      >
         <tbody class="prop-tbody">
           <prop-sorter
-            v-for="(v,k) in v"
+            v-for="(v,k) in otherTokens(v)"
             :key="k"
             :prop="v"
           />
-          <!-- <template v-if="categoryTitle === 'text'">
-            <p>---------</p>
-            <type-mixin
-              v-for="(v,k) in mixinTokens"
-              :key="k"
-              :name="kebab(k)"
-              :prop="v"
-            />
-          </template> -->
         </tbody>
       </table>
+
+      <template v-if="Object.keys(mixinTokens(v)).length > 0">
+        <table
+          v-for="(v,k) in mixinTokens(v)"
+          :key="k"
+          class="prop-table mixins"
+        >
+          <tbody class="prop-tbody">
+            <mixin-sorter
+              :prop="v"
+            />
+            <type-mixin
+              v-for="(v, idx) in v"
+              :key="`mixin${v.name}${idx}`"
+              :prop="v"
+            />
+          </tbody>
+        </table>
+      </template>
     </div>
   </div>
 </template>
 
 <script>
 import PropSorter from './PropSorter';
-// import TypeMixin from './TypeMixin';
+import MixinSorter from './MixinSorter';
+import TypeMixin from './TypeMixin';
 import groupBy from 'lodash/groupBy';
+import filter from 'lodash/filter';
+import has from 'lodash/has';
 
 
 export default {
@@ -50,16 +59,30 @@ export default {
   },
   components: {
     PropSorter,
-    // TypeMixin,
+    MixinSorter,
+    TypeMixin,
   },
   computed: {
-    mixinTokens() {
-      return groupBy(this.categoryData, 'mixin');
-    },
     typeData() {
       return groupBy(this.categoryData, 'docs.type');
     }
   },
+  methods: {
+    mixinTokens(arr) {
+      const res = filter(arr, (o) => {
+        return has(o, 'mixin');
+      });
+
+      return groupBy(res, 'mixin');
+    },
+    otherTokens(arr) {
+      const res = filter(arr, (o) => {
+        return !has(o, 'mixin');
+      });
+
+      return res;
+    },
+  }
 }
 </script>
 
@@ -78,6 +101,10 @@ export default {
 
   td, th {
     border: 1px solid black;
+  }
+
+  &.mixins + &.mixins {
+    margin-top: 20px;
   }
 }
 

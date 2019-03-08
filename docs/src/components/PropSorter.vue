@@ -14,7 +14,6 @@ export default {
   functional: true,
   props: {
     prop: Object,
-    allData: [Object, Array],
   },
   render(h, ctx) {
     function tokenComponent() {
