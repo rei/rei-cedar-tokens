@@ -6,6 +6,7 @@ const lessConfig = require('./less');
 const jsConfig = require('./js');
 const androidConfig = require('./android');
 const iosConfig = require('./ios');
+const siteGlobalConfig = require('./site.global');
 const siteWebConfig = require('./site.web');
 const siteAndroidConfig = require('./site.android');
 const siteIosConfig = require('./site.ios');
@@ -34,6 +35,9 @@ function filterOptions(platforms) {
 }
 
 function getSources(platform) {
+  if (platform === 'site/global') {
+    return [];
+  }
   if (platform === 'web' || platform === 'site/web') {
     return [`tokens/web/**/*.json5`];
   }
@@ -54,6 +58,9 @@ function getConfigs(platform) {
   }
   if (platform === 'ios') {
     return filterOptions([iosConfig])
+  }
+  if (platform === 'site/global') {
+    return filterOptions([siteGlobalConfig])
   }
   if (platform === 'site/web') {
     return filterOptions([siteWebConfig])

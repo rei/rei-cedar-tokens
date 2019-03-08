@@ -331,10 +331,6 @@
       @"name": @"CdrProminenceFlatColor",
       @"category": @"color"
       },
-    @"flat-opacity": @{
-      @"value": 0.2,
-      @"name": @"CdrProminenceFlatOpacity"
-      },
     @"raised-x": @{
       @"value": @32.00f,
       @"name": @"CdrProminenceRaisedX",

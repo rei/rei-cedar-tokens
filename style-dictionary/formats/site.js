@@ -11,13 +11,16 @@ module.exports = (StyleDictionary) => {
       for(const key of keys) {
         const newKey = key === 'undefined' ? 'misc' : key;
         const catArr = grouped[key];
-        toRet[newKey] = {};
+        toRet[newKey] = [];
 
         for (let i = 0, len = catArr.length; i < len; i++) {
           const current = catArr[i];
-          let {name, value} = current;
+          let {name} = current;
           name = _.kebabCase(name);
-          toRet[newKey][name] = current;
+
+          delete current.original;
+          delete current.path;
+          toRet[newKey].push(current);
         }
       }
 

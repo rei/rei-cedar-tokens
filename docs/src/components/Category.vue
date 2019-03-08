@@ -7,15 +7,15 @@
     >
       <h3 v-if="k !== 'undefined'">---{{k}}---</h3>
 
-      <table>
-        <thead>
+      <table class="prop-table">
+        <!-- <thead>
           <tr>
             <th>Name:</th>
             <th>Value:</th>
             <th>Example:</th>
           </tr>
-        </thead>
-        <tbody class="category-tbody">
+        </thead> -->
+        <tbody class="prop-tbody">
           <prop-sorter
             v-for="(v,k) in v"
             :key="k"
@@ -45,7 +45,7 @@ import groupBy from 'lodash/groupBy';
 export default {
   name: 'Category',
   props: {
-    categoryData: Object,
+    categoryData: Array,
     categoryTitle: String,
   },
   components: {
@@ -63,14 +63,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .type-title {
   display: inline-block;
   margin-bottom: 10px;
   border-bottom: 1px solid black;
 }
 
-.category-tbody > tr td {
+.prop-table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  td, th {
+    border: 1px solid black;
+  }
+}
+
+.prop-tbody > tr td {
   padding: 10px 5px;
 }
 </style>

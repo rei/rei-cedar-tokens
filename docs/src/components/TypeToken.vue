@@ -2,7 +2,7 @@
   <tr>
     <td>{{name}}</td>
     <td>{{prop.value}}</td>
-    <td>N/A</td>
+    <td></td>
   </tr>
 </template>
 

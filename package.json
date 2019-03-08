@@ -22,8 +22,9 @@
     "postpublish": "npm run build:docs",
     "build:tokens": "node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
-    "build": "npm run clean && npm run build:tokens",
-    "build:docs": "node ./deploy.js"
+    "build": "npm run clean && npm run build:tokens && npm run site-tokens",
+    "build:docs": "node ./deploy.js",
+    "site-tokens": "node ./siteTokens.js"
   },
   "devDependencies": {
     "concat": "^1.0.3",

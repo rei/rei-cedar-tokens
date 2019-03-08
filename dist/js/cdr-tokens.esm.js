@@ -50,7 +50,6 @@ export const CdrProminenceFlatY = "0";
 export const CdrProminenceFlatBlur = "0";
 export const CdrProminenceFlatSpread = "0";
 export const CdrProminenceFlatColor = "#1a1a1a";
-export const CdrProminenceFlatOpacity = "0.2";
 export const CdrProminenceRaisedX = "0.2rem";
 export const CdrProminenceRaisedY = "0.2rem";
 export const CdrProminenceRaisedBlur = "0.2rem";

@@ -1,12 +1,21 @@
 <template>
-  <div id="app">
-    <h1>Design Tokens</h1>
-    <Category 
-      v-for="(v, k) in Tokens"
-      :key="k"
-      :category-title="k"
-      :category-data="v"
-    />
+  <div class="cdr-container-fluid">
+    <div
+      v-for="(data, platform) in Tokens"
+      :key="platform"
+    >
+      <h1>Platform: {{platform}}</h1>
+      <hr>
+
+      <template v-for="(v, k) in data">
+        <Category
+          v-if="v.length > 0"
+          :key="k"
+          :category-title="k"
+          :category-data="v"
+        />
+      </template>
+    </div>
   </div>
 </template>
 

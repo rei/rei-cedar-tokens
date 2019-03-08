@@ -1,10 +1,10 @@
 <template>
   <tr>
-    <td>{{name}}</td>
-    <td>{{prop.value}}</td>
     <td>
       <div class="radius-example" :style="{borderRadius: prop.value}"/>
     </td>
+    <td>{{name}}</td>
+    <td>{{prop.value}}</td>
   </tr>
 </template>
 

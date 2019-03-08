@@ -1,11 +1,11 @@
 module.exports = {
   siteWeb: {
     transformGroup: 'custom/js',
-    buildPath: 'docs/src/assets/',
+    buildPath: 'dist/json/',
     // prefix: 'cdr',
     files: [
       {
-        destination: 'cdr-tokens.web.json',
+        destination: 'web.json',
         format: 'site',
       },
     ],

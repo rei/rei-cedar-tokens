@@ -1,10 +1,10 @@
 <template>
   <tr>
-    <td>{{name}}</td>
-    <td>{{prop.value}}</td>
     <td>
       <div class="inset-example" :style="{boxShadow: inset, padding: pad}">{{ name }}</div>
     </td>
+    <td>{{name}}</td>
+    <td>{{prop.value}}</td>
   </tr>
 </template>
 

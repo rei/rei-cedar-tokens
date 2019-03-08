@@ -1,11 +1,11 @@
 module.exports = {
-  siteIos: {
+  siteWeb: {
     transformGroup: 'custom/js',
     buildPath: 'dist/json/',
     // prefix: 'cdr',
     files: [
       {
-        destination: 'ios.json',
+        destination: 'global.json',
         format: 'site',
       },
     ],

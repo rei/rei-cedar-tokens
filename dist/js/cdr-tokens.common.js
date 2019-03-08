@@ -51,7 +51,6 @@ module.exports = {
   cdrProminenceFlatBlur: "0",
   cdrProminenceFlatSpread: "0",
   cdrProminenceFlatColor: "#1a1a1a",
-  cdrProminenceFlatOpacity: "0.2",
   cdrProminenceRaisedX: "0.2rem",
   cdrProminenceRaisedY: "0.2rem",
   cdrProminenceRaisedBlur: "0.2rem",

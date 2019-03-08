@@ -3,7 +3,7 @@
     <td>{{name}}</td>
     <td>{{prop.value}}</td>
     <td>
-      <div class="breakpoint-example" :style="{width: prop.value}"/>
+      <!-- <div class="breakpoint-example" :style="{width: prop.value}"/> -->
     </td>
   </tr>
 </template>
