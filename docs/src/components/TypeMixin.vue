@@ -1,7 +1,7 @@
 <template>
   <tr>
     <td></td>
-    <td>{{prop.name}}</td>
+    <td>{{name}}</td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
@@ -14,6 +14,11 @@ export default {
   props: {
     prop: [Array,Object],
   },
+  computed: {
+    name() {
+      return kebab(this.prop.name)
+    }
+  }
 };
 </script>
 

@@ -4,7 +4,20 @@
       v-for="(data, platform) in Tokens"
       :key="platform"
     >
-      <h1>Platform: {{platform}}</h1>
+      <h1 class="platform-title">Platform: {{platform}}</h1>
+
+      <div v-if="platform === 'global'">
+        <p>Global token's names are converted to platform specific variable naming:</p>
+        <ul>
+          <li>SCSS/LESS: kebab-case</li>
+          <li>JS (commonjs): camelCase</li>
+          <li>JS (esm): PascalCase</li>
+          <li>Android: snake_case</li>
+          <li>iOS: PascalCase</li>
+        </ul>
+        <p>Global token's values are converted to platform specific units in the platform's package but only shown here for web</p>
+      </div>
+
       <hr>
 
       <template v-for="(v, k) in data">
@@ -37,4 +50,9 @@ export default {
 </script>
 
 <style>
+.platform-title {
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 </style>

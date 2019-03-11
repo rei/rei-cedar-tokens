@@ -2,7 +2,7 @@ module.exports = {
   siteWeb: {
     transformGroup: 'custom/js',
     buildPath: 'dist/json/',
-    // prefix: 'cdr',
+    prefix: 'cdr',
     files: [
       {
         destination: 'web.json',

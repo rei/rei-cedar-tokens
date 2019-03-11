@@ -1,14 +1,16 @@
 <template>
   <tr>
     <td>
-      <p :style="mixinStyles(prop)">Get outside with REI</p>
+      <span :style="mixinStyles(prop)">Get outside with REI</span>
     </td>
-    <td>{{prop[0].mixin}}</td>
+    <td>{{mixinName}}</td>
     <td>mixin</td>
   </tr>
 </template>
 
 <script>
+import kebab from 'lodash/kebabCase';
+
 export default {
   name: 'MixinTypography',
   props: {
@@ -21,6 +23,11 @@ export default {
         final[o.property]= o.value;
       })
       return final;
+    }
+  },
+  computed: {
+    mixinName() {
+      return kebab(this.prop[0].mixin);
     }
   }
 }

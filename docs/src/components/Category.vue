@@ -1,11 +1,15 @@
 <template>
-  <div class="cdr-container">
-    <h2 class="type-title">{{ categoryTitle }}</h2>
+  <div class="cdr-container ">
+    <h2 class="category-title">{{ categoryTitle }}</h2>
+    
     <div
       v-for="(v,k) in typeData"
       :key="k"
     >
-      <h3 v-if="k !== 'undefined'">---{{k}}---</h3>
+      <h3
+        v-if="k !== 'undefined'"
+        class="type-title"
+      >{{k}}</h3>
 
       <table
         v-if="otherTokens(v).length > 0"
@@ -87,10 +91,19 @@ export default {
 </script>
 
 <style lang="scss">
+.category-title {
+  text-decoration: underline;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
 .type-title {
-  display: inline-block;
-  margin-bottom: 10px;
-  border-bottom: 1px solid black;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 .prop-table {

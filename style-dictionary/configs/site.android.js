@@ -1,8 +1,8 @@
 module.exports = {
   siteAndroid: {
-    transformGroup: 'custom/js',
+    transformGroup: 'custom/android',
     buildPath: 'dist/json/',
-    // prefix: 'cdr',
+    prefix: 'cdr',
     files: [
       {
         destination: 'android.json',

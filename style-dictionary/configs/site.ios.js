@@ -1,8 +1,8 @@
 module.exports = {
   siteIos: {
-    transformGroup: 'custom/js',
+    transformGroup: 'custom/ios',
     buildPath: 'dist/json/',
-    // prefix: 'cdr',
+    prefix: 'cdr',
     files: [
       {
         destination: 'ios.json',

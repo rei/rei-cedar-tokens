@@ -5,6 +5,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerFormat({
     name: 'site',
     formatter(dictionary, config) {
+      const prefix = config.prefix ? `${config.prefix}-` : '';
       const toRet = {};
       const grouped = _.groupBy(dictionary.allProperties, 'docs.category');
       const keys = Object.keys(grouped)
@@ -15,8 +16,10 @@ module.exports = (StyleDictionary) => {
 
         for (let i = 0, len = catArr.length; i < len; i++) {
           const current = catArr[i];
-          let {name} = current;
-          name = _.kebabCase(name);
+
+          if (_.has(current, 'mixin')) {
+            current.mixin = `${prefix}${current.mixin}`;
+          }
 
           delete current.original;
           delete current.path;
