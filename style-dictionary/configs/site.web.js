@@ -1,6 +1,6 @@
 module.exports = {
   siteWeb: {
-    transformGroup: 'custom/js',
+    transformGroup: 'custom/scss',
     buildPath: 'dist/json/',
     prefix: 'cdr',
     files: [

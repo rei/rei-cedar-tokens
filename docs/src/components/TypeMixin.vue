@@ -1,24 +1,17 @@
 <template>
   <tr>
     <td></td>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
 
 <script>
-import kebab from 'lodash/kebabCase';
-
 export default {
   name: 'TypeMixin',
   props: {
-    prop: [Array,Object],
+    prop: Object,
   },
-  computed: {
-    name() {
-      return kebab(this.prop.name)
-    }
-  }
 };
 </script>
 

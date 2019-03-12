@@ -3,23 +3,16 @@
     <td>
       <div class="radius-example" :style="{borderRadius: prop.value}"/>
     </td>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
-
 export default {
   name: 'TypeRadius',
   props: {
     prop: Object,
-  },
-  computed: {
-    name() {
-      return kebabCase(this.prop.name);
-    }
   },
 };
 </script>

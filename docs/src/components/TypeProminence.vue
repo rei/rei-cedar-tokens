@@ -5,23 +5,16 @@
         <div class="prominence-example" :style="{boxShadow: prop.value}"/>
       </div>
     </td>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
-
 export default {
   name: 'TypeProminence',
   props: {
     prop: Object,
-  },
-  computed: {
-    name() {
-      return kebabCase(this.prop.name);
-    }
   },
 };
 </script>

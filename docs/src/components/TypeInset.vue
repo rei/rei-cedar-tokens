@@ -1,25 +1,20 @@
 <template>
   <tr>
     <td>
-      <div class="inset-example" :style="{boxShadow: inset, padding: pad}">{{ name }}</div>
+      <div class="inset-example" :style="{boxShadow: inset, padding: pad}">content</div>
     </td>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
-
 export default {
   name: 'TypeInset',
   props: {
     prop: Object,
   },
   computed: {
-    name() {
-      return kebabCase(this.prop.name);
-    },
     pad() {
       const val = this.prop.value;
       if (val.indexOf(' ') <= 0) {
@@ -54,4 +49,7 @@ export default {
 </script>
 
 <style>
+.inset-example {
+  background-color: beige;
+}
 </style>

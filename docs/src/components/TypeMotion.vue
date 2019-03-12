@@ -21,14 +21,12 @@
       </div>
       <button @click="animate = !animate">Start/Stop</button>
     </td>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
-
 export default {
   name: 'TypeMotion',
   props: {
@@ -37,11 +35,6 @@ export default {
   data() {
     return {
       animate: false
-    }
-  },
-  computed: {
-    name() {
-      return kebabCase(this.prop.name);
     }
   },
 };

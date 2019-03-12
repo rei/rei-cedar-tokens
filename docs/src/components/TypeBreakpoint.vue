@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
     <td>
       <!-- <div class="breakpoint-example" :style="{width: prop.value}"/> -->
@@ -9,17 +9,10 @@
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
-
 export default {
   name: 'TypeBreakpoint',
   props: {
     prop: Object,
-  },
-  computed: {
-    name() {
-      return kebabCase(this.prop.name);
-    }
   },
 };
 </script>
