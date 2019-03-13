@@ -2,8 +2,7 @@
 //
 // CdrProperties.m
 //
-// Do not edit directly
-// Generated on Sat, 23 Feb 2019 15:59:44 GMT
+
 //
 
 #import "CdrProperties.h"
@@ -24,28 +23,6 @@
 
   dispatch_once(&onceToken, ^{
     dictionary = @{
-  @"breakpoint": @{
-    @"xs": @{
-      @"value": @0.00f,
-      @"name": @"CdrBreakpointXs",
-      @"category": @"size"
-      },
-    @"sm": @{
-      @"value": @12288.00f,
-      @"name": @"CdrBreakpointSm",
-      @"category": @"size"
-      },
-    @"md": @{
-      @"value": @15872.00f,
-      @"name": @"CdrBreakpointMd",
-      @"category": @"size"
-      },
-    @"lg": @{
-      @"value": @19200.00f,
-      @"name": @"CdrBreakpointLg",
-      @"category": @"size"
-      }
-    },
   @"color": @{
     @"text": @{
       @"primary": @{
@@ -353,10 +330,6 @@
       @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
       @"name": @"CdrProminenceFlatColor",
       @"category": @"color"
-      },
-    @"flat-opacity": @{
-      @"value": 0.2,
-      @"name": @"CdrProminenceFlatOpacity"
       },
     @"raised-x": @{
       @"value": @32.00f,

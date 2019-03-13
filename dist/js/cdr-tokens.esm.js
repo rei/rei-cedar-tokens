@@ -1,12 +1,3 @@
-/**
- * Do not edit directly
- * Generated on Sat, 23 Feb 2019 15:59:44 GMT
- */
-
-export const CdrBreakpointXs = "0";
-export const CdrBreakpointSm = "76.8rem";
-export const CdrBreakpointMd = "99.2rem";
-export const CdrBreakpointLg = "120rem";
 export const CdrColorTextPrimaryLightmode = "#292929";
 export const CdrColorTextPrimaryDarkmode = "#fafafa";
 export const CdrColorTextSecondaryLightmode = "#616161";
@@ -59,7 +50,6 @@ export const CdrProminenceFlatY = "0";
 export const CdrProminenceFlatBlur = "0";
 export const CdrProminenceFlatSpread = "0";
 export const CdrProminenceFlatColor = "#1a1a1a";
-export const CdrProminenceFlatOpacity = "0.2";
 export const CdrProminenceRaisedX = "0.2rem";
 export const CdrProminenceRaisedY = "0.2rem";
 export const CdrProminenceRaisedBlur = "0.2rem";
@@ -169,6 +159,10 @@ export const CdrSpaceStackOneX = "1.6rem";
 export const CdrSpaceStackOneAndAHalfX = "2.4rem";
 export const CdrSpaceStackTwoX = "3.2rem";
 export const CdrSpaceStackFourX = "6.4rem";
+export const CdrBreakpointXs = "0";
+export const CdrBreakpointSm = "76.8rem";
+export const CdrBreakpointMd = "99.2rem";
+export const CdrBreakpointLg = "120rem";
 export const CdrTextDefaultBodyFamily = "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif";
 export const CdrTextDefaultBodyStyle = "normal";
 export const CdrTextDefaultBodyWeight = "400";

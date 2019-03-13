@@ -1,19 +1,8 @@
 <template>
   <tr>
-    <td>{{name}}</td>
-    <td>
-      <!-- <p
-        v-for="k in prop.value"
-        :key="k"
-        class="typography-values"
-      >
-        {{k}}
-      </p> -->
-      mixin
-    </td>
-    <td>
-      <p :style="styleObj">Sample text</p>
-    </td>
+    <td></td>
+    <td>{{prop.name}}</td>
+    <td>{{prop.value}}</td>
   </tr>
 </template>
 
@@ -21,17 +10,7 @@
 export default {
   name: 'TypeMixin',
   props: {
-    name: String,
-    prop: [Array,Object],
-  },
-  computed: {
-    styleObj() {
-      let final = {};
-      this.prop.forEach(o => {
-        final[o.property]= o.value;
-      })
-      return final;
-    },
+    prop: Object,
   },
 };
 </script>

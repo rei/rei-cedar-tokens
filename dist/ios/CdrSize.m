@@ -2,18 +2,13 @@
 //
 // CdrSize.m
 //
-// Do not edit directly
-// Generated on Sat, 23 Feb 2019 15:59:44 GMT
+
 //
 
 #import "CdrSize.h"
 
 
 
-float const CdrBreakpointXs = 0.00f;
-float const CdrBreakpointSm = 12288.00f;
-float const CdrBreakpointMd = 15872.00f;
-float const CdrBreakpointLg = 19200.00f;
 float const CdrIconSizeSm = 256.00f;
 float const CdrIconSize = 384.00f;
 float const CdrIconSizeLg = 512.00f;

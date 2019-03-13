@@ -1,72 +1,127 @@
 <template>
-  <div class="cdr-container">
-    <h2 class="type-title">{{ categoryTitle }}</h2>
-    <table>
-        <thead>
-          <tr>
-            <th>Name:</th>
-            <th>Value:</th>
-            <th>Example:</th>
-          </tr>
-        </thead>
-        <tbody class="category-tbody">
+  <div class="cdr-container ">
+    <h2 class="category-title">{{ categoryTitle }}</h2>
+    
+    <div
+      v-for="(v,k) in typeData"
+      :key="k"
+    >
+      <h3
+        v-if="k !== 'undefined'"
+        class="type-title"
+      >{{k}}</h3>
+
+      <table
+        v-if="otherTokens(v).length > 0"
+        class="prop-table"
+      >
+        <tbody class="prop-tbody">
           <prop-sorter
-            v-for="(v,k) in categoryData"
+            v-for="(v,k) in otherTokens(v)"
             :key="k"
-            :name="k"
             :prop="v"
           />
-          <template v-if="categoryTitle === 'text'">
-            <p>---------</p>
-            <type-mixin
-              v-for="(v,k) in mixinTokens"
-              :key="k"
-              :name="kebab(k)"
-              :prop="v"
-            />
-          </template>
         </tbody>
       </table>
+
+      <template v-if="Object.keys(mixinTokens(v)).length > 0">
+        <table
+          v-for="(v,k) in mixinTokens(v)"
+          :key="k"
+          class="prop-table mixins"
+        >
+          <tbody class="prop-tbody">
+            <mixin-sorter
+              :prop="v"
+            />
+            <type-mixin
+              v-for="(v, idx) in v"
+              :key="`mixin${v.name}${idx}`"
+              :prop="v"
+            />
+          </tbody>
+        </table>
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
 import PropSorter from './PropSorter';
+import MixinSorter from './MixinSorter';
 import TypeMixin from './TypeMixin';
 import groupBy from 'lodash/groupBy';
-import kebabCase from 'lodash/kebabCase';
+import filter from 'lodash/filter';
+import has from 'lodash/has';
+
 
 export default {
   name: 'Category',
   props: {
-    categoryData: Object,
+    categoryData: Array,
     categoryTitle: String,
   },
   components: {
     PropSorter,
+    MixinSorter,
     TypeMixin,
   },
   computed: {
-    mixinTokens() {
-      return groupBy(this.categoryData, 'mixin');
+    typeData() {
+      return groupBy(this.categoryData, 'docs.type');
     }
   },
   methods: {
-    kebab(s) {
-      return kebabCase(s);
-    }
-  },
+    mixinTokens(arr) {
+      const res = filter(arr, (o) => {
+        return has(o, 'mixin');
+      });
+
+      return groupBy(res, 'mixin');
+    },
+    otherTokens(arr) {
+      const res = filter(arr, (o) => {
+        return !has(o, 'mixin');
+      });
+
+      return res;
+    },
+  }
 }
 </script>
 
-<style>
-.type-title {
-  display: inline-block;
-  margin-bottom: 10px;
-  border-bottom: 1px solid black;
+<style lang="scss">
+.category-title {
+  text-decoration: underline;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
-.category-tbody > tr td {
+.type-title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.prop-table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  td, th {
+    border: 1px solid black;
+  }
+
+  &.mixins + &.mixins {
+    margin-top: 20px;
+  }
+}
+
+.prop-tbody > tr td {
   padding: 10px 5px;
 }
 </style>

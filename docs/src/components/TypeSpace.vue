@@ -1,10 +1,10 @@
 <template>
   <tr>
-    <td>{{name}}</td>
-    <td>{{prop.value}}</td>
     <td>
       <div class="space-example" :style="{width: prop.value, height: prop.value}"/>
     </td>
+    <td>{{prop.name}}</td>
+    <td>{{prop.value}}</td>
   </tr>
 </template>
 
@@ -12,7 +12,6 @@
 export default {
   name: 'TypeSpace',
   props: {
-    name: String,
     prop: Object,
   },
 };

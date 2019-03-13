@@ -1,10 +1,12 @@
 <template>
   <tr>
-    <td>{{name}}</td>
-    <td>{{prop.value}}</td>
     <td>
-      <div class="prominence-example" :style="{boxShadow: prop.value}"/>
+      <div class="prominence-wrap">
+        <div class="prominence-example" :style="{boxShadow: prop.value}"/>
+      </div>
     </td>
+    <td>{{prop.name}}</td>
+    <td>{{prop.value}}</td>
   </tr>
 </template>
 
@@ -12,15 +14,20 @@
 export default {
   name: 'TypeProminence',
   props: {
-    name: String,
     prop: Object,
   },
 };
 </script>
 
 <style>
+  .prominence-wrap {
+    display: inline-block;
+    background-color: lightgray;
+    padding: 20px;
+  }
+
   .prominence-example {
-    border: 1px solid black;
+    background-color: white;
     width: 32px;
     height: 32px;
     box-shadow: 0rem 0rem 0rem 0rem #1a1a1a 0.2;
