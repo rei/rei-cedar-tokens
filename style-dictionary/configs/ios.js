@@ -1,5 +1,5 @@
 module.exports = {
-  android: {
+  ios: {
     transformGroup: 'custom/ios',
     buildPath: 'dist/ios/',
     prefix: 'cdr',
@@ -40,6 +40,17 @@ module.exports = {
       {
         destination: "CdrColor.m",
         format: "ios/colors.m",
+        className: "CdrColor",
+        type: "CdrColorName",
+        "filter": {
+          "attributes": {
+            "category": "color"
+          }
+        }
+      },
+      {
+        destination: "CdrColors.plist",
+        format: "ios/plist",
         className: "CdrColor",
         type: "CdrColorName",
         "filter": {

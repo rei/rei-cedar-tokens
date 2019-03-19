@@ -3,7 +3,7 @@
 // CdrColor.m
 //
 // Do not edit directly
-// Generated on Mon, 04 Mar 2019 18:17:32 GMT
+// Generated on Tue, 19 Mar 2019 20:41:42 GMT
 //
 
 #import "CdrColor.h"
