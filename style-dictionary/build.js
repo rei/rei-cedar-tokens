@@ -22,7 +22,7 @@ require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
 require('./formats/site')(StyleDictionary);
 
-// ==== Include custom actions
+// ==== Include custom actions ====
 require('./actions/concat_files')(StyleDictionary);
 
 // --------------------------------------------------------------------
@@ -31,7 +31,7 @@ require('./actions/concat_files')(StyleDictionary);
 console.log('Build started...'); // eslint-disable-line no-console
 console.log('\n=============================================='); // eslint-disable-line no-console
 
-['web', 'android', 'ios', 'json'].map(platform => {
+['web', 'android', 'ios', 'site/global', 'site/web', 'site/android', 'site/ios'].map(platform => {
 
   // APPLY THE CONFIGURATION
   // Very important: the registration of custom transforms

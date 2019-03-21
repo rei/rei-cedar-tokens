@@ -22,18 +22,19 @@
     "postpublish": "npm run build:docs",
     "build:tokens": "node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
-    "build": "npm run clean && npm run build:tokens",
-    "build:docs": "node ./deploy.js"
+    "build": "npm run clean && npm run build:tokens && npm run site-tokens",
+    "build:docs": "npm run build && node ./deploy.js",
+    "site-tokens": "node ./siteTokens.js"
   },
   "devDependencies": {
     "concat": "^1.0.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^11.3.0",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "rimraf": "^2.6.0",
-    "style-dictionary": "^2.6.2"
+    "style-dictionary": "^2.7.0"
   },
   "engines": {
     "node": ">= 8.0.0",

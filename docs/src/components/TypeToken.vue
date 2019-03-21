@@ -1,8 +1,8 @@
 <template>
   <tr>
-    <td>{{name}}</td>
+    <td>{{prop.name}}</td>
     <td>{{prop.value}}</td>
-    <td>N/A</td>
+    <td></td>
   </tr>
 </template>
 
@@ -10,7 +10,6 @@
 export default {
   name: 'TypeToken',
   props: {
-    name: String,
     prop: Object,
   },
 };

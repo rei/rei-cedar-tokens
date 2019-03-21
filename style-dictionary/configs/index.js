@@ -6,11 +6,17 @@ const lessConfig = require('./less');
 const jsConfig = require('./js');
 const androidConfig = require('./android');
 const iosConfig = require('./ios');
-const jsonConfig = require('./json');
+const siteGlobalConfig = require('./site.global');
+const siteWebConfig = require('./site.web');
+const siteAndroidConfig = require('./site.android');
+const siteIosConfig = require('./site.ios');
 
 // this is the filter for excluding "option" tokens
 // and works in concert with transforms/attribute/option.js
 const filterObj = {
+  options: {
+    showFileHeader: false,
+  },
   filter: {
     attributes: {
       option: false,
@@ -29,13 +35,16 @@ function filterOptions(platforms) {
 }
 
 function getSources(platform) {
-  if (platform === 'web' || platform === 'json') {
+  if (platform === 'site/global') {
+    return [];
+  }
+  if (platform === 'web' || platform === 'site/web') {
     return [`tokens/web/**/*.json5`];
   }
-  if (platform === 'android') {
+  if (platform === 'android' || platform === 'site/android') {
     return [`tokens/android/**/*.json5`];
   }
-  if (platform === 'ios') {
+  if (platform === 'ios' || platform === 'site/ios') {
     return [`tokens/ios/**/*.json5`];
   }
 }
@@ -50,8 +59,17 @@ function getConfigs(platform) {
   if (platform === 'ios') {
     return filterOptions([iosConfig])
   }
-  if (platform === 'json') {
-    return filterOptions([jsonConfig])
+  if (platform === 'site/global') {
+    return filterOptions([siteGlobalConfig])
+  }
+  if (platform === 'site/web') {
+    return filterOptions([siteWebConfig])
+  }
+  if (platform === 'site/android') {
+    return filterOptions([siteAndroidConfig])
+  }
+  if (platform === 'site/ios') {
+    return filterOptions([siteIosConfig])
   }
 }
 

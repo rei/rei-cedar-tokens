@@ -2,13 +2,6 @@
   <tr>
     <td>{{name}}</td>
     <td>
-      <!-- <p
-        v-for="k in prop.value"
-        :key="k"
-        class="typography-values"
-      >
-        {{k}}
-      </p> -->
       {{prop.value}}
     </td>
     <td>
@@ -18,18 +11,12 @@
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
 
 export default {
   name: 'TypeTypography',
   props: {
     name: String,
     prop: Object,
-  },
-  methods: {
-    kebab(s) {
-      return kebabCase(s);
-    }
   }
 };
 </script>

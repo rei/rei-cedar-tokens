@@ -1,10 +1,10 @@
 <template>
   <tr>
-    <td>{{name}}</td>
-    <td>{{prop.value}}</td>
     <td>
-      <div class="inset-example" :style="{boxShadow: inset, padding: pad}">{{ name }}</div>
+      <div class="inset-example" :style="{boxShadow: inset, padding: pad}">content</div>
     </td>
+    <td>{{prop.name}}</td>
+    <td>{{prop.value}}</td>
   </tr>
 </template>
 
@@ -12,7 +12,6 @@
 export default {
   name: 'TypeInset',
   props: {
-    name: String,
     prop: Object,
   },
   computed: {
@@ -50,4 +49,7 @@ export default {
 </script>
 
 <style>
+.inset-example {
+  background-color: beige;
+}
 </style>

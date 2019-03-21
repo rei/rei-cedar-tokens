@@ -1,18 +1,13 @@
 
 // CdrSize.h
 //
-// Do not edit directly
-// Generated on Tue, 19 Mar 2019 20:41:41 GMT
+
 //
 
 #import <Foundation/Foundation.h>
 
 
 
-extern float const CdrBreakpointXs;
-extern float const CdrBreakpointSm;
-extern float const CdrBreakpointMd;
-extern float const CdrBreakpointLg;
 extern float const CdrIconSizeSm;
 extern float const CdrIconSize;
 extern float const CdrIconSizeLg;
