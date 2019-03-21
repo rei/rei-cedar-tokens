@@ -49,13 +49,6 @@ module.exports = (StyleDictionary) => {
           }
         });
 
-        // grouped[cat].forEach((token, i) => {
-        //   if (i !== 0) {
-        //     scss += `,\n  `;
-        //   }
-        //   scss += `${token.name}: ${token.value}`;
-        // });
-
         scss += `\n);\n`
       })
       
