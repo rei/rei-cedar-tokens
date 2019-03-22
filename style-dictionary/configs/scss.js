@@ -12,6 +12,10 @@ module.exports = {
         destination: 'cdr-mixins.scss',
         format: 'scss/mixin',
       },
+      {
+        destination: 'cdr-map.no_concat.scss',
+        format: 'scss/map',
+      },
     ],
     actions: ['concat_files'],
   },

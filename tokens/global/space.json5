@@ -66,72 +66,6 @@
         example: '{space.docExample}',
       },
     },
-    inline: {
-      'eighth-x': {
-        value: '{space.eighth-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'quarter-x': {
-        value: '{space.quarter-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'half-x': {
-        value: '{space.half-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'three-quarter-x': {
-        value: '{space.three-quarter-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'one-x': {
-        value: '{space.one-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'one-and-a-half-x': {
-        value: '{space.one-and-a-half-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'two-x': {
-        value: '{space.two-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'four-x': {
-        value: '{space.four-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-    },
     inset: {
       // 1/8th
       'eighth-x': {
@@ -139,7 +73,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'eighth-x-squish-top-bottom': {
@@ -180,7 +115,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'quarter-x-squish-top-bottom': {
@@ -221,7 +157,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'half-x-squish-top-bottom': {
@@ -262,7 +199,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'three-quarter-x-squish-top-bottom': {
@@ -303,7 +241,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'one-x-squish-top-bottom': {
@@ -344,7 +283,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'one-and-a-half-x-squish-top-bottom': {
@@ -385,7 +325,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'two-x-squish-top-bottom': {
@@ -426,7 +367,8 @@
         category: 'size',
         docs: {
           category: '{space.docCategory}',
-          example: '{space.docExample}',
+          type: 'inset',
+          example: 'inset',
         },
       },
       'four-x-squish-top-bottom': {
@@ -455,72 +397,6 @@
       },
       'four-x-stretch-left-right': {
         value: '64px',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-    },
-    stack: {
-      'eighth-x': {
-        value: '{space.eighth-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'quarter-x': {
-        value: '{space.quarter-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'half-x': {
-        value: '{space.half-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'three-quarter-x': {
-        value: '{space.three-quarter-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'one-x': {
-        value: '{space.one-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'one-and-a-half-x': {
-        value: '{space.one-and-a-half-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'two-x': {
-        value: '{space.two-x.value}',
-        category: 'size',
-        docs: {
-          category: '{space.docCategory}',
-          example: '{space.docExample}',
-        },
-      },
-      'four-x': {
-        value: '{space.four-x.value}',
         category: 'size',
         docs: {
           category: '{space.docCategory}',

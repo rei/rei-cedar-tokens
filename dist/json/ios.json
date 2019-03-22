@@ -253,7 +253,7 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]",
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -267,7 +267,7 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]",
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -365,7 +365,7 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]",
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1121,111 +1121,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineEighthX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "64.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineQuarterX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "128.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineHalfX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "192.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineThreeQuarterX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "256.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineOneX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "384.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineOneAndAHalfX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "512.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineTwoX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "1024.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceInlineFourX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "32.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetEighthX",
       "attributes": {
@@ -1290,7 +1187,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetQuarterX",
       "attributes": {
@@ -1355,7 +1253,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetHalfX",
       "attributes": {
@@ -1420,7 +1319,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetThreeQuarterX",
       "attributes": {
@@ -1485,7 +1385,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetOneX",
       "attributes": {
@@ -1550,7 +1451,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetOneAndAHalfX",
       "attributes": {
@@ -1615,7 +1517,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetTwoX",
       "attributes": {
@@ -1680,7 +1583,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "CdrSpaceInsetFourX",
       "attributes": {
@@ -1735,110 +1639,6 @@
         "example": "spacing"
       },
       "name": "CdrSpaceInsetFourXStretchLeftRight",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "32.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackEighthX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "64.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackQuarterX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "128.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackHalfX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "192.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackThreeQuarterX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "256.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackOneX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "384.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackOneAndAHalfX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "512.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackTwoX",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "1024.00f",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "CdrSpaceStackFourX",
       "attributes": {
         "option": false,
         "category": "size"

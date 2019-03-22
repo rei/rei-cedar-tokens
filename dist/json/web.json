@@ -253,7 +253,7 @@
       }
     },
     {
-      "value": "#1a1a1a",
+      "value": "#292929",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -267,7 +267,7 @@
       }
     },
     {
-      "value": "#292929",
+      "value": "#1a1a1a",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "value": "#1a1a1a",
+      "value": "#292929",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -365,7 +365,7 @@
       }
     },
     {
-      "value": "#1a1a1a",
+      "value": "#292929",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1176,111 +1176,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-eighth-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "0.4rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-quarter-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "0.8rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-half-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "1.2rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-three-quarter-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "1.6rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-one-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "2.4rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-one-and-a-half-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "3.2rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-two-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "6.4rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-inline-four-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "0.2rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-eighth-x",
       "attributes": {
@@ -1345,7 +1242,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-quarter-x",
       "attributes": {
@@ -1410,7 +1308,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-half-x",
       "attributes": {
@@ -1475,7 +1374,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-three-quarter-x",
       "attributes": {
@@ -1540,7 +1440,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-one-x",
       "attributes": {
@@ -1605,7 +1506,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-one-and-a-half-x",
       "attributes": {
@@ -1670,7 +1572,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-two-x",
       "attributes": {
@@ -1735,7 +1638,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr-space-inset-four-x",
       "attributes": {
@@ -1800,6 +1704,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-eighth-x-squish",
@@ -1813,6 +1718,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-eighth-x-stretch",
@@ -1826,6 +1732,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-quarter-x-squish",
@@ -1839,6 +1746,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-quarter-x-stretch",
@@ -1852,6 +1760,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-half-x-squish",
@@ -1865,6 +1774,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-half-x-stretch",
@@ -1878,6 +1788,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-three-quarter-x-squish",
@@ -1891,6 +1802,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-three-quarter-x-stretch",
@@ -1904,6 +1816,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-one-x-squish",
@@ -1917,6 +1830,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-one-x-stretch",
@@ -1930,6 +1844,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-one-and-a-half-x-squish",
@@ -1943,6 +1858,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-one-and-a-half-x-stretch",
@@ -1956,6 +1872,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-two-x-squish",
@@ -1969,6 +1886,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-two-x-stretch",
@@ -1982,6 +1900,7 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-four-x-squish",
@@ -1995,113 +1914,10 @@
       "category": "size",
       "docs": {
         "category": "spacing",
+        "type": "inset",
         "example": "inset"
       },
       "name": "cdr-space-inset-four-x-stretch",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "0.2rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-eighth-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "0.4rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-quarter-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "0.8rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-half-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "1.2rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-three-quarter-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "1.6rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-one-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "2.4rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-one-and-a-half-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "3.2rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-two-x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "6.4rem",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr-space-stack-four-x",
       "attributes": {
         "option": false,
         "category": "size"

@@ -140,12 +140,12 @@
       },
     @"background": @{
       @"dark": @{
-        @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+        @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
         @"name": @"CdrColorBackgroundDark",
         @"category": @"color"
         },
       @"darker": @{
-        @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
+        @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
         @"name": @"CdrColorBackgroundDarker",
         @"category": @"color"
         },
@@ -171,7 +171,7 @@
           @"category": @"color"
           },
         @"darkmode": @{
-          @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+          @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
           @"name": @"CdrColorBackgroundFormDarkmode",
           @"category": @"color"
           },
@@ -182,7 +182,7 @@
             @"category": @"color"
             },
           @"darkmode": @{
-            @"value": [UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f],
+            @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
             @"name": @"CdrColorBackgroundFormInputDarkmode",
             @"category": @"color"
             }
@@ -494,48 +494,6 @@
       @"name": @"CdrSpaceFourX",
       @"category": @"size"
       },
-    @"inline": @{
-      @"eighth-x": @{
-        @"value": @32.00f,
-        @"name": @"CdrSpaceInlineEighthX",
-        @"category": @"size"
-        },
-      @"quarter-x": @{
-        @"value": @64.00f,
-        @"name": @"CdrSpaceInlineQuarterX",
-        @"category": @"size"
-        },
-      @"half-x": @{
-        @"value": @128.00f,
-        @"name": @"CdrSpaceInlineHalfX",
-        @"category": @"size"
-        },
-      @"three-quarter-x": @{
-        @"value": @192.00f,
-        @"name": @"CdrSpaceInlineThreeQuarterX",
-        @"category": @"size"
-        },
-      @"one-x": @{
-        @"value": @256.00f,
-        @"name": @"CdrSpaceInlineOneX",
-        @"category": @"size"
-        },
-      @"one-and-a-half-x": @{
-        @"value": @384.00f,
-        @"name": @"CdrSpaceInlineOneAndAHalfX",
-        @"category": @"size"
-        },
-      @"two-x": @{
-        @"value": @512.00f,
-        @"name": @"CdrSpaceInlineTwoX",
-        @"category": @"size"
-        },
-      @"four-x": @{
-        @"value": @1024.00f,
-        @"name": @"CdrSpaceInlineFourX",
-        @"category": @"size"
-        }
-      },
     @"inset": @{
       @"eighth-x": @{
         @"value": @32.00f,
@@ -735,48 +693,6 @@
       @"four-x-stretch-left-right": @{
         @"value": @1024.00f,
         @"name": @"CdrSpaceInsetFourXStretchLeftRight",
-        @"category": @"size"
-        }
-      },
-    @"stack": @{
-      @"eighth-x": @{
-        @"value": @32.00f,
-        @"name": @"CdrSpaceStackEighthX",
-        @"category": @"size"
-        },
-      @"quarter-x": @{
-        @"value": @64.00f,
-        @"name": @"CdrSpaceStackQuarterX",
-        @"category": @"size"
-        },
-      @"half-x": @{
-        @"value": @128.00f,
-        @"name": @"CdrSpaceStackHalfX",
-        @"category": @"size"
-        },
-      @"three-quarter-x": @{
-        @"value": @192.00f,
-        @"name": @"CdrSpaceStackThreeQuarterX",
-        @"category": @"size"
-        },
-      @"one-x": @{
-        @"value": @256.00f,
-        @"name": @"CdrSpaceStackOneX",
-        @"category": @"size"
-        },
-      @"one-and-a-half-x": @{
-        @"value": @384.00f,
-        @"name": @"CdrSpaceStackOneAndAHalfX",
-        @"category": @"size"
-        },
-      @"two-x": @{
-        @"value": @512.00f,
-        @"name": @"CdrSpaceStackTwoX",
-        @"category": @"size"
-        },
-      @"four-x": @{
-        @"value": @1024.00f,
-        @"name": @"CdrSpaceStackFourX",
         @"category": @"size"
         }
       }
