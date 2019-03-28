@@ -56,7 +56,7 @@ docs            # Object to define meta data for docs
   type          # The sub category tokens are grouped in on the examples page
   example       # Defines how the token should be presented on the examples page -- Current example types are: color, spacing, sizing, radius, prominence, text, inset, and breakpoint
 mixin           # The name of the generated SCSS/LESS mixin (must be used with property)
-property        # Used with mixin -- the css property the value is applied within the mixin
+property        # Used with mixin -- the css property the value is applied to within the mixin
 'utility-class' # Boolean -- Used to create scss maps of properties to more easily generate utility classes in cedar
 ```
 
