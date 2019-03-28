@@ -2530,7 +2530,8 @@
           "category": "size"
         }
       }
-    ]
+    ],
+    "misc": []
   },
   "android": {
     "colors": [],
@@ -2540,14 +2541,12 @@
     "radius": [],
     "spacing": [],
     "breakpoints": [],
-    "text": [
+    "text": [],
+    "misc": [
       {
-        "value": "16.00sp",
+        "value": "34.00sp",
         "category": "font-size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_default_body_size",
+        "name": "cdr_text_default_display_1_size",
         "attributes": {
           "option": false,
           "category": "size",
@@ -2555,24 +2554,25 @@
         }
       },
       {
-        "value": "26.00dp",
+        "value": "40.00dp",
         "category": "size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_default_body_height",
+        "name": "cdr_text_default_display_1_line_spacing",
         "attributes": {
           "option": false,
           "category": "size"
         }
       },
       {
-        "value": "14.00sp",
+        "value": "Roboto-Medium.ttf",
+        "name": "cdr_text_default_display_1_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "28.00sp",
         "category": "font-size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_default_body_compact_size",
+        "name": "cdr_text_default_title_1_size",
         "attributes": {
           "option": false,
           "category": "size",
@@ -2580,24 +2580,25 @@
         }
       },
       {
-        "value": "24.00dp",
+        "value": "36.00dp",
         "category": "size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_default_body_compact_height",
+        "name": "cdr_text_default_title_1_line_spacing",
         "attributes": {
           "option": false,
           "category": "size"
         }
       },
       {
-        "value": "20.00sp",
+        "value": "Sentinel-Semibold.otf",
+        "name": "cdr_text_default_title_1_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "26.00sp",
         "category": "font-size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_editorial_body_size",
+        "name": "cdr_text_default_title_2_size",
         "attributes": {
           "option": false,
           "category": "size",
@@ -2607,22 +2608,23 @@
       {
         "value": "32.00dp",
         "category": "size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_editorial_body_height",
+        "name": "cdr_text_default_title_2_line_spacing",
         "attributes": {
           "option": false,
           "category": "size"
         }
       },
       {
-        "value": "18.00sp",
+        "value": "Sentinel-Semibold.otf",
+        "name": "cdr_text_default_title_2_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "21.00sp",
         "category": "font-size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_editorial_body_compact_size",
+        "name": "cdr_text_default_title_3_size",
         "attributes": {
           "option": false,
           "category": "size",
@@ -2632,13 +2634,199 @@
       {
         "value": "28.00dp",
         "category": "size",
-        "docs": {
-          "category": "text"
-        },
-        "name": "cdr_text_editorial_body_compact_height",
+        "name": "cdr_text_default_title_3_line_spacing",
         "attributes": {
           "option": false,
           "category": "size"
+        }
+      },
+      {
+        "value": "Sentinel-Semibold.otf",
+        "name": "cdr_text_default_title_3_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "17.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_headline_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "24.00dp",
+        "category": "size",
+        "name": "cdr_text_default_headline_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "cdr_text_default_headline_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "15.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_subheadline_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "20.00dp",
+        "category": "size",
+        "name": "cdr_text_default_subheadline_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "cdr_text_default_subheadline_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "15.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_body_1_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "20.00dp",
+        "category": "size",
+        "name": "cdr_text_default_body_1_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "cdr_text_default_body_1_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "12.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_body_2_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "20.00dp",
+        "category": "size",
+        "name": "cdr_text_default_body_2_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "cdr_text_default_body_2_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "12.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_caption_1_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "16.00dp",
+        "category": "size",
+        "name": "cdr_text_default_caption_1_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "cdr_text_default_caption_1_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "11.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_caption_2_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "16.00dp",
+        "category": "size",
+        "name": "cdr_text_default_caption_2_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "cdr_text_default_caption_2_font_family",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "15.00sp",
+        "category": "font-size",
+        "name": "cdr_text_default_button_size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "24.00dp",
+        "category": "size",
+        "name": "cdr_text_default_button_line_spacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "cdr_text_default_button_font_family",
+        "attributes": {
+          "option": false
         }
       }
     ]
@@ -2651,6 +2839,294 @@
     "radius": [],
     "spacing": [],
     "breakpoints": [],
-    "text": []
+    "text": [],
+    "misc": [
+      {
+        "value": "544.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultDisplay1Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "640.00f",
+        "category": "size",
+        "name": "CdrTextDefaultDisplay1LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "CdrTextDefaultDisplay1FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "448.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultTitle1Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "576.00f",
+        "category": "size",
+        "name": "CdrTextDefaultTitle1LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Sentinel-Semibold.otf",
+        "name": "CdrTextDefaultTitle1FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "416.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultTitle2Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "512.00f",
+        "category": "size",
+        "name": "CdrTextDefaultTitle2LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Sentinel-Semibold.otf",
+        "name": "CdrTextDefaultTitle2FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "336.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultTitle3Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "448.00f",
+        "category": "size",
+        "name": "CdrTextDefaultTitle3LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Sentinel-Semibold.otf",
+        "name": "CdrTextDefaultTitle3FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "272.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultHeadlineSize",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "384.00f",
+        "category": "size",
+        "name": "CdrTextDefaultHeadlineLineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "CdrTextDefaultHeadlineFontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "240.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultSubheadlineSize",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "320.00f",
+        "category": "size",
+        "name": "CdrTextDefaultSubheadlineLineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "CdrTextDefaultSubheadlineFontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "240.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultBody1Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "320.00f",
+        "category": "size",
+        "name": "CdrTextDefaultBody1LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "CdrTextDefaultBody1FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "192.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultBody2Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "320.00f",
+        "category": "size",
+        "name": "CdrTextDefaultBody2LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "CdrTextDefaultBody2FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "192.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultCaption1Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "256.00f",
+        "category": "size",
+        "name": "CdrTextDefaultCaption1LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "CdrTextDefaultCaption1FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "176.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultCaption2Size",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "256.00f",
+        "category": "size",
+        "name": "CdrTextDefaultCaption2LineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Regular.ttf",
+        "name": "CdrTextDefaultCaption2FontFamily",
+        "attributes": {
+          "option": false
+        }
+      },
+      {
+        "value": "240.00f",
+        "category": "font-size",
+        "name": "CdrTextDefaultButtonSize",
+        "attributes": {
+          "option": false,
+          "category": "size",
+          "type": "font"
+        }
+      },
+      {
+        "value": "384.00f",
+        "category": "size",
+        "name": "CdrTextDefaultButtonLineSpacing",
+        "attributes": {
+          "option": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "Roboto-Medium.ttf",
+        "name": "CdrTextDefaultButtonFontFamily",
+        "attributes": {
+          "option": false
+        }
+      }
+    ]
   }
 }

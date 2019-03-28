@@ -16,14 +16,6 @@ module.exports = {
         destination: 'dimens.xml',
         format: 'android/dimens',
       },
-      {
-        destination: 'integers.xml',
-        format: 'android/integers',
-      },
-      {
-        destination: 'strings.xml',
-        format: 'android/strings',
-      },
     ],
   },
 };

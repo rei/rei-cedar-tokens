@@ -780,6 +780,197 @@
         @"category": @"size"
         }
       }
+    },
+  @"text": @{
+    @"default": @{
+      @"display1": @{
+        @"size": @{
+          @"value": @544.00f,
+          @"name": @"CdrTextDefaultDisplay1Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @640.00f,
+          @"name": @"CdrTextDefaultDisplay1LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Medium.ttf,
+          @"name": @"CdrTextDefaultDisplay1FontFamily"
+          }
+        },
+      @"title1": @{
+        @"size": @{
+          @"value": @448.00f,
+          @"name": @"CdrTextDefaultTitle1Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @576.00f,
+          @"name": @"CdrTextDefaultTitle1LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Sentinel-Semibold.otf,
+          @"name": @"CdrTextDefaultTitle1FontFamily"
+          }
+        },
+      @"title2": @{
+        @"size": @{
+          @"value": @416.00f,
+          @"name": @"CdrTextDefaultTitle2Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @512.00f,
+          @"name": @"CdrTextDefaultTitle2LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Sentinel-Semibold.otf,
+          @"name": @"CdrTextDefaultTitle2FontFamily"
+          }
+        },
+      @"title3": @{
+        @"size": @{
+          @"value": @336.00f,
+          @"name": @"CdrTextDefaultTitle3Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @448.00f,
+          @"name": @"CdrTextDefaultTitle3LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Sentinel-Semibold.otf,
+          @"name": @"CdrTextDefaultTitle3FontFamily"
+          }
+        },
+      @"headline": @{
+        @"size": @{
+          @"value": @272.00f,
+          @"name": @"CdrTextDefaultHeadlineSize",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @384.00f,
+          @"name": @"CdrTextDefaultHeadlineLineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Medium.ttf,
+          @"name": @"CdrTextDefaultHeadlineFontFamily"
+          }
+        },
+      @"subheadline": @{
+        @"size": @{
+          @"value": @240.00f,
+          @"name": @"CdrTextDefaultSubheadlineSize",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @320.00f,
+          @"name": @"CdrTextDefaultSubheadlineLineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Medium.ttf,
+          @"name": @"CdrTextDefaultSubheadlineFontFamily"
+          }
+        },
+      @"body1": @{
+        @"size": @{
+          @"value": @240.00f,
+          @"name": @"CdrTextDefaultBody1Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @320.00f,
+          @"name": @"CdrTextDefaultBody1LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Regular.ttf,
+          @"name": @"CdrTextDefaultBody1FontFamily"
+          }
+        },
+      @"body2": @{
+        @"size": @{
+          @"value": @192.00f,
+          @"name": @"CdrTextDefaultBody2Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @320.00f,
+          @"name": @"CdrTextDefaultBody2LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Regular.ttf,
+          @"name": @"CdrTextDefaultBody2FontFamily"
+          }
+        },
+      @"caption1": @{
+        @"size": @{
+          @"value": @192.00f,
+          @"name": @"CdrTextDefaultCaption1Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @256.00f,
+          @"name": @"CdrTextDefaultCaption1LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Regular.ttf,
+          @"name": @"CdrTextDefaultCaption1FontFamily"
+          }
+        },
+      @"caption2": @{
+        @"size": @{
+          @"value": @176.00f,
+          @"name": @"CdrTextDefaultCaption2Size",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @256.00f,
+          @"name": @"CdrTextDefaultCaption2LineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Regular.ttf,
+          @"name": @"CdrTextDefaultCaption2FontFamily"
+          }
+        },
+      @"button": @{
+        @"size": @{
+          @"value": @240.00f,
+          @"name": @"CdrTextDefaultButtonSize",
+          @"category": @"size",
+          @"type": @"font"
+          },
+        @"line-spacing": @{
+          @"value": @384.00f,
+          @"name": @"CdrTextDefaultButtonLineSpacing",
+          @"category": @"size"
+          },
+        @"font-family": @{
+          @"value": Roboto-Medium.ttf,
+          @"name": @"CdrTextDefaultButtonFontFamily"
+          }
+        }
+      }
     }
   };
   });

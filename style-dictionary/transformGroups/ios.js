@@ -9,7 +9,7 @@ module.exports = (StyleDictionary) => {
       'content/objC/literal',
       'asset/objC/literal',
       'size/remToPt',
-      'font/objC/literal'
+      'font/objC/literal',
     ],
   });
 };

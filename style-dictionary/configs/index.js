@@ -39,37 +39,37 @@ function getSources(platform) {
     return [];
   }
   if (platform === 'web' || platform === 'site/web') {
-    return [`tokens/web/**/*.json5`];
+    return ['tokens/web/**/*.json5'];
   }
   if (platform === 'android' || platform === 'site/android') {
-    return [`tokens/android/**/*.json5`];
+    return ['tokens/mobile/**/*.json5'];
   }
   if (platform === 'ios' || platform === 'site/ios') {
-    return [`tokens/ios/**/*.json5`];
+    return ['tokens/mobile/**/*.json5'];
   }
 }
 
 function getConfigs(platform) {
-  if(platform === 'web') {
+  if (platform === 'web') {
     return filterOptions([scssConfig, lessConfig, jsConfig]);
   }
   if (platform === 'android') {
-    return filterOptions([androidConfig])
+    return filterOptions([androidConfig]);
   }
   if (platform === 'ios') {
-    return filterOptions([iosConfig])
+    return filterOptions([iosConfig]);
   }
   if (platform === 'site/global') {
-    return filterOptions([siteGlobalConfig])
+    return filterOptions([siteGlobalConfig]);
   }
   if (platform === 'site/web') {
-    return filterOptions([siteWebConfig])
+    return filterOptions([siteWebConfig]);
   }
   if (platform === 'site/android') {
-    return filterOptions([siteAndroidConfig])
+    return filterOptions([siteAndroidConfig]);
   }
   if (platform === 'site/ios') {
-    return filterOptions([siteIosConfig])
+    return filterOptions([siteIosConfig]);
   }
 }
 
@@ -78,9 +78,9 @@ module.exports = (platform) => {
     'tokens/_options/**/*.json5',
     'tokens/global/**/*.json5',
     ...getSources(platform),
-  ]
+  ];
   return {
     source: sources,
-    platforms: getConfigs(platform)
+    platforms: getConfigs(platform),
   };
 };
