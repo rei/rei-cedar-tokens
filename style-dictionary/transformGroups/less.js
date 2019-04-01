@@ -3,6 +3,7 @@ module.exports = (StyleDictionary) => {
     name: 'custom/less',
     transforms: [
       'attribute/option',
+      'attribute/utility',
       'attribute/cdr-cti',
       'name/cti/kebab',
       'size/strip-px',

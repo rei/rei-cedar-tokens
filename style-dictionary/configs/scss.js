@@ -13,7 +13,7 @@ module.exports = {
         format: 'scss/mixin',
       },
       {
-        destination: 'cdr-map.no_concat.scss',
+        destination: 'utility-map.no_concat.scss',
         format: 'scss/map',
       },
     ],

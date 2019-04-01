@@ -7,49 +7,34 @@ module.exports = (StyleDictionary) => {
     formatter(dictionary, config) {
       // const prefix = config.prefix ? `${config.prefix}-` : '';
       let scss = '';
-      const categories = _.groupBy(dictionary.allProperties, 'docs.category');
-      const catKeys = Object.keys(categories);
-
+      const utilityTokens = _.filter(dictionary.allProperties, o => o['utility-class'] === true);
+      const categories = _.groupBy(utilityTokens, 'docs.category');
+      
       // loop through categories
+      const catKeys = Object.keys(categories);
       catKeys.forEach(cat => {
-        scss += `$${cat}: (\n  `;
-
+        
+        // loop through types
         const types = _.groupBy(categories[cat], 'docs.type');
         const typeKeys = Object.keys(types);
-
-        // loop through types
         typeKeys.forEach((type, idx) => {
-          if (idx !== 0) {
-            scss += `,\n  `;
-          }
+          const formattedType = type === 'undefined' ? '' : `-${type}`;
 
-          // has a type --> make a map
-          if (type !== 'undefined') {
-            scss += `${type}: (\n    `;
+          scss += `$${cat}${formattedType}: (\n  `;
 
-            types[type].forEach((token, i) => {
-              if (i !== 0) {
-                scss += `,\n    `;
-              }
+          types[type].forEach((token, i) => {
+            if (i !== 0) {
+              scss += `,\n  `;
+            }
+            if (token.name.includes('-family')) {
+              scss += `${token.name}: '${token.value}'`;
+            } else {
               scss += `${token.name}: ${token.value}`;
-            });
+            }
+          });
 
-            scss += `\n  )`;
-
-          }
-
-          // no type --> just add tokens
-          else {
-            types[type].forEach((token, i) => {
-              if (i !== 0) {
-                scss += `,\n  `;
-              }
-              scss += `${token.name}: ${token.value}`;
-            });
-          }
+          scss += `\n);\n`
         });
-
-        scss += `\n);\n`
       })
       
 
