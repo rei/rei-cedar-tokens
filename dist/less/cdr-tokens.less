@@ -1,4 +1,4 @@
-.cdr-text-default-body() {
+.cdr-text-default() {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -7,7 +7,7 @@
   line-height: 2.6rem;
 }
 
-.cdr-text-default-body-compact() {
+.cdr-text-default-compact() {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -16,7 +16,7 @@
   line-height: 2.4rem;
 }
 
-.cdr-text-editorial-body() {
+.cdr-text-editorial() {
   font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -25,13 +25,76 @@
   line-height: 3.2rem;
 }
 
-.cdr-text-editorial-body-compact() {
+.cdr-text-editorial-compact() {
   font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: normal;
   font-size: 1.8rem;
   line-height: 2.8rem;
+}
+
+.cdr-text-header-1() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 5.6rem;
+  line-height: 6rem;
+}
+
+.cdr-text-header-2() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+
+.cdr-text-header-3() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+.cdr-text-header-4() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+}
+
+.cdr-text-header-5() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.cdr-text-header-6() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+.cdr-text-header-7() {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 
 @cdr-color-text-primary-lightmode: #292929;
@@ -50,8 +113,10 @@
 @cdr-color-text-form-placeholder-darkmode: #999999;
 @cdr-color-text-form-disabled-lightmode: #b8b8b8;
 @cdr-color-text-form-disabled-darkmode: #616161;
-@cdr-color-icon-primary-lightmode: #292929;
-@cdr-color-icon-primary-darkmode: #fafafa;
+@cdr-color-icon-primary-lightmode: #616161;
+@cdr-color-icon-primary-darkmode: #999999;
+@cdr-color-icon-emphasis-lightmode: #292929;
+@cdr-color-icon-emphasis-darkmode: #fafafa;
 @cdr-color-background-dark: #292929;
 @cdr-color-background-darker: #1a1a1a;
 @cdr-color-background-light: #f7f7f7;
@@ -183,27 +248,69 @@
 @cdr-breakpoint-sm: 76.8rem;
 @cdr-breakpoint-md: 99.2rem;
 @cdr-breakpoint-lg: 120rem;
-@cdr-text-default-body-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@cdr-text-default-body-style: normal;
-@cdr-text-default-body-weight: 400;
-@cdr-text-default-body-spacing: normal;
-@cdr-text-default-body-size: 1.6rem;
-@cdr-text-default-body-height: 2.6rem;
-@cdr-text-default-body-compact-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@cdr-text-default-body-compact-style: normal;
-@cdr-text-default-body-compact-weight: 400;
-@cdr-text-default-body-compact-spacing: normal;
-@cdr-text-default-body-compact-size: 1.4rem;
-@cdr-text-default-body-compact-height: 2.4rem;
-@cdr-text-editorial-body-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@cdr-text-editorial-body-style: normal;
-@cdr-text-editorial-body-weight: 400;
-@cdr-text-editorial-body-spacing: normal;
-@cdr-text-editorial-body-size: 2rem;
-@cdr-text-editorial-body-height: 3.2rem;
-@cdr-text-editorial-body-compact-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@cdr-text-editorial-body-compact-style: normal;
-@cdr-text-editorial-body-compact-weight: 400;
-@cdr-text-editorial-body-compact-spacing: normal;
-@cdr-text-editorial-body-compact-size: 1.8rem;
-@cdr-text-editorial-body-compact-height: 2.8rem;
+@cdr-text-default-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-default-style: normal;
+@cdr-text-default-weight: 400;
+@cdr-text-default-spacing: normal;
+@cdr-text-default-size: 1.6rem;
+@cdr-text-default-height: 2.6rem;
+@cdr-text-default-compact-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-default-compact-style: normal;
+@cdr-text-default-compact-weight: 400;
+@cdr-text-default-compact-spacing: normal;
+@cdr-text-default-compact-size: 1.4rem;
+@cdr-text-default-compact-height: 2.4rem;
+@cdr-text-editorial-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-editorial-style: normal;
+@cdr-text-editorial-weight: 400;
+@cdr-text-editorial-spacing: normal;
+@cdr-text-editorial-size: 2rem;
+@cdr-text-editorial-height: 3.2rem;
+@cdr-text-editorial-compact-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-editorial-compact-style: normal;
+@cdr-text-editorial-compact-weight: 400;
+@cdr-text-editorial-compact-spacing: normal;
+@cdr-text-editorial-compact-size: 1.8rem;
+@cdr-text-editorial-compact-height: 2.8rem;
+@cdr-text-header-1-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-1-style: normal;
+@cdr-text-header-1-weight: 600;
+@cdr-text-header-1-spacing: 0.2;
+@cdr-text-header-1-size: 5.6rem;
+@cdr-text-header-1-height: 6rem;
+@cdr-text-header-2-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-2-style: normal;
+@cdr-text-header-2-weight: 600;
+@cdr-text-header-2-spacing: 0.2;
+@cdr-text-header-2-size: 4rem;
+@cdr-text-header-2-height: 4.8rem;
+@cdr-text-header-3-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-3-style: normal;
+@cdr-text-header-3-weight: 600;
+@cdr-text-header-3-spacing: 0.2;
+@cdr-text-header-3-size: 3.2rem;
+@cdr-text-header-3-height: 4rem;
+@cdr-text-header-4-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-4-style: normal;
+@cdr-text-header-4-weight: 600;
+@cdr-text-header-4-spacing: 0.2;
+@cdr-text-header-4-size: 2.8rem;
+@cdr-text-header-4-height: 3.6rem;
+@cdr-text-header-5-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-5-style: normal;
+@cdr-text-header-5-weight: 600;
+@cdr-text-header-5-spacing: 0.2;
+@cdr-text-header-5-size: 2.4rem;
+@cdr-text-header-5-height: 3.2rem;
+@cdr-text-header-6-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-6-style: normal;
+@cdr-text-header-6-weight: 600;
+@cdr-text-header-6-spacing: 0.2;
+@cdr-text-header-6-size: 2rem;
+@cdr-text-header-6-height: 2.8rem;
+@cdr-text-header-7-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@cdr-text-header-7-style: normal;
+@cdr-text-header-7-weight: 600;
+@cdr-text-header-7-spacing: 0.2;
+@cdr-text-header-7-size: 1.8rem;
+@cdr-text-header-7-height: 2.4rem;

@@ -127,13 +127,25 @@
     @"icon": @{
       @"primary": @{
         @"lightmode": @{
-          @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
+          @"value": [UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f],
           @"name": @"CdrColorIconPrimaryLightmode",
           @"category": @"color"
           },
         @"darkmode": @{
-          @"value": [UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f],
+          @"value": [UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f],
           @"name": @"CdrColorIconPrimaryDarkmode",
+          @"category": @"color"
+          }
+        },
+      @"emphasis": @{
+        @"lightmode": @{
+          @"value": [UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f],
+          @"name": @"CdrColorIconEmphasisLightmode",
+          @"category": @"color"
+          },
+        @"darkmode": @{
+          @"value": [UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f],
+          @"name": @"CdrColorIconEmphasisDarkmode",
           @"category": @"color"
           }
         }
