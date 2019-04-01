@@ -1,4 +1,4 @@
-@mixin cdr-text-default-body() {
+@mixin cdr-text-default() {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -7,7 +7,7 @@
   line-height: 2.6rem;
 }
 
-@mixin cdr-text-default-body-compact() {
+@mixin cdr-text-default-compact() {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -16,7 +16,7 @@
   line-height: 2.4rem;
 }
 
-@mixin cdr-text-editorial-body() {
+@mixin cdr-text-editorial() {
   font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -25,7 +25,7 @@
   line-height: 3.2rem;
 }
 
-@mixin cdr-text-editorial-body-compact() {
+@mixin cdr-text-editorial-compact() {
   font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -50,8 +50,10 @@ $cdr-color-text-form-placeholder-lightmode: #616161;
 $cdr-color-text-form-placeholder-darkmode: #999999;
 $cdr-color-text-form-disabled-lightmode: #b8b8b8;
 $cdr-color-text-form-disabled-darkmode: #616161;
-$cdr-color-icon-primary-lightmode: #292929;
-$cdr-color-icon-primary-darkmode: #fafafa;
+$cdr-color-icon-primary-lightmode: #616161;
+$cdr-color-icon-primary-darkmode: #999999;
+$cdr-color-icon-emphasis-lightmode: #292929;
+$cdr-color-icon-emphasis-darkmode: #fafafa;
 $cdr-color-background-dark: #292929;
 $cdr-color-background-darker: #1a1a1a;
 $cdr-color-background-light: #f7f7f7;
@@ -183,27 +185,27 @@ $cdr-breakpoint-xs: 0;
 $cdr-breakpoint-sm: 76.8rem;
 $cdr-breakpoint-md: 99.2rem;
 $cdr-breakpoint-lg: 120rem;
-$cdr-text-default-body-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$cdr-text-default-body-style: normal;
-$cdr-text-default-body-weight: 400;
-$cdr-text-default-body-spacing: normal;
-$cdr-text-default-body-size: 1.6rem;
-$cdr-text-default-body-height: 2.6rem;
-$cdr-text-default-body-compact-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$cdr-text-default-body-compact-style: normal;
-$cdr-text-default-body-compact-weight: 400;
-$cdr-text-default-body-compact-spacing: normal;
-$cdr-text-default-body-compact-size: 1.4rem;
-$cdr-text-default-body-compact-height: 2.4rem;
-$cdr-text-editorial-body-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$cdr-text-editorial-body-style: normal;
-$cdr-text-editorial-body-weight: 400;
-$cdr-text-editorial-body-spacing: normal;
-$cdr-text-editorial-body-size: 2rem;
-$cdr-text-editorial-body-height: 3.2rem;
-$cdr-text-editorial-body-compact-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$cdr-text-editorial-body-compact-style: normal;
-$cdr-text-editorial-body-compact-weight: 400;
-$cdr-text-editorial-body-compact-spacing: normal;
-$cdr-text-editorial-body-compact-size: 1.8rem;
-$cdr-text-editorial-body-compact-height: 2.8rem;
+$cdr-text-default-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-default-style: normal;
+$cdr-text-default-weight: 400;
+$cdr-text-default-spacing: normal;
+$cdr-text-default-size: 1.6rem;
+$cdr-text-default-height: 2.6rem;
+$cdr-text-default-compact-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-default-compact-style: normal;
+$cdr-text-default-compact-weight: 400;
+$cdr-text-default-compact-spacing: normal;
+$cdr-text-default-compact-size: 1.4rem;
+$cdr-text-default-compact-height: 2.4rem;
+$cdr-text-editorial-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-editorial-style: normal;
+$cdr-text-editorial-weight: 400;
+$cdr-text-editorial-spacing: normal;
+$cdr-text-editorial-size: 2rem;
+$cdr-text-editorial-height: 3.2rem;
+$cdr-text-editorial-compact-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-editorial-compact-style: normal;
+$cdr-text-editorial-compact-weight: 400;
+$cdr-text-editorial-compact-spacing: normal;
+$cdr-text-editorial-compact-size: 1.8rem;
+$cdr-text-editorial-compact-height: 2.8rem;

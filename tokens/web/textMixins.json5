@@ -4,272 +4,266 @@
     docExample: 'text',
     // default
     default: {
-      // body
-      body: {
-        family: {
-          value: "{options.typography.redwood.body.20.family.value}",
-          mixin: 'textDefaultBody',
-          property: 'font-family',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
-        },
-        style: {
-          value: '{options.typography.redwood.body.20.style.value}',
-          mixin: 'textDefaultBody',
-          property: 'font-style',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
-        },
-        weight: {
-          value: '{options.typography.redwood.body.20.weight.value}',
-          mixin: 'textDefaultBody',
-          property: 'font-weight',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
-        },
-        spacing: {
-          value: '{options.typography.redwood.body.20.spacing.value}',
-          mixin: 'textDefaultBody',
-          property: 'letter-spacing',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
-        },
-        size: {
-          value: '{options.typography.redwood.body.20.size.value}',
-          category: 'font-size',
-          mixin: 'textDefaultBody',
-          property: 'font-size',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
-        },
-        height: {
-          value: '{options.typography.redwood.body.20.height.value}',
-          category: 'size',
-          mixin: 'textDefaultBody',
-          property: 'line-height',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+      family: {
+        value: "{options.typography.redwood.body.20.family.value}",
+        mixin: 'textDefault',
+        property: 'font-family',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
       },
+      style: {
+        value: '{options.typography.redwood.body.20.style.value}',
+        mixin: 'textDefault',
+        property: 'font-style',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
+      weight: {
+        value: '{options.typography.redwood.body.20.weight.value}',
+        mixin: 'textDefault',
+        property: 'font-weight',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
+      spacing: {
+        value: '{options.typography.redwood.body.20.spacing.value}',
+        mixin: 'textDefault',
+        property: 'letter-spacing',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
+      size: {
+        value: '{options.typography.redwood.body.20.size.value}',
+        category: 'font-size',
+        mixin: 'textDefault',
+        property: 'font-size',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
+      height: {
+        value: '{options.typography.redwood.body.20.height.value}',
+        category: 'size',
+        mixin: 'textDefault',
+        property: 'line-height',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
+    },
 
-      // body-compact
-      'body-compact': {
-        family: {
-          value: "{options.typography.redwood.body.10.family.value}",
-          mixin: 'textDefaultBodyCompact',
-          property: 'font-family',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+    // default-compact
+    'default-compact': {
+      family: {
+        value: "{options.typography.redwood.body.10.family.value}",
+        mixin: 'textDefaultCompact',
+        property: 'font-family',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
-        style: {
-          value: '{options.typography.redwood.body.10.style.value}',
-          mixin: 'textDefaultBodyCompact',
-          property: 'font-style',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+      },
+      style: {
+        value: '{options.typography.redwood.body.10.style.value}',
+        mixin: 'textDefaultCompact',
+        property: 'font-style',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
-        weight: {
-          value: '{options.typography.redwood.body.10.weight.value}',
-          mixin: 'textDefaultBodyCompact',
-          property: 'font-weight',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+      },
+      weight: {
+        value: '{options.typography.redwood.body.10.weight.value}',
+        mixin: 'textDefaultCompact',
+        property: 'font-weight',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
-        spacing: {
-          value: '{options.typography.redwood.body.10.spacing.value}',
-          mixin: 'textDefaultBodyCompact',
-          property: 'letter-spacing',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+      },
+      spacing: {
+        value: '{options.typography.redwood.body.10.spacing.value}',
+        mixin: 'textDefaultCompact',
+        property: 'letter-spacing',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
-        size: {
-          value: '{options.typography.redwood.body.10.size.value}',
-          category: 'font-size',
-          mixin: 'textDefaultBodyCompact',
-          property: 'font-size',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+      },
+      size: {
+        value: '{options.typography.redwood.body.10.size.value}',
+        category: 'font-size',
+        mixin: 'textDefaultCompact',
+        property: 'font-size',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
-        height: {
-          value: '{options.typography.redwood.body.10.height.value}',
-          category: 'size',
-          mixin: 'textDefaultBodyCompact',
-          property: 'line-height',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'default',
-            example: '{text.docExample}',
-          },
+      },
+      height: {
+        value: '{options.typography.redwood.body.10.height.value}',
+        category: 'size',
+        mixin: 'textDefaultCompact',
+        property: 'line-height',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
         },
       },
     },
 
     // editorial
     editorial: {
-      // body
-      body: {
-        family: {
-          value: "{options.typography.spruce.body.30.family.value}",
-          mixin: 'textEditorialBody',
-          property: 'font-family',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
-        },
-        style: {
-          value: '{options.typography.spruce.body.30.style.value}',
-          mixin: 'textEditorialBody',
-          property: 'font-style',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
-        },
-        weight: {
-          value: '{options.typography.spruce.body.30.weight.value}',
-          mixin: 'textEditorialBody',
-          property: 'font-weight',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
-        },
-        spacing: {
-          value: '{options.typography.spruce.body.30.spacing.value}',
-          mixin: 'textEditorialBody',
-          property: 'letter-spacing',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
-        },
-        size: {
-          value: '{options.typography.spruce.body.30.size.value}',
-          category: 'font-size',
-          mixin: 'textEditorialBody',
-          property: 'font-size',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
-        },
-        height: {
-          value: '{options.typography.spruce.body.30.height.value}',
-          category: 'size',
-          mixin: 'textEditorialBody',
-          property: 'line-height',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
+      family: {
+        value: "{options.typography.spruce.body.30.family.value}",
+        mixin: 'textEditorial',
+        property: 'font-family',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
         },
       },
-
-      // body-compact
-      'body-compact': {
-        family: {
-          value: "{options.typography.spruce.body.20.family.value}",
-          mixin: 'textEditorialBodyCompact',
-          property: 'font-family',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
+      style: {
+        value: '{options.typography.spruce.body.30.style.value}',
+        mixin: 'textEditorial',
+        property: 'font-style',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
         },
-        style: {
-          value: '{options.typography.spruce.body.20.style.value}',
-          mixin: 'textEditorialBodyCompact',
-          property: 'font-style',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
+      },
+      weight: {
+        value: '{options.typography.spruce.body.30.weight.value}',
+        mixin: 'textEditorial',
+        property: 'font-weight',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
         },
-        weight: {
-          value: '{options.typography.spruce.body.20.weight.value}',
-          mixin: 'textEditorialBodyCompact',
-          property: 'font-weight',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
+      },
+      spacing: {
+        value: '{options.typography.spruce.body.30.spacing.value}',
+        mixin: 'textEditorial',
+        property: 'letter-spacing',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
         },
-        spacing: {
-          value: '{options.typography.spruce.body.20.spacing.value}',
-          mixin: 'textEditorialBodyCompact',
-          property: 'letter-spacing',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
+      },
+      size: {
+        value: '{options.typography.spruce.body.30.size.value}',
+        category: 'font-size',
+        mixin: 'textEditorial',
+        property: 'font-size',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
         },
-        size: {
-          value: '{options.typography.spruce.body.20.size.value}',
-          category: 'font-size',
-          mixin: 'textEditorialBodyCompact',
-          property: 'font-size',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
-        },
-        height: {
-          value: '{options.typography.spruce.body.20.height.value}',
-          category: 'size',
-          mixin: 'textEditorialBodyCompact',
-          property: 'line-height',
-          docs: {
-            category: '{text.docCategory}',
-            type: 'editorial',
-            example: '{text.docExample}',
-          },
+      },
+      height: {
+        value: '{options.typography.spruce.body.30.height.value}',
+        category: 'size',
+        mixin: 'textEditorial',
+        property: 'line-height',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
         },
       },
     },
-  }
+
+    // editorial-compact
+    'editorial-compact': {
+      family: {
+        value: "{options.typography.spruce.body.20.family.value}",
+        mixin: 'textEditorialCompact',
+        property: 'font-family',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
+        },
+      },
+      style: {
+        value: '{options.typography.spruce.body.20.style.value}',
+        mixin: 'textEditorialCompact',
+        property: 'font-style',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
+        },
+      },
+      weight: {
+        value: '{options.typography.spruce.body.20.weight.value}',
+        mixin: 'textEditorialCompact',
+        property: 'font-weight',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
+        },
+      },
+      spacing: {
+        value: '{options.typography.spruce.body.20.spacing.value}',
+        mixin: 'textEditorialCompact',
+        property: 'letter-spacing',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
+        },
+      },
+      size: {
+        value: '{options.typography.spruce.body.20.size.value}',
+        category: 'font-size',
+        mixin: 'textEditorialCompact',
+        property: 'font-size',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
+        },
+      },
+      height: {
+        value: '{options.typography.spruce.body.20.height.value}',
+        category: 'size',
+        mixin: 'textEditorialCompact',
+        property: 'line-height',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'editorial',
+          example: '{text.docExample}',
+        },
+      },
+    },
+  },
 }
