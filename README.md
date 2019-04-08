@@ -42,9 +42,26 @@ The project is made of these files and folders:
 
 See [style-dictionary properties docs](https://amzn.github.io/style-dictionary/#/properties).
 
-We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit [CTI](https://amzn.github.io/style-dictionary/#/properties?id=category-type-item) structure and we abstract that into a separate "category" key.
+We follow the basic structure of style-dictionary with the exception being that our tokens **don't** follow the implicit [CTI](https://amzn.github.io/style-dictionary/#/properties?id=category-type-item) structure and we abstract that into a separate "category" key (see [Categories](#categories) below).
 
-##### Options
+##### Token Properties
+
+The following properties can be added to tokens to support different options
+
+```
+value           # *required* The token value (most token values should be referenced from options)
+category        # *required* The tokens category (used to transform values for their specific platform)
+docs            # Object to define meta data for docs
+  category      # The category tokens are grouped in on the examples page
+  type          # The sub category tokens are grouped in on the examples page
+  example       # Defines how the token should be presented on the examples page -- Current example types are: color, spacing, sizing, radius, prominence, text, inset, and breakpoint
+mixin           # The name of the generated SCSS/LESS mixin (must be used with property)
+property        # Used with mixin -- the css property the value is applied to within the mixin
+'utility-class' # Boolean -- Used to create scss maps of properties to more easily generate utility classes in cedar
+```
+
+
+#### Options
 
 Found in `tokens/_options/`
 
@@ -72,7 +89,7 @@ Options are skipped and do not get exported for consumers. However they can be [
 
 Output **won't** have a token named `options-color-easily-excited`.
 
-##### Naming
+#### Naming
 
 Token names are defined by the hierarchy of the object:
 
@@ -140,12 +157,6 @@ See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties
   }
 }
 ```
-
-- docCategory: The category to groups tokens under in the [gh-pages token examples](https://rei.github.io/rei-cedar-tokens/)
-
-- docExample: Used to generate different visual examples for tokens (i.e. a color swatch vs. inset padding)
-    - Current example types are: color, spacing, sizing, radius, prominence, text, inset, and breakpoint
-    - More can be easily added in the `docs/` directory
 
 ### Style Dictionary
 
