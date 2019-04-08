@@ -1,6 +1,6 @@
 const StyleDictionary = require('style-dictionary');
 const path = require('path');
-const getPlatformConfig = require('./configs')
+const getPlatformConfig = require('./configs');
 // const _ = require('lodash');
 
 // ==== Include custom transforms ====
@@ -9,6 +9,7 @@ require('./transforms/attribute/utility-class')(StyleDictionary);
 require('./transforms/attribute/cdr-cti')(StyleDictionary);
 require('./transforms/size/px-to-rem')(StyleDictionary);
 require('./transforms/size/strip-px')(StyleDictionary);
+require('./transforms/size/float')(StyleDictionary);
 
 // ==== Include custom transform groups ====
 require('./transformGroups/scss')(StyleDictionary);
@@ -33,8 +34,7 @@ require('./actions/concat_files')(StyleDictionary);
 console.log('Build started...'); // eslint-disable-line no-console
 console.log('\n=============================================='); // eslint-disable-line no-console
 
-['web', 'android', 'ios', 'site/global', 'site/web', 'site/android', 'site/ios'].map(platform => {
-
+['web', 'android', 'ios', 'site/global', 'site/web', 'site/android', 'site/ios'].map((platform) => {
   // APPLY THE CONFIGURATION
   // Very important: the registration of custom transforms
   // needs to be done _before_ applying the configuration
@@ -43,7 +43,6 @@ console.log('\n=============================================='); // eslint-disab
 
   // FINALLY, BUILD ALL THE PLATFORMS
   StyleDictionaryExtended.buildAllPlatforms();
-
 });
 
 
