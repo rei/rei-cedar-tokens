@@ -48,16 +48,6 @@ module.exports = {
           },
         },
       },
-      {
-        destination: 'CdrProperties.h',
-        format: 'ios/singleton.h',
-        className: 'CdrProperties',
-      },
-      {
-        destination: 'CdrProperties.m',
-        format: 'ios/singleton.m',
-        className: 'CdrProperties',
-      },
     ],
   },
 };
