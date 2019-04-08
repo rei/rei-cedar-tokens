@@ -7,10 +7,7 @@ module.exports = (StyleDictionary) => {
       'attribute/cdr-cti',
       'name/cti/pascal',
       'color/UIColor',
-      'content/objC/literal',
-      'asset/objC/literal',
-      'size/remToPt',
-      'font/objC/literal',
+      'size/strip-px',
     ],
   });
 };
