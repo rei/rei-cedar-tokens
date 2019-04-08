@@ -305,34 +305,6 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
-        "example": "color"
-      },
-      "name": "CdrColorIconEmphasisLightmode",
-      "attributes": {
-        "option": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color"
-      },
-      "name": "CdrColorIconEmphasisDarkmode",
-      "attributes": {
-        "option": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
         "type": "background",
         "example": "color"
       },
@@ -1850,6 +1822,7 @@
       "name": "CdrTextDefaultDisplay1Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -1860,6 +1833,7 @@
       "name": "CdrTextDefaultDisplay1LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -1867,7 +1841,8 @@
       "value": "Roboto-Medium.ttf",
       "name": "CdrTextDefaultDisplay1FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -1876,6 +1851,7 @@
       "name": "CdrTextDefaultTitle1Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -1886,6 +1862,7 @@
       "name": "CdrTextDefaultTitle1LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -1893,7 +1870,8 @@
       "value": "Sentinel-Semibold.otf",
       "name": "CdrTextDefaultTitle1FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -1902,6 +1880,7 @@
       "name": "CdrTextDefaultTitle2Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -1912,6 +1891,7 @@
       "name": "CdrTextDefaultTitle2LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -1919,7 +1899,8 @@
       "value": "Sentinel-Semibold.otf",
       "name": "CdrTextDefaultTitle2FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -1928,6 +1909,7 @@
       "name": "CdrTextDefaultTitle3Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -1938,6 +1920,7 @@
       "name": "CdrTextDefaultTitle3LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -1945,7 +1928,8 @@
       "value": "Sentinel-Semibold.otf",
       "name": "CdrTextDefaultTitle3FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -1954,6 +1938,7 @@
       "name": "CdrTextDefaultHeadlineSize",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -1964,6 +1949,7 @@
       "name": "CdrTextDefaultHeadlineLineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -1971,7 +1957,8 @@
       "value": "Roboto-Medium.ttf",
       "name": "CdrTextDefaultHeadlineFontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -1980,6 +1967,7 @@
       "name": "CdrTextDefaultSubheadlineSize",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -1990,6 +1978,7 @@
       "name": "CdrTextDefaultSubheadlineLineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -1997,7 +1986,8 @@
       "value": "Roboto-Medium.ttf",
       "name": "CdrTextDefaultSubheadlineFontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -2006,6 +1996,7 @@
       "name": "CdrTextDefaultBody1Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -2016,6 +2007,7 @@
       "name": "CdrTextDefaultBody1LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -2023,7 +2015,8 @@
       "value": "Roboto-Regular.ttf",
       "name": "CdrTextDefaultBody1FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -2032,6 +2025,7 @@
       "name": "CdrTextDefaultBody2Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -2042,6 +2036,7 @@
       "name": "CdrTextDefaultBody2LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -2049,7 +2044,8 @@
       "value": "Roboto-Regular.ttf",
       "name": "CdrTextDefaultBody2FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -2058,6 +2054,7 @@
       "name": "CdrTextDefaultCaption1Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -2068,6 +2065,7 @@
       "name": "CdrTextDefaultCaption1LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -2075,7 +2073,8 @@
       "value": "Roboto-Regular.ttf",
       "name": "CdrTextDefaultCaption1FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -2084,6 +2083,7 @@
       "name": "CdrTextDefaultCaption2Size",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -2094,6 +2094,7 @@
       "name": "CdrTextDefaultCaption2LineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -2101,7 +2102,8 @@
       "value": "Roboto-Regular.ttf",
       "name": "CdrTextDefaultCaption2FontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     },
     {
@@ -2110,6 +2112,7 @@
       "name": "CdrTextDefaultButtonSize",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size",
         "type": "font"
       }
@@ -2120,6 +2123,7 @@
       "name": "CdrTextDefaultButtonLineSpacing",
       "attributes": {
         "option": false,
+        "utility-class": false,
         "category": "size"
       }
     },
@@ -2127,7 +2131,8 @@
       "value": "Roboto-Medium.ttf",
       "name": "CdrTextDefaultButtonFontFamily",
       "attributes": {
-        "option": false
+        "option": false,
+        "utility-class": false
       }
     }
   ]
