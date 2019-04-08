@@ -171,6 +171,26 @@
     icon: {
       primary: {
         'lightmode' : {
+          value: '{options.color.taken-for-granite.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+          },
+        },
+        'darkmode' : {
+          value: '{options.color.holy-smoke.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+          },
+        },
+      },
+      emphasis: {
+        'lightmode' : {
           value: '{options.color.heart-of-darkness.value}',
           category: 'color',
           docs: {

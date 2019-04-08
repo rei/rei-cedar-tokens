@@ -225,7 +225,7 @@
       }
     },
     {
-      "value": "#ff292929",
+      "value": "#ff616161",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -239,7 +239,7 @@
       }
     },
     {
-      "value": "#fffafafa",
+      "value": "#ff999999",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -247,6 +247,34 @@
         "example": "color"
       },
       "name": "cdr_color_icon_primary_darkmode",
+      "attributes": {
+        "option": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff292929",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color"
+      },
+      "name": "cdr_color_icon_emphasis_lightmode",
+      "attributes": {
+        "option": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffafafa",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color"
+      },
+      "name": "cdr_color_icon_emphasis_darkmode",
       "attributes": {
         "option": false,
         "category": "color"
@@ -1121,111 +1149,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_eighth_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "4.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_quarter_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "8.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_half_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "12.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_three_quarter_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "16.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_one_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "24.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_one_and_a_half_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "32.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_two_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "64.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_inline_four_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "2.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_eighth_x",
       "attributes": {
@@ -1290,7 +1215,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_quarter_x",
       "attributes": {
@@ -1355,7 +1281,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_half_x",
       "attributes": {
@@ -1420,7 +1347,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_three_quarter_x",
       "attributes": {
@@ -1485,7 +1413,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_one_x",
       "attributes": {
@@ -1550,7 +1479,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_one_and_a_half_x",
       "attributes": {
@@ -1615,7 +1545,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_two_x",
       "attributes": {
@@ -1680,7 +1611,8 @@
       "category": "size",
       "docs": {
         "category": "spacing",
-        "example": "spacing"
+        "type": "inset",
+        "example": "inset"
       },
       "name": "cdr_space_inset_four_x",
       "attributes": {
@@ -1735,110 +1667,6 @@
         "example": "spacing"
       },
       "name": "cdr_space_inset_four_x_stretch_left_right",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "2.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_eighth_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "4.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_quarter_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "8.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_half_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "12.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_three_quarter_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "16.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_one_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "24.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_one_and_a_half_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "32.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_two_x",
-      "attributes": {
-        "option": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "64.00dp",
-      "category": "size",
-      "docs": {
-        "category": "spacing",
-        "example": "spacing"
-      },
-      "name": "cdr_space_stack_four_x",
       "attributes": {
         "option": false,
         "category": "size"

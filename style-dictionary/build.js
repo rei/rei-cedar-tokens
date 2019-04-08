@@ -17,7 +17,8 @@ require('./transformGroups/android')(StyleDictionary);
 require('./transformGroups/ios')(StyleDictionary);
 
 // ==== Include custom formats ====
-require('./formats/scss')(StyleDictionary);
+require('./formats/scss-mixin')(StyleDictionary);
+require('./formats/scss-map')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
 require('./formats/site')(StyleDictionary);
