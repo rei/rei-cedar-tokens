@@ -39,13 +39,16 @@ function getSources(platform) {
     return [];
   }
   if (platform === 'web' || platform === 'site/web') {
-    return ['tokens/web/**/*.json5'];
+    // eslint-disable-next-line quotes
+    return [`tokens/web/**/*.json5`];
   }
   if (platform === 'android' || platform === 'site/android') {
-    return ['tokens/mobile/**/*.json5'];
+    // eslint-disable-next-line quotes
+    return [`tokens/mobile/**/*.json5`];
   }
   if (platform === 'ios' || platform === 'site/ios') {
-    return ['tokens/mobile/**/*.json5'];
+    // eslint-disable-next-line quotes
+    return [`tokens/mobile/**/*.json5`];
   }
 }
 
