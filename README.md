@@ -9,8 +9,10 @@
     - JS: commonjs (default) and es module
     - SCSS: variable and mixins
     - LESS: variable and mixins
-    - Android: (WIP)
-    - iOS: (WIP)
+    - Android: XML style sheets for Colors and Dimensions
+    - iOS: Objective C classes for Color and Size
+
+    ** REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
 
 
 ## Contributing
