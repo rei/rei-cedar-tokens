@@ -17,6 +17,7 @@
     "dist"
   ],
   "main": "dist/js/cdr-tokens.common.js",
+  "module": "dist/js/cdr-tokens.esm.js",
   "scripts": {
     "prepublishOnly": "npm run build",
     "postpublish": "npm run build:docs",
