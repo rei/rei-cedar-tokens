@@ -5,7 +5,19 @@ module.exports = (StyleDictionary) => {
     name: 'size/strip-px',
     type: 'value',
     matcher(prop) {
-      return prop.attributes.category !== 'breakpoint';
+      let shouldStrip;
+      switch (prop.attributes.category) {
+        case 'breakpoint':
+          shouldStrip = false;
+          break;
+        case 'letter-spacing':
+          shouldStrip = false;
+          break;
+        default:
+          shouldStrip = true;
+          break;
+      }
+      return shouldStrip;
     },
     transformer(prop) {
       let cleanVal = prop.value;

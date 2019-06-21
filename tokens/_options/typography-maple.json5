@@ -11,14 +11,20 @@
         utility: {
           style: { value: 'normal' },
           weight: { value: '400' },
-          spacing: { value: 'normal' },
+          spacing: { 
+            value: 'normal',
+            category: 'letter-spacing',
+          },
 
           // 70
           '70': {
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '28px',
               category: 'font-size',
@@ -34,7 +40,10 @@
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '24px',
               category: 'font-size',
@@ -50,7 +59,10 @@
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '20px',
               category: 'font-size',
@@ -66,7 +78,10 @@
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '18px',
               category: 'font-size',
@@ -82,7 +97,10 @@
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '16px',
               category: 'font-size',
@@ -98,7 +116,10 @@
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '14px',
               category: 'font-size',
@@ -114,7 +135,10 @@
             family: { value: "{options.typography.maple.family.value}" },
             style: { value: "{options.typography.maple.utility.style.value}" },
             weight: { value: "{options.typography.maple.utility.weight.value}" },
-            spacing: { value: "{options.typography.maple.utility.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.maple.utility.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '12px',
               category: 'font-size',

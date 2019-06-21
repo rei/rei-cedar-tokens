@@ -11,14 +11,20 @@
         display: {
           style: { value: 'normal' },
           weight: { value: '400' },
-          spacing: { value: 'normal' },
+          spacing: { 
+            value: 'normal',
+            category: 'letter-spacing',
+          },
 
           // 70
           '70': {
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '28px',
               category: 'font-size',
@@ -34,7 +40,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '24px',
               category: 'font-size',
@@ -50,7 +59,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '20px',
               category: 'font-size',
@@ -66,7 +78,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '18px',
               category: 'font-size',
@@ -82,7 +97,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '16px',
               category: 'font-size',
@@ -98,7 +116,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '14px',
               category: 'font-size',
@@ -114,7 +135,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.display.style.value}" },
             weight: { value: "{options.typography.redwood.display.weight.value}" },
-            spacing: { value: "{options.typography.redwood.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '12px',
               category: 'font-size',
@@ -131,14 +155,20 @@
         body: {
           style: { value: 'normal' },
           weight: { value: '400' },
-          spacing: { value: 'normal' },
+          spacing: { 
+            value: 'normal',
+            category: 'letter-spacing',
+          },
 
           // 40
           '40': {
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.body.style.value}" },
             weight: { value: "{options.typography.redwood.body.weight.value}" },
-            spacing: { value: "{options.typography.redwood.body.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.body.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '20px',
               category: 'font-size',
@@ -154,7 +184,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.body.style.value}" },
             weight: { value: "{options.typography.redwood.body.weight.value}" },
-            spacing: { value: "{options.typography.redwood.body.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.body.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '18px',
               category: 'font-size',
@@ -170,7 +203,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.body.style.value}" },
             weight: { value: "{options.typography.redwood.body.weight.value}" },
-            spacing: { value: "{options.typography.redwood.body.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.body.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '16px',
               category: 'font-size',
@@ -186,7 +222,10 @@
             family: { value: "{options.typography.redwood.family.value}" },
             style: { value: "{options.typography.redwood.body.style.value}" },
             weight: { value: "{options.typography.redwood.body.weight.value}" },
-            spacing: { value: "{options.typography.redwood.body.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.redwood.body.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '14px',
               category: 'font-size',
