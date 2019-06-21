@@ -11,14 +11,20 @@
         display: {
           style: { value: 'normal' },
           weight: { value: '600' },
-          spacing: { value: '0.2px' },
+          spacing: { 
+            value: '0.2px',
+            category: 'letter-spacing',
+          },
 
           // 100
           '100': {
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '96px',
               category: 'font-size',
@@ -34,7 +40,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '76px',
               category: 'font-size',
@@ -50,7 +59,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '56px',
               category: 'font-size',
@@ -66,7 +78,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '40px',
               category: 'font-size',
@@ -82,7 +97,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '32px',
               category: 'font-size',
@@ -98,7 +116,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '28px',
               category: 'font-size',
@@ -114,7 +135,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '24px',
               category: 'font-size',
@@ -130,7 +154,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '20px',
               category: 'font-size',
@@ -146,7 +173,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '18px',
               category: 'font-size',
@@ -162,7 +192,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '16px',
               category: 'font-size',
@@ -178,7 +211,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.display.style.value}" },
             weight: { value: "{options.typography.spruce.display.weight.value}" },
-            spacing: { value: "{options.typography.spruce.display.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.display.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '14px',
               category: 'font-size',
@@ -195,14 +231,20 @@
         body: {
           style: { value: 'normal' },
           weight: { value: '400' },
-          spacing: { value: 'normal' },
+          spacing: { 
+            value: 'normal',
+            category: 'letter-spacing',
+          },
 
           // 30
           '30': {
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.body.style.value}" },
             weight: { value: "{options.typography.spruce.body.weight.value}" },
-            spacing: { value: "{options.typography.spruce.body.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.body.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '20px',
               category: 'font-size',
@@ -218,7 +260,10 @@
             family: { value: "{options.typography.spruce.family.value}" },
             style: { value: "{options.typography.spruce.body.style.value}" },
             weight: { value: "{options.typography.spruce.body.weight.value}" },
-            spacing: { value: "{options.typography.spruce.body.spacing.value}" },
+            spacing: { 
+              value: "{options.typography.spruce.body.spacing.value}",
+              category: 'letter-spacing',
+            },
             size: {
               value: '18px',
               category: 'font-size',
