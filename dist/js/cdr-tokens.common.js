@@ -149,7 +149,7 @@ module.exports = {
   cdrBreakpointXs: "0",
   cdrBreakpointSm: "768px",
   cdrBreakpointMd: "992px",
-  cdrBreakpointLg: "1200px",
+  cdrBreakpointLg: "1232px",
   cdrTextDefaultFamily: "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
   cdrTextDefaultStyle: "normal",
   cdrTextDefaultWeight: "400",
