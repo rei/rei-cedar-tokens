@@ -6,7 +6,7 @@ module.exports = (StyleDictionary) => {
       'attribute/utility',
       'attribute/cdr-cti',
       'name/cti/kebab',
-      'size/strip-px',
+      'size/strip-all-px',
       'color/custom-sketch',
       'time/seconds',
     ],

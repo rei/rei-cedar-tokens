@@ -9,6 +9,7 @@ require('./transforms/attribute/utility-class')(StyleDictionary);
 require('./transforms/attribute/cdr-cti')(StyleDictionary);
 require('./transforms/size/px-to-rem')(StyleDictionary);
 require('./transforms/size/strip-px')(StyleDictionary);
+require('./transforms/size/strip-all-px')(StyleDictionary);
 require('./transforms/size/float')(StyleDictionary);
 require('./transforms/color/sketch')(StyleDictionary);
 

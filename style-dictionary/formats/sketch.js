@@ -61,31 +61,8 @@ function processText(tokens, prefix) {
     };
     const mixinTokens = mixins[mixinName];
 
-    // text defaults (if we need them)
-    // [
-    //   { 'font-family': 'serif' },
-    //   { 'font-weight': 3 },
-    //   { 'font-size': 16 },
-    //   { 'line-height': 16p },
-    //   { 'text-transform': 'none' },
-    //   { 'letter-spacing': 0 },
-    //   { 'font-style': undefined },
-    //   { 'font-stretch': undefined },
-    //   { 'text-underline': undefined },
-    // ].forEach((defaultProp) => {
-    //   const propKey = Object.keys(defaultProp)[0];
-
-    //   // mixinTokens has the property, use it
-    //   if (_.some(mixinTokens, t => propKey === t.property)) {
-    //     const theToken = _.find(mixinTokens, t => propKey === t.property);
-    //     newTokenObj.value[_.camelCase(propKey)] = theToken.value;
-    //   } else {
-    //     newTokenObj.value[_.camelCase(propKey)] = defaultProp[propKey];
-    //   }
-    // });
-
     mixinTokens.forEach((t) => {
-      let tokenVal = _.endsWith(t.value, 'px') ? t.value.slice(0, -2) : t.value;
+      let tokenVal = t.value;
       if (t.property === 'font-weight') {
         tokenVal = (t.value / 100) - 1;
         newTokenObj.value.fontWeightOriginal = _.toNumber(t.value) ? _.toNumber(t.value) : t.value;
@@ -97,6 +74,50 @@ function processText(tokens, prefix) {
     });
 
     returnArr.push(newTokenObj);
+  });
+
+  return returnArr;
+}
+
+function processSpace(tokens) {
+  const returnObj = {};
+  const groupedSubCats = _.groupBy(tokens, 'docs.type');
+  groupedSubCats.space = groupedSubCats.undefined;
+  delete groupedSubCats.undefined;
+  const subcats = Object.keys(groupedSubCats);
+
+  subcats.forEach((subcat) => {
+    returnObj[subcat] = [];
+    const tokens = groupedSubCats[subcat];
+
+
+    tokens.forEach((token) => {
+      if (subcat === 'inset') {
+        returnObj[subcat].push({
+          name: token.name,
+          value: token.value.split(' ').map(v => _.toNumber(v)),
+        });
+      } else {
+        returnObj[subcat].push({
+          name: token.name,
+          value: _.toNumber(token.value),
+        });
+      }
+    });
+  });
+
+
+  return returnObj;
+}
+
+function processGeneric(tokens) {
+  const returnArr = [];
+
+  tokens.forEach((token) => {
+    returnArr.push({
+      name: token.name,
+      value: (_.toNumber(token.value) || token.value === '0') ? _.toNumber(token.value) : token.value,
+    });
   });
 
   return returnArr;
@@ -118,6 +139,11 @@ module.exports = (StyleDictionary) => {
         if (newCategory === 'prominence') finalObj[newCategory] = processProminence(tokenArr);
         if (newCategory === 'colors') finalObj[newCategory] = processColor(tokenArr);
         if (newCategory === 'text') finalObj[newCategory] = processText(tokenArr, prefix);
+        if (newCategory === 'spacing') finalObj[newCategory] = processSpace(tokenArr);
+
+        // TODO: change to else?
+        if (newCategory === 'radius'
+          || newCategory === 'breakpoints') finalObj[newCategory] = processGeneric(tokenArr);
       });
 
       return JSON.stringify(finalObj, null, 2);
