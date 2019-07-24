@@ -82,16 +82,16 @@ function processText(tokens, prefix) {
 function processSpace(tokens) {
   const returnObj = {};
   const groupedSubCats = _.groupBy(tokens, 'docs.type');
-  groupedSubCats.space = groupedSubCats.undefined;
+  groupedSubCats.space = _.filter(groupedSubCats.undefined, o => (!_.endsWith(o.name, 'top-bottom') && !_.endsWith(o.name, 'left-right')));
   delete groupedSubCats.undefined;
   const subcats = Object.keys(groupedSubCats);
 
   subcats.forEach((subcat) => {
     returnObj[subcat] = [];
-    const tokens = groupedSubCats[subcat];
+    const subcatTokens = groupedSubCats[subcat];
 
 
-    tokens.forEach((token) => {
+    subcatTokens.forEach((token) => {
       if (subcat === 'inset') {
         returnObj[subcat].push({
           name: token.name,
