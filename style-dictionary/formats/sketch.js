@@ -12,7 +12,7 @@ function processProminence(tokens) {
     ) return;
 
     const values = token.value.split(' ', 4);
-    const color = token.value.split(values.join(' '))[1];
+    const color = token.value.split(values.join(' '))[1].trim();
     const [x, y, blur, spread] = values;
 
     returnArr.push({
