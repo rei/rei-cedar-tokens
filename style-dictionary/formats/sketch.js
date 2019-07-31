@@ -60,7 +60,7 @@ function calculateWeight(value) {
       weight = 9;
       break;
     default:
-      weight = Math.round(value / 50) * 50; // round to nearest 50
+      weight = Math.round(value / 100) * 100; // round to nearest 100
       weight = (weight / 100) + 2; // convert to sketch value
       break;
   }
