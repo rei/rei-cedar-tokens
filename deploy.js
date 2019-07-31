@@ -7,6 +7,8 @@ exec('cd docs && npm install && npm run build', (err, stdout, stderr) => {
     return;
   }
 
+  if (process.env.NODE_ENV === 'prerelease') return;
+
   console.log(`Docs files generated`);
 
   ghpages.publish('docs/dist', (err) => {
