@@ -132,6 +132,7 @@ Categories are one of the following:
 
 - `size`: Anything that would have a value in px. With the exception of font-size
 - `font-size`: Anything that defines a text size
+- `letter-spacing`: exists too?
 - `color`: Anything that defines a color
 - `time`: Anything the defines a timing
 - Values without a category will not be transformed: Anything that is a string like `'normal'` or `'italic'`

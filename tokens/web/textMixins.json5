@@ -25,7 +25,7 @@
         },
       },
       weight: {
-        value: '{options.typography.redwood.body.20.weight.value}',
+        value: '{options.font.weight.normal.value}',
         mixin: 'textDefault',
         property: 'font-weight',
         docs: {
@@ -35,7 +35,7 @@
         },
       },
       spacing: {
-        value: '{options.typography.redwood.body.20.spacing.value}',
+        value: '{options.font.letter-spacing.normal.value}',
         category: 'letter-spacing',
         mixin: 'textDefault',
         property: 'letter-spacing',
@@ -46,7 +46,7 @@
         },
       },
       size: {
-        value: '{options.typography.redwood.body.20.size.value}',
+        value: '{options.font.size.300.value}',
         category: 'font-size',
         mixin: 'textDefault',
         property: 'font-size',
@@ -57,7 +57,7 @@
         },
       },
       height: {
-        value: '{options.typography.redwood.body.20.height.value}',
+        value: '{options.font.line-height.600.value}',
         category: 'size',
         mixin: 'textDefault',
         property: 'line-height',
@@ -92,7 +92,7 @@
         },
       },
       weight: {
-        value: '{options.typography.redwood.body.10.weight.value}',
+        value: '{options.font.weight.normal.value}',
         mixin: 'textDefaultCompact',
         property: 'font-weight',
         docs: {
@@ -102,7 +102,7 @@
         },
       },
       spacing: {
-        value: '{options.typography.redwood.body.10.spacing.value}',
+        value: '{options.font.letter-spacing.normal.value}',
         category: 'letter-spacing',
         mixin: 'textDefaultCompact',
         property: 'letter-spacing',
@@ -113,7 +113,7 @@
         },
       },
       size: {
-        value: '{options.typography.redwood.body.10.size.value}',
+        value: '{options.font.size.200.value}',
         category: 'font-size',
         mixin: 'textDefaultCompact',
         property: 'font-size',
@@ -124,7 +124,7 @@
         },
       },
       height: {
-        value: '{options.typography.redwood.body.10.height.value}',
+        value: '{options.font.line-height.500.value}',
         category: 'size',
         mixin: 'textDefaultCompact',
         property: 'line-height',
