@@ -271,480 +271,8 @@
       },
     },
 
-    'header':{
-
-        // header-1
-        '1': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader1',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader1',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader1',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader1',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.1200.value}', // was '56px', now '54px'
-            category: 'font-size',
-            mixin: 'textHeader1',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.1400.value}', // was '60px', now '56px'
-            category: 'size',
-            mixin: 'textHeader1',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-
-        // header-2
-        '2': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader2',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader2',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader2',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader2',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.1000.value}', // was '40px', now '42px'
-            category: 'font-size',
-            mixin: 'textHeader2',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.1300.value}', // was '48px', now '50px'
-            category: 'size',
-            mixin: 'textHeader2',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-
-        // header-3
-        '3': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader3',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader3',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader3',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader3',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.800.value}',
-            category: 'font-size',
-            mixin: 'textHeader3',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.1100.value}',
-            category: 'size',
-            mixin: 'textHeader3',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-
-        // header-4
-        '4': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader4',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader4',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader4',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader4',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.700.value}',
-            category: 'font-size',
-            mixin: 'textHeader4',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.1000.value}',
-            category: 'size',
-            mixin: 'textHeader4',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-
-        // header-5
-        '5': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader5',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader5',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader5',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader5',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.600.value}',
-            category: 'font-size',
-            mixin: 'textHeader5',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.900.value}',
-            category: 'size',
-            mixin: 'textHeader5',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-
-        // header-6
-        '6': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader6',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader6',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader6',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader6',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.500.value}',
-            category: 'font-size',
-            mixin: 'textHeader6',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.700.value}',
-            category: 'size',
-            mixin: 'textHeader6',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-
-        // header-7
-        '7': {
-          family: {
-            value: '{options.font.family.serif.value}',
-            mixin: 'textHeader7',
-            property: 'font-family',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          style: {
-            value: '{options.font.style.normal.value}',
-            mixin: 'textHeader7',
-            property: 'font-style',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          weight: {
-            value: '{options.font.weight.semibold.value}',
-            mixin: 'textHeader7',
-            property: 'font-weight',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          spacing: {
-            value: '{options.font.letter-spacing.loose.value}',
-            category: 'letter-spacing',
-            mixin: 'textHeader7',
-            property: 'letter-spacing',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          size: {
-            value: '{options.font.size.400.value}',
-            category: 'font-size',
-            mixin: 'textHeader7',
-            property: 'font-size',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-          height: {
-            value: '{options.font.line-height.500.value}',
-            category: 'size',
-            mixin: 'textHeader7',
-            property: 'line-height',
-            docs: {
-              category: '{text.docCategory}',
-              type: 'header',
-              example: '{text.docExample}',
-            },
-          },
-        },
-    },
-
-    'display':{
-      '600':{
+    display: {
+      '600': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay600',
@@ -809,7 +337,7 @@
           },
         },
       },
-      '700':{
+      '700': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay700',
@@ -874,7 +402,7 @@
           },
         },
       },
-      '800':{
+      '800': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay800',
@@ -939,7 +467,7 @@
           },
         },
       },
-      '900':{
+      '900': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay900',
@@ -1004,7 +532,7 @@
           },
         },
       },
-      '1000':{
+      '1000': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay1000',
@@ -1069,7 +597,7 @@
           },
         },
       },
-      '1100':{
+      '1100': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay1100',
@@ -1134,7 +662,7 @@
           },
         },
       },
-      '1200':{
+      '1200': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textDisplay1200',
@@ -1201,8 +729,8 @@
       },
     },
 
-    'heading':{
-      '300':{
+    heading: {
+      '300': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textHeading300',
@@ -1267,7 +795,7 @@
           },
         },
       },
-      '400':{
+      '400': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textHeading400',
@@ -1332,7 +860,7 @@
           },
         },
       },
-      '500':{
+      '500': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textHeading500',
@@ -1397,7 +925,7 @@
           },
         },
       },
-      '600':{
+      '600': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textHeading600',
@@ -1462,7 +990,7 @@
           },
         },
       },
-      '700':{
+      '700': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textHeading700',
@@ -1527,7 +1055,7 @@
           },
         },
       },
-      '800':{
+      '800': {
         family: {
           value: '{options.font.family.serif.value}',
           mixin: 'textHeading800',
@@ -1594,8 +1122,8 @@
       },
     },
 
-    'subheading':{
-      '300':{
+    subheading: {
+      '300': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textSubheading300',
@@ -1660,7 +1188,7 @@
           },
         },
       },
-      '400':{
+      '400': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textSubheading400',
@@ -1725,7 +1253,7 @@
           },
         },
       },
-      '500':{
+      '500': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textSubheading500',
@@ -1790,7 +1318,7 @@
           },
         },
       },
-      '600':{
+      '600': {
         family: {
           value: '{options.font.family.sans.value}',
           mixin: 'textSubheading600',
