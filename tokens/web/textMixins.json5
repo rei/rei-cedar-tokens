@@ -5,7 +5,7 @@
     // default
     default: {
       family: {
-        value: "{options.typography.redwood.body.20.family.value}",
+        value: "{options.font.family.sans.value}",
         mixin: 'textDefault',
         property: 'font-family',
         docs: {
@@ -72,7 +72,7 @@
     // default-compact
     'default-compact': {
       family: {
-        value: "{options.typography.redwood.body.10.family.value}",
+        value: "{options.font.family.sans.value}",
         mixin: 'textDefaultCompact',
         property: 'font-family',
         docs: {
