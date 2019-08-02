@@ -788,7 +788,7 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]",
+      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:0.20f]",
       "category": "color",
       "docs": {
         "category": "prominence"
@@ -801,7 +801,7 @@
       }
     },
     {
-      "value": "2.0f",
+      "value": "0.0f",
       "category": "size",
       "docs": {
         "category": "prominence"
@@ -866,7 +866,7 @@
       }
     },
     {
-      "value": "4.0f",
+      "value": "0.0f",
       "category": "size",
       "docs": {
         "category": "prominence"
@@ -931,7 +931,7 @@
       }
     },
     {
-      "value": "8.0f",
+      "value": "0.0f",
       "category": "size",
       "docs": {
         "category": "prominence"
@@ -996,7 +996,7 @@
       }
     },
     {
-      "value": "16.0f",
+      "value": "0.0f",
       "category": "size",
       "docs": {
         "category": "prominence"
@@ -1105,7 +1105,8 @@
       }
     },
     {
-      "value": "50%",
+      "value": "9999.0f",
+      "category": "size",
       "docs": {
         "category": "radius",
         "example": "radius"
@@ -1113,7 +1114,8 @@
       "name": "CdrRadiusRound",
       "attributes": {
         "option": false,
-        "utility-class": false
+        "utility-class": false,
+        "category": "size"
       }
     }
   ],
