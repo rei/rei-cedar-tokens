@@ -1,100 +1,100 @@
 @mixin cdr-text-default() {
-  font-family: ”REI Stuart”, Georgia, serif;
+  font-family: Graphik App, Helvetica Neue, sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0;
-  font-size: 16;
-  line-height: 26;
+  letter-spacing: 0px;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
 }
 
 @mixin cdr-text-default-compact() {
-  font-family: ”REI Stuart”, Georgia, serif;
+  font-family: Graphik App, Helvetica Neue, sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0;
-  font-size: 14;
-  line-height: 24;
+  letter-spacing: 0px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 @mixin cdr-text-editorial() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0;
-  font-size: 20;
-  line-height: 32;
+  letter-spacing: 0px;
+  font-size: 2rem;
+  line-height: 3.2rem;
 }
 
 @mixin cdr-text-editorial-compact() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0;
-  font-size: 18;
-  line-height: 28;
+  letter-spacing: 0px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
 }
 
 @mixin cdr-text-header-1() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 54;
-  line-height: 56;
+  letter-spacing: 0.16px;
+  font-size: 5.4rem;
+  line-height: 5.6rem;
 }
 
 @mixin cdr-text-header-2() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 42;
-  line-height: 50;
+  letter-spacing: 0.16px;
+  font-size: 4.2rem;
+  line-height: 5rem;
 }
 
 @mixin cdr-text-header-3() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 32;
-  line-height: 40;
+  letter-spacing: 0.16px;
+  font-size: 3.2rem;
+  line-height: 4rem;
 }
 
 @mixin cdr-text-header-4() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 28;
-  line-height: 36;
+  letter-spacing: 0.16px;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
 }
 
 @mixin cdr-text-header-5() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 24;
-  line-height: 32;
+  letter-spacing: 0.16px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
 
 @mixin cdr-text-header-6() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 20;
-  line-height: 28;
+  letter-spacing: 0.16px;
+  font-size: 2rem;
+  line-height: 2.8rem;
 }
 
 @mixin cdr-text-header-7() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.16;
-  font-size: 18;
-  line-height: 24;
+  letter-spacing: 0.16px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 
 $cdr-color-text-primary-lightmode: #292929;
@@ -248,69 +248,69 @@ $cdr-breakpoint-xs: 0;
 $cdr-breakpoint-sm: 768px;
 $cdr-breakpoint-md: 992px;
 $cdr-breakpoint-lg: 1232px;
-$cdr-text-default-family: ”REI Stuart”, Georgia, serif;
+$cdr-text-default-family: Graphik App, Helvetica Neue, sans-serif;
 $cdr-text-default-style: normal;
 $cdr-text-default-weight: 400;
-$cdr-text-default-spacing: 0;
-$cdr-text-default-size: 16;
-$cdr-text-default-height: 26;
-$cdr-text-default-compact-family: ”REI Stuart”, Georgia, serif;
+$cdr-text-default-spacing: 0px;
+$cdr-text-default-size: 1.6rem;
+$cdr-text-default-height: 2.6rem;
+$cdr-text-default-compact-family: Graphik App, Helvetica Neue, sans-serif;
 $cdr-text-default-compact-style: normal;
 $cdr-text-default-compact-weight: 400;
-$cdr-text-default-compact-spacing: 0;
-$cdr-text-default-compact-size: 14;
-$cdr-text-default-compact-height: 24;
-$cdr-text-editorial-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-default-compact-spacing: 0px;
+$cdr-text-default-compact-size: 1.4rem;
+$cdr-text-default-compact-height: 2.4rem;
+$cdr-text-editorial-family: REI Stuart App, Georgia, serif;
 $cdr-text-editorial-style: normal;
 $cdr-text-editorial-weight: 400;
-$cdr-text-editorial-spacing: 0;
-$cdr-text-editorial-size: 20;
-$cdr-text-editorial-height: 32;
-$cdr-text-editorial-compact-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-editorial-spacing: 0px;
+$cdr-text-editorial-size: 2rem;
+$cdr-text-editorial-height: 3.2rem;
+$cdr-text-editorial-compact-family: REI Stuart App, Georgia, serif;
 $cdr-text-editorial-compact-style: normal;
 $cdr-text-editorial-compact-weight: 400;
-$cdr-text-editorial-compact-spacing: 0;
-$cdr-text-editorial-compact-size: 18;
-$cdr-text-editorial-compact-height: 28;
-$cdr-text-header-1-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-editorial-compact-spacing: 0px;
+$cdr-text-editorial-compact-size: 1.8rem;
+$cdr-text-editorial-compact-height: 2.8rem;
+$cdr-text-header-1-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-1-style: normal;
 $cdr-text-header-1-weight: 600;
-$cdr-text-header-1-spacing: 0.16;
-$cdr-text-header-1-size: 54;
-$cdr-text-header-1-height: 56;
-$cdr-text-header-2-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-header-1-spacing: 0.16px;
+$cdr-text-header-1-size: 5.4rem;
+$cdr-text-header-1-height: 5.6rem;
+$cdr-text-header-2-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-2-style: normal;
 $cdr-text-header-2-weight: 600;
-$cdr-text-header-2-spacing: 0.16;
-$cdr-text-header-2-size: 42;
-$cdr-text-header-2-height: 50;
-$cdr-text-header-3-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-header-2-spacing: 0.16px;
+$cdr-text-header-2-size: 4.2rem;
+$cdr-text-header-2-height: 5rem;
+$cdr-text-header-3-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-3-style: normal;
 $cdr-text-header-3-weight: 600;
-$cdr-text-header-3-spacing: 0.16;
-$cdr-text-header-3-size: 32;
-$cdr-text-header-3-height: 40;
-$cdr-text-header-4-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-header-3-spacing: 0.16px;
+$cdr-text-header-3-size: 3.2rem;
+$cdr-text-header-3-height: 4rem;
+$cdr-text-header-4-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-4-style: normal;
 $cdr-text-header-4-weight: 600;
-$cdr-text-header-4-spacing: 0.16;
-$cdr-text-header-4-size: 28;
-$cdr-text-header-4-height: 36;
-$cdr-text-header-5-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-header-4-spacing: 0.16px;
+$cdr-text-header-4-size: 2.8rem;
+$cdr-text-header-4-height: 3.6rem;
+$cdr-text-header-5-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-5-style: normal;
 $cdr-text-header-5-weight: 600;
-$cdr-text-header-5-spacing: 0.16;
-$cdr-text-header-5-size: 24;
-$cdr-text-header-5-height: 32;
-$cdr-text-header-6-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-header-5-spacing: 0.16px;
+$cdr-text-header-5-size: 2.4rem;
+$cdr-text-header-5-height: 3.2rem;
+$cdr-text-header-6-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-6-style: normal;
 $cdr-text-header-6-weight: 600;
-$cdr-text-header-6-spacing: 0.16;
-$cdr-text-header-6-size: 20;
-$cdr-text-header-6-height: 28;
-$cdr-text-header-7-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-header-6-spacing: 0.16px;
+$cdr-text-header-6-size: 2rem;
+$cdr-text-header-6-height: 2.8rem;
+$cdr-text-header-7-family: REI Stuart App, Georgia, serif;
 $cdr-text-header-7-style: normal;
 $cdr-text-header-7-weight: 600;
-$cdr-text-header-7-spacing: 0.16;
-$cdr-text-header-7-size: 18;
-$cdr-text-header-7-height: 24;
+$cdr-text-header-7-spacing: 0.16px;
+$cdr-text-header-7-size: 1.8rem;
+$cdr-text-header-7-height: 2.4rem;
