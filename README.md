@@ -71,9 +71,9 @@ Options are skipped and do not get exported for consumers. However they can be [
 
 **NOTE:** "options" needs to be the root key in the file.
 
-```
+```js
 {
-  options: { <-- anything beneath this will be ignored in output
+  options: { // <-- anything beneath this will be ignored in output
     color: {
       'easily-excited': {
         value: '#3278ae',
@@ -83,7 +83,7 @@ Options are skipped and do not get exported for consumers. However they can be [
         value: '#292929',
         category: 'color',
       },
-      ...
+      // ...
     },
   }
 }
@@ -95,17 +95,17 @@ Output **won't** have a token named `options-color-easily-excited`.
 
 Token names are defined by the hierarchy of the object:
 
-```
+```js
 {
   text: {
     body: {
       default: {
         size: {
-          value: '23',
+          value: '23px',
           category: 'font-size',
         },
         height: {
-          value: '25',
+          value: '25px',
           category: 'size',
         },
       },
@@ -130,20 +130,17 @@ For example, a category of "size" will transform to 'rem' for SCSS/LESS but 'dp'
 
 Categories are one of the following:
 
-- size
-    - Anything that would have a value in px. With the exception of font-size
-- font-size
-    - Anything that defines a text size
-- color
-    - Anything that defines a color
-- time
-    - Anything the defines a timing
+- `size`: Anything that would have a value in px. With the exception of font-size
+- `font-size`: Anything that defines a text size
+- `color`: Anything that defines a color
+- `time`: Anything the defines a timing
+- Values without a category will not be transformed: Anything that is a string like `'normal'` or `'italic'`
 
 #### Referencing Options (or other values)
 
 See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties?id=attribute-reference-alias)
 
-```
+```js
 {
   color: {
     text: {
