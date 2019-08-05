@@ -12,7 +12,7 @@ function processProminence(tokens) {
     ) return;
 
     const values = token.value.split(' ', 4);
-    const color = token.value.split(values.join(' '))[1];
+    const color = token.value.split(values.join(' '))[1].trim();
     const [x, y, blur, spread] = values;
 
     returnArr.push({
@@ -50,6 +50,24 @@ function processColor(tokens) {
   return returnArr;
 }
 
+function calculateWeight(value) {
+  let weight;
+  switch (value) {
+    case 'normal':
+      weight = 6;
+      break;
+    case 'bold':
+      weight = 9;
+      break;
+    default:
+      weight = Math.round(value / 100) * 100; // round to nearest 100
+      weight = (weight / 100) + 2; // convert to sketch value
+      break;
+  }
+
+  return weight;
+}
+
 function processText(tokens, prefix) {
   const returnArr = [];
   const mixins = _.groupBy(tokens, 'mixin');
@@ -64,7 +82,7 @@ function processText(tokens, prefix) {
     mixinTokens.forEach((t) => {
       let tokenVal = t.value;
       if (t.property === 'font-weight') {
-        tokenVal = (t.value / 100) - 1;
+        tokenVal = calculateWeight(t.value);
         newTokenObj.value.fontWeightOriginal = _.toNumber(t.value) ? _.toNumber(t.value) : t.value;
       }
       if (t.property === 'font-family') {
@@ -82,16 +100,18 @@ function processText(tokens, prefix) {
 function processSpace(tokens) {
   const returnObj = {};
   const groupedSubCats = _.groupBy(tokens, 'docs.type');
+  // groupedSubCats.space = _.filter(groupedSubCats.undefined, o => (!_.endsWith(o.name, 'top-bottom') && !_.endsWith(o.name, 'left-right')));
+  // delete groupedSubCats.undefined;
   groupedSubCats.space = groupedSubCats.undefined;
   delete groupedSubCats.undefined;
   const subcats = Object.keys(groupedSubCats);
 
   subcats.forEach((subcat) => {
     returnObj[subcat] = [];
-    const tokens = groupedSubCats[subcat];
+    const subcatTokens = groupedSubCats[subcat];
 
 
-    tokens.forEach((token) => {
+    subcatTokens.forEach((token) => {
       if (subcat === 'inset') {
         returnObj[subcat].push({
           name: token.name,
