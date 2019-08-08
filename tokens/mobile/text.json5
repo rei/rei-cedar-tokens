@@ -3,157 +3,476 @@
     default: {
       // Display 1
       display1: {
+        docCategory: 'text',
+        docType: 'header',
+        docAndroid: 'Display 1',
+        docIos: 'Large Title',
+        docDescription: 'Suggested Usage: Frequently used as the largest title for phone apps and can be used for page titles for larger devices',
         size: {
-          value: '34',
+          value: '34px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.display1.docCategory}',
+            type: '{text.default.display1.docType}',
+            android: '{text.default.display1.docAndroid}',
+            ios: '{text.default.display1.docIos}',
+            description: '{text.default.display1.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '40',
-          category: 'size'
+          value: '40px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.display1.docCategory}',
+            type: '{text.default.display1.docType}',
+            android: '{text.default.display1.docAndroid}',
+            ios: '{text.default.display1.docIos}',
+            description: '{text.default.display1.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Medium.ttf'
-        }
+          value: 'Roboto-Medium.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.display1.docCategory}',
+            type: '{text.default.display1.docType}',
+            android: '{text.default.display1.docAndroid}',
+            ios: '{text.default.display1.docIos}',
+            description: '{text.default.display1.docDescription}',
+          }
+        },
       },
       // Title 1
       title1: {
+        docCategory: 'text',
+        docType: 'header',
+        docAndroid: 'Title 1',
+        docIos: '{text.default.title1.docAndroid}',
+        docDescription: 'Suggested Usage: Content titles, level 1',
         size: {
-          value: '28',
+          value: '28px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.title1.docCategory}',
+            type: '{text.default.title1.docType}',
+            android: '{text.default.title1.docAndroid}',
+            ios: '{text.default.title1.docIos}',
+            description: '{text.default.title1.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '36',
-          category: 'size'
+          value: '36px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.title1.docCategory}',
+            type: '{text.default.title1.docType}',
+            android: '{text.default.title1.docAndroid}',
+            ios: '{text.default.title1.docIos}',
+            description: '{text.default.title1.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Sentinel-Semibold.otf'
-        }
+          value: 'Sentinel-Semibold.otf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.title1.docCategory}',
+            type: '{text.default.title1.docType}',
+            android: '{text.default.title1.docAndroid}',
+            ios: '{text.default.title1.docIos}',
+            description: '{text.default.title1.docDescription}',
+          }
+        },
       },
       // Title 2
       title2: {
+        docCategory: 'text',
+        docType: 'header',
+        docAndroid: 'Title 2',
+        docIos: '{text.default.title2.docAndroid}',
+        docDescription: 'Suggested Usage: Content titles, product names, level 2',
         size: {
-          value: '26',
+          value: '26px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.title2.docCategory}',
+            type: '{text.default.title2.docType}',
+            android: '{text.default.title2.docAndroid}',
+            ios: '{text.default.title2.docIos}',
+            description: '{text.default.title2.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '32',
-          category: 'size'
+          value: '32px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.title2.docCategory}',
+            type: '{text.default.title2.docType}',
+            android: '{text.default.title2.docAndroid}',
+            ios: '{text.default.title2.docIos}',
+            description: '{text.default.title2.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Sentinel-Semibold.otf'
-        }
+          value: 'Sentinel-Semibold.otf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.title2.docCategory}',
+            type: '{text.default.title2.docType}',
+            android: '{text.default.title2.docAndroid}',
+            ios: '{text.default.title2.docIos}',
+            description: '{text.default.title2.docDescription}',
+          }
+        },
       },
       // Title 3
       title3: {
+        docCategory: 'text',
+        docType: 'header',
+        docAndroid: 'Title 3',
+        docIos: '{text.default.title3.docAndroid}',
+        docDescription: 'Suggested Usage: Content titles, product names, product prices, level 3',
         size: {
-          value: '21',
+          value: '21px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.title3.docCategory}',
+            type: '{text.default.title3.docType}',
+            android: '{text.default.title3.docAndroid}',
+            ios: '{text.default.title3.docIos}',
+            description: '{text.default.title3.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '28',
-          category: 'size'
+          value: '28px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.title3.docCategory}',
+            type: '{text.default.title3.docType}',
+            android: '{text.default.title3.docAndroid}',
+            ios: '{text.default.title3.docIos}',
+            description: '{text.default.title3.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Sentinel-Semibold.otf'
-        }
+          value: 'Sentinel-Semibold.otf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.title3.docCategory}',
+            type: '{text.default.title3.docType}',
+            android: '{text.default.title3.docAndroid}',
+            ios: '{text.default.title3.docIos}',
+            description: '{text.default.title3.docDescription}',
+          }
+        },
       },
       // Headline
       headline: {
+        docCategory: 'text',
+        docType: 'header',
+        docAndroid: 'Headline',
+        docIos: '{text.default.headline.docAndroid}',
+        docDescription: 'Suggested Usage: Heading primarily used with body copy, list items, table headers',
         size: {
-          value: '17',
+          value: '17px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.headline.docCategory}',
+            type: '{text.default.headline.docType}',
+            android: '{text.default.headline.docAndroid}',
+            ios: '{text.default.headline.docIos}',
+            description: '{text.default.headline.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '24',
-          category: 'size'
+          value: '24px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.headline.docCategory}',
+            type: '{text.default.headline.docType}',
+            android: '{text.default.headline.docAndroid}',
+            ios: '{text.default.headline.docIos}',
+            description: '{text.default.headline.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Medium.ttf'
-        }
+          value: 'Roboto-Medium.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.headline.docCategory}',
+            type: '{text.default.headline.docType}',
+            android: '{text.default.headline.docAndroid}',
+            ios: '{text.default.headline.docIos}',
+            description: '{text.default.headline.docDescription}',
+          }
+        },
       },
       // Subheadline
       subheadline: {
+        docCategory: 'text',
+        docType: 'header',
+        docAndroid: 'Subhead',
+        docIos: '{text.default.subheadline.docAndroid}',
+        docDescription: 'Suggested Usage: Subheading primarily used with body copy',
         size: {
-          value: '15',
+          value: '15px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.subheadline.docCategory}',
+            type: '{text.default.subheadline.docType}',
+            android: '{text.default.subheadline.docAndroid}',
+            ios: '{text.default.subheadline.docIos}',
+            description: '{text.default.subheadline.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '20',
-          category: 'size'
+          value: '20px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.subheadline.docCategory}',
+            type: '{text.default.subheadline.docType}',
+            android: '{text.default.subheadline.docAndroid}',
+            ios: '{text.default.subheadline.docIos}',
+            description: '{text.default.subheadline.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Medium.ttf'
-        }
+          value: 'Roboto-Medium.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.subheadline.docCategory}',
+            type: '{text.default.subheadline.docType}',
+            android: '{text.default.subheadline.docAndroid}',
+            ios: '{text.default.subheadline.docIos}',
+            description: '{text.default.subheadline.docDescription}',
+          }
+        },
       },
       // Body 1
       body1: {
+        docCategory: 'text',
+        docType: 'body',
+        docAndroid: 'Body 1',
+        docIos: 'Body',
+        docDescription: 'Suggested Usage: Default for body content',
         size: {
-          value: '15',
+          value: '15px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.body1.docCategory}',
+            type: '{text.default.body1.docType}',
+            android: '{text.default.body1.docAndroid}',
+            ios: '{text.default.body1.docIos}',
+            description: '{text.default.body1.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '20',
-          category: 'size'
+          value: '20px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.body1.docCategory}',
+            type: '{text.default.body1.docType}',
+            android: '{text.default.body1.docAndroid}',
+            ios: '{text.default.body1.docIos}',
+            description: '{text.default.body1.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Regular.ttf'
-        }
+          value: 'Roboto-Regular.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.body1.docCategory}',
+            type: '{text.default.body1.docType}',
+            android: '{text.default.body1.docAndroid}',
+            ios: '{text.default.body1.docIos}',
+            description: '{text.default.body1.docDescription}',
+          }
+        },
       },
       // Body 2
       body2: {
+        docCategory: 'text',
+        docType: 'body',
+        docAndroid: 'Body 2',
+        docIos: 'Footnote',
+        docDescription: 'Suggested Usage: Secondary text intended for informational and supplemental body content',
         size: {
-          value: '12',
+          value: '12px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.body2.docCategory}',
+            type: '{text.default.body2.docType}',
+            android: '{text.default.body2.docAndroid}',
+            ios: '{text.default.body2.docIos}',
+            description: '{text.default.body2.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '20',
-          category: 'size'
+          value: '20px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.body2.docCategory}',
+            type: '{text.default.body2.docType}',
+            android: '{text.default.body2.docAndroid}',
+            ios: '{text.default.body2.docIos}',
+            description: '{text.default.body2.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Regular.ttf'
-        }
+          value: 'Roboto-Regular.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.body2.docCategory}',
+            type: '{text.default.body2.docType}',
+            android: '{text.default.body2.docAndroid}',
+            ios: '{text.default.body2.docIos}',
+            description: '{text.default.body2.docDescription}',
+          }
+        },
       },
       // Caption 1
       caption1: {
+        docCategory: 'text',
+        docType: 'body',
+        docAndroid: 'Caption 1',
+        docIos: '{text.default.caption1.docAndroid}',
+        docDescription: 'Suggested Usage: Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices',
         size: {
-          value: '12',
+          value: '12px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.caption1.docCategory}',
+            type: '{text.default.caption1.docType}',
+            android: '{text.default.caption1.docAndroid}',
+            ios: '{text.default.caption1.docIos}',
+            description: '{text.default.caption1.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '16',
-          category: 'size'
+          value: '16px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.caption1.docCategory}',
+            type: '{text.default.caption1.docType}',
+            android: '{text.default.caption1.docAndroid}',
+            ios: '{text.default.caption1.docIos}',
+            description: '{text.default.caption1.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Regular.ttf'
-        }
+          value: 'Roboto-Regular.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.caption1.docCategory}',
+            type: '{text.default.caption1.docType}',
+            android: '{text.default.caption1.docAndroid}',
+            ios: '{text.default.caption1.docIos}',
+            description: '{text.default.caption1.docDescription}',
+          }
+        },
       },
       // Caption 2
       caption2: {
+        docCategory: 'text',
+        docType: 'body',
+        docAndroid: 'Caption 2',
+        docIos: '{text.default.caption2.docAndroid}',
+        docDescription: 'Suggested Usage: Smallest text size, use sparingly or for bottom tab bar text',
         size: {
-          value: '11',
+          value: '11px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.caption2.docCategory}',
+            type: '{text.default.caption2.docType}',
+            android: '{text.default.caption2.docAndroid}',
+            ios: '{text.default.caption2.docIos}',
+            description: '{text.default.caption2.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '16',
-          category: 'size'
+          value: '16px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.caption2.docCategory}',
+            type: '{text.default.caption2.docType}',
+            android: '{text.default.caption2.docAndroid}',
+            ios: '{text.default.caption2.docIos}',
+            description: '{text.default.caption2.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Regular.ttf'
-        }
+          value: 'Roboto-Regular.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.caption2.docCategory}',
+            type: '{text.default.caption2.docType}',
+            android: '{text.default.caption2.docAndroid}',
+            ios: '{text.default.caption2.docIos}',
+            description: '{text.default.caption2.docDescription}',
+          }
+        },
       },
       // Button
       button: {
+        docCategory: 'text',
+        docType: 'button',
+        docAndroid: 'Button',
+        docIos: 'N/A',
+        docDescription: 'Suggested Usage: Button text has a thicker weight than body copy',
         size: {
-          value: '15',
+          value: '15px',
           category: 'font-size',
+          property: 'font-size',
+          docs: {
+            category: '{text.default.button.docCategory}',
+            type: '{text.default.button.docType}',
+            android: '{text.default.button.docAndroid}',
+            ios: '{text.default.button.docIos}',
+            description: '{text.default.button.docDescription}',
+          }
         },
         'line-spacing': {
-          value: '24',
-          category: 'size'
+          value: '24px',
+          category: 'size',
+          property: 'line-height',
+          docs: {
+            category: '{text.default.button.docCategory}',
+            type: '{text.default.button.docType}',
+            android: '{text.default.button.docAndroid}',
+            ios: '{text.default.button.docIos}',
+            description: '{text.default.button.docDescription}',
+          }
         },
         'font-family': {
-          value: 'Roboto-Medium.ttf'
-        }
+          value: 'Roboto-Medium.ttf',
+          property: 'font-family',
+          docs: {
+            category: '{text.default.button.docCategory}',
+            type: '{text.default.button.docType}',
+            android: '{text.default.button.docAndroid}',
+            ios: '{text.default.button.docIos}',
+            description: '{text.default.button.docDescription}',
+          }
+        },
       }
     }
   }

@@ -8,7 +8,8 @@ module.exports = (StyleDictionary) => {
       const prefix = config.prefix ? `${config.prefix}-` : '';
       const toRet = {};
       const grouped = _.groupBy(dictionary.allProperties, 'docs.category');
-      const keys = Object.keys(grouped)
+      const keys = Object.keys(grouped);
+      /* eslint-disable */
       for(const key of keys) {
         const newKey = key === 'undefined' ? 'misc' : key;
         const catArr = grouped[key];
@@ -21,11 +22,12 @@ module.exports = (StyleDictionary) => {
             current.mixin = `${prefix}${current.mixin}`;
           }
 
-          delete current.original;
+          // delete current.original;
           delete current.path;
           toRet[newKey].push(current);
         }
       }
+      /* eslint-enable */
 
       return JSON.stringify(toRet, null, 2);
     },
