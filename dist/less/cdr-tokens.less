@@ -61,24 +61,6 @@
   line-height: 2.4rem;
 }
 
-.cdr-text-default() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0px;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-}
-
-.cdr-text-default-compact() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0px;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-}
-
 .cdr-text-editorial() {
   font-family: REI Stuart App, Georgia, serif;
   font-style: normal;
@@ -95,6 +77,24 @@
   letter-spacing: 0px;
   font-size: 1.8rem;
   line-height: 2.8rem;
+}
+
+.cdr-text-default() {
+  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.cdr-text-default-compact() {
+  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 .cdr-text-display-600() {
@@ -303,36 +303,36 @@
 @cdr-prominence-flat-y: 0;
 @cdr-prominence-flat-blur: 0;
 @cdr-prominence-flat-spread: 0;
-@cdr-prominence-flat-color: #1a1a1a;
-@cdr-prominence-raised-x: 0.2rem;
+@cdr-prominence-flat-color: rgba(26, 26, 26, 0.2);
+@cdr-prominence-raised-x: 0;
 @cdr-prominence-raised-y: 0.2rem;
 @cdr-prominence-raised-blur: 0.2rem;
 @cdr-prominence-raised-spread: 0;
 @cdr-prominence-raised-color: rgba(26, 26, 26, 0.2);
-@cdr-prominence-elevated-x: 0.4rem;
+@cdr-prominence-elevated-x: 0;
 @cdr-prominence-elevated-y: 0.4rem;
 @cdr-prominence-elevated-blur: 0.4rem;
 @cdr-prominence-elevated-spread: 0;
 @cdr-prominence-elevated-color: rgba(26, 26, 26, 0.2);
-@cdr-prominence-floating-x: 0.8rem;
+@cdr-prominence-floating-x: 0;
 @cdr-prominence-floating-y: 0.8rem;
 @cdr-prominence-floating-blur: 0.8rem;
 @cdr-prominence-floating-spread: 0;
 @cdr-prominence-floating-color: rgba(26, 26, 26, 0.2);
-@cdr-prominence-lifted-x: 1.6rem;
+@cdr-prominence-lifted-x: 0;
 @cdr-prominence-lifted-y: 1.6rem;
 @cdr-prominence-lifted-blur: 1.6rem;
 @cdr-prominence-lifted-spread: 0;
 @cdr-prominence-lifted-color: rgba(26, 26, 26, 0.2);
-@cdr-prominence-flat: 0 0 0 0 #1a1a1a;
-@cdr-prominence-raised: 0.2rem 0.2rem 0.2rem 0 rgba(26, 26, 26, 0.2);
-@cdr-prominence-elevated: 0.4rem 0.4rem 0.4rem 0 rgba(26, 26, 26, 0.2);
-@cdr-prominence-floating: 0.8rem 0.8rem 0.8rem 0 rgba(26, 26, 26, 0.2);
-@cdr-prominence-lifted: 1.6rem 1.6rem 1.6rem 0 rgba(26, 26, 26, 0.2);
+@cdr-prominence-flat: 0 0 0 0 rgba(26, 26, 26, 0.2);
+@cdr-prominence-raised: 0 0.2rem 0.2rem 0 rgba(26, 26, 26, 0.2);
+@cdr-prominence-elevated: 0 0.4rem 0.4rem 0 rgba(26, 26, 26, 0.2);
+@cdr-prominence-floating: 0 0.8rem 0.8rem 0 rgba(26, 26, 26, 0.2);
+@cdr-prominence-lifted: 0 1.6rem 1.6rem 0 rgba(26, 26, 26, 0.2);
 @cdr-radius-sharp: 0;
 @cdr-radius-soft: 0.2rem;
 @cdr-radius-softer: 0.4rem;
-@cdr-radius-round: 50%;
+@cdr-radius-round: 999.9rem;
 @cdr-space-eighth-x: 0.2rem;
 @cdr-space-quarter-x: 0.4rem;
 @cdr-space-half-x: 0.8rem;
@@ -443,18 +443,6 @@
 @cdr-text-header-7-spacing: 0.16px;
 @cdr-text-header-7-size: 1.8rem;
 @cdr-text-header-7-height: 2.4rem;
-@cdr-text-default-family: Graphik App, Helvetica Neue, sans-serif;
-@cdr-text-default-style: normal;
-@cdr-text-default-weight: 400;
-@cdr-text-default-spacing: 0px;
-@cdr-text-default-size: 1.6rem;
-@cdr-text-default-height: 2.6rem;
-@cdr-text-default-compact-family: Graphik App, Helvetica Neue, sans-serif;
-@cdr-text-default-compact-style: normal;
-@cdr-text-default-compact-weight: 400;
-@cdr-text-default-compact-spacing: 0px;
-@cdr-text-default-compact-size: 1.4rem;
-@cdr-text-default-compact-height: 2.4rem;
 @cdr-text-editorial-family: REI Stuart App, Georgia, serif;
 @cdr-text-editorial-style: normal;
 @cdr-text-editorial-weight: 400;
@@ -467,6 +455,18 @@
 @cdr-text-editorial-compact-spacing: 0px;
 @cdr-text-editorial-compact-size: 1.8rem;
 @cdr-text-editorial-compact-height: 2.8rem;
+@cdr-text-default-family: Graphik App, Helvetica Neue, sans-serif;
+@cdr-text-default-style: normal;
+@cdr-text-default-weight: 400;
+@cdr-text-default-spacing: 0px;
+@cdr-text-default-size: 1.6rem;
+@cdr-text-default-height: 2.6rem;
+@cdr-text-default-compact-family: Graphik App, Helvetica Neue, sans-serif;
+@cdr-text-default-compact-style: normal;
+@cdr-text-default-compact-weight: 400;
+@cdr-text-default-compact-spacing: 0px;
+@cdr-text-default-compact-size: 1.4rem;
+@cdr-text-default-compact-height: 2.4rem;
 @cdr-text-display-600-family: REI Stuart App, Georgia, serif;
 @cdr-text-display-600-style: normal;
 @cdr-text-display-600-weight: 600;
