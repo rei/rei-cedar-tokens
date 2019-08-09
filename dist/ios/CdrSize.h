@@ -34,6 +34,7 @@ extern float const CdrProminenceLiftedSpread;
 extern float const CdrRadiusSharp;
 extern float const CdrRadiusSoft;
 extern float const CdrRadiusSofter;
+extern float const CdrRadiusRound;
 extern float const CdrSpaceEighthX;
 extern float const CdrSpaceQuarterX;
 extern float const CdrSpaceHalfX;

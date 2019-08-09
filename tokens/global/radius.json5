@@ -27,8 +27,9 @@
       }
     },
     round: {
-      value: '50%',
-      // category: 'size',
+      value: '9999px', // pill
+      // value: '50%', // oval
+      category: 'size',
       docs: {
         category: '{radius.docCategory}',
         example: '{radius.docExample}',
