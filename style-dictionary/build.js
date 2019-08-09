@@ -38,7 +38,16 @@ require('./actions/concat_files')(StyleDictionary);
 console.log('Build started...'); // eslint-disable-line no-console
 console.log('\n=============================================='); // eslint-disable-line no-console
 
-['web', 'android', 'ios', 'site/global', 'site/web', 'site/android', 'site/ios', 'sketch'].map((platform) => {
+[
+  'web',
+  'android',
+  'ios',
+  'site/global',
+  'site/web',
+  'site/android',
+  'site/ios',
+  'sketch',
+].map((platform) => {
   // APPLY THE CONFIGURATION
   // Very important: the registration of custom transforms
   // needs to be done _before_ applying the configuration
