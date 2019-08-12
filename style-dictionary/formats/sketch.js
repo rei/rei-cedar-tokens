@@ -24,6 +24,7 @@ function processProminence(tokens) {
           blur: _.toNumber(blur),
           spread: _.toNumber(spread),
           color,
+          path: token.path,
         },
       ],
     });
@@ -44,6 +45,7 @@ function processColor(tokens) {
       name: token.name,
       value: token.value,
       type,
+      path: token.path,
     });
   });
 
@@ -89,6 +91,7 @@ function processText(tokens, prefix) {
         tokenVal = t.value.split(',')[0];
       }
       newTokenObj.value[_.camelCase(t.property)] = _.toNumber(tokenVal) ? _.toNumber(tokenVal) : tokenVal;
+      newTokenObj.path = t.path;
     });
 
     returnArr.push(newTokenObj);
@@ -115,11 +118,13 @@ function processSpace(tokens) {
       if (subcat === 'inset') {
         returnObj[subcat].push({
           name: token.name,
+          path: token.path,
           value: token.value.split(' ').map(v => _.toNumber(v)),
         });
       } else {
         returnObj[subcat].push({
           name: token.name,
+          path: token.path,
           value: _.toNumber(token.value),
         });
       }
