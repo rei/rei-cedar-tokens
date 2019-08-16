@@ -29,7 +29,7 @@ module.exports = (StyleDictionary) => {
 
           singleMixinProps.forEach((token) => {
             const tokenStr = _.has(token, 'newToken') ?
-              `'${token.name}' use '${_.kebabCase(token.newToken)}' instead`
+              `'${token.name}' use '${_.kebabCase([prefix, token.newToken])}' instead`
               : token.name;
             deprecatedTokens.push(tokenStr);
           });

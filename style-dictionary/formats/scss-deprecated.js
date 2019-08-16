@@ -5,7 +5,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerFormat({
     name: 'scss/deprecated',
     formatter(dictionary, config) {
-      // const prefix = config.prefix ? `${config.prefix}-` : '';
+      const prefix = config.prefix ? `${config.prefix}-` : '';
       let fileContents = '@import \'./deprecate.scss\';\n\n';
 
       // get all deprecated properties
@@ -24,7 +24,9 @@ module.exports = (StyleDictionary) => {
         Object.keys(byYear[year]).forEach((release) => {
           const deprecatedList = [];
           byYear[year][release].forEach((token) => {
-            const tokenStr = _.has(token, 'newToken') ? `'${token.name}' use '${token.newToken}' instead` : token.name;
+            const tokenStr = _.has(token, 'newToken') ?
+              `'${token.name}' use '${_.kebabCase([prefix, token.newToken])}' instead`
+              : token.name;
             deprecatedList.push(tokenStr);
           });
 
