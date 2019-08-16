@@ -47,7 +47,7 @@
           },
         },
         size: {
-          value: '{options.font.size.1200.value}', // was '56px', now '54px'
+          value: '56px', // '{options.font.size.1200.value}', // => '54px'
           category: 'font-size',
           mixin: 'textHeader1',
           property: 'font-size',
@@ -58,7 +58,7 @@
           },
         },
         height: {
-          value: '{options.font.height.1400.value}', // was '60px', now '56px'
+          value: '60px', // '{options.font.height.1400.value}', // => '56px'
           category: 'size',
           mixin: 'textHeader1',
           property: 'line-height',
@@ -114,7 +114,7 @@
           },
         },
         size: {
-          value: '{options.font.size.1000.value}', // was '40px', now '42px'
+          value: '40px', // '{options.font.size.1000.value}', // => '42px'
           category: 'font-size',
           mixin: 'textHeader2',
           property: 'font-size',
@@ -125,7 +125,7 @@
           },
         },
         height: {
-          value: '{options.font.height.1300.value}', // was '48px', now '50px'
+          value: '48px', // '{options.font.height.1300.value}', // => '50px'
           category: 'size',
           mixin: 'textHeader2',
           property: 'line-height',
