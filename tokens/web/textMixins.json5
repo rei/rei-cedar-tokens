@@ -2,10 +2,11 @@
   text: {
     docCategory: 'text',
     docExample: 'text',
+
     // default
     default: {
       family: {
-        value: "{options.typography.redwood.body.20.family.value}",
+        value: '{options.font.family.sans.value}',
         mixin: 'textDefault',
         property: 'font-family',
         docs: {
@@ -15,7 +16,7 @@
         },
       },
       style: {
-        value: '{options.typography.redwood.body.20.style.value}',
+        value: '{options.font.style.normal.value}',
         mixin: 'textDefault',
         property: 'font-style',
         docs: {
@@ -25,7 +26,7 @@
         },
       },
       weight: {
-        value: '{options.typography.redwood.body.20.weight.value}',
+        value: '{options.font.weight.normal.value}',
         mixin: 'textDefault',
         property: 'font-weight',
         docs: {
@@ -35,7 +36,7 @@
         },
       },
       spacing: {
-        value: '{options.typography.redwood.body.20.spacing.value}',
+        value: '{options.font.spacing.normal.value}',
         category: 'letter-spacing',
         mixin: 'textDefault',
         property: 'letter-spacing',
@@ -46,7 +47,7 @@
         },
       },
       size: {
-        value: '{options.typography.redwood.body.20.size.value}',
+        value: '{options.font.size.300.value}',
         category: 'font-size',
         mixin: 'textDefault',
         property: 'font-size',
@@ -57,7 +58,7 @@
         },
       },
       height: {
-        value: '{options.typography.redwood.body.20.height.value}',
+        value: '{options.font.height.600.value}',
         category: 'size',
         mixin: 'textDefault',
         property: 'line-height',
@@ -72,7 +73,7 @@
     // default-compact
     'default-compact': {
       family: {
-        value: "{options.typography.redwood.body.10.family.value}",
+        value: '{options.font.family.sans.value}',
         mixin: 'textDefaultCompact',
         property: 'font-family',
         docs: {
@@ -82,7 +83,7 @@
         },
       },
       style: {
-        value: '{options.typography.redwood.body.10.style.value}',
+        value: '{options.font.style.normal.value}',
         mixin: 'textDefaultCompact',
         property: 'font-style',
         docs: {
@@ -92,7 +93,7 @@
         },
       },
       weight: {
-        value: '{options.typography.redwood.body.10.weight.value}',
+        value: '{options.font.weight.normal.value}',
         mixin: 'textDefaultCompact',
         property: 'font-weight',
         docs: {
@@ -102,7 +103,7 @@
         },
       },
       spacing: {
-        value: '{options.typography.redwood.body.10.spacing.value}',
+        value: '{options.font.spacing.normal.value}',
         category: 'letter-spacing',
         mixin: 'textDefaultCompact',
         property: 'letter-spacing',
@@ -113,7 +114,7 @@
         },
       },
       size: {
-        value: '{options.typography.redwood.body.10.size.value}',
+        value: '{options.font.size.200.value}',
         category: 'font-size',
         mixin: 'textDefaultCompact',
         property: 'font-size',
@@ -124,7 +125,7 @@
         },
       },
       height: {
-        value: '{options.typography.redwood.body.10.height.value}',
+        value: '{options.font.height.500.value}',
         category: 'size',
         mixin: 'textDefaultCompact',
         property: 'line-height',
@@ -136,605 +137,1116 @@
       },
     },
 
-    // editorial
-    editorial: {
-      family: {
-        value: "{options.typography.spruce.body.30.family.value}",
-        mixin: 'textEditorial',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+    display: {
+      '600': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay600',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay600',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay600',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay600',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.600.value}',
+          category: 'font-size',
+          mixin: 'textDisplay600',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textDisplay600',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
-      style: {
-        value: '{options.typography.spruce.body.30.style.value}',
-        mixin: 'textEditorial',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+      '700': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay700',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay700',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay700',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay700',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.700.value}',
+          category: 'font-size',
+          mixin: 'textDisplay700',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.900.value}',
+          category: 'size',
+          mixin: 'textDisplay700',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
-      weight: {
-        value: '{options.typography.spruce.body.30.weight.value}',
-        mixin: 'textEditorial',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+      '800': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay800',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay800',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay800',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay800',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.800.value}',
+          category: 'font-size',
+          mixin: 'textDisplay800',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1000.value}',
+          category: 'size',
+          mixin: 'textDisplay800',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
-      spacing: {
-        value: '{options.typography.spruce.body.30.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textEditorial',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+      '900': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay900',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay900',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay900',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay900',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.900.value}',
+          category: 'font-size',
+          mixin: 'textDisplay900',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1200.value}',
+          category: 'size',
+          mixin: 'textDisplay900',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
-      size: {
-        value: '{options.typography.spruce.body.30.size.value}',
-        category: 'font-size',
-        mixin: 'textEditorial',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+      '1000': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay1000',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay1000',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay1000',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay1000',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.1000.value}',
+          category: 'font-size',
+          mixin: 'textDisplay1000',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1300.value}',
+          category: 'size',
+          mixin: 'textDisplay1000',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
-      height: {
-        value: '{options.typography.spruce.body.30.height.value}',
-        category: 'size',
-        mixin: 'textEditorial',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+      '1100': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay1100',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay1100',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay1100',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay1100',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.1100.value}',
+          category: 'font-size',
+          mixin: 'textDisplay1100',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1400.value}',
+          category: 'size',
+          mixin: 'textDisplay1100',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
-    },
-
-    // editorial-compact
-    'editorial-compact': {
-      family: {
-        value: "{options.typography.spruce.body.20.family.value}",
-        mixin: 'textEditorialCompact',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+      '1200': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textDisplay1200',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
-      },
-      style: {
-        value: '{options.typography.spruce.body.20.style.value}',
-        mixin: 'textEditorialCompact',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textDisplay1200',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
-      },
-      weight: {
-        value: '{options.typography.spruce.body.20.weight.value}',
-        mixin: 'textEditorialCompact',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textDisplay1200',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
-      },
-      spacing: {
-        value: '{options.typography.spruce.body.20.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textEditorialCompact',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textDisplay1200',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
-      },
-      size: {
-        value: '{options.typography.spruce.body.20.size.value}',
-        category: 'font-size',
-        mixin: 'textEditorialCompact',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
+        size: {
+          value: '{options.font.size.1200.value}',
+          category: 'font-size',
+          mixin: 'textDisplay1200',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
-      },
-      height: {
-        value: '{options.typography.spruce.body.20.height.value}',
-        category: 'size',
-        mixin: 'textEditorialCompact',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'editorial',
-          example: '{text.docExample}',
-        },
-      },
-    },
-
-    // header-1
-    'header-1': {
-      family: {
-        value: "{options.typography.spruce.display.80.family.value}",
-        mixin: 'textHeader1',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      style: {
-        value: '{options.typography.spruce.display.80.style.value}',
-        mixin: 'textHeader1',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      weight: {
-        value: '{options.typography.spruce.display.80.weight.value}',
-        mixin: 'textHeader1',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      spacing: {
-        value: '{options.typography.spruce.display.80.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader1',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      size: {
-        value: '{options.typography.spruce.display.80.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader1',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      height: {
-        value: '{options.typography.spruce.display.80.height.value}',
-        category: 'size',
-        mixin: 'textHeader1',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-    },
-
-    // header-2
-    'header-2': {
-      family: {
-        value: "{options.typography.spruce.display.70.family.value}",
-        mixin: 'textHeader2',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      style: {
-        value: '{options.typography.spruce.display.70.style.value}',
-        mixin: 'textHeader2',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      weight: {
-        value: '{options.typography.spruce.display.70.weight.value}',
-        mixin: 'textHeader2',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      spacing: {
-        value: '{options.typography.spruce.display.70.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader2',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      size: {
-        value: '{options.typography.spruce.display.70.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader2',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      height: {
-        value: '{options.typography.spruce.display.70.height.value}',
-        category: 'size',
-        mixin: 'textHeader2',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-    },
-
-    // header-3
-    'header-3': {
-      family: {
-        value: "{options.typography.spruce.display.60.family.value}",
-        mixin: 'textHeader3',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      style: {
-        value: '{options.typography.spruce.display.60.style.value}',
-        mixin: 'textHeader3',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      weight: {
-        value: '{options.typography.spruce.display.60.weight.value}',
-        mixin: 'textHeader3',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      spacing: {
-        value: '{options.typography.spruce.display.60.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader3',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      size: {
-        value: '{options.typography.spruce.display.60.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader3',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      height: {
-        value: '{options.typography.spruce.display.60.height.value}',
-        category: 'size',
-        mixin: 'textHeader3',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-    },
-
-    // header-4
-    'header-4': {
-      family: {
-        value: "{options.typography.spruce.display.50.family.value}",
-        mixin: 'textHeader4',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      style: {
-        value: '{options.typography.spruce.display.50.style.value}',
-        mixin: 'textHeader4',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      weight: {
-        value: '{options.typography.spruce.display.50.weight.value}',
-        mixin: 'textHeader4',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      spacing: {
-        value: '{options.typography.spruce.display.50.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader4',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      size: {
-        value: '{options.typography.spruce.display.50.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader4',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      height: {
-        value: '{options.typography.spruce.display.50.height.value}',
-        category: 'size',
-        mixin: 'textHeader4',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-    },
-
-    // header-5
-    'header-5': {
-      family: {
-        value: "{options.typography.spruce.display.40.family.value}",
-        mixin: 'textHeader5',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      style: {
-        value: '{options.typography.spruce.display.40.style.value}',
-        mixin: 'textHeader5',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      weight: {
-        value: '{options.typography.spruce.display.40.weight.value}',
-        mixin: 'textHeader5',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      spacing: {
-        value: '{options.typography.spruce.display.40.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader5',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      size: {
-        value: '{options.typography.spruce.display.40.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader5',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
-        },
-      },
-      height: {
-        value: '{options.typography.spruce.display.40.height.value}',
-        category: 'size',
-        mixin: 'textHeader5',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+        height: {
+          value: '{options.font.height.1500.value}',
+          category: 'size',
+          mixin: 'textDisplay1200',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
         },
       },
     },
 
-    // header-6
-    'header-6': {
-      family: {
-        value: "{options.typography.spruce.display.30.family.value}",
-        mixin: 'textHeader6',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+    heading: {
+      '300': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeading300',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeading300',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeading300',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeading300',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.300.value}',
+          category: 'font-size',
+          mixin: 'textHeading300',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.300.value}',
+          category: 'size',
+          mixin: 'textHeading300',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
         },
       },
-      style: {
-        value: '{options.typography.spruce.display.30.style.value}',
-        mixin: 'textHeader6',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '400': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeading400',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeading400',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeading400',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeading400',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.400.value}',
+          category: 'font-size',
+          mixin: 'textHeading400',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.500.value}',
+          category: 'size',
+          mixin: 'textHeading400',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
         },
       },
-      weight: {
-        value: '{options.typography.spruce.display.30.weight.value}',
-        mixin: 'textHeader6',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '500': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeading500',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeading500',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeading500',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeading500',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.500.value}',
+          category: 'font-size',
+          mixin: 'textHeading500',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.600.value}',
+          category: 'size',
+          mixin: 'textHeading500',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
         },
       },
-      spacing: {
-        value: '{options.typography.spruce.display.30.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader6',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '600': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeading600',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeading600',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textHeading600',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeading600',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.600.value}',
+          category: 'font-size',
+          mixin: 'textHeading600',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textHeading600',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
         },
       },
-      size: {
-        value: '{options.typography.spruce.display.30.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader6',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '700': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeading700',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeading700',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textHeading700',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeading700',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.700.value}',
+          category: 'font-size',
+          mixin: 'textHeading700',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.900.value}',
+          category: 'size',
+          mixin: 'textHeading700',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
         },
       },
-      height: {
-        value: '{options.typography.spruce.display.30.height.value}',
-        category: 'size',
-        mixin: 'textHeader6',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '800': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeading800',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeading800',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textHeading800',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeading800',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.800.value}',
+          category: 'font-size',
+          mixin: 'textHeading800',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1000.value}',
+          category: 'size',
+          mixin: 'textHeading800',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
         },
       },
     },
 
-    // header-7
-    'header-7': {
-      family: {
-        value: "{options.typography.spruce.display.20.family.value}",
-        mixin: 'textHeader7',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+    subheading: {
+      '300': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textSubheading300',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textSubheading300',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textSubheading300',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textSubheading300',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.300.value}',
+          category: 'font-size',
+          mixin: 'textSubheading300',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.300.value}',
+          category: 'size',
+          mixin: 'textSubheading300',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
         },
       },
-      style: {
-        value: '{options.typography.spruce.display.20.style.value}',
-        mixin: 'textHeader7',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '400': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textSubheading400',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textSubheading400',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textSubheading400',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textSubheading400',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.400.value}',
+          category: 'font-size',
+          mixin: 'textSubheading400',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.500.value}',
+          category: 'size',
+          mixin: 'textSubheading400',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
         },
       },
-      weight: {
-        value: '{options.typography.spruce.display.20.weight.value}',
-        mixin: 'textHeader7',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '500': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textSubheading500',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textSubheading500',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textSubheading500',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textSubheading500',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.500.value}',
+          category: 'font-size',
+          mixin: 'textSubheading500',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.600.value}',
+          category: 'size',
+          mixin: 'textSubheading500',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
         },
       },
-      spacing: {
-        value: '{options.typography.spruce.display.20.spacing.value}',
-        category: 'letter-spacing',
-        mixin: 'textHeader7',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+      '600': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textSubheading600',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
         },
-      },
-      size: {
-        value: '{options.typography.spruce.display.20.size.value}',
-        category: 'font-size',
-        mixin: 'textHeader7',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textSubheading600',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
         },
-      },
-      height: {
-        value: '{options.typography.spruce.display.20.height.value}',
-        category: 'size',
-        mixin: 'textHeader7',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'header',
-          example: '{text.docExample}',
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textSubheading600',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textSubheading600',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.600.value}',
+          category: 'font-size',
+          mixin: 'textSubheading600',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textSubheading600',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
         },
       },
     },

@@ -3547,647 +3547,7 @@
   ],
   "text": [
     {
-      "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-      "mixin": "cdr-textDefault",
-      "property": "font-family",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.20.family.value}",
-        "mixin": "textDefault",
-        "property": "font-family",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-family",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "mixin": "cdr-textDefault",
-      "property": "font-style",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.20.style.value}",
-        "mixin": "textDefault",
-        "property": "font-style",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-style",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "400",
-      "mixin": "cdr-textDefault",
-      "property": "font-weight",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.20.weight.value}",
-        "mixin": "textDefault",
-        "property": "font-weight",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-weight",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "category": "letter-spacing",
-      "mixin": "cdr-textDefault",
-      "property": "letter-spacing",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.20.spacing.value}",
-        "category": "letter-spacing",
-        "mixin": "textDefault",
-        "property": "letter-spacing",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-spacing",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "letter-spacing"
-      }
-    },
-    {
-      "value": "1.6rem",
-      "category": "font-size",
-      "mixin": "cdr-textDefault",
-      "property": "font-size",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.20.size.value}",
-        "category": "font-size",
-        "mixin": "textDefault",
-        "property": "font-size",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-size",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size",
-        "type": "font"
-      }
-    },
-    {
-      "value": "2.6rem",
-      "category": "size",
-      "mixin": "cdr-textDefault",
-      "property": "line-height",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.20.height.value}",
-        "category": "size",
-        "mixin": "textDefault",
-        "property": "line-height",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-height",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-      "mixin": "cdr-textDefaultCompact",
-      "property": "font-family",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.10.family.value}",
-        "mixin": "textDefaultCompact",
-        "property": "font-family",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-compact-family",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "mixin": "cdr-textDefaultCompact",
-      "property": "font-style",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.10.style.value}",
-        "mixin": "textDefaultCompact",
-        "property": "font-style",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-compact-style",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "400",
-      "mixin": "cdr-textDefaultCompact",
-      "property": "font-weight",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.10.weight.value}",
-        "mixin": "textDefaultCompact",
-        "property": "font-weight",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-compact-weight",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "category": "letter-spacing",
-      "mixin": "cdr-textDefaultCompact",
-      "property": "letter-spacing",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.10.spacing.value}",
-        "category": "letter-spacing",
-        "mixin": "textDefaultCompact",
-        "property": "letter-spacing",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-compact-spacing",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "letter-spacing"
-      }
-    },
-    {
-      "value": "1.4rem",
-      "category": "font-size",
-      "mixin": "cdr-textDefaultCompact",
-      "property": "font-size",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.10.size.value}",
-        "category": "font-size",
-        "mixin": "textDefaultCompact",
-        "property": "font-size",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-compact-size",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size",
-        "type": "font"
-      }
-    },
-    {
-      "value": "2.4rem",
-      "category": "size",
-      "mixin": "cdr-textDefaultCompact",
-      "property": "line-height",
-      "docs": {
-        "category": "text",
-        "type": "default",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.redwood.body.10.height.value}",
-        "category": "size",
-        "mixin": "textDefaultCompact",
-        "property": "line-height",
-        "docs": {
-          "category": "text",
-          "type": "default",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-default-compact-height",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-      "mixin": "cdr-textEditorial",
-      "property": "font-family",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.30.family.value}",
-        "mixin": "textEditorial",
-        "property": "font-family",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-family",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "mixin": "cdr-textEditorial",
-      "property": "font-style",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.30.style.value}",
-        "mixin": "textEditorial",
-        "property": "font-style",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-style",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "400",
-      "mixin": "cdr-textEditorial",
-      "property": "font-weight",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.30.weight.value}",
-        "mixin": "textEditorial",
-        "property": "font-weight",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-weight",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "category": "letter-spacing",
-      "mixin": "cdr-textEditorial",
-      "property": "letter-spacing",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.30.spacing.value}",
-        "category": "letter-spacing",
-        "mixin": "textEditorial",
-        "property": "letter-spacing",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-spacing",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "letter-spacing"
-      }
-    },
-    {
-      "value": "2rem",
-      "category": "font-size",
-      "mixin": "cdr-textEditorial",
-      "property": "font-size",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.30.size.value}",
-        "category": "font-size",
-        "mixin": "textEditorial",
-        "property": "font-size",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-size",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size",
-        "type": "font"
-      }
-    },
-    {
-      "value": "3.2rem",
-      "category": "size",
-      "mixin": "cdr-textEditorial",
-      "property": "line-height",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.30.height.value}",
-        "category": "size",
-        "mixin": "textEditorial",
-        "property": "line-height",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-height",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-      "mixin": "cdr-textEditorialCompact",
-      "property": "font-family",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.20.family.value}",
-        "mixin": "textEditorialCompact",
-        "property": "font-family",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-compact-family",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "mixin": "cdr-textEditorialCompact",
-      "property": "font-style",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.20.style.value}",
-        "mixin": "textEditorialCompact",
-        "property": "font-style",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-compact-style",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "400",
-      "mixin": "cdr-textEditorialCompact",
-      "property": "font-weight",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.20.weight.value}",
-        "mixin": "textEditorialCompact",
-        "property": "font-weight",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-compact-weight",
-      "attributes": {
-        "option": false,
-        "utility-class": false
-      }
-    },
-    {
-      "value": "normal",
-      "category": "letter-spacing",
-      "mixin": "cdr-textEditorialCompact",
-      "property": "letter-spacing",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.20.spacing.value}",
-        "category": "letter-spacing",
-        "mixin": "textEditorialCompact",
-        "property": "letter-spacing",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-compact-spacing",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "letter-spacing"
-      }
-    },
-    {
-      "value": "1.8rem",
-      "category": "font-size",
-      "mixin": "cdr-textEditorialCompact",
-      "property": "font-size",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.20.size.value}",
-        "category": "font-size",
-        "mixin": "textEditorialCompact",
-        "property": "font-size",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-compact-size",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size",
-        "type": "font"
-      }
-    },
-    {
-      "value": "2.8rem",
-      "category": "size",
-      "mixin": "cdr-textEditorialCompact",
-      "property": "line-height",
-      "docs": {
-        "category": "text",
-        "type": "editorial",
-        "example": "text"
-      },
-      "original": {
-        "value": "{options.typography.spruce.body.20.height.value}",
-        "category": "size",
-        "mixin": "textEditorialCompact",
-        "property": "line-height",
-        "docs": {
-          "category": "text",
-          "type": "editorial",
-          "example": "text"
-        }
-      },
-      "name": "cdr-text-editorial-compact-height",
-      "attributes": {
-        "option": false,
-        "utility-class": false,
-        "category": "size"
-      }
-    },
-    {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader1",
       "property": "font-family",
       "docs": {
@@ -4196,7 +3556,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.80.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader1",
         "property": "font-family",
         "docs": {
@@ -4221,7 +3581,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.80.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader1",
         "property": "font-style",
         "docs": {
@@ -4246,7 +3606,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.80.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader1",
         "property": "font-weight",
         "docs": {
@@ -4262,7 +3622,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader1",
       "property": "letter-spacing",
@@ -4272,7 +3632,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.80.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader1",
         "property": "letter-spacing",
@@ -4290,7 +3650,7 @@
       }
     },
     {
-      "value": "5.6rem",
+      "value": "5.4rem",
       "category": "font-size",
       "mixin": "cdr-textHeader1",
       "property": "font-size",
@@ -4300,7 +3660,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.80.size.value}",
+        "value": "{options.font.size.1200.value}",
         "category": "font-size",
         "mixin": "textHeader1",
         "property": "font-size",
@@ -4319,7 +3679,7 @@
       }
     },
     {
-      "value": "6rem",
+      "value": "5.6rem",
       "category": "size",
       "mixin": "cdr-textHeader1",
       "property": "line-height",
@@ -4329,7 +3689,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.80.height.value}",
+        "value": "{options.font.height.1400.value}",
         "category": "size",
         "mixin": "textHeader1",
         "property": "line-height",
@@ -4347,7 +3707,7 @@
       }
     },
     {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader2",
       "property": "font-family",
       "docs": {
@@ -4356,7 +3716,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.70.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader2",
         "property": "font-family",
         "docs": {
@@ -4381,7 +3741,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.70.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader2",
         "property": "font-style",
         "docs": {
@@ -4406,7 +3766,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.70.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader2",
         "property": "font-weight",
         "docs": {
@@ -4422,7 +3782,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader2",
       "property": "letter-spacing",
@@ -4432,7 +3792,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.70.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader2",
         "property": "letter-spacing",
@@ -4450,7 +3810,7 @@
       }
     },
     {
-      "value": "4rem",
+      "value": "4.2rem",
       "category": "font-size",
       "mixin": "cdr-textHeader2",
       "property": "font-size",
@@ -4460,7 +3820,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.70.size.value}",
+        "value": "{options.font.size.1000.value}",
         "category": "font-size",
         "mixin": "textHeader2",
         "property": "font-size",
@@ -4479,7 +3839,7 @@
       }
     },
     {
-      "value": "4.8rem",
+      "value": "5rem",
       "category": "size",
       "mixin": "cdr-textHeader2",
       "property": "line-height",
@@ -4489,7 +3849,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.70.height.value}",
+        "value": "{options.font.height.1300.value}",
         "category": "size",
         "mixin": "textHeader2",
         "property": "line-height",
@@ -4507,7 +3867,7 @@
       }
     },
     {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader3",
       "property": "font-family",
       "docs": {
@@ -4516,7 +3876,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.60.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader3",
         "property": "font-family",
         "docs": {
@@ -4541,7 +3901,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.60.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader3",
         "property": "font-style",
         "docs": {
@@ -4566,7 +3926,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.60.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader3",
         "property": "font-weight",
         "docs": {
@@ -4582,7 +3942,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader3",
       "property": "letter-spacing",
@@ -4592,7 +3952,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.60.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader3",
         "property": "letter-spacing",
@@ -4620,7 +3980,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.60.size.value}",
+        "value": "{options.font.size.800.value}",
         "category": "font-size",
         "mixin": "textHeader3",
         "property": "font-size",
@@ -4649,7 +4009,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.60.height.value}",
+        "value": "{options.font.height.1100.value}",
         "category": "size",
         "mixin": "textHeader3",
         "property": "line-height",
@@ -4667,7 +4027,7 @@
       }
     },
     {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader4",
       "property": "font-family",
       "docs": {
@@ -4676,7 +4036,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.50.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader4",
         "property": "font-family",
         "docs": {
@@ -4701,7 +4061,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.50.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader4",
         "property": "font-style",
         "docs": {
@@ -4726,7 +4086,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.50.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader4",
         "property": "font-weight",
         "docs": {
@@ -4742,7 +4102,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader4",
       "property": "letter-spacing",
@@ -4752,7 +4112,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.50.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader4",
         "property": "letter-spacing",
@@ -4780,7 +4140,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.50.size.value}",
+        "value": "{options.font.size.700.value}",
         "category": "font-size",
         "mixin": "textHeader4",
         "property": "font-size",
@@ -4809,7 +4169,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.50.height.value}",
+        "value": "{options.font.height.1000.value}",
         "category": "size",
         "mixin": "textHeader4",
         "property": "line-height",
@@ -4827,7 +4187,7 @@
       }
     },
     {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader5",
       "property": "font-family",
       "docs": {
@@ -4836,7 +4196,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.40.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader5",
         "property": "font-family",
         "docs": {
@@ -4861,7 +4221,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.40.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader5",
         "property": "font-style",
         "docs": {
@@ -4886,7 +4246,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.40.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader5",
         "property": "font-weight",
         "docs": {
@@ -4902,7 +4262,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader5",
       "property": "letter-spacing",
@@ -4912,7 +4272,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.40.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader5",
         "property": "letter-spacing",
@@ -4940,7 +4300,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.40.size.value}",
+        "value": "{options.font.size.600.value}",
         "category": "font-size",
         "mixin": "textHeader5",
         "property": "font-size",
@@ -4969,7 +4329,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.40.height.value}",
+        "value": "{options.font.height.900.value}",
         "category": "size",
         "mixin": "textHeader5",
         "property": "line-height",
@@ -4987,7 +4347,7 @@
       }
     },
     {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader6",
       "property": "font-family",
       "docs": {
@@ -4996,7 +4356,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.30.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader6",
         "property": "font-family",
         "docs": {
@@ -5021,7 +4381,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.30.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader6",
         "property": "font-style",
         "docs": {
@@ -5046,7 +4406,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.30.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader6",
         "property": "font-weight",
         "docs": {
@@ -5062,7 +4422,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader6",
       "property": "letter-spacing",
@@ -5072,7 +4432,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.30.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader6",
         "property": "letter-spacing",
@@ -5100,7 +4460,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.30.size.value}",
+        "value": "{options.font.size.500.value}",
         "category": "font-size",
         "mixin": "textHeader6",
         "property": "font-size",
@@ -5129,7 +4489,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.30.height.value}",
+        "value": "{options.font.height.700.value}",
         "category": "size",
         "mixin": "textHeader6",
         "property": "line-height",
@@ -5147,7 +4507,7 @@
       }
     },
     {
-      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "REI Stuart App, Georgia, serif",
       "mixin": "cdr-textHeader7",
       "property": "font-family",
       "docs": {
@@ -5156,7 +4516,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.20.family.value}",
+        "value": "{options.font.family.serif.value}",
         "mixin": "textHeader7",
         "property": "font-family",
         "docs": {
@@ -5181,7 +4541,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.20.style.value}",
+        "value": "{options.font.style.normal.value}",
         "mixin": "textHeader7",
         "property": "font-style",
         "docs": {
@@ -5206,7 +4566,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.20.weight.value}",
+        "value": "{options.font.weight.semibold.value}",
         "mixin": "textHeader7",
         "property": "font-weight",
         "docs": {
@@ -5222,7 +4582,7 @@
       }
     },
     {
-      "value": "0.2px",
+      "value": "0.16px",
       "category": "letter-spacing",
       "mixin": "cdr-textHeader7",
       "property": "letter-spacing",
@@ -5232,7 +4592,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.20.spacing.value}",
+        "value": "{options.font.spacing.loose.value}",
         "category": "letter-spacing",
         "mixin": "textHeader7",
         "property": "letter-spacing",
@@ -5260,7 +4620,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.20.size.value}",
+        "value": "{options.font.size.400.value}",
         "category": "font-size",
         "mixin": "textHeader7",
         "property": "font-size",
@@ -5289,7 +4649,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.typography.spruce.display.20.height.value}",
+        "value": "{options.font.height.500.value}",
         "category": "size",
         "mixin": "textHeader7",
         "property": "line-height",
@@ -5300,6 +4660,3366 @@
         }
       },
       "name": "cdr-text-header-7-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textEditorial",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textEditorial",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textEditorial",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textEditorial",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "400",
+      "mixin": "cdr-textEditorial",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.normal.value}",
+        "mixin": "textEditorial",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textEditorial",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textEditorial",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2rem",
+      "category": "font-size",
+      "mixin": "cdr-textEditorial",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.500.value}",
+        "category": "font-size",
+        "mixin": "textEditorial",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3.2rem",
+      "category": "size",
+      "mixin": "cdr-textEditorial",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.900.value}",
+        "category": "size",
+        "mixin": "textEditorial",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textEditorialCompact",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textEditorialCompact",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-compact-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textEditorialCompact",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textEditorialCompact",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-compact-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "400",
+      "mixin": "cdr-textEditorialCompact",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.normal.value}",
+        "mixin": "textEditorialCompact",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-compact-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textEditorialCompact",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textEditorialCompact",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-compact-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.8rem",
+      "category": "font-size",
+      "mixin": "cdr-textEditorialCompact",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.400.value}",
+        "category": "font-size",
+        "mixin": "textEditorialCompact",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-compact-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.8rem",
+      "category": "size",
+      "mixin": "cdr-textEditorialCompact",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "editorial",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.700.value}",
+        "category": "size",
+        "mixin": "textEditorialCompact",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "editorial",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-editorial-compact-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textDefault",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textDefault",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDefault",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDefault",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "400",
+      "mixin": "cdr-textDefault",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.normal.value}",
+        "mixin": "textDefault",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDefault",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textDefault",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.6rem",
+      "category": "font-size",
+      "mixin": "cdr-textDefault",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.300.value}",
+        "category": "font-size",
+        "mixin": "textDefault",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.6rem",
+      "category": "size",
+      "mixin": "cdr-textDefault",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.600.value}",
+        "category": "size",
+        "mixin": "textDefault",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textDefaultCompact",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textDefaultCompact",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-compact-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDefaultCompact",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDefaultCompact",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-compact-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "400",
+      "mixin": "cdr-textDefaultCompact",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.normal.value}",
+        "mixin": "textDefaultCompact",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-compact-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDefaultCompact",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textDefaultCompact",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-compact-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.4rem",
+      "category": "font-size",
+      "mixin": "cdr-textDefaultCompact",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.200.value}",
+        "category": "font-size",
+        "mixin": "textDefaultCompact",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-compact-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.4rem",
+      "category": "size",
+      "mixin": "cdr-textDefaultCompact",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "default",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.500.value}",
+        "category": "size",
+        "mixin": "textDefaultCompact",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-default-compact-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay600",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay600",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-600-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay600",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay600",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-600-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay600",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay600",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-600-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay600",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay600",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-600-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2.4rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay600",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.600.value}",
+        "category": "font-size",
+        "mixin": "textDisplay600",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-600-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay600",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.800.value}",
+        "category": "size",
+        "mixin": "textDisplay600",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-600-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay700",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay700",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-700-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay700",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay700",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-700-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay700",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay700",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-700-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay700",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay700",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-700-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2.8rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay700",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.700.value}",
+        "category": "font-size",
+        "mixin": "textDisplay700",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-700-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3.2rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay700",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.900.value}",
+        "category": "size",
+        "mixin": "textDisplay700",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-700-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay800",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay800",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-800-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay800",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay800",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-800-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay800",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay800",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-800-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay800",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay800",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-800-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "3.2rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay800",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.800.value}",
+        "category": "font-size",
+        "mixin": "textDisplay800",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-800-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3.6rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay800",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.1000.value}",
+        "category": "size",
+        "mixin": "textDisplay800",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-800-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay900",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay900",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-900-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay900",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay900",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-900-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay900",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay900",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-900-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.32px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay900",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tighter.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay900",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-900-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "3.6rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay900",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.900.value}",
+        "category": "font-size",
+        "mixin": "textDisplay900",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-900-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "4.4rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay900",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.1200.value}",
+        "category": "size",
+        "mixin": "textDisplay900",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-900-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay1000",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay1000",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1000-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay1000",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay1000",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1000-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay1000",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay1000",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1000-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.32px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay1000",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tighter.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay1000",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1000-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "4.2rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay1000",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.1000.value}",
+        "category": "font-size",
+        "mixin": "textDisplay1000",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1000-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "5rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay1000",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.1300.value}",
+        "category": "size",
+        "mixin": "textDisplay1000",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1000-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay1100",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay1100",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1100-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay1100",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay1100",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1100-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay1100",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay1100",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1100-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.32px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay1100",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tighter.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay1100",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1100-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "4.8rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay1100",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.1100.value}",
+        "category": "font-size",
+        "mixin": "textDisplay1100",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1100-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "5.6rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay1100",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.1400.value}",
+        "category": "size",
+        "mixin": "textDisplay1100",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1100-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textDisplay1200",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textDisplay1200",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1200-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textDisplay1200",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textDisplay1200",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1200-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textDisplay1200",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textDisplay1200",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1200-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.32px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textDisplay1200",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tighter.value}",
+        "category": "letter-spacing",
+        "mixin": "textDisplay1200",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1200-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "5.4rem",
+      "category": "font-size",
+      "mixin": "cdr-textDisplay1200",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.1200.value}",
+        "category": "font-size",
+        "mixin": "textDisplay1200",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1200-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "6.4rem",
+      "category": "size",
+      "mixin": "cdr-textDisplay1200",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "display",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.1500.value}",
+        "category": "size",
+        "mixin": "textDisplay1200",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-display-1200-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textHeading300",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textHeading300",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-300-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textHeading300",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textHeading300",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-300-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textHeading300",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textHeading300",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-300-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textHeading300",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textHeading300",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-300-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.6rem",
+      "category": "font-size",
+      "mixin": "cdr-textHeading300",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.300.value}",
+        "category": "font-size",
+        "mixin": "textHeading300",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-300-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2rem",
+      "category": "size",
+      "mixin": "cdr-textHeading300",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.300.value}",
+        "category": "size",
+        "mixin": "textHeading300",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-300-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textHeading400",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textHeading400",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-400-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textHeading400",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textHeading400",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-400-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textHeading400",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textHeading400",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-400-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textHeading400",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textHeading400",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-400-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.8rem",
+      "category": "font-size",
+      "mixin": "cdr-textHeading400",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.400.value}",
+        "category": "font-size",
+        "mixin": "textHeading400",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-400-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.4rem",
+      "category": "size",
+      "mixin": "cdr-textHeading400",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.500.value}",
+        "category": "size",
+        "mixin": "textHeading400",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-400-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textHeading500",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textHeading500",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-500-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textHeading500",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textHeading500",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-500-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "600",
+      "mixin": "cdr-textHeading500",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.semibold.value}",
+        "mixin": "textHeading500",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-500-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textHeading500",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textHeading500",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-500-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2rem",
+      "category": "font-size",
+      "mixin": "cdr-textHeading500",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.500.value}",
+        "category": "font-size",
+        "mixin": "textHeading500",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-500-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.6rem",
+      "category": "size",
+      "mixin": "cdr-textHeading500",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.600.value}",
+        "category": "size",
+        "mixin": "textHeading500",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-500-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textHeading600",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textHeading600",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-600-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textHeading600",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textHeading600",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-600-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textHeading600",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textHeading600",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-600-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textHeading600",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textHeading600",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-600-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2.4rem",
+      "category": "font-size",
+      "mixin": "cdr-textHeading600",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.600.value}",
+        "category": "font-size",
+        "mixin": "textHeading600",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-600-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3rem",
+      "category": "size",
+      "mixin": "cdr-textHeading600",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.800.value}",
+        "category": "size",
+        "mixin": "textHeading600",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-600-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textHeading700",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textHeading700",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-700-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textHeading700",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textHeading700",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-700-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textHeading700",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textHeading700",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-700-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textHeading700",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textHeading700",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-700-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2.8rem",
+      "category": "font-size",
+      "mixin": "cdr-textHeading700",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.700.value}",
+        "category": "font-size",
+        "mixin": "textHeading700",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-700-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3.2rem",
+      "category": "size",
+      "mixin": "cdr-textHeading700",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.900.value}",
+        "category": "size",
+        "mixin": "textHeading700",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-700-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "REI Stuart App, Georgia, serif",
+      "mixin": "cdr-textHeading800",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.serif.value}",
+        "mixin": "textHeading800",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-800-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textHeading800",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textHeading800",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-800-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textHeading800",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textHeading800",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-800-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textHeading800",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textHeading800",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-800-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "3.2rem",
+      "category": "font-size",
+      "mixin": "cdr-textHeading800",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.800.value}",
+        "category": "font-size",
+        "mixin": "textHeading800",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-800-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3.6rem",
+      "category": "size",
+      "mixin": "cdr-textHeading800",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "heading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.1000.value}",
+        "category": "size",
+        "mixin": "textHeading800",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-heading-800-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textSubheading300",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textSubheading300",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-300-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textSubheading300",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textSubheading300",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-300-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textSubheading300",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textSubheading300",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-300-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textSubheading300",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textSubheading300",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-300-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.6rem",
+      "category": "font-size",
+      "mixin": "cdr-textSubheading300",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.300.value}",
+        "category": "font-size",
+        "mixin": "textSubheading300",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-300-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2rem",
+      "category": "size",
+      "mixin": "cdr-textSubheading300",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.300.value}",
+        "category": "size",
+        "mixin": "textSubheading300",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-300-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textSubheading400",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textSubheading400",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-400-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textSubheading400",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textSubheading400",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-400-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textSubheading400",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textSubheading400",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-400-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "0px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textSubheading400",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.normal.value}",
+        "category": "letter-spacing",
+        "mixin": "textSubheading400",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-400-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "1.8rem",
+      "category": "font-size",
+      "mixin": "cdr-textSubheading400",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.400.value}",
+        "category": "font-size",
+        "mixin": "textSubheading400",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-400-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.4rem",
+      "category": "size",
+      "mixin": "cdr-textSubheading400",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.500.value}",
+        "category": "size",
+        "mixin": "textSubheading400",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-400-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textSubheading500",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textSubheading500",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-500-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textSubheading500",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textSubheading500",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-500-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textSubheading500",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textSubheading500",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-500-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textSubheading500",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textSubheading500",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-500-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2rem",
+      "category": "font-size",
+      "mixin": "cdr-textSubheading500",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.500.value}",
+        "category": "font-size",
+        "mixin": "textSubheading500",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-500-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "2.6rem",
+      "category": "size",
+      "mixin": "cdr-textSubheading500",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.600.value}",
+        "category": "size",
+        "mixin": "textSubheading500",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-500-height",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size"
+      }
+    },
+    {
+      "value": "Graphik App, Helvetica Neue, sans-serif",
+      "mixin": "cdr-textSubheading600",
+      "property": "font-family",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.family.sans.value}",
+        "mixin": "textSubheading600",
+        "property": "font-family",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-600-family",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "normal",
+      "mixin": "cdr-textSubheading600",
+      "property": "font-style",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.style.normal.value}",
+        "mixin": "textSubheading600",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-600-style",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "500",
+      "mixin": "cdr-textSubheading600",
+      "property": "font-weight",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.weight.medium.value}",
+        "mixin": "textSubheading600",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-600-weight",
+      "attributes": {
+        "option": false,
+        "utility-class": false
+      }
+    },
+    {
+      "value": "-0.16px",
+      "category": "letter-spacing",
+      "mixin": "cdr-textSubheading600",
+      "property": "letter-spacing",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.spacing.tight.value}",
+        "category": "letter-spacing",
+        "mixin": "textSubheading600",
+        "property": "letter-spacing",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-600-spacing",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "letter-spacing"
+      }
+    },
+    {
+      "value": "2.4rem",
+      "category": "font-size",
+      "mixin": "cdr-textSubheading600",
+      "property": "font-size",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.size.600.value}",
+        "category": "font-size",
+        "mixin": "textSubheading600",
+        "property": "font-size",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-600-size",
+      "attributes": {
+        "option": false,
+        "utility-class": false,
+        "category": "size",
+        "type": "font"
+      }
+    },
+    {
+      "value": "3rem",
+      "category": "size",
+      "mixin": "cdr-textSubheading600",
+      "property": "line-height",
+      "docs": {
+        "category": "text",
+        "type": "subheading",
+        "example": "text"
+      },
+      "original": {
+        "value": "{options.font.height.800.value}",
+        "category": "size",
+        "mixin": "textSubheading600",
+        "property": "line-height",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        }
+      },
+      "name": "cdr-text-subheading-600-height",
       "attributes": {
         "option": false,
         "utility-class": false,

@@ -1,0 +1,71 @@
+{
+  options: {
+    font: {
+
+      family: {
+        serif: { value: 'REI Stuart App, Sentinel, Georgia, serif' },
+        sans: { value: 'Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif' },
+        mono: { value: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace' },
+        legacy: {
+          serif: { value: 'Sentinel, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif' },
+          sans: { value: 'Roboto, Helvetica Neue, Helvetica, Arial, sans-serif' },
+          'sans-condensed': { value: 'Roboto Condensed, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif' },
+        }
+      },
+
+      style:{
+        'normal': { value: 'normal' },
+        'italic': { value: 'italic' },
+      },
+
+      size: {
+        '100':  { value: '12px', category: 'font-size', },
+        '200':  { value: '14px', category: 'font-size', },
+        '300':  { value: '16px', category: 'font-size', },
+        '400':  { value: '18px', category: 'font-size', },
+        '500':  { value: '20px', category: 'font-size', },
+        '600':  { value: '24px', category: 'font-size', },
+        '700':  { value: '28px', category: 'font-size', },
+        '800':  { value: '32px', category: 'font-size', },
+        '900':  { value: '36px', category: 'font-size', },
+        '1000': { value: '42px', category: 'font-size', },
+        '1100': { value: '48px', category: 'font-size', },
+        '1200': { value: '54px', category: 'font-size', },
+      },
+
+      weight: {
+        normal:   { value: '400' },
+        medium:   { value: '500' },
+        semibold: { value: '600' },
+      },
+
+      'spacing': {
+        tightest: { value: '-0.64px', category: 'letter-spacing',},
+        tighter:  { value: '-0.32px', category: 'letter-spacing',},
+        tight:    { value: '-0.16px', category: 'letter-spacing',},
+        normal:   { value: '0px',     category: 'letter-spacing',}, // 'normal' ?
+        loose:    { value: '0.16px',  category: 'letter-spacing',},
+        looser:   { value: '0.32px',  category: 'letter-spacing',},
+        loosest:  { value: '0.64px',  category: 'letter-spacing',},
+      },
+
+      'height': {
+        '100':  { value: '16px', category: 'size', },
+        '200':  { value: '18px', category: 'size', },
+        '300':  { value: '20px', category: 'size', },
+        '400':  { value: '22px', category: 'size', },
+        '500':  { value: '24px', category: 'size', },
+        '600':  { value: '26px', category: 'size', },
+        '700':  { value: '28px', category: 'size', },
+        '800':  { value: '30px', category: 'size', },
+        '900':  { value: '32px', category: 'size', },
+        '1000': { value: '36px', category: 'size', },
+        '1100': { value: '40px', category: 'size', },
+        '1200': { value: '44px', category: 'size', },
+        '1300': { value: '50px', category: 'size', },
+        '1400': { value: '56px', category: 'size', },
+        '1500': { value: '64px', category: 'size', },
+      },
+    },
+  },
+}
