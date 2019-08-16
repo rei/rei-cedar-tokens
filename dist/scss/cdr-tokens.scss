@@ -9,15 +9,15 @@
   letter-spacing: 0.16px;
   font-size: 5.6rem;
   line-height: 6rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-1", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-1", "cdr-text-display-1100") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-1-family
-cdr-text-header-1-style
-cdr-text-header-1-weight
-cdr-text-header-1-spacing
-cdr-text-header-1-size
-cdr-text-header-1-height");
+'cdr-text-header-1-family' use 'cdr-text-display-1100-family' instead
+'cdr-text-header-1-style' use 'cdr-text-display-1100-style' instead
+'cdr-text-header-1-weight' use 'cdr-text-display-1100-weight' instead
+'cdr-text-header-1-spacing' use 'cdr-text-display-1100-spacing' instead
+'cdr-text-header-1-size' use 'cdr-text-display-1100-size' instead
+'cdr-text-header-1-height' use 'cdr-text-display-1100-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-header-2() {
@@ -27,15 +27,15 @@ cdr-text-header-1-height");
   letter-spacing: 0.16px;
   font-size: 4rem;
   line-height: 4.8rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-2", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-2", "cdr-text-display-900") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-2-family
-cdr-text-header-2-style
-cdr-text-header-2-weight
-cdr-text-header-2-spacing
-cdr-text-header-2-size
-cdr-text-header-2-height");
+'cdr-text-header-2-family' use 'cdr-text-display-900-family' instead
+'cdr-text-header-2-style' use 'cdr-text-display-900-style' instead
+'cdr-text-header-2-weight' use 'cdr-text-display-900-weight' instead
+'cdr-text-header-2-spacing' use 'cdr-text-display-900-spacing' instead
+'cdr-text-header-2-size' use 'cdr-text-display-900-size' instead
+'cdr-text-header-2-height' use 'cdr-text-display-900-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-header-3() {
@@ -45,15 +45,15 @@ cdr-text-header-2-height");
   letter-spacing: 0.16px;
   font-size: 3.2rem;
   line-height: 4rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-3", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-3", "cdr-text-display-700") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-3-family
-cdr-text-header-3-style
-cdr-text-header-3-weight
-cdr-text-header-3-spacing
-cdr-text-header-3-size
-cdr-text-header-3-height");
+'cdr-text-header-3-family' use 'cdr-text-display-700-family' instead
+'cdr-text-header-3-style' use 'cdr-text-display-700-style' instead
+'cdr-text-header-3-weight' use 'cdr-text-display-700-weight' instead
+'cdr-text-header-3-spacing' use 'cdr-text-display-700-spacing' instead
+'cdr-text-header-3-size' use 'cdr-text-display-700-size' instead
+'cdr-text-header-3-height' use 'cdr-text-display-700-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-header-4() {
@@ -63,15 +63,15 @@ cdr-text-header-3-height");
   letter-spacing: 0.16px;
   font-size: 2.8rem;
   line-height: 3.6rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-4", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-4", "cdr-text-display-600") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-4-family
-cdr-text-header-4-style
-cdr-text-header-4-weight
-cdr-text-header-4-spacing
-cdr-text-header-4-size
-cdr-text-header-4-height");
+'cdr-text-header-4-family' use 'cdr-text-display-600-family' instead
+'cdr-text-header-4-style' use 'cdr-text-display-600-style' instead
+'cdr-text-header-4-weight' use 'cdr-text-display-600-weight' instead
+'cdr-text-header-4-spacing' use 'cdr-text-display-600-spacing' instead
+'cdr-text-header-4-size' use 'cdr-text-display-600-size' instead
+'cdr-text-header-4-height' use 'cdr-text-display-600-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-header-5() {
@@ -81,15 +81,15 @@ cdr-text-header-4-height");
   letter-spacing: 0.16px;
   font-size: 2.4rem;
   line-height: 3.2rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-5", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-5", "cdr-text-display-500") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-5-family
-cdr-text-header-5-style
-cdr-text-header-5-weight
-cdr-text-header-5-spacing
-cdr-text-header-5-size
-cdr-text-header-5-height");
+'cdr-text-header-5-family' use 'cdr-text-display-500-family' instead
+'cdr-text-header-5-style' use 'cdr-text-display-500-style' instead
+'cdr-text-header-5-weight' use 'cdr-text-display-500-weight' instead
+'cdr-text-header-5-spacing' use 'cdr-text-display-500-spacing' instead
+'cdr-text-header-5-size' use 'cdr-text-display-500-size' instead
+'cdr-text-header-5-height' use 'cdr-text-display-500-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-header-6() {
@@ -99,15 +99,15 @@ cdr-text-header-5-height");
   letter-spacing: 0.16px;
   font-size: 2rem;
   line-height: 2.8rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-6", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-6", "cdr-text-display-400") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-6-family
-cdr-text-header-6-style
-cdr-text-header-6-weight
-cdr-text-header-6-spacing
-cdr-text-header-6-size
-cdr-text-header-6-height");
+'cdr-text-header-6-family' use 'cdr-text-display-400-family' instead
+'cdr-text-header-6-style' use 'cdr-text-display-400-style' instead
+'cdr-text-header-6-weight' use 'cdr-text-display-400-weight' instead
+'cdr-text-header-6-spacing' use 'cdr-text-display-400-spacing' instead
+'cdr-text-header-6-size' use 'cdr-text-display-400-size' instead
+'cdr-text-header-6-height' use 'cdr-text-display-400-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-header-7() {
@@ -117,15 +117,15 @@ cdr-text-header-6-height");
   letter-spacing: 0.16px;
   font-size: 1.8rem;
   line-height: 2.4rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-header-7", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-7", "cdr-text-display-300") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-header-7-family
-cdr-text-header-7-style
-cdr-text-header-7-weight
-cdr-text-header-7-spacing
-cdr-text-header-7-size
-cdr-text-header-7-height");
+'cdr-text-header-7-family' use 'cdr-text-display-300-family' instead
+'cdr-text-header-7-style' use 'cdr-text-display-300-style' instead
+'cdr-text-header-7-weight' use 'cdr-text-display-300-weight' instead
+'cdr-text-header-7-spacing' use 'cdr-text-display-300-spacing' instead
+'cdr-text-header-7-size' use 'cdr-text-display-300-size' instead
+'cdr-text-header-7-height' use 'cdr-text-display-300-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-editorial() {
@@ -135,15 +135,15 @@ cdr-text-header-7-height");
   letter-spacing: 0px;
   font-size: 2rem;
   line-height: 3.2rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-editorial", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-editorial", "cdr-text-default") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-editorial-family
-cdr-text-editorial-style
-cdr-text-editorial-weight
-cdr-text-editorial-spacing
-cdr-text-editorial-size
-cdr-text-editorial-height");
+'cdr-text-editorial-family' use 'cdr-text-default-family' instead
+'cdr-text-editorial-style' use 'cdr-text-default-style' instead
+'cdr-text-editorial-weight' use 'cdr-text-default-weight' instead
+'cdr-text-editorial-spacing' use 'cdr-text-default-spacing' instead
+'cdr-text-editorial-size' use 'cdr-text-default-size' instead
+'cdr-text-editorial-height' use 'cdr-text-default-height' instead");
 
 // DEPRECATED
 @mixin cdr-text-editorial-compact() {
@@ -153,15 +153,15 @@ cdr-text-editorial-height");
   letter-spacing: 0px;
   font-size: 1.8rem;
   line-height: 2.8rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-editorial-compact", null) {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-editorial-compact", "cdr-text-default-compact") {}
 }
 @include deprecate-variables(2019, "fall", "
-cdr-text-editorial-compact-family
-cdr-text-editorial-compact-style
-cdr-text-editorial-compact-weight
-cdr-text-editorial-compact-spacing
-cdr-text-editorial-compact-size
-cdr-text-editorial-compact-height");
+'cdr-text-editorial-compact-family' use 'cdr-text-default-compact-family' instead
+'cdr-text-editorial-compact-style' use 'cdr-text-default-compact-style' instead
+'cdr-text-editorial-compact-weight' use 'cdr-text-default-compact-weight' instead
+'cdr-text-editorial-compact-spacing' use 'cdr-text-default-compact-spacing' instead
+'cdr-text-editorial-compact-size' use 'cdr-text-default-compact-size' instead
+'cdr-text-editorial-compact-height' use 'cdr-text-default-compact-height' instead");
 
 @mixin cdr-text-default() {
   font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
