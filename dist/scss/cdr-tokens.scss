@@ -1,86 +1,170 @@
+@import './deprecate.scss';
+
+
+// DEPRECATED
 @mixin cdr-text-header-1() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
-  font-size: 5.4rem;
-  line-height: 5.6rem;
+  font-size: 5.6rem;
+  line-height: 6rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-1", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-1-family
+cdr-text-header-1-style
+cdr-text-header-1-weight
+cdr-text-header-1-spacing
+cdr-text-header-1-size
+cdr-text-header-1-height");
 
+// DEPRECATED
 @mixin cdr-text-header-2() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
-  font-size: 4.2rem;
-  line-height: 5rem;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-2", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-2-family
+cdr-text-header-2-style
+cdr-text-header-2-weight
+cdr-text-header-2-spacing
+cdr-text-header-2-size
+cdr-text-header-2-height");
 
+// DEPRECATED
 @mixin cdr-text-header-3() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
   font-size: 3.2rem;
   line-height: 4rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-3", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-3-family
+cdr-text-header-3-style
+cdr-text-header-3-weight
+cdr-text-header-3-spacing
+cdr-text-header-3-size
+cdr-text-header-3-height");
 
+// DEPRECATED
 @mixin cdr-text-header-4() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
   font-size: 2.8rem;
   line-height: 3.6rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-4", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-4-family
+cdr-text-header-4-style
+cdr-text-header-4-weight
+cdr-text-header-4-spacing
+cdr-text-header-4-size
+cdr-text-header-4-height");
 
+// DEPRECATED
 @mixin cdr-text-header-5() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
   font-size: 2.4rem;
   line-height: 3.2rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-5", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-5-family
+cdr-text-header-5-style
+cdr-text-header-5-weight
+cdr-text-header-5-spacing
+cdr-text-header-5-size
+cdr-text-header-5-height");
 
+// DEPRECATED
 @mixin cdr-text-header-6() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
   font-size: 2rem;
   line-height: 2.8rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-6", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-6-family
+cdr-text-header-6-style
+cdr-text-header-6-weight
+cdr-text-header-6-spacing
+cdr-text-header-6-size
+cdr-text-header-6-height");
 
+// DEPRECATED
 @mixin cdr-text-header-7() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.16px;
   font-size: 1.8rem;
   line-height: 2.4rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-header-7", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-header-7-family
+cdr-text-header-7-style
+cdr-text-header-7-weight
+cdr-text-header-7-spacing
+cdr-text-header-7-size
+cdr-text-header-7-height");
 
+// DEPRECATED
 @mixin cdr-text-editorial() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
   font-size: 2rem;
   line-height: 3.2rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-editorial", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-editorial-family
+cdr-text-editorial-style
+cdr-text-editorial-weight
+cdr-text-editorial-spacing
+cdr-text-editorial-size
+cdr-text-editorial-height");
 
+// DEPRECATED
 @mixin cdr-text-editorial-compact() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
   font-size: 1.8rem;
   line-height: 2.8rem;
+  @include deprecate-mixin(2019, "fall", "cdr-text-editorial-compact", null) {}
 }
+@include deprecate-variables(2019, "fall", "
+cdr-text-editorial-compact-family
+cdr-text-editorial-compact-style
+cdr-text-editorial-compact-weight
+cdr-text-editorial-compact-spacing
+cdr-text-editorial-compact-size
+cdr-text-editorial-compact-height");
 
 @mixin cdr-text-default() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -89,7 +173,7 @@
 }
 
 @mixin cdr-text-default-compact() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -98,7 +182,7 @@
 }
 
 @mixin cdr-text-display-600() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -107,7 +191,7 @@
 }
 
 @mixin cdr-text-display-700() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -116,7 +200,7 @@
 }
 
 @mixin cdr-text-display-800() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -125,7 +209,7 @@
 }
 
 @mixin cdr-text-display-900() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.32px;
@@ -134,7 +218,7 @@
 }
 
 @mixin cdr-text-display-1000() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.32px;
@@ -143,7 +227,7 @@
 }
 
 @mixin cdr-text-display-1100() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.32px;
@@ -152,7 +236,7 @@
 }
 
 @mixin cdr-text-display-1200() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.32px;
@@ -161,7 +245,7 @@
 }
 
 @mixin cdr-text-heading-300() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -170,7 +254,7 @@
 }
 
 @mixin cdr-text-heading-400() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -179,7 +263,7 @@
 }
 
 @mixin cdr-text-heading-500() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -188,7 +272,7 @@
 }
 
 @mixin cdr-text-heading-600() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.16px;
@@ -197,7 +281,7 @@
 }
 
 @mixin cdr-text-heading-700() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.16px;
@@ -206,7 +290,7 @@
 }
 
 @mixin cdr-text-heading-800() {
-  font-family: REI Stuart App, Georgia, serif;
+  font-family: REI Stuart App, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.16px;
@@ -215,7 +299,7 @@
 }
 
 @mixin cdr-text-subheading-300() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -224,7 +308,7 @@
 }
 
 @mixin cdr-text-subheading-400() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -233,7 +317,7 @@
 }
 
 @mixin cdr-text-subheading-500() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.16px;
@@ -242,7 +326,7 @@
 }
 
 @mixin cdr-text-subheading-600() {
-  font-family: Graphik App, Helvetica Neue, sans-serif;
+  font-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.16px;
@@ -401,169 +485,169 @@ $cdr-breakpoint-xs: 0;
 $cdr-breakpoint-sm: 768px;
 $cdr-breakpoint-md: 992px;
 $cdr-breakpoint-lg: 1232px;
-$cdr-text-header-1-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-1-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-1-style: normal;
 $cdr-text-header-1-weight: 600;
 $cdr-text-header-1-spacing: 0.16px;
-$cdr-text-header-1-size: 5.4rem;
-$cdr-text-header-1-height: 5.6rem;
-$cdr-text-header-2-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-1-size: 5.6rem;
+$cdr-text-header-1-height: 6rem;
+$cdr-text-header-2-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-2-style: normal;
 $cdr-text-header-2-weight: 600;
 $cdr-text-header-2-spacing: 0.16px;
-$cdr-text-header-2-size: 4.2rem;
-$cdr-text-header-2-height: 5rem;
-$cdr-text-header-3-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-2-size: 4rem;
+$cdr-text-header-2-height: 4.8rem;
+$cdr-text-header-3-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-3-style: normal;
 $cdr-text-header-3-weight: 600;
 $cdr-text-header-3-spacing: 0.16px;
 $cdr-text-header-3-size: 3.2rem;
 $cdr-text-header-3-height: 4rem;
-$cdr-text-header-4-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-4-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-4-style: normal;
 $cdr-text-header-4-weight: 600;
 $cdr-text-header-4-spacing: 0.16px;
 $cdr-text-header-4-size: 2.8rem;
 $cdr-text-header-4-height: 3.6rem;
-$cdr-text-header-5-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-5-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-5-style: normal;
 $cdr-text-header-5-weight: 600;
 $cdr-text-header-5-spacing: 0.16px;
 $cdr-text-header-5-size: 2.4rem;
 $cdr-text-header-5-height: 3.2rem;
-$cdr-text-header-6-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-6-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-6-style: normal;
 $cdr-text-header-6-weight: 600;
 $cdr-text-header-6-spacing: 0.16px;
 $cdr-text-header-6-size: 2rem;
 $cdr-text-header-6-height: 2.8rem;
-$cdr-text-header-7-family: REI Stuart App, Georgia, serif;
+$cdr-text-header-7-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-header-7-style: normal;
 $cdr-text-header-7-weight: 600;
 $cdr-text-header-7-spacing: 0.16px;
 $cdr-text-header-7-size: 1.8rem;
 $cdr-text-header-7-height: 2.4rem;
-$cdr-text-editorial-family: REI Stuart App, Georgia, serif;
+$cdr-text-editorial-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-editorial-style: normal;
 $cdr-text-editorial-weight: 400;
 $cdr-text-editorial-spacing: 0px;
 $cdr-text-editorial-size: 2rem;
 $cdr-text-editorial-height: 3.2rem;
-$cdr-text-editorial-compact-family: REI Stuart App, Georgia, serif;
+$cdr-text-editorial-compact-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-editorial-compact-style: normal;
 $cdr-text-editorial-compact-weight: 400;
 $cdr-text-editorial-compact-spacing: 0px;
 $cdr-text-editorial-compact-size: 1.8rem;
 $cdr-text-editorial-compact-height: 2.8rem;
-$cdr-text-default-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-default-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-default-style: normal;
 $cdr-text-default-weight: 400;
 $cdr-text-default-spacing: 0px;
 $cdr-text-default-size: 1.6rem;
 $cdr-text-default-height: 2.6rem;
-$cdr-text-default-compact-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-default-compact-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-default-compact-style: normal;
 $cdr-text-default-compact-weight: 400;
 $cdr-text-default-compact-spacing: 0px;
 $cdr-text-default-compact-size: 1.4rem;
 $cdr-text-default-compact-height: 2.4rem;
-$cdr-text-display-600-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-600-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-600-style: normal;
 $cdr-text-display-600-weight: 600;
 $cdr-text-display-600-spacing: -0.16px;
 $cdr-text-display-600-size: 2.4rem;
 $cdr-text-display-600-height: 3rem;
-$cdr-text-display-700-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-700-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-700-style: normal;
 $cdr-text-display-700-weight: 600;
 $cdr-text-display-700-spacing: -0.16px;
 $cdr-text-display-700-size: 2.8rem;
 $cdr-text-display-700-height: 3.2rem;
-$cdr-text-display-800-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-800-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-800-style: normal;
 $cdr-text-display-800-weight: 600;
 $cdr-text-display-800-spacing: -0.16px;
 $cdr-text-display-800-size: 3.2rem;
 $cdr-text-display-800-height: 3.6rem;
-$cdr-text-display-900-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-900-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-900-style: normal;
 $cdr-text-display-900-weight: 600;
 $cdr-text-display-900-spacing: -0.32px;
 $cdr-text-display-900-size: 3.6rem;
 $cdr-text-display-900-height: 4.4rem;
-$cdr-text-display-1000-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-1000-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-1000-style: normal;
 $cdr-text-display-1000-weight: 600;
 $cdr-text-display-1000-spacing: -0.32px;
 $cdr-text-display-1000-size: 4.2rem;
 $cdr-text-display-1000-height: 5rem;
-$cdr-text-display-1100-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-1100-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-1100-style: normal;
 $cdr-text-display-1100-weight: 600;
 $cdr-text-display-1100-spacing: -0.32px;
 $cdr-text-display-1100-size: 4.8rem;
 $cdr-text-display-1100-height: 5.6rem;
-$cdr-text-display-1200-family: REI Stuart App, Georgia, serif;
+$cdr-text-display-1200-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-display-1200-style: normal;
 $cdr-text-display-1200-weight: 600;
 $cdr-text-display-1200-spacing: -0.32px;
 $cdr-text-display-1200-size: 5.4rem;
 $cdr-text-display-1200-height: 6.4rem;
-$cdr-text-heading-300-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-heading-300-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-heading-300-style: normal;
 $cdr-text-heading-300-weight: 600;
 $cdr-text-heading-300-spacing: 0px;
 $cdr-text-heading-300-size: 1.6rem;
 $cdr-text-heading-300-height: 2rem;
-$cdr-text-heading-400-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-heading-400-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-heading-400-style: normal;
 $cdr-text-heading-400-weight: 600;
 $cdr-text-heading-400-spacing: 0px;
 $cdr-text-heading-400-size: 1.8rem;
 $cdr-text-heading-400-height: 2.4rem;
-$cdr-text-heading-500-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-heading-500-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-heading-500-style: normal;
 $cdr-text-heading-500-weight: 600;
 $cdr-text-heading-500-spacing: -0.16px;
 $cdr-text-heading-500-size: 2rem;
 $cdr-text-heading-500-height: 2.6rem;
-$cdr-text-heading-600-family: REI Stuart App, Georgia, serif;
+$cdr-text-heading-600-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-heading-600-style: normal;
 $cdr-text-heading-600-weight: 500;
 $cdr-text-heading-600-spacing: -0.16px;
 $cdr-text-heading-600-size: 2.4rem;
 $cdr-text-heading-600-height: 3rem;
-$cdr-text-heading-700-family: REI Stuart App, Georgia, serif;
+$cdr-text-heading-700-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-heading-700-style: normal;
 $cdr-text-heading-700-weight: 500;
 $cdr-text-heading-700-spacing: -0.16px;
 $cdr-text-heading-700-size: 2.8rem;
 $cdr-text-heading-700-height: 3.2rem;
-$cdr-text-heading-800-family: REI Stuart App, Georgia, serif;
+$cdr-text-heading-800-family: REI Stuart App, Sentinel, Georgia, serif;
 $cdr-text-heading-800-style: normal;
 $cdr-text-heading-800-weight: 500;
 $cdr-text-heading-800-spacing: -0.16px;
 $cdr-text-heading-800-size: 3.2rem;
 $cdr-text-heading-800-height: 3.6rem;
-$cdr-text-subheading-300-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-subheading-300-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-subheading-300-style: normal;
 $cdr-text-subheading-300-weight: 500;
 $cdr-text-subheading-300-spacing: 0px;
 $cdr-text-subheading-300-size: 1.6rem;
 $cdr-text-subheading-300-height: 2rem;
-$cdr-text-subheading-400-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-subheading-400-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-subheading-400-style: normal;
 $cdr-text-subheading-400-weight: 500;
 $cdr-text-subheading-400-spacing: 0px;
 $cdr-text-subheading-400-size: 1.8rem;
 $cdr-text-subheading-400-height: 2.4rem;
-$cdr-text-subheading-500-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-subheading-500-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-subheading-500-style: normal;
 $cdr-text-subheading-500-weight: 500;
 $cdr-text-subheading-500-spacing: -0.16px;
 $cdr-text-subheading-500-size: 2rem;
 $cdr-text-subheading-500-height: 2.6rem;
-$cdr-text-subheading-600-family: Graphik App, Helvetica Neue, sans-serif;
+$cdr-text-subheading-600-family: Graphik App, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $cdr-text-subheading-600-style: normal;
 $cdr-text-subheading-600-weight: 500;
 $cdr-text-subheading-600-spacing: -0.16px;

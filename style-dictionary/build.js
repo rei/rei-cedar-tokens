@@ -1,11 +1,11 @@
 const StyleDictionary = require('style-dictionary');
-const path = require('path');
+// const path = require('path');
 const getPlatformConfig = require('./configs');
 // const _ = require('lodash');
 
 // ==== Include custom transforms ====
 require('./transforms/attribute/options')(StyleDictionary);
-require('./transforms/attribute/utility-class')(StyleDictionary);
+require('./transforms/attribute/deprecated')(StyleDictionary);
 require('./transforms/attribute/cdr-cti')(StyleDictionary);
 require('./transforms/size/px-to-rem')(StyleDictionary);
 require('./transforms/size/strip-px')(StyleDictionary);
@@ -24,6 +24,7 @@ require('./transformGroups/sketch')(StyleDictionary);
 // ==== Include custom formats ====
 require('./formats/scss-mixin')(StyleDictionary);
 require('./formats/scss-map')(StyleDictionary);
+require('./formats/scss-deprecated')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
 require('./formats/site')(StyleDictionary);
@@ -31,6 +32,7 @@ require('./formats/sketch')(StyleDictionary);
 
 // ==== Include custom actions ====
 require('./actions/concat_files')(StyleDictionary);
+require('./actions/include_deprecate_scss')(StyleDictionary);
 
 // --------------------------------------------------------------------
 

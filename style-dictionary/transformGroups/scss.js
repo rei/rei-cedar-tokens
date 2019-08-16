@@ -3,7 +3,7 @@ module.exports = (StyleDictionary) => {
     name: 'custom/scss',
     transforms: [
       'attribute/option',
-      'attribute/utility',
+      'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/kebab',
       'size/strip-px',
