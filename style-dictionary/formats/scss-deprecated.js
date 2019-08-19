@@ -30,7 +30,7 @@ module.exports = (StyleDictionary) => {
             deprecatedList.push(tokenStr);
           });
 
-          fileContents += `@include deprecate-variables(${year}, "${release}", "\n${deprecatedList.join('\n')}");\n`;
+          fileContents += `@include deprecate-variables(${year}, "${release}", "\\\n${deprecatedList.join('\\\n')}");\n`;
         });
       });
 
