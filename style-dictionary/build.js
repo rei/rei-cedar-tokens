@@ -1,7 +1,5 @@
 const StyleDictionary = require('style-dictionary');
-// const path = require('path');
 const getPlatformConfig = require('./configs');
-// const _ = require('lodash');
 
 // ==== Include custom transforms ====
 require('./transforms/attribute/options')(StyleDictionary);
