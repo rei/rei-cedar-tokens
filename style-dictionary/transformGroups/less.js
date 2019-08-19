@@ -3,7 +3,7 @@ module.exports = (StyleDictionary) => {
     name: 'custom/less',
     transforms: [
       'attribute/option',
-      'attribute/utility',
+      'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/kebab',
       'size/strip-px',

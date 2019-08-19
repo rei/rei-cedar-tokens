@@ -3,7 +3,6 @@ module.exports = (StyleDictionary) => {
     name: 'custom/sketch',
     transforms: [
       'attribute/option',
-      'attribute/utility',
       'attribute/cdr-cti',
       'name/cti/kebab',
       'size/strip-all-px',

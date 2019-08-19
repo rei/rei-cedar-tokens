@@ -3,7 +3,7 @@ module.exports = (StyleDictionary) => {
     name: 'custom/android',
     transforms: [
       'attribute/option',
-      'attribute/utility',
+      'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/snake',
       'size/dp',

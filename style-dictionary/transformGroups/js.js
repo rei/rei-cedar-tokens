@@ -3,7 +3,7 @@ module.exports = (StyleDictionary) => {
     name: 'custom/js',
     transforms: [
       'attribute/option',
-      'attribute/utility',
+      'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/pascal',
       'size/strip-px',
