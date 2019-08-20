@@ -39,8 +39,8 @@ module.exports = (StyleDictionary) => {
   ${declarations.join('\n  ')}
   @include deprecate-mixin(${deprecateYear}, "${deprecateRelease}", "${prefixedName}", ${prefixedNewName}) {}
 }
-@include deprecate-variables(${deprecateYear}, "${deprecateRelease}", "\\
-${deprecatedTokens.join('\\\n')}");`;
+@include deprecate-variables(${deprecateYear}, "${deprecateRelease}", "\\ 
+${deprecatedTokens.join('\\ \n')}");`;
         } else {
           // NOT DEPRECATED
           mixin = `@mixin ${prefixedName}() {
