@@ -153,15 +153,15 @@
   letter-spacing: 0px;
   font-size: 1.8rem;
   line-height: 2.8rem;
-  @include deprecate-mixin(2019, "fall", "cdr-text-editorial-compact", "cdr-text-default-compact") {}
+  @include deprecate-mixin(2019, "fall", "cdr-text-editorial-compact", "cdr-text-default") {}
 }
 @include deprecate-variables(2019, "fall", "\ 
-'cdr-text-editorial-compact-family' use 'cdr-text-default-compact-family' instead\ 
-'cdr-text-editorial-compact-style' use 'cdr-text-default-compact-style' instead\ 
-'cdr-text-editorial-compact-weight' use 'cdr-text-default-compact-weight' instead\ 
-'cdr-text-editorial-compact-spacing' use 'cdr-text-default-compact-spacing' instead\ 
-'cdr-text-editorial-compact-size' use 'cdr-text-default-compact-size' instead\ 
-'cdr-text-editorial-compact-height' use 'cdr-text-default-compact-height' instead");
+'cdr-text-editorial-compact-family' use 'cdr-text-default-family' instead\ 
+'cdr-text-editorial-compact-style' use 'cdr-text-default-style' instead\ 
+'cdr-text-editorial-compact-weight' use 'cdr-text-default-weight' instead\ 
+'cdr-text-editorial-compact-spacing' use 'cdr-text-default-spacing' instead\ 
+'cdr-text-editorial-compact-size' use 'cdr-text-default-size' instead\ 
+'cdr-text-editorial-compact-height' use 'cdr-text-default-height' instead");
 
 @mixin cdr-text-default() {
   font-family: "Graphik App", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
