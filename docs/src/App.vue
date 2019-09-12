@@ -53,6 +53,8 @@ export default {
 </script>
 
 <style>
+@import './hackyfonts.css';
+
 .platform-title {
   font-size: 32px;
   margin-top: 20px;

@@ -35,6 +35,16 @@
           example: '{text.docExample}',
         },
       },
+      'variation-settings':{
+        value: '{options.font.variation-settings.normal.value}',
+        mixin: 'textDefault',
+        property: 'font-variation-settings',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
       spacing: {
         value: '{options.font.spacing.normal.value}',
         category: 'letter-spacing',
@@ -96,6 +106,16 @@
         value: '{options.font.weight.normal.value}',
         mixin: 'textDefaultCompact',
         property: 'font-weight',
+        docs: {
+          category: '{text.docCategory}',
+          type: 'default',
+          example: '{text.docExample}',
+        },
+      },
+      'variation-settings':{
+        value: '{options.font.variation-settings.normal.value}',
+        mixin: 'textDefaultCompact',
+        property: 'font-variation-settings',
         docs: {
           category: '{text.docCategory}',
           type: 'default',
@@ -169,6 +189,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay600',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
@@ -228,6 +258,16 @@
           value: '{options.font.weight.semibold.value}',
           mixin: 'textDisplay700',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay700',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'display',
@@ -299,6 +339,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay800',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
@@ -358,6 +408,16 @@
           value: '{options.font.weight.semibold.value}',
           mixin: 'textDisplay900',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay900',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'display',
@@ -429,6 +489,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay1000',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tighter.value}',
           category: 'letter-spacing',
@@ -494,6 +564,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay1100',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tighter.value}',
           category: 'letter-spacing',
@@ -553,6 +633,16 @@
           value: '{options.font.weight.semibold.value}',
           mixin: 'textDisplay1200',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'display',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textDisplay1200',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'display',
@@ -627,6 +717,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textHeading300',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.normal.value}',
           category: 'letter-spacing',
@@ -686,6 +786,16 @@
           value: '{options.font.weight.semibold.value}',
           mixin: 'textHeading400',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textHeading400',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'heading',
@@ -757,6 +867,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.semibold.value}',
+          mixin: 'textHeading500',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
@@ -816,6 +936,16 @@
           value: '{options.font.weight.medium.value}',
           mixin: 'textHeading600',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textHeading600',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'heading',
@@ -887,6 +1017,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textHeading700',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
@@ -946,6 +1086,16 @@
           value: '{options.font.weight.medium.value}',
           mixin: 'textHeading800',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'heading',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textHeading800',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'heading',
@@ -1020,6 +1170,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textSubheading300',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.normal.value}',
           category: 'letter-spacing',
@@ -1079,6 +1239,16 @@
           value: '{options.font.weight.medium.value}',
           mixin: 'textSubheading400',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textSubheading400',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'subheading',
@@ -1150,6 +1320,16 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textSubheading500',
+          property: 'font-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
@@ -1209,6 +1389,16 @@
           value: '{options.font.weight.medium.value}',
           mixin: 'textSubheading600',
           property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'subheading',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.medium.value}',
+          mixin: 'textSubheading600',
+          property: 'font-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'subheading',

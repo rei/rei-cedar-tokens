@@ -3,8 +3,8 @@
     font: {
 
       family: {
-        serif: { value: '"REI Stuart App", Sentinel, Georgia, serif' },
-        sans: { value: '"Graphik App", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif' },
+        serif: { value: '"Stuart", Sentinel, Georgia, serif' },
+        sans: { value: '"Graphik", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif' },
         mono: { value: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace' },
         legacy: {
           serif: { value: 'Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif' },
@@ -39,7 +39,13 @@
         semibold: { value: '600' },
       },
 
-      'spacing': {
+      'variation-settings': {
+        normal:   { value: '"wght" {options.font.weight.normal.value}' },
+        medium:   { value: '"wght" {options.font.weight.medium.value}' },
+        semibold: { value: '"wght" {options.font.weight.semibold.value}' },
+      },
+
+      spacing: {
         tightest: { value: '-0.64px', category: 'letter-spacing',},
         tighter:  { value: '-0.32px', category: 'letter-spacing',},
         tight:    { value: '-0.16px', category: 'letter-spacing',},
@@ -49,7 +55,7 @@
         loosest:  { value: '0.64px',  category: 'letter-spacing',},
       },
 
-      'height': {
+      height: {
         '100':  { value: '16px', category: 'size', },
         '200':  { value: '18px', category: 'size', },
         '300':  { value: '20px', category: 'size', },
