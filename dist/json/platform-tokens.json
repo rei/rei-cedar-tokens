@@ -3558,7 +3558,7 @@
     ],
     "text": [
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader1",
         "property": "font-family",
         "newMixin": "text-display-1100",
@@ -3754,7 +3754,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader2",
         "property": "font-family",
         "newMixin": "text-display-900",
@@ -3950,7 +3950,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader3",
         "property": "font-family",
         "newMixin": "text-display-700",
@@ -4146,7 +4146,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader4",
         "property": "font-family",
         "newMixin": "text-display-600",
@@ -4342,7 +4342,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader5",
         "property": "font-family",
         "newMixin": "text-display-500",
@@ -4538,7 +4538,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader6",
         "property": "font-family",
         "newMixin": "text-display-400",
@@ -4734,7 +4734,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeader7",
         "property": "font-family",
         "newMixin": "text-display-300",
@@ -4930,7 +4930,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textEditorial",
         "property": "font-family",
         "newMixin": "text-default",
@@ -5126,7 +5126,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textEditorialCompact",
         "property": "font-family",
         "newMixin": "text-default-compact",
@@ -5322,7 +5322,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textDefault",
         "property": "font-family",
         "docs": {
@@ -5391,6 +5391,31 @@
           }
         },
         "name": "cdr-text-default-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 400",
+        "mixin": "cdr-textDefault",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.normal.value}",
+          "mixin": "textDefault",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "default",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-default-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -5482,7 +5507,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textDefaultCompact",
         "property": "font-family",
         "docs": {
@@ -5551,6 +5576,31 @@
           }
         },
         "name": "cdr-text-default-compact-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 400",
+        "mixin": "cdr-textDefaultCompact",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.normal.value}",
+          "mixin": "textDefaultCompact",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "default",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-default-compact-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -5642,7 +5692,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay600",
         "property": "font-family",
         "docs": {
@@ -5711,6 +5761,31 @@
           }
         },
         "name": "cdr-text-display-600-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay600",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay600",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-600-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -5802,7 +5877,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay700",
         "property": "font-family",
         "docs": {
@@ -5871,6 +5946,31 @@
           }
         },
         "name": "cdr-text-display-700-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay700",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay700",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-700-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -5962,7 +6062,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay800",
         "property": "font-family",
         "docs": {
@@ -6031,6 +6131,31 @@
           }
         },
         "name": "cdr-text-display-800-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay800",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay800",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-800-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -6122,7 +6247,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay900",
         "property": "font-family",
         "docs": {
@@ -6191,6 +6316,31 @@
           }
         },
         "name": "cdr-text-display-900-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay900",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay900",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-900-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -6282,7 +6432,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay1000",
         "property": "font-family",
         "docs": {
@@ -6351,6 +6501,31 @@
           }
         },
         "name": "cdr-text-display-1000-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay1000",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay1000",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-1000-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -6442,7 +6617,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay1100",
         "property": "font-family",
         "docs": {
@@ -6511,6 +6686,31 @@
           }
         },
         "name": "cdr-text-display-1100-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay1100",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay1100",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-1100-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -6602,7 +6802,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay1200",
         "property": "font-family",
         "docs": {
@@ -6671,6 +6871,31 @@
           }
         },
         "name": "cdr-text-display-1200-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textDisplay1200",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "display",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textDisplay1200",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "display",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-display-1200-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -6762,7 +6987,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textHeading300",
         "property": "font-family",
         "docs": {
@@ -6831,6 +7056,31 @@
           }
         },
         "name": "cdr-text-heading-300-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textHeading300",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textHeading300",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "heading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-heading-300-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -6922,7 +7172,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textHeading400",
         "property": "font-family",
         "docs": {
@@ -6991,6 +7241,31 @@
           }
         },
         "name": "cdr-text-heading-400-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textHeading400",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textHeading400",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "heading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-heading-400-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -7082,7 +7357,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textHeading500",
         "property": "font-family",
         "docs": {
@@ -7151,6 +7426,31 @@
           }
         },
         "name": "cdr-text-heading-500-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 600",
+        "mixin": "cdr-textHeading500",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.semibold.value}",
+          "mixin": "textHeading500",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "heading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-heading-500-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -7242,7 +7542,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeading600",
         "property": "font-family",
         "docs": {
@@ -7311,6 +7611,31 @@
           }
         },
         "name": "cdr-text-heading-600-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textHeading600",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textHeading600",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "heading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-heading-600-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -7402,7 +7727,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeading700",
         "property": "font-family",
         "docs": {
@@ -7471,6 +7796,31 @@
           }
         },
         "name": "cdr-text-heading-700-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textHeading700",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textHeading700",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "heading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-heading-700-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -7562,7 +7912,7 @@
         }
       },
       {
-        "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+        "value": "\"Stuart\", Sentinel, Georgia, serif",
         "mixin": "cdr-textHeading800",
         "property": "font-family",
         "docs": {
@@ -7631,6 +7981,31 @@
           }
         },
         "name": "cdr-text-heading-800-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textHeading800",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "heading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textHeading800",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "heading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-heading-800-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -7722,7 +8097,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading300",
         "property": "font-family",
         "docs": {
@@ -7791,6 +8166,31 @@
           }
         },
         "name": "cdr-text-subheading-300-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textSubheading300",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textSubheading300",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "subheading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-subheading-300-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -7882,7 +8282,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading400",
         "property": "font-family",
         "docs": {
@@ -7951,6 +8351,31 @@
           }
         },
         "name": "cdr-text-subheading-400-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textSubheading400",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textSubheading400",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "subheading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-subheading-400-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -8042,7 +8467,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading500",
         "property": "font-family",
         "docs": {
@@ -8111,6 +8536,31 @@
           }
         },
         "name": "cdr-text-subheading-500-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textSubheading500",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textSubheading500",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "subheading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-subheading-500-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
@@ -8202,7 +8652,7 @@
         }
       },
       {
-        "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading600",
         "property": "font-family",
         "docs": {
@@ -8271,6 +8721,31 @@
           }
         },
         "name": "cdr-text-subheading-600-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "\"wght\" 500",
+        "mixin": "cdr-textSubheading600",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "subheading",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.variation-settings.medium.value}",
+          "mixin": "textSubheading600",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "subheading",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-subheading-600-variation-settings",
         "attributes": {
           "option": false,
           "deprecated": false
