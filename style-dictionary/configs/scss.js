@@ -12,10 +12,10 @@ module.exports = {
         destination: 'cdr-mixins.scss',
         format: 'scss/mixin',
       },
-      {
-        destination: 'cdr-deprecated.scss',
-        format: 'scss/deprecated',
-      },
+      // {
+      //   destination: 'cdr-deprecated.scss',
+      //   format: 'scss/deprecated',
+      // },
       {
         destination: 'utility-map.no_concat.scss',
         format: 'scss/map',

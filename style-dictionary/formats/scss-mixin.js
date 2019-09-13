@@ -6,7 +6,7 @@ module.exports = (StyleDictionary) => {
     name: 'scss/mixin',
     formatter(dictionary, config) {
       const prefix = config.prefix ? `${config.prefix}-` : '';
-      const mixins = [];
+      const mixins = ['@import \'./deprecate.scss\';\n\n'];
       const mixinProperties = _.filter(dictionary.allProperties, o => _.has(o, 'mixin'));
       const mixinNames = _.uniq(mixinProperties.map(o => o.mixin));
 
@@ -37,9 +37,8 @@ module.exports = (StyleDictionary) => {
           mixin = `// DEPRECATED
 @mixin ${prefixedName}() {
   ${declarations.join('\n  ')}
-  @include deprecate-mixin(${deprecateYear}, "${deprecateRelease}", "${prefixedName}", ${prefixedNewName}) {}
-}
-@include deprecate-variables(${deprecateYear}, "${deprecateRelease}", "\n${deprecatedTokens.join('\n')}");`;
+  @include deprecate-mixin(${deprecateYear}, "${deprecateRelease}", "${prefixedName}", ${prefixedNewName});
+}`;
         } else {
           // NOT DEPRECATED
           mixin = `@mixin ${prefixedName}() {
