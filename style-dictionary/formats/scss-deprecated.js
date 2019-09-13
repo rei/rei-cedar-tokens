@@ -1,3 +1,5 @@
+// Currently not used as it made too much noise to be useful
+
 const _ = require('lodash');
 
 module.exports = (StyleDictionary) => {
