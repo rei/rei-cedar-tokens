@@ -10,7 +10,8 @@
         // ------------------------
         utility: {
           style: { value: 'normal' },
-          weight: { value: '400' },
+          weight: { value: '{options.font.weight.normal.value}' },
+          'variation-settings': { value: '{options.font.variation-settings.normal.value}' },
           spacing: {
             value: 'normal',
             category: 'letter-spacing',
@@ -21,6 +22,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -40,6 +42,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -59,6 +62,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -78,6 +82,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -97,6 +102,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -116,6 +122,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -135,6 +142,7 @@
             family: { value: '{options.typography.maple.family.value}' },
             style: { value: '{options.typography.maple.utility.style.value}' },
             weight: { value: '{options.typography.maple.utility.weight.value}' },
+            'variation-settings': { value: '{options.typography.maple.utility.variation-settings.value}' },
             spacing: {
               value: '{options.typography.maple.utility.spacing.value}',
               category: 'letter-spacing',
@@ -160,7 +168,8 @@
         // ------------------------
         display: {
           style: { value: 'normal' },
-          weight: { value: '400' },
+          weight: { value: '{options.font.weight.normal.value}' },
+          'variation-settings': { value: '{options.font.variation-settings.normal.value}' },
           spacing: {
             value: 'normal',
             category: 'letter-spacing',
@@ -171,6 +180,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -190,6 +200,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -209,6 +220,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -228,6 +240,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -247,6 +260,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -266,6 +280,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -285,6 +300,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.display.style.value}' },
             weight: { value: '{options.typography.redwood.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.display.spacing.value}',
               category: 'letter-spacing',
@@ -304,7 +320,8 @@
         // ------------------------
         body: {
           style: { value: 'normal' },
-          weight: { value: '400' },
+          weight: { value: '{options.font.weight.normal.value}' },
+          'variation-settings': { value: '{options.font.variation-settings.normal.value}' },
           spacing: {
             value: 'normal',
             category: 'letter-spacing',
@@ -315,6 +332,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.body.style.value}' },
             weight: { value: '{options.typography.redwood.body.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.body.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.body.spacing.value}',
               category: 'letter-spacing',
@@ -334,6 +352,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.body.style.value}' },
             weight: { value: '{options.typography.redwood.body.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.body.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.body.spacing.value}',
               category: 'letter-spacing',
@@ -353,6 +372,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.body.style.value}' },
             weight: { value: '{options.typography.redwood.body.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.body.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.body.spacing.value}',
               category: 'letter-spacing',
@@ -372,6 +392,7 @@
             family: { value: '{options.typography.redwood.family.value}' },
             style: { value: '{options.typography.redwood.body.style.value}' },
             weight: { value: '{options.typography.redwood.body.weight.value}' },
+            'variation-settings': { value: '{options.typography.redwood.body.variation-settings.value}' },
             spacing: {
               value: '{options.typography.redwood.body.spacing.value}',
               category: 'letter-spacing',
@@ -396,7 +417,8 @@
         // ------------------------
         display: {
           style: { value: 'normal' },
-          weight: { value: '600' },
+          weight: { value: '{options.font.weight.semibold.value}' },
+          'variation-settings': { value: '{options.font.variation-settings.semibold.value}' },
           spacing: {
             value: '0.2px',
             category: 'letter-spacing',
@@ -407,6 +429,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -426,6 +449,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -445,6 +469,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -464,6 +489,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -483,6 +509,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -502,6 +529,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -521,6 +549,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -540,6 +569,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -559,6 +589,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -578,6 +609,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -597,6 +629,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.display.style.value}' },
             weight: { value: '{options.typography.spruce.display.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.display.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.display.spacing.value}',
               category: 'letter-spacing',
@@ -616,7 +649,8 @@
         // ------------------------
         body: {
           style: { value: 'normal' },
-          weight: { value: '400' },
+          weight: { value: '{options.font.weight.normal.value}' },
+          'variation-settings': { value: '{options.font.variation-settings.semibold.value}' },
           spacing: {
             value: 'normal',
             category: 'letter-spacing',
@@ -627,6 +661,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.body.style.value}' },
             weight: { value: '{options.typography.spruce.body.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.body.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.body.spacing.value}',
               category: 'letter-spacing',
@@ -646,6 +681,7 @@
             family: { value: '{options.typography.spruce.family.value}' },
             style: { value: '{options.typography.spruce.body.style.value}' },
             weight: { value: '{options.typography.spruce.body.weight.value}' },
+            'variation-settings': { value: '{options.typography.spruce.body.variation-settings.value}' },
             spacing: {
               value: '{options.typography.spruce.body.spacing.value}',
               category: 'letter-spacing',
