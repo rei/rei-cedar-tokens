@@ -40,6 +40,18 @@
               example: '{text.docExample}',
             },
           },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader1',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-1100',
+            newToken: 'text-display-1100-variation-settings',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
           spacing: {
             value: '{options.font.spacing.loose.value}',
             category: 'letter-spacing',
@@ -113,6 +125,18 @@
             property: 'font-weight',
             newMixin: 'text-display-900',
             newToken: 'text-display-900-weight',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader2',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-900',
+            newToken: 'text-display-900-variation-settings',
             docs: {
               category: '{text.docCategory}',
               type: 'header',
@@ -198,6 +222,18 @@
               example: '{text.docExample}',
             },
           },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader3',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-700',
+            newToken: 'text-display-700-variation-settings',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
           spacing: {
             value: '{options.font.spacing.loose.value}',
             category: 'letter-spacing',
@@ -271,6 +307,18 @@
             property: 'font-weight',
             newMixin: 'text-display-600',
             newToken: 'text-display-600-weight',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader4',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-600',
+            newToken: 'text-display-600-variation-settings',
             docs: {
               category: '{text.docCategory}',
               type: 'header',
@@ -356,6 +404,18 @@
               example: '{text.docExample}',
             },
           },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader5',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-500',
+            newToken: 'text-display-500-variation-settings',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
           spacing: {
             value: '{options.font.spacing.loose.value}',
             category: 'letter-spacing',
@@ -435,6 +495,18 @@
               example: '{text.docExample}',
             },
           },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader6',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-400',
+            newToken: 'text-display-400-variation-settings',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
           spacing: {
             value: '{options.font.spacing.loose.value}',
             category: 'letter-spacing',
@@ -508,6 +580,18 @@
             property: 'font-weight',
             newMixin: 'text-display-300',
             newToken: 'text-display-300-weight',
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
+          'variation-settings':{
+            value: '{options.font.variation-settings.semibold.value}',
+            mixin: 'textHeader7',
+            property: 'font-variation-settings',
+            newMixin: 'text-display-300',
+            newToken: 'text-display-300-variation-settings',
             docs: {
               category: '{text.docCategory}',
               type: 'header',
@@ -594,6 +678,18 @@
             example: '{text.docExample}',
           },
         },
+        'variation-settings':{
+          value: '{options.font.variation-settings.normal.value}',
+          mixin: 'textEditorial',
+          property: 'font-variation-settings',
+          newMixin: 'text-default',
+          newToken: 'text-default-variation-settings',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'editorial',
+            example: '{text.docExample}',
+          },
+        },
         spacing: {
           value: '{options.font.spacing.normal.value}',
           category: 'letter-spacing',
@@ -667,6 +763,18 @@
           property: 'font-weight',
           newMixin: 'text-default-compact',
           newToken: 'text-default-compact-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'editorial',
+            example: '{text.docExample}',
+          },
+        },
+        'variation-settings':{
+          value: '{options.font.variation-settings.normal.value}',
+          mixin: 'textEditorialCompact',
+          property: 'font-variation-settings',
+          newMixin: 'text-default-compact',
+          newToken: 'text-default-compact-variation-settings',
           docs: {
             category: '{text.docCategory}',
             type: 'editorial',
