@@ -6,7 +6,7 @@
     // default
     default: {
       family: {
-        value: '{options.font.family.sans.value}',
+        value: '{options.font.family.legacy.sans.value}',
         mixin: 'textDefault',
         property: 'font-family',
         docs: {
@@ -73,7 +73,7 @@
     // default-compact
     'default-compact': {
       family: {
-        value: '{options.font.family.sans.value}',
+        value: '{options.font.family.legacy.sans.value}',
         mixin: 'textDefaultCompact',
         property: 'font-family',
         docs: {

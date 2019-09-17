@@ -223,7 +223,7 @@ When tokens are deprecated they can also be provided a new token name or new mix
       header: {
         '1': {
           family: {
-            value: '{options.font.family.serif.value}',
+            value: '{options.font.family.legacy.serif.value}',
             mixin: 'textHeader1',
             property: 'font-family',
             newMixin: 'new-mixin-name',             //<--- a new mixin name to use instead of the deprecated one
