@@ -53,6 +53,8 @@ export default {
 </script>
 
 <style>
+@import "./font-face.css";
+
 .platform-title {
   font-size: 32px;
   margin-top: 20px;
