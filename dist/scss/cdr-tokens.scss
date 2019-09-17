@@ -105,7 +105,7 @@
 @mixin cdr-text-header-6() {
   font-family: "Stuart", Sentinel, Georgia, serif;
   font-style: normal;
-  font-variation-settings: "wght" 600;
+  font-weight: 600;
   font-variation-settings: "wght" 600;
   letter-spacing: 0.16px;
   font-size: 2rem;
@@ -143,7 +143,7 @@
 
 // DEPRECATED
 @mixin cdr-text-editorial() {
-  font-family: "Stuart", Sentinel, Georgia, serif;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-variation-settings: "wght" 400;
@@ -163,7 +163,7 @@
 
 // DEPRECATED
 @mixin cdr-text-editorial-compact() {
-  font-family: "Stuart", Sentinel, Georgia, serif;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-variation-settings: "wght" 400;
@@ -182,7 +182,7 @@
 'cdr-text-editorial-compact-height' use 'cdr-text-default-compact-height' instead");
 
 @mixin cdr-text-default() {
-  font-family: "Graphik", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-variation-settings: "wght" 400;
@@ -192,7 +192,7 @@
 }
 
 @mixin cdr-text-default-compact() {
-  font-family: "Graphik", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-variation-settings: "wght" 400;
@@ -559,7 +559,7 @@ $cdr-text-header-5-size: 2.4rem;
 $cdr-text-header-5-height: 3.2rem;
 $cdr-text-header-6-family: "Stuart", Sentinel, Georgia, serif;
 $cdr-text-header-6-style: normal;
-$cdr-text-header-6-weight: "wght" 600;
+$cdr-text-header-6-weight: 600;
 $cdr-text-header-6-variation-settings: "wght" 600;
 $cdr-text-header-6-spacing: 0.16px;
 $cdr-text-header-6-size: 2rem;
@@ -571,28 +571,28 @@ $cdr-text-header-7-variation-settings: "wght" 600;
 $cdr-text-header-7-spacing: 0.16px;
 $cdr-text-header-7-size: 1.8rem;
 $cdr-text-header-7-height: 2.4rem;
-$cdr-text-editorial-family: "Stuart", Sentinel, Georgia, serif;
+$cdr-text-editorial-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-editorial-style: normal;
 $cdr-text-editorial-weight: 400;
 $cdr-text-editorial-variation-settings: "wght" 400;
 $cdr-text-editorial-spacing: 0px;
 $cdr-text-editorial-size: 2rem;
 $cdr-text-editorial-height: 3.2rem;
-$cdr-text-editorial-compact-family: "Stuart", Sentinel, Georgia, serif;
+$cdr-text-editorial-compact-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-editorial-compact-style: normal;
 $cdr-text-editorial-compact-weight: 400;
 $cdr-text-editorial-compact-variation-settings: "wght" 400;
 $cdr-text-editorial-compact-spacing: 0px;
 $cdr-text-editorial-compact-size: 1.8rem;
 $cdr-text-editorial-compact-height: 2.8rem;
-$cdr-text-default-family: "Graphik", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-default-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-default-style: normal;
 $cdr-text-default-weight: 400;
 $cdr-text-default-variation-settings: "wght" 400;
 $cdr-text-default-spacing: 0px;
 $cdr-text-default-size: 1.6rem;
 $cdr-text-default-height: 2.6rem;
-$cdr-text-default-compact-family: "Graphik", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-default-compact-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-default-compact-style: normal;
 $cdr-text-default-compact-weight: 400;
 $cdr-text-default-compact-variation-settings: "wght" 400;

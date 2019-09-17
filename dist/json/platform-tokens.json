@@ -4755,9 +4755,9 @@
         }
       },
       {
-        "value": "\"wght\" 600",
+        "value": "600",
         "mixin": "cdr-textHeader6",
-        "property": "font-variation-settings",
+        "property": "font-weight",
         "newMixin": "text-display-400",
         "newToken": "text-display-400-weight",
         "docs": {
@@ -4766,9 +4766,9 @@
           "example": "text"
         },
         "original": {
-          "value": "{options.font.variation-settings.semibold.value}",
+          "value": "{options.font.weight.semibold.value}",
           "mixin": "textHeader6",
-          "property": "font-variation-settings",
+          "property": "font-weight",
           "newMixin": "text-display-400",
           "newToken": "text-display-400-weight",
           "docs": {
@@ -5147,7 +5147,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textEditorial",
         "property": "font-family",
         "newMixin": "text-default",
@@ -5158,7 +5158,7 @@
           "example": "text"
         },
         "original": {
-          "value": "{options.font.family.serif.value}",
+          "value": "{options.font.family.legacy.serif.value}",
           "mixin": "textEditorial",
           "property": "font-family",
           "newMixin": "text-default",
@@ -5374,7 +5374,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textEditorialCompact",
         "property": "font-family",
         "newMixin": "text-default-compact",
@@ -5385,7 +5385,7 @@
           "example": "text"
         },
         "original": {
-          "value": "{options.font.family.serif.value}",
+          "value": "{options.font.family.legacy.serif.value}",
           "mixin": "textEditorialCompact",
           "property": "font-family",
           "newMixin": "text-default-compact",
@@ -5601,7 +5601,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textDefault",
         "property": "font-family",
         "docs": {
@@ -5610,7 +5610,7 @@
           "example": "text"
         },
         "original": {
-          "value": "{options.font.family.sans.value}",
+          "value": "{options.font.family.legacy.sans.value}",
           "mixin": "textDefault",
           "property": "font-family",
           "docs": {
@@ -5786,7 +5786,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textDefaultCompact",
         "property": "font-family",
         "docs": {
@@ -5795,7 +5795,7 @@
           "example": "text"
         },
         "original": {
-          "value": "{options.font.family.sans.value}",
+          "value": "{options.font.family.legacy.sans.value}",
           "mixin": "textDefaultCompact",
           "property": "font-family",
           "docs": {
