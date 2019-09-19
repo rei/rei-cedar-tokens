@@ -3,8 +3,12 @@
     font: {
 
       family: {
-        serif: { value: '"Stuart", Sentinel, Georgia, serif' },
-        sans: { value: '"Graphik", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif' },
+        'serif-main': { value: 'Stuart'},
+        'serif-fallback': { value: 'Sentinel, Georgia, serif'},
+        serif: { value: '{options.font.family.serif-main.value}, {options.font.family.serif-fallback.value}' },
+        'sans-main': { value: 'Graphik'},
+        'sans-fallback': { value: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif'},
+        sans: { value: '{options.font.family.sans-main.value}, {options.font.family.sans-fallback.value}' },
         mono: { value: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace' },
         legacy: {
           serif: { value: 'Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif' },
