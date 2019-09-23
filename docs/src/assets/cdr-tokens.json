@@ -5642,7 +5642,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay600",
         "property": "font-family",
         "docs": {
@@ -5802,7 +5802,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay700",
         "property": "font-family",
         "docs": {
@@ -5962,7 +5962,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay800",
         "property": "font-family",
         "docs": {
@@ -6122,7 +6122,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay900",
         "property": "font-family",
         "docs": {
@@ -6282,7 +6282,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay1000",
         "property": "font-family",
         "docs": {
@@ -6442,7 +6442,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay1100",
         "property": "font-family",
         "docs": {
@@ -6602,7 +6602,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textDisplay1200",
         "property": "font-family",
         "docs": {
@@ -6762,7 +6762,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textHeading300",
         "property": "font-family",
         "docs": {
@@ -6922,7 +6922,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textHeading400",
         "property": "font-family",
         "docs": {
@@ -7082,7 +7082,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textHeading500",
         "property": "font-family",
         "docs": {
@@ -7242,7 +7242,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textHeading600",
         "property": "font-family",
         "docs": {
@@ -7402,7 +7402,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textHeading700",
         "property": "font-family",
         "docs": {
@@ -7562,7 +7562,7 @@
         }
       },
       {
-        "value": "\"Stuart\", Sentinel, Georgia, serif",
+        "value": "Stuart, Sentinel, Georgia, serif",
         "mixin": "cdr-textHeading800",
         "property": "font-family",
         "docs": {
@@ -7722,7 +7722,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading300",
         "property": "font-family",
         "docs": {
@@ -7882,7 +7882,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading400",
         "property": "font-family",
         "docs": {
@@ -8042,7 +8042,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading500",
         "property": "font-family",
         "docs": {
@@ -8202,7 +8202,7 @@
         }
       },
       {
-        "value": "\"Graphik\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textSubheading600",
         "property": "font-family",
         "docs": {
@@ -8359,6 +8359,30 @@
           "option": false,
           "deprecated": false,
           "category": "size"
+        }
+      }
+    ],
+    "misc": [
+      {
+        "value": "Stuart",
+        "original": {
+          "value": "{options.font.family.serif-main.value}"
+        },
+        "name": "cdr-font-family-serif",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "Graphik",
+        "original": {
+          "value": "{options.font.family.sans-main.value}"
+        },
+        "name": "cdr-font-family-sans",
+        "attributes": {
+          "option": false,
+          "deprecated": false
         }
       }
     ]
@@ -9340,7 +9364,8 @@
           "deprecated": false
         }
       }
-    ]
+    ],
+    "misc": []
   },
   "ios": {
     "colors": [],
@@ -10319,6 +10344,7 @@
           "deprecated": false
         }
       }
-    ]
+    ],
+    "misc": []
   }
 }
