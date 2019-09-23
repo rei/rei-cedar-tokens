@@ -3547,7 +3547,7 @@
   ],
   "text": [
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader1",
       "property": "font-family",
       "newMixin": "text-display-1100",
@@ -3558,7 +3558,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader1",
         "property": "font-family",
         "newMixin": "text-display-1100",
@@ -3743,7 +3743,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader2",
       "property": "font-family",
       "newMixin": "text-display-900",
@@ -3754,7 +3754,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader2",
         "property": "font-family",
         "newMixin": "text-display-900",
@@ -3939,7 +3939,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader3",
       "property": "font-family",
       "newMixin": "text-display-700",
@@ -3950,7 +3950,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader3",
         "property": "font-family",
         "newMixin": "text-display-700",
@@ -4135,7 +4135,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader4",
       "property": "font-family",
       "newMixin": "text-display-600",
@@ -4146,7 +4146,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader4",
         "property": "font-family",
         "newMixin": "text-display-600",
@@ -4331,7 +4331,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader5",
       "property": "font-family",
       "newMixin": "text-display-500",
@@ -4342,7 +4342,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader5",
         "property": "font-family",
         "newMixin": "text-display-500",
@@ -4527,7 +4527,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader6",
       "property": "font-family",
       "newMixin": "text-display-400",
@@ -4538,7 +4538,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader6",
         "property": "font-family",
         "newMixin": "text-display-400",
@@ -4723,7 +4723,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeader7",
       "property": "font-family",
       "newMixin": "text-display-300",
@@ -4734,7 +4734,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textHeader7",
         "property": "font-family",
         "newMixin": "text-display-300",
@@ -4919,7 +4919,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textEditorial",
       "property": "font-family",
       "newMixin": "text-default",
@@ -4930,7 +4930,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textEditorial",
         "property": "font-family",
         "newMixin": "text-default",
@@ -5115,22 +5115,22 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Sentinel, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textEditorialCompact",
       "property": "font-family",
-      "newMixin": "text-default-compact",
-      "newToken": "text-default-compact-family",
+      "newMixin": "text-default",
+      "newToken": "text-default-family",
       "docs": {
         "category": "text",
         "type": "editorial",
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.serif.value}",
+        "value": "{options.font.family.legacy.serif.value}",
         "mixin": "textEditorialCompact",
         "property": "font-family",
-        "newMixin": "text-default-compact",
-        "newToken": "text-default-compact-family",
+        "newMixin": "text-default",
+        "newToken": "text-default-family",
         "docs": {
           "category": "text",
           "type": "editorial",
@@ -5149,8 +5149,8 @@
       "value": "normal",
       "mixin": "cdr-textEditorialCompact",
       "property": "font-style",
-      "newMixin": "text-default-compact",
-      "newToken": "text-default-compact-style",
+      "newMixin": "text-default",
+      "newToken": "text-default-style",
       "docs": {
         "category": "text",
         "type": "editorial",
@@ -5160,8 +5160,8 @@
         "value": "{options.font.style.normal.value}",
         "mixin": "textEditorialCompact",
         "property": "font-style",
-        "newMixin": "text-default-compact",
-        "newToken": "text-default-compact-style",
+        "newMixin": "text-default",
+        "newToken": "text-default-style",
         "docs": {
           "category": "text",
           "type": "editorial",
@@ -5180,8 +5180,8 @@
       "value": "400",
       "mixin": "cdr-textEditorialCompact",
       "property": "font-weight",
-      "newMixin": "text-default-compact",
-      "newToken": "text-default-compact-weight",
+      "newMixin": "text-default",
+      "newToken": "text-default-weight",
       "docs": {
         "category": "text",
         "type": "editorial",
@@ -5191,8 +5191,8 @@
         "value": "{options.font.weight.normal.value}",
         "mixin": "textEditorialCompact",
         "property": "font-weight",
-        "newMixin": "text-default-compact",
-        "newToken": "text-default-compact-weight",
+        "newMixin": "text-default",
+        "newToken": "text-default-weight",
         "docs": {
           "category": "text",
           "type": "editorial",
@@ -5212,8 +5212,8 @@
       "category": "letter-spacing",
       "mixin": "cdr-textEditorialCompact",
       "property": "letter-spacing",
-      "newMixin": "text-default-compact",
-      "newToken": "text-default-compact-spacing",
+      "newMixin": "text-default",
+      "newToken": "text-default-spacing",
       "docs": {
         "category": "text",
         "type": "editorial",
@@ -5224,8 +5224,8 @@
         "category": "letter-spacing",
         "mixin": "textEditorialCompact",
         "property": "letter-spacing",
-        "newMixin": "text-default-compact",
-        "newToken": "text-default-compact-spacing",
+        "newMixin": "text-default",
+        "newToken": "text-default-spacing",
         "docs": {
           "category": "text",
           "type": "editorial",
@@ -5246,8 +5246,8 @@
       "category": "font-size",
       "mixin": "cdr-textEditorialCompact",
       "property": "font-size",
-      "newMixin": "text-default-compact",
-      "newToken": "text-default-compact-size",
+      "newMixin": "text-default",
+      "newToken": "text-default-size",
       "docs": {
         "category": "text",
         "type": "editorial",
@@ -5258,8 +5258,8 @@
         "category": "font-size",
         "mixin": "textEditorialCompact",
         "property": "font-size",
-        "newMixin": "text-default-compact",
-        "newToken": "text-default-compact-size",
+        "newMixin": "text-default",
+        "newToken": "text-default-size",
         "docs": {
           "category": "text",
           "type": "editorial",
@@ -5281,8 +5281,8 @@
       "category": "size",
       "mixin": "cdr-textEditorialCompact",
       "property": "line-height",
-      "newMixin": "text-default-compact",
-      "newToken": "text-default-compact-height",
+      "newMixin": "text-default",
+      "newToken": "text-default-height",
       "docs": {
         "category": "text",
         "type": "editorial",
@@ -5293,8 +5293,8 @@
         "category": "size",
         "mixin": "textEditorialCompact",
         "property": "line-height",
-        "newMixin": "text-default-compact",
-        "newToken": "text-default-compact-height",
+        "newMixin": "text-default",
+        "newToken": "text-default-height",
         "docs": {
           "category": "text",
           "type": "editorial",
@@ -5311,7 +5311,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textDefault",
       "property": "font-family",
       "docs": {
@@ -5320,7 +5320,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.sans.value}",
+        "value": "{options.font.family.legacy.sans.value}",
         "mixin": "textDefault",
         "property": "font-family",
         "docs": {
@@ -5471,7 +5471,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textDefaultCompact",
       "property": "font-family",
       "docs": {
@@ -5480,7 +5480,7 @@
         "example": "text"
       },
       "original": {
-        "value": "{options.font.family.sans.value}",
+        "value": "{options.font.family.legacy.sans.value}",
         "mixin": "textDefaultCompact",
         "property": "font-family",
         "docs": {
@@ -5631,7 +5631,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay600",
       "property": "font-family",
       "docs": {
@@ -5791,7 +5791,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay700",
       "property": "font-family",
       "docs": {
@@ -5951,7 +5951,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay800",
       "property": "font-family",
       "docs": {
@@ -6111,7 +6111,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay900",
       "property": "font-family",
       "docs": {
@@ -6271,7 +6271,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay1000",
       "property": "font-family",
       "docs": {
@@ -6431,7 +6431,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay1100",
       "property": "font-family",
       "docs": {
@@ -6591,7 +6591,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textDisplay1200",
       "property": "font-family",
       "docs": {
@@ -6751,7 +6751,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeading300",
       "property": "font-family",
       "docs": {
@@ -6911,7 +6911,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeading400",
       "property": "font-family",
       "docs": {
@@ -7071,7 +7071,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textHeading500",
       "property": "font-family",
       "docs": {
@@ -7231,7 +7231,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textHeading600",
       "property": "font-family",
       "docs": {
@@ -7391,7 +7391,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textHeading700",
       "property": "font-family",
       "docs": {
@@ -7551,7 +7551,7 @@
       }
     },
     {
-      "value": "\"REI Stuart App\", Sentinel, Georgia, serif",
+      "value": "Stuart, Sentinel, Georgia, serif",
       "mixin": "cdr-textHeading800",
       "property": "font-family",
       "docs": {
@@ -7711,7 +7711,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textSubheading300",
       "property": "font-family",
       "docs": {
@@ -7871,7 +7871,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textSubheading400",
       "property": "font-family",
       "docs": {
@@ -8031,7 +8031,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textSubheading500",
       "property": "font-family",
       "docs": {
@@ -8191,7 +8191,7 @@
       }
     },
     {
-      "value": "\"Graphik App\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
       "mixin": "cdr-textSubheading600",
       "property": "font-family",
       "docs": {
@@ -8348,6 +8348,30 @@
         "option": false,
         "deprecated": false,
         "category": "size"
+      }
+    }
+  ],
+  "misc": [
+    {
+      "value": "Stuart",
+      "original": {
+        "value": "{options.font.family.serif-main.value}"
+      },
+      "name": "cdr-font-family-serif",
+      "attributes": {
+        "option": false,
+        "deprecated": false
+      }
+    },
+    {
+      "value": "Graphik",
+      "original": {
+        "value": "{options.font.family.sans-main.value}"
+      },
+      "name": "cdr-font-family-sans",
+      "attributes": {
+        "option": false,
+        "deprecated": false
       }
     }
   ]
