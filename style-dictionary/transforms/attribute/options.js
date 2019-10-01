@@ -1,5 +1,5 @@
 module.exports = (StyleDictionary) => {
-  // Mark everything as either a options or not for filtering output
+  // Mark everything as either an options or not for filtering output
   StyleDictionary.registerTransform({
     name: 'attribute/option',
     type: 'attribute',

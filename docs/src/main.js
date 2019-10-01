@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 
 // Cedar css
-import '@rei/cdr-assets/dist/cdr-core.css';
-import '@rei/cdr-assets/dist/cdr-fonts.css';
+import '@rei/cedar/dist/cedar.css';
+import '@rei/cedar/dist/cdr-fonts.css';
 
 Vue.config.productionTip = false
 

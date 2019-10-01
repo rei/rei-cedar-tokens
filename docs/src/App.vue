@@ -1,5 +1,6 @@
 <template>
   <div class="cdr-container-fluid">
+    <p>Accurate for version {{ tokenPackage.version }}</p>
     <div
       v-for="(data, platform) in Tokens"
       :key="platform"
@@ -33,6 +34,7 @@
 </template>
 
 <script>
+import tokenPackage from '../../package.json';
 import Tokens from './assets/cdr-tokens.json';
 import Category from './components/Category';
 
@@ -44,6 +46,7 @@ export default {
   data() {
     return {
       Tokens,
+      tokenPackage,
     };
   },
 }

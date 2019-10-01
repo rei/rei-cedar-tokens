@@ -3,7 +3,10 @@
     <td>
       <span :style="mixinStyles(prop)">Get outside with REI</span>
     </td>
-    <td>{{mixinName}}</td>
+    <td>
+      <p v-if="isDeprecated">---DEPRECATED---</p>
+      {{mixinName}}
+    </td>
     <td>mixin</td>
   </tr>
 </template>
@@ -28,6 +31,9 @@ export default {
   computed: {
     mixinName() {
       return kebab(this.prop[0].mixin);
+    },
+    isDeprecated() {
+      return this.prop[0].attributes.deprecated;
     }
   }
 }

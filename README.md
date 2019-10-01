@@ -14,6 +14,11 @@
 
     ** REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
 
+## Updating
+
+If you are consuming tokens in SCSS, there are deprecation warnings for variables, mixins, etc. that will appear in the console during your build. These can be silenced by adding a variable to your code called `cdr-warn` and setting it to false like this: `$cdr-warn: false;`
+
+All other formats should consult the changelog for a migration path.
 
 ## Contributing
 
@@ -62,7 +67,6 @@ property        # Used with mixin -- the css property the value is applied to wi
 'utility-class' # Boolean -- Used to create scss maps of properties to more easily generate utility classes in cedar
 ```
 
-
 #### Options
 
 Found in `tokens/_options/`
@@ -71,9 +75,9 @@ Options are skipped and do not get exported for consumers. However they can be [
 
 **NOTE:** "options" needs to be the root key in the file.
 
-```
+```js
 {
-  options: { <-- anything beneath this will be ignored in output
+  options: { // <-- anything beneath this will be ignored in output
     color: {
       'easily-excited': {
         value: '#3278ae',
@@ -83,7 +87,7 @@ Options are skipped and do not get exported for consumers. However they can be [
         value: '#292929',
         category: 'color',
       },
-      ...
+      // ...
     },
   }
 }
@@ -95,17 +99,17 @@ Output **won't** have a token named `options-color-easily-excited`.
 
 Token names are defined by the hierarchy of the object:
 
-```
+```js
 {
   text: {
     body: {
       default: {
         size: {
-          value: '23',
+          value: '23px',
           category: 'font-size',
         },
         height: {
-          value: '25',
+          value: '25px',
           category: 'size',
         },
       },
@@ -130,20 +134,18 @@ For example, a category of "size" will transform to 'rem' for SCSS/LESS but 'dp'
 
 Categories are one of the following:
 
-- size
-    - Anything that would have a value in px. With the exception of font-size
-- font-size
-    - Anything that defines a text size
-- color
-    - Anything that defines a color
-- time
-    - Anything the defines a timing
+- `size`: Anything that would have a value in px. With the exception of font-size
+- `font-size`: Anything that defines a text size
+- `letter-spacing`: exists too?
+- `color`: Anything that defines a color
+- `time`: Anything the defines a timing
+- Values without a category will not be transformed: Anything that is a string like `'normal'` or `'italic'`
 
 #### Referencing Options (or other values)
 
 See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties?id=attribute-reference-alias)
 
-```
+```js
 {
   color: {
     text: {
@@ -151,8 +153,87 @@ See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties
         'on-dark': {
           value: '{options.color.heart-of-darkness}',
           category: 'color',
-          docCategory: 'colors',
-          docExample: 'color'
+          docs: {
+            category: 'colors',
+            type: 'text',
+            example: 'color'
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Documentation within tokens
+
+Tokens also have data that can be added to them to help generate documentation & examples. To get an idea of how this data is used see [the tokens example page](https://rei.github.io/rei-cedar-tokens/). This data is mostly used to create groupings of tokens and is not used to do transforms on token values, only for display in docs.
+
+The docs object looks like this:
+
+```js
+docs: {
+  category: String,     // Large, broad groupings of things (i.e. color, spacing)
+  type: String,         // Sub category (i.e. background (color) or inset (spacing))
+  example: String,      // Used to determine how to display a visual representation of a token
+                        // Current options (see docs/src/components/PropSorter.vue): color, spacing, sizing, radius, prominence, text, inset, breakpoint, timing, duration, an empty example defaults to 'token' which is just a string representation of the value.
+  description: String,  // Short description of the token and/or suggested usage (displayed on the cedar docs site)
+}
+```
+
+### Deprecating tokens
+
+Deprecated tokens should be moved to a seprate file (or into the existing file) which corresponds to the release cycle in which they will be deprecated.
+
+For example, if tokens will be considered deprecated in the "Winter 2019" release they would be moved into a file called `deprecated-2019-winter.json5` in whichever directory they currently reside. Structure for naming the file is : `deprecated-<year>-<release>`
+
+Additionally, the contents will be wrapped inside an object with a key that corresponds to the release as well (so we can auto generate some deprecation warnings with the correct release). The key matches the naming of the file. See below for an example.
+
+```js
+{
+  'deprecated-2019-winter`: {  // <-------- `deprecated-<year>-<release>`
+      color: {
+        text: {
+          primary: {
+            'on-dark': {
+              value: '{options.color.heart-of-darkness}',
+            category: 'color',
+            docs: {
+              category: 'colors',
+              type: 'text',
+              example: 'color'
+            }
+          }
+        }
+      }
+    }
+    // ...
+  }
+}
+```
+
+#### Providing a migration path
+
+When tokens are deprecated they can also be provided a new token name or new mixin name to use instead which will be provided in the SASS deprecation warning:
+
+```js
+{
+  'deprecated-2019-winter': {
+    text: {
+      header: {
+        '1': {
+          family: {
+            value: '{options.font.family.serif.value}',
+            mixin: 'textHeader1',
+            property: 'font-family',
+            newMixin: 'new-mixin-name',             //<--- a new mixin name to use instead of the deprecated one
+            newToken: 'new-token-name',             //<--- a new token name to use instead of the deprecated one
+            docs: {
+              category: '{text.docCategory}',
+              type: 'header',
+              example: '{text.docExample}',
+            },
+          },
         }
       }
     }

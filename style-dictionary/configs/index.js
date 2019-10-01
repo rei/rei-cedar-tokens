@@ -10,6 +10,7 @@ const siteGlobalConfig = require('./site.global');
 const siteWebConfig = require('./site.web');
 const siteAndroidConfig = require('./site.android');
 const siteIosConfig = require('./site.ios');
+const sketchConfig = require('./sketch');
 
 // this is the filter for excluding "option" tokens
 // and works in concert with transforms/attribute/option.js
@@ -50,6 +51,10 @@ function getSources(platform) {
     // eslint-disable-next-line quotes
     return [`tokens/mobile/**/*.json5`];
   }
+  if (platform === 'sketch') {
+    // eslint-disable-next-line quotes
+    return [`tokens/web/**/*.json5`];
+  }
 }
 
 function getConfigs(platform) {
@@ -73,6 +78,9 @@ function getConfigs(platform) {
   }
   if (platform === 'site/ios') {
     return filterOptions([siteIosConfig]);
+  }
+  if (platform === 'sketch') {
+    return filterOptions([sketchConfig]);
   }
 }
 

@@ -19,18 +19,18 @@ module.exports = (StyleDictionary) => {
             fs.renameSync(v1, newPath);
             return true;
           }
-          return false
+          return false;
         });
 
-        
+
         // output concat paths
         concat(concatPaths).then((r) => {
           const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`);
           fs.outputFileSync(outFile, r);
         });
-        
+
         // remove concated files
-        concatPaths.forEach(p => {
+        concatPaths.forEach((p) => {
           fs.removeSync(p);
         });
       });
