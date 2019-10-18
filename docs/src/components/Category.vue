@@ -1,7 +1,7 @@
 <template>
   <div class="cdr-container ">
     <h2 class="category-title">{{ categoryTitle }}</h2>
-    
+
     <div
       v-for="(v,k) in typeData"
       :key="k"
@@ -14,6 +14,7 @@
       <table
         v-if="otherTokens(v).length > 0"
         class="prop-table"
+        data-backstop="capture"
       >
         <tbody class="prop-tbody">
           <prop-sorter
@@ -29,6 +30,7 @@
           v-for="(v,k) in mixinTokens(v)"
           :key="k"
           class="prop-table mixins"
+          data-backstop="capture"
         >
           <tbody class="prop-tbody">
             <mixin-sorter
