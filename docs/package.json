@@ -6,7 +6,11 @@
     "dev": "npm run copy-data && vue-cli-service serve",
     "build": "npm run copy-data && vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "copy-data": "node ./copyTokens.js"
+    "copy-data": "node ./copyTokens.js",
+    "reference": "backstop reference",
+    "compare": "backstop test",
+    "approve": "backstop approve"
+
   },
   "dependencies": {
     "vue": "^2.6.10"
