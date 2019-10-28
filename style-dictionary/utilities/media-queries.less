@@ -1,0 +1,54 @@
+// DON'T MOVE THIS FILE
+// It will be copied into `dist`
+
+// XS
+.xs-mq(@rules) {
+  @media (min-width: @cdr-breakpoint-xs) {
+    @rules();
+  }
+}
+
+.xs-mq-only(@rules) {
+  @media (min-width: @cdr-breakpoint-xs) and (max-width: calc(@cdr-breakpoint-sm - 1px)) {
+    @rules();
+  }
+}
+
+// SM
+.sm-mq(@rules) {
+  @media (min-width: @cdr-breakpoint-sm) {
+    @rules();
+  }
+}
+
+.sm-mq-only(@rules) {
+  @media (min-width: @cdr-breakpoint-sm) and (max-width: calc(@cdr-breakpoint-md - 1px)) {
+    @rules();
+  }
+}
+
+// MD
+.md-mq(@rules) {
+  @media (min-width: @cdr-breakpoint-md) {
+    @rules();
+  }
+}
+
+.md-mq-only(@rules) {
+  @media (min-width: @cdr-breakpoint-md) and (max-width: calc(@cdr-breakpoint-lg - 1px)) {
+    @rules();
+  }
+}
+
+// LG
+.lg-mq(@rules) {
+  @media (min-width: @cdr-breakpoint-lg) {
+    @rules();
+  }
+}
+
+.lg-mq-only(@rules) {
+  @media (min-width: @cdr-breakpoint-lg) {
+    @rules();
+  }
+}
