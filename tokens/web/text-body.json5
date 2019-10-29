@@ -200,5 +200,204 @@ text: {
         },
       }
     },
+
+    // body strong
+    "body-strong": {
+      '300': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textBodyStrong300',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textBodyStrong300',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textBodyStrong300',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing."normal-loose".value}',
+          category: 'letter-spacing',
+          mixin: 'textBodyStrong300',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.300.value}',
+          category: 'font-size',
+          mixin: 'textBodyStrong300',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.600.value}',
+          category: 'size',
+          mixin: 'textBodyStrong300',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '400': {
+          family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textBodyStrong400',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textBodyStrong400',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textBodyStrong400',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textBodyStrong400',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.400.value}',
+          category: 'font-size',
+          mixin: 'textBodyStrong400',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textBodyStrong400',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '500': {
+          family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textBodyStrong500',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textBodyStrong500',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textBodyStrong500',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing."normal-tight".value}',
+          category: 'letter-spacing',
+          mixin: 'textBodyStrong500',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.500.value}',
+          category: 'font-size',
+          mixin: 'textBodyStrong500',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1000.value}',
+          category: 'size',
+          mixin: 'textBodyStrong400',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'body',
+            example: '{text.docExample}',
+          },
+        },
+      }
+    },
   },
 }
