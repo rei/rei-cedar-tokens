@@ -3,71 +3,79 @@
     docCategory: 'text',
     docExample: 'text',
 
-    // default
-    default: {
-      family: {
-        value: '{options.font.family.legacy.sans.value}',
-        mixin: 'textDefault',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
+    // utility
+    utility: {
+      000:{
+        family: {
+          value: '{options.font.family.something.value}',
+          mixin: 'textMontes000',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'montes',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.something.value}',
+          mixin: 'textMontes000',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'montes',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.something.value}',
+          mixin: 'textMontes000',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'montes',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.something.value}',
+          category: 'letter-spacing',
+          mixin: 'textMontes000',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'montes',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.something.value}',
+          category: 'font-size',
+          mixin: 'textMontes000',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'montes',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.something.value}',
+          category: 'size',
+          mixin: 'textMontes000',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'montes',
+            example: '{text.docExample}',
+          },
         },
       },
-      style: {
-        value: '{options.font.style.normal.value}',
-        mixin: 'textDefault',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
-      },
-      weight: {
-        value: '{options.font.weight.normal.value}',
-        mixin: 'textDefault',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
-      },
-      spacing: {
-        value: '{options.font.spacing.normal.value}',
-        category: 'letter-spacing',
-        mixin: 'textDefault',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
-      },
-      size: {
-        value: '{options.font.size.300.value}',
-        category: 'font-size',
-        mixin: 'textDefault',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
-      },
-      height: {
-        value: '{options.font.height.600.value}',
-        category: 'size',
-        mixin: 'textDefault',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
-      },
+    },
+    'utility-strong':{
+    },
+    'utility-serif':{
+    },
+    'utility-serif-strong':{
     },
   },
 }
