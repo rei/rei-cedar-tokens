@@ -5,9 +5,9 @@
       family: {
         'serif-main': { value: 'Stuart'},
         'serif-fallback': { value: 'Sentinel, Georgia, serif'},
-        serif: { value: '{options.font.family.serif-main.value}, {options.font.family.serif-fallback.value}' },
         'sans-main': { value: 'Graphik'},
         'sans-fallback': { value: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif'},
+        serif: { value: '{options.font.family.serif-main.value}, {options.font.family.serif-fallback.value}' },
         sans: { value: '{options.font.family.sans-main.value}, {options.font.family.sans-fallback.value}' },
         mono: { value: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace' },
         legacy: {
@@ -49,7 +49,7 @@
         tight:              { value: '-0.16px', category: 'letter-spacing',},
         "normal-tight" :    { value: '-0.08px', category: 'letter-spacing',},
         normal:             { value: '0px',     category: 'letter-spacing',}, // 'normal' ?
-        "normal-loose" :    { value: '0.08px', category: 'letter-spacing',},
+        "normal-loose" :    { value: '0.08px',  category: 'letter-spacing',},
         loose:              { value: '0.16px',  category: 'letter-spacing',},
         looser:             { value: '0.32px',  category: 'letter-spacing',},
         loosest:            { value: '0.64px',  category: 'letter-spacing',},
