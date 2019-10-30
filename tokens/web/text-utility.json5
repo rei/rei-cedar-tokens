@@ -3,7 +3,6 @@
     docCategory: 'text',
     docExample: 'text',
 
-    // utility
     utility: {
       '100':{
         family: {
@@ -526,6 +525,7 @@
         },
       },
     },
+    
     'utility-strong': {
       '100':{
         family: {
@@ -1048,6 +1048,7 @@
         },
       },
     },
+    
     'utility-serif': {
       '200':{
         family: {
@@ -1505,8 +1506,464 @@
         },
       },
     },
-    // 'utility-serif-strong':{
-    // },
+
+    'utility-serif-strong': {
+      '200':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility200',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility200',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility200',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal-tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility200',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.200.value}',
+          category: 'font-size',
+          mixin: 'textUtility200',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.200.value}',
+          category: 'size',
+          mixin: 'textUtility200',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '300':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility300',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility300',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility300',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal-tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility300',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.300.value}',
+          category: 'font-size',
+          mixin: 'textUtility300',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.400.value}',
+          category: 'size',
+          mixin: 'textUtility300',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '400':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility400',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility400',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility400',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal-tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility400',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.400.value}',
+          category: 'font-size',
+          mixin: 'textUtility400',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.500.value}',
+          category: 'size',
+          mixin: 'textUtility400',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '500':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility500',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility500',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility500',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal-tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility500',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.500.value}',
+          category: 'font-size',
+          mixin: 'textUtility500',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.600.value}',
+          category: 'size',
+          mixin: 'textUtility500',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '600':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility600',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility600',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility600',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility600',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.600.value}',
+          category: 'font-size',
+          mixin: 'textUtility600',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textUtility600',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '700':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility700',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility700',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility700',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility700',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.700.value}',
+          category: 'font-size',
+          mixin: 'textUtility700',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1000.value}',
+          category: 'size',
+          mixin: 'textUtility700',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+      '800':{
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textUtility800',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textUtility800',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textUtility800',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textUtility800',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.800.value}',
+          category: 'font-size',
+          mixin: 'textUtility800',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.1100.value}',
+          category: 'size',
+          mixin: 'textUtility800',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'utility',
+            example: '{text.docExample}',
+          },
+        },
+      },
+    },
 
   },
 }
