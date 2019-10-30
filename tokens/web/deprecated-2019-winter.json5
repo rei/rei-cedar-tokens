@@ -1,11 +1,11 @@
 {
-  'deprecated-2019-winter': {
+  'deprecated-2019-winter': { 
     text: {
       
-      // default – maps to body-300
+      // default
       default: {
         family: {
-          value: '{text.body.300.family.value}',
+          value: '{options.font.family.legacy.sans.value}',
           mixin: 'textDefault',
           property: 'font-family',
           docs: {
@@ -15,7 +15,7 @@
           },
         },
         style: {
-          value: '{text.body.300.style.value}',
+          value: '{options.font.style.normal.value}',
           mixin: 'textDefault',
           property: 'font-style',
           docs: {
@@ -25,7 +25,7 @@
           },
         },
         weight: {
-          value: '{text.body.300.weight.value}',
+          value: '{options.font.weight.normal.value}',
           mixin: 'textDefault',
           property: 'font-weight',
           docs: {
@@ -35,7 +35,7 @@
           },
         },
         spacing: {
-          value: '{text.body.300.spacing.value}',
+          value: '{options.font.spacing.normal.value}',
           category: 'letter-spacing',
           mixin: 'textDefault',
           property: 'letter-spacing',
@@ -46,7 +46,7 @@
           },
         },
         size: {
-          value: '{text.body.300.size.value}',
+          value: '{options.font.size.300.value}',
           category: 'font-size',
           mixin: 'textDefault',
           property: 'font-size',
@@ -57,7 +57,7 @@
           },
         },
         height: {
-          value: '{text.body.300.height.value}',
+          value: '{options.font.height.600.value}',
           category: 'size',
           mixin: 'textDefault',
           property: 'line-height',
@@ -69,10 +69,10 @@
         },
       },
 
-      // default-compact – maps to utility-200
+      // default-compact
       'default-compact': {
         family: {
-          value: '{text.utility.200.family.value}',
+          value: '{options.font.family.legacy.sans.value}',
           mixin: 'textDefaultCompact',
           property: 'font-family',
           docs: {
@@ -82,7 +82,7 @@
           },
         },
         style: {
-          value: '{text.utility.200.style.value}',
+          value: '{options.font.style.normal.value}',
           mixin: 'textDefaultCompact',
           property: 'font-style',
           docs: {
@@ -92,7 +92,7 @@
           },
         },
         weight: {
-          value: '{text.utility.200.weight.value}',
+          value: '{options.font.weight.normal.value}',
           mixin: 'textDefaultCompact',
           property: 'font-weight',
           docs: {
@@ -102,7 +102,7 @@
           },
         },
         spacing: {
-          value: '{text.utility.200.spacing.value}',
+          value: '{options.font.spacing.normal.value}',
           category: 'letter-spacing',
           mixin: 'textDefaultCompact',
           property: 'letter-spacing',
@@ -113,7 +113,7 @@
           },
         },
         size: {
-          value: '{text.utility.200.size.value}',
+          value: '{options.font.size.200.value}',
           category: 'font-size',
           mixin: 'textDefaultCompact',
           property: 'font-size',
@@ -124,7 +124,7 @@
           },
         },
         height: {
-          value: '{text.utility.200.height.value}',
+          value: '{options.font.height.500.value}',
           category: 'size',
           mixin: 'textDefaultCompact',
           property: 'line-height',
