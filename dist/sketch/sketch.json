@@ -1340,15 +1340,16 @@
     {
       "name": "cdr-text-default",
       "value": {
-        "fontFamily": "Roboto",
+        "fontFamily": "Graphik",
         "fontStyle": "normal",
         "fontWeightOriginal": 400,
         "fontWeight": 6,
-        "letterSpacing": "0",
+        "letterSpacing": 0.08,
         "fontSize": 16,
         "lineHeight": 26
       },
       "path": [
+        "deprecated-2019-winter",
         "text",
         "default",
         "height"
@@ -1357,18 +1358,144 @@
     {
       "name": "cdr-text-default-compact",
       "value": {
-        "fontFamily": "Roboto",
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.16,
+        "fontSize": 14,
+        "lineHeight": 18
+      },
+      "path": [
+        "deprecated-2019-winter",
+        "text",
+        "default-compact",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-body-300",
+      "value": {
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": 0.08,
+        "fontSize": 16,
+        "lineHeight": 26
+      },
+      "path": [
+        "text",
+        "body",
+        "300",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-body-400",
+      "value": {
+        "fontFamily": "Graphik",
         "fontStyle": "normal",
         "fontWeightOriginal": 400,
         "fontWeight": 6,
         "letterSpacing": "0",
-        "fontSize": 14,
-        "lineHeight": 24
+        "fontSize": 18,
+        "lineHeight": 36
       },
       "path": [
         "text",
-        "default-compact",
+        "body",
+        "500",
         "height"
+      ]
+    },
+    {
+      "name": "cdr-text-body-500",
+      "value": {
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.16,
+        "fontSize": 20
+      },
+      "path": [
+        "text",
+        "body",
+        "500",
+        "size"
+      ]
+    },
+    {
+      "name": "cdr-text-body-strong-300",
+      "value": {
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": 0.08,
+        "fontSize": 16,
+        "lineHeight": 26
+      },
+      "path": [
+        "text",
+        "body-strong",
+        "300",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-body-strong-400",
+      "value": {
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": "0",
+        "fontSize": 18,
+        "lineHeight": 36
+      },
+      "path": [
+        "text",
+        "body-strong",
+        "500",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-body-strong-500",
+      "value": {
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.08,
+        "fontSize": 20
+      },
+      "path": [
+        "text",
+        "body-strong",
+        "500",
+        "size"
+      ]
+    },
+    {
+      "name": "cdr-text-eyebrow-100",
+      "value": {
+        "fontFamily": "Graphik",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 500,
+        "fontWeight": 7,
+        "letterSpacing": 0.32,
+        "fontSize": 12,
+        "lineHeight": 18,
+        "textTransform": "uppercase"
+      },
+      "path": [
+        "text",
+        "eyebrow",
+        "100",
+        "transform"
       ]
     },
     {
@@ -1846,7 +1973,7 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.16,
+        "letterSpacing": -0.08,
         "fontSize": 14,
         "lineHeight": 18
       },
@@ -1864,7 +1991,7 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.16,
+        "letterSpacing": -0.08,
         "fontSize": 16,
         "lineHeight": 22
       },
@@ -1882,7 +2009,7 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.16,
+        "letterSpacing": -0.08,
         "fontSize": 18,
         "lineHeight": 24
       },
@@ -1900,7 +2027,7 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.32,
+        "letterSpacing": -0.16,
         "fontSize": 20,
         "lineHeight": 26
       },
@@ -1918,7 +2045,7 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.32,
+        "letterSpacing": -0.16,
         "fontSize": 24,
         "lineHeight": 30
       },
@@ -1936,7 +2063,7 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.32,
+        "letterSpacing": -0.16,
         "fontSize": 28,
         "lineHeight": 36
       },
@@ -1954,13 +2081,265 @@
         "fontStyle": "normal",
         "fontWeightOriginal": 600,
         "fontWeight": 8,
-        "letterSpacing": -0.64,
+        "letterSpacing": -0.32,
         "fontSize": 32,
         "lineHeight": 40
       },
       "path": [
         "text",
         "utility-strong",
+        "800",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-200",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.08,
+        "fontSize": 14,
+        "lineHeight": 18
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "200",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-300",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.08,
+        "fontSize": 16,
+        "lineHeight": 22
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "300",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-400",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.16,
+        "fontSize": 18,
+        "lineHeight": 24
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "400",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-500",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.32,
+        "fontSize": 20,
+        "lineHeight": 26
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "500",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-600",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.32,
+        "fontSize": 24,
+        "lineHeight": 30
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "600",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-700",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.32,
+        "fontSize": 28,
+        "lineHeight": 36
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "700",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-800",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 400,
+        "fontWeight": 6,
+        "letterSpacing": -0.32,
+        "fontSize": 32,
+        "lineHeight": 40
+      },
+      "path": [
+        "text",
+        "utility-serif",
+        "800",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-200",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.08,
+        "fontSize": 14,
+        "lineHeight": 18
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
+        "200",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-300",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.08,
+        "fontSize": 16,
+        "lineHeight": 22
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
+        "300",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-400",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.08,
+        "fontSize": 18,
+        "lineHeight": 24
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
+        "400",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-500",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.08,
+        "fontSize": 20,
+        "lineHeight": 26
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
+        "500",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-600",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.16,
+        "fontSize": 24,
+        "lineHeight": 30
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
+        "600",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-700",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.16,
+        "fontSize": 28,
+        "lineHeight": 36
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
+        "700",
+        "height"
+      ]
+    },
+    {
+      "name": "cdr-text-utility-serif-strong-800",
+      "value": {
+        "fontFamily": "Stuart",
+        "fontStyle": "normal",
+        "fontWeightOriginal": 600,
+        "fontWeight": 8,
+        "letterSpacing": -0.16,
+        "fontSize": 32,
+        "lineHeight": 40
+      },
+      "path": [
+        "text",
+        "utility-serif-strong",
         "800",
         "height"
       ]
