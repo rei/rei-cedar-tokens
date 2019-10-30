@@ -1,0 +1,85 @@
+{
+  text: {
+    docCategory: 'text',
+    docExample: 'text',
+
+    // eyebrow
+    eyebrow: {
+      '100': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textEyebrow100',
+          property: 'font-family',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textEyebrow100',
+          property: 'font-style',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textEyebrow100',
+          property: 'font-weight',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.looser.value}',
+          category: 'letter-spacing',
+          mixin: 'textEyebrow100',
+          property: 'letter-spacing',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+        size: {
+          value: '{options.font.size.100.value}',
+          category: 'font-size',
+          mixin: 'textEyebrow100',
+          property: 'font-size',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+        height: {
+          value: '{options.font.height.200.value}',
+          category: 'size',
+          mixin: 'textEyebrow100',
+          property: 'line-height',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+        transform: {
+          value: 'uppercase',
+          mixin: 'textEyebrow100',
+          property: 'text-transform',
+          docs: {
+            category: '{text.docCategory}',
+            type: 'eyebrow',
+            example: '{text.docExample}',
+          },
+        },
+      },
+    },
+  },
+}
