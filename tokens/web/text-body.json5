@@ -1,4 +1,5 @@
-text: {
+{
+  text: {
     docCategory: 'text',
     docExample: 'text',
 
@@ -36,7 +37,7 @@ text: {
           },
         },
         spacing: {
-          value: '{options.font.spacing."normal-loose".value}',
+          value: '{options.font.spacing.normal-loose.value}',
           category: 'letter-spacing',
           mixin: 'textBody300',
           property: 'letter-spacing',
@@ -235,7 +236,7 @@ text: {
           },
         },
         spacing: {
-          value: '{options.font.spacing."normal-loose".value}',
+          value: '{options.font.spacing.normal-loose.value}',
           category: 'letter-spacing',
           mixin: 'textBodyStrong300',
           property: 'letter-spacing',
@@ -365,7 +366,7 @@ text: {
           },
         },
         spacing: {
-          value: '{options.font.spacing."normal-tight".value}',
+          value: '{options.font.spacing.normal-tight.value}',
           category: 'letter-spacing',
           mixin: 'textBodyStrong500',
           property: 'letter-spacing',
@@ -399,5 +400,6 @@ text: {
         },
       }
     },
+
   },
 }
