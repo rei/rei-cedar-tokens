@@ -593,3 +593,57 @@ $cdr-text-subheading-600-weight: 500;
 $cdr-text-subheading-600-spacing: -0.16px;
 $cdr-text-subheading-600-size: 2.4rem;
 $cdr-text-subheading-600-height: 3rem;
+// DON'T MOVE THIS FILE
+// It will be copied into `dist`
+
+// XS
+@mixin cdr-xs-mq {
+  @media (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin cdr-xs-mq-only {
+  @media (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+}
+
+// SM
+@mixin cdr-sm-mq {
+  @media (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq-only {
+  @media (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+}
+
+// MD
+@mixin cdr-md-mq {
+  @media (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq-only {
+  @media (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+}
+
+// LG
+@mixin cdr-lg-mq {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq-only {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
