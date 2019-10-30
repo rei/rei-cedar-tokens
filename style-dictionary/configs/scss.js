@@ -21,6 +21,6 @@ module.exports = {
         format: 'scss/map',
       },
     ],
-    actions: ['concat_files', 'include_deprecate_scss'],
+    actions: ['include_media_queries_scss', 'concat_files', 'include_deprecate_scss'],
   },
 };
