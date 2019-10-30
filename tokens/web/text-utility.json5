@@ -526,7 +526,6 @@
         },
       },
     },
-    // TODO: update strong letter spacing its different than normal
     'utility-strong': {
       '100':{
         family: {
@@ -625,7 +624,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tight.value}',
+          value: '{options.font.spacing.normal-tight.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong200',
           property: 'letter-spacing',
@@ -690,7 +689,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tight.value}',
+          value: '{options.font.spacing.normal-tight.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong300',
           property: 'letter-spacing',
@@ -755,7 +754,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tight.value}',
+          value: '{options.font.spacing.normal-tight.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong400',
           property: 'letter-spacing',
@@ -820,7 +819,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tighter.value}',
+          value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong500',
           property: 'letter-spacing',
@@ -885,7 +884,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tighter.value}',
+          value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong600',
           property: 'letter-spacing',
@@ -950,7 +949,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tighter.value}',
+          value: '{options.font.spacing.tight.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong700',
           property: 'letter-spacing',
@@ -1015,7 +1014,7 @@
           },
         },
         spacing: {
-          value: '{options.font.spacing.tightest.value}',
+          value: '{options.font.spacing.tighter.value}',
           category: 'letter-spacing',
           mixin: 'textUtilityStrong800',
           property: 'letter-spacing',
