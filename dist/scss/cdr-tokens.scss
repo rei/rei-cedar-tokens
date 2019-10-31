@@ -103,24 +103,24 @@
 
 // DEPRECATED
 @mixin cdr-text-default() {
-  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.08px;
+  letter-spacing: 0px;
   font-size: 1.6rem;
   line-height: 2.6rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-default", null);
+  @include deprecate-mixin(2019, "winter", "cdr-text-default", "cdr-text-body-300");
 }
 
 // DEPRECATED
 @mixin cdr-text-default-compact() {
-  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -0.16px;
+  letter-spacing: 0px;
   font-size: 1.4rem;
-  line-height: 1.8rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-default-compact", null);
+  line-height: 2.4rem;
+  @include deprecate-mixin(2019, "winter", "cdr-text-default-compact", "cdr-text-utility-200");
 }
 
 @mixin cdr-text-body-300() {
@@ -815,18 +815,18 @@ $cdr-text-editorial-compact-weight: 400;
 $cdr-text-editorial-compact-spacing: 0px;
 $cdr-text-editorial-compact-size: 1.8rem;
 $cdr-text-editorial-compact-height: 2.8rem;
-$cdr-text-default-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-default-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-default-style: normal;
 $cdr-text-default-weight: 400;
-$cdr-text-default-spacing: 0.08px;
+$cdr-text-default-spacing: 0px;
 $cdr-text-default-size: 1.6rem;
 $cdr-text-default-height: 2.6rem;
-$cdr-text-default-compact-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-default-compact-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-default-compact-style: normal;
 $cdr-text-default-compact-weight: 400;
-$cdr-text-default-compact-spacing: -0.16px;
+$cdr-text-default-compact-spacing: 0px;
 $cdr-text-default-compact-size: 1.4rem;
-$cdr-text-default-compact-height: 1.8rem;
+$cdr-text-default-compact-height: 2.4rem;
 $cdr-font-family-serif: Stuart;
 $cdr-font-family-sans: Graphik;
 $cdr-text-body-300-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;

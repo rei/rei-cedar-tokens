@@ -5322,18 +5322,22 @@
         }
       },
       {
-        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textDefault",
         "property": "font-family",
+        "newMixin": "text-body-300",
+        "newToken": "text-body-300-family",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.body.300.family.value}",
+          "value": "{options.font.family.legacy.sans.value}",
           "mixin": "textDefault",
           "property": "font-family",
+          "newMixin": "text-body-300",
+          "newToken": "text-body-300-family",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5352,15 +5356,19 @@
         "value": "normal",
         "mixin": "cdr-textDefault",
         "property": "font-style",
+        "newMixin": "text-body-300",
+        "newToken": "text-body-300-style",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.body.300.style.value}",
+          "value": "{options.font.style.normal.value}",
           "mixin": "textDefault",
           "property": "font-style",
+          "newMixin": "text-body-300",
+          "newToken": "text-body-300-style",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5379,15 +5387,19 @@
         "value": "400",
         "mixin": "cdr-textDefault",
         "property": "font-weight",
+        "newMixin": "text-body-300",
+        "newToken": "text-body-300-weight",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.body.300.weight.value}",
+          "value": "{options.font.weight.normal.value}",
           "mixin": "textDefault",
           "property": "font-weight",
+          "newMixin": "text-body-300",
+          "newToken": "text-body-300-weight",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5403,20 +5415,24 @@
         }
       },
       {
-        "value": "0.08px",
+        "value": "0px",
         "category": "letter-spacing",
         "mixin": "cdr-textDefault",
         "property": "letter-spacing",
+        "newMixin": "text-body-300",
+        "newToken": "text-body-300-spacing",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.body.300.spacing.value}",
+          "value": "{options.font.spacing.normal.value}",
           "category": "letter-spacing",
           "mixin": "textDefault",
           "property": "letter-spacing",
+          "newMixin": "text-body-300",
+          "newToken": "text-body-300-spacing",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5437,16 +5453,20 @@
         "category": "font-size",
         "mixin": "cdr-textDefault",
         "property": "font-size",
+        "newMixin": "text-body-300",
+        "newToken": "text-body-300-size",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.body.300.size.value}",
+          "value": "{options.font.size.300.value}",
           "category": "font-size",
           "mixin": "textDefault",
           "property": "font-size",
+          "newMixin": "text-body-300",
+          "newToken": "text-body-300-size",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5468,16 +5488,20 @@
         "category": "size",
         "mixin": "cdr-textDefault",
         "property": "line-height",
+        "newMixin": "text-body-300",
+        "newToken": "text-body-300-height",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.body.300.height.value}",
+          "value": "{options.font.height.600.value}",
           "category": "size",
           "mixin": "textDefault",
           "property": "line-height",
+          "newMixin": "text-body-300",
+          "newToken": "text-body-300-height",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5494,18 +5518,22 @@
         }
       },
       {
-        "value": "Graphik, Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "value": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
         "mixin": "cdr-textDefaultCompact",
         "property": "font-family",
+        "newMixin": "text-utility-200",
+        "newToken": "text-utility-200-family",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.utility.200.family.value}",
+          "value": "{options.font.family.legacy.sans.value}",
           "mixin": "textDefaultCompact",
           "property": "font-family",
+          "newMixin": "text-utility-200",
+          "newToken": "text-utility-200-family",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5524,15 +5552,19 @@
         "value": "normal",
         "mixin": "cdr-textDefaultCompact",
         "property": "font-style",
+        "newMixin": "text-utility-200",
+        "newToken": "text-utility-200-style",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.utility.200.style.value}",
+          "value": "{options.font.style.normal.value}",
           "mixin": "textDefaultCompact",
           "property": "font-style",
+          "newMixin": "text-utility-200",
+          "newToken": "text-utility-200-style",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5551,15 +5583,19 @@
         "value": "400",
         "mixin": "cdr-textDefaultCompact",
         "property": "font-weight",
+        "newMixin": "text-utility-200",
+        "newToken": "text-utility-200-weight",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.utility.200.weight.value}",
+          "value": "{options.font.weight.normal.value}",
           "mixin": "textDefaultCompact",
           "property": "font-weight",
+          "newMixin": "text-utility-200",
+          "newToken": "text-utility-200-weight",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5575,20 +5611,24 @@
         }
       },
       {
-        "value": "-0.16px",
+        "value": "0px",
         "category": "letter-spacing",
         "mixin": "cdr-textDefaultCompact",
         "property": "letter-spacing",
+        "newMixin": "text-utility-200",
+        "newToken": "text-utility-200-spacing",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.utility.200.spacing.value}",
+          "value": "{options.font.spacing.normal.value}",
           "category": "letter-spacing",
           "mixin": "textDefaultCompact",
           "property": "letter-spacing",
+          "newMixin": "text-utility-200",
+          "newToken": "text-utility-200-spacing",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5609,16 +5649,20 @@
         "category": "font-size",
         "mixin": "cdr-textDefaultCompact",
         "property": "font-size",
+        "newMixin": "text-utility-200",
+        "newToken": "text-utility-200-size",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.utility.200.size.value}",
+          "value": "{options.font.size.200.value}",
           "category": "font-size",
           "mixin": "textDefaultCompact",
           "property": "font-size",
+          "newMixin": "text-utility-200",
+          "newToken": "text-utility-200-size",
           "docs": {
             "category": "text",
             "type": "default",
@@ -5636,20 +5680,24 @@
         }
       },
       {
-        "value": "1.8rem",
+        "value": "2.4rem",
         "category": "size",
         "mixin": "cdr-textDefaultCompact",
         "property": "line-height",
+        "newMixin": "text-utility-200",
+        "newToken": "text-utility-200-height",
         "docs": {
           "category": "text",
           "type": "default",
           "example": "text"
         },
         "original": {
-          "value": "{text.utility.200.height.value}",
+          "value": "{options.font.height.500.value}",
           "category": "size",
           "mixin": "textDefaultCompact",
           "property": "line-height",
+          "newMixin": "text-utility-200",
+          "newToken": "text-utility-200-height",
           "docs": {
             "category": "text",
             "type": "default",
