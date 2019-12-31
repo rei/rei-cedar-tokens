@@ -1,72 +1,67 @@
 {
-  text: {
-    docCategory: 'text',
-    docExample: 'text',
-    
-    // default
-    default: {
-      family: {
-        value: '{options.font.family.sans.value}',
-        mixin: 'textDefault',
-        property: 'font-family',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
+  // default
+  'text-default': {
+    family: {
+      value: '{options.font.family.sans.value}',
+      mixin: 'textDefault',
+      property: 'font-family',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
       },
-      style: {
-        value: '{options.font.style.normal.value}',
-        mixin: 'textDefault',
-        property: 'font-style',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
+    },
+    style: {
+      value: '{options.font.style.normal.value}',
+      mixin: 'textDefault',
+      property: 'font-style',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
       },
-      weight: {
-        value: '{options.font.weight.normal.value}',
-        mixin: 'textDefault',
-        property: 'font-weight',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
+    },
+    weight: {
+      value: '{options.font.weight.normal.value}',
+      mixin: 'textDefault',
+      property: 'font-weight',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
       },
-      spacing: {
-        value: '{options.font.spacing.tight.value}',
-        category: 'letter-spacing',
-        mixin: 'textDefault',
-        property: 'letter-spacing',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
+    },
+    spacing: {
+      value: '{options.font.spacing.tight.value}',
+      category: 'letter-spacing',
+      mixin: 'textDefault',
+      property: 'letter-spacing',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
       },
-      size: {
-        value: '{options.font.size.300.value}',
-        category: 'font-size',
-        mixin: 'textDefault',
-        property: 'font-size',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
+    },
+    size: {
+      value: '{options.font.size.300.value}',
+      category: 'font-size',
+      mixin: 'textDefault',
+      property: 'font-size',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
       },
-      height: {
-        value: '{options.font.height.400.value}',
-        category: 'size',
-        mixin: 'textDefault',
-        property: 'line-height',
-        docs: {
-          category: '{text.docCategory}',
-          type: 'default',
-          example: '{text.docExample}',
-        },
+    },
+    height: {
+      value: '{options.font.height.400.value}',
+      category: 'size',
+      mixin: 'textDefault',
+      property: 'line-height',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
       },
     },
   },
