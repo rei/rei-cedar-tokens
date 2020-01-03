@@ -24,7 +24,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans200',
           property: 'font-weight',
           docs: {
@@ -89,7 +89,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans300',
           property: 'font-weight',
           docs: {
@@ -154,7 +154,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans400',
           property: 'font-weight',
           docs: {
@@ -219,7 +219,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans500',
           property: 'font-weight',
           docs: {
@@ -479,7 +479,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans900',
           property: 'font-weight',
           docs: {
@@ -544,7 +544,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans1000',
           property: 'font-weight',
           docs: {
@@ -609,7 +609,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans1100',
           property: 'font-weight',
           docs: {
@@ -674,7 +674,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSans1200',
           property: 'font-weight',
           docs: {
@@ -718,6 +718,723 @@
         },        
       },
     },
+    'sans-strong': {
+      '200': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong200',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong200',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong200',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong200',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.200.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong200',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.200.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong200',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },      
+      '300': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong300',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong300',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong300',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong300',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.300.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong300',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.300.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong300',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '400': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong400',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong400',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong400',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong400',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.400.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong400',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.500.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong400',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '500': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong500',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong500',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong500',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong500',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.500.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong500',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.600.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong500',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '600': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong600',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong600',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textHeadingSansStrong600',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong600',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.600.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong600',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong600',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '700': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong700',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong700',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textHeadingSansStrong700',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong700',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.700.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong700',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.900.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong700',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '800': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong800',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong800',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.medium.value}',
+          mixin: 'textHeadingSansStrong800',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong800',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.800.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong800',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1000.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong800',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '900': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong900',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong900',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong900',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong900',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.900.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong900',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1200.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong900',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '1000': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong1000',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong1000',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong1000',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong1000',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.1000.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong1000',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1300.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong1000',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '1100': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong1100',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong1100',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong1100',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong1100',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.1100.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong1100',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1400.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong1100',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '1200': {
+        family: {
+          value: '{options.font.family.sans.value}',
+          mixin: 'textHeadingSansStrong1200',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSansStrong1200',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSansStrong1200',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSansStrong1200',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.1200.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSansStrong1200',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1500.value}',
+          category: 'size',
+          mixin: 'textHeadingSansStrong1200',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },        
+      },
+    },    
     serif: {
       '200': {
         family: {
@@ -741,7 +1458,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif200',
           property: 'font-weight',
           docs: {
@@ -806,7 +1523,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif300',
           property: 'font-weight',
           docs: {
@@ -871,7 +1588,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif400',
           property: 'font-weight',
           docs: {
@@ -936,7 +1653,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif500',
           property: 'font-weight',
           docs: {
@@ -1196,7 +1913,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif900',
           property: 'font-weight',
           docs: {
@@ -1261,7 +1978,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif1000',
           property: 'font-weight',
           docs: {
@@ -1326,7 +2043,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif1100',
           property: 'font-weight',
           docs: {
@@ -1391,7 +2108,7 @@
           },
         },
         weight: {
-          value: '{options.font.weight.semibold.value}',
+          value: '{options.font.weight.medium.value}',
           mixin: 'textHeadingSerif1200',
           property: 'font-weight',
           docs: {
@@ -1426,6 +2143,723 @@
           value: '{options.font.height.1500.value}',
           category: 'size',
           mixin: 'textHeadingSerif1200',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },        
+      },
+    },
+    'serif-strong': {
+      '200': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong200',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong200',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong200',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong200',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.200.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong200',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.200.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong200',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },      
+      '300': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong300',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong300',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong300',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong300',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.300.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong300',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.300.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong300',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '400': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong400',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong400',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong400',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.normal.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong400',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.400.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong400',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.500.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong400',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '500': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong500',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong500',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong500',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong500',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.500.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong500',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.600.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong500',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '600': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong600',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong600',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong600',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong600',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.600.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong600',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.800.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong600',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '700': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong700',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong700',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong700',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong700',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.700.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong700',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.900.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong700',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '800': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong800',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong800',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong800',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tight.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong800',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.800.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong800',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1000.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong800',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '900': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong900',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong900',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong900',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong900',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.900.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong900',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1200.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong900',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '1000': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong1000',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong1000',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong1000',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong1000',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.1000.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong1000',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1300.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong1000',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '1100': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong1100',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong1100',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong1100',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong1100',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.1100.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong1100',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1400.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong1100',
+          property: 'line-height',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+      },
+      '1200': {
+        family: {
+          value: '{options.font.family.serif.value}',
+          mixin: 'textHeadingSerifStrong1200',
+          property: 'font-family',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        style: {
+          value: '{options.font.style.normal.value}',
+          mixin: 'textHeadingSerifStrong1200',
+          property: 'font-style',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        weight: {
+          value: '{options.font.weight.semibold.value}',
+          mixin: 'textHeadingSerifStrong1200',
+          property: 'font-weight',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        spacing: {
+          value: '{options.font.spacing.tighter.value}',
+          category: 'letter-spacing',
+          mixin: 'textHeadingSerifStrong1200',
+          property: 'letter-spacing',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        size: {
+          value: '{options.font.size.1200.value}',
+          category: 'font-size',
+          mixin: 'textHeadingSerifStrong1200',
+          property: 'font-size',
+          docs: {
+            category: 'text',
+            type: 'heading',
+            example: 'text',
+          },
+        },
+        height: {
+          value: '{options.font.height.1500.value}',
+          category: 'size',
+          mixin: 'textHeadingSerifStrong1200',
           property: 'line-height',
           docs: {
             category: 'text',
