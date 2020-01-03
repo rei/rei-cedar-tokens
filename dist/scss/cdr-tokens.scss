@@ -120,7 +120,7 @@
   letter-spacing: -0.16px;
   font-size: 2.4rem;
   line-height: 3rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-600", "cdr-text-heading-serif-600");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-600", "cdr-text-heading-serif-strong-600");
 }
 
 // DEPRECATED
@@ -131,7 +131,7 @@
   letter-spacing: -0.16px;
   font-size: 2.8rem;
   line-height: 3.2rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-700", "cdr-text-heading-serif-700");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-700", "cdr-text-heading-serif-strong-700");
 }
 
 // DEPRECATED
@@ -142,7 +142,7 @@
   letter-spacing: -0.16px;
   font-size: 3.2rem;
   line-height: 3.6rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-800", "cdr-text-heading-serif-800");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-800", "cdr-text-heading-serif-strong-800");
 }
 
 // DEPRECATED
@@ -153,7 +153,7 @@
   letter-spacing: -0.32px;
   font-size: 3.6rem;
   line-height: 4.4rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-900", "cdr-text-heading-serif-900");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-900", "cdr-text-heading-serif-strong-900");
 }
 
 // DEPRECATED
@@ -164,7 +164,7 @@
   letter-spacing: -0.32px;
   font-size: 4.2rem;
   line-height: 5rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-1000", "cdr-text-heading-serif-1000");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-1000", "cdr-text-heading-serif-strong-1000");
 }
 
 // DEPRECATED
@@ -175,7 +175,7 @@
   letter-spacing: -0.32px;
   font-size: 4.8rem;
   line-height: 5.6rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-1100", "cdr-text-heading-serif-1100");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-1100", "cdr-text-heading-serif-strong-1100");
 }
 
 // DEPRECATED
@@ -186,7 +186,7 @@
   letter-spacing: -0.32px;
   font-size: 5.4rem;
   line-height: 6.4rem;
-  @include deprecate-mixin(2019, "winter", "cdr-text-display-1200", "cdr-text-heading-serif-1200");
+  @include deprecate-mixin(2019, "winter", "cdr-text-display-1200", "cdr-text-heading-serif-strong-1200");
 }
 
 // DEPRECATED
@@ -375,7 +375,7 @@
 @mixin cdr-text-heading-sans-200() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-size: 1.4rem;
   line-height: 1.8rem;
@@ -384,7 +384,7 @@
 @mixin cdr-text-heading-sans-300() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -393,7 +393,7 @@
 @mixin cdr-text-heading-sans-400() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-size: 1.8rem;
   line-height: 2.4rem;
@@ -402,7 +402,7 @@
 @mixin cdr-text-heading-sans-500() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.16px;
   font-size: 2rem;
   line-height: 2.6rem;
@@ -438,7 +438,7 @@
 @mixin cdr-text-heading-sans-900() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.32px;
   font-size: 3.6rem;
   line-height: 4.4rem;
@@ -447,7 +447,7 @@
 @mixin cdr-text-heading-sans-1000() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.32px;
   font-size: 4.2rem;
   line-height: 5rem;
@@ -456,13 +456,112 @@
 @mixin cdr-text-heading-sans-1100() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.32px;
   font-size: 4.8rem;
   line-height: 5.6rem;
 }
 
 @mixin cdr-text-heading-sans-1200() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  font-size: 5.4rem;
+  line-height: 6.4rem;
+}
+
+@mixin cdr-text-heading-sans-strong-200() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+@mixin cdr-text-heading-sans-strong-300() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+@mixin cdr-text-heading-sans-strong-400() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+@mixin cdr-text-heading-sans-strong-500() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+@mixin cdr-text-heading-sans-strong-600() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.16px;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+@mixin cdr-text-heading-sans-strong-700() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.16px;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+}
+
+@mixin cdr-text-heading-sans-strong-800() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.16px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+
+@mixin cdr-text-heading-sans-strong-900() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+}
+
+@mixin cdr-text-heading-sans-strong-1000() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  font-size: 4.2rem;
+  line-height: 5rem;
+}
+
+@mixin cdr-text-heading-sans-strong-1100() {
+  font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+}
+
+@mixin cdr-text-heading-sans-strong-1200() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -474,7 +573,7 @@
 @mixin cdr-text-heading-serif-200() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-size: 1.4rem;
   line-height: 1.8rem;
@@ -483,7 +582,7 @@
 @mixin cdr-text-heading-serif-300() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -492,7 +591,7 @@
 @mixin cdr-text-heading-serif-400() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-size: 1.8rem;
   line-height: 2.4rem;
@@ -501,7 +600,7 @@
 @mixin cdr-text-heading-serif-500() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.16px;
   font-size: 2rem;
   line-height: 2.6rem;
@@ -537,7 +636,7 @@
 @mixin cdr-text-heading-serif-900() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.32px;
   font-size: 3.6rem;
   line-height: 4.4rem;
@@ -546,7 +645,7 @@
 @mixin cdr-text-heading-serif-1000() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.32px;
   font-size: 4.2rem;
   line-height: 5rem;
@@ -555,13 +654,112 @@
 @mixin cdr-text-heading-serif-1100() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.32px;
   font-size: 4.8rem;
   line-height: 5.6rem;
 }
 
 @mixin cdr-text-heading-serif-1200() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  font-size: 5.4rem;
+  line-height: 6.4rem;
+}
+
+@mixin cdr-text-heading-serif-strong-200() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+@mixin cdr-text-heading-serif-strong-300() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+@mixin cdr-text-heading-serif-strong-400() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+@mixin cdr-text-heading-serif-strong-500() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+@mixin cdr-text-heading-serif-strong-600() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+@mixin cdr-text-heading-serif-strong-700() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+}
+
+@mixin cdr-text-heading-serif-strong-800() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+
+@mixin cdr-text-heading-serif-strong-900() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+}
+
+@mixin cdr-text-heading-serif-strong-1000() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  font-size: 4.2rem;
+  line-height: 5rem;
+}
+
+@mixin cdr-text-heading-serif-strong-1100() {
+  font-family: Stuart, Sentinel, Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+}
+
+@mixin cdr-text-heading-serif-strong-1200() {
   font-family: Stuart, Sentinel, Georgia, serif;
   font-style: normal;
   font-weight: 600;
@@ -1280,25 +1478,25 @@ $cdr-text-eyebrow-100-height: 1.8rem;
 $cdr-text-eyebrow-100-transform: uppercase;
 $cdr-text-heading-sans-200-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-200-style: normal;
-$cdr-text-heading-sans-200-weight: 600;
+$cdr-text-heading-sans-200-weight: 500;
 $cdr-text-heading-sans-200-spacing: 0px;
 $cdr-text-heading-sans-200-size: 1.4rem;
 $cdr-text-heading-sans-200-height: 1.8rem;
 $cdr-text-heading-sans-300-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-300-style: normal;
-$cdr-text-heading-sans-300-weight: 600;
+$cdr-text-heading-sans-300-weight: 500;
 $cdr-text-heading-sans-300-spacing: 0px;
 $cdr-text-heading-sans-300-size: 1.6rem;
 $cdr-text-heading-sans-300-height: 2rem;
 $cdr-text-heading-sans-400-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-400-style: normal;
-$cdr-text-heading-sans-400-weight: 600;
+$cdr-text-heading-sans-400-weight: 500;
 $cdr-text-heading-sans-400-spacing: 0px;
 $cdr-text-heading-sans-400-size: 1.8rem;
 $cdr-text-heading-sans-400-height: 2.4rem;
 $cdr-text-heading-sans-500-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-500-style: normal;
-$cdr-text-heading-sans-500-weight: 600;
+$cdr-text-heading-sans-500-weight: 500;
 $cdr-text-heading-sans-500-spacing: -0.16px;
 $cdr-text-heading-sans-500-size: 2rem;
 $cdr-text-heading-sans-500-height: 2.6rem;
@@ -1322,49 +1520,115 @@ $cdr-text-heading-sans-800-size: 3.2rem;
 $cdr-text-heading-sans-800-height: 3.6rem;
 $cdr-text-heading-sans-900-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-900-style: normal;
-$cdr-text-heading-sans-900-weight: 600;
+$cdr-text-heading-sans-900-weight: 500;
 $cdr-text-heading-sans-900-spacing: -0.32px;
 $cdr-text-heading-sans-900-size: 3.6rem;
 $cdr-text-heading-sans-900-height: 4.4rem;
 $cdr-text-heading-sans-1000-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-1000-style: normal;
-$cdr-text-heading-sans-1000-weight: 600;
+$cdr-text-heading-sans-1000-weight: 500;
 $cdr-text-heading-sans-1000-spacing: -0.32px;
 $cdr-text-heading-sans-1000-size: 4.2rem;
 $cdr-text-heading-sans-1000-height: 5rem;
 $cdr-text-heading-sans-1100-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-1100-style: normal;
-$cdr-text-heading-sans-1100-weight: 600;
+$cdr-text-heading-sans-1100-weight: 500;
 $cdr-text-heading-sans-1100-spacing: -0.32px;
 $cdr-text-heading-sans-1100-size: 4.8rem;
 $cdr-text-heading-sans-1100-height: 5.6rem;
 $cdr-text-heading-sans-1200-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-heading-sans-1200-style: normal;
-$cdr-text-heading-sans-1200-weight: 600;
+$cdr-text-heading-sans-1200-weight: 500;
 $cdr-text-heading-sans-1200-spacing: -0.32px;
 $cdr-text-heading-sans-1200-size: 5.4rem;
 $cdr-text-heading-sans-1200-height: 6.4rem;
+$cdr-text-heading-sans-strong-200-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-200-style: normal;
+$cdr-text-heading-sans-strong-200-weight: 600;
+$cdr-text-heading-sans-strong-200-spacing: 0px;
+$cdr-text-heading-sans-strong-200-size: 1.4rem;
+$cdr-text-heading-sans-strong-200-height: 1.8rem;
+$cdr-text-heading-sans-strong-300-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-300-style: normal;
+$cdr-text-heading-sans-strong-300-weight: 600;
+$cdr-text-heading-sans-strong-300-spacing: 0px;
+$cdr-text-heading-sans-strong-300-size: 1.6rem;
+$cdr-text-heading-sans-strong-300-height: 2rem;
+$cdr-text-heading-sans-strong-400-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-400-style: normal;
+$cdr-text-heading-sans-strong-400-weight: 600;
+$cdr-text-heading-sans-strong-400-spacing: 0px;
+$cdr-text-heading-sans-strong-400-size: 1.8rem;
+$cdr-text-heading-sans-strong-400-height: 2.4rem;
+$cdr-text-heading-sans-strong-500-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-500-style: normal;
+$cdr-text-heading-sans-strong-500-weight: 600;
+$cdr-text-heading-sans-strong-500-spacing: -0.16px;
+$cdr-text-heading-sans-strong-500-size: 2rem;
+$cdr-text-heading-sans-strong-500-height: 2.6rem;
+$cdr-text-heading-sans-strong-600-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-600-style: normal;
+$cdr-text-heading-sans-strong-600-weight: 500;
+$cdr-text-heading-sans-strong-600-spacing: -0.16px;
+$cdr-text-heading-sans-strong-600-size: 2.4rem;
+$cdr-text-heading-sans-strong-600-height: 3rem;
+$cdr-text-heading-sans-strong-700-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-700-style: normal;
+$cdr-text-heading-sans-strong-700-weight: 500;
+$cdr-text-heading-sans-strong-700-spacing: -0.16px;
+$cdr-text-heading-sans-strong-700-size: 2.8rem;
+$cdr-text-heading-sans-strong-700-height: 3.2rem;
+$cdr-text-heading-sans-strong-800-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-800-style: normal;
+$cdr-text-heading-sans-strong-800-weight: 500;
+$cdr-text-heading-sans-strong-800-spacing: -0.16px;
+$cdr-text-heading-sans-strong-800-size: 3.2rem;
+$cdr-text-heading-sans-strong-800-height: 3.6rem;
+$cdr-text-heading-sans-strong-900-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-900-style: normal;
+$cdr-text-heading-sans-strong-900-weight: 600;
+$cdr-text-heading-sans-strong-900-spacing: -0.32px;
+$cdr-text-heading-sans-strong-900-size: 3.6rem;
+$cdr-text-heading-sans-strong-900-height: 4.4rem;
+$cdr-text-heading-sans-strong-1000-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-1000-style: normal;
+$cdr-text-heading-sans-strong-1000-weight: 600;
+$cdr-text-heading-sans-strong-1000-spacing: -0.32px;
+$cdr-text-heading-sans-strong-1000-size: 4.2rem;
+$cdr-text-heading-sans-strong-1000-height: 5rem;
+$cdr-text-heading-sans-strong-1100-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-1100-style: normal;
+$cdr-text-heading-sans-strong-1100-weight: 600;
+$cdr-text-heading-sans-strong-1100-spacing: -0.32px;
+$cdr-text-heading-sans-strong-1100-size: 4.8rem;
+$cdr-text-heading-sans-strong-1100-height: 5.6rem;
+$cdr-text-heading-sans-strong-1200-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$cdr-text-heading-sans-strong-1200-style: normal;
+$cdr-text-heading-sans-strong-1200-weight: 600;
+$cdr-text-heading-sans-strong-1200-spacing: -0.32px;
+$cdr-text-heading-sans-strong-1200-size: 5.4rem;
+$cdr-text-heading-sans-strong-1200-height: 6.4rem;
 $cdr-text-heading-serif-200-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-200-style: normal;
-$cdr-text-heading-serif-200-weight: 600;
+$cdr-text-heading-serif-200-weight: 500;
 $cdr-text-heading-serif-200-spacing: 0px;
 $cdr-text-heading-serif-200-size: 1.4rem;
 $cdr-text-heading-serif-200-height: 1.8rem;
 $cdr-text-heading-serif-300-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-300-style: normal;
-$cdr-text-heading-serif-300-weight: 600;
+$cdr-text-heading-serif-300-weight: 500;
 $cdr-text-heading-serif-300-spacing: 0px;
 $cdr-text-heading-serif-300-size: 1.6rem;
 $cdr-text-heading-serif-300-height: 2rem;
 $cdr-text-heading-serif-400-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-400-style: normal;
-$cdr-text-heading-serif-400-weight: 600;
+$cdr-text-heading-serif-400-weight: 500;
 $cdr-text-heading-serif-400-spacing: 0px;
 $cdr-text-heading-serif-400-size: 1.8rem;
 $cdr-text-heading-serif-400-height: 2.4rem;
 $cdr-text-heading-serif-500-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-500-style: normal;
-$cdr-text-heading-serif-500-weight: 600;
+$cdr-text-heading-serif-500-weight: 500;
 $cdr-text-heading-serif-500-spacing: -0.16px;
 $cdr-text-heading-serif-500-size: 2rem;
 $cdr-text-heading-serif-500-height: 2.6rem;
@@ -1388,28 +1652,94 @@ $cdr-text-heading-serif-800-size: 3.2rem;
 $cdr-text-heading-serif-800-height: 3.6rem;
 $cdr-text-heading-serif-900-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-900-style: normal;
-$cdr-text-heading-serif-900-weight: 600;
+$cdr-text-heading-serif-900-weight: 500;
 $cdr-text-heading-serif-900-spacing: -0.32px;
 $cdr-text-heading-serif-900-size: 3.6rem;
 $cdr-text-heading-serif-900-height: 4.4rem;
 $cdr-text-heading-serif-1000-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-1000-style: normal;
-$cdr-text-heading-serif-1000-weight: 600;
+$cdr-text-heading-serif-1000-weight: 500;
 $cdr-text-heading-serif-1000-spacing: -0.32px;
 $cdr-text-heading-serif-1000-size: 4.2rem;
 $cdr-text-heading-serif-1000-height: 5rem;
 $cdr-text-heading-serif-1100-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-1100-style: normal;
-$cdr-text-heading-serif-1100-weight: 600;
+$cdr-text-heading-serif-1100-weight: 500;
 $cdr-text-heading-serif-1100-spacing: -0.32px;
 $cdr-text-heading-serif-1100-size: 4.8rem;
 $cdr-text-heading-serif-1100-height: 5.6rem;
 $cdr-text-heading-serif-1200-family: Stuart, Sentinel, Georgia, serif;
 $cdr-text-heading-serif-1200-style: normal;
-$cdr-text-heading-serif-1200-weight: 600;
+$cdr-text-heading-serif-1200-weight: 500;
 $cdr-text-heading-serif-1200-spacing: -0.32px;
 $cdr-text-heading-serif-1200-size: 5.4rem;
 $cdr-text-heading-serif-1200-height: 6.4rem;
+$cdr-text-heading-serif-strong-200-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-200-style: normal;
+$cdr-text-heading-serif-strong-200-weight: 600;
+$cdr-text-heading-serif-strong-200-spacing: 0px;
+$cdr-text-heading-serif-strong-200-size: 1.4rem;
+$cdr-text-heading-serif-strong-200-height: 1.8rem;
+$cdr-text-heading-serif-strong-300-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-300-style: normal;
+$cdr-text-heading-serif-strong-300-weight: 600;
+$cdr-text-heading-serif-strong-300-spacing: 0px;
+$cdr-text-heading-serif-strong-300-size: 1.6rem;
+$cdr-text-heading-serif-strong-300-height: 2rem;
+$cdr-text-heading-serif-strong-400-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-400-style: normal;
+$cdr-text-heading-serif-strong-400-weight: 600;
+$cdr-text-heading-serif-strong-400-spacing: 0px;
+$cdr-text-heading-serif-strong-400-size: 1.8rem;
+$cdr-text-heading-serif-strong-400-height: 2.4rem;
+$cdr-text-heading-serif-strong-500-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-500-style: normal;
+$cdr-text-heading-serif-strong-500-weight: 600;
+$cdr-text-heading-serif-strong-500-spacing: -0.16px;
+$cdr-text-heading-serif-strong-500-size: 2rem;
+$cdr-text-heading-serif-strong-500-height: 2.6rem;
+$cdr-text-heading-serif-strong-600-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-600-style: normal;
+$cdr-text-heading-serif-strong-600-weight: 600;
+$cdr-text-heading-serif-strong-600-spacing: -0.16px;
+$cdr-text-heading-serif-strong-600-size: 2.4rem;
+$cdr-text-heading-serif-strong-600-height: 3rem;
+$cdr-text-heading-serif-strong-700-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-700-style: normal;
+$cdr-text-heading-serif-strong-700-weight: 600;
+$cdr-text-heading-serif-strong-700-spacing: -0.16px;
+$cdr-text-heading-serif-strong-700-size: 2.8rem;
+$cdr-text-heading-serif-strong-700-height: 3.2rem;
+$cdr-text-heading-serif-strong-800-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-800-style: normal;
+$cdr-text-heading-serif-strong-800-weight: 600;
+$cdr-text-heading-serif-strong-800-spacing: -0.16px;
+$cdr-text-heading-serif-strong-800-size: 3.2rem;
+$cdr-text-heading-serif-strong-800-height: 3.6rem;
+$cdr-text-heading-serif-strong-900-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-900-style: normal;
+$cdr-text-heading-serif-strong-900-weight: 600;
+$cdr-text-heading-serif-strong-900-spacing: -0.32px;
+$cdr-text-heading-serif-strong-900-size: 3.6rem;
+$cdr-text-heading-serif-strong-900-height: 4.4rem;
+$cdr-text-heading-serif-strong-1000-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-1000-style: normal;
+$cdr-text-heading-serif-strong-1000-weight: 600;
+$cdr-text-heading-serif-strong-1000-spacing: -0.32px;
+$cdr-text-heading-serif-strong-1000-size: 4.2rem;
+$cdr-text-heading-serif-strong-1000-height: 5rem;
+$cdr-text-heading-serif-strong-1100-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-1100-style: normal;
+$cdr-text-heading-serif-strong-1100-weight: 600;
+$cdr-text-heading-serif-strong-1100-spacing: -0.32px;
+$cdr-text-heading-serif-strong-1100-size: 4.8rem;
+$cdr-text-heading-serif-strong-1100-height: 5.6rem;
+$cdr-text-heading-serif-strong-1200-family: Stuart, Sentinel, Georgia, serif;
+$cdr-text-heading-serif-strong-1200-style: normal;
+$cdr-text-heading-serif-strong-1200-weight: 600;
+$cdr-text-heading-serif-strong-1200-spacing: -0.32px;
+$cdr-text-heading-serif-strong-1200-size: 5.4rem;
+$cdr-text-heading-serif-strong-1200-height: 6.4rem;
 $cdr-text-subheading-sans-300-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-subheading-sans-300-style: normal;
 $cdr-text-subheading-sans-300-weight: 500;
