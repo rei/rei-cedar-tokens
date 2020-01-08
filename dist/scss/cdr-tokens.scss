@@ -615,42 +615,6 @@
   line-height: 3rem;
 }
 
-@mixin cdr-text-subheading-serif-300() {
-  font-family: Stuart, Sentinel, Georgia, serif;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0px;
-  font-size: 1.6rem;
-  line-height: 2rem;
-}
-
-@mixin cdr-text-subheading-serif-400() {
-  font-family: Stuart, Sentinel, Georgia, serif;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0px;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
-
-@mixin cdr-text-subheading-serif-500() {
-  font-family: Stuart, Sentinel, Georgia, serif;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: -0.16px;
-  font-size: 2rem;
-  line-height: 2.6rem;
-}
-
-@mixin cdr-text-subheading-serif-600() {
-  font-family: Stuart, Sentinel, Georgia, serif;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: -0.16px;
-  font-size: 2.4rem;
-  line-height: 3rem;
-}
-
 @mixin cdr-text-utility-100() {
   font-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -1449,30 +1413,6 @@ $cdr-text-subheading-sans-600-weight: 500;
 $cdr-text-subheading-sans-600-spacing: -0.16px;
 $cdr-text-subheading-sans-600-size: 2.4rem;
 $cdr-text-subheading-sans-600-height: 3rem;
-$cdr-text-subheading-serif-300-family: Stuart, Sentinel, Georgia, serif;
-$cdr-text-subheading-serif-300-style: normal;
-$cdr-text-subheading-serif-300-weight: 500;
-$cdr-text-subheading-serif-300-spacing: 0px;
-$cdr-text-subheading-serif-300-size: 1.6rem;
-$cdr-text-subheading-serif-300-height: 2rem;
-$cdr-text-subheading-serif-400-family: Stuart, Sentinel, Georgia, serif;
-$cdr-text-subheading-serif-400-style: normal;
-$cdr-text-subheading-serif-400-weight: 500;
-$cdr-text-subheading-serif-400-spacing: 0px;
-$cdr-text-subheading-serif-400-size: 1.8rem;
-$cdr-text-subheading-serif-400-height: 2.4rem;
-$cdr-text-subheading-serif-500-family: Stuart, Sentinel, Georgia, serif;
-$cdr-text-subheading-serif-500-style: normal;
-$cdr-text-subheading-serif-500-weight: 500;
-$cdr-text-subheading-serif-500-spacing: -0.16px;
-$cdr-text-subheading-serif-500-size: 2rem;
-$cdr-text-subheading-serif-500-height: 2.6rem;
-$cdr-text-subheading-serif-600-family: Stuart, Sentinel, Georgia, serif;
-$cdr-text-subheading-serif-600-style: normal;
-$cdr-text-subheading-serif-600-weight: 500;
-$cdr-text-subheading-serif-600-spacing: -0.16px;
-$cdr-text-subheading-serif-600-size: 2.4rem;
-$cdr-text-subheading-serif-600-height: 3rem;
 $cdr-text-utility-100-family: Graphik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $cdr-text-utility-100-style: normal;
 $cdr-text-utility-100-weight: 400;
