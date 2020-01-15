@@ -2,13 +2,11 @@
   "id": "tokens",
   "viewports": [
     {
-      "label": "destkop",
+      "label": "desktop",
       "width": 1920,
       "height": 1080
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
       "label": "All Tokens",
@@ -17,14 +15,11 @@
       "readyEvent": "",
       "readySelector": "",
       "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
       "postInteractionWait": 0,
-      "selectors": [],
+      "selectors": [
+        "[data-backstop=\"capture\"]"
+      ],
       "selectorExpansion": true,
-      "expect": 0,
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
     }
@@ -41,8 +36,9 @@
   "engineOptions": {
     "args": ["--no-sandbox"]
   },
-  "asyncCaptureLimit": 5,
-  "asyncCompareLimit": 50,
+  "asyncCaptureLimit": 4,
+  "asyncCompareLimit": 8,
+  "puppeteerOffscreenCaptureFix": true,
   "debug": false,
   "debugWindow": false
 }

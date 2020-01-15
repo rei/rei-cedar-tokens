@@ -1,122 +1,420 @@
 {
   options: {
     color: {
-      // Gray
-      'clean-slate': {
+      'black': {
+        value: '#000000',
+        category: 'color',
+      },      
+      'white': {
         value: '#ffffff',
         category: 'color',
       },
-      'moon-shot': {
-        value: '#fafafa',
+      'warm-grey-100': {
+        value: '#f9f8f6',
         category: 'color',
       },
-      'the-tooth': {
-        value: '#f7f7f7',
+      'warm-grey-200': {
+        value: '#f4f2ed',
         category: 'color',
       },
-      'partly-cloudy': {
-        value: '#dadada',
+      'warm-grey-300': {
+        value: '#edeae3',
         category: 'color',
       },
-      'grey-matter': {
-        value: '#b8b8b8',
+      'warm-grey-400': {
+        value: '#dcd6cb',
         category: 'color',
       },
-      'holy-smoke': {
-        value: '#999999',
+      'warm-grey-500': {
+        value: '#d1cbbd',
         category: 'color',
       },
-      'coal-train': {
-        value: '#7a7a7a',
+      'warm-grey-600': {
+        value: '#b2ab9f',
         category: 'color',
       },
-      'taken-for-granite': {
-        value: '#616161',
+      'warm-grey-700': {
+        value: '#928b80',
         category: 'color',
       },
-      'threat-level-midnight': {
-        value: '#434343',
+      'warm-grey-800': {
+        value: '#726d64',
         category: 'color',
       },
-      'heart-of-darkness': {
-        value: '#292929',
+      'warm-grey-800-transparent': { // semi-transparent color for use with typography
+        value: '#423B2F75',
         category: 'color',
       },
-      'lost-in-space': {
-        value: '#1a1a1a',
+      'warm-grey-900': {
+        value: '#4e4d49',
         category: 'color',
       },
-      'lost-in-space-20': { // 20% opacity
-        value: '#1a1a1a33',
+      'warm-grey-900-transparent': { // semi-transparent color for use with typography
+        value: '#12110D75',
+        category: 'color',
+      },      
+      'warm-grey-1000': {
+        value: '#373734',
         category: 'color',
       },
-      //Red
-      'snap-decision': {
-        value: '#e86868',
+      'warm-grey-1100': {
+        value: '#20201D',
+        category: 'color',
+      }, // sage green
+      'sage-green-100': {
+        value: '#F3FCF4',
         category: 'color',
       },
-      'attention-grabber': {
-        value: '#c83232',
+      'sage-green-200': {
+        value: '#E9F7EB',
         category: 'color',
       },
-      'high-stakes': {
-        value: '#b5292b',
+      'sage-green-300': {
+        value: '#DAECE0',
         category: 'color',
       },
-      'quick-fixe': {
-        value: '#a12024',
+      'sage-green-400': {
+        value: '#C7DFD1',
         category: 'color',
       },
-      //Blue
-      'suede-shoes': {
-        value: '#5197cd',
+      'sage-green-500': {
+        value: '#B8D6C8',
         category: 'color',
       },
-      'easily-excited': {
-        value: '#3278ae',
+      'sage-green-600': {
+        value: '#9CC4B3',
+        category: 'color',
+      }, // blue spruce green
+      'blue-spruce-green-600': {
+        value: '#8DD3B4',
         category: 'color',
       },
-      'closed-on-monday': {
-        value: '#2b6692',
+      'blue-spruce-green-700': {
+        value: '#5DB694',
         category: 'color',
       },
-      'go-van-gogh': {
-        value: '#1e4e72',
+      'blue-spruce-green-800': {
+        value: '#469178',
         category: 'color',
       },
-      //Yellow
-      'light-tension': {
-        value: '#fff5eb',
+      'blue-spruce-green-900': {
+        value: '#2F6A59',
         category: 'color',
       },
-      'golden-face': {
-        value: '#f8b877',
+      'blue-spruce-green-1000': {
+        value: '#225C4E',
         category: 'color',
       },
-      'dehydrated-lemon': {
-        value: '#c77523',
+      'blue-spruce-green-1100': {
+        value: '#113731',
+        category: 'color',
+      }, // alpine lake blue
+      'alpine-lake-blue-100': {
+        value: '#F0FAFF',
         category: 'color',
       },
-      //Green
-      'thin-mint': {
-        value: '#edf7ee',
+      'alpine-lake-blue-200': {
+        value: '#E2F4FE',
         category: 'color',
       },
-      'crimp-son-and-clover': {
-        value: '#6c9f71',
+      'alpine-lake-blue-300': {
+        value: '#D3EEFD',
         category: 'color',
       },
-      'instant-winner': {
-        value: '#367c3c',
+      'alpine-lake-blue-400': {
+        value: '#B7E0FA',
         category: 'color',
       },
-      //Tan
-      'moose-tooth': {
-        value: '#faf9f5',
+      'alpine-lake-blue-500': {
+        value: '#9ACCF3',
         category: 'color',
       },
-      'hissing-llamas': {
-        value: '#f1efe4',
+      'alpine-lake-blue-600': {
+        value: '#78B1E8',
+        category: 'color',
+      },
+      'alpine-lake-blue-700': {
+        value: '#5D98DD',
+        category: 'color',
+      },
+      'alpine-lake-blue-800': {
+        value: '#446DA6',
+        category: 'color',
+      },
+      'alpine-lake-blue-900': {
+        value: '#224277',
+        category: 'color',
+      },
+      'alpine-lake-blue-1000': {
+        value: '#142A57',
+        category: 'color',
+      },
+      'alpine-lake-blue-1100': {
+        value: '#081535',
+        category: 'color',
+      }, // golden yellow
+      'golden-yellow-100': {
+        value: '#FFFCF0',
+        category: 'color',
+      },
+      'golden-yellow-200': {
+        value: '#FFF8E0',
+        category: 'color',
+      },
+      'golden-yellow-300': {
+        value: '#FFF3D1',
+        category: 'color',
+      },
+      'golden-yellow-400': {
+        value: '#FFE7B3',
+        category: 'color',
+      },
+      'golden-yellow-500': {
+        value: '#FFD280',
+        category: 'color',
+      },
+      'golden-yellow-600': {
+        value: '#FFBF59',
+        category: 'color',
+      },
+      'golden-yellow-700': {
+        value: '#DA953A',
+        category: 'color',
+      },
+      'golden-yellow-800': {
+        value: '#BD7B2D',
+        category: 'color',
+      },
+      'golden-yellow-900': {
+        value: '#814C18',
+        category: 'color',
+      },
+      'golden-yellow-1000': {
+        value: '#5E320D',
+        category: 'color',
+      },
+      'golden-yellow-1100': {
+        value: '#381A06',
+        category: 'color',
+      }, // smoked salmon red
+      'smoked-salmon-red-100': {
+        value: '#FEF5F0',
+        category: 'color',
+      },
+      'smoked-salmon-red-200': {
+        value: '#FEEAE1',
+        category: 'color',
+      },
+      'smoked-salmon-red-300': {
+        value: '#FEDDD2',
+        category: 'color',
+      },
+      'smoked-salmon-red-400': {
+        value: '#FEC3B3',
+        category: 'color',
+      },
+      'smoked-salmon-red-500': {
+        value: '#FE9580',
+        category: 'color',
+      },
+      'smoked-salmon-red-600': {
+        value: '#FE5F47',
+        category: 'color',
+      },
+      'smoked-salmon-red-700': {
+        value: '#DB4638',
+        category: 'color',
+      },
+      'smoked-salmon-red-800': {
+        value: '#BE342D',
+        category: 'color',
+      },
+      'smoked-salmon-red-900': {
+        value: '#851414',
+        category: 'color',
+      },
+      'smoked-salmon-red-1000': {
+        value: '#610A0A',
+        category: 'color',
+      },
+      'smoked-salmon-red-1100': {
+        value: '#38050B',
+        category: 'color',
+      }, // sale red
+      'sale-red-100': {
+        value: '#FEF1F1',
+        category: 'color',
+      },
+      'sale-red-200': {
+        value: '#FDE2E2',
+        category: 'color',
+      },
+      'sale-red-300': {
+        value: '#FCD4D4',
+        category: 'color',
+      },
+      'sale-red-400': {
+        value: '#FCB6B6',
+        category: 'color',
+      },
+      'sale-red-500': {
+        value: '#F99595',
+        category: 'color',
+      },
+      'sale-red-600': {
+        value: '#F16F6F',
+        category: 'color',
+      },
+      'sale-red-700': {
+        value: '#DF3434',
+        category: 'color',
+      },
+      'sale-red-800': {
+        value: '#CC0000',
+        category: 'color',
+      },
+      'sale-red-900': {
+        value: '#990000',
+        category: 'color',
+      },
+      'sale-red-1000': {
+        value: '#6B0000',
+        category: 'color',
+      },
+      'sale-red-1100': {
+        value: '#3D0000',
+        category: 'color',
+      },
+      'success-green-100': {
+        value: '#F6FCF3',
+        category: 'color',
+      },
+      'success-green-200': {
+        value: '#ECF9E6',
+        category: 'color',
+      },
+      'success-green-300': {
+        value: '#DAF5D1',
+        category: 'color',
+      },
+      'success-green-400': {
+        value: '#C3F0B9',
+        category: 'color',
+      },
+      'success-green-500': {
+        value: '#B1E6A8',
+        category: 'color',
+      },
+      'success-green-600': {
+        value: '#8CD085',
+        category: 'color',
+      },
+      'success-green-700': {
+        value: '#5FA65F',
+        category: 'color',
+      },
+      'success-green-800': {
+        value: '#4B8B50',
+        category: 'color',
+      },
+      'success-green-900': {
+        value: '#2E6B34',
+        category: 'color',
+      },
+      'success-green-1000': {
+        value: '#1C4F26',
+        category: 'color',
+      },
+      'success-green-1100': {
+        value: '#0E2F17',
+        category: 'color',
+      }, // warning yellow
+      'warning-yellow-100': {
+        value: '#FEFAF1',
+        category: 'color',
+      },
+      'warning-yellow-200': {
+        value: '#FDF6E2',
+        category: 'color',
+      },
+      'warning-yellow-300': {
+        value: '#FCF0D4',
+        category: 'color',
+      },
+      'warning-yellow-400': {
+        value: '#FAE5B7',
+        category: 'color',
+      },
+      'warning-yellow-500': {
+        value: '#F7D088',
+        category: 'color',
+      },
+      'warning-yellow-600': {
+        value: '#EDBC73',
+        category: 'color',
+      },
+      'warning-yellow-700': {
+        value: '#D8913B',
+        category: 'color',
+      },
+      'warning-yellow-800': {
+        value: '#C77523',
+        category: 'color',
+      },
+      'warning-yellow-900': {
+        value: '#854714',
+        category: 'color',
+      },
+      'warning-yellow-1000': {
+        value: '#602D0B',
+        category: 'color',
+      },
+      'warning-yellow-1100': {
+        value: '#381705',
+        category: 'color',
+      }, // error red
+      'error-red-100': {
+        value: '#FDF5F1',
+        category: 'color',
+      },
+      'error-red-200': {
+        value: '#FCECE4',
+        category: 'color',
+      },
+      'error-red-300': {
+        value: '#FAE2D6',
+        category: 'color',
+      },
+      'error-red-400': {
+        value: '#F7CFBB',
+        category: 'color',
+      },
+      'error-red-500': {
+        value: '#EFA78F',
+        category: 'color',
+      },
+      'error-red-600': {
+        value: '#E78B79',
+        category: 'color',
+      },
+      'error-red-700': {
+        value: '#CD5046',
+        category: 'color',
+      },
+      'error-red-800': {
+        value: '#B5292B',
+        category: 'color',
+      },
+      'error-red-900': {
+        value: '#811823',
+        category: 'color',
+      },
+      'error-red-1000': {
+        value: '#5D0E1D',
+        category: 'color',
+      },
+      'error-red-1100': {
+        value: '#390518',
         category: 'color',
       },
     }

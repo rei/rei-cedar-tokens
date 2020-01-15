@@ -52,7 +52,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+// Cedar css
+@import '~@rei/cedar/dist/cedar.css';
+@import '~@rei/cedar/dist/cdr-fonts.css';
+
 .platform-title {
   font-size: 32px;
   margin-top: 20px;
