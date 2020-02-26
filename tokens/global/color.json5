@@ -5,416 +5,1391 @@
     // Text
     text: {
       primary: {
-        'lightmode': {
-          value: '{options.color.heart-of-darkness.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Primary body text color on a light background',
-          },
-        },
-        'darkmode': {
-          value: '{options.color.moon-shot.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Primary body text color on a dark background',
-          },
+        value: '{options.color.warm-grey-900-75.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'The default, primary text color',
         },
       },
       secondary: {
-        'lightmode': {
-          value: '{options.color.taken-for-granite.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Secondary or supplemental text color on a light background',
-          },
+        value: '{options.color.warm-grey-800-75.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'The secondary text color',
         },
-        'darkmode': {
-          value: '{options.color.holy-smoke.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Secondary or supplemental text color on a dark background',
-          },
+      },
+      brand: {
+        value: '{options.color.blue-spruce-green-1100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'Text set in our primary brand color',
+        },
+      },
+      sale: {
+        value: '{options.color.sale-red-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'The color of sale text',
+        },
+      },
+      inverse: {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'Text color on dark background',
         },
       },
       disabled: {
-        'lightmode': {
-          value: '{options.color.grey-matter.value}',
+        value: '{options.color.warm-grey-500.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'The color of text when it is disabled',
+        },
+      },
+      success: {
+        value: '{options.color.success-green-900.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'Color of success messages',
+        },
+      },
+      warning: {
+        value: '{options.color.warning-yellow-900.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'Color of warning messages',
+        },
+      },
+      error: {
+        value: '{options.color.error-red-900.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'Color of error messages',
+        },
+      },
+      info: {
+        value: '{options.color.alpine-lake-blue-900.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'Color of informational messages',
+        },
+      },
+      input: {
+        default: {
+          value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Disabled text color for interactive UI elements on a light background',
+            description: 'Default text color used in form elements',
           },
         },
-        'darkmode': {
-          value: '{options.color.taken-for-granite.value}',
+        label: {
+          value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Disabled text color for interactive UI elements on a dark background',
+            description: 'Color of label text used in form elements',
+          },
+        },
+        placeholder: {
+          value: '{options.color.warm-grey-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color of placeholder text within forms',
+          },
+        },
+        required: {
+          value: '{options.color.warm-grey-800-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color of required label within forms',
+          },
+        },
+        disabled: {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Disabled text color used in form elements',
+          },
+        },
+        filled: {
+          value: '{options.color.warm-grey-900-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color used in filled forms',
+          },
+        },
+        help: {
+          value: '{options.color.warm-grey-900-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Help text color used in filled forms',
           },
         },
       },
       link: {
-        'lightmode': {
-          value: '{options.color.easily-excited.value}',
+        rest: {
+          value: '{options.color.alpine-lake-blue-800.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Link text color on a light background',
+            description: 'Text color for links',
           },
         },
-        'darkmode': {
-          value: '{options.color.suede-shoes.value}',
+        hover: {
+          value: '{options.color.alpine-lake-blue-600.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Link text color on a dark background',
+            description: 'Text color for the hover state of links',
           },
         },
-      },
-      error: {
-        'lightmode': {
-          value: '{options.color.high-stakes.value}',
+        active: {
+          value: '{options.color.alpine-lake-blue-700.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Error text color on a light background',
-          },
-        },
-        'darkmode': {
-          value: '{options.color.snap-decision.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Error text color on a dark background',
-          },
-        },
-      },
-      form: {
-        label: {
-          'lightmode': {
-            value: '{color.text.primary.lightmode.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'text',
-              example: '{color.docExample}',
-              description: 'Label text color for forms on a light background. Can also be used for input entry text',
-            },
-          },
-          'darkmode': {
-            value: '{color.text.primary.darkmode.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'text',
-              example: '{color.docExample}',
-              description: 'Label text color for forms on a dark background. Can also be used for input entry text',
-            },
-          },
-        },
-        placeholder: {
-          'lightmode': {
-            value: '{color.text.secondary.lightmode.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'text',
-              example: '{color.docExample}',
-              description: 'Placeholder text color for forms on a light background',
-            },
-          },
-          'darkmode': {
-            value: '{color.text.secondary.darkmode.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'text',
-              example: '{color.docExample}',
-              description: 'Placeholder text color for forms on a dark background',
-            },
+            description: 'Text color for the active and pressed states of links',
           },
         },
         disabled: {
-          'lightmode': {
-            value: '{color.text.disabled.lightmode.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'text',
-              example: '{color.docExample}',
-              description: 'Disabled text color for forms on a light background',
-            },
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Disabled text color of links',
           },
-          'darkmode': {
-            value: '{color.text.disabled.darkmode.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'text',
-              example: '{color.docExample}',
-              description: 'Disabled text color for forms on a dark background',
-            },
+        },
+        visited: {
+          value: '{options.color.alpine-lake-blue-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color of visited links',
+          },
+        },
+      },
+      button: {
+        primary: {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for primary buttons',
+          },
+        },
+        'primary-disabled': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for disabled primary buttons',
+          },
+        },
+        secondary: {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for secondary buttons',
+          },
+        },
+        'secondary-disabled': {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for disabled secondary buttons',
+          },
+        },
+      },
+      cta: {
+        dark: {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the dark CTA',
+          },
+        },
+        'dark-disabled': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for disabled dark CTAs',
+          },
+        },
+        light: {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for light CTA',
+          },
+        },
+        'light-disabled': {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Disabled text color for the light CTA',
+          },
+        },
+        brand: {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the brand CTA',
+          },
+        },
+        'brand-disabled': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for disabled brand CTAs',
+          },
+        },
+        sale: {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the sale CTA',
+          },
+        },
+        'sale-disabled': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for disabled sale CTAs',
+          },
+        },
+      },
+      tab: {
+        rest: {
+          value: '{options.color.warm-grey-800-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'TODO: add desc',
+          },
+        },
+        active: {
+          value: '{options.color.warm-grey-900-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'TODO: add',
+          },
+        },
+        hover: {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'TODO: add',
+          },
+        },
+        disabled: {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: '',
+          },
+        },
+      },
+      rating: {
+        default: {
+          value: '{options.color.warm-grey-900-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: '',
+          },
+        },
+        hover: {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: '',
+          },
+        },
+        separator: {
+          value: '{options.color.warm-grey-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: '',
           },
         },
       },
     },
-    //Icons
+    // Icon
     icon: {
-      primary: {
-        'lightmode' : {
-          value: '{options.color.taken-for-granite.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Primary icon color on a light background',
-          },
-        },
-        'darkmode' : {
-          value: '{options.color.holy-smoke.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Primary icon color on a dark background',
-          },
+      default: {
+        value: '{options.color.warm-grey-700.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'icon',
+          example: '{color.docExample}',
+          description: 'The default icon color',
         },
       },
       emphasis: {
-        'lightmode' : {
-          value: '{options.color.heart-of-darkness.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Emphasis or darkest icon color on a light background',
-          },
-        },
-        'darkmode' : {
-          value: '{options.color.moon-shot.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Emphasis or lightest icon color on a dark background',
-          },
-        },
-      },
-    },
-    background: {
-      'dark': {
-        value: '{options.color.heart-of-darkness.value}',
+        value: '{options.color.warm-grey-700.value}',
         category: 'color',
         docs: {
           category: '{color.docCategory}',
-          type: 'background',
+          type: 'icon',
           example: '{color.docExample}',
-          description: 'Only use for dark background color',
-        },
-      },
-      'darker': {
-        value: '{options.color.lost-in-space.value}',
-        category: 'color',
-        docs: {
-          category: '{color.docCategory}',
-          type: 'background',
-          example: '{color.docExample}',
-          description: 'Only use for dark background color - darkest value',
-        },
-      },
-      'light': {
-        value: '{options.color.the-tooth.value}',
-        category: 'color',
-        docs: {
-          category: '{color.docCategory}',
-          type: 'background',
-          example: '{color.docExample}',
-          description: 'Only use for light background color',
-        },
-      },
-      'lighter': {
-        value: '{options.color.moon-shot.value}',
-        category: 'color',
-        docs: {
-          category: '{color.docCategory}',
-          type: 'background',
-          example: '{color.docExample}',
-          description: 'Only use for light background color - value is between light and lightest',
-        },
-      },
-      'lightest': {
-        value: '{options.color.clean-slate.value}',
-        category: 'color',
-        docs: {
-          category: '{color.docCategory}',
-          type: 'background',
-          example: '{color.docExample}',
-          description: 'Only use for light background color - lightest value',
-        },
-      },
-      form: {
-        'lightmode': {
-          value: '{color.background.lightest.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Light background color for forms',
-          },
-        },
-        'darkmode': {
-          value: '{color.background.dark.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Dark background color for forms',
-          },
-        },
-        input: {
-          'lightmode': {
-            value: '{color.background.lightest.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Light background color for input control',
-            },
-          },
-          'darkmode': {
-            value: '{color.background.dark.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Dark background color for input control',
-            },
-          },
-        },
-      },
-    },
-    // border
-    border: {
-      primary: {
-        'lightmode': {
-          value: '{options.color.taken-for-granite.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Primary border color for light background',
-          },
-        },
-        'darkmode': {
-          value: '{options.color.moon-shot.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Primary border color for dark background',
-          },
-        },
-      },
-      secondary: {
-        'lightmode': {
-          value: '{options.color.grey-matter.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Secondary border color for light background',
-          },
-        },
-        'darkmode': {
-          value: '{options.color.holy-smoke.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Secondary border color for dark background',
-          },
+          description: 'Emphasis or darkest icon color on a light background',
         },
       },
       disabled: {
-        'lightmode': {
-          value: '{options.color.partly-cloudy.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Border color for disabled state for light background',
-          },
+        value: '{options.color.warm-grey-400.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'icon',
+          example: '{color.docExample}',
+          description: 'The disabled icon color',
         },
-        'darkmode': {
-          value: '{options.color.partly-cloudy.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Border color for disabled state for dark background',
-          },
+      },      
+    },
+    // Background
+    background: {
+      primary: {
+        value: '{options.color.white.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'The default, primary background color of most pages',
+        },
+      },
+      secondary: {
+        value: '{options.color.warm-grey-200.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'An alternate, secondary background color used on some pages',
+        },
+      },
+      success: {
+        value: '{options.color.success-green-200.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for success messages',
+        },
+      },
+      warning: {
+        value: '{options.color.warning-yellow-200.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for warning messages',
         },
       },
       error: {
-        'lightmode': {
-          value: '{options.color.snap-decision.value}',
+        value: '{options.color.error-red-200.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for error messages',
+        },
+      },
+      info: {
+        value: '{options.color.alpine-lake-blue-200.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for informational messages',
+        },
+      },
+      'table-row': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'The background color of table rows',
+        },
+      },
+      'table-row-alt': {
+        value: '{options.color.white.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'An alternate row color to aid grouping row data',
+        },
+      },
+      input: {
+        default: {
+          value: '{options.color.white-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
-            type: 'border',
+            type: 'background',
             example: '{color.docExample}',
-            description: 'Border color for error validation state for light background',
+            description: 'Default background color on form elements',
+          },
+        },
+        'default-hover': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Hover state of a form background',
+          },
+        },
+        'default-selected': {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Selected state of a form background',
+          },
+        },
+        'default-selected-hover': {
+          value: '{options.color.alpine-lake-blue-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Hover state of a selected form background',
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Disabled form background',
           },
         },
       },
-      selected: {
-        'lightmode': {
-          value: '{options.color.closed-on-monday.value}',
+      button: {
+        primary: {
+          rest: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the primary button',
+            },
+          },
+          active: {
+            value: '{options.color.blue-spruce-green-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the primary button',
+            },
+          },
+          hover: {
+            value: '{options.color.blue-spruce-green-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the primary button',
+            },
+          },
+        },
+        secondary: {
+          rest: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the secondary button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the secondary button',
+            },
+          },
+          hover: {
+            value: '{options.color.white.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the secondary button',
+            },
+          },
+          disabled: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the disabled state of the secondary button',
+            },
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Default disabled border color',
+          },
+        },
+      },
+      cta: {
+        dark: {
+          rest: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the dark CTA',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the dark CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the dark CTA',
+            },
+          },
+        },
+        light: {
+          rest: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the light CTA',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the light CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.white.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the light CTA',
+            },
+          },
+          disabled: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Disabled color for the light CTA',
+            },
+          },
+        },
+        sale: {
+          rest: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the sale CTA',
+            },
+          },
+          active: {
+            value: '{options.color.sale-red-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the sale CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.sale-red-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the sale CTA',
+            },
+          },
+        },
+        brand: {
+          value: '{options.color.blue-spruce-green-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color for the brand CTA',
+          },
+        },        
+        brand: {
+          active: {
+            value: '{options.color.blue-spruce-green-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the brand CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.blue-spruce-green-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the brand CTA',
+            },
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Default disabled CTA color',
+          },
+        },
+      },
+      'accordion-hover': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for the hover state of accordion',
+        },
+      },
+      'pagination-hover': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for the hover state of pagination',
+        },
+      },
+      'pagination-keyline': {
+        value: '{options.color.alpine-lake-blue-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for the pagination keyline',
+        },
+      },
+      'button-icon-alt-hover': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'TODO: add description',
+        },
+      },
+      'rating-star-default': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'The defaul background color of the rating star icon',
+        },
+      },
+      'rating-star-highlighted': {
+        value: '{options.color.golden-yellow-500.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for the highlighted rating icon',
+        },
+      },
+      'modal-overlay': {
+        value: '{options.color.warm-grey-200-75.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'TODO: add desc',
+        },
+      },
+    },
+    // Border
+    border: {
+      primary: {
+        value: '{options.color.warm-grey-400.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'border',
+          example: '{color.docExample}',
+          description: 'Default border color for separating content',
+        },
+      },
+      secondary: {
+        value: '{options.color.warm-grey-700.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'border',
+          example: '{color.docExample}',
+          description: 'TODO: add desc',
+        },
+      },
+      success: {
+        value: '{options.color.success-green-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'border',
+          example: '{color.docExample}',
+          description: 'Border color for success elements',
+        },
+      },
+      warning: {
+        value: '{options.color.warning-yellow-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'border',
+          example: '{color.docExample}',
+          description: 'Border color for warning elements',
+        },
+      },
+      error: {
+        value: '{options.color.error-red-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'border',
+          example: '{color.docExample}',
+          description: 'Border color for error elements',
+        },
+      },
+      info: {
+        value: '{options.color.alpine-lake-blue-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'border',
+          example: '{color.docExample}',
+          description: 'Border color for informational elements',
+        },
+      },
+      input: {
+        default: {
+          value: '{options.color.warm-grey-700.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Border color for selected state for light background',
+            description: 'Default border color on form elements',
+          },
+        },
+        default: {
+          active: {
+            value: '{options.color.alpine-lake-blue-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Active state of a form border',
+            },
+          },
+          selected: {
+            value: '{options.color.alpine-lake-blue-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Selected state of a form border',
+            },
+          },
+          'selected-hover': {
+            value: '{options.color.alpine-lake-blue-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Hover state of a selected form border',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Hover state of a form border',
+            },
+          },
+          disabled: {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Disabled form border',
+            },
+          },
+        },
+      },
+      button: {
+        primary: {
+          rest: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the primary button',
+            },
+          },
+          active: {
+            value: '{options.color.blue-spruce-green-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the primary button',
+            },
+          },
+          hover: {
+            value: '{options.color.blue-spruce-green-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the primary button',
+            },
+          },
+        },
+        secondary: {
+          rest: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the secondary button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-600.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the secondary button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the secondary button',
+            },
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Default disabled border color',
+          },
+        },
+      },
+      cta: {
+        dark: {
+          rest: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the dark CTA',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the dark CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the dark CTA',
+            },
+          },
+        },
+        light: {
+          rest: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the light CTA',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-600.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the light CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the light CTA',
+            },
+          },
+        },
+        sale: {
+          rest: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the sale CTA',
+            },
+          },
+          active: {
+            value: '{options.color.sale-red-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the sale CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.sale-red-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the sale CTA',
+            },
+          },
+        },
+        brand: {
+          rest: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the brand CTA',
+            },
+          },
+          active: {
+            value: '{options.color.blue-spruce-green-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the brand CTA',
+            },
+          },
+          hover: {
+            value: '{options.color.blue-spruce-green-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the brand CTA',
+            },
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Default disabled CTA color',
+          },
+        },
+      },
+      'rating-star': {
+        default: {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Default border color for the unhighlighted rating icon',
+          },
+        },
+        highlighted: {
+          value: '{options.color.golden-yellow-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for the highlighted rating icon',
+          },
+        },
+      },
+      link: {
+        rest: {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for underlined links',
+          },
+        },
+        hover: {
+          value: '{options.color.alpine-lake-blue-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for the hover state of underlined links',
+          },
+        },
+        active: {
+          value: '{options.color.alpine-lake-blue-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for the active and pressed states of underlined links',
+          },
+        },
+        disabled: {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Disabled border color of underlined links',
+          },
+        },
+        visited: {
+          value: '{options.color.alpine-lake-blue-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color of visited underlined links',
+          },
+        },
+      },
+      table: {
+        default: {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'The border color of table rows and their corresponding data cells',
+          },
+        },
+      },
+      tab: {
+        keyline: {
+          rest: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'The border color of tab keyline',
+            },
+          },
+          active: {
+            value: '{options.color.alpine-lake-blue-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active tab keyline',
+            },
+          },
+          'active-alt': {
+            value: '{options.color.alpine-lake-blue-600.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Alternative border color for the active tab keyline',
+            },
+          },
+          hover: {
+            value: '{options.color.alpine-lake-blue-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the tab keyline hover state',
+            },
+          },
+          'hover-alt': {
+            value: '{options.color.alpine-lake-blue-600.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Alternative border color for the tab keyline hover state',
+            },
+          },
+          disabled: {
+            value: '{options.color.warm-grey-500.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the disabled tab keyline',
+            },
           },
         },
       },
