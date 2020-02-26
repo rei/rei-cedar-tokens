@@ -9,6 +9,26 @@
         "example": "color",
         "description": "The default, primary text color"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Primary body text color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Primary body text color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-900-75.value}",
         "category": "color",
@@ -17,6 +37,26 @@
           "type": "text",
           "example": "color",
           "description": "The default, primary text color"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Primary body text color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Primary body text color on a dark background"
+          }
         }
       },
       "name": "CdrColorTextPrimary",
@@ -35,6 +75,26 @@
         "example": "color",
         "description": "The secondary text color"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Secondary or supplemental text color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Secondary or supplemental text color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-800-75.value}",
         "category": "color",
@@ -43,6 +103,26 @@
           "type": "text",
           "example": "color",
           "description": "The secondary text color"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Secondary or supplemental text color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Secondary or supplemental text color on a dark background"
+          }
         }
       },
       "name": "CdrColorTextSecondary",
@@ -139,6 +219,26 @@
         "example": "color",
         "description": "The color of text when it is disabled"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.72f green:0.72f blue:0.72f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for interactive UI elements on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for interactive UI elements on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-500.value}",
         "category": "color",
@@ -147,6 +247,26 @@
           "type": "text",
           "example": "color",
           "description": "The color of text when it is disabled"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.72f green:0.72f blue:0.72f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Disabled text color for interactive UI elements on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Disabled text color for interactive UI elements on a dark background"
+          }
         }
       },
       "name": "CdrColorTextDisabled",
@@ -217,6 +337,26 @@
         "example": "color",
         "description": "Color of error messages"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.71f green:0.16f blue:0.17f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.91f green:0.41f blue:0.41f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.error-red-900.value}",
         "category": "color",
@@ -225,6 +365,26 @@
           "type": "text",
           "example": "color",
           "description": "Color of error messages"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.71f green:0.16f blue:0.17f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Error text color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.91f green:0.41f blue:0.41f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Error text color on a dark background"
+          }
         }
       },
       "name": "CdrColorTextError",
@@ -566,6 +726,58 @@
         }
       },
       "name": "CdrColorTextLinkVisited",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.20f green:0.47f blue:0.68f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Link text color on a light background"
+      },
+      "original": {
+        "value": "{options.color.easily-excited.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Link text color on a light background"
+        }
+      },
+      "name": "CdrColorTextLinkLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.32f green:0.59f blue:0.80f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Link text color on a dark background"
+      },
+      "original": {
+        "value": "{options.color.suede-shoes.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Link text color on a dark background"
+        }
+      },
+      "name": "CdrColorTextLinkDarkmode",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1067,6 +1279,162 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Label text color for forms on a light background. Can also be used for input entry text"
+      },
+      "original": {
+        "value": "{color.text.primary.lightmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Label text color for forms on a light background. Can also be used for input entry text"
+        }
+      },
+      "name": "CdrColorTextFormLabelLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Label text color for forms on a dark background. Can also be used for input entry text"
+      },
+      "original": {
+        "value": "{color.text.primary.darkmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Label text color for forms on a dark background. Can also be used for input entry text"
+        }
+      },
+      "name": "CdrColorTextFormLabelDarkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Placeholder text color for forms on a light background"
+      },
+      "original": {
+        "value": "{color.text.secondary.lightmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Placeholder text color for forms on a light background"
+        }
+      },
+      "name": "CdrColorTextFormPlaceholderLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Placeholder text color for forms on a dark background"
+      },
+      "original": {
+        "value": "{color.text.secondary.darkmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Placeholder text color for forms on a dark background"
+        }
+      },
+      "name": "CdrColorTextFormPlaceholderDarkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.72f green:0.72f blue:0.72f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color for forms on a light background"
+      },
+      "original": {
+        "value": "{color.text.disabled.lightmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for forms on a light background"
+        }
+      },
+      "name": "CdrColorTextFormDisabledLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color for forms on a dark background"
+      },
+      "original": {
+        "value": "{color.text.disabled.darkmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for forms on a dark background"
+        }
+      },
+      "name": "CdrColorTextFormDisabledDarkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.57f green:0.55f blue:0.50f alpha:1.00f]",
       "category": "color",
       "docs": {
@@ -1101,6 +1469,26 @@
         "example": "color",
         "description": "Emphasis or darkest icon color on a light background"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Emphasis or darkest icon color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Emphasis or lightest icon color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
         "category": "color",
@@ -1109,6 +1497,26 @@
           "type": "icon",
           "example": "color",
           "description": "Emphasis or darkest icon color on a light background"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "icon",
+            "example": "color",
+            "description": "Emphasis or darkest icon color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "icon",
+            "example": "color",
+            "description": "Emphasis or lightest icon color on a dark background"
+          }
         }
       },
       "name": "CdrColorIconEmphasis",
@@ -1138,6 +1546,58 @@
         }
       },
       "name": "CdrColorIconDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Primary icon color on a light background"
+      },
+      "original": {
+        "value": "{options.color.taken-for-granite.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Primary icon color on a light background"
+        }
+      },
+      "name": "CdrColorIconPrimaryLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Primary icon color on a dark background"
+      },
+      "original": {
+        "value": "{options.color.holy-smoke.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Primary icon color on a dark background"
+        }
+      },
+      "name": "CdrColorIconPrimaryDarkmode",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -2211,6 +2671,240 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for dark background color"
+      },
+      "original": {
+        "value": "{options.color.heart-of-darkness.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for dark background color"
+        }
+      },
+      "name": "CdrColorBackgroundDark",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.10f green:0.10f blue:0.10f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for dark background color - darkest value"
+      },
+      "original": {
+        "value": "{options.color.lost-in-space.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for dark background color - darkest value"
+        }
+      },
+      "name": "CdrColorBackgroundDarker",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.97f green:0.97f blue:0.97f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for light background color"
+      },
+      "original": {
+        "value": "{options.color.the-tooth.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for light background color"
+        }
+      },
+      "name": "CdrColorBackgroundLight",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for light background color - value is between light and lightest"
+      },
+      "original": {
+        "value": "{options.color.moon-shot.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for light background color - value is between light and lightest"
+        }
+      },
+      "name": "CdrColorBackgroundLighter",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.00f green:1.00f blue:1.00f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for light background color - lightest value"
+      },
+      "original": {
+        "value": "{options.color.clean-slate.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for light background color - lightest value"
+        }
+      },
+      "name": "CdrColorBackgroundLightest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.00f green:1.00f blue:1.00f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Light background color for forms"
+      },
+      "original": {
+        "value": "{color.background.lightest.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Light background color for forms"
+        }
+      },
+      "name": "CdrColorBackgroundFormLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Dark background color for forms"
+      },
+      "original": {
+        "value": "{color.background.dark.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Dark background color for forms"
+        }
+      },
+      "name": "CdrColorBackgroundFormDarkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.00f green:1.00f blue:1.00f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Light background color for input control"
+      },
+      "original": {
+        "value": "{color.background.lightest.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Light background color for input control"
+        }
+      },
+      "name": "CdrColorBackgroundFormInputLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.16f green:0.16f blue:0.16f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Dark background color for input control"
+      },
+      "original": {
+        "value": "{color.background.dark.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Dark background color for input control"
+        }
+      },
+      "name": "CdrColorBackgroundFormInputDarkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.86f green:0.84f blue:0.80f alpha:1.00f]",
       "category": "color",
       "docs": {
@@ -2218,6 +2912,26 @@
         "type": "border",
         "example": "color",
         "description": "Default border color for separating content"
+      },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Primary border color for light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Primary border color for dark background"
+        }
       },
       "original": {
         "value": "{options.color.warm-grey-400.value}",
@@ -2227,6 +2941,26 @@
           "type": "border",
           "example": "color",
           "description": "Default border color for separating content"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Primary border color for light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.98f green:0.98f blue:0.98f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Primary border color for dark background"
+          }
         }
       },
       "name": "CdrColorBorderPrimary",
@@ -2245,6 +2979,26 @@
         "example": "color",
         "description": "An alternate, secondary background color used on some pages"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.72f green:0.72f blue:0.72f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Secondary border color for light background"
+        }
+      },
+      "darkmode": {
+        "value": "[UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Secondary border color for dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
         "category": "color",
@@ -2253,6 +3007,26 @@
           "type": "border",
           "example": "color",
           "description": "An alternate, secondary background color used on some pages"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.72f green:0.72f blue:0.72f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Secondary border color for light background"
+          }
+        },
+        "darkmode": {
+          "value": "[UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Secondary border color for dark background"
+          }
         }
       },
       "name": "CdrColorBorderSecondary",
@@ -2323,6 +3097,16 @@
         "example": "color",
         "description": "Border color for error elements"
       },
+      "lightmode": {
+        "value": "[UIColor colorWithRed:0.91f green:0.41f blue:0.41f alpha:1.00f]",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for error validation state for light background"
+        }
+      },
       "original": {
         "value": "{options.color.error-red-800.value}",
         "category": "color",
@@ -2331,6 +3115,16 @@
           "type": "border",
           "example": "color",
           "description": "Border color for error elements"
+        },
+        "lightmode": {
+          "value": "[UIColor colorWithRed:0.91f green:0.41f blue:0.41f alpha:1.00f]",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Border color for error validation state for light background"
+          }
         }
       },
       "name": "CdrColorBorderError",
@@ -3374,6 +4168,84 @@
         }
       },
       "name": "CdrColorBorderTabKeylineDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for disabled state for light background"
+      },
+      "original": {
+        "value": "{options.color.partly-cloudy.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for disabled state for light background"
+        }
+      },
+      "name": "CdrColorBorderDisabledLightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for disabled state for dark background"
+      },
+      "original": {
+        "value": "{options.color.partly-cloudy.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for disabled state for dark background"
+        }
+      },
+      "name": "CdrColorBorderDisabledDarkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.17f green:0.40f blue:0.57f alpha:1.00f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for selected state for light background"
+      },
+      "original": {
+        "value": "{options.color.closed-on-monday.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for selected state for light background"
+        }
+      },
+      "name": "CdrColorBorderSelectedLightmode",
       "attributes": {
         "option": false,
         "deprecated": false,

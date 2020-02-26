@@ -9,6 +9,26 @@
         "example": "color",
         "description": "The default, primary text color"
       },
+      "lightmode": {
+        "value": "#292929",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Primary body text color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "#fafafa",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Primary body text color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-900-75.value}",
         "category": "color",
@@ -17,6 +37,26 @@
           "type": "text",
           "example": "color",
           "description": "The default, primary text color"
+        },
+        "lightmode": {
+          "value": "#292929",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Primary body text color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "#fafafa",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Primary body text color on a dark background"
+          }
         }
       },
       "name": "cdr-color-text-primary",
@@ -35,6 +75,26 @@
         "example": "color",
         "description": "The secondary text color"
       },
+      "lightmode": {
+        "value": "#616161",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Secondary or supplemental text color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "#999999",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Secondary or supplemental text color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-800-75.value}",
         "category": "color",
@@ -43,6 +103,26 @@
           "type": "text",
           "example": "color",
           "description": "The secondary text color"
+        },
+        "lightmode": {
+          "value": "#616161",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Secondary or supplemental text color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "#999999",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Secondary or supplemental text color on a dark background"
+          }
         }
       },
       "name": "cdr-color-text-secondary",
@@ -139,6 +219,26 @@
         "example": "color",
         "description": "The color of text when it is disabled"
       },
+      "lightmode": {
+        "value": "#b8b8b8",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for interactive UI elements on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "#616161",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for interactive UI elements on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-500.value}",
         "category": "color",
@@ -147,6 +247,26 @@
           "type": "text",
           "example": "color",
           "description": "The color of text when it is disabled"
+        },
+        "lightmode": {
+          "value": "#b8b8b8",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Disabled text color for interactive UI elements on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "#616161",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Disabled text color for interactive UI elements on a dark background"
+          }
         }
       },
       "name": "cdr-color-text-disabled",
@@ -217,6 +337,26 @@
         "example": "color",
         "description": "Color of error messages"
       },
+      "lightmode": {
+        "value": "#b5292b",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "#e86868",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.error-red-900.value}",
         "category": "color",
@@ -225,6 +365,26 @@
           "type": "text",
           "example": "color",
           "description": "Color of error messages"
+        },
+        "lightmode": {
+          "value": "#b5292b",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Error text color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "#e86868",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Error text color on a dark background"
+          }
         }
       },
       "name": "cdr-color-text-error",
@@ -566,6 +726,58 @@
         }
       },
       "name": "cdr-color-text-link-visited",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#3278ae",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Link text color on a light background"
+      },
+      "original": {
+        "value": "{options.color.easily-excited.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Link text color on a light background"
+        }
+      },
+      "name": "cdr-color-text-link-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#5197cd",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Link text color on a dark background"
+      },
+      "original": {
+        "value": "{options.color.suede-shoes.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Link text color on a dark background"
+        }
+      },
+      "name": "cdr-color-text-link-darkmode",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1067,6 +1279,162 @@
       }
     },
     {
+      "value": "#292929",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Label text color for forms on a light background. Can also be used for input entry text"
+      },
+      "original": {
+        "value": "{color.text.primary.lightmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Label text color for forms on a light background. Can also be used for input entry text"
+        }
+      },
+      "name": "cdr-color-text-form-label-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fafafa",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Label text color for forms on a dark background. Can also be used for input entry text"
+      },
+      "original": {
+        "value": "{color.text.primary.darkmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Label text color for forms on a dark background. Can also be used for input entry text"
+        }
+      },
+      "name": "cdr-color-text-form-label-darkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#616161",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Placeholder text color for forms on a light background"
+      },
+      "original": {
+        "value": "{color.text.secondary.lightmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Placeholder text color for forms on a light background"
+        }
+      },
+      "name": "cdr-color-text-form-placeholder-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#999999",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Placeholder text color for forms on a dark background"
+      },
+      "original": {
+        "value": "{color.text.secondary.darkmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Placeholder text color for forms on a dark background"
+        }
+      },
+      "name": "cdr-color-text-form-placeholder-darkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#b8b8b8",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color for forms on a light background"
+      },
+      "original": {
+        "value": "{color.text.disabled.lightmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for forms on a light background"
+        }
+      },
+      "name": "cdr-color-text-form-disabled-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#616161",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color for forms on a dark background"
+      },
+      "original": {
+        "value": "{color.text.disabled.darkmode.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for forms on a dark background"
+        }
+      },
+      "name": "cdr-color-text-form-disabled-darkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#928b80",
       "category": "color",
       "docs": {
@@ -1101,6 +1469,26 @@
         "example": "color",
         "description": "Emphasis or darkest icon color on a light background"
       },
+      "lightmode": {
+        "value": "#292929",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Emphasis or darkest icon color on a light background"
+        }
+      },
+      "darkmode": {
+        "value": "#fafafa",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Emphasis or lightest icon color on a dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
         "category": "color",
@@ -1109,6 +1497,26 @@
           "type": "icon",
           "example": "color",
           "description": "Emphasis or darkest icon color on a light background"
+        },
+        "lightmode": {
+          "value": "#292929",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "icon",
+            "example": "color",
+            "description": "Emphasis or darkest icon color on a light background"
+          }
+        },
+        "darkmode": {
+          "value": "#fafafa",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "icon",
+            "example": "color",
+            "description": "Emphasis or lightest icon color on a dark background"
+          }
         }
       },
       "name": "cdr-color-icon-emphasis",
@@ -1138,6 +1546,58 @@
         }
       },
       "name": "cdr-color-icon-disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#616161",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Primary icon color on a light background"
+      },
+      "original": {
+        "value": "{options.color.taken-for-granite.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Primary icon color on a light background"
+        }
+      },
+      "name": "cdr-color-icon-primary-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#999999",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Primary icon color on a dark background"
+      },
+      "original": {
+        "value": "{options.color.holy-smoke.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Primary icon color on a dark background"
+        }
+      },
+      "name": "cdr-color-icon-primary-darkmode",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -2211,6 +2671,240 @@
       }
     },
     {
+      "value": "#292929",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for dark background color"
+      },
+      "original": {
+        "value": "{options.color.heart-of-darkness.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for dark background color"
+        }
+      },
+      "name": "cdr-color-background-dark",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#1a1a1a",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for dark background color - darkest value"
+      },
+      "original": {
+        "value": "{options.color.lost-in-space.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for dark background color - darkest value"
+        }
+      },
+      "name": "cdr-color-background-darker",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#f7f7f7",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for light background color"
+      },
+      "original": {
+        "value": "{options.color.the-tooth.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for light background color"
+        }
+      },
+      "name": "cdr-color-background-light",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fafafa",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for light background color - value is between light and lightest"
+      },
+      "original": {
+        "value": "{options.color.moon-shot.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for light background color - value is between light and lightest"
+        }
+      },
+      "name": "cdr-color-background-lighter",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Only use for light background color - lightest value"
+      },
+      "original": {
+        "value": "{options.color.clean-slate.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Only use for light background color - lightest value"
+        }
+      },
+      "name": "cdr-color-background-lightest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Light background color for forms"
+      },
+      "original": {
+        "value": "{color.background.lightest.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Light background color for forms"
+        }
+      },
+      "name": "cdr-color-background-form-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#292929",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Dark background color for forms"
+      },
+      "original": {
+        "value": "{color.background.dark.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Dark background color for forms"
+        }
+      },
+      "name": "cdr-color-background-form-darkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Light background color for input control"
+      },
+      "original": {
+        "value": "{color.background.lightest.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Light background color for input control"
+        }
+      },
+      "name": "cdr-color-background-form-input-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#292929",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Dark background color for input control"
+      },
+      "original": {
+        "value": "{color.background.dark.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Dark background color for input control"
+        }
+      },
+      "name": "cdr-color-background-form-input-darkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#dcd6cb",
       "category": "color",
       "docs": {
@@ -2218,6 +2912,26 @@
         "type": "border",
         "example": "color",
         "description": "Default border color for separating content"
+      },
+      "lightmode": {
+        "value": "#616161",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Primary border color for light background"
+        }
+      },
+      "darkmode": {
+        "value": "#fafafa",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Primary border color for dark background"
+        }
       },
       "original": {
         "value": "{options.color.warm-grey-400.value}",
@@ -2227,6 +2941,26 @@
           "type": "border",
           "example": "color",
           "description": "Default border color for separating content"
+        },
+        "lightmode": {
+          "value": "#616161",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Primary border color for light background"
+          }
+        },
+        "darkmode": {
+          "value": "#fafafa",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Primary border color for dark background"
+          }
         }
       },
       "name": "cdr-color-border-primary",
@@ -2245,6 +2979,26 @@
         "example": "color",
         "description": "An alternate, secondary background color used on some pages"
       },
+      "lightmode": {
+        "value": "#b8b8b8",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Secondary border color for light background"
+        }
+      },
+      "darkmode": {
+        "value": "#999999",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Secondary border color for dark background"
+        }
+      },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
         "category": "color",
@@ -2253,6 +3007,26 @@
           "type": "border",
           "example": "color",
           "description": "An alternate, secondary background color used on some pages"
+        },
+        "lightmode": {
+          "value": "#b8b8b8",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Secondary border color for light background"
+          }
+        },
+        "darkmode": {
+          "value": "#999999",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Secondary border color for dark background"
+          }
         }
       },
       "name": "cdr-color-border-secondary",
@@ -2323,6 +3097,16 @@
         "example": "color",
         "description": "Border color for error elements"
       },
+      "lightmode": {
+        "value": "#e86868",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for error validation state for light background"
+        }
+      },
       "original": {
         "value": "{options.color.error-red-800.value}",
         "category": "color",
@@ -2331,6 +3115,16 @@
           "type": "border",
           "example": "color",
           "description": "Border color for error elements"
+        },
+        "lightmode": {
+          "value": "#e86868",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Border color for error validation state for light background"
+          }
         }
       },
       "name": "cdr-color-border-error",
@@ -3374,6 +4168,84 @@
         }
       },
       "name": "cdr-color-border-tab-keyline-disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#dadada",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for disabled state for light background"
+      },
+      "original": {
+        "value": "{options.color.partly-cloudy.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for disabled state for light background"
+        }
+      },
+      "name": "cdr-color-border-disabled-lightmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#dadada",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for disabled state for dark background"
+      },
+      "original": {
+        "value": "{options.color.partly-cloudy.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for disabled state for dark background"
+        }
+      },
+      "name": "cdr-color-border-disabled-darkmode",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#2b6692",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for selected state for light background"
+      },
+      "original": {
+        "value": "{options.color.closed-on-monday.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for selected state for light background"
+        }
+      },
+      "name": "cdr-color-border-selected-lightmode",
       "attributes": {
         "option": false,
         "deprecated": false,

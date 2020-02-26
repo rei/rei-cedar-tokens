@@ -1,0 +1,423 @@
+{
+  color: {
+    docCategory: 'colors',
+    docExample: 'color',
+    // Text
+    text: {
+      primary: {
+        'lightmode': {
+          value: '{options.color.heart-of-darkness.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Primary body text color on a light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.moon-shot.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Primary body text color on a dark background',
+          },
+        },
+      },
+      secondary: {
+        'lightmode': {
+          value: '{options.color.taken-for-granite.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Secondary or supplemental text color on a light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.holy-smoke.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Secondary or supplemental text color on a dark background',
+          },
+        },
+      },
+      disabled: {
+        'lightmode': {
+          value: '{options.color.grey-matter.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Disabled text color for interactive UI elements on a light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.taken-for-granite.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Disabled text color for interactive UI elements on a dark background',
+          },
+        },
+      },
+      link: {
+        'lightmode': {
+          value: '{options.color.easily-excited.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Link text color on a light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.suede-shoes.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Link text color on a dark background',
+          },
+        },
+      },
+      error: {
+        'lightmode': {
+          value: '{options.color.high-stakes.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Error text color on a light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.snap-decision.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Error text color on a dark background',
+          },
+        },
+      },
+      form: {
+        label: {
+          'lightmode': {
+            value: '{color.text.primary.lightmode.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Label text color for forms on a light background. Can also be used for input entry text',
+            },
+          },
+          'darkmode': {
+            value: '{color.text.primary.darkmode.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Label text color for forms on a dark background. Can also be used for input entry text',
+            },
+          },
+        },
+        placeholder: {
+          'lightmode': {
+            value: '{color.text.secondary.lightmode.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Placeholder text color for forms on a light background',
+            },
+          },
+          'darkmode': {
+            value: '{color.text.secondary.darkmode.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Placeholder text color for forms on a dark background',
+            },
+          },
+        },
+        disabled: {
+          'lightmode': {
+            value: '{color.text.disabled.lightmode.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Disabled text color for forms on a light background',
+            },
+          },
+          'darkmode': {
+            value: '{color.text.disabled.darkmode.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Disabled text color for forms on a dark background',
+            },
+          },
+        },
+      },
+    },
+    //Icons
+    icon: {
+      primary: {
+        'lightmode' : {
+          value: '{options.color.taken-for-granite.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Primary icon color on a light background',
+          },
+        },
+        'darkmode' : {
+          value: '{options.color.holy-smoke.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Primary icon color on a dark background',
+          },
+        },
+      },
+      emphasis: {
+        'lightmode' : {
+          value: '{options.color.heart-of-darkness.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Emphasis or darkest icon color on a light background',
+          },
+        },
+        'darkmode' : {
+          value: '{options.color.moon-shot.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Emphasis or lightest icon color on a dark background',
+          },
+        },
+      },
+    },
+    background: {
+      'dark': {
+        value: '{options.color.heart-of-darkness.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Only use for dark background color',
+        },
+      },
+      'darker': {
+        value: '{options.color.lost-in-space.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Only use for dark background color - darkest value',
+        },
+      },
+      'light': {
+        value: '{options.color.the-tooth.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Only use for light background color',
+        },
+      },
+      'lighter': {
+        value: '{options.color.moon-shot.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Only use for light background color - value is between light and lightest',
+        },
+      },
+      'lightest': {
+        value: '{options.color.clean-slate.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Only use for light background color - lightest value',
+        },
+      },
+      form: {
+        'lightmode': {
+          value: '{color.background.lightest.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Light background color for forms',
+          },
+        },
+        'darkmode': {
+          value: '{color.background.dark.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Dark background color for forms',
+          },
+        },
+        input: {
+          'lightmode': {
+            value: '{color.background.lightest.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Light background color for input control',
+            },
+          },
+          'darkmode': {
+            value: '{color.background.dark.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Dark background color for input control',
+            },
+          },
+        },
+      },
+    },
+    // border
+    border: {
+      primary: {
+        'lightmode': {
+          value: '{options.color.taken-for-granite.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Primary border color for light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.moon-shot.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Primary border color for dark background',
+          },
+        },
+      },
+      secondary: {
+        'lightmode': {
+          value: '{options.color.grey-matter.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Secondary border color for light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.holy-smoke.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Secondary border color for dark background',
+          },
+        },
+      },
+      disabled: {
+        'lightmode': {
+          value: '{options.color.partly-cloudy.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for disabled state for light background',
+          },
+        },
+        'darkmode': {
+          value: '{options.color.partly-cloudy.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for disabled state for dark background',
+          },
+        },
+      },
+      error: {
+        'lightmode': {
+          value: '{options.color.snap-decision.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for error validation state for light background',
+          },
+        },
+      },
+      selected: {
+        'lightmode': {
+          value: '{options.color.closed-on-monday.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for selected state for light background',
+          },
+        },
+      },
+    },
+  },
+}
