@@ -9,12 +9,20 @@
         value: '#ffffff',
         category: 'color',
       },
+      'white-75': { // semi-transparent color for use with form element backgrounds
+        value: '#ffffff75',
+        category: 'color',
+      },
       'warm-grey-100': {
         value: '#f9f8f6',
         category: 'color',
       },
       'warm-grey-200': {
         value: '#f4f2ed',
+        category: 'color',
+      },
+      'warm-grey-200-75': { // semi-transparent color for use with modal overlays
+        value: '#f4f2ed75',
         category: 'color',
       },
       'warm-grey-300': {
@@ -41,7 +49,7 @@
         value: '#726d64',
         category: 'color',
       },
-      'warm-grey-800-transparent': { // semi-transparent color for use with typography
+      'warm-grey-800-75': { // semi-transparent color for use with typography
         value: '#423B2F75',
         category: 'color',
       },
@@ -49,7 +57,11 @@
         value: '#4e4d49',
         category: 'color',
       },
-      'warm-grey-900-transparent': { // semi-transparent color for use with typography
+      'warm-grey-900-20': { // semi-transparent color for use with drop shadows
+        value: '#0C0B0820',
+        category: 'color',
+      },
+      'warm-grey-900-75': { // semi-transparent color for use with typography
         value: '#0C0B0875',
         category: 'color',
       },      
