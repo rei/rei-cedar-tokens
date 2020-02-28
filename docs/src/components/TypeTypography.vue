@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>{{name}}</td>
+    <td>{{name}} <b v-if="deprecated">(Deprecated)</b></td>
     <td>
       {{prop.value}}
     </td>
@@ -17,6 +17,7 @@ export default {
   props: {
     name: String,
     prop: Object,
+    deprecated: Boolean,
   }
 };
 </script>

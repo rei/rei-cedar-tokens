@@ -9,12 +9,20 @@
         value: '#ffffff',
         category: 'color',
       },
+      'white-75': { // semi-transparent color for use with form element backgrounds
+        value: '#ffffffBF',
+        category: 'color',
+      },
       'warm-grey-100': {
         value: '#f9f8f6',
         category: 'color',
       },
       'warm-grey-200': {
         value: '#f4f2ed',
+        category: 'color',
+      },
+      'warm-grey-200-75': { // semi-transparent color for use with modal overlays
+        value: '#f4f2edBF',
         category: 'color',
       },
       'warm-grey-300': {
@@ -41,16 +49,20 @@
         value: '#726d64',
         category: 'color',
       },
-      'warm-grey-800-transparent': { // semi-transparent color for use with typography
-        value: '#423B2F75',
+      'warm-grey-800-75': { // semi-transparent color for use with typography
+        value: '#423B2FBF',
         category: 'color',
       },
       'warm-grey-900': {
         value: '#4e4d49',
         category: 'color',
       },
-      'warm-grey-900-transparent': { // semi-transparent color for use with typography
-        value: '#12110D75',
+      'warm-grey-900-20': { // semi-transparent color for use with drop shadows
+        value: '#0C0B0833',
+        category: 'color',
+      },
+      'warm-grey-900-75': { // semi-transparent color for use with typography
+        value: '#0C0B08BF',
         category: 'color',
       },      
       'warm-grey-1000': {
@@ -138,19 +150,19 @@
         category: 'color',
       },
       'alpine-lake-blue-800': {
-        value: '#446DA6',
+        value: '#406EB5',
         category: 'color',
       },
       'alpine-lake-blue-900': {
-        value: '#224277',
+        value: '#1B437E',
         category: 'color',
       },
       'alpine-lake-blue-1000': {
-        value: '#142A57',
+        value: '#0B2D60',
         category: 'color',
       },
       'alpine-lake-blue-1100': {
-        value: '#081535',
+        value: '#061A37',
         category: 'color',
       }, // golden yellow
       'golden-yellow-100': {

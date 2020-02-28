@@ -4,8 +4,8 @@
       <span :style="mixinStyles(prop)">Get outside with REI</span>
     </td>
     <td>
-      <p v-if="isDeprecated">---DEPRECATED---</p>
       {{mixinName}}
+      <b v-if="isDeprecated">(DEPRECATED)</b>
     </td>
     <td>mixin</td>
   </tr>
