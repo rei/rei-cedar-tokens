@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>{{prop.name}}</td>
+    <td>{{prop.name}} <b v-if="deprecated">(Deprecated)</b></td>
     <td>{{prop.value}}</td>
     <td></td>
   </tr>
@@ -11,6 +11,7 @@ export default {
   name: 'TypeToken',
   props: {
     prop: Object,
+    deprecated: Boolean,
   },
 };
 </script>
