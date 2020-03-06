@@ -90,6 +90,7 @@ module.exports = {
   cdrColorBorderWarning: "#c77523",
   cdrColorBorderError: "#b5292b",
   cdrColorBorderInfo: "#406eb5",
+  cdrColorBorderInputDefault: "#928b80",
   cdrColorBorderInputDefaultActive: "#406eb5",
   cdrColorBorderInputDefaultSelected: "#406eb5",
   cdrColorBorderInputDefaultSelectedHover: "#5d98dd",

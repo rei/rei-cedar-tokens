@@ -89,6 +89,7 @@ export const CdrColorBorderSuccess = "#4b8b50";
 export const CdrColorBorderWarning = "#c77523";
 export const CdrColorBorderError = "#b5292b";
 export const CdrColorBorderInfo = "#406eb5";
+export const CdrColorBorderInputDefault = "#928b80";
 export const CdrColorBorderInputDefaultActive = "#406eb5";
 export const CdrColorBorderInputDefaultSelected = "#406eb5";
 export const CdrColorBorderInputDefaultSelectedHover = "#5d98dd";

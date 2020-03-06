@@ -973,57 +973,55 @@
             example: '{color.docExample}',
             description: 'Default border color on form elements',
           },
+        },        
+        'default-active': {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Active state of a form border',
+          },
         },
-        default: {
-          active: {
-            value: '{options.color.alpine-lake-blue-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Active state of a form border',
-            },
+        'default-selected': {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Selected state of a form border',
           },
-          selected: {
-            value: '{options.color.alpine-lake-blue-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Selected state of a form border',
-            },
+        },
+        'default-selected-hover': {
+          value: '{options.color.alpine-lake-blue-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Hover state of a selected form border',
           },
-          'selected-hover': {
-            value: '{options.color.alpine-lake-blue-700.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Hover state of a selected form border',
-            },
+        },
+        'default-hover': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Hover state of a form border',
           },
-          hover: {
-            value: '{options.color.warm-grey-700.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Hover state of a form border',
-            },
-          },
-          disabled: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Disabled form border',
-            },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Disabled form border',
           },
         },
       },
