@@ -3,7 +3,7 @@
     <td>
       <div class="inset-example" :style="{boxShadow: inset, padding: pad}">content</div>
     </td>
-    <td>{{prop.name}}</td>
+    <td>{{prop.name}} <b v-if="deprecated">(Deprecated)</b></td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
@@ -13,6 +13,7 @@ export default {
   name: 'TypeInset',
   props: {
     prop: Object,
+    deprecated: Boolean,
   },
   computed: {
     pad() {

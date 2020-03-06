@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>{{prop.name}}</td>
+    <td>{{prop.name}} <b v-if="deprecated">(Deprecated)</b></td>
     <td>{{prop.value}}</td>
     <td>
       <!-- <div class="breakpoint-example" :style="{width: prop.value}"/> -->
@@ -13,6 +13,7 @@ export default {
   name: 'TypeBreakpoint',
   props: {
     prop: Object,
+    deprecated: Boolean,
   },
 };
 </script>
