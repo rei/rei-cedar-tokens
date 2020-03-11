@@ -74,6 +74,7 @@ module.exports = {
   cdrColorBackgroundCtaSaleRest: "#cc0000",
   cdrColorBackgroundCtaSaleActive: "#990000",
   cdrColorBackgroundCtaSaleHover: "#df3434",
+  cdrColorBackgroundCtaBrandRest: "#225c4e",
   cdrColorBackgroundCtaBrandActive: "#2f6a59",
   cdrColorBackgroundCtaBrandHover: "#469178",
   cdrColorBackgroundCtaDefaultDisabled: "#dcd6cb",

@@ -788,16 +788,16 @@
           },
         },
         brand: {
-          value: '{options.color.blue-spruce-green-1000.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Background color for the brand CTA',
+          rest: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the brand CTA',
+            },
           },
-        },        
-        brand: {
           active: {
             value: '{options.color.blue-spruce-green-900.value}',
             category: 'color',

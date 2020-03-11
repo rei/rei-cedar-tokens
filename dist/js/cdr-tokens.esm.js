@@ -73,6 +73,7 @@ export const CdrColorBackgroundCtaLightDisabled = "#f9f8f6";
 export const CdrColorBackgroundCtaSaleRest = "#cc0000";
 export const CdrColorBackgroundCtaSaleActive = "#990000";
 export const CdrColorBackgroundCtaSaleHover = "#df3434";
+export const CdrColorBackgroundCtaBrandRest = "#225c4e";
 export const CdrColorBackgroundCtaBrandActive = "#2f6a59";
 export const CdrColorBackgroundCtaBrandHover = "#469178";
 export const CdrColorBackgroundCtaDefaultDisabled = "#dcd6cb";
