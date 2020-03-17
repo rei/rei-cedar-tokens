@@ -1302,7 +1302,33 @@
         }
       },
       {
-        "value": "#f9f8f6",
+        "value": "#f4f2ed",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The background color of table headers"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-200.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "The background color of table headers"
+          }
+        },
+        "name": "cdr-color-background-table-header",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1311,7 +1337,7 @@
           "description": "The background color of table rows"
         },
         "original": {
-          "value": "{options.color.warm-grey-100.value}",
+          "value": "{options.color.white.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1328,7 +1354,7 @@
         }
       },
       {
-        "value": "#ffffff",
+        "value": "#f9f8f6",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1337,7 +1363,7 @@
           "description": "An alternate row color to aid grouping row data"
         },
         "original": {
-          "value": "{options.color.white.value}",
+          "value": "{options.color.warm-grey-100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2212,7 +2238,7 @@
         }
       },
       {
-        "value": "rgba(244, 242, 237, 0.75)",
+        "value": "rgba(244, 242, 237, 0.85)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2221,7 +2247,7 @@
           "description": "The background overlay for modal"
         },
         "original": {
-          "value": "{options.color.warm-grey-200-75.value}",
+          "value": "{options.color.warm-grey-200-85.value}",
           "category": "color",
           "docs": {
             "category": "colors",

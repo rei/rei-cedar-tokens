@@ -522,8 +522,18 @@
           description: 'Background color for informational messages',
         },
       },
+      'table-header': {
+        value: '{options.color.warm-grey-200.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'The background color of table headers',
+        },
+      },
       'table-row': {
-        value: '{options.color.warm-grey-100.value}',
+        value: '{options.color.white.value}',
         category: 'color',
         docs: {
           category: '{color.docCategory}',
@@ -533,7 +543,7 @@
         },
       },
       'table-row-alt': {
-        value: '{options.color.white.value}',
+        value: '{options.color.warm-grey-100.value}',
         category: 'color',
         docs: {
           category: '{color.docCategory}',
@@ -891,7 +901,7 @@
         },
       },
       'modal-overlay': {
-        value: '{options.color.warm-grey-200-75.value}',
+        value: '{options.color.warm-grey-200-85.value}',
         category: 'color',
         docs: {
           category: '{color.docCategory}',
