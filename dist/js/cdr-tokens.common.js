@@ -47,7 +47,7 @@ module.exports = {
   cdrColorBackgroundSecondary: "#f4f2ed",
   cdrColorBackgroundSuccess: "#ecf9e6",
   cdrColorBackgroundWarning: "#fdf6e2",
-  cdrColorBackgroundError: "#fcece4",
+  cdrColorBackgroundError: "#fcefe8",
   cdrColorBackgroundInfo: "#e2f4fe",
   cdrColorBackgroundTableHeader: "#f4f2ed",
   cdrColorBackgroundTableRow: "#ffffff",
