@@ -314,7 +314,7 @@
         }
       },
       {
-        "value": "#b2ab9f",
+        "value": "rgba(66, 59, 47, 0.75)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -323,7 +323,7 @@
           "description": "Text color of placeholder text within forms"
         },
         "original": {
-          "value": "{options.color.warm-grey-600.value}",
+          "value": "{options.color.warm-grey-800-75.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -470,7 +470,7 @@
         }
       },
       {
-        "value": "#78b1e8",
+        "value": "#1b437e",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -479,7 +479,7 @@
           "description": "Text color for the hover state of links"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-600.value}",
+          "value": "{options.color.alpine-lake-blue-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -496,7 +496,7 @@
         }
       },
       {
-        "value": "#5d98dd",
+        "value": "#0b2d60",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -505,7 +505,7 @@
           "description": "Text color for the active and pressed states of links"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-700.value}",
+          "value": "{options.color.alpine-lake-blue-1000.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -548,7 +548,7 @@
         }
       },
       {
-        "value": "#0b2d60",
+        "value": "#061a37",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -557,7 +557,7 @@
           "description": "Text color of visited links"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-1000.value}",
+          "value": "{options.color.alpine-lake-blue-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1094,7 +1094,7 @@
         }
       },
       {
-        "value": "#928b80",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1103,7 +1103,7 @@
           "description": "Emphasis or darkest icon color on a light background"
         },
         "original": {
-          "value": "{options.color.warm-grey-700.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1250,7 +1250,7 @@
         }
       },
       {
-        "value": "#fcece4",
+        "value": "#fcefe8",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1302,7 +1302,33 @@
         }
       },
       {
-        "value": "#f9f8f6",
+        "value": "#f4f2ed",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The background color of table headers"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-200.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "The background color of table headers"
+          }
+        },
+        "name": "cdr-color-background-table-header",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1311,7 +1337,7 @@
           "description": "The background color of table rows"
         },
         "original": {
-          "value": "{options.color.warm-grey-100.value}",
+          "value": "{options.color.white.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1328,7 +1354,7 @@
         }
       },
       {
-        "value": "#ffffff",
+        "value": "#f9f8f6",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1337,7 +1363,7 @@
           "description": "An alternate row color to aid grouping row data"
         },
         "original": {
-          "value": "{options.color.white.value}",
+          "value": "{options.color.warm-grey-100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1432,7 +1458,7 @@
         }
       },
       {
-        "value": "#5d98dd",
+        "value": "#1b437e",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1441,7 +1467,7 @@
           "description": "Hover state of a selected form background"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-700.value}",
+          "value": "{options.color.alpine-lake-blue-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1510,7 +1536,7 @@
         }
       },
       {
-        "value": "#2f6a59",
+        "value": "#113731",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1519,7 +1545,7 @@
           "description": "Background color for the active and pressed states of the primary button"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-900.value}",
+          "value": "{options.color.blue-spruce-green-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1536,7 +1562,7 @@
         }
       },
       {
-        "value": "#469178",
+        "value": "#2f6a59",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1545,7 +1571,7 @@
           "description": "Background color for the hover state of the primary button"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-800.value}",
+          "value": "{options.color.blue-spruce-green-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1926,7 +1952,7 @@
         }
       },
       {
-        "value": "#df3434",
+        "value": "#dc2323",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1952,7 +1978,33 @@
         }
       },
       {
-        "value": "#2f6a59",
+        "value": "#225c4e",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the brand CTA"
+        },
+        "original": {
+          "value": "{options.color.blue-spruce-green-1000.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Background color for the brand CTA"
+          }
+        },
+        "name": "cdr-color-background-cta-brand-rest",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#113731",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1961,7 +2013,7 @@
           "description": "Background color for the hover state of the brand CTA"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-900.value}",
+          "value": "{options.color.blue-spruce-green-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1978,7 +2030,7 @@
         }
       },
       {
-        "value": "#469178",
+        "value": "#2f6a59",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1987,7 +2039,7 @@
           "description": "Background color for the active and pressed states of the brand CTA"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-800.value}",
+          "value": "{options.color.blue-spruce-green-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2186,7 +2238,7 @@
         }
       },
       {
-        "value": "rgba(244, 242, 237, 0.75)",
+        "value": "rgba(244, 242, 237, 0.85)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2195,7 +2247,7 @@
           "description": "The background overlay for modal"
         },
         "original": {
-          "value": "{options.color.warm-grey-200-75.value}",
+          "value": "{options.color.warm-grey-200-85.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2368,6 +2420,32 @@
         }
       },
       {
+        "value": "#928b80",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default border color on form elements"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-700.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Default border color on form elements"
+          }
+        },
+        "name": "cdr-color-border-input-default",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "#406eb5",
         "category": "color",
         "docs": {
@@ -2420,7 +2498,7 @@
         }
       },
       {
-        "value": "#5d98dd",
+        "value": "#1b437e",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2429,7 +2507,7 @@
           "description": "Hover state of a selected form border"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-700.value}",
+          "value": "{options.color.alpine-lake-blue-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2524,7 +2602,7 @@
         }
       },
       {
-        "value": "#2f6a59",
+        "value": "#113731",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2533,7 +2611,7 @@
           "description": "Border color for the active and pressed states of the primary button"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-900.value}",
+          "value": "{options.color.blue-spruce-green-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2550,7 +2628,7 @@
         }
       },
       {
-        "value": "#469178",
+        "value": "#2f6a59",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2559,7 +2637,7 @@
           "description": "Border color for the hover state of the primary button"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-800.value}",
+          "value": "{options.color.blue-spruce-green-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2602,7 +2680,7 @@
         }
       },
       {
-        "value": "#b2ab9f",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2611,7 +2689,7 @@
           "description": "Border color for the active and pressed states of the secondary button"
         },
         "original": {
-          "value": "{options.color.warm-grey-600.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2628,7 +2706,7 @@
         }
       },
       {
-        "value": "#dcd6cb",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2637,7 +2715,7 @@
           "description": "Border color for the hover state of the secondary button"
         },
         "original": {
-          "value": "{options.color.warm-grey-400.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2784,7 +2862,7 @@
         }
       },
       {
-        "value": "#b2ab9f",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2793,7 +2871,7 @@
           "description": "Border color for the active and pressed states of the light CTA"
         },
         "original": {
-          "value": "{options.color.warm-grey-600.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2810,7 +2888,7 @@
         }
       },
       {
-        "value": "#dcd6cb",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2819,7 +2897,7 @@
           "description": "Border color for the hover state of the light CTA"
         },
         "original": {
-          "value": "{options.color.warm-grey-400.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2888,7 +2966,7 @@
         }
       },
       {
-        "value": "#df3434",
+        "value": "#dc2323",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2940,7 +3018,7 @@
         }
       },
       {
-        "value": "#2f6a59",
+        "value": "#113731",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2949,7 +3027,7 @@
           "description": "Border color for the hover state of the brand CTA"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-900.value}",
+          "value": "{options.color.blue-spruce-green-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2966,7 +3044,7 @@
         }
       },
       {
-        "value": "#469178",
+        "value": "#2f6a59",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2975,7 +3053,7 @@
           "description": "Border color for the active and pressed states of the brand CTA"
         },
         "original": {
-          "value": "{options.color.blue-spruce-green-800.value}",
+          "value": "{options.color.blue-spruce-green-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3096,7 +3174,7 @@
         }
       },
       {
-        "value": "#78b1e8",
+        "value": "#1b437e",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3105,7 +3183,7 @@
           "description": "Border color for the hover state of underlined links"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-600.value}",
+          "value": "{options.color.alpine-lake-blue-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3122,7 +3200,7 @@
         }
       },
       {
-        "value": "#5d98dd",
+        "value": "#0b2d60",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3131,7 +3209,7 @@
           "description": "Border color for the active and pressed states of underlined links"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-700.value}",
+          "value": "{options.color.alpine-lake-blue-1000.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3174,7 +3252,7 @@
         }
       },
       {
-        "value": "#0b2d60",
+        "value": "#061a37",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3183,7 +3261,7 @@
           "description": "Border color of visited underlined links"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-1000.value}",
+          "value": "{options.color.alpine-lake-blue-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3219,6 +3297,32 @@
           }
         },
         "name": "cdr-color-border-table-default",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#928b80",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color separating complex table heads"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-700.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Border color separating complex table heads"
+          }
+        },
+        "name": "cdr-color-border-table-head",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -4823,13 +4927,13 @@
         }
       },
       {
-        "value": "0",
+        "value": "0.2rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "0,2rem",
+          "value": "02px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -4843,13 +4947,13 @@
         }
       },
       {
-        "value": "0.02rem",
+        "value": "0.2rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "0.2rem",
+          "value": "02px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -4923,13 +5027,13 @@
         }
       },
       {
-        "value": "0.04rem",
+        "value": "0.4rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "0.4rem",
+          "value": "04px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -4943,13 +5047,13 @@
         }
       },
       {
-        "value": "0.04rem",
+        "value": "0.4rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "0.4rem",
+          "value": "04px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -5023,13 +5127,13 @@
         }
       },
       {
-        "value": "0.08rem",
+        "value": "0.8rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "0.8rem",
+          "value": "08px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -5043,13 +5147,13 @@
         }
       },
       {
-        "value": "0.08rem",
+        "value": "0.8rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "0.8rem",
+          "value": "08px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -5123,13 +5227,13 @@
         }
       },
       {
-        "value": "0.16rem",
+        "value": "1.6rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "1.6rem",
+          "value": "16px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -5143,13 +5247,13 @@
         }
       },
       {
-        "value": "0.16rem",
+        "value": "1.6rem",
         "category": "size",
         "docs": {
           "category": "prominence"
         },
         "original": {
-          "value": "1.6rem",
+          "value": "16px",
           "category": "size",
           "docs": {
             "category": "prominence"
@@ -6425,7 +6529,7 @@
         }
       },
       {
-        "value": "0 0 0.02rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 0.2rem 0.2rem 0 rgba(12, 11, 8, 0.2)",
         "docs": {
           "category": "prominence",
           "example": "prominence"
@@ -6444,7 +6548,7 @@
         }
       },
       {
-        "value": "0 0.04rem 0.04rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 0.4rem 0.4rem 0 rgba(12, 11, 8, 0.2)",
         "docs": {
           "category": "prominence",
           "example": "prominence"
@@ -6463,7 +6567,7 @@
         }
       },
       {
-        "value": "0 0.08rem 0.08rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 0.8rem 0.8rem 0 rgba(12, 11, 8, 0.2)",
         "docs": {
           "category": "prominence",
           "example": "prominence"
@@ -6482,7 +6586,7 @@
         }
       },
       {
-        "value": "0 0.16rem 0.16rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 1.6rem 1.6rem 0 rgba(12, 11, 8, 0.2)",
         "docs": {
           "category": "prominence",
           "example": "prominence"
@@ -12018,7 +12122,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay600",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-600",
@@ -12214,7 +12318,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay700",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-700",
@@ -12410,7 +12514,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay800",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-800",
@@ -12606,7 +12710,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay900",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-900",
@@ -12802,7 +12906,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay1000",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-1000",
@@ -12998,7 +13102,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay1100",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-1100",
@@ -13194,7 +13298,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textDisplay1200",
         "property": "font-family",
         "newMixin": "text-heading-serif-strong-1200",
@@ -13978,7 +14082,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeading600",
         "property": "font-family",
         "newMixin": "text-heading-serif-600",
@@ -14174,7 +14278,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeading700",
         "property": "font-family",
         "newMixin": "text-heading-serif-700",
@@ -14370,7 +14474,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeading800",
         "property": "font-family",
         "newMixin": "text-heading-serif-800",
@@ -17455,7 +17559,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif200",
         "property": "font-family",
         "docs": {
@@ -17615,7 +17719,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif300",
         "property": "font-family",
         "docs": {
@@ -17775,7 +17879,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif400",
         "property": "font-family",
         "docs": {
@@ -17935,7 +18039,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif500",
         "property": "font-family",
         "docs": {
@@ -18095,7 +18199,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif600",
         "property": "font-family",
         "docs": {
@@ -18255,7 +18359,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif700",
         "property": "font-family",
         "docs": {
@@ -18415,7 +18519,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif800",
         "property": "font-family",
         "docs": {
@@ -18575,7 +18679,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif900",
         "property": "font-family",
         "docs": {
@@ -18735,7 +18839,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif1000",
         "property": "font-family",
         "docs": {
@@ -18895,7 +18999,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif1100",
         "property": "font-family",
         "docs": {
@@ -19055,7 +19159,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerif1200",
         "property": "font-family",
         "docs": {
@@ -19215,7 +19319,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong600",
         "property": "font-family",
         "docs": {
@@ -19375,7 +19479,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong700",
         "property": "font-family",
         "docs": {
@@ -19535,7 +19639,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong800",
         "property": "font-family",
         "docs": {
@@ -19695,7 +19799,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong900",
         "property": "font-family",
         "docs": {
@@ -19855,7 +19959,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong1000",
         "property": "font-family",
         "docs": {
@@ -20015,7 +20119,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong1100",
         "property": "font-family",
         "docs": {
@@ -20175,7 +20279,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textHeadingSerifStrong1200",
         "property": "font-family",
         "docs": {
@@ -23535,7 +23639,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif200",
         "property": "font-family",
         "docs": {
@@ -23695,7 +23799,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif300",
         "property": "font-family",
         "docs": {
@@ -23855,7 +23959,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif400",
         "property": "font-family",
         "docs": {
@@ -24015,7 +24119,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif500",
         "property": "font-family",
         "docs": {
@@ -24175,7 +24279,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif600",
         "property": "font-family",
         "docs": {
@@ -24335,7 +24439,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif700",
         "property": "font-family",
         "docs": {
@@ -24495,7 +24599,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerif800",
         "property": "font-family",
         "docs": {
@@ -24655,7 +24759,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong200",
         "property": "font-family",
         "docs": {
@@ -24815,7 +24919,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong300",
         "property": "font-family",
         "docs": {
@@ -24975,7 +25079,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong400",
         "property": "font-family",
         "docs": {
@@ -25135,7 +25239,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong500",
         "property": "font-family",
         "docs": {
@@ -25295,7 +25399,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong600",
         "property": "font-family",
         "docs": {
@@ -25455,7 +25559,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong700",
         "property": "font-family",
         "docs": {
@@ -25615,7 +25719,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "mixin": "cdr-textUtilitySerifStrong800",
         "property": "font-family",
         "docs": {
@@ -25878,7 +25982,7 @@
         }
       },
       {
-        "value": "Stuart, Sentinel, Georgia, serif",
+        "value": "Stuart, Georgia, serif",
         "original": {
           "value": "{options.font.family.serif.value}"
         },
