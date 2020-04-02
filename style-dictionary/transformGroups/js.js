@@ -6,8 +6,7 @@ module.exports = (StyleDictionary) => {
       'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/pascal',
-      'size/strip-px',
-      'size/px-to-rem',
+      'size/strip-all-px-js',
       'color/css',
     ],
   });
