@@ -188,7 +188,7 @@
           },
         },
         hover: {
-          value: '{options.color.alpine-lake-blue-900.value}',
+          value: '{options.color.alpine-lake-blue-800.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -239,6 +239,26 @@
             description: 'Text color for primary buttons',
           },
         },
+        'primary-hover': {
+          value: '{options.color.blue-spruce-green-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of primary buttons',
+          },
+        },
+        'primary-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of primary buttons',
+          },
+        },
         'primary-disabled': {
           value: '{options.color.white.value}',
           category: 'color',
@@ -257,6 +277,26 @@
             type: 'icon',
             example: '{color.docExample}',
             description: 'Text color for secondary buttons',
+          },
+        },
+        'secondary-hover': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of secondary buttons',
+          },
+        },
+        'secondary-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of secondary buttons',
           },
         },
         'secondary-disabled': {
@@ -281,6 +321,26 @@
             description: 'Text color for the dark CTA',
           },
         },
+        'dark-hover': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of the dark CTA',
+          },
+        },
+        'dark-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of the dark CTA',
+          },
+        },
         'dark-disabled': {
           value: '{options.color.white.value}',
           category: 'color',
@@ -299,6 +359,26 @@
             type: 'icon',
             example: '{color.docExample}',
             description: 'Text color for light CTA',
+          },
+        },
+        'light-hover': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of the light CTA',
+          },
+        },
+        'light-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of the light CTA',
           },
         },
         'light-disabled': {
@@ -321,6 +401,26 @@
             description: 'Text color for the brand CTA',
           },
         },
+        'brand-hover': {
+          value: '{options.color.blue-spruce-green-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of the brand CTA',
+          },
+        },
+        'brand-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of the brand CTA',
+          },
+        },
         'brand-disabled': {
           value: '{options.color.white.value}',
           category: 'color',
@@ -339,6 +439,26 @@
             type: 'icon',
             example: '{color.docExample}',
             description: 'Text color for the sale CTA',
+          },
+        },
+        'sale-hover': {
+          value: '{options.color.sale-red-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of the sale CTA',
+          },
+        },
+        'sale-active': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of the sale CTA',
           },
         },
         'sale-disabled': {
@@ -447,6 +567,16 @@
           type: 'icon',
           example: '{color.docExample}',
           description: 'Emphasis or darkest icon color on a light background',
+        },
+      },
+      link: {
+        value: '{options.color.alpine-lake-blue-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'icon',
+          example: '{color.docExample}',
+          description: 'The icon link color',
         },
       },
       disabled: {
@@ -617,7 +747,7 @@
             },
           },
           active: {
-            value: '{options.color.blue-spruce-green-1100.value}',
+            value: '{options.color.blue-spruce-green-1000.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -627,7 +757,7 @@
             },
           },
           hover: {
-            value: '{options.color.blue-spruce-green-900.value}',
+            value: '{options.color.sage-green-400.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -649,7 +779,7 @@
             },
           },
           active: {
-            value: '{options.color.warm-grey-200.value}',
+            value: '{options.color.warm-grey-700.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -659,7 +789,7 @@
             },
           },
           hover: {
-            value: '{options.color.white.value}',
+            value: '{options.color.warm-grey-200.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -689,6 +819,16 @@
             description: 'Default disabled border color',
           },
         },
+        'icon-only-active': {
+          value: '{options.color.warm-grey-200.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color for the icon only button active and focus states',
+          },
+        },
       },
       cta: {
         dark: {
@@ -703,7 +843,7 @@
             },
           },
           active: {
-            value: '{options.color.warm-grey-1000.value}',
+            value: '{options.color.warm-grey-900.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -713,7 +853,7 @@
             },
           },
           hover: {
-            value: '{options.color.warm-grey-800.value}',
+            value: '{options.color.warm-grey-300.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -735,7 +875,7 @@
             },
           },
           active: {
-            value: '{options.color.warm-grey-200.value}',
+            value: '{options.color.warm-grey-700.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -745,7 +885,7 @@
             },
           },
           hover: {
-            value: '{options.color.white.value}',
+            value: '{options.color.warm-grey-200.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -777,7 +917,7 @@
             },
           },
           active: {
-            value: '{options.color.sale-red-900.value}',
+            value: '{options.color.sale-red-800.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -787,7 +927,7 @@
             },
           },
           hover: {
-            value: '{options.color.sale-red-700.value}',
+            value: '{options.color.sale-red-200.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -809,7 +949,7 @@
             },
           },
           active: {
-            value: '{options.color.blue-spruce-green-1100.value}',
+            value: '{options.color.blue-spruce-green-1000.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -819,7 +959,7 @@
             },
           },
           hover: {
-            value: '{options.color.blue-spruce-green-900.value}',
+            value: '{options.color.sage-green-400.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1005,7 +1145,7 @@
           },
         },
         'default-selected-hover': {
-          value: '{options.color.alpine-lake-blue-900.value}',
+          value: '{options.color.alpine-lake-blue-800.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -1048,7 +1188,7 @@
             },
           },
           active: {
-            value: '{options.color.blue-spruce-green-1100.value}',
+            value: '{options.color.blue-spruce-green-1000.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1057,8 +1197,18 @@
               description: 'Border color for the active and pressed states of the primary button',
             },
           },
+          'active-inset': {
+            value: '{options.color.sage-green-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the primary button',
+            },
+          },
           hover: {
-            value: '{options.color.blue-spruce-green-900.value}',
+            value: '{options.color.blue-spruce-green-1000.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1089,6 +1239,16 @@
               description: 'Border color for the active and pressed states of the secondary button',
             },
           },
+          'active-inset': {
+            value: '{options.color.warm-grey-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the secondary button',
+            },
+          },
           hover: {
             value: '{options.color.warm-grey-700.value}',
             category: 'color',
@@ -1110,6 +1270,16 @@
             description: 'Default disabled border color',
           },
         },
+        'icon-only-active': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for the icon only button active and focus states',
+          },
+        },
       },
       cta: {
         dark: {
@@ -1124,7 +1294,7 @@
             },
           },
           active: {
-            value: '{options.color.warm-grey-1000.value}',
+            value: '{options.color.warm-grey-900.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1133,8 +1303,18 @@
               description: 'Border color for the active and pressed states of the dark CTA',
             },
           },
+          'active-inset': {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the dark CTA',
+            },
+          },
           hover: {
-            value: '{options.color.warm-grey-800.value}',
+            value: '{options.color.warm-grey-900.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1165,6 +1345,16 @@
               description: 'Border color for the active and pressed states of the light CTA',
             },
           },
+          'active-inset': {
+            value: '{options.color.warm-grey-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the light CTA',
+            },
+          },
           hover: {
             value: '{options.color.warm-grey-700.value}',
             category: 'color',
@@ -1188,7 +1378,7 @@
             },
           },
           active: {
-            value: '{options.color.sale-red-900.value}',
+            value: '{options.color.sale-red-800.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1197,8 +1387,18 @@
               description: 'Border color for the active and pressed states of the sale CTA',
             },
           },
+          'active-inset': {
+            value: '{options.color.sale-red-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the sale CTA',
+            },
+          },
           hover: {
-            value: '{options.color.sale-red-700.value}',
+            value: '{options.color.sale-red-800.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1220,7 +1420,7 @@
             },
           },
           active: {
-            value: '{options.color.blue-spruce-green-1100.value}',
+            value: '{options.color.blue-spruce-green-1000.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1229,8 +1429,18 @@
               description: 'Border color for the hover state of the brand CTA',
             },
           },
+          'active-inset': {
+            value: '{options.color.sage-green-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the brand CTA',
+            },
+          },
           hover: {
-            value: '{options.color.blue-spruce-green-900.value}',
+            value: '{options.color.blue-spruce-green-1000.value}',
             category: 'color',
             docs: {
               category: '{color.docCategory}',
@@ -1285,7 +1495,7 @@
           },
         },
         hover: {
-          value: '{options.color.alpine-lake-blue-900.value}',
+          value: '{options.color.alpine-lake-blue-800.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
