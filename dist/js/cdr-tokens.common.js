@@ -68,7 +68,7 @@ module.exports = {
   cdrColorBackgroundInputDefault: "rgba(255, 255, 255, 0.75)",
   cdrColorBackgroundInputDefaultHover: "#f9f8f6",
   cdrColorBackgroundInputDefaultSelected: "#406eb5",
-  cdrColorBackgroundInputDefaultSelectedHover: "#1b437e",
+  cdrColorBackgroundInputDefaultSelectedHover: "#b7e0fa",
   cdrColorBackgroundInputDefaultDisabled: "#f9f8f6",
   cdrColorBackgroundButtonPrimaryRest: "#225c4e",
   cdrColorBackgroundButtonPrimaryActive: "#225c4e",
