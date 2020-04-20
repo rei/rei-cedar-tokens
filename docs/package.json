@@ -3,31 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run copy-data && vue-cli-service serve",
     "build": "npm run copy-data && vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "copy-data": "node ./copyTokens.js",
-    "reference": "backstop reference",
+    "approve": "backstop approve",
     "compare": "backstop test",
-    "approve": "backstop approve"
+    "copy-data": "node ./copyTokens.js",
+    "dev": "npm run copy-data && vue-cli-service serve",
+    "reference": "backstop reference"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "core-js": "^2.6.11",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@rei/cedar": "^3.0.4",
-    "@vue/cli-plugin-babel": "^3.12.1",
-    "@vue/cli-plugin-eslint": "^3.12.1",
-    "@vue/cli-service": "^4.1.1",
-    "babel-eslint": "^10.0.3",
-    "backstopjs": "^4.4.2",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.3",
-    "fs-extra": "^7.0.1",
+    "@rei/cedar": "^4.1.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "babel-eslint": "^10.1.0",
+    "backstopjs": "^4.5.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "fs-extra": "^9.0.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^7.3.1",
-    "vue-template-compiler": "^2.6.10"
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
