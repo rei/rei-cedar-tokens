@@ -1487,6 +1487,58 @@
       "category": "color",
       "docs": {
         "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Rest state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Rest state of a selected form icon"
+        }
+      },
+      "name": "CdrColorIconInputDefaultSelected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "CdrColorIconInputDefaultSelectedHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
         "type": "background",
         "example": "color",
         "description": "The default, primary background color of most pages"

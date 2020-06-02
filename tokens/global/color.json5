@@ -589,6 +589,26 @@
           description: 'The disabled icon color',
         },
       },
+      'input-default-selected': {
+        value: '{options.color.white.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'icon',
+          example: '{color.docExample}',
+          description: 'Rest state of a selected form icon',
+        },
+      },
+      'input-default-selected-hover': {
+        value: '{options.color.alpine-lake-blue-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'icon',
+          example: '{color.docExample}',
+          description: 'Hover state of a selected form icon',
+        },
+      },
     },
     // Background
     background: {
