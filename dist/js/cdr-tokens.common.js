@@ -56,6 +56,8 @@ module.exports = {
   cdrColorIconEmphasis: "#4e4d49",
   cdrColorIconLink: "#406eb5",
   cdrColorIconDisabled: "#dcd6cb",
+  cdrColorIconCheckboxDefaultSelected: "#ffffff",
+  cdrColorIconCheckboxDefaultSelectedHover: "#406eb5",
   cdrColorBackgroundPrimary: "#ffffff",
   cdrColorBackgroundSecondary: "#f4f2ed",
   cdrColorBackgroundSuccess: "#ecf9e6",
