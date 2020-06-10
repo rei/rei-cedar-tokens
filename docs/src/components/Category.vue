@@ -21,6 +21,7 @@
             v-for="(v,k) in otherTokens(v)"
             :key="k"
             :prop="v"
+            :deprecated="isDeprecated(v)"
           />
         </tbody>
       </table>
@@ -88,6 +89,9 @@ export default {
 
       return res;
     },
+    isDeprecated(p) {
+      return p.attributes.deprecated;
+    }
   }
 }
 </script>

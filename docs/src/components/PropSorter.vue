@@ -14,6 +14,10 @@ export default {
   functional: true,
   props: {
     prop: Object,
+    deprecated: {
+      type: Boolean,
+      default: false,
+    }
   },
   render(h, ctx) {
     function tokenComponent() {

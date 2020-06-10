@@ -1,6 +1,4088 @@
 {
   "colors": [
     {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The default, primary text color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default, primary text color"
+        }
+      },
+      "name": "CdrColorTextPrimary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.259f green:0.231f blue:0.184f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The secondary text color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The secondary text color"
+        }
+      },
+      "name": "CdrColorTextSecondary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.067f green:0.216f blue:0.192f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text set in our primary brand color"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text set in our primary brand color"
+        }
+      },
+      "name": "CdrColorTextBrand",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The color of sale text"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The color of sale text"
+        }
+      },
+      "name": "CdrColorTextSale",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color on dark background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color on dark background"
+        }
+      },
+      "name": "CdrColorTextInverse",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The color of text when it is disabled"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The color of text when it is disabled"
+        }
+      },
+      "name": "CdrColorTextDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.180f green:0.420f blue:0.204f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Color of success messages"
+      },
+      "original": {
+        "value": "{options.color.success-green-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of success messages"
+        }
+      },
+      "name": "CdrColorTextSuccess",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.522f green:0.278f blue:0.078f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Color of warning messages"
+      },
+      "original": {
+        "value": "{options.color.warning-yellow-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of warning messages"
+        }
+      },
+      "name": "CdrColorTextWarning",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.506f green:0.094f blue:0.137f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Color of error messages"
+      },
+      "original": {
+        "value": "{options.color.error-red-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of error messages"
+        }
+      },
+      "name": "CdrColorTextError",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.106f green:0.263f blue:0.494f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Color of informational messages"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of informational messages"
+        }
+      },
+      "name": "CdrColorTextInfo",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Default text color used in form elements"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Default text color used in form elements"
+        }
+      },
+      "name": "CdrColorTextInputDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Color of label text used in form elements"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of label text used in form elements"
+        }
+      },
+      "name": "CdrColorTextInputLabel",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.259f green:0.231f blue:0.184f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color of placeholder text within forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color of placeholder text within forms"
+        }
+      },
+      "name": "CdrColorTextInputPlaceholder",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.259f green:0.231f blue:0.184f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color of required label within forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color of required label within forms"
+        }
+      },
+      "name": "CdrColorTextInputRequired",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color used in form elements"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color used in form elements"
+        }
+      },
+      "name": "CdrColorTextInputDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color used in filled forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color used in filled forms"
+        }
+      },
+      "name": "CdrColorTextInputFilled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Help text color used in filled forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Help text color used in filled forms"
+        }
+      },
+      "name": "CdrColorTextInputHelp",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for links"
+        }
+      },
+      "name": "CdrColorTextLinkRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of links"
+        }
+      },
+      "name": "CdrColorTextLinkHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.043f green:0.176f blue:0.376f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active and pressed states of links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active and pressed states of links"
+        }
+      },
+      "name": "CdrColorTextLinkActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color of links"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color of links"
+        }
+      },
+      "name": "CdrColorTextLinkDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.024f green:0.102f blue:0.216f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color of visited links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color of visited links"
+        }
+      },
+      "name": "CdrColorTextLinkVisited",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for primary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for primary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonPrimary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of primary buttons"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of primary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonPrimaryHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active state of primary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active state of primary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonPrimaryActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for disabled primary buttons"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for disabled primary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonPrimaryDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for secondary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonSecondary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of secondary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonSecondaryHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active state of secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active state of secondary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonSecondaryActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for disabled secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for disabled secondary buttons"
+        }
+      },
+      "name": "CdrColorTextButtonSecondaryDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the dark CTA"
+        }
+      },
+      "name": "CdrColorTextCtaDark",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of the dark CTA"
+        }
+      },
+      "name": "CdrColorTextCtaDarkHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active state of the dark CTA"
+        }
+      },
+      "name": "CdrColorTextCtaDarkActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for disabled dark CTAs"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for disabled dark CTAs"
+        }
+      },
+      "name": "CdrColorTextCtaDarkDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for light CTA"
+        }
+      },
+      "name": "CdrColorTextCtaLight",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of the light CTA"
+        }
+      },
+      "name": "CdrColorTextCtaLightHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active state of the light CTA"
+        }
+      },
+      "name": "CdrColorTextCtaLightActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Disabled text color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Disabled text color for the light CTA"
+        }
+      },
+      "name": "CdrColorTextCtaLightDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the brand CTA"
+        }
+      },
+      "name": "CdrColorTextCtaBrand",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of the brand CTA"
+        }
+      },
+      "name": "CdrColorTextCtaBrandHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active state of the brand CTA"
+        }
+      },
+      "name": "CdrColorTextCtaBrandActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for disabled brand CTAs"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for disabled brand CTAs"
+        }
+      },
+      "name": "CdrColorTextCtaBrandDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the sale CTA"
+        }
+      },
+      "name": "CdrColorTextCtaSale",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of the sale CTA"
+        }
+      },
+      "name": "CdrColorTextCtaSaleHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active state of the sale CTA"
+        }
+      },
+      "name": "CdrColorTextCtaSaleActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for disabled sale CTAs"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for disabled sale CTAs"
+        }
+      },
+      "name": "CdrColorTextCtaSaleDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.259f green:0.231f blue:0.184f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for tabs"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for tabs"
+        }
+      },
+      "name": "CdrColorTextTabRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the active and pressed states of tabs"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the active and pressed states of tabs"
+        }
+      },
+      "name": "CdrColorTextTabActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of tabs"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of tabs"
+        }
+      },
+      "name": "CdrColorTextTabHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Disabled text color of tabs"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Disabled text color of tabs"
+        }
+      },
+      "name": "CdrColorTextTabDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for ratings"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for ratings"
+        }
+      },
+      "name": "CdrColorTextRatingDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the hover state of ratings"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the hover state of ratings"
+        }
+      },
+      "name": "CdrColorTextRatingHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.698f green:0.671f blue:0.624f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Text color for the separator in ratings"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-600.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Text color for the separator in ratings"
+        }
+      },
+      "name": "CdrColorTextRatingSeparator",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "The default icon color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "The default icon color"
+        }
+      },
+      "name": "CdrColorIconDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Emphasis or darkest icon color on a light background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Emphasis or darkest icon color on a light background"
+        }
+      },
+      "name": "CdrColorIconEmphasis",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "The icon link color"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "The icon link color"
+        }
+      },
+      "name": "CdrColorIconLink",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "The disabled icon color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "The disabled icon color"
+        }
+      },
+      "name": "CdrColorIconDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Rest state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Rest state of a selected form icon"
+        }
+      },
+      "name": "CdrColorIconCheckboxDefaultSelected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "CdrColorIconCheckboxDefaultSelectedHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The default, primary background color of most pages"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The default, primary background color of most pages"
+        }
+      },
+      "name": "CdrColorBackgroundPrimary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "CdrColorBackgroundSecondary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.925f green:0.976f blue:0.902f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for success messages"
+      },
+      "original": {
+        "value": "{options.color.success-green-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for success messages"
+        }
+      },
+      "name": "CdrColorBackgroundSuccess",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.992f green:0.965f blue:0.886f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for warning messages"
+      },
+      "original": {
+        "value": "{options.color.warning-yellow-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for warning messages"
+        }
+      },
+      "name": "CdrColorBackgroundWarning",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.988f green:0.937f blue:0.910f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for error messages"
+      },
+      "original": {
+        "value": "{options.color.error-red-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for error messages"
+        }
+      },
+      "name": "CdrColorBackgroundError",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.886f green:0.957f blue:0.996f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for informational messages"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for informational messages"
+        }
+      },
+      "name": "CdrColorBackgroundInfo",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The background color of table headers"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The background color of table headers"
+        }
+      },
+      "name": "CdrColorBackgroundTableHeader",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The background color of table rows"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The background color of table rows"
+        }
+      },
+      "name": "CdrColorBackgroundTableRow",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "An alternate row color to aid grouping row data"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate row color to aid grouping row data"
+        }
+      },
+      "name": "CdrColorBackgroundTableRowAlt",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Default background color on form elements"
+      },
+      "original": {
+        "value": "{options.color.white-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Default background color on form elements"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Hover state of a form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Hover state of a form background"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Selected state of a form background"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected state of a form background"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefaultSelected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.718f green:0.878f blue:0.980f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Hover state of a selected form background"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Hover state of a selected form background"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefaultSelectedHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Disabled form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Disabled form background"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the primary button"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the primary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonPrimaryRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the primary button"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the primary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonPrimaryActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.780f green:0.875f blue:0.820f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the primary button"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the primary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonPrimaryHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the secondary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonSecondaryRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the secondary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonSecondaryActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the secondary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonSecondaryHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the disabled state of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the disabled state of the secondary button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonSecondaryDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Default disabled border color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Default disabled border color"
+        }
+      },
+      "name": "CdrColorBackgroundButtonDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the icon only button active and focus states"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the icon only button active and focus states"
+        }
+      },
+      "name": "CdrColorBackgroundButtonIconOnlyActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the dark CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaDarkRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the dark CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaDarkActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the dark CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaDarkHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the light CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaLightRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the light CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaLightActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the light CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaLightHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Disabled color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Disabled color for the light CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaLightDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the sale CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaSaleRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the sale CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaSaleActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.992f green:0.886f blue:0.886f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the sale CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaSaleHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the brand CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaBrandRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the brand CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaBrandActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.780f green:0.875f blue:0.820f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the brand CTA"
+        }
+      },
+      "name": "CdrColorBackgroundCtaBrandHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Default disabled CTA color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Default disabled CTA color"
+        }
+      },
+      "name": "CdrColorBackgroundCtaDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of accordion"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of accordion"
+        }
+      },
+      "name": "CdrColorBackgroundAccordionHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of pagination"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of pagination"
+        }
+      },
+      "name": "CdrColorBackgroundPaginationHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the pagination keyline"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the pagination keyline"
+        }
+      },
+      "name": "CdrColorBackgroundPaginationKeyline",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Alternate background color for the hover state of the icon button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Alternate background color for the hover state of the icon button"
+        }
+      },
+      "name": "CdrColorBackgroundButtonIconAltHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The defaul background color of the rating star icon"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The defaul background color of the rating star icon"
+        }
+      },
+      "name": "CdrColorBackgroundRatingStarDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:0.824f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the highlighted rating icon"
+      },
+      "original": {
+        "value": "{options.color.golden-yellow-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the highlighted rating icon"
+        }
+      },
+      "name": "CdrColorBackgroundRatingStarHighlighted",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:0.851f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The background overlay for modal"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200-85.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The background overlay for modal"
+        }
+      },
+      "name": "CdrColorBackgroundModalOverlay",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default border color for separating content"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default border color for separating content"
+        }
+      },
+      "name": "CdrColorBorderPrimary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "CdrColorBorderSecondary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.294f green:0.545f blue:0.314f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for success elements"
+      },
+      "original": {
+        "value": "{options.color.success-green-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for success elements"
+        }
+      },
+      "name": "CdrColorBorderSuccess",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.780f green:0.459f blue:0.137f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for warning elements"
+      },
+      "original": {
+        "value": "{options.color.warning-yellow-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for warning elements"
+        }
+      },
+      "name": "CdrColorBorderWarning",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.710f green:0.161f blue:0.169f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for error elements"
+      },
+      "original": {
+        "value": "{options.color.error-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for error elements"
+        }
+      },
+      "name": "CdrColorBorderError",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for informational elements"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for informational elements"
+        }
+      },
+      "name": "CdrColorBorderInfo",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default border color on form elements"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default border color on form elements"
+        }
+      },
+      "name": "CdrColorBorderInputDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Active state of a form border"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Active state of a form border"
+        }
+      },
+      "name": "CdrColorBorderInputDefaultActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Selected state of a form border"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Selected state of a form border"
+        }
+      },
+      "name": "CdrColorBorderInputDefaultSelected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Hover state of a selected form border"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Hover state of a selected form border"
+        }
+      },
+      "name": "CdrColorBorderInputDefaultSelectedHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Hover state of a form border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Hover state of a form border"
+        }
+      },
+      "name": "CdrColorBorderInputDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Disabled form border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Disabled form border"
+        }
+      },
+      "name": "CdrColorBorderInputDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the primary button"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the primary button"
+        }
+      },
+      "name": "CdrColorBorderButtonPrimaryRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the primary button"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the primary button"
+        }
+      },
+      "name": "CdrColorBorderButtonPrimaryActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.780f green:0.875f blue:0.820f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the primary button"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the primary button"
+        }
+      },
+      "name": "CdrColorBorderButtonPrimaryActiveInset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the primary button"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the primary button"
+        }
+      },
+      "name": "CdrColorBorderButtonPrimaryHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the secondary button"
+        }
+      },
+      "name": "CdrColorBorderButtonSecondaryRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the secondary button"
+        }
+      },
+      "name": "CdrColorBorderButtonSecondaryActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the secondary button"
+        }
+      },
+      "name": "CdrColorBorderButtonSecondaryActiveInset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the secondary button"
+        }
+      },
+      "name": "CdrColorBorderButtonSecondaryHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default disabled border color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default disabled border color"
+        }
+      },
+      "name": "CdrColorBorderButtonDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the icon only button active and focus states"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the icon only button active and focus states"
+        }
+      },
+      "name": "CdrColorBorderButtonIconOnlyActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the dark CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaDarkRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the dark CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaDarkActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the dark CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaDarkActiveInset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the dark CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaDarkHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the light CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaLightRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the light CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaLightActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the light CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaLightActiveInset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the light CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaLightHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the sale CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaSaleRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the sale CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaSaleActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.992f green:0.886f blue:0.886f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the sale CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaSaleActiveInset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.800f green:0.000f blue:0.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the sale CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaSaleHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the brand CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaBrandRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the brand CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaBrandActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.780f green:0.875f blue:0.820f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the brand CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaBrandActiveInset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the brand CTA"
+        }
+      },
+      "name": "CdrColorBorderCtaBrandHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default disabled CTA color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default disabled CTA color"
+        }
+      },
+      "name": "CdrColorBorderCtaDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default border color for the unhighlighted rating icon"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default border color for the unhighlighted rating icon"
+        }
+      },
+      "name": "CdrColorBorderRatingStarDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.741f green:0.482f blue:0.176f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the highlighted rating icon"
+      },
+      "original": {
+        "value": "{options.color.golden-yellow-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the highlighted rating icon"
+        }
+      },
+      "name": "CdrColorBorderRatingStarHighlighted",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for underlined links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for underlined links"
+        }
+      },
+      "name": "CdrColorBorderLinkRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of underlined links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of underlined links"
+        }
+      },
+      "name": "CdrColorBorderLinkHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.043f green:0.176f blue:0.376f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of underlined links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of underlined links"
+        }
+      },
+      "name": "CdrColorBorderLinkActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Disabled border color of underlined links"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Disabled border color of underlined links"
+        }
+      },
+      "name": "CdrColorBorderLinkDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.024f green:0.102f blue:0.216f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color of visited underlined links"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color of visited underlined links"
+        }
+      },
+      "name": "CdrColorBorderLinkVisited",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "The border color of table rows and their corresponding data cells"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "The border color of table rows and their corresponding data cells"
+        }
+      },
+      "name": "CdrColorBorderTableDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color separating complex table heads"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color separating complex table heads"
+        }
+      },
+      "name": "CdrColorBorderTableHead",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "The border color of tab keyline"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "The border color of tab keyline"
+        }
+      },
+      "name": "CdrColorBorderTabKeylineRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active tab keyline"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active tab keyline"
+        }
+      },
+      "name": "CdrColorBorderTabKeylineActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.471f green:0.694f blue:0.910f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Alternative border color for the active tab keyline"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-600.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Alternative border color for the active tab keyline"
+        }
+      },
+      "name": "CdrColorBorderTabKeylineActiveAlt",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the tab keyline hover state"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the tab keyline hover state"
+        }
+      },
+      "name": "CdrColorBorderTabKeylineHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.471f green:0.694f blue:0.910f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Alternative border color for the tab keyline hover state"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-600.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Alternative border color for the tab keyline hover state"
+        }
+      },
+      "name": "CdrColorBorderTabKeylineHoverAlt",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the disabled tab keyline"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the disabled tab keyline"
+        }
+      },
+      "name": "CdrColorBorderTabKeylineDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.161f green:0.161f blue:0.161f alpha:1.000f]",
       "category": "color",
       "docs": {
@@ -22,7 +4104,9 @@
       "name": "CdrColorTextPrimaryLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -48,7 +4132,9 @@
       "name": "CdrColorTextPrimaryDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -74,7 +4160,9 @@
       "name": "CdrColorTextSecondaryLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -100,7 +4188,9 @@
       "name": "CdrColorTextSecondaryDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -126,7 +4216,9 @@
       "name": "CdrColorTextDisabledLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -152,7 +4244,9 @@
       "name": "CdrColorTextDisabledDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -178,7 +4272,9 @@
       "name": "CdrColorTextLinkLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -204,7 +4300,9 @@
       "name": "CdrColorTextLinkDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -230,7 +4328,9 @@
       "name": "CdrColorTextErrorLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -256,7 +4356,9 @@
       "name": "CdrColorTextErrorDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -270,7 +4372,7 @@
         "description": "Label text color for forms on a light background. Can also be used for input entry text"
       },
       "original": {
-        "value": "{color.text.primary.lightmode.value}",
+        "value": "{deprecated-2020-spring.color.text.primary.lightmode.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -282,7 +4384,9 @@
       "name": "CdrColorTextFormLabelLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -296,7 +4400,7 @@
         "description": "Label text color for forms on a dark background. Can also be used for input entry text"
       },
       "original": {
-        "value": "{color.text.primary.darkmode.value}",
+        "value": "{deprecated-2020-spring.color.text.primary.darkmode.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -308,7 +4412,9 @@
       "name": "CdrColorTextFormLabelDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -322,7 +4428,7 @@
         "description": "Placeholder text color for forms on a light background"
       },
       "original": {
-        "value": "{color.text.secondary.lightmode.value}",
+        "value": "{deprecated-2020-spring.color.text.secondary.lightmode.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -334,7 +4440,9 @@
       "name": "CdrColorTextFormPlaceholderLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -348,7 +4456,7 @@
         "description": "Placeholder text color for forms on a dark background"
       },
       "original": {
-        "value": "{color.text.secondary.darkmode.value}",
+        "value": "{deprecated-2020-spring.color.text.secondary.darkmode.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -360,7 +4468,9 @@
       "name": "CdrColorTextFormPlaceholderDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -374,7 +4484,7 @@
         "description": "Disabled text color for forms on a light background"
       },
       "original": {
-        "value": "{color.text.disabled.lightmode.value}",
+        "value": "{deprecated-2020-spring.color.text.disabled.lightmode.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -386,7 +4496,9 @@
       "name": "CdrColorTextFormDisabledLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -400,7 +4512,7 @@
         "description": "Disabled text color for forms on a dark background"
       },
       "original": {
-        "value": "{color.text.disabled.darkmode.value}",
+        "value": "{deprecated-2020-spring.color.text.disabled.darkmode.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -412,7 +4524,9 @@
       "name": "CdrColorTextFormDisabledDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -438,7 +4552,9 @@
       "name": "CdrColorIconPrimaryLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -464,7 +4580,9 @@
       "name": "CdrColorIconPrimaryDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -490,7 +4608,9 @@
       "name": "CdrColorIconEmphasisLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -516,7 +4636,9 @@
       "name": "CdrColorIconEmphasisDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -542,7 +4664,9 @@
       "name": "CdrColorBackgroundDark",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -568,7 +4692,9 @@
       "name": "CdrColorBackgroundDarker",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -594,7 +4720,9 @@
       "name": "CdrColorBackgroundLight",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -620,7 +4748,9 @@
       "name": "CdrColorBackgroundLighter",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -646,7 +4776,9 @@
       "name": "CdrColorBackgroundLightest",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -660,7 +4792,7 @@
         "description": "Light background color for forms"
       },
       "original": {
-        "value": "{color.background.lightest.value}",
+        "value": "{deprecated-2020-spring.color.background.lightest.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -672,7 +4804,9 @@
       "name": "CdrColorBackgroundFormLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -686,7 +4820,7 @@
         "description": "Dark background color for forms"
       },
       "original": {
-        "value": "{color.background.dark.value}",
+        "value": "{deprecated-2020-spring.color.background.dark.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -698,7 +4832,9 @@
       "name": "CdrColorBackgroundFormDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -712,7 +4848,7 @@
         "description": "Light background color for input control"
       },
       "original": {
-        "value": "{color.background.lightest.value}",
+        "value": "{deprecated-2020-spring.color.background.lightest.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -724,7 +4860,9 @@
       "name": "CdrColorBackgroundFormInputLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -738,7 +4876,7 @@
         "description": "Dark background color for input control"
       },
       "original": {
-        "value": "{color.background.dark.value}",
+        "value": "{deprecated-2020-spring.color.background.dark.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -750,7 +4888,9 @@
       "name": "CdrColorBackgroundFormInputDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -776,7 +4916,9 @@
       "name": "CdrColorBorderPrimaryLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -802,7 +4944,9 @@
       "name": "CdrColorBorderPrimaryDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -828,7 +4972,9 @@
       "name": "CdrColorBorderSecondaryLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -854,7 +5000,9 @@
       "name": "CdrColorBorderSecondaryDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -880,7 +5028,9 @@
       "name": "CdrColorBorderDisabledLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -906,7 +5056,9 @@
       "name": "CdrColorBorderDisabledDarkmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -932,7 +5084,9 @@
       "name": "CdrColorBorderErrorLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     },
@@ -958,7 +5112,9 @@
       "name": "CdrColorBorderSelectedLightmode",
       "attributes": {
         "option": false,
-        "deprecated": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "spring",
         "category": "color"
       }
     }
@@ -1328,13 +5484,13 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.102f green:0.102f blue:0.102f alpha:0.200f]",
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.200f]",
       "category": "color",
       "docs": {
         "category": "prominence"
       },
       "original": {
-        "value": "{options.color.lost-in-space-20.value}",
+        "value": "{options.color.warm-grey-900-20.value}",
         "category": "color",
         "docs": {
           "category": "prominence"
@@ -1428,13 +5584,13 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.102f green:0.102f blue:0.102f alpha:0.200f]",
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.200f]",
       "category": "color",
       "docs": {
         "category": "prominence"
       },
       "original": {
-        "value": "{options.color.lost-in-space-20.value}",
+        "value": "{options.color.warm-grey-900-20.value}",
         "category": "color",
         "docs": {
           "category": "prominence"
@@ -1528,13 +5684,13 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.102f green:0.102f blue:0.102f alpha:0.200f]",
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.200f]",
       "category": "color",
       "docs": {
         "category": "prominence"
       },
       "original": {
-        "value": "{options.color.lost-in-space-20.value}",
+        "value": "{options.color.warm-grey-900-20.value}",
         "category": "color",
         "docs": {
           "category": "prominence"
@@ -1628,13 +5784,13 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.102f green:0.102f blue:0.102f alpha:0.200f]",
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.200f]",
       "category": "color",
       "docs": {
         "category": "prominence"
       },
       "original": {
-        "value": "{options.color.lost-in-space-20.value}",
+        "value": "{options.color.warm-grey-900-20.value}",
         "category": "color",
         "docs": {
           "category": "prominence"
@@ -1728,13 +5884,13 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.102f green:0.102f blue:0.102f alpha:0.200f]",
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.200f]",
       "category": "color",
       "docs": {
         "category": "prominence"
       },
       "original": {
-        "value": "{options.color.lost-in-space-20.value}",
+        "value": "{options.color.warm-grey-900-20.value}",
         "category": "color",
         "docs": {
           "category": "prominence"

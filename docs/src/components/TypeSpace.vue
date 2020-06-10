@@ -13,6 +13,7 @@ export default {
   name: 'TypeSpace',
   props: {
     prop: Object,
+    deprecated: Boolean,
   },
 };
 </script>

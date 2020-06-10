@@ -1,7 +1,7 @@
 <template>
   <tr>
     <td></td>
-    <td>{{prop.name}}</td>
+    <td>{{prop.name}} <b v-if="deprecated">(Deprecated)</b></td>
     <td>{{prop.value}}</td>
   </tr>
 </template>
@@ -11,6 +11,7 @@ export default {
   name: 'TypeMixin',
   props: {
     prop: Object,
+    deprecated: Boolean,
   },
 };
 </script>
