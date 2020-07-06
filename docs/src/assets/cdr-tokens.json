@@ -1502,7 +1502,7 @@
             "description": "Rest state of a selected form icon"
           }
         },
-        "name": "cdr-color-icon-input-default-selected",
+        "name": "cdr-color-icon-checkbox-default-selected",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -1528,7 +1528,7 @@
             "description": "Hover state of a selected form icon"
           }
         },
-        "name": "cdr-color-icon-input-default-selected-hover",
+        "name": "cdr-color-icon-checkbox-default-selected-hover",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -6165,6 +6165,30 @@
         }
       },
       {
+        "value": "4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true,
+        "original": {
+          "value": "48px",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "example": "spacing"
+          },
+          "utility-class": true
+        },
+        "name": "cdr-space-three-x",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
         "value": "6.4rem",
         "category": "size",
         "docs": {
@@ -6987,6 +7011,120 @@
         }
       },
       {
+        "value": "4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "type": "inset",
+          "example": "inset"
+        },
+        "utility-class": true,
+        "original": {
+          "value": "{space.three-x.value}",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "type": "inset",
+            "example": "inset"
+          },
+          "utility-class": true
+        },
+        "name": "cdr-space-inset-three-x",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "2.4rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "original": {
+          "value": "24px",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "example": "spacing"
+          }
+        },
+        "name": "cdr-space-inset-three-x-squish-top-bottom",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "original": {
+          "value": "48px",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "example": "spacing"
+          }
+        },
+        "name": "cdr-space-inset-three-x-squish-left-right",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "7.2rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "original": {
+          "value": "72px",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "example": "spacing"
+          }
+        },
+        "name": "cdr-space-inset-three-x-stretch-top-bottom",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "original": {
+          "value": "48px",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "example": "spacing"
+          }
+        },
+        "name": "cdr-space-inset-three-x-stretch-left-right",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
         "value": "6.4rem",
         "category": "size",
         "docs": {
@@ -7563,6 +7701,58 @@
           "utility-class": true
         },
         "name": "cdr-space-inset-two-x-stretch",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "2.4rem 4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "type": "inset",
+          "example": "inset"
+        },
+        "utility-class": true,
+        "original": {
+          "value": "{space.inset.three-x-squish-top-bottom.value} {space.inset.three-x-squish-left-right.value}",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "type": "inset",
+            "example": "inset"
+          },
+          "utility-class": true
+        },
+        "name": "cdr-space-inset-three-x-squish",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "7.2rem 4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "spacing",
+          "type": "inset",
+          "example": "inset"
+        },
+        "utility-class": true,
+        "original": {
+          "value": "{space.inset.three-x-stretch-top-bottom.value} {space.inset.three-x-stretch-left-right.value}",
+          "category": "size",
+          "docs": {
+            "category": "spacing",
+            "type": "inset",
+            "example": "inset"
+          },
+          "utility-class": true
+        },
+        "name": "cdr-space-inset-three-x-stretch",
         "attributes": {
           "option": false,
           "deprecated": false,

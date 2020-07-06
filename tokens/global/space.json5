@@ -65,6 +65,15 @@
       },
       'utility-class': true,
     },
+    'three-x': {
+      value: '48px',
+      category: 'size',
+      docs: {
+        category: '{space.docCategory}',
+        example: '{space.docExample}',
+      },
+      'utility-class': true,
+    },
     'four-x': {
       value: '64px',
       category: 'size',
@@ -370,6 +379,49 @@
       },
       'two-x-stretch-left-right': {
         value: '32px',
+        category: 'size',
+        docs: {
+          category: '{space.docCategory}',
+          example: '{space.docExample}',
+        },
+      },
+      // 3
+      'three-x': {
+        value: '{space.three-x.value}',
+        category: 'size',
+        docs: {
+          category: '{space.docCategory}',
+          type: 'inset',
+          example: 'inset',
+        },
+        'utility-class': true,
+      },
+      'three-x-squish-top-bottom': {
+          value: '24px',
+          category: 'size',
+          docs: {
+            category: '{space.docCategory}',
+            example: '{space.docExample}',
+          },
+      },
+      'three-x-squish-left-right': {
+        value: '48px',
+        category: 'size',
+        docs: {
+          category: '{space.docCategory}',
+          example: '{space.docExample}',
+        },
+      },
+      'three-x-stretch-top-bottom': {
+        value: '72px',
+        category: 'size',
+        docs: {
+          category: '{space.docCategory}',
+          example: '{space.docExample}',
+        },
+      },
+      'three-x-stretch-left-right': {
+        value: '48px',
         category: 'size',
         docs: {
           category: '{space.docCategory}',
