@@ -309,166 +309,92 @@
             description: 'Text color for disabled secondary buttons',
           },
         },
-      },
-      cta: {
         dark: {
           value: '{options.color.warm-grey-100.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for the dark CTA',
+            description: 'Text color for the dark button',
           },
         },
         'dark-hover': {
           value: '{options.color.warm-grey-900.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for the hover state of the dark CTA',
+            description: 'Text color for the hover state of the dark button',
           },
         },
         'dark-active': {
           value: '{options.color.warm-grey-100.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for the active state of the dark CTA',
+            description: 'Text color for the active state of the dark button',
           },
         },
         'dark-disabled': {
           value: '{options.color.white.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for disabled dark CTAs',
-          },
-        },
-        light: {
-          value: '{options.color.warm-grey-900.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for light CTA',
-          },
-        },
-        'light-hover': {
-          value: '{options.color.warm-grey-900.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for the hover state of the light CTA',
-          },
-        },
-        'light-active': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for the active state of the light CTA',
-          },
-        },
-        'light-disabled': {
-          value: '{options.color.warm-grey-500.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Disabled text color for the light CTA',
-          },
-        },
-        brand: {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for the brand CTA',
-          },
-        },
-        'brand-hover': {
-          value: '{options.color.blue-spruce-green-1000.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for the hover state of the brand CTA',
-          },
-        },
-        'brand-active': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for the active state of the brand CTA',
-          },
-        },
-        'brand-disabled': {
-          value: '{options.color.white.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'icon',
-            example: '{color.docExample}',
-            description: 'Text color for disabled brand CTAs',
+            description: 'Text color for disabled dark buttons',
           },
         },
         sale: {
           value: '{options.color.white.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for the sale CTA',
+            description: 'Text color for the sale button',
           },
         },
         'sale-hover': {
           value: '{options.color.sale-red-800.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for the hover state of the sale CTA',
+            description: 'Text color for the hover state of the sale button',
           },
         },
         'sale-active': {
           value: '{options.color.white.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for the active state of the sale CTA',
+            description: 'Text color for the active state of the sale button',
           },
         },
         'sale-disabled': {
           value: '{options.color.white.value}',
+          newToken: '',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'icon',
             example: '{color.docExample}',
-            description: 'Text color for disabled sale CTAs',
+            description: 'Text color for disabled sale buttons',
           },
         },
       },
@@ -829,6 +755,70 @@
             },
           },
         },
+        dark: {
+          rest: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the dark button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the dark button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the dark button',
+            },
+          },
+        },
+        sale: {
+          rest: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the sale button',
+            },
+          },
+          active: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the sale button',
+            },
+          },
+          hover: {
+            value: '{options.color.sale-red-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the sale button',
+            },
+          },
+        },
         'default-disabled': {
           value: '{options.color.warm-grey-400.value}',
           category: 'color',
@@ -847,156 +837,6 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Background color for the icon only button active and focus states',
-          },
-        },
-      },
-      cta: {
-        dark: {
-          rest: {
-            value: '{options.color.warm-grey-900.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the dark CTA',
-            },
-          },
-          active: {
-            value: '{options.color.warm-grey-900.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the active and pressed states of the dark CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.warm-grey-300.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the hover state of the dark CTA',
-            },
-          },
-        },
-        light: {
-          rest: {
-            value: '{options.color.warm-grey-100.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the light CTA',
-            },
-          },
-          active: {
-            value: '{options.color.warm-grey-700.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the active and pressed states of the light CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.warm-grey-200.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the hover state of the light CTA',
-            },
-          },
-          disabled: {
-            value: '{options.color.warm-grey-100.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Disabled color for the light CTA',
-            },
-          },
-        },
-        sale: {
-          rest: {
-            value: '{options.color.sale-red-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the sale CTA',
-            },
-          },
-          active: {
-            value: '{options.color.sale-red-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the active and pressed states of the sale CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.sale-red-200.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the hover state of the sale CTA',
-            },
-          },
-        },
-        brand: {
-          rest: {
-            value: '{options.color.blue-spruce-green-1000.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the brand CTA',
-            },
-          },
-          active: {
-            value: '{options.color.blue-spruce-green-1000.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the hover state of the brand CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.sage-green-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'background',
-              example: '{color.docExample}',
-              description: 'Background color for the active and pressed states of the brand CTA',
-            },
-          },
-        },
-        'default-disabled': {
-          value: '{options.color.warm-grey-400.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Default disabled CTA color',
           },
         },
       },
@@ -1280,6 +1120,90 @@
             },
           },
         },
+        dark: {
+          rest: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the dark button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the dark button',
+            },
+          },
+          'active-inset': {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the dark button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the dark button',
+            },
+          },
+        },
+        sale: {
+          rest: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the sale button',
+            },
+          },
+          active: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the sale button',
+            },
+          },
+          'active-inset': {
+            value: '{options.color.sale-red-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the sale button',
+            },
+          },
+          hover: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the sale button',
+            },
+          },
+        },
         'default-disabled': {
           value: '{options.color.warm-grey-400.value}',
           category: 'color',
@@ -1298,186 +1222,6 @@
             type: 'border',
             example: '{color.docExample}',
             description: 'Border color for the icon only button active and focus states',
-          },
-        },
-      },
-      cta: {
-        dark: {
-          rest: {
-            value: '{options.color.warm-grey-900.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the dark CTA',
-            },
-          },
-          active: {
-            value: '{options.color.warm-grey-900.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the active and pressed states of the dark CTA',
-            },
-          },
-          'active-inset': {
-            value: '{options.color.warm-grey-300.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Inset border for the active state of the dark CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.warm-grey-900.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the hover state of the dark CTA',
-            },
-          },
-        },
-        light: {
-          rest: {
-            value: '{options.color.warm-grey-700.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the light CTA',
-            },
-          },
-          active: {
-            value: '{options.color.warm-grey-700.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the active and pressed states of the light CTA',
-            },
-          },
-          'active-inset': {
-            value: '{options.color.warm-grey-200.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Inset border for the active state of the light CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.warm-grey-900.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the hover state of the light CTA',
-            },
-          },
-        },
-        sale: {
-          rest: {
-            value: '{options.color.sale-red-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the sale CTA',
-            },
-          },
-          active: {
-            value: '{options.color.sale-red-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the active and pressed states of the sale CTA',
-            },
-          },
-          'active-inset': {
-            value: '{options.color.sale-red-200.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Inset border for the active state of the sale CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.sale-red-800.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the hover state of the sale CTA',
-            },
-          },
-        },
-        brand: {
-          rest: {
-            value: '{options.color.blue-spruce-green-1000.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the brand CTA',
-            },
-          },
-          active: {
-            value: '{options.color.blue-spruce-green-1000.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the hover state of the brand CTA',
-            },
-          },
-          'active-inset': {
-            value: '{options.color.sage-green-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Inset border for the active state of the brand CTA',
-            },
-          },
-          hover: {
-            value: '{options.color.blue-spruce-green-1000.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'border',
-              example: '{color.docExample}',
-              description: 'Border color for the active and pressed states of the brand CTA',
-            },
-          },
-        },
-        'default-disabled': {
-          value: '{options.color.warm-grey-400.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'border',
-            example: '{color.docExample}',
-            description: 'Default disabled CTA color',
           },
         },
       },
