@@ -223,7 +223,7 @@
     },
     {
       "name": "cdr-color-text-link-visited",
-      "value": "#061a37",
+      "value": "#406eb5",
       "type": "text",
       "path": [
         "color",
@@ -1636,7 +1636,7 @@
     },
     {
       "name": "cdr-color-border-link-visited",
-      "value": "#061a37",
+      "value": "#406eb5",
       "type": "border",
       "path": [
         "color",
@@ -4112,6 +4112,17 @@
         ]
       },
       {
+        "name": "cdr-space-inset-three-x",
+        "path": [
+          "space",
+          "inset",
+          "three-x"
+        ],
+        "value": [
+          48
+        ]
+      },
+      {
         "name": "cdr-space-inset-four-x",
         "path": [
           "space",
@@ -4291,6 +4302,30 @@
         ]
       },
       {
+        "name": "cdr-space-inset-three-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "three-x-squish"
+        ],
+        "value": [
+          24,
+          48
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "three-x-stretch"
+        ],
+        "value": [
+          72,
+          48
+        ]
+      },
+      {
         "name": "cdr-space-inset-four-x-squish",
         "path": [
           "space",
@@ -4371,6 +4406,14 @@
           "two-x"
         ],
         "value": 32
+      },
+      {
+        "name": "cdr-space-three-x",
+        "path": [
+          "space",
+          "three-x"
+        ],
+        "value": 48
       },
       {
         "name": "cdr-space-four-x",
@@ -4631,6 +4674,42 @@
           "two-x-stretch-left-right"
         ],
         "value": 32
+      },
+      {
+        "name": "cdr-space-inset-three-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "three-x-squish-top-bottom"
+        ],
+        "value": 24
+      },
+      {
+        "name": "cdr-space-inset-three-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "three-x-squish-left-right"
+        ],
+        "value": 48
+      },
+      {
+        "name": "cdr-space-inset-three-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "three-x-stretch-top-bottom"
+        ],
+        "value": 72
+      },
+      {
+        "name": "cdr-space-inset-three-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "three-x-stretch-left-right"
+        ],
+        "value": 48
       },
       {
         "name": "cdr-space-inset-four-x-squish-top-bottom",
