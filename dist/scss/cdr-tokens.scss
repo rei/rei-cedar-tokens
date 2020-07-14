@@ -1641,6 +1641,56 @@ $cdr-text-utility-serif-strong-800-height: 4rem;
   }
 }
 
+@mixin cdr-container-fluid-base-mixin() {
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+}
+
+@mixin cdr-container-fluid-medium-mixin() {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
+%cdr-container-fluid-base-mixin {
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+}
+
+%cdr-container-fluid-medium-mixin {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
+@mixin cdr-container-base-mixin() {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+  max-width: $cdr-breakpoint-lg;
+}
+
+@mixin cdr-container-medium-mixin() {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
+%cdr-container-base-mixin {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+  max-width: $cdr-breakpoint-lg;
+}
+
+%cdr-container-medium-mixin {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
 // XS
 @mixin cdr-xs-mq {
   @media (min-width: #{$cdr-breakpoint-xs}) {
