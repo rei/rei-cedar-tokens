@@ -1593,8 +1593,53 @@ $cdr-text-utility-serif-strong-800-weight: 600;
 $cdr-text-utility-serif-strong-800-spacing: -0.16px;
 $cdr-text-utility-serif-strong-800-size: 3.2rem;
 $cdr-text-utility-serif-strong-800-height: 4rem;
-// DON'T MOVE THIS FILE
-// It will be copied into `dist`
+@mixin cdr-display-sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+%cdr-display-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin cdr-display-sr-focusable () {
+  @include cdr-display-sr-only;
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+%cdr-display-sr-focusable {
+  @include cdr-display-sr-only;
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
 
 // XS
 @mixin cdr-xs-mq {
