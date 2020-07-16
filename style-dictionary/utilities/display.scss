@@ -1,0 +1,97 @@
+@mixin cdr-display-sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+%cdr-display-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin cdr-display-sr-focusable () {
+  @include cdr-display-sr-only;
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+%cdr-display-sr-focusable {
+  @include cdr-display-sr-only;
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+@mixin cdr-container-fluid-base-mixin() {
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+}
+
+@mixin cdr-container-fluid-medium-mixin() {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
+%cdr-container-fluid-base-mixin {
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+}
+
+%cdr-container-fluid-medium-mixin {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
+@mixin cdr-container-base-mixin() {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+  max-width: $cdr-breakpoint-lg;
+}
+
+@mixin cdr-container-medium-mixin() {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}
+
+%cdr-container-base-mixin {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+  max-width: $cdr-breakpoint-lg;
+}
+
+%cdr-container-medium-mixin {
+  padding-left: $cdr-space-two-x;
+  padding-right: $cdr-space-two-x;
+}

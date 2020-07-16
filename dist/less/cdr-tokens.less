@@ -1557,8 +1557,55 @@
 @cdr-text-utility-serif-strong-800-spacing: -0.16px;
 @cdr-text-utility-serif-strong-800-size: 3.2rem;
 @cdr-text-utility-serif-strong-800-height: 4rem;
-// DON'T MOVE THIS FILE
-// It will be copied into `dist`
+.cdr-display-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.cdr-display-sr-focusable {
+  .cdr-display-sr-only();
+
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+.cdr-container-fluid-base-mixin {
+  padding-left: @cdr-space-one-x;
+  padding-right: @cdr-space-one-x;
+  width: 100%;
+}
+
+.cdr-container-fluid-medium-mixin {
+  padding-left: @cdr-space-two-x;
+  padding-right: @cdr-space-two-x;
+}
+
+.cdr-container-base-mixin {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: @cdr-space-one-x;
+  padding-right: @cdr-space-one-x;
+  width: 100%;
+  max-width: @cdr-breakpoint-lg;
+}
+
+.cdr-container-medium-mixin {
+  padding-left: @cdr-space-two-x;
+  padding-right: @cdr-space-two-x;
+}
 
 // XS
 .cdr-xs-mq(@rules) {
