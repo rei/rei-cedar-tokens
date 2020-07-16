@@ -4,6 +4,7 @@ const rawGlobal = require('./dist/json/global.json');
 const rawWeb = require('./dist/json/web.json');
 const rawAndroid = require('./dist/json/android.json');
 const rawIos = require('./dist/json/ios.json');
+const utilities = require('./style-dictionary/utilities/utilities.json');
 
 // get keys for each category per platform
 const globalKeyArr = Object.keys(rawGlobal);
@@ -23,7 +24,7 @@ const allKeys = _.union(globalKeyArr, webKeyArr, androidKeyArr, iosKeyArr);
 
 const dataByPlatform = {
   global: {},
-  web: {},
+  web: utilities,
   android: {},
   ios: {},
 };
