@@ -43,6 +43,8 @@ module.exports = (StyleDictionary) => {
           // NOT DEPRECATED
           mixin = `@mixin ${prefixedName}() {
   ${declarations.join('\n  ')}
+}\n\n%${prefixedName} {
+  ${declarations.join('\n  ')}
 }`;
         }
 
