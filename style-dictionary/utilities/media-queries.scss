@@ -70,24 +70,28 @@
 
 // DEPRECATED summer 2020
 @mixin cdr-xs-mq {
+  @include deprecate-mixin('2020', 'summer', 'cdr-xs-mq', 'cdr-xs-mq-up');
   @media (min-width: #{$cdr-breakpoint-xs}) {
     @content;
   }
 }
 
 @mixin cdr-sm-mq {
+  @include deprecate-mixin('2020', 'summer', 'cdr-sm-mq', 'cdr-sm-mq-up');
   @media (min-width: #{$cdr-breakpoint-sm}) {
     @content;
   }
 }
 
 @mixin cdr-md-mq {
+  @include deprecate-mixin('2020', 'summer', 'cdr-md-mq', 'cdr-md-mq-up');
   @media (min-width: #{$cdr-breakpoint-md}) {
     @content;
   }
 }
 
 @mixin cdr-lg-mq {
+  @include deprecate-mixin('2020', 'summer', 'cdr-lg-mq', 'cdr-lg-mq-up');
   @media (min-width: #{$cdr-breakpoint-lg}) {
     @content;
   }
