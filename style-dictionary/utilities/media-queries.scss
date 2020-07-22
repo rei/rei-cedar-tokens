@@ -1,5 +1,5 @@
 // XS
-@mixin cdr-xs-mq {
+@mixin cdr-xs-mq-up {
   @media (min-width: #{$cdr-breakpoint-xs}) {
     @content;
   }
@@ -12,7 +12,13 @@
 }
 
 // SM
-@mixin cdr-sm-mq {
+@mixin cdr-sm-mq-down {
+  @media (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq-up {
   @media (min-width: #{$cdr-breakpoint-sm}) {
     @content;
   }
@@ -25,7 +31,13 @@
 }
 
 // MD
-@mixin cdr-md-mq {
+@mixin cdr-md-mq-down {
+  @media (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq-up {
   @media (min-width: #{$cdr-breakpoint-md}) {
     @content;
   }
@@ -38,13 +50,44 @@
 }
 
 // LG
-@mixin cdr-lg-mq {
+@mixin cdr-lg-mq-down {
+  @media (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq-up {
   @media (min-width: #{$cdr-breakpoint-lg}) {
     @content;
   }
 }
 
 @mixin cdr-lg-mq-only {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+// DEPRECATED summer 2020
+@mixin cdr-xs-mq {
+  @media (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq {
+  @media (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq {
+  @media (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq {
   @media (min-width: #{$cdr-breakpoint-lg}) {
     @content;
   }
