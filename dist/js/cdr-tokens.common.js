@@ -828,4 +828,7 @@ module.exports = {
   cdrTextUtilitySerifStrong800Spacing: "-0.16",
   cdrTextUtilitySerifStrong800Size: "32",
   cdrTextUtilitySerifStrong800Height: "40",
+  cdrTextItalicVariation: "'ital' 1",
+  cdrTextItalicStyle: "italic",
+  cdrTextStrongWeight: "700",
 };

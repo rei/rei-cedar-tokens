@@ -1,0 +1,37 @@
+{
+  // default
+  'text-italic': {
+    variation: {
+      value: '\'ital\' 1',
+      mixin: 'textItalic',
+      property: 'font-variation-settings',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
+      },
+    },
+    style: {
+      value: 'italic',
+      mixin: 'textItalic',
+      property: 'font-style',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
+      },
+    },
+  },
+  'text-strong': {
+    weight: {
+      value: '{options.font.weight.strong.value}',
+      mixin: 'textStrong',
+      property: 'font-weight',
+      docs: {
+        category: 'text',
+        type: 'default',
+        example: 'text',
+      },
+    },
+  },
+}
