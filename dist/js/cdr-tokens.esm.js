@@ -827,3 +827,6 @@ export const CdrTextUtilitySerifStrong800Weight = "600";
 export const CdrTextUtilitySerifStrong800Spacing = "-0.16";
 export const CdrTextUtilitySerifStrong800Size = "32";
 export const CdrTextUtilitySerifStrong800Height = "40";
+export const CdrTextItalicVariation = "'ital' 1";
+export const CdrTextItalicStyle = "italic";
+export const CdrTextStrongWeight = "700";
