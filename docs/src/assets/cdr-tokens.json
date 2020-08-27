@@ -22305,6 +22305,81 @@
           "deprecated": false,
           "category": "size"
         }
+      },
+      {
+        "value": "'ital' 1",
+        "mixin": "cdr-textItalic",
+        "property": "font-variation-settings",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        },
+        "original": {
+          "value": "'ital' 1",
+          "mixin": "textItalic",
+          "property": "font-variation-settings",
+          "docs": {
+            "category": "text",
+            "type": "default",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-italic-variation",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "italic",
+        "mixin": "cdr-textItalic",
+        "property": "font-style",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        },
+        "original": {
+          "value": "italic",
+          "mixin": "textItalic",
+          "property": "font-style",
+          "docs": {
+            "category": "text",
+            "type": "default",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-italic-style",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
+      },
+      {
+        "value": "700",
+        "mixin": "cdr-textStrong",
+        "property": "font-weight",
+        "docs": {
+          "category": "text",
+          "type": "default",
+          "example": "text"
+        },
+        "original": {
+          "value": "{options.font.weight.strong.value}",
+          "mixin": "textStrong",
+          "property": "font-weight",
+          "docs": {
+            "category": "text",
+            "type": "default",
+            "example": "text"
+          }
+        },
+        "name": "cdr-text-strong-weight",
+        "attributes": {
+          "option": false,
+          "deprecated": false
+        }
       }
     ],
     "breakpoints": [
