@@ -3,7 +3,11 @@
     <td>
       <div class="color-example" :style="{backgroundColor: prop.value}"/>
     </td>
-    <td>{{prop.name}} <b v-if="deprecated">(Deprecated)</b></td>
+    <td>
+      {{prop.name}}
+      <b v-if="deprecated">(Deprecated)</b>
+      <span v-if="prop.newToken"> use {{prop.newToken}} instead</span>
+    </td>
     <td>{{prop.value}}</td>
   </tr>
 </template>

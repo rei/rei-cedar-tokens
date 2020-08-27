@@ -13,6 +13,6 @@ module.exports = {
         format: 'less/mixin',
       },
     ],
-    actions: ['include_media_queries_less', 'concat_files'],
+    actions: ['include_media_queries_less', 'include_display_less', 'concat_files'],
   },
 };

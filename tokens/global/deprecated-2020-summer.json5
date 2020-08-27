@@ -1,0 +1,553 @@
+{
+  'deprecated-2020-summer': {
+    color: {
+      docCategory: 'colors',
+      docExample: 'color',
+      text: {
+        cta: {
+          dark: {
+            value: '{options.color.warm-grey-100.value}',
+            newToken: 'cdr-color-text-button-dark',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the dark CTA',
+            },
+          },
+          'dark-hover': {
+            value: '{options.color.warm-grey-900.value}',
+            newToken: 'cdr-color-text-button-dark-hover',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the hover state of the dark CTA',
+            },
+          },
+          'dark-active': {
+            value: '{options.color.warm-grey-100.value}',
+            newToken: 'cdr-color-text-button-dark-active',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the active state of the dark CTA',
+            },
+          },
+          'dark-disabled': {
+            value: '{options.color.white.value}',
+            newToken: 'cdr-color-text-button-dark-disabled',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for disabled dark CTAs',
+            },
+          },
+          light: {
+            value: '{options.color.warm-grey-900.value}',
+            newToken: 'cdr-color-text-button-secondary',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for light CTA',
+            },
+          },
+          'light-hover': {
+            value: '{options.color.warm-grey-900.value}',
+            newToken: 'cdr-color-text-button-secondary-hover',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the hover state of the light CTA',
+            },
+          },
+          'light-active': {
+            value: '{options.color.warm-grey-100.value}',
+            newToken: 'cdr-color-text-button-secondary-active',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the active state of the light CTA',
+            },
+          },
+          'light-disabled': {
+            value: '{options.color.warm-grey-500.value}',
+            newToken: 'cdr-color-text-button-secondary-disabled',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Disabled text color for the light CTA',
+            },
+          },
+          brand: {
+            value: '{options.color.warm-grey-100.value}',
+            newToken: 'cdr-color-text-button-primary',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the brand CTA',
+            },
+          },
+          'brand-hover': {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            newToken: 'cdr-color-text-button-primary-hover',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the hover state of the brand CTA',
+            },
+          },
+          'brand-active': {
+            value: '{options.color.warm-grey-100.value}',
+            newToken: 'cdr-color-text-button-primary-active',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the active state of the brand CTA',
+            },
+          },
+          'brand-disabled': {
+            value: '{options.color.white.value}',
+            newToken: 'cdr-color-text-button-primary-disabled',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for disabled brand CTAs',
+            },
+          },
+          sale: {
+            value: '{options.color.white.value}',
+            newToken: 'cdr-color-text-button-sale',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the sale CTA',
+            },
+          },
+          'sale-hover': {
+            value: '{options.color.sale-red-800.value}',
+            newToken: 'cdr-color-text-button-sale-hover',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the hover state of the sale CTA',
+            },
+          },
+          'sale-active': {
+            value: '{options.color.white.value}',
+            newToken: 'cdr-color-text-button-sale-active',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for the active state of the sale CTA',
+            },
+          },
+          'sale-disabled': {
+            value: '{options.color.white.value}',
+            newToken: 'cdr-color-text-button-sale-disabled',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'text',
+              example: '{color.docExample}',
+              description: 'Text color for disabled sale CTAs',
+            },
+          },
+        },
+      },
+      border: {
+        cta: {
+          dark: {
+            rest: {
+              value: '{options.color.warm-grey-900.value}',
+              newToken: 'cdr-color-border-button-dark-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the dark CTA',
+              },
+            },
+            active: {
+              value: '{options.color.warm-grey-900.value}',
+              newToken: 'cdr-color-border-button-dark-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the active and pressed states of the dark CTA',
+              },
+            },
+            'active-inset': {
+              value: '{options.color.warm-grey-300.value}',
+              newToken: 'cdr-color-border-button-dark-active-inset',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Inset border for the active state of the dark CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.warm-grey-900.value}',
+              newToken: 'cdr-color-border-button-dark-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the hover state of the dark CTA',
+              },
+            },
+          },
+          light: {
+            rest: {
+              value: '{options.color.warm-grey-700.value}',
+              newToken: 'cdr-color-border-button-secondary-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the light CTA',
+              },
+            },
+            active: {
+              value: '{options.color.warm-grey-700.value}',
+              newToken: 'cdr-color-border-button-secondary-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the active and pressed states of the light CTA',
+              },
+            },
+            'active-inset': {
+              value: '{options.color.warm-grey-200.value}',
+              newToken: 'cdr-color-border-button-secondary-active-inset',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Inset border for the active state of the light CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.warm-grey-900.value}',
+              newToken: 'cdr-color-border-button-secondary-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the hover state of the light CTA',
+              },
+            },
+          },
+          sale: {
+            rest: {
+              value: '{options.color.sale-red-800.value}',
+              newToken: 'cdr-color-border-button-sale-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the sale CTA',
+              },
+            },
+            active: {
+              value: '{options.color.sale-red-800.value}',
+              newToken: 'cdr-color-border-button-sale-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the active and pressed states of the sale CTA',
+              },
+            },
+            'active-inset': {
+              value: '{options.color.sale-red-200.value}',
+              newToken: 'cdr-color-border-button-sale-active-inset',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Inset border for the active state of the sale CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.sale-red-800.value}',
+              newToken: 'cdr-color-border-button-sale-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the hover state of the sale CTA',
+              },
+            },
+          },
+          brand: {
+            rest: {
+              value: '{options.color.blue-spruce-green-1000.value}',
+              newToken: 'cdr-color-border-button-primary-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the brand CTA',
+              },
+            },
+            active: {
+              value: '{options.color.blue-spruce-green-1000.value}',
+              newToken: 'cdr-color-border-button-primary-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the hover state of the brand CTA',
+              },
+            },
+            'active-inset': {
+              value: '{options.color.sage-green-400.value}',
+              newToken: 'cdr-color-border-button-primary-active-inset',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Inset border for the active state of the brand CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.blue-spruce-green-1000.value}',
+              newToken: 'cdr-color-border-button-primary-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'border',
+                example: '{color.docExample}',
+                description: 'Border color for the active and pressed states of the brand CTA',
+              },
+            },
+          },
+          'default-disabled': {
+            value: '{options.color.warm-grey-400.value}',
+            newToken: 'cdr-color-border-button-default-disabled',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Default disabled CTA color',
+            },
+          },
+        },
+      },
+      background: {
+        cta: {
+          dark: {
+            rest: {
+              value: '{options.color.warm-grey-900.value}',
+              newToken: 'cdr-color-background-button-dark-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the dark CTA',
+              },
+            },
+            active: {
+              value: '{options.color.warm-grey-900.value}',
+              newToken: 'cdr-color-background-button-dark-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the active and pressed states of the dark CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.warm-grey-300.value}',
+              newToken: 'cdr-color-background-button-dark-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the hover state of the dark CTA',
+              },
+            },
+          },
+          light: {
+            rest: {
+              value: '{options.color.warm-grey-100.value}',
+              newToken: 'cdr-color-background-button-secondary-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the light CTA',
+              },
+            },
+            active: {
+              value: '{options.color.warm-grey-700.value}',
+              newToken: 'cdr-color-background-button-secondary-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the active and pressed states of the light CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.warm-grey-200.value}',
+              newToken: 'cdr-color-background-button-secondary-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the hover state of the light CTA',
+              },
+            },
+            disabled: {
+              value: '{options.color.warm-grey-100.value}',
+              newToken: 'cdr-color-background-button-secondary-disabled',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Disabled color for the light CTA',
+              },
+            },
+          },
+          sale: {
+            rest: {
+              value: '{options.color.sale-red-800.value}',
+              newToken: 'cdr-color-background-button-sale-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the sale CTA',
+              },
+            },
+            active: {
+              value: '{options.color.sale-red-800.value}',
+              newToken: 'cdr-color-background-button-sale-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the active and pressed states of the sale CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.sale-red-200.value}',
+              newToken: 'cdr-color-background-button-sale-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the hover state of the sale CTA',
+              },
+            },
+          },
+          brand: {
+            rest: {
+              value: '{options.color.blue-spruce-green-1000.value}',
+              newToken: 'cdr-color-background-button-primary-rest',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the brand CTA',
+              },
+            },
+            active: {
+              value: '{options.color.blue-spruce-green-1000.value}',
+              newToken: 'cdr-color-background-button-primary-active',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the hover state of the brand CTA',
+              },
+            },
+            hover: {
+              value: '{options.color.sage-green-400.value}',
+              newToken: 'cdr-color-background-button-primary-hover',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'background',
+                example: '{color.docExample}',
+                description: 'Background color for the active and pressed states of the brand CTA',
+              },
+            },
+          },
+          'default-disabled': {
+            value: '{options.color.warm-grey-400.value}',
+            newToken: 'cdr-color-background-button-default-disabled',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Default disabled CTA color',
+            },
+          },
+        },
+      }
+    },
+  },
+}

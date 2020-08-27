@@ -10,19 +10,19 @@ $current-release-year: 2019;
 $current-release-cycle: "fall";
 
 @function getDeprecationDate($year, $cycle) {
-  @if $cycle == "spring" {
+  @if $cycle == "winter" {
+    @return "#{$year} summer";
+  }
+  @else if $cycle == "spring" {
     @return "#{$year} fall";
   }
   @else if $cycle == "summer" {
-    @return "#{$year} winter";
+    $nextYear: $year + 1;
+    @return "#{$nextYear} winter";
   }
   @else if $cycle == "fall" {
     $nextYear: $year + 1;
     @return "#{$nextYear} spring";
-  }
-  @else if $cycle == "winter" {
-    $nextYear: $year + 1;
-    @return "#{$nextYear} summer";
   }
 }
 
@@ -66,4 +66,3 @@ $current-release-cycle: "fall";
     @content;
   }
 }
-

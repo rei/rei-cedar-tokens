@@ -577,7 +577,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for primary buttons"
       },
@@ -586,7 +586,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for primary buttons"
         }
@@ -603,7 +603,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the hover state of primary buttons"
       },
@@ -612,7 +612,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the hover state of primary buttons"
         }
@@ -629,7 +629,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the active state of primary buttons"
       },
@@ -638,7 +638,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the active state of primary buttons"
         }
@@ -655,7 +655,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for disabled primary buttons"
       },
@@ -664,7 +664,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for disabled primary buttons"
         }
@@ -681,7 +681,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for secondary buttons"
       },
@@ -690,7 +690,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for secondary buttons"
         }
@@ -707,7 +707,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the hover state of secondary buttons"
       },
@@ -716,7 +716,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the hover state of secondary buttons"
         }
@@ -733,7 +733,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the active state of secondary buttons"
       },
@@ -742,7 +742,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the active state of secondary buttons"
         }
@@ -759,7 +759,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for disabled secondary buttons"
       },
@@ -768,7 +768,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for disabled secondary buttons"
         }
@@ -782,24 +782,26 @@
     },
     {
       "value": "#fff9f8f6",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for the dark CTA"
+        "description": "Text color for the dark button"
       },
       "original": {
         "value": "{options.color.warm-grey-100.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for the dark CTA"
+          "description": "Text color for the dark button"
         }
       },
-      "name": "cdr_color_text_cta_dark",
+      "name": "cdr_color_text_button_dark",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -808,24 +810,26 @@
     },
     {
       "value": "#ff4e4d49",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for the hover state of the dark CTA"
+        "description": "Text color for the hover state of the dark button"
       },
       "original": {
         "value": "{options.color.warm-grey-900.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for the hover state of the dark CTA"
+          "description": "Text color for the hover state of the dark button"
         }
       },
-      "name": "cdr_color_text_cta_dark_hover",
+      "name": "cdr_color_text_button_dark_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -834,24 +838,26 @@
     },
     {
       "value": "#fff9f8f6",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for the active state of the dark CTA"
+        "description": "Text color for the active state of the dark button"
       },
       "original": {
         "value": "{options.color.warm-grey-100.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for the active state of the dark CTA"
+          "description": "Text color for the active state of the dark button"
         }
       },
-      "name": "cdr_color_text_cta_dark_active",
+      "name": "cdr_color_text_button_dark_active",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -860,206 +866,26 @@
     },
     {
       "value": "#ffffffff",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for disabled dark CTAs"
+        "description": "Text color for disabled dark buttons"
       },
       "original": {
         "value": "{options.color.white.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for disabled dark CTAs"
+          "description": "Text color for disabled dark buttons"
         }
       },
-      "name": "cdr_color_text_cta_dark_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for light CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_light",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for the hover state of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for the hover state of the light CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_light_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for the active state of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for the active state of the light CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_light_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffd1cbbd",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Disabled text color for the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-500.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Disabled text color for the light CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_light_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for the brand CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_brand",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for the hover state of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for the hover state of the brand CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_brand_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for the active state of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for the active state of the brand CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_brand_active",
+      "name": "cdr_color_text_button_dark_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1068,50 +894,26 @@
     },
     {
       "value": "#ffffffff",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for disabled brand CTAs"
+        "description": "Text color for the sale button"
       },
       "original": {
         "value": "{options.color.white.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for disabled brand CTAs"
+          "description": "Text color for the sale button"
         }
       },
-      "name": "cdr_color_text_cta_brand_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Text color for the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Text color for the sale CTA"
-        }
-      },
-      "name": "cdr_color_text_cta_sale",
+      "name": "cdr_color_text_button_sale",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1120,24 +922,26 @@
     },
     {
       "value": "#ffcc0000",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for the hover state of the sale CTA"
+        "description": "Text color for the hover state of the sale button"
       },
       "original": {
         "value": "{options.color.sale-red-800.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for the hover state of the sale CTA"
+          "description": "Text color for the hover state of the sale button"
         }
       },
-      "name": "cdr_color_text_cta_sale_hover",
+      "name": "cdr_color_text_button_sale_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1146,24 +950,26 @@
     },
     {
       "value": "#ffffffff",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for the active state of the sale CTA"
+        "description": "Text color for the active state of the sale button"
       },
       "original": {
         "value": "{options.color.white.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for the active state of the sale CTA"
+          "description": "Text color for the active state of the sale button"
         }
       },
-      "name": "cdr_color_text_cta_sale_active",
+      "name": "cdr_color_text_button_sale_active",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1172,24 +978,26 @@
     },
     {
       "value": "#ffffffff",
+      "newToken": "",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Text color for disabled sale CTAs"
+        "description": "Text color for disabled sale buttons"
       },
       "original": {
         "value": "{options.color.white.value}",
+        "newToken": "",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Text color for disabled sale CTAs"
+          "description": "Text color for disabled sale buttons"
         }
       },
-      "name": "cdr_color_text_cta_sale_disabled",
+      "name": "cdr_color_text_button_sale_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1201,7 +1009,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for tabs"
       },
@@ -1210,7 +1018,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for tabs"
         }
@@ -1227,7 +1035,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the active and pressed states of tabs"
       },
@@ -1236,7 +1044,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the active and pressed states of tabs"
         }
@@ -1253,7 +1061,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the hover state of tabs"
       },
@@ -1262,7 +1070,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the hover state of tabs"
         }
@@ -1279,7 +1087,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Disabled text color of tabs"
       },
@@ -1288,7 +1096,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Disabled text color of tabs"
         }
@@ -1305,7 +1113,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for ratings"
       },
@@ -1314,7 +1122,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for ratings"
         }
@@ -1331,7 +1139,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the hover state of ratings"
       },
@@ -1340,7 +1148,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the hover state of ratings"
         }
@@ -1357,7 +1165,7 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
         "description": "Text color for the separator in ratings"
       },
@@ -1366,7 +1174,7 @@
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
           "description": "Text color for the separator in ratings"
         }
@@ -2081,6 +1889,162 @@
       }
     },
     {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the dark button"
+        }
+      },
+      "name": "cdr_color_background_button_dark_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the dark button"
+        }
+      },
+      "name": "cdr_color_background_button_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the dark button"
+        }
+      },
+      "name": "cdr_color_background_button_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the sale button"
+        }
+      },
+      "name": "cdr_color_background_button_sale_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the sale button"
+        }
+      },
+      "name": "cdr_color_background_button_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffde2e2",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the sale button"
+        }
+      },
+      "name": "cdr_color_background_button_sale_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
@@ -2126,370 +2090,6 @@
         }
       },
       "name": "cdr_color_background_button_icon_only_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the dark CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_dark_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the dark CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_dark_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffedeae3",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-300.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the dark CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_dark_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the light CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_light_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff928b80",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the light CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_light_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff4f2ed",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the light CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_light_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Disabled color for the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Disabled color for the light CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_light_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffcc0000",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the sale CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_sale_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffcc0000",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the sale CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_sale_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffde2e2",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the sale CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_sale_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the brand CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_brand_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the brand CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_brand_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc7dfd1",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.sage-green-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the brand CTA"
-        }
-      },
-      "name": "cdr_color_background_cta_brand_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffdcd6cb",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Default disabled CTA color"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Default disabled CTA color"
-        }
-      },
-      "name": "cdr_color_background_cta_default_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3199,6 +2799,214 @@
       }
     },
     {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the dark button"
+        }
+      },
+      "name": "cdr_color_border_button_dark_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the dark button"
+        }
+      },
+      "name": "cdr_color_border_button_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the dark button"
+        }
+      },
+      "name": "cdr_color_border_button_dark_active_inset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the dark button"
+        }
+      },
+      "name": "cdr_color_border_button_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the sale button"
+        }
+      },
+      "name": "cdr_color_border_button_sale_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the sale button"
+        }
+      },
+      "name": "cdr_color_border_button_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffde2e2",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the sale button"
+        }
+      },
+      "name": "cdr_color_border_button_sale_active_inset",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the sale button"
+        }
+      },
+      "name": "cdr_color_border_button_sale_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
@@ -3244,448 +3052,6 @@
         }
       },
       "name": "cdr_color_border_button_icon_only_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the dark CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_dark_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the active and pressed states of the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the active and pressed states of the dark CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_dark_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffedeae3",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Inset border for the active state of the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-300.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Inset border for the active state of the dark CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_dark_active_inset",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the hover state of the dark CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the hover state of the dark CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_dark_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff928b80",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the light CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_light_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff928b80",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the active and pressed states of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the active and pressed states of the light CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_light_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff4f2ed",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Inset border for the active state of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Inset border for the active state of the light CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_light_active_inset",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the hover state of the light CTA"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the hover state of the light CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_light_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffcc0000",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the sale CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_sale_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffcc0000",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the active and pressed states of the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the active and pressed states of the sale CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_sale_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffde2e2",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Inset border for the active state of the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Inset border for the active state of the sale CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_sale_active_inset",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffcc0000",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the hover state of the sale CTA"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the hover state of the sale CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_sale_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the brand CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_brand_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the hover state of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the hover state of the brand CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_brand_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc7dfd1",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Inset border for the active state of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.sage-green-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Inset border for the active state of the brand CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_brand_active_inset",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for the active and pressed states of the brand CTA"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for the active and pressed states of the brand CTA"
-        }
-      },
-      "name": "cdr_color_border_cta_brand_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffdcd6cb",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Default disabled CTA color"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Default disabled CTA color"
-        }
-      },
-      "name": "cdr_color_border_cta_default_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5115,6 +4481,1416 @@
         "deprecated": true,
         "deprecated-year": "2020",
         "deprecated-release": "spring",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-text-button-dark",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-text-button-dark",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the dark CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_dark",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-text-button-dark-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-text-button-dark-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of the dark CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-text-button-dark-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-text-button-dark-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of the dark CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "cdr-color-text-button-dark-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled dark CTAs"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "cdr-color-text-button-dark-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled dark CTAs"
+        }
+      },
+      "name": "cdr_color_text_cta_dark_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-text-button-secondary",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-text-button-secondary",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for light CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_light",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-text-button-secondary-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-text-button-secondary-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of the light CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_light_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-text-button-secondary-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-text-button-secondary-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of the light CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_light_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffd1cbbd",
+      "newToken": "cdr-color-text-button-secondary-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Disabled text color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "newToken": "cdr-color-text-button-secondary-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Disabled text color for the light CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_light_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-text-button-primary",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-text-button-primary",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the brand CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_brand",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "newToken": "cdr-color-text-button-primary-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "newToken": "cdr-color-text-button-primary-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of the brand CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_brand_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-text-button-primary-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-text-button-primary-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of the brand CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_brand_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "cdr-color-text-button-primary-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled brand CTAs"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "cdr-color-text-button-primary-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled brand CTAs"
+        }
+      },
+      "name": "cdr_color_text_cta_brand_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "cdr-color-text-button-sale",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "cdr-color-text-button-sale",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the sale CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_sale",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "newToken": "cdr-color-text-button-sale-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "cdr-color-text-button-sale-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of the sale CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_sale_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "cdr-color-text-button-sale-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "cdr-color-text-button-sale-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of the sale CTA"
+        }
+      },
+      "name": "cdr_color_text_cta_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "cdr-color-text-button-sale-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled sale CTAs"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "cdr-color-text-button-sale-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled sale CTAs"
+        }
+      },
+      "name": "cdr_color_text_cta_sale_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-border-button-dark-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-border-button-dark-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the dark CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_dark_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-border-button-dark-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-border-button-dark-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the dark CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "newToken": "cdr-color-border-button-dark-active-inset",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "newToken": "cdr-color-border-button-dark-active-inset",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the dark CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_dark_active_inset",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-border-button-dark-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-border-button-dark-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the dark CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "newToken": "cdr-color-border-button-secondary-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "newToken": "cdr-color-border-button-secondary-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the light CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_light_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "newToken": "cdr-color-border-button-secondary-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "newToken": "cdr-color-border-button-secondary-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the light CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_light_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff4f2ed",
+      "newToken": "cdr-color-border-button-secondary-active-inset",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "newToken": "cdr-color-border-button-secondary-active-inset",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the light CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_light_active_inset",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-border-button-secondary-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-border-button-secondary-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the light CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_light_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "newToken": "cdr-color-border-button-sale-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "cdr-color-border-button-sale-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the sale CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_sale_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "newToken": "cdr-color-border-button-sale-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "cdr-color-border-button-sale-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the sale CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffde2e2",
+      "newToken": "cdr-color-border-button-sale-active-inset",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "newToken": "cdr-color-border-button-sale-active-inset",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the sale CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_sale_active_inset",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "newToken": "cdr-color-border-button-sale-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "cdr-color-border-button-sale-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the sale CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_sale_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "newToken": "cdr-color-border-button-primary-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "newToken": "cdr-color-border-button-primary-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the brand CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_brand_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "newToken": "cdr-color-border-button-primary-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the hover state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "newToken": "cdr-color-border-button-primary-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the hover state of the brand CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_brand_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc7dfd1",
+      "newToken": "cdr-color-border-button-primary-active-inset",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Inset border for the active state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "newToken": "cdr-color-border-button-primary-active-inset",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Inset border for the active state of the brand CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_brand_active_inset",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "newToken": "cdr-color-border-button-primary-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "newToken": "cdr-color-border-button-primary-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the brand CTA"
+        }
+      },
+      "name": "cdr_color_border_cta_brand_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "newToken": "cdr-color-border-button-default-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default disabled CTA color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "newToken": "cdr-color-border-button-default-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default disabled CTA color"
+        }
+      },
+      "name": "cdr_color_border_cta_default_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-background-button-dark-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-background-button-dark-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the dark CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_dark_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "cdr-color-background-button-dark-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "cdr-color-background-button-dark-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the dark CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "newToken": "cdr-color-background-button-dark-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the dark CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "newToken": "cdr-color-background-button-dark-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the dark CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-background-button-secondary-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-background-button-secondary-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the light CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_light_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "newToken": "cdr-color-background-button-secondary-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "newToken": "cdr-color-background-button-secondary-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the light CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_light_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff4f2ed",
+      "newToken": "cdr-color-background-button-secondary-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "newToken": "cdr-color-background-button-secondary-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the light CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_light_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "cdr-color-background-button-secondary-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Disabled color for the light CTA"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "cdr-color-background-button-secondary-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Disabled color for the light CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_light_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "newToken": "cdr-color-background-button-sale-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "cdr-color-background-button-sale-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the sale CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_sale_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcc0000",
+      "newToken": "cdr-color-background-button-sale-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "cdr-color-background-button-sale-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the sale CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffde2e2",
+      "newToken": "cdr-color-background-button-sale-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the sale CTA"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "newToken": "cdr-color-background-button-sale-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the sale CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_sale_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "newToken": "cdr-color-background-button-primary-rest",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "newToken": "cdr-color-background-button-primary-rest",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the brand CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_brand_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "newToken": "cdr-color-background-button-primary-active",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "newToken": "cdr-color-background-button-primary-active",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the brand CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_brand_active",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc7dfd1",
+      "newToken": "cdr-color-background-button-primary-hover",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the brand CTA"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "newToken": "cdr-color-background-button-primary-hover",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the brand CTA"
+        }
+      },
+      "name": "cdr_color_background_cta_brand_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "newToken": "cdr-color-background-button-default-disabled",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Default disabled CTA color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "newToken": "cdr-color-background-button-default-disabled",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Default disabled CTA color"
+        }
+      },
+      "name": "cdr_color_background_cta_default_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": true,
+        "deprecated-year": "2020",
+        "deprecated-release": "summer",
         "category": "color"
       }
     }

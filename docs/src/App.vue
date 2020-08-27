@@ -54,7 +54,8 @@ export default {
 
 <style lang="scss">
 // Cedar css
-@import '~@rei/cedar/dist/cedar-compiled.css';
+@import '~@rei/cedar/dist/style/reset.css';
+@import '~@rei/cedar/dist/style/container.css';
 @import '~@rei/cedar/dist/cdr-fonts.css';
 
 .platform-title {
