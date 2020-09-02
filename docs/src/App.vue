@@ -11,7 +11,7 @@
         <p>Global token names are converted to platform specific variable naming but only shown here for SCSS/LESS:</p>
         <ul>
           <li>SCSS/LESS: kebab-case</li>
-          <li>JS (commonjs): camelCase</li>
+          <li>JS (commonjs): PascalCase</li>
           <li>JS (esm): PascalCase</li>
           <li>Android: snake_case</li>
           <li>iOS: PascalCase</li>

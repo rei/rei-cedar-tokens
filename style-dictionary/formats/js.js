@@ -7,7 +7,7 @@ module.exports = (StyleDictionary) => {
     formatter(dictionary) {
       const result = [];
       dictionary.allProperties.forEach((p) => {
-        const k = _.camelCase(p.name);
+        const k = p.name;
         const v = JSON.stringify(p.value);
         result.push(`  ${k}: ${v},`);
       });
