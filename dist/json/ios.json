@@ -579,6 +579,32 @@
         "category": "colors",
         "type": "text",
         "example": "color",
+        "description": "Text color for tooltips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for tooltips"
+        }
+      },
+      "name": "CdrColorTextTooltipDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
         "description": "Text color for primary buttons"
       },
       "original": {
@@ -1707,6 +1733,32 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.216f green:0.216f blue:0.204f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Background color for tooltips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for tooltips"
+        }
+      },
+      "name": "CdrColorBackgroundTooltipDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.133f green:0.361f blue:0.306f alpha:1.000f]",
       "category": "color",
       "docs": {
@@ -2584,6 +2636,32 @@
         }
       },
       "name": "CdrColorBorderInputDefaultDisabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for tooltips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for tooltips"
+        }
+      },
+      "name": "CdrColorBorderTooltipDefault",
       "attributes": {
         "option": false,
         "deprecated": false,
