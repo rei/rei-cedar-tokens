@@ -53,7 +53,7 @@
   padding-right: $cdr-space-one-x;
   width: 100%;
   max-width: $cdr-breakpoint-lg;
-  @include cdr-md-mq {
+  @include cdr-md-mq-up {
     padding-left: $cdr-space-two-x;
     padding-right: $cdr-space-two-x;
   }
@@ -63,7 +63,7 @@
   padding-left: $cdr-space-one-x;
   padding-right: $cdr-space-one-x;
   width: 100%;
-  @include cdr-md-mq {
+  @include cdr-md-mq-up {
     padding-left: $cdr-space-two-x;
     padding-right: $cdr-space-two-x;
   }
