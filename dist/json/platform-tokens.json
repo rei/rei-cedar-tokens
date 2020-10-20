@@ -262,7 +262,7 @@
         }
       },
       {
-        "value": "rgba(12, 11, 8, 0.75)",
+        "value": "#20201d",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -271,7 +271,7 @@
           "description": "Default text color used in form elements"
         },
         "original": {
-          "value": "{options.color.warm-grey-900-75.value}",
+          "value": "{options.color.warm-grey-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -340,7 +340,7 @@
         }
       },
       {
-        "value": "rgba(66, 59, 47, 0.75)",
+        "value": "rgba(12, 11, 8, 0.75)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -349,7 +349,7 @@
           "description": "Text color of required label within forms"
         },
         "original": {
-          "value": "{options.color.warm-grey-800-75.value}",
+          "value": "{options.color.warm-grey-900-75.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -359,6 +359,32 @@
           }
         },
         "name": "cdr-color-text-input-required",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(66, 59, 47, 0.75)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color of optional label within forms"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-800-75.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Text color of optional label within forms"
+          }
+        },
+        "name": "cdr-color-text-input-optional",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -392,7 +418,7 @@
         }
       },
       {
-        "value": "rgba(12, 11, 8, 0.75)",
+        "value": "#20201d",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -401,7 +427,7 @@
           "description": "Text color used in filled forms"
         },
         "original": {
-          "value": "{options.color.warm-grey-900-75.value}",
+          "value": "{options.color.warm-grey-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -418,13 +444,39 @@
         }
       },
       {
+        "value": "rgba(66, 59, 47, 0.75)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Help text color used in forms"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-800-75.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Help text color used in forms"
+          }
+        },
+        "name": "cdr-color-text-input-help",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "rgba(12, 11, 8, 0.75)",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Help text color used in filled forms"
+          "description": "Error text color used in forms"
         },
         "original": {
           "value": "{options.color.warm-grey-900-75.value}",
@@ -433,10 +485,10 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "Help text color used in filled forms"
+            "description": "Error text color used in forms"
           }
         },
-        "name": "cdr-color-text-input-help",
+        "name": "cdr-color-text-input-error",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -1604,7 +1656,7 @@
         }
       },
       {
-        "value": "rgba(255, 255, 255, 0.75)",
+        "value": "rgba(244, 242, 237, 0.15)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1613,7 +1665,7 @@
           "description": "Default background color on form elements"
         },
         "original": {
-          "value": "{options.color.white-75.value}",
+          "value": "{options.color.warm-grey-200-15.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1623,6 +1675,32 @@
           }
         },
         "name": "cdr-color-background-input-default",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.85)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Default background color on form elements"
+        },
+        "original": {
+          "value": "{options.color.white-85.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Default background color on form elements"
+          }
+        },
+        "name": "cdr-color-background-input-secondary",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -1656,7 +1734,7 @@
         }
       },
       {
-        "value": "#406eb5",
+        "value": "#f9f8f6",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1665,7 +1743,7 @@
           "description": "Selected state of a form background"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-800.value}",
+          "value": "{options.color.warm-grey-100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1675,6 +1753,32 @@
           }
         },
         "name": "cdr-color-background-input-default-selected",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected state of a form background"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Selected state of a form background"
+          }
+        },
+        "name": "cdr-color-background-input-secondary-selected",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -2514,7 +2618,7 @@
         }
       },
       {
-        "value": "#406eb5",
+        "value": "#20201d",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2523,7 +2627,7 @@
           "description": "Active state of a form border"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-800.value}",
+          "value": "{options.color.warm-grey-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2618,7 +2722,7 @@
         }
       },
       {
-        "value": "#dcd6cb",
+        "value": "#d1cbbd",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2627,7 +2731,7 @@
           "description": "Disabled form border"
         },
         "original": {
-          "value": "{options.color.warm-grey-400.value}",
+          "value": "{options.color.warm-grey-500.value}",
           "category": "color",
           "docs": {
             "category": "colors",

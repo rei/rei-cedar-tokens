@@ -102,7 +102,7 @@
     },
     {
       "name": "cdr-color-text-input-default",
-      "value": "#0c0b08bf",
+      "value": "#20201d",
       "type": "text",
       "path": [
         "color",
@@ -135,13 +135,24 @@
     },
     {
       "name": "cdr-color-text-input-required",
-      "value": "#423b2fbf",
+      "value": "#0c0b08bf",
       "type": "text",
       "path": [
         "color",
         "text",
         "input",
         "required"
+      ]
+    },
+    {
+      "name": "cdr-color-text-input-optional",
+      "value": "#423b2fbf",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "input",
+        "optional"
       ]
     },
     {
@@ -157,7 +168,7 @@
     },
     {
       "name": "cdr-color-text-input-filled",
-      "value": "#0c0b08bf",
+      "value": "#20201d",
       "type": "text",
       "path": [
         "color",
@@ -168,13 +179,24 @@
     },
     {
       "name": "cdr-color-text-input-help",
-      "value": "#0c0b08bf",
+      "value": "#423b2fbf",
       "type": "text",
       "path": [
         "color",
         "text",
         "input",
         "help"
+      ]
+    },
+    {
+      "name": "cdr-color-text-input-error",
+      "value": "#0c0b08bf",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "input",
+        "error"
       ]
     },
     {
@@ -648,13 +670,24 @@
     },
     {
       "name": "cdr-color-background-input-default",
-      "value": "#ffffffbf",
+      "value": "#f4f2ed26",
       "type": "background",
       "path": [
         "color",
         "background",
         "input",
         "default"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-secondary",
+      "value": "#ffffffd9",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "secondary"
       ]
     },
     {
@@ -670,13 +703,24 @@
     },
     {
       "name": "cdr-color-background-input-default-selected",
-      "value": "#406eb5",
+      "value": "#f9f8f6",
       "type": "background",
       "path": [
         "color",
         "background",
         "input",
         "default-selected"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-secondary-selected",
+      "value": "#ffffff",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "secondary-selected"
       ]
     },
     {
@@ -1033,7 +1077,7 @@
     },
     {
       "name": "cdr-color-border-input-default-active",
-      "value": "#406eb5",
+      "value": "#20201d",
       "type": "border",
       "path": [
         "color",
@@ -1077,7 +1121,7 @@
     },
     {
       "name": "cdr-color-border-input-default-disabled",
-      "value": "#dcd6cb",
+      "value": "#d1cbbd",
       "type": "border",
       "path": [
         "color",

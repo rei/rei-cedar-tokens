@@ -106,7 +106,7 @@
       },
       input: {
         default: {
-          value: '{options.color.warm-grey-900-75.value}',
+          value: '{options.color.warm-grey-1100.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -136,13 +136,23 @@
           },
         },
         required: {
-          value: '{options.color.warm-grey-800-75.value}',
+          value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
             description: 'Text color of required label within forms',
+          },
+        },
+        optional: {
+          value: '{options.color.warm-grey-800-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color of optional label within forms',
           },
         },
         disabled: {
@@ -156,7 +166,7 @@
           },
         },
         filled: {
-          value: '{options.color.warm-grey-900-75.value}',
+          value: '{options.color.warm-grey-1100.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -166,13 +176,23 @@
           },
         },
         help: {
+          value: '{options.color.warm-grey-800-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Help text color used in forms',
+          },
+        },
+        error: {
           value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Help text color used in filled forms',
+            description: 'Error text color used in forms',
           },
         },
       },
@@ -642,7 +662,17 @@
       },
       input: {
         default: {
-          value: '{options.color.white-75.value}',
+          value: '{options.color.warm-grey-200-15.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Default background color on form elements',
+          },
+        },
+        secondary: {
+          value: '{options.color.white-85.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -662,7 +692,17 @@
           },
         },
         'default-selected': {
-          value: '{options.color.alpine-lake-blue-800.value}',
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Selected state of a form background',
+          },
+        },
+        'secondary-selected': {
+          value: '{options.color.white.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -1009,7 +1049,7 @@
           },
         },
         'default-active': {
-          value: '{options.color.alpine-lake-blue-800.value}',
+          value: '{options.color.warm-grey-1100.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -1049,7 +1089,7 @@
           },
         },
         'default-disabled': {
-          value: '{options.color.warm-grey-400.value}',
+          value: '{options.color.warm-grey-500.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
