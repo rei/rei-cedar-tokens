@@ -261,7 +261,7 @@
       }
     },
     {
-      "value": "#bf0c0b08",
+      "value": "#ff20201d",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -270,7 +270,7 @@
         "description": "Default text color used in form elements"
       },
       "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
+        "value": "{options.color.warm-grey-1100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -339,7 +339,7 @@
       }
     },
     {
-      "value": "#bf423b2f",
+      "value": "#bf0c0b08",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -348,7 +348,7 @@
         "description": "Text color of required label within forms"
       },
       "original": {
-        "value": "{options.color.warm-grey-800-75.value}",
+        "value": "{options.color.warm-grey-900-75.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -358,6 +358,32 @@
         }
       },
       "name": "cdr_color_text_input_required",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#bf423b2f",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color of optional label within forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color of optional label within forms"
+        }
+      },
+      "name": "cdr_color_text_input_optional",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -391,7 +417,7 @@
       }
     },
     {
-      "value": "#bf0c0b08",
+      "value": "#ff20201d",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -400,7 +426,7 @@
         "description": "Text color used in filled forms"
       },
       "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
+        "value": "{options.color.warm-grey-1100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -417,13 +443,39 @@
       }
     },
     {
+      "value": "#bf423b2f",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Help text color used in forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Help text color used in forms"
+        }
+      },
+      "name": "cdr_color_text_input_help",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#bf0c0b08",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Help text color used in filled forms"
+        "description": "Error text color used in forms"
       },
       "original": {
         "value": "{options.color.warm-grey-900-75.value}",
@@ -432,10 +484,10 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Help text color used in filled forms"
+          "description": "Error text color used in forms"
         }
       },
-      "name": "cdr_color_text_input_help",
+      "name": "cdr_color_text_input_error",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1603,7 +1655,7 @@
       }
     },
     {
-      "value": "#bfffffff",
+      "value": "#26f4f2ed",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1612,7 +1664,7 @@
         "description": "Default background color on form elements"
       },
       "original": {
-        "value": "{options.color.white-75.value}",
+        "value": "{options.color.warm-grey-200-15.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1622,6 +1674,32 @@
         }
       },
       "name": "cdr_color_background_input_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#d9ffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Default background color on form elements"
+      },
+      "original": {
+        "value": "{options.color.white-85.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Default background color on form elements"
+        }
+      },
+      "name": "cdr_color_background_input_secondary",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1655,7 +1733,7 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#fff9f8f6",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1664,7 +1742,7 @@
         "description": "Selected state of a form background"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.warm-grey-100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1674,6 +1752,32 @@
         }
       },
       "name": "cdr_color_background_input_default_selected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Selected state of a form background"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected state of a form background"
+        }
+      },
+      "name": "cdr_color_background_input_secondary_selected",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -2513,7 +2617,7 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ff20201d",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2522,7 +2626,7 @@
         "description": "Active state of a form border"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.warm-grey-1100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2617,7 +2721,7 @@
       }
     },
     {
-      "value": "#ffdcd6cb",
+      "value": "#ffd1cbbd",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2626,7 +2730,7 @@
         "description": "Disabled form border"
       },
       "original": {
-        "value": "{options.color.warm-grey-400.value}",
+        "value": "{options.color.warm-grey-500.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3523,1042 +3627,6 @@
       "attributes": {
         "option": false,
         "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff292929",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Primary body text color on a light background"
-      },
-      "original": {
-        "value": "{options.color.heart-of-darkness.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Primary body text color on a light background"
-        }
-      },
-      "name": "cdr_color_text_primary_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffafafa",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Primary body text color on a dark background"
-      },
-      "original": {
-        "value": "{options.color.moon-shot.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Primary body text color on a dark background"
-        }
-      },
-      "name": "cdr_color_text_primary_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff616161",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Secondary or supplemental text color on a light background"
-      },
-      "original": {
-        "value": "{options.color.taken-for-granite.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Secondary or supplemental text color on a light background"
-        }
-      },
-      "name": "cdr_color_text_secondary_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff999999",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Secondary or supplemental text color on a dark background"
-      },
-      "original": {
-        "value": "{options.color.holy-smoke.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Secondary or supplemental text color on a dark background"
-        }
-      },
-      "name": "cdr_color_text_secondary_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb8b8b8",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Disabled text color for interactive UI elements on a light background"
-      },
-      "original": {
-        "value": "{options.color.grey-matter.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Disabled text color for interactive UI elements on a light background"
-        }
-      },
-      "name": "cdr_color_text_disabled_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff616161",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Disabled text color for interactive UI elements on a dark background"
-      },
-      "original": {
-        "value": "{options.color.taken-for-granite.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Disabled text color for interactive UI elements on a dark background"
-        }
-      },
-      "name": "cdr_color_text_disabled_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff3278ae",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Link text color on a light background"
-      },
-      "original": {
-        "value": "{options.color.easily-excited.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Link text color on a light background"
-        }
-      },
-      "name": "cdr_color_text_link_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff5197cd",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Link text color on a dark background"
-      },
-      "original": {
-        "value": "{options.color.suede-shoes.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Link text color on a dark background"
-        }
-      },
-      "name": "cdr_color_text_link_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb5292b",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Error text color on a light background"
-      },
-      "original": {
-        "value": "{options.color.high-stakes.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Error text color on a light background"
-        }
-      },
-      "name": "cdr_color_text_error_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffe86868",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Error text color on a dark background"
-      },
-      "original": {
-        "value": "{options.color.snap-decision.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Error text color on a dark background"
-        }
-      },
-      "name": "cdr_color_text_error_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff292929",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Label text color for forms on a light background. Can also be used for input entry text"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.text.primary.lightmode.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Label text color for forms on a light background. Can also be used for input entry text"
-        }
-      },
-      "name": "cdr_color_text_form_label_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffafafa",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Label text color for forms on a dark background. Can also be used for input entry text"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.text.primary.darkmode.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Label text color for forms on a dark background. Can also be used for input entry text"
-        }
-      },
-      "name": "cdr_color_text_form_label_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff616161",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Placeholder text color for forms on a light background"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.text.secondary.lightmode.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Placeholder text color for forms on a light background"
-        }
-      },
-      "name": "cdr_color_text_form_placeholder_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff999999",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Placeholder text color for forms on a dark background"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.text.secondary.darkmode.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Placeholder text color for forms on a dark background"
-        }
-      },
-      "name": "cdr_color_text_form_placeholder_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb8b8b8",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Disabled text color for forms on a light background"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.text.disabled.lightmode.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Disabled text color for forms on a light background"
-        }
-      },
-      "name": "cdr_color_text_form_disabled_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff616161",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Disabled text color for forms on a dark background"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.text.disabled.darkmode.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Disabled text color for forms on a dark background"
-        }
-      },
-      "name": "cdr_color_text_form_disabled_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff616161",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Primary icon color on a light background"
-      },
-      "original": {
-        "value": "{options.color.taken-for-granite.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Primary icon color on a light background"
-        }
-      },
-      "name": "cdr_color_icon_primary_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff999999",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Primary icon color on a dark background"
-      },
-      "original": {
-        "value": "{options.color.holy-smoke.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Primary icon color on a dark background"
-        }
-      },
-      "name": "cdr_color_icon_primary_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff292929",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Emphasis or darkest icon color on a light background"
-      },
-      "original": {
-        "value": "{options.color.heart-of-darkness.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Emphasis or darkest icon color on a light background"
-        }
-      },
-      "name": "cdr_color_icon_emphasis_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffafafa",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "icon",
-        "example": "color",
-        "description": "Emphasis or lightest icon color on a dark background"
-      },
-      "original": {
-        "value": "{options.color.moon-shot.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "icon",
-          "example": "color",
-          "description": "Emphasis or lightest icon color on a dark background"
-        }
-      },
-      "name": "cdr_color_icon_emphasis_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff292929",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Only use for dark background color"
-      },
-      "original": {
-        "value": "{options.color.heart-of-darkness.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Only use for dark background color"
-        }
-      },
-      "name": "cdr_color_background_dark",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff1a1a1a",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Only use for dark background color - darkest value"
-      },
-      "original": {
-        "value": "{options.color.lost-in-space.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Only use for dark background color - darkest value"
-        }
-      },
-      "name": "cdr_color_background_darker",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff7f7f7",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Only use for light background color"
-      },
-      "original": {
-        "value": "{options.color.the-tooth.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Only use for light background color"
-        }
-      },
-      "name": "cdr_color_background_light",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffafafa",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Only use for light background color - value is between light and lightest"
-      },
-      "original": {
-        "value": "{options.color.moon-shot.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Only use for light background color - value is between light and lightest"
-        }
-      },
-      "name": "cdr_color_background_lighter",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Only use for light background color - lightest value"
-      },
-      "original": {
-        "value": "{options.color.clean-slate.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Only use for light background color - lightest value"
-        }
-      },
-      "name": "cdr_color_background_lightest",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Light background color for forms"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.background.lightest.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Light background color for forms"
-        }
-      },
-      "name": "cdr_color_background_form_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff292929",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Dark background color for forms"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.background.dark.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Dark background color for forms"
-        }
-      },
-      "name": "cdr_color_background_form_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Light background color for input control"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.background.lightest.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Light background color for input control"
-        }
-      },
-      "name": "cdr_color_background_form_input_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff292929",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Dark background color for input control"
-      },
-      "original": {
-        "value": "{deprecated-2020-spring.color.background.dark.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Dark background color for input control"
-        }
-      },
-      "name": "cdr_color_background_form_input_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff616161",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Primary border color for light background"
-      },
-      "original": {
-        "value": "{options.color.taken-for-granite.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Primary border color for light background"
-        }
-      },
-      "name": "cdr_color_border_primary_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffafafa",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Primary border color for dark background"
-      },
-      "original": {
-        "value": "{options.color.moon-shot.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Primary border color for dark background"
-        }
-      },
-      "name": "cdr_color_border_primary_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb8b8b8",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Secondary border color for light background"
-      },
-      "original": {
-        "value": "{options.color.grey-matter.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Secondary border color for light background"
-        }
-      },
-      "name": "cdr_color_border_secondary_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff999999",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Secondary border color for dark background"
-      },
-      "original": {
-        "value": "{options.color.holy-smoke.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Secondary border color for dark background"
-        }
-      },
-      "name": "cdr_color_border_secondary_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffdadada",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for disabled state for light background"
-      },
-      "original": {
-        "value": "{options.color.partly-cloudy.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for disabled state for light background"
-        }
-      },
-      "name": "cdr_color_border_disabled_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffdadada",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for disabled state for dark background"
-      },
-      "original": {
-        "value": "{options.color.partly-cloudy.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for disabled state for dark background"
-        }
-      },
-      "name": "cdr_color_border_disabled_darkmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffe86868",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for error validation state for light background"
-      },
-      "original": {
-        "value": "{options.color.snap-decision.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for error validation state for light background"
-        }
-      },
-      "name": "cdr_color_border_error_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff2b6692",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for selected state for light background"
-      },
-      "original": {
-        "value": "{options.color.closed-on-monday.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for selected state for light background"
-        }
-      },
-      "name": "cdr_color_border_selected_lightmode",
-      "attributes": {
-        "option": false,
-        "deprecated": true,
-        "deprecated-year": "2020",
-        "deprecated-release": "spring",
         "category": "color"
       }
     },
