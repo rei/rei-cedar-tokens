@@ -293,6 +293,32 @@
         "category": "colors",
         "type": "text",
         "example": "color",
+        "description": "Error text color used in forms"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color used in forms"
+        }
+      },
+      "name": "CdrColorTextInputError",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
         "description": "Color of label text used in form elements"
       },
       "original": {
@@ -462,32 +488,6 @@
         }
       },
       "name": "CdrColorTextInputHelp",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Error text color used in forms"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Error text color used in forms"
-        }
-      },
-      "name": "CdrColorTextInputError",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1707,6 +1707,32 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:1.000f green:0.949f blue:0.949f alpha:0.749f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Error background color on form elements"
+      },
+      "original": {
+        "value": "{options.color.error-red-50-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Error background color on form elements"
+        }
+      },
+      "name": "CdrColorBackgroundInputError",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
       "category": "color",
       "docs": {
@@ -2610,6 +2636,32 @@
         }
       },
       "name": "CdrColorBorderInputDefault",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.702f green:0.200f blue:0.133f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Error border color on form elements"
+      },
+      "original": {
+        "value": "{options.color.error-red-850.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Error border color on form elements"
+        }
+      },
+      "name": "CdrColorBorderInputError",
       "attributes": {
         "option": false,
         "deprecated": false,

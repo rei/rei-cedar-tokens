@@ -115,6 +115,16 @@
             description: 'Default text color used in form elements',
           },
         },
+        error: {
+          value: '{options.color.error-red-850.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Error text color used in form elements',
+          },
+        },
         label: {
           value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
@@ -681,6 +691,16 @@
             description: 'Default background color on form elements',
           },
         },
+        error: {
+          value: '{options.color.error-red-50-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Error background color on form elements',
+          },
+        },
         'default-hover': {
           value: '{options.color.warm-grey-100.value}',
           category: 'color',
@@ -1046,6 +1066,16 @@
             type: 'border',
             example: '{color.docExample}',
             description: 'Default border color on form elements',
+          },
+        },
+        error: {
+          value: '{options.color.error-red-850.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Error border color on form elements',
           },
         },
         'default-active': {
