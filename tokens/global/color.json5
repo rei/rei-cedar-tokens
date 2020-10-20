@@ -115,16 +115,6 @@
             description: 'Default text color used in form elements',
           },
         },
-        error: {
-          value: '{options.color.error-red-850.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Error text color used in form elements',
-          },
-        },
         label: {
           value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
@@ -196,7 +186,7 @@
           },
         },
         error: {
-          value: '{options.color.warm-grey-900-75.value}',
+          value: '{options.color.error-red-850.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',

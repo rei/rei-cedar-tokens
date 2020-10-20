@@ -293,32 +293,6 @@
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Error text color used in forms"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Error text color used in forms"
-        }
-      },
-      "name": "cdr_color_text_input_error",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#bf0c0b08",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
         "description": "Color of label text used in form elements"
       },
       "original": {
@@ -488,6 +462,32 @@
         }
       },
       "name": "cdr_color_text_input_help",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffb33322",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Error text color used in forms"
+      },
+      "original": {
+        "value": "{options.color.error-red-850.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color used in forms"
+        }
+      },
+      "name": "cdr_color_text_input_error",
       "attributes": {
         "option": false,
         "deprecated": false,
