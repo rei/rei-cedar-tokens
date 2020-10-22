@@ -1765,6 +1765,32 @@
         "category": "colors",
         "type": "background",
         "example": "color",
+        "description": "Active/focusedd state of a form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Active/focusedd state of a form background"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefaultActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
         "description": "Selected state of a form background"
       },
       "original": {

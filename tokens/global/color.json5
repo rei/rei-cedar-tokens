@@ -701,6 +701,16 @@
             description: 'Hover state of a form background',
           },
         },
+        'default-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Active/focusedd state of a form background',
+          },
+        },
         'default-selected': {
           value: '{options.color.warm-grey-100.value}',
           category: 'color',

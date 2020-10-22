@@ -65,6 +65,7 @@ export const CdrColorBackgroundInputDefault = "rgba(244, 242, 237, 0.15)";
 export const CdrColorBackgroundInputSecondary = "rgba(255, 255, 255, 0.85)";
 export const CdrColorBackgroundInputError = "rgba(255, 242, 242, 0.75)";
 export const CdrColorBackgroundInputDefaultHover = "#f9f8f6";
+export const CdrColorBackgroundInputDefaultActive = "#f9f8f6";
 export const CdrColorBackgroundInputDefaultSelected = "#f9f8f6";
 export const CdrColorBackgroundInputSecondarySelected = "#ffffff";
 export const CdrColorBackgroundInputDefaultSelectedHover = "#b7e0fa";

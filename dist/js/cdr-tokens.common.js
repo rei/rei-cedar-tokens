@@ -66,6 +66,7 @@ module.exports = {
   CdrColorBackgroundInputSecondary: "rgba(255, 255, 255, 0.85)",
   CdrColorBackgroundInputError: "rgba(255, 242, 242, 0.75)",
   CdrColorBackgroundInputDefaultHover: "#f9f8f6",
+  CdrColorBackgroundInputDefaultActive: "#f9f8f6",
   CdrColorBackgroundInputDefaultSelected: "#f9f8f6",
   CdrColorBackgroundInputSecondarySelected: "#ffffff",
   CdrColorBackgroundInputDefaultSelectedHover: "#b7e0fa",
