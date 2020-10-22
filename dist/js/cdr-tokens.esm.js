@@ -68,6 +68,7 @@ export const CdrColorBackgroundInputDefaultHover = "#f9f8f6";
 export const CdrColorBackgroundInputDefaultActive = "#f9f8f6";
 export const CdrColorBackgroundInputDefaultSelected = "#f9f8f6";
 export const CdrColorBackgroundInputSecondarySelected = "#ffffff";
+export const CdrColorBackgroundInputSecondaryActive = "#ffffff";
 export const CdrColorBackgroundInputDefaultSelectedHover = "#b7e0fa";
 export const CdrColorBackgroundInputDefaultDisabled = "#f9f8f6";
 export const CdrColorBackgroundTooltipDefault = "#373734";

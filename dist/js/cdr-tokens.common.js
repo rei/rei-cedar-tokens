@@ -69,6 +69,7 @@ module.exports = {
   CdrColorBackgroundInputDefaultActive: "#f9f8f6",
   CdrColorBackgroundInputDefaultSelected: "#f9f8f6",
   CdrColorBackgroundInputSecondarySelected: "#ffffff",
+  CdrColorBackgroundInputSecondaryActive: "#ffffff",
   CdrColorBackgroundInputDefaultSelectedHover: "#b7e0fa",
   CdrColorBackgroundInputDefaultDisabled: "#f9f8f6",
   CdrColorBackgroundTooltipDefault: "#373734",
