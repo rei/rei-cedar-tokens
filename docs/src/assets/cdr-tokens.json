@@ -294,32 +294,6 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Error text color used in forms"
-        },
-        "original": {
-          "value": "{options.color.warm-grey-900-75.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "text",
-            "example": "color",
-            "description": "Error text color used in forms"
-          }
-        },
-        "name": "cdr-color-text-input-error",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
-        "value": "rgba(12, 11, 8, 0.75)",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
           "description": "Color of label text used in form elements"
         },
         "original": {
@@ -489,6 +463,32 @@
           }
         },
         "name": "cdr-color-text-input-help",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#b33322",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color used in forms"
+        },
+        "original": {
+          "value": "{options.color.error-red-850.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Error text color used in forms"
+          }
+        },
+        "name": "cdr-color-text-input-error",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -1766,6 +1766,32 @@
           "category": "colors",
           "type": "background",
           "example": "color",
+          "description": "Active/focusedd state of a form background"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Active/focusedd state of a form background"
+          }
+        },
+        "name": "cdr-color-background-input-default-active",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#f9f8f6",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
           "description": "Selected state of a form background"
         },
         "original": {
@@ -1805,6 +1831,32 @@
           }
         },
         "name": "cdr-color-background-input-secondary-selected",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected state of a form background"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Selected state of a form background"
+          }
+        },
+        "name": "cdr-color-background-input-secondary-active",
         "attributes": {
           "option": false,
           "deprecated": false,
