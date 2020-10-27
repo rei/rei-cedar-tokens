@@ -293,32 +293,6 @@
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Error text color used in forms"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Error text color used in forms"
-        }
-      },
-      "name": "CdrColorTextInputError",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
         "description": "Color of label text used in form elements"
       },
       "original": {
@@ -488,6 +462,32 @@
         }
       },
       "name": "CdrColorTextInputHelp",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.702f green:0.200f blue:0.133f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Error text color used in forms"
+      },
+      "original": {
+        "value": "{options.color.error-red-850.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Error text color used in forms"
+        }
+      },
+      "name": "CdrColorTextInputError",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1765,10 +1765,36 @@
         "category": "colors",
         "type": "background",
         "example": "color",
-        "description": "Selected state of a form background"
+        "description": "Active/focusedd state of a form background"
       },
       "original": {
         "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Active/focusedd state of a form background"
+        }
+      },
+      "name": "CdrColorBackgroundInputDefaultActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.251f green:0.431f blue:0.710f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Selected state of a form background"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1803,7 +1829,7 @@
           "description": "Selected state of a form background"
         }
       },
-      "name": "CdrColorBackgroundInputSecondarySelected",
+      "name": "CdrColorBackgroundInputSecondaryActive",
       "attributes": {
         "option": false,
         "deprecated": false,

@@ -112,17 +112,6 @@
       ]
     },
     {
-      "name": "cdr-color-text-input-error",
-      "value": "#0c0b08bf",
-      "type": "text",
-      "path": [
-        "color",
-        "text",
-        "input",
-        "error"
-      ]
-    },
-    {
       "name": "cdr-color-text-input-label",
       "value": "#0c0b08bf",
       "type": "text",
@@ -197,6 +186,17 @@
         "text",
         "input",
         "help"
+      ]
+    },
+    {
+      "name": "cdr-color-text-input-error",
+      "value": "#b33322",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "input",
+        "error"
       ]
     },
     {
@@ -713,8 +713,19 @@
       ]
     },
     {
-      "name": "cdr-color-background-input-default-selected",
+      "name": "cdr-color-background-input-default-active",
       "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-active"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-selected",
+      "value": "#406eb5",
       "type": "background",
       "path": [
         "color",
@@ -724,14 +735,14 @@
       ]
     },
     {
-      "name": "cdr-color-background-input-secondary-selected",
+      "name": "cdr-color-background-input-secondary-active",
       "value": "#ffffff",
       "type": "background",
       "path": [
         "color",
         "background",
         "input",
-        "secondary-selected"
+        "secondary-active"
       ]
     },
     {
