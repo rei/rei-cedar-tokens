@@ -558,7 +558,17 @@
         },
       },
       'checkbox-default-selected-hover': {
-        value: '{options.color.alpine-lake-blue-800.value}',
+        value: '{options.color.white.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'icon',
+          example: '{color.docExample}',
+          description: 'Hover state of a selected form icon',
+        },
+      },
+      'checkbox-default-selected-active': {
+        value: '{options.color.warm-grey-900.value}',
         category: 'color',
         docs: {
           category: '{color.docCategory}',
@@ -712,7 +722,7 @@
           },
         },
         'default-selected': {
-          value: '{options.color.alpine-lake-blue-800.value}',
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -732,7 +742,7 @@
           },
         },
         'default-selected-hover': {
-          value: '{options.color.alpine-lake-blue-400.value}',
+          value: '{options.color.warm-grey-700.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -749,6 +759,66 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Disabled form background',
+          },
+        },
+        'default-selected-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Selected active form background',
+          },
+        },
+        'default-selected-focus': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Selected focus form background',
+          },
+        },
+        'default-selected-focus-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Selected focus active form background',
+          },
+        },
+        'default-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Active form background',
+          },
+        },
+        'default-focus': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Focused form background',
+          },
+        },
+        'default-focus-active': {
+          value: '{options.color.white-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Focused active form background',
           },
         },
       },
@@ -1089,7 +1159,7 @@
           },
         },
         'default-selected': {
-          value: '{options.color.alpine-lake-blue-800.value}',
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -1098,8 +1168,18 @@
             description: 'Selected state of a form border',
           },
         },
+        'default-focus': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Focus state of a form border',
+          },
+        },
         'default-selected-hover': {
-          value: '{options.color.alpine-lake-blue-800.value}',
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -1109,7 +1189,7 @@
           },
         },
         'default-hover': {
-          value: '{options.color.warm-grey-700.value}',
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',

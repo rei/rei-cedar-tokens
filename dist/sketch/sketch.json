@@ -570,12 +570,22 @@
     },
     {
       "name": "cdr-color-icon-checkbox-default-selected-hover",
-      "value": "#406eb5",
+      "value": "#ffffff",
       "type": "icon",
       "path": [
         "color",
         "icon",
         "checkbox-default-selected-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-icon-checkbox-default-selected-active",
+      "value": "#4e4d49",
+      "type": "icon",
+      "path": [
+        "color",
+        "icon",
+        "checkbox-default-selected-active"
       ]
     },
     {
@@ -725,7 +735,7 @@
     },
     {
       "name": "cdr-color-background-input-default-selected",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "background",
       "path": [
         "color",
@@ -747,7 +757,7 @@
     },
     {
       "name": "cdr-color-background-input-default-selected-hover",
-      "value": "#b7e0fa",
+      "value": "#928b80",
       "type": "background",
       "path": [
         "color",
@@ -765,6 +775,61 @@
         "background",
         "input",
         "default-disabled"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-selected-active",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-selected-active"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-selected-focus",
+      "value": "#928b80",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-selected-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-selected-focus-active",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-selected-focus-active"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-focus",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-focus-active",
+      "value": "#ffffffbf",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-focus-active"
       ]
     },
     {
@@ -1121,7 +1186,7 @@
     },
     {
       "name": "cdr-color-border-input-default-selected",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
@@ -1131,8 +1196,19 @@
       ]
     },
     {
+      "name": "cdr-color-border-input-default-focus",
+      "value": "#4e4d49",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "input",
+        "default-focus"
+      ]
+    },
+    {
       "name": "cdr-color-border-input-default-selected-hover",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
@@ -1143,7 +1219,7 @@
     },
     {
       "name": "cdr-color-border-input-default-hover",
-      "value": "#928b80",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",

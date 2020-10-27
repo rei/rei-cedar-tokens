@@ -1395,7 +1395,7 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ffffffff",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1404,7 +1404,7 @@
         "description": "Hover state of a selected form icon"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.white.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1414,6 +1414,32 @@
         }
       },
       "name": "cdr_color_icon_checkbox_default_selected_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "cdr_color_icon_checkbox_default_selected_active",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1765,7 +1791,7 @@
         "category": "colors",
         "type": "background",
         "example": "color",
-        "description": "Active/focusedd state of a form background"
+        "description": "Active form background"
       },
       "original": {
         "value": "{options.color.warm-grey-100.value}",
@@ -1774,7 +1800,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Active/focusedd state of a form background"
+          "description": "Active form background"
         }
       },
       "name": "cdr_color_background_input_default_active",
@@ -1785,7 +1811,7 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ff4e4d49",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1794,7 +1820,7 @@
         "description": "Selected state of a form background"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.warm-grey-900.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1837,7 +1863,7 @@
       }
     },
     {
-      "value": "#ffb7e0fa",
+      "value": "#ff928b80",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1846,7 +1872,7 @@
         "description": "Hover state of a selected form background"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-400.value}",
+        "value": "{options.color.warm-grey-700.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1882,6 +1908,136 @@
         }
       },
       "name": "cdr_color_background_input_default_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Selected active form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected active form background"
+        }
+      },
+      "name": "cdr_color_background_input_default_selected_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Selected focus form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected focus form background"
+        }
+      },
+      "name": "cdr_color_background_input_default_selected_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Selected focus active form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected focus active form background"
+        }
+      },
+      "name": "cdr_color_background_input_default_selected_focus_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Focused form background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused form background"
+        }
+      },
+      "name": "cdr_color_background_input_default_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#bfffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Focused active form background"
+      },
+      "original": {
+        "value": "{options.color.white-75.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused active form background"
+        }
+      },
+      "name": "cdr_color_background_input_default_focus_active",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -2721,7 +2877,7 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ff4e4d49",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2730,7 +2886,7 @@
         "description": "Selected state of a form border"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.warm-grey-900.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2747,7 +2903,33 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Focus state of a form border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Focus state of a form border"
+        }
+      },
+      "name": "cdr_color_border_input_default_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2756,7 +2938,7 @@
         "description": "Hover state of a selected form border"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.warm-grey-900.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2773,7 +2955,7 @@
       }
     },
     {
-      "value": "#ff928b80",
+      "value": "#ff4e4d49",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2782,7 +2964,7 @@
         "description": "Hover state of a form border"
       },
       "original": {
-        "value": "{options.color.warm-grey-700.value}",
+        "value": "{options.color.warm-grey-900.value}",
         "category": "color",
         "docs": {
           "category": "colors",
