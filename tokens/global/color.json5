@@ -670,6 +670,38 @@
           description: 'An alternate row color to aid grouping row data',
         },
       },
+      label: {
+        'default-hover': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Hover state of a form label background',
+          },
+        },
+        'default-active': {
+          value: '{options.color.warm-grey-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Active state of a form label background',
+          },
+        },
+        'default-focus': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Focused state of a form label background',
+          },
+        },
+      },
       input: {
         default: {
           value: '{options.color.warm-grey-200-15.value}',
@@ -1125,6 +1157,18 @@
           type: 'border',
           example: '{color.docExample}',
           description: 'Border color for informational elements',
+        },
+      },
+      label: {
+        'default-focus': {
+          value: '{options.color.warm-grey-1100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Focused border color on form labels',
+          },
         },
       },
       input: {

@@ -1681,6 +1681,84 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Hover state of a form label background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Hover state of a form label background"
+        }
+      },
+      "name": "CdrColorBackgroundLabelDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Active state of a form label background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Active state of a form label background"
+        }
+      },
+      "name": "CdrColorBackgroundLabelDefaultActive",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Focused state of a form label background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused state of a form label background"
+        }
+      },
+      "name": "CdrColorBackgroundLabelDefaultFocus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:0.149f]",
       "category": "color",
       "docs": {
@@ -2792,6 +2870,32 @@
         }
       },
       "name": "CdrColorBorderInfo",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.125f green:0.125f blue:0.114f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Focused border color on form labels"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Focused border color on form labels"
+        }
+      },
+      "name": "CdrColorBorderLabelDefaultFocus",
       "attributes": {
         "option": false,
         "deprecated": false,
