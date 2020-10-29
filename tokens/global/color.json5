@@ -692,7 +692,7 @@
           },
         },
         'default-focus': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-100.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -701,10 +701,40 @@
             description: 'Focused state of a form label background',
           },
         },
+        'secondary-hover': {
+          value: '{options.color.white-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Hover state of a form label background on secondary',
+          },
+        },
+        'secondary-active': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Active state of a form label background on secondary',
+          },
+        },
+        'secondary-focus': {
+          value: '{options.color.white-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Focused state of a form label background on secondary',
+          },
+        },
       },
       input: {
         default: {
-          value: '{options.color.warm-grey-200-15.value}',
+          value: '{options.color.white-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -793,16 +823,6 @@
             description: 'Disabled form background',
           },
         },
-        'default-selected-active': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Selected active form background',
-          },
-        },
         'default-selected-focus': {
           value: '{options.color.warm-grey-700.value}',
           category: 'color',
@@ -811,16 +831,6 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Selected focus form background',
-          },
-        },
-        'default-selected-focus-active': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Selected focus active form background',
           },
         },
         'default-active': {
@@ -841,16 +851,6 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Focused form background',
-          },
-        },
-        'default-focus-active': {
-          value: '{options.color.white-75.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Focused active form background',
           },
         },
       },
@@ -1193,7 +1193,7 @@
           },
         },
         'default-active': {
-          value: '{options.color.warm-grey-1100.value}',
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -1233,7 +1233,7 @@
           },
         },
         'default-hover': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-1100.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
