@@ -125,6 +125,16 @@
             description: 'Color of label text used in form elements',
           },
         },
+        'label-disabled': {
+          value: '{options.color.warm-grey-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Color of label text used in disabled form elements',
+          },
+        },
         placeholder: {
           value: '{options.color.warm-grey-800-75.value}',
           category: 'color',

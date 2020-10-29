@@ -10,6 +10,7 @@ export const CdrColorTextError = "#811823";
 export const CdrColorTextInfo = "#1b437e";
 export const CdrColorTextInputDefault = "#20201d";
 export const CdrColorTextInputLabel = "rgba(12, 11, 8, 0.75)";
+export const CdrColorTextInputLabelDisabled = "#b2ab9f";
 export const CdrColorTextInputPlaceholder = "rgba(66, 59, 47, 0.75)";
 export const CdrColorTextInputRequired = "rgba(12, 11, 8, 0.75)";
 export const CdrColorTextInputOptional = "rgba(66, 59, 47, 0.75)";

@@ -11,6 +11,7 @@ module.exports = {
   CdrColorTextInfo: "#1b437e",
   CdrColorTextInputDefault: "#20201d",
   CdrColorTextInputLabel: "rgba(12, 11, 8, 0.75)",
+  CdrColorTextInputLabelDisabled: "#b2ab9f",
   CdrColorTextInputPlaceholder: "rgba(66, 59, 47, 0.75)",
   CdrColorTextInputRequired: "rgba(12, 11, 8, 0.75)",
   CdrColorTextInputOptional: "rgba(66, 59, 47, 0.75)",
