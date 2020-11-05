@@ -314,6 +314,32 @@
         }
       },
       {
+        "value": "#b2ab9f",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of label text used in disabled form elements"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-600.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Color of label text used in disabled form elements"
+          }
+        },
+        "name": "cdr-color-text-input-label-disabled",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "rgba(66, 59, 47, 0.75)",
         "category": "color",
         "docs": {
@@ -1396,7 +1422,7 @@
         }
       },
       {
-        "value": "#406eb5",
+        "value": "#ffffff",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1405,7 +1431,7 @@
           "description": "Hover state of a selected form icon"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-800.value}",
+          "value": "{options.color.white.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1415,6 +1441,32 @@
           }
         },
         "name": "cdr-color-icon-checkbox-default-selected-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#4e4d49",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-900.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "icon",
+            "example": "color",
+            "description": "Hover state of a selected form icon"
+          }
+        },
+        "name": "cdr-color-icon-checkbox-default-selected-active",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -1656,7 +1708,163 @@
         }
       },
       {
-        "value": "rgba(244, 242, 237, 0.15)",
+        "value": "#f9f8f6",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Hover state of a form label background"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Hover state of a form label background"
+          }
+        },
+        "name": "cdr-color-background-label-default-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#edeae3",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Active state of a form label background"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-300.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Active state of a form label background"
+          }
+        },
+        "name": "cdr-color-background-label-default-active",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#f9f8f6",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused state of a form label background"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Focused state of a form label background"
+          }
+        },
+        "name": "cdr-color-background-label-default-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.75)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Hover state of a form label background on secondary"
+        },
+        "original": {
+          "value": "{options.color.white-75.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Hover state of a form label background on secondary"
+          }
+        },
+        "name": "cdr-color-background-label-secondary-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Active state of a form label background on secondary"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Active state of a form label background on secondary"
+          }
+        },
+        "name": "cdr-color-background-label-secondary-active",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.75)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused state of a form label background on secondary"
+        },
+        "original": {
+          "value": "{options.color.white-75.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Focused state of a form label background on secondary"
+          }
+        },
+        "name": "cdr-color-background-label-secondary-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.75)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1665,7 +1873,7 @@
           "description": "Default background color on form elements"
         },
         "original": {
-          "value": "{options.color.warm-grey-200-15.value}",
+          "value": "{options.color.white-75.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1766,7 +1974,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Active/focusedd state of a form background"
+          "description": "Active form background"
         },
         "original": {
           "value": "{options.color.warm-grey-100.value}",
@@ -1775,7 +1983,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Active/focusedd state of a form background"
+            "description": "Active form background"
           }
         },
         "name": "cdr-color-background-input-default-active",
@@ -1786,7 +1994,7 @@
         }
       },
       {
-        "value": "#406eb5",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1795,7 +2003,7 @@
           "description": "Selected state of a form background"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-800.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1838,7 +2046,7 @@
         }
       },
       {
-        "value": "#b7e0fa",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1847,7 +2055,7 @@
           "description": "Hover state of a selected form background"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-400.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1883,6 +2091,58 @@
           }
         },
         "name": "cdr-color-background-input-default-disabled",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#928b80",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Selected focus form background"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-700.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Selected focus form background"
+          }
+        },
+        "name": "cdr-color-background-input-default-selected-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#f9f8f6",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused form background"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Focused form background"
+          }
+        },
+        "name": "cdr-color-background-input-default-focus",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -2644,6 +2904,32 @@
         }
       },
       {
+        "value": "#20201d",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Focused border color on form labels"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-1100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Focused border color on form labels"
+          }
+        },
+        "name": "cdr-color-border-label-default-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "#928b80",
         "category": "color",
         "docs": {
@@ -2696,7 +2982,7 @@
         }
       },
       {
-        "value": "#20201d",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2705,7 +2991,7 @@
           "description": "Active state of a form border"
         },
         "original": {
-          "value": "{options.color.warm-grey-1100.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2722,7 +3008,7 @@
         }
       },
       {
-        "value": "#406eb5",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2731,7 +3017,7 @@
           "description": "Selected state of a form border"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-800.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2748,7 +3034,33 @@
         }
       },
       {
-        "value": "#406eb5",
+        "value": "#4e4d49",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Focus state of a form border"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-900.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "Focus state of a form border"
+          }
+        },
+        "name": "cdr-color-border-input-default-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2757,7 +3069,7 @@
           "description": "Hover state of a selected form border"
         },
         "original": {
-          "value": "{options.color.alpine-lake-blue-800.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -2774,7 +3086,7 @@
         }
       },
       {
-        "value": "#928b80",
+        "value": "#20201d",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2783,7 +3095,7 @@
           "description": "Hover state of a form border"
         },
         "original": {
-          "value": "{options.color.warm-grey-700.value}",
+          "value": "{options.color.warm-grey-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
