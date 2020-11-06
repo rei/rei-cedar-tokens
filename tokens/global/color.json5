@@ -688,7 +688,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Hover state of a form label background',
+            description: 'Hover state of a checkbox or radio label background',
           },
         },
         'default-active': {
@@ -698,7 +698,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Active state of a form label background',
+            description: 'Active state of a checkbox or radio label background',
           },
         },
         'default-focus': {
@@ -708,7 +708,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Focused state of a form label background',
+            description: 'Focused state of a checkbox or radio label background',
           },
         },
         'secondary-hover': {
@@ -718,7 +718,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Hover state of a form label background on secondary',
+            description: 'Hover state of a checkbox or radio label background on secondary',
           },
         },
         'secondary-active': {
@@ -728,7 +728,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Active state of a form label background on secondary',
+            description: 'Active state of a checkbox or radio label background on secondary',
           },
         },
         'secondary-focus': {
@@ -738,7 +738,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Focused state of a form label background on secondary',
+            description: 'Focused state of a checkbox or radio label background on secondary',
           },
         },
       },
@@ -780,7 +780,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Hover state of a form background',
+            description: 'Hover state of a checkbox or radio element background',
           },
         },
         'default-active': {
@@ -790,7 +790,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Active/focusedd state of a form background',
+            description: 'Active/focused state of a form element background',
           },
         },
         'default-selected': {
@@ -800,7 +800,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Selected state of a form background',
+            description: 'Selected state of a checkbox or radio element background',
           },
         },
         'secondary-active': {
@@ -810,7 +810,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Selected state of a form background',
+            description: 'Active state of an input or select element background on secondary',
           },
         },
         'default-selected-hover': {
@@ -820,7 +820,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Hover state of a selected form background',
+            description: 'Hover state of a selected checkbox or radio element background',
           },
         },
         'default-disabled': {
@@ -830,7 +830,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Disabled form background',
+            description: 'Disabled form element background',
           },
         },
         'default-selected-focus': {
@@ -840,7 +840,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Selected focus form background',
+            description: 'Selected focus state of checkbox or radio element background',
           },
         },
         'default-active': {
@@ -850,7 +850,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Active form background',
+            description: 'Active form element background',
           },
         },
         'default-focus': {
@@ -860,7 +860,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Focused form background',
+            description: 'Focused checkbox or radio form element background',
           },
         },
       },
@@ -1177,7 +1177,7 @@
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Focused border color on form labels',
+            description: 'Focused border color on checkbox or radio labels',
           },
         },
       },
@@ -1209,7 +1209,7 @@
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Active state of a form border',
+            description: 'Hover/active/focus state of a checkbox or radio element border',
           },
         },
         'default-selected': {
@@ -1219,17 +1219,17 @@
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Selected state of a form border',
+            description: 'Selected state of a checkbox or radio element border',
           },
         },
         'default-focus': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-1100.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Focus state of a form border',
+            description: 'Focus state of an input or select element border',
           },
         },
         'default-selected-hover': {
@@ -1239,7 +1239,7 @@
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Hover state of a selected form border',
+            description: 'Hover state of a selected checkbox or radio element border',
           },
         },
         'default-hover': {
@@ -1249,7 +1249,7 @@
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Hover state of a form border',
+            description: 'Hover state of a checkbox or radio element border',
           },
         },
         'default-disabled': {
@@ -1259,7 +1259,7 @@
             category: '{color.docCategory}',
             type: 'border',
             example: '{color.docExample}',
-            description: 'Disabled form border',
+            description: 'Disabled form element border',
           },
         },
       },

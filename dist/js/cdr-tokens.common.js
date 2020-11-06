@@ -115,7 +115,7 @@ module.exports = {
   CdrColorBorderInputError: "#b33322",
   CdrColorBorderInputDefaultActive: "#4e4d49",
   CdrColorBorderInputDefaultSelected: "#4e4d49",
-  CdrColorBorderInputDefaultFocus: "#4e4d49",
+  CdrColorBorderInputDefaultFocus: "#20201d",
   CdrColorBorderInputDefaultSelectedHover: "#4e4d49",
   CdrColorBorderInputDefaultHover: "#20201d",
   CdrColorBorderInputDefaultDisabled: "#d1cbbd",
