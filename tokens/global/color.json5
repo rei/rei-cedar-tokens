@@ -790,7 +790,7 @@
             category: '{color.docCategory}',
             type: 'background',
             example: '{color.docExample}',
-            description: 'Active/focused state of a form element background',
+            description: 'Active state of a form element background',
           },
         },
         'default-selected': {
@@ -841,16 +841,6 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Selected focus state of checkbox or radio element background',
-          },
-        },
-        'default-active': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'background',
-            example: '{color.docExample}',
-            description: 'Active form element background',
           },
         },
         'default-focus': {
