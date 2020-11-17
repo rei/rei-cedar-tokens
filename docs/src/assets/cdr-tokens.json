@@ -314,6 +314,32 @@
         }
       },
       {
+        "value": "#b2ab9f",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Color of label text used in disabled form elements"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-600.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Color of label text used in disabled form elements"
+          }
+        },
+        "name": "cdr-color-text-input-label-disabled",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "rgba(66, 59, 47, 0.75)",
         "category": "color",
         "docs": {
@@ -1688,7 +1714,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Hover state of a form label background"
+          "description": "Hover state of a checkbox or radio label background"
         },
         "original": {
           "value": "{options.color.warm-grey-100.value}",
@@ -1697,7 +1723,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Hover state of a form label background"
+            "description": "Hover state of a checkbox or radio label background"
           }
         },
         "name": "cdr-color-background-label-default-hover",
@@ -1714,7 +1740,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Active state of a form label background"
+          "description": "Active state of a checkbox or radio label background"
         },
         "original": {
           "value": "{options.color.warm-grey-300.value}",
@@ -1723,7 +1749,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Active state of a form label background"
+            "description": "Active state of a checkbox or radio label background"
           }
         },
         "name": "cdr-color-background-label-default-active",
@@ -1734,22 +1760,22 @@
         }
       },
       {
-        "value": "#4e4d49",
+        "value": "#f9f8f6",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Focused state of a form label background"
+          "description": "Focused state of a checkbox or radio label background"
         },
         "original": {
-          "value": "{options.color.warm-grey-900.value}",
+          "value": "{options.color.warm-grey-100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Focused state of a form label background"
+            "description": "Focused state of a checkbox or radio label background"
           }
         },
         "name": "cdr-color-background-label-default-focus",
@@ -1760,7 +1786,85 @@
         }
       },
       {
-        "value": "rgba(244, 242, 237, 0.15)",
+        "value": "rgba(255, 255, 255, 0.75)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Hover state of a checkbox or radio label background on secondary"
+        },
+        "original": {
+          "value": "{options.color.white-75.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Hover state of a checkbox or radio label background on secondary"
+          }
+        },
+        "name": "cdr-color-background-label-secondary-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Active state of a checkbox or radio label background on secondary"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Active state of a checkbox or radio label background on secondary"
+          }
+        },
+        "name": "cdr-color-background-label-secondary-active",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.75)",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Focused state of a checkbox or radio label background on secondary"
+        },
+        "original": {
+          "value": "{options.color.white-75.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "Focused state of a checkbox or radio label background on secondary"
+          }
+        },
+        "name": "cdr-color-background-label-secondary-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.75)",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1769,7 +1873,7 @@
           "description": "Default background color on form elements"
         },
         "original": {
-          "value": "{options.color.warm-grey-200-15.value}",
+          "value": "{options.color.white-75.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1844,7 +1948,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Hover state of a form background"
+          "description": "Hover state of a checkbox or radio element background"
         },
         "original": {
           "value": "{options.color.warm-grey-100.value}",
@@ -1853,7 +1957,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Hover state of a form background"
+            "description": "Hover state of a checkbox or radio element background"
           }
         },
         "name": "cdr-color-background-input-default-hover",
@@ -1870,7 +1974,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Active form background"
+          "description": "Active state of a form element background"
         },
         "original": {
           "value": "{options.color.warm-grey-100.value}",
@@ -1879,7 +1983,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Active form background"
+            "description": "Active state of a form element background"
           }
         },
         "name": "cdr-color-background-input-default-active",
@@ -1896,7 +2000,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Selected state of a form background"
+          "description": "Selected state of a checkbox or radio element background"
         },
         "original": {
           "value": "{options.color.warm-grey-900.value}",
@@ -1905,7 +2009,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Selected state of a form background"
+            "description": "Selected state of a checkbox or radio element background"
           }
         },
         "name": "cdr-color-background-input-default-selected",
@@ -1922,7 +2026,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Selected state of a form background"
+          "description": "Active state of an input or select element background on secondary"
         },
         "original": {
           "value": "{options.color.white.value}",
@@ -1931,7 +2035,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Selected state of a form background"
+            "description": "Active state of an input or select element background on secondary"
           }
         },
         "name": "cdr-color-background-input-secondary-active",
@@ -1948,7 +2052,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Hover state of a selected form background"
+          "description": "Hover state of a selected checkbox or radio element background"
         },
         "original": {
           "value": "{options.color.warm-grey-700.value}",
@@ -1957,7 +2061,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Hover state of a selected form background"
+            "description": "Hover state of a selected checkbox or radio element background"
           }
         },
         "name": "cdr-color-background-input-default-selected-hover",
@@ -1974,7 +2078,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Disabled form background"
+          "description": "Disabled form element background"
         },
         "original": {
           "value": "{options.color.warm-grey-100.value}",
@@ -1983,36 +2087,10 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Disabled form background"
+            "description": "Disabled form element background"
           }
         },
         "name": "cdr-color-background-input-default-disabled",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
-        "value": "#f9f8f6",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Selected active form background"
-        },
-        "original": {
-          "value": "{options.color.warm-grey-100.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "background",
-            "example": "color",
-            "description": "Selected active form background"
-          }
-        },
-        "name": "cdr-color-background-input-default-selected-active",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -2026,7 +2104,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Selected focus form background"
+          "description": "Selected focus state of checkbox or radio element background"
         },
         "original": {
           "value": "{options.color.warm-grey-700.value}",
@@ -2035,7 +2113,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Selected focus form background"
+            "description": "Selected focus state of checkbox or radio element background"
           }
         },
         "name": "cdr-color-background-input-default-selected-focus",
@@ -2052,7 +2130,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "Selected focus active form background"
+          "description": "Focused checkbox or radio form element background"
         },
         "original": {
           "value": "{options.color.warm-grey-100.value}",
@@ -2061,62 +2139,10 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "Selected focus active form background"
-          }
-        },
-        "name": "cdr-color-background-input-default-selected-focus-active",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
-        "value": "#f9f8f6",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Focused form background"
-        },
-        "original": {
-          "value": "{options.color.warm-grey-100.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "background",
-            "example": "color",
-            "description": "Focused form background"
+            "description": "Focused checkbox or radio form element background"
           }
         },
         "name": "cdr-color-background-input-default-focus",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
-        "value": "rgba(255, 255, 255, 0.75)",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Focused active form background"
-        },
-        "original": {
-          "value": "{options.color.white-75.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "background",
-            "example": "color",
-            "description": "Focused active form background"
-          }
-        },
-        "name": "cdr-color-background-input-default-focus-active",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -2884,7 +2910,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Focused border color on form labels"
+          "description": "Focused border color on checkbox or radio labels"
         },
         "original": {
           "value": "{options.color.warm-grey-1100.value}",
@@ -2893,7 +2919,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Focused border color on form labels"
+            "description": "Focused border color on checkbox or radio labels"
           }
         },
         "name": "cdr-color-border-label-default-focus",
@@ -2956,22 +2982,22 @@
         }
       },
       {
-        "value": "#20201d",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Active state of a form border"
+          "description": "Hover/active/focus state of a checkbox or radio element border"
         },
         "original": {
-          "value": "{options.color.warm-grey-1100.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Active state of a form border"
+            "description": "Hover/active/focus state of a checkbox or radio element border"
           }
         },
         "name": "cdr-color-border-input-default-active",
@@ -2988,7 +3014,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Selected state of a form border"
+          "description": "Selected state of a checkbox or radio element border"
         },
         "original": {
           "value": "{options.color.warm-grey-900.value}",
@@ -2997,7 +3023,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Selected state of a form border"
+            "description": "Selected state of a checkbox or radio element border"
           }
         },
         "name": "cdr-color-border-input-default-selected",
@@ -3008,22 +3034,22 @@
         }
       },
       {
-        "value": "#4e4d49",
+        "value": "#20201d",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Focus state of a form border"
+          "description": "Focus state of an input or select element border"
         },
         "original": {
-          "value": "{options.color.warm-grey-900.value}",
+          "value": "{options.color.warm-grey-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Focus state of a form border"
+            "description": "Focus state of an input or select element border"
           }
         },
         "name": "cdr-color-border-input-default-focus",
@@ -3040,7 +3066,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Hover state of a selected form border"
+          "description": "Hover state of a selected checkbox or radio element border"
         },
         "original": {
           "value": "{options.color.warm-grey-900.value}",
@@ -3049,7 +3075,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Hover state of a selected form border"
+            "description": "Hover state of a selected checkbox or radio element border"
           }
         },
         "name": "cdr-color-border-input-default-selected-hover",
@@ -3060,22 +3086,22 @@
         }
       },
       {
-        "value": "#4e4d49",
+        "value": "#20201d",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Hover state of a form border"
+          "description": "Hover state of a checkbox or radio element border"
         },
         "original": {
-          "value": "{options.color.warm-grey-900.value}",
+          "value": "{options.color.warm-grey-1100.value}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Hover state of a form border"
+            "description": "Hover state of a checkbox or radio element border"
           }
         },
         "name": "cdr-color-border-input-default-hover",
@@ -3092,7 +3118,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Disabled form border"
+          "description": "Disabled form element border"
         },
         "original": {
           "value": "{options.color.warm-grey-500.value}",
@@ -3101,7 +3127,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "Disabled form border"
+            "description": "Disabled form element border"
           }
         },
         "name": "cdr-color-border-input-default-disabled",
@@ -5406,6 +5432,118 @@
         }
       }
     ],
+    "form": [
+      {
+        "value": "4rem",
+        "category": "size",
+        "docs": {
+          "category": "form",
+          "example": "form"
+        },
+        "original": {
+          "value": "40px",
+          "category": "size",
+          "docs": {
+            "category": "form",
+            "example": "form"
+          }
+        },
+        "name": "cdr-form-input-height-default",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "4.8rem",
+        "category": "size",
+        "docs": {
+          "category": "form",
+          "example": "form"
+        },
+        "original": {
+          "value": "48px",
+          "category": "size",
+          "docs": {
+            "category": "form",
+            "example": "form"
+          }
+        },
+        "name": "cdr-form-input-height-large",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "1.6rem",
+        "category": "size",
+        "docs": {
+          "category": "form",
+          "example": "form"
+        },
+        "original": {
+          "value": "16px",
+          "category": "size",
+          "docs": {
+            "category": "form",
+            "example": "form"
+          }
+        },
+        "name": "cdr-form-figure-size-small",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "1.6rem",
+        "category": "size",
+        "docs": {
+          "category": "form",
+          "example": "form"
+        },
+        "original": {
+          "value": "16px",
+          "category": "size",
+          "docs": {
+            "category": "form",
+            "example": "form"
+          }
+        },
+        "name": "cdr-form-figure-size-medium",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      },
+      {
+        "value": "2rem",
+        "category": "size",
+        "docs": {
+          "category": "form",
+          "example": "form"
+        },
+        "original": {
+          "value": "20px",
+          "category": "size",
+          "docs": {
+            "category": "form",
+            "example": "form"
+          }
+        },
+        "name": "cdr-form-figure-size-large",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "size"
+        }
+      }
+    ],
     "sizing": [
       {
         "value": "1.6rem",
@@ -7684,6 +7822,7 @@
       }
     ],
     "colors": [],
+    "form": [],
     "sizing": [],
     "motion": [],
     "prominence": [
@@ -18895,6 +19034,7 @@
   },
   "android": {
     "colors": [],
+    "form": [],
     "sizing": [],
     "motion": [],
     "prominence": [],
@@ -19875,6 +20015,7 @@
   },
   "ios": {
     "colors": [],
+    "form": [],
     "sizing": [],
     "motion": [],
     "prominence": [],
