@@ -70,7 +70,7 @@ module.exports = {
   CdrColorBackgroundLabelSecondaryHover: "rgba(255, 255, 255, 0.75)",
   CdrColorBackgroundLabelSecondaryActive: "#ffffff",
   CdrColorBackgroundLabelSecondaryFocus: "rgba(255, 255, 255, 0.75)",
-  CdrColorBackgroundInputDefault: "rgba(255, 255, 255, 0.75)",
+  CdrColorBackgroundInputDefault: "rgba(244, 242, 237, 0.15)",
   CdrColorBackgroundInputSecondary: "rgba(255, 255, 255, 0.85)",
   CdrColorBackgroundInputError: "rgba(255, 242, 242, 0.75)",
   CdrColorBackgroundInputDefaultHover: "#f9f8f6",
