@@ -8,6 +8,11 @@
 
 
 
+extern float const CdrFormInputHeightDefault;
+extern float const CdrFormInputHeightLarge;
+extern float const CdrFormFigureSizeSmall;
+extern float const CdrFormFigureSizeMedium;
+extern float const CdrFormFigureSizeLarge;
 extern float const CdrIconSizeSm;
 extern float const CdrIconSize;
 extern float const CdrIconSizeLg;
