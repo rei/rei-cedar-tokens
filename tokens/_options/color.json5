@@ -4,7 +4,7 @@
       'black': {
         value: '#000000',
         category: 'color',
-      },      
+      },
       'white': {
         value: '#ffffff',
         category: 'color',
@@ -13,12 +13,20 @@
         value: '#ffffffBF',
         category: 'color',
       },
+      'white-85': { // semi-transparent color for use with form element backgrounds
+        value: '#ffffffD9',
+        category: 'color',
+      },
       'warm-grey-100': {
         value: '#f9f8f6',
         category: 'color',
       },
       'warm-grey-200': {
         value: '#f4f2ed',
+        category: 'color',
+      },
+      'warm-grey-200-15': { // semi-transparent color for use with input backgrounds
+        value: '#f4f2ed26',
         category: 'color',
       },
       'warm-grey-200-85': { // semi-transparent color for use with modal overlays
@@ -64,7 +72,7 @@
       'warm-grey-900-75': { // semi-transparent color for use with typography
         value: '#0C0B08BF',
         category: 'color',
-      },      
+      },
       'warm-grey-1000': {
         value: '#373734',
         category: 'color',
@@ -385,6 +393,10 @@
         value: '#381705',
         category: 'color',
       }, // error red
+      'error-red-50-75': {
+        value: '#FFF2F2BF',
+        category: 'color',
+      },
       'error-red-100': {
         value: '#FDF5F1',
         category: 'color',
@@ -415,6 +427,10 @@
       },
       'error-red-800': {
         value: '#B5292B',
+        category: 'color',
+      },
+      'error-red-850': {
+        value: '#B33322',
         category: 'color',
       },
       'error-red-900': {

@@ -9,6 +9,11 @@
 
 
 
+float const CdrFormInputHeightDefault = 40.0f;
+float const CdrFormInputHeightLarge = 48.0f;
+float const CdrFormFigureSizeSmall = 16.0f;
+float const CdrFormFigureSizeMedium = 16.0f;
+float const CdrFormFigureSizeLarge = 20.0f;
 float const CdrIconSizeSm = 16.0f;
 float const CdrIconSize = 24.0f;
 float const CdrIconSizeLg = 32.0f;

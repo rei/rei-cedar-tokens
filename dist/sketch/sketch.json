@@ -102,7 +102,7 @@
     },
     {
       "name": "cdr-color-text-input-default",
-      "value": "#0c0b08bf",
+      "value": "#20201d",
       "type": "text",
       "path": [
         "color",
@@ -123,6 +123,17 @@
       ]
     },
     {
+      "name": "cdr-color-text-input-label-disabled",
+      "value": "#b2ab9f",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "input",
+        "label-disabled"
+      ]
+    },
+    {
       "name": "cdr-color-text-input-placeholder",
       "value": "#423b2fbf",
       "type": "text",
@@ -135,13 +146,24 @@
     },
     {
       "name": "cdr-color-text-input-required",
-      "value": "#423b2fbf",
+      "value": "#0c0b08bf",
       "type": "text",
       "path": [
         "color",
         "text",
         "input",
         "required"
+      ]
+    },
+    {
+      "name": "cdr-color-text-input-optional",
+      "value": "#423b2fbf",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "input",
+        "optional"
       ]
     },
     {
@@ -157,7 +179,7 @@
     },
     {
       "name": "cdr-color-text-input-filled",
-      "value": "#0c0b08bf",
+      "value": "#20201d",
       "type": "text",
       "path": [
         "color",
@@ -168,13 +190,24 @@
     },
     {
       "name": "cdr-color-text-input-help",
-      "value": "#0c0b08bf",
+      "value": "#423b2fbf",
       "type": "text",
       "path": [
         "color",
         "text",
         "input",
         "help"
+      ]
+    },
+    {
+      "name": "cdr-color-text-input-error",
+      "value": "#b33322",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "input",
+        "error"
       ]
     },
     {
@@ -230,6 +263,17 @@
         "text",
         "link",
         "visited"
+      ]
+    },
+    {
+      "name": "cdr-color-text-tooltip-default",
+      "value": "#f9f8f6",
+      "type": "text",
+      "path": [
+        "color",
+        "text",
+        "tooltip",
+        "default"
       ]
     },
     {
@@ -537,12 +581,22 @@
     },
     {
       "name": "cdr-color-icon-checkbox-default-selected-hover",
-      "value": "#406eb5",
+      "value": "#ffffff",
       "type": "icon",
       "path": [
         "color",
         "icon",
         "checkbox-default-selected-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-icon-checkbox-default-selected-active",
+      "value": "#4e4d49",
+      "type": "icon",
+      "path": [
+        "color",
+        "icon",
+        "checkbox-default-selected-active"
       ]
     },
     {
@@ -636,14 +690,102 @@
       ]
     },
     {
-      "name": "cdr-color-background-input-default",
+      "name": "cdr-color-background-label-default-hover",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "label",
+        "default-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-background-label-default-active",
+      "value": "#edeae3",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "label",
+        "default-active"
+      ]
+    },
+    {
+      "name": "cdr-color-background-label-default-focus",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "label",
+        "default-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-label-secondary-hover",
       "value": "#ffffffbf",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "label",
+        "secondary-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-background-label-secondary-active",
+      "value": "#ffffff",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "label",
+        "secondary-active"
+      ]
+    },
+    {
+      "name": "cdr-color-background-label-secondary-focus",
+      "value": "#ffffffbf",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "label",
+        "secondary-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default",
+      "value": "#f4f2ed26",
       "type": "background",
       "path": [
         "color",
         "background",
         "input",
         "default"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-secondary",
+      "value": "#ffffffd9",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "secondary"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-error",
+      "value": "#fff2f2bf",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "error"
       ]
     },
     {
@@ -658,8 +800,19 @@
       ]
     },
     {
+      "name": "cdr-color-background-input-default-active",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-active"
+      ]
+    },
+    {
       "name": "cdr-color-background-input-default-selected",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "background",
       "path": [
         "color",
@@ -669,8 +822,19 @@
       ]
     },
     {
+      "name": "cdr-color-background-input-secondary-active",
+      "value": "#ffffff",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "secondary-active"
+      ]
+    },
+    {
       "name": "cdr-color-background-input-default-selected-hover",
-      "value": "#b7e0fa",
+      "value": "#928b80",
       "type": "background",
       "path": [
         "color",
@@ -688,6 +852,39 @@
         "background",
         "input",
         "default-disabled"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-selected-focus",
+      "value": "#928b80",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-selected-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-input-default-focus",
+      "value": "#f9f8f6",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "input",
+        "default-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-tooltip-default",
+      "value": "#373734",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "tooltip",
+        "default"
       ]
     },
     {
@@ -999,6 +1196,17 @@
       ]
     },
     {
+      "name": "cdr-color-border-label-default-focus",
+      "value": "#20201d",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "label",
+        "default-focus"
+      ]
+    },
+    {
       "name": "cdr-color-border-input-default",
       "value": "#928b80",
       "type": "border",
@@ -1010,8 +1218,19 @@
       ]
     },
     {
+      "name": "cdr-color-border-input-error",
+      "value": "#b33322",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "input",
+        "error"
+      ]
+    },
+    {
       "name": "cdr-color-border-input-default-active",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
@@ -1022,7 +1241,7 @@
     },
     {
       "name": "cdr-color-border-input-default-selected",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
@@ -1032,8 +1251,19 @@
       ]
     },
     {
+      "name": "cdr-color-border-input-default-focus",
+      "value": "#20201d",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "input",
+        "default-focus"
+      ]
+    },
+    {
       "name": "cdr-color-border-input-default-selected-hover",
-      "value": "#406eb5",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
@@ -1044,7 +1274,7 @@
     },
     {
       "name": "cdr-color-border-input-default-hover",
-      "value": "#928b80",
+      "value": "#20201d",
       "type": "border",
       "path": [
         "color",
@@ -1055,13 +1285,24 @@
     },
     {
       "name": "cdr-color-border-input-default-disabled",
-      "value": "#dcd6cb",
+      "value": "#d1cbbd",
       "type": "border",
       "path": [
         "color",
         "border",
         "input",
         "default-disabled"
+      ]
+    },
+    {
+      "name": "cdr-color-border-tooltip-default",
+      "value": "#f9f8f6",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "tooltip",
+        "default"
       ]
     },
     {
@@ -1447,453 +1688,6 @@
         "tab",
         "keyline",
         "disabled"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-primary-lightmode",
-      "value": "#292929",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "primary",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-primary-darkmode",
-      "value": "#fafafa",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "primary",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-secondary-lightmode",
-      "value": "#616161",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "secondary",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-secondary-darkmode",
-      "value": "#999999",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "secondary",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-disabled-lightmode",
-      "value": "#b8b8b8",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "disabled",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-disabled-darkmode",
-      "value": "#616161",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "disabled",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-link-lightmode",
-      "value": "#3278ae",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "link",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-link-darkmode",
-      "value": "#5197cd",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "link",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-error-lightmode",
-      "value": "#b5292b",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "error",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-error-darkmode",
-      "value": "#e86868",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "error",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-form-label-lightmode",
-      "value": "#292929",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "form",
-        "label",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-form-label-darkmode",
-      "value": "#fafafa",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "form",
-        "label",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-form-placeholder-lightmode",
-      "value": "#616161",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "form",
-        "placeholder",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-form-placeholder-darkmode",
-      "value": "#999999",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "form",
-        "placeholder",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-form-disabled-lightmode",
-      "value": "#b8b8b8",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "form",
-        "disabled",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-text-form-disabled-darkmode",
-      "value": "#616161",
-      "type": "text",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "text",
-        "form",
-        "disabled",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-icon-primary-lightmode",
-      "value": "#616161",
-      "type": "icon",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "icon",
-        "primary",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-icon-primary-darkmode",
-      "value": "#999999",
-      "type": "icon",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "icon",
-        "primary",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-icon-emphasis-lightmode",
-      "value": "#292929",
-      "type": "icon",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "icon",
-        "emphasis",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-icon-emphasis-darkmode",
-      "value": "#fafafa",
-      "type": "icon",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "icon",
-        "emphasis",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-dark",
-      "value": "#292929",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "dark"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-darker",
-      "value": "#1a1a1a",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "darker"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-light",
-      "value": "#f7f7f7",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "light"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-lighter",
-      "value": "#fafafa",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "lighter"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-lightest",
-      "value": "#ffffff",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "lightest"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-form-lightmode",
-      "value": "#ffffff",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "form",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-form-darkmode",
-      "value": "#292929",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "form",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-form-input-lightmode",
-      "value": "#ffffff",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "form",
-        "input",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-background-form-input-darkmode",
-      "value": "#292929",
-      "type": "background",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "background",
-        "form",
-        "input",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-primary-lightmode",
-      "value": "#616161",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "primary",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-primary-darkmode",
-      "value": "#fafafa",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "primary",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-secondary-lightmode",
-      "value": "#b8b8b8",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "secondary",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-secondary-darkmode",
-      "value": "#999999",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "secondary",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-disabled-lightmode",
-      "value": "#dadada",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "disabled",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-disabled-darkmode",
-      "value": "#dadada",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "disabled",
-        "darkmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-error-lightmode",
-      "value": "#e86868",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "error",
-        "lightmode"
-      ]
-    },
-    {
-      "name": "cdr-deprecated-2020-spring-color-border-selected-lightmode",
-      "value": "#2b6692",
-      "type": "border",
-      "path": [
-        "deprecated-2020-spring",
-        "color",
-        "border",
-        "selected",
-        "lightmode"
       ]
     },
     {
@@ -2490,295 +2284,842 @@
       ]
     }
   ],
+  "prominence": [
+    {
+      "name": "cdr-prominence-flat",
+      "value": [
+        {
+          "x": 0,
+          "y": 0,
+          "blur": 0,
+          "spread": 0,
+          "color": "#0c0b0833",
+          "path": [
+            "prominence",
+            "flat"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cdr-prominence-raised",
+      "value": [
+        {
+          "x": 0,
+          "y": 2,
+          "blur": 2,
+          "spread": 0,
+          "color": "#0c0b0833",
+          "path": [
+            "prominence",
+            "raised"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cdr-prominence-elevated",
+      "value": [
+        {
+          "x": 0,
+          "y": 4,
+          "blur": 4,
+          "spread": 0,
+          "color": "#0c0b0833",
+          "path": [
+            "prominence",
+            "elevated"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cdr-prominence-floating",
+      "value": [
+        {
+          "x": 0,
+          "y": 8,
+          "blur": 8,
+          "spread": 0,
+          "color": "#0c0b0833",
+          "path": [
+            "prominence",
+            "floating"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cdr-prominence-lifted",
+      "value": [
+        {
+          "x": 0,
+          "y": 16,
+          "blur": 16,
+          "spread": 0,
+          "color": "#0c0b0833",
+          "path": [
+            "prominence",
+            "lifted"
+          ]
+        }
+      ]
+    }
+  ],
+  "radius": [
+    {
+      "name": "cdr-radius-sharp",
+      "value": 0
+    },
+    {
+      "name": "cdr-radius-soft",
+      "value": 2
+    },
+    {
+      "name": "cdr-radius-softer",
+      "value": 4
+    },
+    {
+      "name": "cdr-radius-round",
+      "value": 9999
+    }
+  ],
+  "spacing": {
+    "inset": [
+      {
+        "name": "cdr-space-inset-eighth-x",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x"
+        ],
+        "value": [
+          2
+        ]
+      },
+      {
+        "name": "cdr-space-inset-quarter-x",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x"
+        ],
+        "value": [
+          4
+        ]
+      },
+      {
+        "name": "cdr-space-inset-half-x",
+        "path": [
+          "space",
+          "inset",
+          "half-x"
+        ],
+        "value": [
+          8
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x"
+        ],
+        "value": [
+          12
+        ]
+      },
+      {
+        "name": "cdr-space-inset-one-x",
+        "path": [
+          "space",
+          "inset",
+          "one-x"
+        ],
+        "value": [
+          16
+        ]
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x"
+        ],
+        "value": [
+          24
+        ]
+      },
+      {
+        "name": "cdr-space-inset-two-x",
+        "path": [
+          "space",
+          "inset",
+          "two-x"
+        ],
+        "value": [
+          32
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-x",
+        "path": [
+          "space",
+          "inset",
+          "three-x"
+        ],
+        "value": [
+          48
+        ]
+      },
+      {
+        "name": "cdr-space-inset-four-x",
+        "path": [
+          "space",
+          "inset",
+          "four-x"
+        ],
+        "value": [
+          64
+        ]
+      },
+      {
+        "name": "cdr-space-inset-eighth-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x-squish"
+        ],
+        "value": [
+          0,
+          2
+        ]
+      },
+      {
+        "name": "cdr-space-inset-eighth-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x-stretch"
+        ],
+        "value": [
+          4,
+          2
+        ]
+      },
+      {
+        "name": "cdr-space-inset-quarter-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x-squish"
+        ],
+        "value": [
+          2,
+          4
+        ]
+      },
+      {
+        "name": "cdr-space-inset-quarter-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x-stretch"
+        ],
+        "value": [
+          6,
+          4
+        ]
+      },
+      {
+        "name": "cdr-space-inset-half-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "half-x-squish"
+        ],
+        "value": [
+          4,
+          8
+        ]
+      },
+      {
+        "name": "cdr-space-inset-half-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "half-x-stretch"
+        ],
+        "value": [
+          12,
+          8
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x-squish"
+        ],
+        "value": [
+          6,
+          12
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x-stretch"
+        ],
+        "value": [
+          18,
+          12
+        ]
+      },
+      {
+        "name": "cdr-space-inset-one-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "one-x-squish"
+        ],
+        "value": [
+          8,
+          16
+        ]
+      },
+      {
+        "name": "cdr-space-inset-one-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "one-x-stretch"
+        ],
+        "value": [
+          24,
+          16
+        ]
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x-squish"
+        ],
+        "value": [
+          12,
+          24
+        ]
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x-stretch"
+        ],
+        "value": [
+          36,
+          24
+        ]
+      },
+      {
+        "name": "cdr-space-inset-two-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "two-x-squish"
+        ],
+        "value": [
+          16,
+          32
+        ]
+      },
+      {
+        "name": "cdr-space-inset-two-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "two-x-stretch"
+        ],
+        "value": [
+          48,
+          32
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "three-x-squish"
+        ],
+        "value": [
+          24,
+          48
+        ]
+      },
+      {
+        "name": "cdr-space-inset-three-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "three-x-stretch"
+        ],
+        "value": [
+          72,
+          48
+        ]
+      },
+      {
+        "name": "cdr-space-inset-four-x-squish",
+        "path": [
+          "space",
+          "inset",
+          "four-x-squish"
+        ],
+        "value": [
+          32,
+          64
+        ]
+      },
+      {
+        "name": "cdr-space-inset-four-x-stretch",
+        "path": [
+          "space",
+          "inset",
+          "four-x-stretch"
+        ],
+        "value": [
+          96,
+          64
+        ]
+      }
+    ],
+    "space": [
+      {
+        "name": "cdr-space-eighth-x",
+        "path": [
+          "space",
+          "eighth-x"
+        ],
+        "value": 2
+      },
+      {
+        "name": "cdr-space-quarter-x",
+        "path": [
+          "space",
+          "quarter-x"
+        ],
+        "value": 4
+      },
+      {
+        "name": "cdr-space-half-x",
+        "path": [
+          "space",
+          "half-x"
+        ],
+        "value": 8
+      },
+      {
+        "name": "cdr-space-three-quarter-x",
+        "path": [
+          "space",
+          "three-quarter-x"
+        ],
+        "value": 12
+      },
+      {
+        "name": "cdr-space-one-x",
+        "path": [
+          "space",
+          "one-x"
+        ],
+        "value": 16
+      },
+      {
+        "name": "cdr-space-one-and-a-half-x",
+        "path": [
+          "space",
+          "one-and-a-half-x"
+        ],
+        "value": 24
+      },
+      {
+        "name": "cdr-space-two-x",
+        "path": [
+          "space",
+          "two-x"
+        ],
+        "value": 32
+      },
+      {
+        "name": "cdr-space-three-x",
+        "path": [
+          "space",
+          "three-x"
+        ],
+        "value": 48
+      },
+      {
+        "name": "cdr-space-four-x",
+        "path": [
+          "space",
+          "four-x"
+        ],
+        "value": 64
+      },
+      {
+        "name": "cdr-space-inset-eighth-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x-squish-top-bottom"
+        ],
+        "value": 0
+      },
+      {
+        "name": "cdr-space-inset-eighth-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x-squish-left-right"
+        ],
+        "value": 2
+      },
+      {
+        "name": "cdr-space-inset-eighth-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x-stretch-top-bottom"
+        ],
+        "value": 4
+      },
+      {
+        "name": "cdr-space-inset-eighth-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "eighth-x-stretch-left-right"
+        ],
+        "value": 2
+      },
+      {
+        "name": "cdr-space-inset-quarter-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x-squish-top-bottom"
+        ],
+        "value": 2
+      },
+      {
+        "name": "cdr-space-inset-quarter-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x-squish-left-right"
+        ],
+        "value": 4
+      },
+      {
+        "name": "cdr-space-inset-quarter-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x-stretch-top-bottom"
+        ],
+        "value": 6
+      },
+      {
+        "name": "cdr-space-inset-quarter-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "quarter-x-stretch-left-right"
+        ],
+        "value": 4
+      },
+      {
+        "name": "cdr-space-inset-half-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "half-x-squish-top-bottom"
+        ],
+        "value": 4
+      },
+      {
+        "name": "cdr-space-inset-half-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "half-x-squish-left-right"
+        ],
+        "value": 8
+      },
+      {
+        "name": "cdr-space-inset-half-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "half-x-stretch-top-bottom"
+        ],
+        "value": 12
+      },
+      {
+        "name": "cdr-space-inset-half-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "half-x-stretch-left-right"
+        ],
+        "value": 8
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x-squish-top-bottom"
+        ],
+        "value": 6
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x-squish-left-right"
+        ],
+        "value": 12
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x-stretch-top-bottom"
+        ],
+        "value": 18
+      },
+      {
+        "name": "cdr-space-inset-three-quarter-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "three-quarter-x-stretch-left-right"
+        ],
+        "value": 12
+      },
+      {
+        "name": "cdr-space-inset-one-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "one-x-squish-top-bottom"
+        ],
+        "value": 8
+      },
+      {
+        "name": "cdr-space-inset-one-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "one-x-squish-left-right"
+        ],
+        "value": 16
+      },
+      {
+        "name": "cdr-space-inset-one-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "one-x-stretch-top-bottom"
+        ],
+        "value": 24
+      },
+      {
+        "name": "cdr-space-inset-one-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "one-x-stretch-left-right"
+        ],
+        "value": 16
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x-squish-top-bottom"
+        ],
+        "value": 12
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x-squish-left-right"
+        ],
+        "value": 24
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x-stretch-top-bottom"
+        ],
+        "value": 36
+      },
+      {
+        "name": "cdr-space-inset-one-and-a-half-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "one-and-a-half-x-stretch-left-right"
+        ],
+        "value": 24
+      },
+      {
+        "name": "cdr-space-inset-two-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "two-x-squish-top-bottom"
+        ],
+        "value": 16
+      },
+      {
+        "name": "cdr-space-inset-two-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "two-x-squish-left-right"
+        ],
+        "value": 32
+      },
+      {
+        "name": "cdr-space-inset-two-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "two-x-stretch-top-bottom"
+        ],
+        "value": 48
+      },
+      {
+        "name": "cdr-space-inset-two-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "two-x-stretch-left-right"
+        ],
+        "value": 32
+      },
+      {
+        "name": "cdr-space-inset-three-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "three-x-squish-top-bottom"
+        ],
+        "value": 24
+      },
+      {
+        "name": "cdr-space-inset-three-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "three-x-squish-left-right"
+        ],
+        "value": 48
+      },
+      {
+        "name": "cdr-space-inset-three-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "three-x-stretch-top-bottom"
+        ],
+        "value": 72
+      },
+      {
+        "name": "cdr-space-inset-three-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "three-x-stretch-left-right"
+        ],
+        "value": 48
+      },
+      {
+        "name": "cdr-space-inset-four-x-squish-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "four-x-squish-top-bottom"
+        ],
+        "value": 32
+      },
+      {
+        "name": "cdr-space-inset-four-x-squish-left-right",
+        "path": [
+          "space",
+          "inset",
+          "four-x-squish-left-right"
+        ],
+        "value": 64
+      },
+      {
+        "name": "cdr-space-inset-four-x-stretch-top-bottom",
+        "path": [
+          "space",
+          "inset",
+          "four-x-stretch-top-bottom"
+        ],
+        "value": 96
+      },
+      {
+        "name": "cdr-space-inset-four-x-stretch-left-right",
+        "path": [
+          "space",
+          "inset",
+          "four-x-stretch-left-right"
+        ],
+        "value": 64
+      }
+    ]
+  },
+  "breakpoints": [
+    {
+      "name": "cdr-breakpoint-xs",
+      "value": 0
+    },
+    {
+      "name": "cdr-breakpoint-sm",
+      "value": 768
+    },
+    {
+      "name": "cdr-breakpoint-md",
+      "value": 992
+    },
+    {
+      "name": "cdr-breakpoint-lg",
+      "value": 1232
+    }
+  ],
   "text": [
-    {
-      "name": "cdr-text-utility-100",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.08,
-        "fontSize": 12,
-        "lineHeight": 16
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "100",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-200",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.16,
-        "fontSize": 14,
-        "lineHeight": 18
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "200",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-300",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.16,
-        "fontSize": 16,
-        "lineHeight": 22
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "300",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-400",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.16,
-        "fontSize": 18,
-        "lineHeight": 24
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "400",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-500",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.32,
-        "fontSize": 20,
-        "lineHeight": 26
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "500",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-600",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.32,
-        "fontSize": 24,
-        "lineHeight": 30
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "600",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-700",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.32,
-        "fontSize": 28,
-        "lineHeight": 36
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "700",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-800",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 400,
-        "fontWeight": 6,
-        "letterSpacing": -0.64,
-        "fontSize": 32,
-        "lineHeight": 40
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility",
-        "800",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-100",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.08,
-        "fontSize": 12,
-        "lineHeight": 16
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "100",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-200",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.08,
-        "fontSize": 14,
-        "lineHeight": 18
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "200",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-300",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.08,
-        "fontSize": 16,
-        "lineHeight": 22
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "300",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-400",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.08,
-        "fontSize": 18,
-        "lineHeight": 24
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "400",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-500",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.16,
-        "fontSize": 20,
-        "lineHeight": 26
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "500",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-600",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.16,
-        "fontSize": 24,
-        "lineHeight": 30
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "600",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-700",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.16,
-        "fontSize": 28,
-        "lineHeight": 36
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "700",
-        "height"
-      ]
-    },
-    {
-      "name": "cdr-text-utility-strong-800",
-      "value": {
-        "fontFamily": "Graphik",
-        "fontStyle": "normal",
-        "fontWeightOriginal": 600,
-        "fontWeight": 8,
-        "letterSpacing": -0.32,
-        "fontSize": 32,
-        "lineHeight": 40
-      },
-      "path": [
-        "deprecated-2020-spring",
-        "text-utility-strong",
-        "800",
-        "height"
-      ]
-    },
     {
       "name": "cdr-text-body-300",
       "value": {
@@ -3932,841 +4273,6 @@
         "text-strong",
         "weight"
       ]
-    }
-  ],
-  "prominence": [
-    {
-      "name": "cdr-prominence-flat",
-      "value": [
-        {
-          "x": 0,
-          "y": 0,
-          "blur": 0,
-          "spread": 0,
-          "color": "#0c0b0833",
-          "path": [
-            "prominence",
-            "flat"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "cdr-prominence-raised",
-      "value": [
-        {
-          "x": 0,
-          "y": 2,
-          "blur": 2,
-          "spread": 0,
-          "color": "#0c0b0833",
-          "path": [
-            "prominence",
-            "raised"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "cdr-prominence-elevated",
-      "value": [
-        {
-          "x": 0,
-          "y": 4,
-          "blur": 4,
-          "spread": 0,
-          "color": "#0c0b0833",
-          "path": [
-            "prominence",
-            "elevated"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "cdr-prominence-floating",
-      "value": [
-        {
-          "x": 0,
-          "y": 8,
-          "blur": 8,
-          "spread": 0,
-          "color": "#0c0b0833",
-          "path": [
-            "prominence",
-            "floating"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "cdr-prominence-lifted",
-      "value": [
-        {
-          "x": 0,
-          "y": 16,
-          "blur": 16,
-          "spread": 0,
-          "color": "#0c0b0833",
-          "path": [
-            "prominence",
-            "lifted"
-          ]
-        }
-      ]
-    }
-  ],
-  "radius": [
-    {
-      "name": "cdr-radius-sharp",
-      "value": 0
-    },
-    {
-      "name": "cdr-radius-soft",
-      "value": 2
-    },
-    {
-      "name": "cdr-radius-softer",
-      "value": 4
-    },
-    {
-      "name": "cdr-radius-round",
-      "value": 9999
-    }
-  ],
-  "spacing": {
-    "inset": [
-      {
-        "name": "cdr-space-inset-eighth-x",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x"
-        ],
-        "value": [
-          2
-        ]
-      },
-      {
-        "name": "cdr-space-inset-quarter-x",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x"
-        ],
-        "value": [
-          4
-        ]
-      },
-      {
-        "name": "cdr-space-inset-half-x",
-        "path": [
-          "space",
-          "inset",
-          "half-x"
-        ],
-        "value": [
-          8
-        ]
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x"
-        ],
-        "value": [
-          12
-        ]
-      },
-      {
-        "name": "cdr-space-inset-one-x",
-        "path": [
-          "space",
-          "inset",
-          "one-x"
-        ],
-        "value": [
-          16
-        ]
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x"
-        ],
-        "value": [
-          24
-        ]
-      },
-      {
-        "name": "cdr-space-inset-two-x",
-        "path": [
-          "space",
-          "inset",
-          "two-x"
-        ],
-        "value": [
-          32
-        ]
-      },
-      {
-        "name": "cdr-space-inset-three-x",
-        "path": [
-          "space",
-          "inset",
-          "three-x"
-        ],
-        "value": [
-          48
-        ]
-      },
-      {
-        "name": "cdr-space-inset-four-x",
-        "path": [
-          "space",
-          "inset",
-          "four-x"
-        ],
-        "value": [
-          64
-        ]
-      },
-      {
-        "name": "cdr-space-inset-eighth-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x-squish"
-        ],
-        "value": [
-          0,
-          2
-        ]
-      },
-      {
-        "name": "cdr-space-inset-eighth-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x-stretch"
-        ],
-        "value": [
-          4,
-          2
-        ]
-      },
-      {
-        "name": "cdr-space-inset-quarter-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x-squish"
-        ],
-        "value": [
-          2,
-          4
-        ]
-      },
-      {
-        "name": "cdr-space-inset-quarter-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x-stretch"
-        ],
-        "value": [
-          6,
-          4
-        ]
-      },
-      {
-        "name": "cdr-space-inset-half-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "half-x-squish"
-        ],
-        "value": [
-          4,
-          8
-        ]
-      },
-      {
-        "name": "cdr-space-inset-half-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "half-x-stretch"
-        ],
-        "value": [
-          12,
-          8
-        ]
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x-squish"
-        ],
-        "value": [
-          6,
-          12
-        ]
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x-stretch"
-        ],
-        "value": [
-          18,
-          12
-        ]
-      },
-      {
-        "name": "cdr-space-inset-one-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "one-x-squish"
-        ],
-        "value": [
-          8,
-          16
-        ]
-      },
-      {
-        "name": "cdr-space-inset-one-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "one-x-stretch"
-        ],
-        "value": [
-          24,
-          16
-        ]
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x-squish"
-        ],
-        "value": [
-          12,
-          24
-        ]
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x-stretch"
-        ],
-        "value": [
-          36,
-          24
-        ]
-      },
-      {
-        "name": "cdr-space-inset-two-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "two-x-squish"
-        ],
-        "value": [
-          16,
-          32
-        ]
-      },
-      {
-        "name": "cdr-space-inset-two-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "two-x-stretch"
-        ],
-        "value": [
-          48,
-          32
-        ]
-      },
-      {
-        "name": "cdr-space-inset-three-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "three-x-squish"
-        ],
-        "value": [
-          24,
-          48
-        ]
-      },
-      {
-        "name": "cdr-space-inset-three-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "three-x-stretch"
-        ],
-        "value": [
-          72,
-          48
-        ]
-      },
-      {
-        "name": "cdr-space-inset-four-x-squish",
-        "path": [
-          "space",
-          "inset",
-          "four-x-squish"
-        ],
-        "value": [
-          32,
-          64
-        ]
-      },
-      {
-        "name": "cdr-space-inset-four-x-stretch",
-        "path": [
-          "space",
-          "inset",
-          "four-x-stretch"
-        ],
-        "value": [
-          96,
-          64
-        ]
-      }
-    ],
-    "space": [
-      {
-        "name": "cdr-space-eighth-x",
-        "path": [
-          "space",
-          "eighth-x"
-        ],
-        "value": 2
-      },
-      {
-        "name": "cdr-space-quarter-x",
-        "path": [
-          "space",
-          "quarter-x"
-        ],
-        "value": 4
-      },
-      {
-        "name": "cdr-space-half-x",
-        "path": [
-          "space",
-          "half-x"
-        ],
-        "value": 8
-      },
-      {
-        "name": "cdr-space-three-quarter-x",
-        "path": [
-          "space",
-          "three-quarter-x"
-        ],
-        "value": 12
-      },
-      {
-        "name": "cdr-space-one-x",
-        "path": [
-          "space",
-          "one-x"
-        ],
-        "value": 16
-      },
-      {
-        "name": "cdr-space-one-and-a-half-x",
-        "path": [
-          "space",
-          "one-and-a-half-x"
-        ],
-        "value": 24
-      },
-      {
-        "name": "cdr-space-two-x",
-        "path": [
-          "space",
-          "two-x"
-        ],
-        "value": 32
-      },
-      {
-        "name": "cdr-space-three-x",
-        "path": [
-          "space",
-          "three-x"
-        ],
-        "value": 48
-      },
-      {
-        "name": "cdr-space-four-x",
-        "path": [
-          "space",
-          "four-x"
-        ],
-        "value": 64
-      },
-      {
-        "name": "cdr-space-inset-eighth-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x-squish-top-bottom"
-        ],
-        "value": 0
-      },
-      {
-        "name": "cdr-space-inset-eighth-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x-squish-left-right"
-        ],
-        "value": 2
-      },
-      {
-        "name": "cdr-space-inset-eighth-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x-stretch-top-bottom"
-        ],
-        "value": 4
-      },
-      {
-        "name": "cdr-space-inset-eighth-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "eighth-x-stretch-left-right"
-        ],
-        "value": 2
-      },
-      {
-        "name": "cdr-space-inset-quarter-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x-squish-top-bottom"
-        ],
-        "value": 2
-      },
-      {
-        "name": "cdr-space-inset-quarter-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x-squish-left-right"
-        ],
-        "value": 4
-      },
-      {
-        "name": "cdr-space-inset-quarter-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x-stretch-top-bottom"
-        ],
-        "value": 6
-      },
-      {
-        "name": "cdr-space-inset-quarter-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "quarter-x-stretch-left-right"
-        ],
-        "value": 4
-      },
-      {
-        "name": "cdr-space-inset-half-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "half-x-squish-top-bottom"
-        ],
-        "value": 4
-      },
-      {
-        "name": "cdr-space-inset-half-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "half-x-squish-left-right"
-        ],
-        "value": 8
-      },
-      {
-        "name": "cdr-space-inset-half-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "half-x-stretch-top-bottom"
-        ],
-        "value": 12
-      },
-      {
-        "name": "cdr-space-inset-half-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "half-x-stretch-left-right"
-        ],
-        "value": 8
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x-squish-top-bottom"
-        ],
-        "value": 6
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x-squish-left-right"
-        ],
-        "value": 12
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x-stretch-top-bottom"
-        ],
-        "value": 18
-      },
-      {
-        "name": "cdr-space-inset-three-quarter-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "three-quarter-x-stretch-left-right"
-        ],
-        "value": 12
-      },
-      {
-        "name": "cdr-space-inset-one-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "one-x-squish-top-bottom"
-        ],
-        "value": 8
-      },
-      {
-        "name": "cdr-space-inset-one-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "one-x-squish-left-right"
-        ],
-        "value": 16
-      },
-      {
-        "name": "cdr-space-inset-one-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "one-x-stretch-top-bottom"
-        ],
-        "value": 24
-      },
-      {
-        "name": "cdr-space-inset-one-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "one-x-stretch-left-right"
-        ],
-        "value": 16
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x-squish-top-bottom"
-        ],
-        "value": 12
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x-squish-left-right"
-        ],
-        "value": 24
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x-stretch-top-bottom"
-        ],
-        "value": 36
-      },
-      {
-        "name": "cdr-space-inset-one-and-a-half-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "one-and-a-half-x-stretch-left-right"
-        ],
-        "value": 24
-      },
-      {
-        "name": "cdr-space-inset-two-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "two-x-squish-top-bottom"
-        ],
-        "value": 16
-      },
-      {
-        "name": "cdr-space-inset-two-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "two-x-squish-left-right"
-        ],
-        "value": 32
-      },
-      {
-        "name": "cdr-space-inset-two-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "two-x-stretch-top-bottom"
-        ],
-        "value": 48
-      },
-      {
-        "name": "cdr-space-inset-two-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "two-x-stretch-left-right"
-        ],
-        "value": 32
-      },
-      {
-        "name": "cdr-space-inset-three-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "three-x-squish-top-bottom"
-        ],
-        "value": 24
-      },
-      {
-        "name": "cdr-space-inset-three-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "three-x-squish-left-right"
-        ],
-        "value": 48
-      },
-      {
-        "name": "cdr-space-inset-three-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "three-x-stretch-top-bottom"
-        ],
-        "value": 72
-      },
-      {
-        "name": "cdr-space-inset-three-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "three-x-stretch-left-right"
-        ],
-        "value": 48
-      },
-      {
-        "name": "cdr-space-inset-four-x-squish-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "four-x-squish-top-bottom"
-        ],
-        "value": 32
-      },
-      {
-        "name": "cdr-space-inset-four-x-squish-left-right",
-        "path": [
-          "space",
-          "inset",
-          "four-x-squish-left-right"
-        ],
-        "value": 64
-      },
-      {
-        "name": "cdr-space-inset-four-x-stretch-top-bottom",
-        "path": [
-          "space",
-          "inset",
-          "four-x-stretch-top-bottom"
-        ],
-        "value": 96
-      },
-      {
-        "name": "cdr-space-inset-four-x-stretch-left-right",
-        "path": [
-          "space",
-          "inset",
-          "four-x-stretch-left-right"
-        ],
-        "value": 64
-      }
-    ]
-  },
-  "breakpoints": [
-    {
-      "name": "cdr-breakpoint-xs",
-      "value": 0
-    },
-    {
-      "name": "cdr-breakpoint-sm",
-      "value": 768
-    },
-    {
-      "name": "cdr-breakpoint-md",
-      "value": 992
-    },
-    {
-      "name": "cdr-breakpoint-lg",
-      "value": 1232
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Tokens for REI cedar design system",
   "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -20,12 +20,10 @@
   "module": "dist/js/cdr-tokens.esm.js",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "postpublish": "npm run build:docs",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
     "build:tokens": "npm run clean && node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
     "build": "npm run clean && npm run validate && npm run build:tokens && npm run site-tokens",
-    "build:docs": "npm run build && node ./deploy.js",
     "build:grid": "node grid.js",
     "site-tokens": "node ./siteTokens.js",
     "validate": "node ./validate.js"
@@ -34,7 +32,6 @@
     "concat": "^1.0.3",
     "cross-env": "^7.0.2",
     "fs-extra": "^9.0.1",
-    "gh-pages": "^3.0.0",
     "glob": "^7.1.6",
     "json5": "^2.1.3",
     "lodash": "^4.17.19",
