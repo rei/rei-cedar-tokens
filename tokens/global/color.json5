@@ -650,6 +650,16 @@
           description: 'Background color for informational messages',
         },
       },
+      sale: {
+        value: '{options.color.sale-red-800.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for sale messages',
+        },
+      },
       'table-header': {
         value: '{options.color.warm-grey-200.value}',
         category: 'color',
