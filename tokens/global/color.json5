@@ -952,26 +952,26 @@
         }
       },
       chip: {
-        // default: {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Background color for chips',
-        //   }
-        // },
-        // 'default-active': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Background color for active chips',
-        //   }
-        // },
+        default: {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for chips',
+          }
+        },
+        'default-active': {
+          value: '{options.color.warm-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for active chips',
+          }
+        },
         'default-selected': {
           value: '{options.color.warm-grey-900.value}',
           category: 'color',
@@ -982,16 +982,16 @@
             description: 'Background color for selected chips',
           }
         },
-        // 'default-selected-hover-focus': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Background color for hovered or focused selected chips',
-        //   }
-        // },
+        'default-selected-hover-focus': {
+          value: '{options.color.warm-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for hovered or focused selected chips',
+          }
+        },
 
         emphasis: {
           value: '{options.color.warm-grey-900.value}',
@@ -1003,16 +1003,16 @@
             description: 'Background color for emphasis chips',
           }
         },
-        // 'emphasis-active': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Background color for active emphasis chips',
-        //   }
-        // },
+        'emphasis-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for active emphasis chips',
+          }
+        },
         'emphasis-selected-rest': {
           value: '{options.color.warm-grey-100.value}',
           category: 'color',
@@ -1023,16 +1023,16 @@
             description: 'Background color for selected emphasis chips',
           }
         },
-        // 'emphasis-selected-hover-focus': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Background color for hovered or focused selected emphasis chips',
-        //   }
-        // }
+        'emphasis-selected-hover-focus': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for hovered or focused selected emphasis chips',
+          }
+        }
       },
 
       button: {
@@ -1423,26 +1423,26 @@
         },
       },
       chip: {
-        // 'default-rest': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for chips',
-        //   }
-        // },
-        // 'default-hover': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for hovered chips',
-        //   }
-        // },
+        'default-rest': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for chips',
+          }
+        },
+        'default-hover': {
+          value: '{options.color.warm-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for hovered chips',
+          }
+        },
         'default-focus': {
           value: '{options.color.warm-grey-900.value}',
           category: 'color',
@@ -1453,26 +1453,26 @@
             description: 'Border color for focused chips',
           }
         },
-        // 'default-active': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for active chips',
-        //   }
-        // },
-        // 'default-active-inset': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Inset border color for active chips',
-        //   }
-        // },
+        'default-active': {
+          value: '{options.color.warm-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for active chips',
+          }
+        },
+        'default-active-inset': {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Inset border color for active chips',
+          }
+        },
         'default-selected-rest': {
           value: '{options.color.warm-grey-900.value}',
           category: 'color',
@@ -1483,47 +1483,47 @@
             description: 'Border color for selected chips',
           }
         },
-        // 'default-selected-rest-inset': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Insett border color for selected chips',
-        //   }
-        // },
-        // 'default-selected-hover-focus': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for hovered or focused selected chips',
-        //   }
-        // },
-        // 'default-selected-hover-focus-inset': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Inset border color for hovered or focused selected chips',
-        //   }
-        // },
+        'default-selected-rest-inset': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Insett border color for selected chips',
+          }
+        },
+        'default-selected-hover-focus': {
+          value: '{options.color.warm-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for hovered or focused selected chips',
+          }
+        },
+        'default-selected-hover-focus-inset': {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Inset border color for hovered or focused selected chips',
+          }
+        },
 
-        // 'emphasis-rest': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for chips',
-        //   }
-        // },
+        'emphasis-rest': {
+          value: '{options.color.warm-grey-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for chips',
+          }
+        },
         'emphasis-hover': {
           value: '{options.color.warm-grey-900.value}',
           category: 'color',
@@ -1534,56 +1534,56 @@
             description: 'Border color for hovered chips',
           }
         },
-        // 'emphasis-focus': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for focused chips',
-        //   }
-        // },
-        // 'emphasis-active': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for active chips',
-        //   }
-        // },
-        // 'emphasis-selected-rest': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for selected chips',
-        //   }
-        // },
-        // 'emphasis-selected-hover': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for hovered selected chips',
-        //   }
-        // },
-        // 'emphasis-selected-focus': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Border color for focused selected chips',
-        //   }
-        // },
+        'emphasis-focus': {
+          value: '{options.color.warm-grey-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for focused chips',
+          }
+        },
+        'emphasis-active': {
+          value: '{options.color.warm-grey-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for active chips',
+          }
+        },
+        'emphasis-selected-rest': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for selected chips',
+          }
+        },
+        'emphasis-selected-hover': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for hovered selected chips',
+          }
+        },
+        'emphasis-selected-focus': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for focused selected chips',
+          }
+        },
       },
       tooltip: {
         default: {
