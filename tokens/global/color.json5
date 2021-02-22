@@ -217,26 +217,26 @@
             description: 'Text color for default chips',
           },
         },
-        // 'default-active': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Text color for the active state of default chips',
-        //   },
-        // },
-        // 'default-selected': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Text color for the selected state of default chips',
-        //   },
-        // },
+        'default-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of default chips',
+          },
+        },
+        'default-selected': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the selected state of default chips',
+          },
+        },
 
         emphasis: {
           value: '{options.color.white.value}',
@@ -248,26 +248,26 @@
             description: 'Text color for emphasis chips',
           },
         },
-        // 'emphasis-active': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Text color for the active state of emphasis chips',
-        //   },
-        // },
-        // 'emphasis-selected': {
-        //   value: '{options.color..value}',
-        //   category: 'color',
-        //   docs: {
-        //     category: '{color.docCategory}',
-        //     type: 'text',
-        //     example: '{color.docExample}',
-        //     description: 'Text color for the selected state of emphasis chips',
-        //   },
-        // },
+        'emphasis-active': {
+          value: '{options.color.warm-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of emphasis chips',
+          },
+        },
+        'emphasis-selected': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the selected state of emphasis chips',
+          },
+        },
 
         'emphasis-selected-hover-focus': {
           value: '{options.color.warm-grey-900.value}',
