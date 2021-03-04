@@ -188,28 +188,6 @@
       ]
     },
     {
-      "name": "cdr-color-text-chip-default-active",
-      "value": "#f9f8f6",
-      "type": "text",
-      "path": [
-        "color",
-        "text",
-        "chip",
-        "default-active"
-      ]
-    },
-    {
-      "name": "cdr-color-text-chip-default-selected",
-      "value": "#f9f8f6",
-      "type": "text",
-      "path": [
-        "color",
-        "text",
-        "chip",
-        "default-selected"
-      ]
-    },
-    {
       "name": "cdr-color-text-primary",
       "value": "#0c0b08bf",
       "type": "text",
@@ -753,19 +731,41 @@
       ]
     },
     {
-      "name": "cdr-color-background-chip-default",
+      "name": "cdr-color-background-chip-default-rest",
+      "value": "#ffffff",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "chip",
+        "default-rest"
+      ]
+    },
+    {
+      "name": "cdr-color-background-chip-default-hover",
       "value": "#f9f8f6",
       "type": "background",
       "path": [
         "color",
         "background",
         "chip",
-        "default"
+        "default-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-background-chip-default-focus",
+      "value": "#ffffff",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "chip",
+        "default-focus"
       ]
     },
     {
       "name": "cdr-color-background-chip-default-active",
-      "value": "#726d64",
+      "value": "#edeae3",
       "type": "background",
       "path": [
         "color",
@@ -776,7 +776,7 @@
     },
     {
       "name": "cdr-color-background-chip-default-selected",
-      "value": "#4e4d49",
+      "value": "#dcd6cb",
       "type": "background",
       "path": [
         "color",
@@ -786,14 +786,25 @@
       ]
     },
     {
-      "name": "cdr-color-background-chip-default-selected-hover-focus",
-      "value": "#726d64",
+      "name": "cdr-color-background-chip-default-selected-hover",
+      "value": "#edeae3",
       "type": "background",
       "path": [
         "color",
         "background",
         "chip",
-        "default-selected-hover-focus"
+        "default-selected-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-background-chip-default-selected-focus",
+      "value": "#edeae3",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "chip",
+        "default-selected-focus"
       ]
     },
     {
@@ -1370,7 +1381,7 @@
     },
     {
       "name": "cdr-color-border-chip-default-rest",
-      "value": "#726d64",
+      "value": "#928b80",
       "type": "border",
       "path": [
         "color",
@@ -1381,7 +1392,7 @@
     },
     {
       "name": "cdr-color-border-chip-default-hover",
-      "value": "#726d64",
+      "value": "#928b80",
       "type": "border",
       "path": [
         "color",
@@ -1403,24 +1414,13 @@
     },
     {
       "name": "cdr-color-border-chip-default-active",
-      "value": "#726d64",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
         "border",
         "chip",
         "default-active"
-      ]
-    },
-    {
-      "name": "cdr-color-border-chip-default-active-inset",
-      "value": "#d1cbbd",
-      "type": "border",
-      "path": [
-        "color",
-        "border",
-        "chip",
-        "default-active-inset"
       ]
     },
     {
@@ -1435,36 +1435,25 @@
       ]
     },
     {
-      "name": "cdr-color-border-chip-default-selected-rest-inset",
-      "value": "#ffffff",
-      "type": "border",
-      "path": [
-        "color",
-        "border",
-        "chip",
-        "default-selected-rest-inset"
-      ]
-    },
-    {
-      "name": "cdr-color-border-chip-default-selected-hover-focus",
+      "name": "cdr-color-border-chip-default-selected-hover",
       "value": "#726d64",
       "type": "border",
       "path": [
         "color",
         "border",
         "chip",
-        "default-selected-hover-focus"
+        "default-selected-hover"
       ]
     },
     {
-      "name": "cdr-color-border-chip-default-selected-hover-focus-inset",
-      "value": "#d1cbbd",
+      "name": "cdr-color-border-chip-default-selected-focus",
+      "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
         "border",
         "chip",
-        "default-selected-hover-focus-inset"
+        "default-selected-focus"
       ]
     },
     {

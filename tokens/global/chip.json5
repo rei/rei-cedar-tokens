@@ -2,7 +2,6 @@
   color: {
     docCategory: 'colors',
     docExample: 'color',
-
     text: {
       chip: {
         default: {
@@ -15,33 +14,13 @@
             description: 'Text color for default chips',
           },
         },
-        'default-active': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Text color for the active state of default chips',
-          },
-        },
-        'default-selected': {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Text color for the selected state of default chips',
-          },
-        },
       },
     },
 
     background: {
       chip: {
-        default: {
-          value: '{options.color.warm-grey-100.value}',
+        'default-rest': {
+          value: '{options.color.white.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -50,8 +29,28 @@
             description: 'Background color for chips',
           }
         },
+        'default-hover': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for hovered chips',
+          }
+        },
+        'default-focus': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for focused chips',
+          }
+        },
         'default-active': {
-          value: '{options.color.warm-grey-800.value}',
+          value: '{options.color.warm-grey-300.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -61,7 +60,7 @@
           }
         },
         'default-selected': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-400.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -70,14 +69,24 @@
             description: 'Background color for selected chips',
           }
         },
-        'default-selected-hover-focus': {
-          value: '{options.color.warm-grey-800.value}',
+        'default-selected-hover': {
+          value: '{options.color.warm-grey-300.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Background color for hovered or focused selected chips',
+            description: 'Background color for hovered selected chips',
+          }
+        },
+        'default-selected-focus': {
+          value: '{options.color.warm-grey-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for focused selected chips',
           }
         },
       },
@@ -86,7 +95,7 @@
     border: {
       chip: {
         'default-rest': {
-          value: '{options.color.warm-grey-800.value}',
+          value: '{options.color.warm-grey-700.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -96,7 +105,7 @@
           }
         },
         'default-hover': {
-          value: '{options.color.warm-grey-800.value}',
+          value: '{options.color.warm-grey-700.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -116,23 +125,13 @@
           }
         },
         'default-active': {
-          value: '{options.color.warm-grey-800.value}',
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
             description: 'Border color for active chips',
-          }
-        },
-        'default-active-inset': {
-          value: '{options.color.warm-grey-500.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Inset border color for active chips',
           }
         },
         'default-selected-rest': {
@@ -145,34 +144,24 @@
             description: 'Border color for selected chips',
           }
         },
-        'default-selected-rest-inset': {
-          value: '{options.color.white.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'text',
-            example: '{color.docExample}',
-            description: 'Insett border color for selected chips',
-          }
-        },
-        'default-selected-hover-focus': {
+        'default-selected-hover': {
           value: '{options.color.warm-grey-800.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Border color for hovered or focused selected chips',
+            description: 'Border color for hovered selected chips',
           }
         },
-        'default-selected-hover-focus-inset': {
-          value: '{options.color.warm-grey-500.value}',
+        'default-selected-focus': {
+          value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'text',
             example: '{color.docExample}',
-            description: 'Inset border color for hovered or focused selected chips',
+            description: 'Border color for focused selected chips',
           }
         },
       },

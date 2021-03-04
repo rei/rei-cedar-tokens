@@ -460,58 +460,6 @@
         }
       },
       {
-        "value": "#f9f8f6",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of default chips"
-        },
-        "original": {
-          "value": "{options.color.warm-grey-100.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "text",
-            "example": "color",
-            "description": "Text color for the active state of default chips"
-          }
-        },
-        "name": "cdr-color-text-chip-default-active",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
-        "value": "#f9f8f6",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the selected state of default chips"
-        },
-        "original": {
-          "value": "{options.color.warm-grey-100.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "text",
-            "example": "color",
-            "description": "Text color for the selected state of default chips"
-          }
-        },
-        "name": "cdr-color-text-chip-default-selected",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
         "value": "rgba(12, 11, 8, 0.75)",
         "category": "color",
         "docs": {
@@ -1786,7 +1734,7 @@
         }
       },
       {
-        "value": "#f9f8f6",
+        "value": "#ffffff",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1795,7 +1743,7 @@
           "description": "Background color for chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-100.value}",
+          "value": "{options.color.white.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1804,7 +1752,7 @@
             "description": "Background color for chips"
           }
         },
-        "name": "cdr-color-background-chip-default",
+        "name": "cdr-color-background-chip-default-rest",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -1812,7 +1760,59 @@
         }
       },
       {
-        "value": "#726d64",
+        "value": "#f9f8f6",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for hovered chips"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Background color for hovered chips"
+          }
+        },
+        "name": "cdr-color-background-chip-default-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for focused chips"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Background color for focused chips"
+          }
+        },
+        "name": "cdr-color-background-chip-default-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#edeae3",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1821,7 +1821,7 @@
           "description": "Background color for active chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-800.value}",
+          "value": "{options.color.warm-grey-300.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1838,7 +1838,7 @@
         }
       },
       {
-        "value": "#4e4d49",
+        "value": "#dcd6cb",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1847,7 +1847,7 @@
           "description": "Background color for selected chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-900.value}",
+          "value": "{options.color.warm-grey-400.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -1864,25 +1864,51 @@
         }
       },
       {
-        "value": "#726d64",
+        "value": "#edeae3",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Background color for hovered or focused selected chips"
+          "description": "Background color for hovered selected chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-800.value}",
+          "value": "{options.color.warm-grey-300.value}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "Background color for hovered or focused selected chips"
+            "description": "Background color for hovered selected chips"
           }
         },
-        "name": "cdr-color-background-chip-default-selected-hover-focus",
+        "name": "cdr-color-background-chip-default-selected-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#edeae3",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for focused selected chips"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-300.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Background color for focused selected chips"
+          }
+        },
+        "name": "cdr-color-background-chip-default-selected-focus",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -3242,7 +3268,7 @@
         }
       },
       {
-        "value": "#726d64",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3251,7 +3277,7 @@
           "description": "Border color for chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-800.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3268,7 +3294,7 @@
         }
       },
       {
-        "value": "#726d64",
+        "value": "#928b80",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3277,7 +3303,7 @@
           "description": "Border color for hovered chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-800.value}",
+          "value": "{options.color.warm-grey-700.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3320,7 +3346,7 @@
         }
       },
       {
-        "value": "#726d64",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3329,7 +3355,7 @@
           "description": "Border color for active chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-800.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3339,32 +3365,6 @@
           }
         },
         "name": "cdr-color-border-chip-default-active",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
-        "value": "#d1cbbd",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Inset border color for active chips"
-        },
-        "original": {
-          "value": "{options.color.warm-grey-500.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "text",
-            "example": "color",
-            "description": "Inset border color for active chips"
-          }
-        },
-        "name": "cdr-color-border-chip-default-active-inset",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -3398,39 +3398,13 @@
         }
       },
       {
-        "value": "#ffffff",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Insett border color for selected chips"
-        },
-        "original": {
-          "value": "{options.color.white.value}",
-          "category": "color",
-          "docs": {
-            "category": "colors",
-            "type": "text",
-            "example": "color",
-            "description": "Insett border color for selected chips"
-          }
-        },
-        "name": "cdr-color-border-chip-default-selected-rest-inset",
-        "attributes": {
-          "option": false,
-          "deprecated": false,
-          "category": "color"
-        }
-      },
-      {
         "value": "#726d64",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Border color for hovered or focused selected chips"
+          "description": "Border color for hovered selected chips"
         },
         "original": {
           "value": "{options.color.warm-grey-800.value}",
@@ -3439,10 +3413,10 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "Border color for hovered or focused selected chips"
+            "description": "Border color for hovered selected chips"
           }
         },
-        "name": "cdr-color-border-chip-default-selected-hover-focus",
+        "name": "cdr-color-border-chip-default-selected-hover",
         "attributes": {
           "option": false,
           "deprecated": false,
@@ -3450,25 +3424,25 @@
         }
       },
       {
-        "value": "#d1cbbd",
+        "value": "#4e4d49",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Inset border color for hovered or focused selected chips"
+          "description": "Border color for focused selected chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-500.value}",
+          "value": "{options.color.warm-grey-900.value}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "Inset border color for hovered or focused selected chips"
+            "description": "Border color for focused selected chips"
           }
         },
-        "name": "cdr-color-border-chip-default-selected-hover-focus-inset",
+        "name": "cdr-color-border-chip-default-selected-focus",
         "attributes": {
           "option": false,
           "deprecated": false,
