@@ -1,0 +1,89 @@
+{
+  color: {
+    docCategory: 'colors',
+    docExample: 'color',
+
+    text: {
+      rating: {
+        default: {
+          value: '{options.color.warm-grey-900-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for ratings',
+          },
+        },
+        hover: {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of ratings',
+          },
+        },
+        separator: {
+          value: '{options.color.warm-grey-600.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the separator in ratings',
+          },
+        },
+      },
+    },
+
+    background: {
+      'rating-star-default': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'The defaul background color of the rating star icon',
+        },
+      },
+      'rating-star-highlighted': {
+        value: '{options.color.golden-yellow-500.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'Background color for the highlighted rating icon',
+        },
+      },
+    },
+
+    border: {
+      'rating-star': {
+        default: {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Default border color for the unhighlighted rating icon',
+          },
+        },
+        highlighted: {
+          value: '{options.color.golden-yellow-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for the highlighted rating icon',
+          },
+        },
+      },
+    },
+  },
+}

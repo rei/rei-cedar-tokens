@@ -1,0 +1,545 @@
+{
+  color: {
+    docCategory: 'colors',
+    docExample: 'color',
+
+    text: {
+      button: {
+        primary: {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for primary buttons',
+          },
+        },
+        'primary-hover': {
+          value: '{options.color.blue-spruce-green-1000.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of primary buttons',
+          },
+        },
+        'primary-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of primary buttons',
+          },
+        },
+        'primary-disabled': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for disabled primary buttons',
+          },
+        },
+        secondary: {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for secondary buttons',
+          },
+        },
+        'secondary-hover': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of secondary buttons',
+          },
+        },
+        'secondary-active': {
+          value: '{options.color.warm-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of secondary buttons',
+          },
+        },
+        'secondary-disabled': {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for disabled secondary buttons',
+          },
+        },
+        dark: {
+          value: '{options.color.warm-grey-100.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the dark button',
+          },
+        },
+        'dark-hover': {
+          value: '{options.color.warm-grey-900.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of the dark button',
+          },
+        },
+        'dark-active': {
+          value: '{options.color.warm-grey-100.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of the dark button',
+          },
+        },
+        'dark-disabled': {
+          value: '{options.color.white.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for disabled dark buttons',
+          },
+        },
+        sale: {
+          value: '{options.color.white.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the sale button',
+          },
+        },
+        'sale-hover': {
+          value: '{options.color.sale-red-800.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of the sale button',
+          },
+        },
+        'sale-active': {
+          value: '{options.color.white.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for the active state of the sale button',
+          },
+        },
+        'sale-disabled': {
+          value: '{options.color.white.value}',
+          newToken: '',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for disabled sale buttons',
+          },
+        },
+      },
+    },
+
+    background: {
+      button: {
+        primary: {
+          rest: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the primary button',
+            },
+          },
+          active: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the primary button',
+            },
+          },
+          hover: {
+            value: '{options.color.sage-green-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the primary button',
+            },
+          },
+          'icon-alt-hover': {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Alternate background color for the hover state of the icon button',
+            },
+          },
+        },
+        secondary: {
+          rest: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the secondary button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the secondary button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the secondary button',
+            },
+          },
+          disabled: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the disabled state of the secondary button',
+            },
+          },
+        },
+        dark: {
+          rest: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the dark button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the dark button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the dark button',
+            },
+          },
+        },
+        sale: {
+          rest: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the sale button',
+            },
+          },
+          active: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the active and pressed states of the sale button',
+            },
+          },
+          hover: {
+            value: '{options.color.sale-red-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'background',
+              example: '{color.docExample}',
+              description: 'Background color for the hover state of the sale button',
+            },
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Default disabled border color',
+          },
+        },
+        'icon-only-active': {
+          value: '{options.color.warm-grey-200.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color for the icon only button active and focus states',
+          },
+        },
+      },
+    },
+
+    border: {
+      button: {
+        primary: {
+          rest: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the primary button',
+            },
+          },
+          active: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the primary button',
+            },
+          },
+          'active-inset': {
+            value: '{options.color.sage-green-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the primary button',
+            },
+          },
+          hover: {
+            value: '{options.color.blue-spruce-green-1000.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the primary button',
+            },
+          },
+        },
+        secondary: {
+          rest: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the secondary button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the secondary button',
+            },
+          },
+          'active-inset': {
+            value: '{options.color.warm-grey-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the secondary button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the secondary button',
+            },
+          },
+        },
+        dark: {
+          rest: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the dark button',
+            },
+          },
+          active: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the dark button',
+            },
+          },
+          'active-inset': {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the dark button',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the dark button',
+            },
+          },
+        },
+        sale: {
+          rest: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the sale button',
+            },
+          },
+          active: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the active and pressed states of the sale button',
+            },
+          },
+          'active-inset': {
+            value: '{options.color.sale-red-200.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Inset border for the active state of the sale button',
+            },
+          },
+          hover: {
+            value: '{options.color.sale-red-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'border',
+              example: '{color.docExample}',
+              description: 'Border color for the hover state of the sale button',
+            },
+          },
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Default disabled border color',
+          },
+        },
+        'icon-only-active': {
+          value: '{options.color.warm-grey-700.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color for the icon only button active and focus states',
+          },
+        },
+      },
+    },
+  },
+}

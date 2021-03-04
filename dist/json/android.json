@@ -1,6 +1,464 @@
 {
   "colors": [
     {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for primary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for primary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_primary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff225c4e",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of primary buttons"
+      },
+      "original": {
+        "value": "{options.color.blue-spruce-green-1000.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of primary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_primary_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of primary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of primary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_primary_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled primary buttons"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled primary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_primary_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for secondary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_secondary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of secondary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_secondary_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of secondary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_secondary_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffd1cbbd",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled secondary buttons"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled secondary buttons"
+        }
+      },
+      "name": "cdr_color_text_button_secondary_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the dark button"
+        }
+      },
+      "name": "cdr_color_text_button_dark",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of the dark button"
+        }
+      },
+      "name": "cdr_color_text_button_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of the dark button"
+        }
+      },
+      "name": "cdr_color_text_button_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled dark buttons"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled dark buttons"
+        }
+      },
+      "name": "cdr_color_text_button_dark_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the sale button"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the sale button"
+        }
+      },
+      "name": "cdr_color_text_button_sale",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc7370f",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the hover state of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the hover state of the sale button"
+        }
+      },
+      "name": "cdr_color_text_button_sale_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for the active state of the sale button"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for the active state of the sale button"
+        }
+      },
+      "name": "cdr_color_text_button_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "newToken": "",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for disabled sale buttons"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "newToken": "",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for disabled sale buttons"
+        }
+      },
+      "name": "cdr_color_text_button_sale_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for default chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for default chips"
+        }
+      },
+      "name": "cdr_color_text_chip_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#bf0c0b08",
       "category": "color",
       "docs": {
@@ -521,188 +979,6 @@
       }
     },
     {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for default chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for default chips"
-        }
-      },
-      "name": "cdr_color_text_chip_default",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of default chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of default chips"
-        }
-      },
-      "name": "cdr_color_text_chip_default_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the selected state of default chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the selected state of default chips"
-        }
-      },
-      "name": "cdr_color_text_chip_default_selected",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for emphasis chips"
-        }
-      },
-      "name": "cdr_color_text_chip_emphasis",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of emphasis chips"
-        }
-      },
-      "name": "cdr_color_text_chip_emphasis_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the selected state of emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the selected state of emphasis chips"
-        }
-      },
-      "name": "cdr_color_text_chip_emphasis_selected",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of emphasis chips"
-        }
-      },
-      "name": "cdr_color_text_chip_emphasis_selected_hover_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
       "value": "#ff406eb5",
       "category": "color",
       "docs": {
@@ -833,25 +1109,25 @@
       }
     },
     {
-      "value": "#fff9f8f6",
+      "value": "#bf0c0b08",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Text color for tooltips"
+        "description": "Text color for ratings"
       },
       "original": {
-        "value": "{options.color.warm-grey-100.value}",
+        "value": "{options.color.warm-grey-900-75.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Text color for tooltips"
+          "description": "Text color for ratings"
         }
       },
-      "name": "cdr_color_text_tooltip_default",
+      "name": "cdr_color_text_rating_default",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -859,25 +1135,25 @@
       }
     },
     {
-      "value": "#fff9f8f6",
+      "value": "#ff406eb5",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Text color for primary buttons"
+        "description": "Text color for the hover state of ratings"
       },
       "original": {
-        "value": "{options.color.warm-grey-100.value}",
+        "value": "{options.color.alpine-lake-blue-800.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Text color for primary buttons"
+          "description": "Text color for the hover state of ratings"
         }
       },
-      "name": "cdr_color_text_button_primary",
+      "name": "cdr_color_text_rating_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -885,405 +1161,25 @@
       }
     },
     {
-      "value": "#ff225c4e",
+      "value": "#ffb2ab9f",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Text color for the hover state of primary buttons"
+        "description": "Text color for the separator in ratings"
       },
       "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
+        "value": "{options.color.warm-grey-600.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Text color for the hover state of primary buttons"
+          "description": "Text color for the separator in ratings"
         }
       },
-      "name": "cdr_color_text_button_primary_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of primary buttons"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of primary buttons"
-        }
-      },
-      "name": "cdr_color_text_button_primary_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for disabled primary buttons"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for disabled primary buttons"
-        }
-      },
-      "name": "cdr_color_text_button_primary_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for secondary buttons"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for secondary buttons"
-        }
-      },
-      "name": "cdr_color_text_button_secondary",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the hover state of secondary buttons"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the hover state of secondary buttons"
-        }
-      },
-      "name": "cdr_color_text_button_secondary_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of secondary buttons"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of secondary buttons"
-        }
-      },
-      "name": "cdr_color_text_button_secondary_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffd1cbbd",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for disabled secondary buttons"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-500.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for disabled secondary buttons"
-        }
-      },
-      "name": "cdr_color_text_button_secondary_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the dark button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the dark button"
-        }
-      },
-      "name": "cdr_color_text_button_dark",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the hover state of the dark button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the hover state of the dark button"
-        }
-      },
-      "name": "cdr_color_text_button_dark_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of the dark button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of the dark button"
-        }
-      },
-      "name": "cdr_color_text_button_dark_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for disabled dark buttons"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for disabled dark buttons"
-        }
-      },
-      "name": "cdr_color_text_button_dark_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the sale button"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the sale button"
-        }
-      },
-      "name": "cdr_color_text_button_sale",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc7370f",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the hover state of the sale button"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the hover state of the sale button"
-        }
-      },
-      "name": "cdr_color_text_button_sale_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for the active state of the sale button"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for the active state of the sale button"
-        }
-      },
-      "name": "cdr_color_text_button_sale_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "newToken": "",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Text color for disabled sale buttons"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "newToken": "",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text color for disabled sale buttons"
-        }
-      },
-      "name": "cdr_color_text_button_sale_disabled",
+      "name": "cdr_color_text_rating_separator",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1395,25 +1291,25 @@
       }
     },
     {
-      "value": "#bf0c0b08",
+      "value": "#fff9f8f6",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Text color for ratings"
+        "description": "Text color for tooltips"
       },
       "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
+        "value": "{options.color.warm-grey-100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Text color for ratings"
+          "description": "Text color for tooltips"
         }
       },
-      "name": "cdr_color_text_rating_default",
+      "name": "cdr_color_text_tooltip_default",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1421,25 +1317,25 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ff225c4e",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "text",
+        "type": "background",
         "example": "color",
-        "description": "Text color for the hover state of ratings"
+        "description": "Background color for the primary button"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.blue-spruce-green-1000.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "text",
+          "type": "background",
           "example": "color",
-          "description": "Text color for the hover state of ratings"
+          "description": "Background color for the primary button"
         }
       },
-      "name": "cdr_color_text_rating_hover",
+      "name": "cdr_color_background_button_primary_rest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1447,25 +1343,103 @@
       }
     },
     {
-      "value": "#ffb2ab9f",
+      "value": "#ff225c4e",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "text",
+        "type": "background",
         "example": "color",
-        "description": "Text color for the separator in ratings"
+        "description": "Background color for the active and pressed states of the primary button"
       },
       "original": {
-        "value": "{options.color.warm-grey-600.value}",
+        "value": "{options.color.blue-spruce-green-1000.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "text",
+          "type": "background",
           "example": "color",
-          "description": "Text color for the separator in ratings"
+          "description": "Background color for the active and pressed states of the primary button"
         }
       },
-      "name": "cdr_color_text_rating_separator",
+      "name": "cdr_color_background_button_primary_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc7dfd1",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the primary button"
+      },
+      "original": {
+        "value": "{options.color.sage-green-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the primary button"
+        }
+      },
+      "name": "cdr_color_background_button_primary_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Alternate background color for the hover state of the icon button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Alternate background color for the hover state of the icon button"
+        }
+      },
+      "name": "cdr_color_background_button_primary_icon_alt_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the secondary button"
+        }
+      },
+      "name": "cdr_color_background_button_secondary_rest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1477,21 +1451,73 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "background",
         "example": "color",
-        "description": "The default icon color"
+        "description": "Background color for the active and pressed states of the secondary button"
       },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "background",
           "example": "color",
-          "description": "The default icon color"
+          "description": "Background color for the active and pressed states of the secondary button"
         }
       },
-      "name": "cdr_color_icon_default",
+      "name": "cdr_color_background_button_secondary_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff4f2ed",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the secondary button"
+        }
+      },
+      "name": "cdr_color_background_button_secondary_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the disabled state of the secondary button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the disabled state of the secondary button"
+        }
+      },
+      "name": "cdr_color_background_button_secondary_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1503,21 +1529,21 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "background",
         "example": "color",
-        "description": "Emphasis or darkest icon color on a light background"
+        "description": "Background color for the dark button"
       },
       "original": {
         "value": "{options.color.warm-grey-900.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "background",
           "example": "color",
-          "description": "Emphasis or darkest icon color on a light background"
+          "description": "Background color for the dark button"
         }
       },
-      "name": "cdr_color_icon_emphasis",
+      "name": "cdr_color_background_button_dark_rest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1525,25 +1551,129 @@
       }
     },
     {
-      "value": "#ff406eb5",
+      "value": "#ff4e4d49",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "background",
         "example": "color",
-        "description": "The icon link color"
+        "description": "Background color for the active and pressed states of the dark button"
       },
       "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
+        "value": "{options.color.warm-grey-900.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "background",
           "example": "color",
-          "description": "The icon link color"
+          "description": "Background color for the active and pressed states of the dark button"
         }
       },
-      "name": "cdr_color_icon_link",
+      "name": "cdr_color_background_button_dark_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the dark button"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the dark button"
+        }
+      },
+      "name": "cdr_color_background_button_dark_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc7370f",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the sale button"
+        }
+      },
+      "name": "cdr_color_background_button_sale_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc7370f",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the sale button"
+        }
+      },
+      "name": "cdr_color_background_button_sale_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffde2e2",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the hover state of the sale button"
+      },
+      "original": {
+        "value": "{options.color.sale-red-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the hover state of the sale button"
+        }
+      },
+      "name": "cdr_color_background_button_sale_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1555,21 +1685,47 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "background",
         "example": "color",
-        "description": "The disabled icon color"
+        "description": "Default disabled border color"
       },
       "original": {
         "value": "{options.color.warm-grey-400.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "background",
           "example": "color",
-          "description": "The disabled icon color"
+          "description": "Default disabled border color"
         }
       },
-      "name": "cdr_color_icon_disabled",
+      "name": "cdr_color_background_button_default_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff4f2ed",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the icon only button active and focus states"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the icon only button active and focus states"
+        }
+      },
+      "name": "cdr_color_background_button_icon_only_active",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1581,21 +1737,47 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Rest state of a selected form icon"
+        "description": "Background color for chips"
       },
       "original": {
         "value": "{options.color.white.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Rest state of a selected form icon"
+          "description": "Background color for chips"
         }
       },
-      "name": "cdr_color_icon_checkbox_default_selected",
+      "name": "cdr_color_background_chip_default_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Background color for hovered chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for hovered chips"
+        }
+      },
+      "name": "cdr_color_background_chip_default_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1607,21 +1789,21 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Hover state of a selected form icon"
+        "description": "Background color for focused chips"
       },
       "original": {
         "value": "{options.color.white.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Hover state of a selected form icon"
+          "description": "Background color for focused chips"
         }
       },
-      "name": "cdr_color_icon_checkbox_default_selected_hover",
+      "name": "cdr_color_background_chip_default_focus",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1629,25 +1811,103 @@
       }
     },
     {
-      "value": "#ff4e4d49",
+      "value": "#ffedeae3",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "icon",
+        "type": "text",
         "example": "color",
-        "description": "Hover state of a selected form icon"
+        "description": "Background color for active chips"
       },
       "original": {
-        "value": "{options.color.warm-grey-900.value}",
+        "value": "{options.color.warm-grey-300.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "icon",
+          "type": "text",
           "example": "color",
-          "description": "Hover state of a selected form icon"
+          "description": "Background color for active chips"
         }
       },
-      "name": "cdr_color_icon_checkbox_default_selected_active",
+      "name": "cdr_color_background_chip_default_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Background color for selected chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for selected chips"
+        }
+      },
+      "name": "cdr_color_background_chip_default_selected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Background color for hovered selected chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for hovered selected chips"
+        }
+      },
+      "name": "cdr_color_background_chip_default_selected_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Background color for focused selected chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for focused selected chips"
+        }
+      },
+      "name": "cdr_color_background_chip_default_selected_focus",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1837,51 +2097,25 @@
       }
     },
     {
-      "value": "#fff4f2ed",
+      "value": "#fff9f8f6",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "background",
         "example": "color",
-        "description": "The background color of table headers"
+        "description": "Background color for the hover state of accordion"
       },
       "original": {
-        "value": "{options.color.warm-grey-200.value}",
+        "value": "{options.color.warm-grey-100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "The background color of table headers"
+          "description": "Background color for the hover state of accordion"
         }
       },
-      "name": "cdr_color_background_table_header",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffffff",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "The background color of table rows"
-      },
-      "original": {
-        "value": "{options.color.white.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "The background color of table rows"
-        }
-      },
-      "name": "cdr_color_background_table_row",
+      "name": "cdr_color_background_accordion_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -1895,7 +2129,7 @@
         "category": "colors",
         "type": "background",
         "example": "color",
-        "description": "An alternate row color to aid grouping row data"
+        "description": "Background color for the hover state of pagination"
       },
       "original": {
         "value": "{options.color.warm-grey-100.value}",
@@ -1904,10 +2138,62 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "An alternate row color to aid grouping row data"
+          "description": "Background color for the hover state of pagination"
         }
       },
-      "name": "cdr_color_background_table_row_alt",
+      "name": "cdr_color_background_pagination_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff406eb5",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "Background color for the pagination keyline"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "Background color for the pagination keyline"
+        }
+      },
+      "name": "cdr_color_background_pagination_keyline",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#d9f4f2ed",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The background overlay for modal"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-200-85.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The background overlay for modal"
+        }
+      },
+      "name": "cdr_color_background_modal_overlay",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -2357,734 +2643,6 @@
       }
     },
     {
-      "value": "#ff373734",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for tooltips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for tooltips"
-        }
-      },
-      "name": "cdr_color_background_tooltip_default",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for chips"
-        }
-      },
-      "name": "cdr_color_background_chip_default",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for active chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for active chips"
-        }
-      },
-      "name": "cdr_color_background_chip_default_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for selected chips"
-        }
-      },
-      "name": "cdr_color_background_chip_default_selected",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for hovered or focused selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for hovered or focused selected chips"
-        }
-      },
-      "name": "cdr_color_background_chip_default_selected_hover_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for emphasis chips"
-        }
-      },
-      "name": "cdr_color_background_chip_emphasis",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for active emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for active emphasis chips"
-        }
-      },
-      "name": "cdr_color_background_chip_emphasis_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for selected emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for selected emphasis chips"
-        }
-      },
-      "name": "cdr_color_background_chip_emphasis_selected_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Background color for hovered or focused selected emphasis chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Background color for hovered or focused selected emphasis chips"
-        }
-      },
-      "name": "cdr_color_background_chip_emphasis_selected_hover_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the primary button"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the primary button"
-        }
-      },
-      "name": "cdr_color_background_button_primary_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff225c4e",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the primary button"
-      },
-      "original": {
-        "value": "{options.color.blue-spruce-green-1000.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the primary button"
-        }
-      },
-      "name": "cdr_color_background_button_primary_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc7dfd1",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the primary button"
-      },
-      "original": {
-        "value": "{options.color.sage-green-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the primary button"
-        }
-      },
-      "name": "cdr_color_background_button_primary_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the secondary button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the secondary button"
-        }
-      },
-      "name": "cdr_color_background_button_secondary_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff928b80",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the secondary button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the secondary button"
-        }
-      },
-      "name": "cdr_color_background_button_secondary_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff4f2ed",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the secondary button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the secondary button"
-        }
-      },
-      "name": "cdr_color_background_button_secondary_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the disabled state of the secondary button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the disabled state of the secondary button"
-        }
-      },
-      "name": "cdr_color_background_button_secondary_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the dark button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the dark button"
-        }
-      },
-      "name": "cdr_color_background_button_dark_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the dark button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the dark button"
-        }
-      },
-      "name": "cdr_color_background_button_dark_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffedeae3",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the dark button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-300.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the dark button"
-        }
-      },
-      "name": "cdr_color_background_button_dark_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc7370f",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the sale button"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the sale button"
-        }
-      },
-      "name": "cdr_color_background_button_sale_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc7370f",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the active and pressed states of the sale button"
-      },
-      "original": {
-        "value": "{options.color.sale-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the active and pressed states of the sale button"
-        }
-      },
-      "name": "cdr_color_background_button_sale_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fffde2e2",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of the sale button"
-      },
-      "original": {
-        "value": "{options.color.sale-red-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of the sale button"
-        }
-      },
-      "name": "cdr_color_background_button_sale_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffdcd6cb",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Default disabled border color"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Default disabled border color"
-        }
-      },
-      "name": "cdr_color_background_button_default_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff4f2ed",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the icon only button active and focus states"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-200.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the icon only button active and focus states"
-        }
-      },
-      "name": "cdr_color_background_button_icon_only_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of accordion"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of accordion"
-        }
-      },
-      "name": "cdr_color_background_accordion_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the hover state of pagination"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the hover state of pagination"
-        }
-      },
-      "name": "cdr_color_background_pagination_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff406eb5",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Background color for the pagination keyline"
-      },
-      "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Background color for the pagination keyline"
-        }
-      },
-      "name": "cdr_color_background_pagination_keyline",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "Alternate background color for the hover state of the icon button"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "Alternate background color for the hover state of the icon button"
-        }
-      },
-      "name": "cdr_color_background_button_icon_alt_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
       "value": "#fff9f8f6",
       "category": "color",
       "docs": {
@@ -3137,571 +2695,25 @@
       }
     },
     {
-      "value": "#d9f4f2ed",
+      "value": "#fff4f2ed",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "background",
         "example": "color",
-        "description": "The background overlay for modal"
+        "description": "The background color of table headers"
       },
       "original": {
-        "value": "{options.color.warm-grey-200-85.value}",
+        "value": "{options.color.warm-grey-200.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "The background overlay for modal"
+          "description": "The background color of table headers"
         }
       },
-      "name": "cdr_color_background_modal_overlay",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffdcd6cb",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Default border color for separating content"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Default border color for separating content"
-        }
-      },
-      "name": "cdr_color_border_primary",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff928b80",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "An alternate, secondary background color used on some pages"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
-        }
-      },
-      "name": "cdr_color_border_secondary",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4b8b50",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for success elements"
-      },
-      "original": {
-        "value": "{options.color.success-green-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for success elements"
-        }
-      },
-      "name": "cdr_color_border_success",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffc77523",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for warning elements"
-      },
-      "original": {
-        "value": "{options.color.warning-yellow-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for warning elements"
-        }
-      },
-      "name": "cdr_color_border_warning",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb5292b",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for error elements"
-      },
-      "original": {
-        "value": "{options.color.error-red-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for error elements"
-        }
-      },
-      "name": "cdr_color_border_error",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff406eb5",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Border color for informational elements"
-      },
-      "original": {
-        "value": "{options.color.alpine-lake-blue-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Border color for informational elements"
-        }
-      },
-      "name": "cdr_color_border_info",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff20201d",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Focused border color on checkbox or radio labels"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-1100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Focused border color on checkbox or radio labels"
-        }
-      },
-      "name": "cdr_color_border_label_default_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff928b80",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Default border color on form elements"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Default border color on form elements"
-        }
-      },
-      "name": "cdr_color_border_input_default",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb33322",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Error border color on form elements"
-      },
-      "original": {
-        "value": "{options.color.error-red-850.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Error border color on form elements"
-        }
-      },
-      "name": "cdr_color_border_input_error",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Hover/active/focus state of a checkbox or radio element border"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Hover/active/focus state of a checkbox or radio element border"
-        }
-      },
-      "name": "cdr_color_border_input_default_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Selected state of a checkbox or radio element border"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Selected state of a checkbox or radio element border"
-        }
-      },
-      "name": "cdr_color_border_input_default_selected",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff20201d",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Focus state of an input or select element border"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-1100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Focus state of an input or select element border"
-        }
-      },
-      "name": "cdr_color_border_input_default_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Hover state of a selected checkbox or radio element border"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Hover state of a selected checkbox or radio element border"
-        }
-      },
-      "name": "cdr_color_border_input_default_selected_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff20201d",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Hover state of a checkbox or radio element border"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-1100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Hover state of a checkbox or radio element border"
-        }
-      },
-      "name": "cdr_color_border_input_default_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffd1cbbd",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "Disabled form element border"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-500.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "Disabled form element border"
-        }
-      },
-      "name": "cdr_color_border_input_default_disabled",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for hovered chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for hovered chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for focused chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for focused chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for active chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for active chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffd1cbbd",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Inset border color for active chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-500.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Inset border color for active chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_active_inset",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for selected chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_selected_rest",
+      "name": "cdr_color_background_table_header",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3713,21 +2725,21 @@
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "text",
+        "type": "background",
         "example": "color",
-        "description": "Insett border color for selected chips"
+        "description": "The background color of table rows"
       },
       "original": {
         "value": "{options.color.white.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "text",
+          "type": "background",
           "example": "color",
-          "description": "Insett border color for selected chips"
+          "description": "The background color of table rows"
         }
       },
-      "name": "cdr_color_border_chip_default_selected_rest_inset",
+      "name": "cdr_color_background_table_row",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3735,103 +2747,25 @@
       }
     },
     {
-      "value": "#ff726d64",
+      "value": "#fff9f8f6",
       "category": "color",
       "docs": {
         "category": "colors",
-        "type": "text",
+        "type": "background",
         "example": "color",
-        "description": "Border color for hovered or focused selected chips"
+        "description": "An alternate row color to aid grouping row data"
       },
       "original": {
-        "value": "{options.color.warm-grey-800.value}",
+        "value": "{options.color.warm-grey-100.value}",
         "category": "color",
         "docs": {
           "category": "colors",
-          "type": "text",
+          "type": "background",
           "example": "color",
-          "description": "Border color for hovered or focused selected chips"
+          "description": "An alternate row color to aid grouping row data"
         }
       },
-      "name": "cdr_color_border_chip_default_selected_hover_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffd1cbbd",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Inset border color for hovered or focused selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-500.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Inset border color for hovered or focused selected chips"
-        }
-      },
-      "name": "cdr_color_border_chip_default_selected_hover_focus_inset",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffb2ab9f",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-600.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for chips"
-        }
-      },
-      "name": "cdr_color_border_chip_emphasis_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff4e4d49",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for hovered chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for hovered chips"
-        }
-      },
-      "name": "cdr_color_border_chip_emphasis_hover",
+      "name": "cdr_color_background_table_row_alt",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3845,7 +2779,7 @@
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Border color for focused chips"
+        "description": "Background color for tooltips"
       },
       "original": {
         "value": "{options.color.warm-grey-1000.value}",
@@ -3854,140 +2788,10 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Border color for focused chips"
+          "description": "Background color for tooltips"
         }
       },
-      "name": "cdr_color_border_chip_emphasis_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for active chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for active chips"
-        }
-      },
-      "name": "cdr_color_border_chip_emphasis_active",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for selected chips"
-        }
-      },
-      "name": "cdr_color_border_chip_emphasis_selected_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for hovered selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for hovered selected chips"
-        }
-      },
-      "name": "cdr_color_border_chip_emphasis_selected_hover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff726d64",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for focused selected chips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-800.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for focused selected chips"
-        }
-      },
-      "name": "cdr_color_border_chip_emphasis_selected_focus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "text",
-        "example": "color",
-        "description": "Border color for tooltips"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Border color for tooltips"
-        }
-      },
-      "name": "cdr_color_border_tooltip_default",
+      "name": "cdr_color_background_tooltip_default",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -4467,9 +3271,217 @@
       "category": "color",
       "docs": {
         "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for hovered chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for hovered chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for focused chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for focused chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for active chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for active chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for selected chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for selected chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_selected_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff726d64",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for hovered selected chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for hovered selected chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_selected_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for focused selected chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for focused selected chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_selected_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
         "type": "border",
         "example": "color",
-        "description": "Default border color for the unhighlighted rating icon"
+        "description": "Default border color for separating content"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default border color for separating content"
+        }
+      },
+      "name": "cdr_color_border_primary",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
       },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
@@ -4478,10 +3490,10 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Default border color for the unhighlighted rating icon"
+          "description": "An alternate, secondary background color used on some pages"
         }
       },
-      "name": "cdr_color_border_rating_star_default",
+      "name": "cdr_color_border_secondary",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -4489,25 +3501,337 @@
       }
     },
     {
-      "value": "#ffbd7b2d",
+      "value": "#ff4b8b50",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "border",
         "example": "color",
-        "description": "Border color for the highlighted rating icon"
+        "description": "Border color for success elements"
       },
       "original": {
-        "value": "{options.color.golden-yellow-800.value}",
+        "value": "{options.color.success-green-800.value}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Border color for the highlighted rating icon"
+          "description": "Border color for success elements"
         }
       },
-      "name": "cdr_color_border_rating_star_highlighted",
+      "name": "cdr_color_border_success",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffc77523",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for warning elements"
+      },
+      "original": {
+        "value": "{options.color.warning-yellow-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for warning elements"
+        }
+      },
+      "name": "cdr_color_border_warning",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffb5292b",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for error elements"
+      },
+      "original": {
+        "value": "{options.color.error-red-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for error elements"
+        }
+      },
+      "name": "cdr_color_border_error",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff406eb5",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for informational elements"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for informational elements"
+        }
+      },
+      "name": "cdr_color_border_info",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff20201d",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Focused border color on checkbox or radio labels"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Focused border color on checkbox or radio labels"
+        }
+      },
+      "name": "cdr_color_border_label_default_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Default border color on form elements"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Default border color on form elements"
+        }
+      },
+      "name": "cdr_color_border_input_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffb33322",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Error border color on form elements"
+      },
+      "original": {
+        "value": "{options.color.error-red-850.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Error border color on form elements"
+        }
+      },
+      "name": "cdr_color_border_input_error",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Hover/active/focus state of a checkbox or radio element border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Hover/active/focus state of a checkbox or radio element border"
+        }
+      },
+      "name": "cdr_color_border_input_default_active",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Selected state of a checkbox or radio element border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Selected state of a checkbox or radio element border"
+        }
+      },
+      "name": "cdr_color_border_input_default_selected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff20201d",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Focus state of an input or select element border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Focus state of an input or select element border"
+        }
+      },
+      "name": "cdr_color_border_input_default_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Hover state of a selected checkbox or radio element border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Hover state of a selected checkbox or radio element border"
+        }
+      },
+      "name": "cdr_color_border_input_default_selected_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff20201d",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Hover state of a checkbox or radio element border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-1100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Hover state of a checkbox or radio element border"
+        }
+      },
+      "name": "cdr_color_border_input_default_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffd1cbbd",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Disabled form element border"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Disabled form element border"
+        }
+      },
+      "name": "cdr_color_border_input_default_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -4645,39 +3969,13 @@
       }
     },
     {
-      "value": "#ffdcd6cb",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "border",
-        "example": "color",
-        "description": "The border color of table rows and their corresponding data cells"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "border",
-          "example": "color",
-          "description": "The border color of table rows and their corresponding data cells"
-        }
-      },
-      "name": "cdr_color_border_table_default",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
       "value": "#ff928b80",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "border",
         "example": "color",
-        "description": "Border color separating complex table heads"
+        "description": "Default border color for the unhighlighted rating icon"
       },
       "original": {
         "value": "{options.color.warm-grey-700.value}",
@@ -4686,10 +3984,36 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "Border color separating complex table heads"
+          "description": "Default border color for the unhighlighted rating icon"
         }
       },
-      "name": "cdr_color_border_table_head",
+      "name": "cdr_color_border_rating_star_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffbd7b2d",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color for the highlighted rating icon"
+      },
+      "original": {
+        "value": "{options.color.golden-yellow-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color for the highlighted rating icon"
+        }
+      },
+      "name": "cdr_color_border_rating_star_highlighted",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -4846,6 +4170,266 @@
         }
       },
       "name": "cdr_color_border_tab_keyline_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "The border color of table rows and their corresponding data cells"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "The border color of table rows and their corresponding data cells"
+        }
+      },
+      "name": "cdr_color_border_table_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "Border color separating complex table heads"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "Border color separating complex table heads"
+        }
+      },
+      "name": "cdr_color_border_table_head",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff9f8f6",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for tooltips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for tooltips"
+        }
+      },
+      "name": "cdr_color_border_tooltip_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff928b80",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "The default icon color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-700.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "The default icon color"
+        }
+      },
+      "name": "cdr_color_icon_default",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Emphasis or darkest icon color on a light background"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Emphasis or darkest icon color on a light background"
+        }
+      },
+      "name": "cdr_color_icon_emphasis",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff406eb5",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "The icon link color"
+      },
+      "original": {
+        "value": "{options.color.alpine-lake-blue-800.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "The icon link color"
+        }
+      },
+      "name": "cdr_color_icon_link",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "The disabled icon color"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "The disabled icon color"
+        }
+      },
+      "name": "cdr_color_icon_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Rest state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Rest state of a selected form icon"
+        }
+      },
+      "name": "cdr_color_icon_checkbox_default_selected",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "cdr_color_icon_checkbox_default_selected_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff4e4d49",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "icon",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "icon",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "cdr_color_icon_checkbox_default_selected_active",
       "attributes": {
         "option": false,
         "deprecated": false,
