@@ -459,6 +459,32 @@
       }
     },
     {
+      "value": "#ffd1cbbd",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Text color for default chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-500.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for default chips"
+        }
+      },
+      "name": "cdr_color_text_chip_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#bf0c0b08",
       "category": "color",
       "docs": {
@@ -1759,6 +1785,32 @@
       }
     },
     {
+      "value": "#ffffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Background color for disabled chips"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for disabled chips"
+        }
+      },
+      "name": "cdr_color_background_chip_default_disabled",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#fff9f8f6",
       "category": "color",
       "docs": {
@@ -1837,7 +1889,7 @@
       }
     },
     {
-      "value": "#ffdcd6cb",
+      "value": "#ffedeae3",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1846,7 +1898,7 @@
         "description": "Background color for selected chips"
       },
       "original": {
-        "value": "{options.color.warm-grey-400.value}",
+        "value": "{options.color.warm-grey-300.value}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -3286,6 +3338,32 @@
         }
       },
       "name": "cdr_color_border_chip_default_rest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Border color for disabled chips"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for disabled chips"
+        }
+      },
+      "name": "cdr_color_border_chip_default_disabled",
       "attributes": {
         "option": false,
         "deprecated": false,
