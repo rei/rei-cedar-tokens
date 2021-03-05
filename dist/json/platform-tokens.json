@@ -460,6 +460,32 @@
         }
       },
       {
+        "value": "#d1cbbd",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Text color for default chips"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-500.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Text color for default chips"
+          }
+        },
+        "name": "cdr-color-text-chip-disabled",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "rgba(12, 11, 8, 0.75)",
         "category": "color",
         "docs": {
@@ -1760,6 +1786,32 @@
         }
       },
       {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Background color for disabled chips"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Background color for disabled chips"
+          }
+        },
+        "name": "cdr-color-background-chip-default-disabled",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "#f9f8f6",
         "category": "color",
         "docs": {
@@ -1838,7 +1890,7 @@
         }
       },
       {
-        "value": "#dcd6cb",
+        "value": "#edeae3",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1847,7 +1899,7 @@
           "description": "Background color for selected chips"
         },
         "original": {
-          "value": "{options.color.warm-grey-400.value}",
+          "value": "{options.color.warm-grey-300.value}",
           "category": "color",
           "docs": {
             "category": "colors",
@@ -3287,6 +3339,32 @@
           }
         },
         "name": "cdr-color-border-chip-default-rest",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#dcd6cb",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Border color for disabled chips"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-400.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Border color for disabled chips"
+          }
+        },
+        "name": "cdr-color-border-chip-default-disabled",
         "attributes": {
           "option": false,
           "deprecated": false,

@@ -14,6 +14,16 @@
             description: 'Text color for default chips',
           },
         },
+        disabled: {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Text color for default chips',
+          },
+        },
       },
     },
 
@@ -27,6 +37,16 @@
             type: 'text',
             example: '{color.docExample}',
             description: 'Background color for chips',
+          }
+        },
+        'default-disabled': {
+          value: '{options.color.white.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Background color for disabled chips',
           }
         },
         'default-hover': {
@@ -60,7 +80,7 @@
           }
         },
         'default-selected': {
-          value: '{options.color.warm-grey-400.value}',
+          value: '{options.color.warm-grey-300.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -102,6 +122,16 @@
             type: 'text',
             example: '{color.docExample}',
             description: 'Border color for chips',
+          }
+        },
+        'default-disabled': {
+          value: '{options.color.warm-grey-400.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Border color for disabled chips',
           }
         },
         'default-hover': {
