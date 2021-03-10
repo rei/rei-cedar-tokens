@@ -1,0 +1,119 @@
+{
+  color: {
+    docCategory: 'colors',
+    docExample: 'color',
+
+    text: {
+      tab: {
+        rest: {
+          value: '{options.color.warm-grey-800-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'tabs',
+            example: '{color.docExample}',
+            description: 'Text color for tabs',
+          },
+        },
+        active: {
+          value: '{options.color.warm-grey-900-75.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'tabs',
+            example: '{color.docExample}',
+            description: 'Text color for the active and pressed states of tabs',
+          },
+        },
+        hover: {
+          value: '{options.color.alpine-lake-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'tabs',
+            example: '{color.docExample}',
+            description: 'Text color for the hover state of tabs',
+          },
+        },
+        disabled: {
+          value: '{options.color.warm-grey-500.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'tabs',
+            example: '{color.docExample}',
+            description: 'Disabled text color of tabs',
+          },
+        },
+      },
+    },
+
+
+    border: {
+      tab: {
+        keyline: {
+          rest: {
+            value: '{options.color.warm-grey-700.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'tabs',
+              example: '{color.docExample}',
+              description: 'The border color of tab keyline',
+            },
+          },
+          active: {
+            value: '{options.color.alpine-lake-blue-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'tabs',
+              example: '{color.docExample}',
+              description: 'Border color for the active tab keyline',
+            },
+          },
+          'active-alt': {
+            value: '{options.color.alpine-lake-blue-600.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'tabs',
+              example: '{color.docExample}',
+              description: 'Alternative border color for the active tab keyline',
+            },
+          },
+          hover: {
+            value: '{options.color.alpine-lake-blue-800.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'tabs',
+              example: '{color.docExample}',
+              description: 'Border color for the tab keyline hover state',
+            },
+          },
+          'hover-alt': {
+            value: '{options.color.alpine-lake-blue-600.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'tabs',
+              example: '{color.docExample}',
+              description: 'Alternative border color for the tab keyline hover state',
+            },
+          },
+          disabled: {
+            value: '{options.color.warm-grey-500.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'tabs',
+              example: '{color.docExample}',
+              description: 'Border color for the disabled tab keyline',
+            },
+          },
+        },
+      },
+    },
+  },
+}
