@@ -169,6 +169,16 @@
           description: 'An alternate, secondary background color used on some pages',
         },
       },
+      brand: {
+        value: '{options.color.blue-spruce-green-1000.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'background',
+          example: '{color.docExample}',
+          description: 'An alternate, brand background color used on some pages',
+        },
+      },
       message: {
         success: {
           value: '{options.color.success-green-200.value}',
