@@ -1939,29 +1939,31 @@ $cdr-text-strong-weight: 700;
   }
 }
 
-@mixin cdr-container {
-  @include cdr-text-default;
-  margin-left: auto;
-  margin-right: auto;
+@mixin cdr-container-base {
   padding-left: $cdr-space-one-x;
   padding-right: $cdr-space-one-x;
   width: 100%;
-  max-width: $cdr-breakpoint-lg;
   @include cdr-md-mq-up {
     padding-left: $cdr-space-two-x;
     padding-right: $cdr-space-two-x;
   }
 }
 
+@mixin cdr-container-static {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $cdr-breakpoint-lg;
+}
+
+@mixin cdr-container {
+  @include cdr-text-default;
+  @include cdr-container-base;
+  @include cdr-container-static;
+}
+
 @mixin cdr-container-fluid {
   @include cdr-text-default;
-  padding-left: $cdr-space-one-x;
-  padding-right: $cdr-space-one-x;
-  width: 100%;
-  @include cdr-md-mq-up {
-    padding-left: $cdr-space-two-x;
-    padding-right: $cdr-space-two-x;
-  }
+  @include cdr-container-base;
 }
 
 // XS
