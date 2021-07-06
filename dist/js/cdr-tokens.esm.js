@@ -18,6 +18,7 @@ export const CdrColorTextChipDefault = "#4e4d49";
 export const CdrColorTextChipDisabled = "#d1cbbd";
 export const CdrColorTextPrimary = "rgba(12, 11, 8, 0.75)";
 export const CdrColorTextSecondary = "rgba(66, 59, 47, 0.75)";
+export const CdrColorTextEmphasis = "rgba(3, 3, 1, 0.9)";
 export const CdrColorTextBrand = "#1f513f";
 export const CdrColorTextSale = "#c7370f";
 export const CdrColorTextInverse = "#f9f8f6";
