@@ -19,7 +19,7 @@ module.exports = {
   CdrColorTextChipDisabled: "#d1cbbd",
   CdrColorTextPrimary: "rgba(12, 11, 8, 0.75)",
   CdrColorTextSecondary: "rgba(66, 59, 47, 0.75)",
-  CdrColorTextBrand: "#113731",
+  CdrColorTextBrand: "#1f513f",
   CdrColorTextSale: "#c7370f",
   CdrColorTextInverse: "#f9f8f6",
   CdrColorTextDisabled: "#d1cbbd",
