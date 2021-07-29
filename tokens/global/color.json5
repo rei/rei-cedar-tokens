@@ -23,8 +23,18 @@
           description: 'The secondary text color',
         },
       },
+      emphasis: {
+        value: '{options.color.warm-grey-1000-90.value}',
+        category: 'color',
+        docs: {
+          category: '{color.docCategory}',
+          type: 'text',
+          example: '{color.docExample}',
+          description: 'The emphasis text color',
+        },
+      },
       brand: {
-        value: '{options.color.blue-spruce-green-1100.value}',
+        value: '{options.color.blue-spruce-green-1000.value}',
         category: 'color',
         docs: {
           category: '{color.docCategory}',
