@@ -113,6 +113,18 @@
           description: 'Color of informational messages',
         },
       },
+      message: {
+        error: {
+          value: '{options.color.error-red-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'text',
+            example: '{color.docExample}',
+            description: 'Color of error messages',
+          },
+        },
+      }
     },
     // Icon
     icon: {
@@ -156,6 +168,68 @@
           description: 'The disabled icon color',
         },
       },
+      message: {
+        default: {
+          value: '{options.color.default-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'The default message icon color',
+          },
+        },
+        default: {
+          value: '{options.color.default-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'The default message icon color',
+          },
+        },
+        success: {
+          value: '{options.color.success-green-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'The success message icon color',
+          },
+        },
+        warning: {
+          value: '{options.color.warning-yellow-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'The warning message icon color',
+          },
+        },
+        error: {
+          value: '{options.color.error-red-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'The error message icon color',
+          },
+        },   
+        info: {
+          value: '{options.color.info-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'icon',
+            example: '{color.docExample}',
+            description: 'The informational message icon color',
+          },
+        },      
+      }
     },
 
     background: {
@@ -192,6 +266,26 @@
         },
       },
       message: {
+        'default-01': {
+          value: '{options.color.default-grey-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for default messages',
+          }
+        },
+        'default-02': {
+          value: '{options.color.default-grey-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for default messages',
+          }
+        },        
         success: {
           value: '{options.color.success-green-200.value}',
           category: 'color',
@@ -202,6 +296,26 @@
             description: 'Background color for success messages',
           },
         },
+        'success-01': {
+          value: '{options.color.success-green-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for success messages',
+          }
+        },
+        'success-02': {
+          value: '{options.color.success-green-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for success messages',
+          }
+        },
         warning: {
           value: '{options.color.warning-yellow-200.value}',
           category: 'color',
@@ -210,6 +324,26 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Background color for warning messages',
+          },
+        },
+        'warning-01': {
+          value: '{options.color.warning-yellow-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for warning messages',
+          },
+        },
+        'warning-02': {
+          value: '{options.color.warning-yellow-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for warning messages',
           },
         },
         error: {
@@ -222,6 +356,26 @@
             description: 'Background color for error messages',
           },
         },
+        'error-01': {
+          value: '{options.color.error-red-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for error messages',
+          },
+        },
+        'error-02': {
+          value: '{options.color.error-red-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for error messages',
+          },
+        },
         info: {
           value: '{options.color.alpine-lake-blue-200.value}',
           category: 'color',
@@ -230,6 +384,26 @@
             type: 'background',
             example: '{color.docExample}',
             description: 'Background color for informational messages',
+          },
+        },
+        'info-01': {
+          value: '{options.color.info-blue-100.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for informational messages',
+          },
+        },
+        'info-02': {
+          value: '{options.color.info-blue-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'background',
+            example: '{color.docExample}',
+            description: 'Background color variant for informational messages',
           },
         },
         sale: {
@@ -347,6 +521,108 @@
           description: 'Border color for informational elements',
         },
       },
+      message: {
+        'default-01': {
+          value: '{options.color.default-grey-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for default messages',
+          }
+        },
+        'default-02': {
+          value: '{options.color.default-grey-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for default messages',
+          }
+        },
+        'success-01': {
+          value: '{options.color.success-green-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for success messages',
+          }
+        },
+        'success-02': {
+          value: '{options.color.success-green-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for success messages',
+          }
+        },
+        'warning-01': {
+          value: '{options.color.warning-yellow-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for warning messages',
+          }
+        },
+        'warning-02': {
+          value: '{options.color.warning-yellow-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for warning messages',
+          }
+        },
+        'error-01': {
+          value: '{options.color.error-red-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for error messages',
+          }
+        },  
+        'error-02': {
+          value: '{options.color.error-red-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for error messages',
+          }
+        },  
+        'info-01': {
+          value: '{options.color.info-blue-800.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for informational messages',
+          }
+        },
+        'info-02': {
+          value: '{options.color.info-blue-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'border',
+            example: '{color.docExample}',
+            description: 'Border color variant for informational messages',
+          }
+        },    
+      }
     },
   },
 }
