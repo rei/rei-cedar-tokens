@@ -562,6 +562,168 @@
   line-height: 6.4rem;
 }
 
+@mixin cdr-text-heading-display-800() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+
+%cdr-text-heading-display-800 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+
+@mixin cdr-text-heading-display-900() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 3.6rem;
+  line-height: 4rem;
+}
+
+%cdr-text-heading-display-900 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 3.6rem;
+  line-height: 4rem;
+}
+
+@mixin cdr-text-heading-display-1000() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 4.2rem;
+  line-height: 5rem;
+}
+
+%cdr-text-heading-display-1000 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 4.2rem;
+  line-height: 5rem;
+}
+
+@mixin cdr-text-heading-display-1100() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+}
+
+%cdr-text-heading-display-1100 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+}
+
+@mixin cdr-text-heading-display-1200() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 5.4rem;
+  line-height: 6.4rem;
+}
+
+%cdr-text-heading-display-1200 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 5.4rem;
+  line-height: 6.4rem;
+}
+
+@mixin cdr-text-heading-display-1300() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 6rem;
+  line-height: 7.2rem;
+}
+
+%cdr-text-heading-display-1300 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 6rem;
+  line-height: 7.2rem;
+}
+
+@mixin cdr-text-heading-display-1400() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 6.8rem;
+  line-height: 7.2rem;
+}
+
+%cdr-text-heading-display-1400 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 6.8rem;
+  line-height: 7.2rem;
+}
+
+@mixin cdr-text-heading-display-1500() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 7.6rem;
+  line-height: 8rem;
+}
+
+%cdr-text-heading-display-1500 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 7.6rem;
+  line-height: 8rem;
+}
+
+@mixin cdr-text-heading-display-1600() {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 8.6rem;
+  line-height: 9.2rem;
+}
+
+%cdr-text-heading-display-1600 {
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-size: 8.6rem;
+  line-height: 9.2rem;
+}
+
 @mixin cdr-text-subheading-sans-300() {
   font-family: Graphik, "Helvetica Neue", sans-serif;
   font-style: normal;
@@ -1711,6 +1873,60 @@ $cdr-text-heading-serif-strong-1200-weight: 600;
 $cdr-text-heading-serif-strong-1200-spacing: 0px;
 $cdr-text-heading-serif-strong-1200-size: 5.4rem;
 $cdr-text-heading-serif-strong-1200-height: 6.4rem;
+$cdr-text-heading-display-800-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-800-style: normal;
+$cdr-text-heading-display-800-weight: 400;
+$cdr-text-heading-display-800-spacing: 0px;
+$cdr-text-heading-display-800-size: 3.2rem;
+$cdr-text-heading-display-800-height: 3.6rem;
+$cdr-text-heading-display-900-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-900-style: normal;
+$cdr-text-heading-display-900-weight: 400;
+$cdr-text-heading-display-900-spacing: 0px;
+$cdr-text-heading-display-900-size: 3.6rem;
+$cdr-text-heading-display-900-height: 4rem;
+$cdr-text-heading-display-1000-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1000-style: normal;
+$cdr-text-heading-display-1000-weight: 400;
+$cdr-text-heading-display-1000-spacing: 0px;
+$cdr-text-heading-display-1000-size: 4.2rem;
+$cdr-text-heading-display-1000-height: 5rem;
+$cdr-text-heading-display-1100-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1100-style: normal;
+$cdr-text-heading-display-1100-weight: 400;
+$cdr-text-heading-display-1100-spacing: 0px;
+$cdr-text-heading-display-1100-size: 4.8rem;
+$cdr-text-heading-display-1100-height: 5.6rem;
+$cdr-text-heading-display-1200-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1200-style: normal;
+$cdr-text-heading-display-1200-weight: 400;
+$cdr-text-heading-display-1200-spacing: 0px;
+$cdr-text-heading-display-1200-size: 5.4rem;
+$cdr-text-heading-display-1200-height: 6.4rem;
+$cdr-text-heading-display-1300-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1300-style: normal;
+$cdr-text-heading-display-1300-weight: 400;
+$cdr-text-heading-display-1300-spacing: 0px;
+$cdr-text-heading-display-1300-size: 6rem;
+$cdr-text-heading-display-1300-height: 7.2rem;
+$cdr-text-heading-display-1400-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1400-style: normal;
+$cdr-text-heading-display-1400-weight: 400;
+$cdr-text-heading-display-1400-spacing: 0px;
+$cdr-text-heading-display-1400-size: 6.8rem;
+$cdr-text-heading-display-1400-height: 7.2rem;
+$cdr-text-heading-display-1500-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1500-style: normal;
+$cdr-text-heading-display-1500-weight: 400;
+$cdr-text-heading-display-1500-spacing: 0px;
+$cdr-text-heading-display-1500-size: 7.6rem;
+$cdr-text-heading-display-1500-height: 8rem;
+$cdr-text-heading-display-1600-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1600-style: normal;
+$cdr-text-heading-display-1600-weight: 400;
+$cdr-text-heading-display-1600-spacing: 0px;
+$cdr-text-heading-display-1600-size: 8.6rem;
+$cdr-text-heading-display-1600-height: 9.2rem;
 $cdr-text-subheading-sans-300-family: Graphik, "Helvetica Neue", sans-serif;
 $cdr-text-subheading-sans-300-style: normal;
 $cdr-text-subheading-sans-300-weight: 500;
