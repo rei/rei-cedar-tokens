@@ -91,7 +91,7 @@ module.exports = {
   CdrColorBackgroundMessageError01: "#fdf7f7",
   CdrColorBackgroundMessageError02: "#eecbc1",
   CdrColorBackgroundMessageInfo: "#e2f4fe",
-  CdrColorBackgroundMessageInfo01: "#edf45f",
+  CdrColorBackgroundMessageInfo01: "#edf4f5",
   CdrColorBackgroundMessageInfo02: "#c2d8db",
   CdrColorBackgroundMessageSale: "#c7370f",
   CdrColorBackgroundAccordionHover: "#f9f8f6",
