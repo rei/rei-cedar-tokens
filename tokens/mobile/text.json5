@@ -33,7 +33,7 @@
           }
         },
         'font-family': {
-          value: 'Graphic-App-Medium.ttf',
+          value: 'Stuart-App-Medium.otf',
           property: 'font-family',
           docs: {
             category: '{text.default.display1.docCategory}',
@@ -52,7 +52,7 @@
         docIos: '{text.default.title1.docAndroid}',
         docDescription: 'Suggested Usage: Content titles, level 1',
         size: {
-          value: '28px',
+          value: '26px',
           category: 'font-size',
           property: 'font-size',
           docs: {
@@ -95,7 +95,7 @@
         docIos: '{text.default.title2.docAndroid}',
         docDescription: 'Suggested Usage: Content titles, product names, level 2',
         size: {
-          value: '26px',
+          value: '24px',
           category: 'font-size',
           property: 'font-size',
           docs: {
@@ -138,7 +138,7 @@
         docIos: '{text.default.title3.docAndroid}',
         docDescription: 'Suggested Usage: Content titles, product names, product prices, level 3',
         size: {
-          value: '21px',
+          value: '19px',
           category: 'font-size',
           property: 'font-size',
           docs: {
@@ -204,17 +204,6 @@
             description: '{text.default.headline.docDescription}',
           }
         },
-        'font-family': {
-          value: 'Graphic-App-Medium.ttf',
-          property: 'font-family',
-          docs: {
-            category: '{text.default.headline.docCategory}',
-            type: '{text.default.headline.docType}',
-            android: '{text.default.headline.docAndroid}',
-            ios: '{text.default.headline.docIos}',
-            description: '{text.default.headline.docDescription}',
-          }
-        },
       },
       // Subheadline
       subheadline: {
@@ -239,17 +228,6 @@
           value: '20px',
           category: 'size',
           property: 'line-height',
-          docs: {
-            category: '{text.default.subheadline.docCategory}',
-            type: '{text.default.subheadline.docType}',
-            android: '{text.default.subheadline.docAndroid}',
-            ios: '{text.default.subheadline.docIos}',
-            description: '{text.default.subheadline.docDescription}',
-          }
-        },
-        'font-family': {
-          value: 'Graphic-App-Medium.ttf',
-          property: 'font-family',
           docs: {
             category: '{text.default.subheadline.docCategory}',
             type: '{text.default.subheadline.docType}',
@@ -290,17 +268,6 @@
             description: '{text.default.body1.docDescription}',
           }
         },
-        'font-family': {
-          value: 'Graphic-App-Regular.ttf',
-          property: 'font-family',
-          docs: {
-            category: '{text.default.body1.docCategory}',
-            type: '{text.default.body1.docType}',
-            android: '{text.default.body1.docAndroid}',
-            ios: '{text.default.body1.docIos}',
-            description: '{text.default.body1.docDescription}',
-          }
-        },
       },
       // Body 2
       body2: {
@@ -322,20 +289,9 @@
           }
         },
         'line-spacing': {
-          value: '20px',
+          value: '18px',
           category: 'size',
           property: 'line-height',
-          docs: {
-            category: '{text.default.body2.docCategory}',
-            type: '{text.default.body2.docType}',
-            android: '{text.default.body2.docAndroid}',
-            ios: '{text.default.body2.docIos}',
-            description: '{text.default.body2.docDescription}',
-          }
-        },
-        'font-family': {
-          value: 'Graphic-App-Regular.ttf',
-          property: 'font-family',
           docs: {
             category: '{text.default.body2.docCategory}',
             type: '{text.default.body2.docType}',
@@ -376,17 +332,6 @@
             description: '{text.default.caption1.docDescription}',
           }
         },
-        'font-family': {
-          value: 'Graphic-App-Regular.ttf',
-          property: 'font-family',
-          docs: {
-            category: '{text.default.caption1.docCategory}',
-            type: '{text.default.caption1.docType}',
-            android: '{text.default.caption1.docAndroid}',
-            ios: '{text.default.caption1.docIos}',
-            description: '{text.default.caption1.docDescription}',
-          }
-        },
       },
       // Caption 2
       caption2: {
@@ -419,17 +364,6 @@
             description: '{text.default.caption2.docDescription}',
           }
         },
-        'font-family': {
-          value: 'Graphic-App-Regular.ttf',
-          property: 'font-family',
-          docs: {
-            category: '{text.default.caption2.docCategory}',
-            type: '{text.default.caption2.docType}',
-            android: '{text.default.caption2.docAndroid}',
-            ios: '{text.default.caption2.docIos}',
-            description: '{text.default.caption2.docDescription}',
-          }
-        },
       },
       // Button
       button: {
@@ -454,17 +388,6 @@
           value: '24px',
           category: 'size',
           property: 'line-height',
-          docs: {
-            category: '{text.default.button.docCategory}',
-            type: '{text.default.button.docType}',
-            android: '{text.default.button.docAndroid}',
-            ios: '{text.default.button.docIos}',
-            description: '{text.default.button.docDescription}',
-          }
-        },
-        'font-family': {
-          value: 'Graphic-App-Medium.ttf',
-          property: 'font-family',
           docs: {
             category: '{text.default.button.docCategory}',
             type: '{text.default.button.docType}',
