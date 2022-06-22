@@ -3,10 +3,7 @@
 // CdrSize.m
 //
 
-//
-
 #import "CdrSize.h"
-
 
 
 float const CdrFormInputHeightDefault = 40.0f;

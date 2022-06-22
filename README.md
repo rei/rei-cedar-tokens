@@ -16,7 +16,9 @@
 
 ## Updating
 
-If you are consuming tokens in SCSS, there are deprecation warnings for variables, mixins, etc. that will appear in the console during your build. These can be silenced by adding a variable to your code called `cdr-warn` and setting it to false like this: `$cdr-warn: false;`
+If you are consuming tokens in SCSS, there are deprecation warnings for variables, mixins, etc.
+that will appear in the console during your build.
+These can be silenced by adding a variable to your code called `cdr-warn` and setting it to false like this: `$cdr-warn: false;`
 
 All other formats should consult the changelog for a migration path.
 
