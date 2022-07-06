@@ -5425,32 +5425,6 @@
       }
     },
     {
-      "value": "#fff9f8f6",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch icon when the switch is not selected on rest"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-100.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch icon when the switch is not selected on rest"
-        }
-      },
-      "name": "cdr_color_icon_switch_rest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
       "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
@@ -5625,7 +5599,7 @@
           "description": "Color of a switch handle background when the switch is not selected on rest"
         }
       },
-      "name": "cdr_color_handle_background_select_rest",
+      "name": "cdr_color_handle_background_selected_rest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5651,7 +5625,7 @@
           "description": "Color of a switch handle background when the switch is not selected on hover"
         }
       },
-      "name": "cdr_color_handle_background_select_hover",
+      "name": "cdr_color_handle_background_selected_hover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5677,7 +5651,33 @@
           "description": "Color of a switch handle background when the switch is not selected on focus"
         }
       },
-      "name": "cdr_color_handle_background_select_focus",
+      "name": "cdr_color_handle_background_selected_focus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle border when the switch is not selected on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle border when the switch is not selected on rest"
+        }
+      },
+      "name": "cdr_color_handle_border_switch_rest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5691,7 +5691,7 @@
         "category": "colors",
         "type": "switch",
         "example": "color",
-        "description": "Color of a switch handle boder when the switch is not selected on hover"
+        "description": "Color of a switch handle border when the switch is not selected on hover"
       },
       "original": {
         "value": "{options.color.warm-grey-900.value}",
@@ -5700,10 +5700,36 @@
           "category": "colors",
           "type": "switch",
           "example": "color",
-          "description": "Color of a switch handle boder when the switch is not selected on hover"
+          "description": "Color of a switch handle border when the switch is not selected on hover"
         }
       },
       "name": "cdr_color_handle_border_switch_hover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdcd6cb",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle border when the switch is not selected on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle border when the switch is not selected on focus"
+        }
+      },
+      "name": "cdr_color_handle_border_switch_focus",
       "attributes": {
         "option": false,
         "deprecated": false,

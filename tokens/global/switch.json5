@@ -84,16 +84,6 @@
     },
     icon: {
       switch: {
-        rest: {
-          value: '{options.color.warm-grey-100.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'switch',
-            example: '{color.docExample}',
-            description: 'Color of a switch icon when the switch is not selected on rest',
-          },
-        },
         selected: {
           rest: {
             value: '{options.color.warm-grey-400.value}',
@@ -162,7 +152,7 @@
             },
           },
         },
-        select: {
+        selected: {
           rest: {
             value: '{options.color.warm-grey-400.value}',
             category: 'color',
@@ -197,6 +187,16 @@
       },
       border: {
         switch: {
+          rest: {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'switch',
+              example: '{color.docExample}',
+              description: 'Color of a switch handle border when the switch is not selected on rest',
+            },
+          },
           hover: {
             value: '{options.color.warm-grey-900.value}',
             category: 'color',
@@ -204,7 +204,17 @@
               category: '{color.docCategory}',
               type: 'switch',
               example: '{color.docExample}',
-              description: 'Color of a switch handle boder when the switch is not selected on hover',
+              description: 'Color of a switch handle border when the switch is not selected on hover',
+            },
+          },
+          focus: {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'switch',
+              example: '{color.docExample}',
+              description: 'Color of a switch handle border when the switch is not selected on focus',
             },
           },
         },
