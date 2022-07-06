@@ -1294,40 +1294,40 @@
       ]
     },
     {
-      "name": "cdr-color-background-switch-rest",
+      "name": "cdr-color-background-switch-default-rest",
       "value": "#f9f8f6",
       "type": "background",
       "path": [
         "color",
         "background",
         "switch",
-        "rest"
+        "default-rest"
       ]
     },
     {
-      "name": "cdr-color-background-switch-hover",
+      "name": "cdr-color-background-switch-default-hover",
       "value": "#f9f8f6",
       "type": "background",
       "path": [
         "color",
         "background",
         "switch",
-        "hover"
+        "default-hover"
       ]
     },
     {
-      "name": "cdr-color-background-switch-focus",
+      "name": "cdr-color-background-switch-default-focus",
       "value": "#f9f8f6",
       "type": "background",
       "path": [
         "color",
         "background",
         "switch",
-        "focus"
+        "default-focus"
       ]
     },
     {
-      "name": "cdr-color-background-switch-selected-rest",
+      "name": "cdr-color-background-switch-selected-default-rest",
       "value": "#4e4d49",
       "type": "background",
       "path": [
@@ -1335,11 +1335,11 @@
         "background",
         "switch",
         "selected",
-        "rest"
+        "default-rest"
       ]
     },
     {
-      "name": "cdr-color-background-switch-selected-hover",
+      "name": "cdr-color-background-switch-selected-default-hover",
       "value": "#373734",
       "type": "background",
       "path": [
@@ -1347,11 +1347,11 @@
         "background",
         "switch",
         "selected",
-        "hover"
+        "default-hover"
       ]
     },
     {
-      "name": "cdr-color-background-switch-selected-focus",
+      "name": "cdr-color-background-switch-selected-default-focus",
       "value": "#373734",
       "type": "background",
       "path": [
@@ -1359,7 +1359,82 @@
         "background",
         "switch",
         "selected",
-        "focus"
+        "default-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-switch-handle-default-rest",
+      "value": "#dcd6cb",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "switch",
+        "handle",
+        "default-rest"
+      ]
+    },
+    {
+      "name": "cdr-color-background-switch-handle-default-hover",
+      "value": "#edeae3",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "switch",
+        "handle",
+        "default-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-background-switch-handle-default-focus",
+      "value": "#dcd6cb",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "switch",
+        "handle",
+        "default-focus"
+      ]
+    },
+    {
+      "name": "cdr-color-background-switch-handle-selected-default-rest",
+      "value": "#dcd6cb",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "switch",
+        "handle",
+        "selected",
+        "default-rest"
+      ]
+    },
+    {
+      "name": "cdr-color-background-switch-handle-selected-default-hover",
+      "value": "#dcd6cb",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "switch",
+        "handle",
+        "selected",
+        "default-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-background-switch-handle-selected-default-focus",
+      "value": "#dcd6cb",
+      "type": "background",
+      "path": [
+        "color",
+        "background",
+        "switch",
+        "handle",
+        "selected",
+        "default-focus"
       ]
     },
     {
@@ -2052,14 +2127,50 @@
       ]
     },
     {
-      "name": "cdr-color-border-switch-hover",
+      "name": "cdr-color-border-switch-default-hover",
       "value": "#4e4d49",
       "type": "border",
       "path": [
         "color",
         "border",
         "switch",
-        "hover"
+        "default-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-border-switch-handle-default-rest",
+      "value": "#dcd6cb",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "switch",
+        "handle",
+        "default-rest"
+      ]
+    },
+    {
+      "name": "cdr-color-border-switch-handle-default-hover",
+      "value": "#4e4d49",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "switch",
+        "handle",
+        "default-hover"
+      ]
+    },
+    {
+      "name": "cdr-color-border-switch-handle-default-focus",
+      "value": "#dcd6cb",
+      "type": "border",
+      "path": [
+        "color",
+        "border",
+        "switch",
+        "handle",
+        "default-focus"
       ]
     },
     {
@@ -2293,7 +2404,7 @@
       ]
     },
     {
-      "name": "cdr-color-icon-switch-selected-rest",
+      "name": "cdr-color-icon-switch-selected-default-rest",
       "value": "#dcd6cb",
       "type": "icon",
       "path": [
@@ -2301,11 +2412,11 @@
         "icon",
         "switch",
         "selected",
-        "rest"
+        "default-rest"
       ]
     },
     {
-      "name": "cdr-color-icon-switch-selected-hover",
+      "name": "cdr-color-icon-switch-selected-default-hover",
       "value": "#dcd6cb",
       "type": "icon",
       "path": [
@@ -2313,11 +2424,11 @@
         "icon",
         "switch",
         "selected",
-        "hover"
+        "default-hover"
       ]
     },
     {
-      "name": "cdr-color-icon-switch-selected-focus",
+      "name": "cdr-color-icon-switch-selected-default-focus",
       "value": "#dcd6cb",
       "type": "icon",
       "path": [
@@ -2325,115 +2436,7 @@
         "icon",
         "switch",
         "selected",
-        "focus"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-background-switch-rest",
-      "value": "#dcd6cb",
-      "type": "background",
-      "path": [
-        "color",
-        "handle",
-        "background",
-        "switch",
-        "rest"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-background-switch-hover",
-      "value": "#edeae3",
-      "type": "background",
-      "path": [
-        "color",
-        "handle",
-        "background",
-        "switch",
-        "hover"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-background-switch-focus",
-      "value": "#dcd6cb",
-      "type": "background",
-      "path": [
-        "color",
-        "handle",
-        "background",
-        "switch",
-        "focus"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-background-selected-rest",
-      "value": "#dcd6cb",
-      "type": "background",
-      "path": [
-        "color",
-        "handle",
-        "background",
-        "selected",
-        "rest"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-background-selected-hover",
-      "value": "#dcd6cb",
-      "type": "background",
-      "path": [
-        "color",
-        "handle",
-        "background",
-        "selected",
-        "hover"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-background-selected-focus",
-      "value": "#dcd6cb",
-      "type": "background",
-      "path": [
-        "color",
-        "handle",
-        "background",
-        "selected",
-        "focus"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-border-switch-rest",
-      "value": "#dcd6cb",
-      "type": "border",
-      "path": [
-        "color",
-        "handle",
-        "border",
-        "switch",
-        "rest"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-border-switch-hover",
-      "value": "#4e4d49",
-      "type": "border",
-      "path": [
-        "color",
-        "handle",
-        "border",
-        "switch",
-        "hover"
-      ]
-    },
-    {
-      "name": "cdr-color-handle-border-switch-focus",
-      "value": "#dcd6cb",
-      "type": "border",
-      "path": [
-        "color",
-        "handle",
-        "border",
-        "switch",
-        "focus"
+        "default-focus"
       ]
     }
   ],

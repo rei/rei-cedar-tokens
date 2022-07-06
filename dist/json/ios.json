@@ -3103,7 +3103,7 @@
           "description": "The background color of a switch on rest"
         }
       },
-      "name": "CdrColorBackgroundSwitchRest",
+      "name": "CdrColorBackgroundSwitchDefaultRest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3129,7 +3129,7 @@
           "description": "The background color of a switch on hover"
         }
       },
-      "name": "CdrColorBackgroundSwitchHover",
+      "name": "CdrColorBackgroundSwitchDefaultHover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3155,7 +3155,7 @@
           "description": "The background color of a switch on focus"
         }
       },
-      "name": "CdrColorBackgroundSwitchFocus",
+      "name": "CdrColorBackgroundSwitchDefaultFocus",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3181,7 +3181,7 @@
           "description": "The background color of a selected switch on rest"
         }
       },
-      "name": "CdrColorBackgroundSwitchSelectedRest",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultRest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3207,7 +3207,7 @@
           "description": "The background color of a selected switch on hover"
         }
       },
-      "name": "CdrColorBackgroundSwitchSelectedHover",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultHover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -3233,7 +3233,163 @@
           "description": "The background color of a selected switch on focus"
         }
       },
-      "name": "CdrColorBackgroundSwitchSelectedFocus",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultFocus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Background color of a switch handle background when the switch is not selected on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Background color of a switch handle background when the switch is not selected on rest"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchHandleDefaultRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle background when the switch is not selected on hover"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle background when the switch is not selected on hover"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchHandleDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle background when the switch is not selected on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle background when the switch is not selected on focus"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchHandleDefaultFocus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle background when the switch is not selected on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle background when the switch is not selected on rest"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchHandleSelectedDefaultRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle background when the switch is not selected on hover"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle background when the switch is not selected on hover"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchHandleSelectedDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle background when the switch is not selected on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle background when the switch is not selected on focus"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchHandleSelectedDefaultFocus",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -4871,7 +5027,85 @@
           "description": "Border color for a switch that is not selected on hover"
         }
       },
-      "name": "CdrColorBorderSwitchHover",
+      "name": "CdrColorBorderSwitchDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle border when the switch is not selected on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle border when the switch is not selected on rest"
+        }
+      },
+      "name": "CdrColorBorderSwitchHandleDefaultRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle border when the switch is not selected on hover"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle border when the switch is not selected on hover"
+        }
+      },
+      "name": "CdrColorBorderSwitchHandleDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "Color of a switch handle border when the switch is not selected on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-400.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "Color of a switch handle border when the switch is not selected on focus"
+        }
+      },
+      "name": "CdrColorBorderSwitchHandleDefaultFocus",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5443,7 +5677,7 @@
           "description": "Color of a switch icon when the switch is selected"
         }
       },
-      "name": "CdrColorIconSwitchSelectedRest",
+      "name": "CdrColorIconSwitchSelectedDefaultRest",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5469,7 +5703,7 @@
           "description": "Color of a switch icon when the switch is selected on hover"
         }
       },
-      "name": "CdrColorIconSwitchSelectedHover",
+      "name": "CdrColorIconSwitchSelectedDefaultHover",
       "attributes": {
         "option": false,
         "deprecated": false,
@@ -5495,241 +5729,7 @@
           "description": "Color of a switch icon when the switch is selected on focus"
         }
       },
-      "name": "CdrColorIconSwitchSelectedFocus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Background color of a switch handle background when the switch is not selected on rest"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Background color of a switch handle background when the switch is not selected on rest"
-        }
-      },
-      "name": "CdrColorHandleBackgroundSwitchRest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle background when the switch is not selected on hover"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-300.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle background when the switch is not selected on hover"
-        }
-      },
-      "name": "CdrColorHandleBackgroundSwitchHover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle background when the switch is not selected on focus"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle background when the switch is not selected on focus"
-        }
-      },
-      "name": "CdrColorHandleBackgroundSwitchFocus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle background when the switch is not selected on rest"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle background when the switch is not selected on rest"
-        }
-      },
-      "name": "CdrColorHandleBackgroundSelectedRest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle background when the switch is not selected on hover"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle background when the switch is not selected on hover"
-        }
-      },
-      "name": "CdrColorHandleBackgroundSelectedHover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle background when the switch is not selected on focus"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle background when the switch is not selected on focus"
-        }
-      },
-      "name": "CdrColorHandleBackgroundSelectedFocus",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle border when the switch is not selected on rest"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle border when the switch is not selected on rest"
-        }
-      },
-      "name": "CdrColorHandleBorderSwitchRest",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle border when the switch is not selected on hover"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-900.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle border when the switch is not selected on hover"
-        }
-      },
-      "name": "CdrColorHandleBorderSwitchHover",
-      "attributes": {
-        "option": false,
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "switch",
-        "example": "color",
-        "description": "Color of a switch handle border when the switch is not selected on focus"
-      },
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "switch",
-          "example": "color",
-          "description": "Color of a switch handle border when the switch is not selected on focus"
-        }
-      },
-      "name": "CdrColorHandleBorderSwitchFocus",
+      "name": "CdrColorIconSwitchSelectedDefaultFocus",
       "attributes": {
         "option": false,
         "deprecated": false,

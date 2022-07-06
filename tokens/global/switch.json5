@@ -4,7 +4,7 @@
     docExample: 'color',
     background: {
       switch: {
-        rest: {
+        'default-rest': {
           value: '{options.color.warm-grey-100.value}',
           category: 'color',
           docs: {
@@ -14,7 +14,7 @@
             description: 'The background color of a switch on rest',
           },
         },
-        hover: {
+        'default-hover': {
           value: '{options.color.warm-grey-100.value}',
           category: 'color',
           docs: {
@@ -24,7 +24,7 @@
             description: 'The background color of a switch on hover',
           },
         },
-        focus: {
+        'default-focus': {
           value: '{options.color.warm-grey-100.value}',
           category: 'color',
           docs: {
@@ -35,7 +35,7 @@
           },
         },
         selected: {
-          rest: {
+          'default-rest': {
             value: '{options.color.warm-grey-900.value}',
             category: 'color',
             docs: {
@@ -45,7 +45,7 @@
               description: 'The background color of a selected switch on rest',
             },
           },
-          hover: {
+          'default-hover': {
             value: '{options.color.warm-grey-1000.value}',
             category: 'color',
             docs: {
@@ -55,7 +55,7 @@
               description: 'The background color of a selected switch on hover',
             },
           },
-          focus: {
+          'default-focus': {
             value: '{options.color.warm-grey-1000.value}',
             category: 'color',
             docs: {
@@ -66,62 +66,8 @@
             },
           },
         },
-      },
-    },
-    border: {
-      switch: {
-        hover: {
-          value: '{options.color.warm-grey-900.value}',
-          category: 'color',
-          docs: {
-            category: '{color.docCategory}',
-            type: 'switch',
-            example: '{color.docExample}',
-            description: 'Border color for a switch that is not selected on hover',
-          },
-        },
-      },
-    },
-    icon: {
-      switch: {
-        selected: {
-          rest: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'switch',
-              example: '{color.docExample}',
-              description: 'Color of a switch icon when the switch is selected',
-            },
-          },
-          hover: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'switch',
-              example: '{color.docExample}',
-              description: 'Color of a switch icon when the switch is selected on hover',
-            },
-          },
-          focus: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'switch',
-              example: '{color.docExample}',
-              description: 'Color of a switch icon when the switch is selected on focus',
-            },
-          },
-        },
-      },
-    },
-    handle: {
-      background: {
-        switch: {
-          rest: {
+        handle: {
+          'default-rest': {
             value: '{options.color.warm-grey-400.value}',
             category: 'color',
             docs: {
@@ -131,7 +77,7 @@
               description: 'Background color of a switch handle background when the switch is not selected on rest',
             },
           },
-          hover: {
+          'default-hover': {
             value: '{options.color.warm-grey-300.value}',
             category: 'color',
             docs: {
@@ -141,7 +87,7 @@
               description: 'Color of a switch handle background when the switch is not selected on hover',
             },
           },
-          focus: {
+          'default-focus': {
             value: '{options.color.warm-grey-400.value}',
             category: 'color',
             docs: {
@@ -151,43 +97,55 @@
               description: 'Color of a switch handle background when the switch is not selected on focus',
             },
           },
-        },
-        selected: {
-          rest: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'switch',
-              example: '{color.docExample}',
-              description: 'Color of a switch handle background when the switch is not selected on rest',
+          selected: {
+            'default-rest': {
+              value: '{options.color.warm-grey-400.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'switch',
+                example: '{color.docExample}',
+                description: 'Color of a switch handle background when the switch is not selected on rest',
+              },
             },
-          },
-          hover: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'switch',
-              example: '{color.docExample}',
-              description: 'Color of a switch handle background when the switch is not selected on hover',
+            'default-hover': {
+              value: '{options.color.warm-grey-400.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'switch',
+                example: '{color.docExample}',
+                description: 'Color of a switch handle background when the switch is not selected on hover',
+              },
             },
-          },
-          focus: {
-            value: '{options.color.warm-grey-400.value}',
-            category: 'color',
-            docs: {
-              category: '{color.docCategory}',
-              type: 'switch',
-              example: '{color.docExample}',
-              description: 'Color of a switch handle background when the switch is not selected on focus',
+            'default-focus': {
+              value: '{options.color.warm-grey-400.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'switch',
+                example: '{color.docExample}',
+                description: 'Color of a switch handle background when the switch is not selected on focus',
+              },
             },
           },
         },
       },
-      border: {
-        switch: {
-          rest: {
+    },
+    border: {
+      switch: {
+        'default-hover': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'switch',
+            example: '{color.docExample}',
+            description: 'Border color for a switch that is not selected on hover',
+          },
+        },
+        handle: {
+          'default-rest': {
             value: '{options.color.warm-grey-400.value}',
             category: 'color',
             docs: {
@@ -197,7 +155,7 @@
               description: 'Color of a switch handle border when the switch is not selected on rest',
             },
           },
-          hover: {
+          'default-hover': {
             value: '{options.color.warm-grey-900.value}',
             category: 'color',
             docs: {
@@ -207,7 +165,7 @@
               description: 'Color of a switch handle border when the switch is not selected on hover',
             },
           },
-          focus: {
+          'default-focus': {
             value: '{options.color.warm-grey-400.value}',
             category: 'color',
             docs: {
@@ -215,6 +173,42 @@
               type: 'switch',
               example: '{color.docExample}',
               description: 'Color of a switch handle border when the switch is not selected on focus',
+            },
+          },
+        },
+      },
+    },
+    icon: {
+      switch: {
+        selected: {
+          'default-rest': {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'switch',
+              example: '{color.docExample}',
+              description: 'Color of a switch icon when the switch is selected',
+            },
+          },
+          'default-hover': {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'switch',
+              example: '{color.docExample}',
+              description: 'Color of a switch icon when the switch is selected on hover',
+            },
+          },
+          'default-focus': {
+            value: '{options.color.warm-grey-400.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'switch',
+              example: '{color.docExample}',
+              description: 'Color of a switch icon when the switch is selected on focus',
             },
           },
         },
