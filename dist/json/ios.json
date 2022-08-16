@@ -1369,6 +1369,32 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "The text color of a toggle button on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The text color of a toggle button on rest"
+        }
+      },
+      "name": "CdrColorTextToggleButtonDefaultRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
       "category": "color",
       "docs": {
@@ -3475,6 +3501,136 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "The background color of a toggle button on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a toggle button on rest"
+        }
+      },
+      "name": "CdrColorBackgroundToggleButtonDefaultRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "The background color of a toggle button on hover"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a toggle button on hover"
+        }
+      },
+      "name": "CdrColorBackgroundToggleButtonDefaultHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "The background color of a toggle button on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-300.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a toggle button on focus"
+        }
+      },
+      "name": "CdrColorBackgroundToggleButtonDefaultFocus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "The background color of a selected toggle button on rest"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a selected toggle button on rest"
+        }
+      },
+      "name": "CdrColorBackgroundToggleButtonDefaultSelectedRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "The background color of a selected toggle button on hover"
+      },
+      "original": {
+        "value": "{options.color.white.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a selected toggle button on hover"
+        }
+      },
+      "name": "CdrColorBackgroundToggleButtonDefaultSelectedHover",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.216f green:0.216f blue:0.204f alpha:1.000f]",
       "category": "color",
       "docs": {
@@ -5314,6 +5470,84 @@
         }
       },
       "name": "CdrColorBorderTableHead",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "Border color for a toggle button that is not selected on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "Border color for a toggle button that is not selected on focus"
+        }
+      },
+      "name": "CdrColorBorderToggleButtonDefaultFocus",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "Border color for a selected toggle button on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "Border color for a selected toggle button on rest"
+        }
+      },
+      "name": "CdrColorBorderToggleButtonDefaultSelectedRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "toggle button",
+        "example": "color",
+        "description": "Border color for a selected toggle on focus"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-900.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "Border color for a selected toggle on focus"
+        }
+      },
+      "name": "CdrColorBorderToggleButtonDefaultSelectedFocus",
       "attributes": {
         "option": false,
         "deprecated": false,

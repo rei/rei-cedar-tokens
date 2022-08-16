@@ -1370,6 +1370,32 @@
         }
       },
       {
+        "value": "#4e4d49",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The text color of a toggle button on rest"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-900.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The text color of a toggle button on rest"
+          }
+        },
+        "name": "cdr-color-text-toggle-button-default-rest",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "#f9f8f6",
         "category": "color",
         "docs": {
@@ -3476,6 +3502,136 @@
         }
       },
       {
+        "value": "#f9f8f6",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a toggle button on rest"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-100.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The background color of a toggle button on rest"
+          }
+        },
+        "name": "cdr-color-background-toggle-button-default-rest",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#edeae3",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a toggle button on hover"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-300.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The background color of a toggle button on hover"
+          }
+        },
+        "name": "cdr-color-background-toggle-button-default-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#edeae3",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a toggle button on focus"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-300.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The background color of a toggle button on focus"
+          }
+        },
+        "name": "cdr-color-background-toggle-button-default-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a selected toggle button on rest"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The background color of a selected toggle button on rest"
+          }
+        },
+        "name": "cdr-color-background-toggle-button-default-selected-rest",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "The background color of a selected toggle button on hover"
+        },
+        "original": {
+          "value": "{options.color.white.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The background color of a selected toggle button on hover"
+          }
+        },
+        "name": "cdr-color-background-toggle-button-default-selected-hover",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "#373734",
         "category": "color",
         "docs": {
@@ -5315,6 +5471,84 @@
           }
         },
         "name": "cdr-color-border-table-head",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#4e4d49",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "Border color for a toggle button that is not selected on focus"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-900.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "Border color for a toggle button that is not selected on focus"
+          }
+        },
+        "name": "cdr-color-border-toggle-button-default-focus",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#4e4d49",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "Border color for a selected toggle button on rest"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-900.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "Border color for a selected toggle button on rest"
+          }
+        },
+        "name": "cdr-color-border-toggle-button-default-selected-rest",
+        "attributes": {
+          "option": false,
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#4e4d49",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle button",
+          "example": "color",
+          "description": "Border color for a selected toggle on focus"
+        },
+        "original": {
+          "value": "{options.color.warm-grey-900.value}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "Border color for a selected toggle on focus"
+          }
+        },
+        "name": "cdr-color-border-toggle-button-default-selected-focus",
         "attributes": {
           "option": false,
           "deprecated": false,
