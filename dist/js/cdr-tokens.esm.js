@@ -132,6 +132,7 @@ export const CdrColorBackgroundSwitchHandleSelectedDefaultFocus = "#dcd6cb";
 export const CdrColorBackgroundTableHeader = "#f4f2ed";
 export const CdrColorBackgroundTableRow = "#ffffff";
 export const CdrColorBackgroundTableRowAlt = "#f9f8f6";
+export const CdrColorBackgroundToggleGroupDefaultRest = "#f9f8f6";
 export const CdrColorBackgroundToggleButtonDefaultRest = "#f9f8f6";
 export const CdrColorBackgroundToggleButtonDefaultHover = "#edeae3";
 export const CdrColorBackgroundToggleButtonDefaultFocus = "#edeae3";

@@ -133,6 +133,7 @@ module.exports = {
   CdrColorBackgroundTableHeader: "#f4f2ed",
   CdrColorBackgroundTableRow: "#ffffff",
   CdrColorBackgroundTableRowAlt: "#f9f8f6",
+  CdrColorBackgroundToggleGroupDefaultRest: "#f9f8f6",
   CdrColorBackgroundToggleButtonDefaultRest: "#f9f8f6",
   CdrColorBackgroundToggleButtonDefaultHover: "#edeae3",
   CdrColorBackgroundToggleButtonDefaultFocus: "#edeae3",

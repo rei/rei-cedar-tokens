@@ -3505,6 +3505,32 @@
       "category": "color",
       "docs": {
         "category": "colors",
+        "type": "toggle group",
+        "example": "color",
+        "description": "The background color of a toggle group on rest"
+      },
+      "original": {
+        "value": "{options.color.warm-grey-100.value}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "toggle group",
+          "example": "color",
+          "description": "The background color of a toggle group on rest"
+        }
+      },
+      "name": "CdrColorBackgroundToggleGroupDefaultRest",
+      "attributes": {
+        "option": false,
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "category": "colors",
         "type": "toggle button",
         "example": "color",
         "description": "The background color of a toggle button on rest"

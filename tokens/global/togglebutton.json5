@@ -17,6 +17,20 @@
       },
     },
     background: {
+      'toggle-group' : {
+        default :{
+          rest: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'toggle group',
+              example: '{color.docExample}',
+              description: 'The background color of a toggle group on rest',
+            },
+          },
+        }
+      },
       'toggle-button': {
         default: {
           rest: {
