@@ -1,0 +1,130 @@
+{
+  color: {
+    docCategory: 'colors',
+    docExample: 'color',
+    text: {
+      'toggle-button': {
+        'default-rest': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'toggle button',
+            example: '{color.docExample}',
+            description: 'The text color of a toggle button on rest',
+          },
+        },
+      },
+    },
+    background: {
+      'toggle-group' : {
+        default :{
+          rest: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'toggle group',
+              example: '{color.docExample}',
+              description: 'The background color of a toggle group on rest',
+            },
+          },
+        }
+      },
+      'toggle-button': {
+        default: {
+          rest: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'toggle button',
+              example: '{color.docExample}',
+              description: 'The background color of a toggle button on rest',
+            },
+          },
+          hover: {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'toggle button',
+              example: '{color.docExample}',
+              description: 'The background color of a toggle button on hover',
+            },
+          },
+          focus: {
+            value: '{options.color.warm-grey-300.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'toggle button',
+              example: '{color.docExample}',
+              description: 'The background color of a toggle button on focus',
+            },
+          },
+          selected: {
+            rest: {
+              value: '{options.color.white.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'toggle button',
+                example: '{color.docExample}',
+                description: 'The background color of a selected toggle button on rest',
+              },
+            },
+            hover: {
+              value: '{options.color.white.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'toggle button',
+                example: '{color.docExample}',
+                description: 'The background color of a selected toggle button on hover',
+              },
+            },
+          },
+        },
+      },
+    },
+    border: {
+      'toggle-button': {
+        default: {
+          focus: {
+            value: '{options.color.warm-grey-900.value}',
+            category: 'color',
+            docs: {
+              category: '{color.docCategory}',
+              type: 'toggle button',
+              example: '{color.docExample}',
+              description: 'Border color for a toggle button that is not selected on focus',
+            },
+          },
+          selected: {
+            rest: {
+              value: '{options.color.warm-grey-900.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'toggle button',
+                example: '{color.docExample}',
+                description: 'Border color for a selected toggle button on rest',
+              },
+            },
+            focus: {
+              value: '{options.color.warm-grey-900.value}',
+              category: 'color',
+              docs: {
+                category: '{color.docCategory}',
+                type: 'toggle button',
+                example: '{color.docExample}',
+                description: 'Border color for a selected toggle on focus',
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
