@@ -18,6 +18,13 @@
   ],
   "main": "dist/js/cdr-tokens.common.js",
   "module": "dist/js/cdr-tokens.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/js/cdr-tokens.mjs",
+      "require": "./dist/js/cdr-tokens.common.js"
+    },
+    "./dist/": "./dist/"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
