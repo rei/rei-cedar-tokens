@@ -9,7 +9,7 @@ module.exports = {
         format: 'js/commonjs',
       },
       {
-        destination: 'cdr-tokens.esm.js',
+        destination: 'cdr-tokens.mjs',
         format: 'javascript/es6',
       },
     ],
