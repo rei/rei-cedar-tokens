@@ -3,10 +3,7 @@
 // CdrColor.m
 //
 
-//
-
 #import "CdrColor.h"
-
 
 @implementation CdrColor
 
