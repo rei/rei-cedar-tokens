@@ -1,16 +1,15 @@
 {
   color: {
-    docCategory: 'colors',
-    docExample: 'color',
+
     text: {
       'toggle-button': {
         'default-rest': {
           value: '{options.color.warm-grey-900.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'toggle button',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'The text color of a toggle button on rest',
           },
         },
@@ -23,9 +22,9 @@
             value: '{options.color.warm-grey-100.value}',
             category: 'color',
             docs: {
-              category: '{color.docCategory}',
+              category: '{options.color.docCategory}',
               type: 'toggle group',
-              example: '{color.docExample}',
+              example: '{options.color.docExample}',
               description: 'The background color of a toggle group on rest',
             },
           },
@@ -37,9 +36,9 @@
             value: '{options.color.warm-grey-100.value}',
             category: 'color',
             docs: {
-              category: '{color.docCategory}',
+              category: '{options.color.docCategory}',
               type: 'toggle button',
-              example: '{color.docExample}',
+              example: '{options.color.docExample}',
               description: 'The background color of a toggle button on rest',
             },
           },
@@ -47,9 +46,9 @@
             value: '{options.color.warm-grey-300.value}',
             category: 'color',
             docs: {
-              category: '{color.docCategory}',
+              category: '{options.color.docCategory}',
               type: 'toggle button',
-              example: '{color.docExample}',
+              example: '{options.color.docExample}',
               description: 'The background color of a toggle button on hover',
             },
           },
@@ -57,9 +56,9 @@
             value: '{options.color.warm-grey-300.value}',
             category: 'color',
             docs: {
-              category: '{color.docCategory}',
+              category: '{options.color.docCategory}',
               type: 'toggle button',
-              example: '{color.docExample}',
+              example: '{options.color.docExample}',
               description: 'The background color of a toggle button on focus',
             },
           },
@@ -68,9 +67,9 @@
               value: '{options.color.white.value}',
               category: 'color',
               docs: {
-                category: '{color.docCategory}',
+                category: '{options.color.docCategory}',
                 type: 'toggle button',
-                example: '{color.docExample}',
+                example: '{options.color.docExample}',
                 description: 'The background color of a selected toggle button on rest',
               },
             },
@@ -78,9 +77,9 @@
               value: '{options.color.white.value}',
               category: 'color',
               docs: {
-                category: '{color.docCategory}',
+                category: '{options.color.docCategory}',
                 type: 'toggle button',
-                example: '{color.docExample}',
+                example: '{options.color.docExample}',
                 description: 'The background color of a selected toggle button on hover',
               },
             },
@@ -95,9 +94,9 @@
             value: '{options.color.warm-grey-900.value}',
             category: 'color',
             docs: {
-              category: '{color.docCategory}',
+              category: '{options.color.docCategory}',
               type: 'toggle button',
-              example: '{color.docExample}',
+              example: '{options.color.docExample}',
               description: 'Border color for a toggle button that is not selected on focus',
             },
           },
@@ -106,9 +105,9 @@
               value: '{options.color.warm-grey-900.value}',
               category: 'color',
               docs: {
-                category: '{color.docCategory}',
+                category: '{options.color.docCategory}',
                 type: 'toggle button',
-                example: '{color.docExample}',
+                example: '{options.color.docExample}',
                 description: 'Border color for a selected toggle button on rest',
               },
             },
@@ -116,9 +115,9 @@
               value: '{options.color.warm-grey-900.value}',
               category: 'color',
               docs: {
-                category: '{color.docCategory}',
+                category: '{options.color.docCategory}',
                 type: 'toggle button',
-                example: '{color.docExample}',
+                example: '{options.color.docExample}',
                 description: 'Border color for a selected toggle on focus',
               },
             },

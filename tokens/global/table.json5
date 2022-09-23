@@ -1,15 +1,14 @@
 {
   color: {
-    docCategory: 'colors',
-    docExample: 'color',
+
     background: {
       'table-header': {
         value: '{options.color.warm-grey-200.value}',
         category: 'color',
         docs: {
-          category: '{color.docCategory}',
+          category: '{options.color.docCategory}',
           type: 'table',
-          example: '{color.docExample}',
+          example: '{options.color.docExample}',
           description: 'The background color of table headers',
         },
       },
@@ -17,9 +16,9 @@
         value: '{options.color.white.value}',
         category: 'color',
         docs: {
-          category: '{color.docCategory}',
+          category: '{options.color.docCategory}',
           type: 'table',
-          example: '{color.docExample}',
+          example: '{options.color.docExample}',
           description: 'The background color of table rows',
         },
       },
@@ -27,9 +26,9 @@
         value: '{options.color.warm-grey-100.value}',
         category: 'color',
         docs: {
-          category: '{color.docCategory}',
+          category: '{options.color.docCategory}',
           type: 'table',
-          example: '{color.docExample}',
+          example: '{options.color.docExample}',
           description: 'An alternate row color to aid grouping row data',
         },
       },
@@ -40,9 +39,9 @@
           value: '{options.color.warm-grey-400.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'table',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'The border color of table rows and their corresponding data cells',
           },
         },
@@ -50,9 +49,9 @@
           value: '{options.color.warm-grey-700.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'table',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'Border color separating complex table heads',
           },
         },

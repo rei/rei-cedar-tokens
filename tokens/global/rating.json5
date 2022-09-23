@@ -1,7 +1,5 @@
 {
   color: {
-    docCategory: 'colors',
-    docExample: 'color',
 
     text: {
       rating: {
@@ -9,9 +7,9 @@
           value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'rating',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'Text color for ratings',
           },
         },
@@ -19,9 +17,9 @@
           value: '{options.color.alpine-lake-blue-800.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'rating',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'Text color for the hover state of ratings',
           },
         },
@@ -29,9 +27,9 @@
           value: '{options.color.warm-grey-600.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'rating',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'Text color for the separator in ratings',
           },
         },
@@ -43,9 +41,9 @@
         value: '{options.color.warm-grey-100.value}',
         category: 'color',
         docs: {
-          category: '{color.docCategory}',
+          category: '{options.color.docCategory}',
           type: 'rating',
-          example: '{color.docExample}',
+          example: '{options.color.docExample}',
           description: 'The defaul background color of the rating star icon',
         },
       },
@@ -53,9 +51,9 @@
         value: '{options.color.golden-yellow-500.value}',
         category: 'color',
         docs: {
-          category: '{color.docCategory}',
+          category: '{options.color.docCategory}',
           type: 'rating',
-          example: '{color.docExample}',
+          example: '{options.color.docExample}',
           description: 'Background color for the highlighted rating icon',
         },
       },
@@ -67,9 +65,9 @@
           value: '{options.color.warm-grey-700.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'rating',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'Default border color for the unhighlighted rating icon',
           },
         },
@@ -77,9 +75,9 @@
           value: '{options.color.golden-yellow-800.value}',
           category: 'color',
           docs: {
-            category: '{color.docCategory}',
+            category: '{options.color.docCategory}',
             type: 'rating',
-            example: '{color.docExample}',
+            example: '{options.color.docExample}',
             description: 'Border color for the highlighted rating icon',
           },
         },
