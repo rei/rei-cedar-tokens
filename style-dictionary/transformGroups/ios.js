@@ -8,6 +8,7 @@ module.exports = (StyleDictionary) => {
       'name/cti/pascal',
       'color/UIColor',
       'size/strip-px',
+      'size/space',
       'size/float',
     ],
   });

@@ -7548,7 +7548,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "2px",
+        "value": "{options.space.eighth-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7574,7 +7574,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "4px",
+        "value": "{options.space.quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7600,7 +7600,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "8px",
+        "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7626,7 +7626,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "12px",
+        "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7652,7 +7652,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "16px",
+        "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7925,6 +7925,7 @@
     },
     {
       "value": "2.0f",
+      "spacingModifier": 0.5,
       "category": "size",
       "docs": {
         "category": "spacing",
@@ -7933,7 +7934,8 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "2px",
+        "value": "{options.space.quarter-x}",
+        "spacingModifier": "{options.space.squish}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7957,7 +7959,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "4px",
+        "value": "{options.space.quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -7974,6 +7976,7 @@
     {
       "value": "6.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -7981,8 +7984,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "6px",
+        "value": "{options.space.quarter-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8005,7 +8009,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "4px",
+        "value": "{options.space.quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8031,7 +8035,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.half-x.value}",
+        "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8050,6 +8054,7 @@
     {
       "value": "4.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8057,8 +8062,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "4px",
+        "value": "{options.space.half-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8081,7 +8087,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "8px",
+        "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8098,6 +8104,7 @@
     {
       "value": "12.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8105,8 +8112,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "12px",
+        "value": "{options.space.half-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8129,7 +8137,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "8px",
+        "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8155,7 +8163,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.three-quarter-x.value}",
+        "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8174,6 +8182,7 @@
     {
       "value": "6.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8181,8 +8190,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "6px",
+        "value": "{options.space.three-quarter-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8205,7 +8215,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "12px",
+        "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8222,6 +8232,7 @@
     {
       "value": "18.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8229,8 +8240,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "18px",
+        "value": "{options.space.three-quarter-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8253,7 +8265,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "12px",
+        "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8279,7 +8291,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.one-x.value}",
+        "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8298,6 +8310,7 @@
     {
       "value": "8.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8305,8 +8318,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "8px",
+        "value": "{options.space.one-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8329,7 +8343,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "16px",
+        "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8346,6 +8360,7 @@
     {
       "value": "24.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8353,8 +8368,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "24px",
+        "value": "{options.space.one-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8377,7 +8393,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "16px",
+        "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8403,7 +8419,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.one-and-a-half-x.value}",
+        "value": "{options.space.one-and-a-half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8422,6 +8438,7 @@
     {
       "value": "12.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8429,8 +8446,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "12px",
+        "value": "{options.space.one-and-a-half-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8453,7 +8471,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "24px",
+        "value": "{options.space.one-and-a-half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8470,6 +8488,7 @@
     {
       "value": "36.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8477,8 +8496,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "36px",
+        "value": "{options.space.one-and-a-half-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8501,7 +8521,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "24px",
+        "value": "{options.space.one-and-a-half-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8527,7 +8547,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.two-x.value}",
+        "value": "{options.space.two-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8546,6 +8566,7 @@
     {
       "value": "16.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8553,8 +8574,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "16px",
+        "value": "{options.space.two-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8577,7 +8599,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "32px",
+        "value": "{options.space.two-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8594,6 +8616,7 @@
     {
       "value": "48.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8601,8 +8624,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "48px",
+        "value": "{options.space.two-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8625,7 +8649,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "32px",
+        "value": "{options.space.two-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8651,7 +8675,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.three-x.value}",
+        "value": "{options.space.three-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8670,6 +8694,7 @@
     {
       "value": "24.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8677,8 +8702,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "24px",
+        "value": "{options.space.three-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8701,7 +8727,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "48px",
+        "value": "{options.space.three-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8718,6 +8744,7 @@
     {
       "value": "72.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8725,8 +8752,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "72px",
+        "value": "{options.space.three-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8749,7 +8777,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "48px",
+        "value": "{options.space.three-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8775,7 +8803,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "{space.four-x.value}",
+        "value": "{options.space.four-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8794,6 +8822,7 @@
     {
       "value": "32.0f",
       "category": "size",
+      "spacingModifier": 0.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8801,8 +8830,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "32px",
+        "value": "{options.space.four-x}",
         "category": "size",
+        "spacingModifier": "{options.space.squish}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
@@ -8825,7 +8855,7 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "64px",
+        "value": "{options.space.four-x}",
         "category": "size",
         "docs": {
           "category": "{space.docCategory}",
@@ -8842,6 +8872,7 @@
     {
       "value": "96.0f",
       "category": "size",
+      "spacingModifier": 1.5,
       "docs": {
         "category": "spacing",
         "example": "spacing"
@@ -8849,8 +8880,9 @@
       "filePath": "tokens/global/space.json5",
       "isSource": true,
       "original": {
-        "value": "96px",
+        "value": "{options.space.four-x}",
         "category": "size",
+        "spacingModifier": "{options.space.stretch}",
         "docs": {
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
