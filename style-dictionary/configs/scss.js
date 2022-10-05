@@ -6,11 +6,13 @@ module.exports = {
     files: [
       {
         destination: 'cdr-variable.scss',
-        format: 'scss/variables',
+        format: 'scss/foo',
+        outputReferences: true
       },
       {
         destination: 'cdr-mixins.scss',
         format: 'scss/mixin',
+        outputReferences: true
       },
       // {
       //   destination: 'cdr-deprecated.scss',

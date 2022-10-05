@@ -26,6 +26,7 @@ require('./transformGroups/sketch')(StyleDictionary);
 // ==== Include custom formats ====
 require('./formats/scss-mixin')(StyleDictionary);
 require('./formats/scss-map')(StyleDictionary);
+require('./formats/scss-foo')(StyleDictionary);
 // require('./formats/scss-deprecated')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
