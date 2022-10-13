@@ -13,6 +13,9 @@ require('./transforms/size/strip-px')(StyleDictionary);
 require('./transforms/size/strip-all-px')(StyleDictionary);
 require('./transforms/size/strip-all-px-js')(StyleDictionary);
 require('./transforms/size/float')(StyleDictionary);
+require('./transforms/color/alpha-hex')(StyleDictionary);
+require('./transforms/color/alpha')(StyleDictionary);
+require('./transforms/color/UIColor-transitive')(StyleDictionary);
 require('./transforms/color/sketch')(StyleDictionary);
 
 // ==== Include custom transform groups ====

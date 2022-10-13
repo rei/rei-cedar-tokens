@@ -6,6 +6,7 @@ module.exports = (StyleDictionary) => {
       'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/kebab',
+      'color/alpha',
       'size/space',
       'size/px-to-rem',
       'color/css',

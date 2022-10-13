@@ -4,7 +4,8 @@
     docexample: 'color',
     text: {
       primary: {
-        value: '{options.color.warm-grey-900-75.value}',
+        value: '{options.color.warm-grey-1150.value}',
+        alpha: .75,
         category: 'color',
         docs: {
           category: 'colors',
@@ -14,7 +15,8 @@
         },
       },
       secondary: {
-        value: '{options.color.warm-grey-800-75.value}',
+        value: '{options.color.warm-grey-950.value}',
+        alpha: .75,
         category: 'color',
         docs: {
           category: 'colors',
@@ -24,7 +26,8 @@
         },
       },
       emphasis: {
-        value: '{options.color.warm-grey-1000-90.value}',
+        value: '{options.color.warm-grey-1200.value}',
+        alpha: .90,
         category: 'color',
         docs: {
           category: 'colors',
@@ -449,7 +452,8 @@
       },
 
       'modal-overlay': {
-        value: '{options.color.warm-grey-200-85.value}',
+        value: '{options.color.warm-grey-200.value}',
+        alpha: .85,
         category: 'color',
         docs: {
           category: 'colors',
