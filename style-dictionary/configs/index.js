@@ -11,6 +11,7 @@ const siteWebConfig = require('./site.web');
 const siteAndroidConfig = require('./site.android');
 const siteIosConfig = require('./site.ios');
 const sketchConfig = require('./sketch');
+const figmaConfig = require('./figma');
 
 // this is the filter for excluding "option" tokens
 // and works in concert with transforms/attribute/option.js
@@ -55,6 +56,10 @@ function getSources(platform) {
     // eslint-disable-next-line quotes
     return [`tokens/web/**/*.json5`];
   }
+  if (platform === 'figma') {
+    // eslint-disable-next-line quotes
+    return [`tokens/web/**/*.json5`];
+  }
 }
 
 function getConfigs(platform) {
@@ -63,6 +68,9 @@ function getConfigs(platform) {
   }
   if (platform === 'android') {
     return filterOptions([androidConfig]);
+  }
+  if (platform === 'figma') {
+    return filterOptions([figmaConfig]);
   }
   if (platform === 'ios') {
     return filterOptions([iosConfig]);

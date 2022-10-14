@@ -22,6 +22,7 @@ require('./transformGroups/js')(StyleDictionary);
 require('./transformGroups/android')(StyleDictionary);
 require('./transformGroups/ios')(StyleDictionary);
 require('./transformGroups/sketch')(StyleDictionary);
+require('./transformGroups/figma')(StyleDictionary);
 
 // ==== Include custom formats ====
 require('./formats/scss-mixin')(StyleDictionary);
@@ -30,6 +31,7 @@ require('./formats/scss-map')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
 require('./formats/site')(StyleDictionary);
+require('./formats/figma')(StyleDictionary);
 require('./formats/sketch')(StyleDictionary);
 
 // ==== Include custom actions ====
@@ -55,6 +57,7 @@ console.log('\n=============================================='); // eslint-disab
   'site/android',
   'site/ios',
   'sketch',
+  'figma'
 ].map((platform) => {
   // APPLY THE CONFIGURATION
   // Very important: the registration of custom transforms
