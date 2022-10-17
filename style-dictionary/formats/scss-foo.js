@@ -1,10 +1,5 @@
 const StyleDictionary = require('style-dictionary');
-
-const {
-  sortByReference
-} = StyleDictionary.formatHelpers;
-
-
+const { sortByReference } = StyleDictionary.formatHelpers;
 
 module.exports = (StyleDictionary) => {
 
@@ -16,7 +11,7 @@ module.exports = (StyleDictionary) => {
         .sort(sortByReference(dictionary))
         .map(token => {
           let value = JSON.stringify(token.value);
-          //if (dictionary.usesReference(token.original.value)) {
+          if (dictionary.usesReference(token.original.value)) {
             const refs = dictionary.getReferences(token.original.value);
             refs.forEach(ref => {
               if (ref.name && ref.name.indexOf('cdr-options') === -1) {
@@ -25,7 +20,7 @@ module.exports = (StyleDictionary) => {
                 });
               }
             });
-//}
+          }
           return `$${token.name}: ${value};`
             .replaceAll('\"', '')
             .replaceAll('\\', '\"') //for font quotes
