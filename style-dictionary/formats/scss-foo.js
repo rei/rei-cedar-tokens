@@ -8,178 +8,29 @@ const {
 
 module.exports = (StyleDictionary) => {
 
-StyleDictionary.registerFormat({
+  StyleDictionary.registerFormat({
     name: `scss/foo`,
-    formatter: ({ dictionary, options, file }) => {
-      const { outputReferences, outputReferenceFallbacks } = options;
-      // createPropertyFormatter will return a function that can be passed to
-      // .map() to format each token. Pass it the `outputReferences` and dictionary
-      // along with a formatting object that tells the function how to format
-      // each line.
-      const formatProperty = createPropertyFormatter({
-        dictionary,
-        outputReferences,
-        outputReferenceFallbacks,
-        formatting: {
-          prefix: '$',
-          separator: ':',
-          suffix: ';'
-        }
-      });
+    formatter: ({ dictionary }) => {
 
-      // fileHeader takes in the file configuration as well as a commentStyle
-      // or formatting object and will generate a file header comment in the
-      // proper style. If the file has a custom file header defined, or
-      // showFileHeader option, it will honor those.
       return dictionary.allTokens
-          // sortByReference returns a function that can be used as to sort
-          // an array. This will sort the array so that references always
-          // come after their instantiation so that there are no errors
-          // when consuming this file.
-          .sort(sortByReference(dictionary))
-          .map(formatProperty)
-          .join('\n');
-    }
-  })
-}
-
-
-
-const defaultFormatting = {
-  prefix: '',
-  commentStyle: 'long',
-  indentation: '',
-  separator: ' =',
-  suffix: ';'
-}
-
-/**
- * Creates a function that can be used to format a property. This can be useful
- * to use as the function on `dictionary.allTokens.map`. The formatting
- * is configurable either by supplying a `format` option or a `formatting` object
- * which uses: prefix, indentation, separator, suffix, and commentStyle.
- * @memberof module:formatHelpers
- * @example
- * ```javascript
- * StyleDictionary.registerFormat({
- *   name: 'myCustomFormat',
- *   formatter: function({ dictionary, options }) {
- *     const { outputReferences } = options;
- *     const formatProperty = createPropertyFormatter({
- *       outputReferences,
- *       dictionary,
- *       format: 'css'
- *     });
- *     return dictionary.allTokens.map(formatProperty).join('\n');
- *   }
- * });
- * ```
- * @param {Object} options
- * @param {Boolean} options.outputReferences - Whether or not to output references. You will want to pass this from the `options` object sent to the formatter function.
- * @param {Boolean} options.outputReferenceFallbacks - Whether or not to output css variable fallback values when using output references. You will want to pass this from the `options` object sent to the formatter function.
- * @param {Dictionary} options.dictionary - The dictionary object sent to the formatter function
- * @param {String} options.format - Available formats are: 'css', 'sass', 'less', and 'stylus'. If you want to customize the format and can't use one of those predefined formats, use the `formatting` option
- * @param {Object} options.formatting - Custom formatting properties that define parts of a declaration line in code. The configurable strings are: prefix, indentation, separator, suffix, and commentStyle. Those are used to generate a line like this: `${indentation}${prefix}${prop.name}${separator} ${prop.value}${suffix}`
- * @param {Boolean} options.themeable [false] - Whether tokens should default to being themeable.
- * @returns {Function}
- */
-function createPropertyFormatter({
-  outputReferences = false,
-  outputReferenceFallbacks = false,
-  dictionary,
-  format,
-  formatting = {},
-  themeable = false
-}) {
-  let {prefix, commentStyle, indentation, separator, suffix} = Object.assign({}, defaultFormatting, formatting);
-
-  switch(format) {
-    case 'css':
-      prefix = '--';
-      indentation = '  ';
-      separator = ':';
-      break;
-    case 'sass':
-      prefix = '$';
-      commentStyle = 'short';
-      indentation = '';
-      separator = ':';
-      break;
-    case 'less':
-      prefix = '@';
-      commentStyle = 'short';
-      indentation = '';
-      separator = ':';
-      break;
-    case 'stylus':
-      prefix = '$';
-      commentStyle = 'short';
-      indentation = '';
-      separator = '=';
-      break;
-  }
-
-  return function(prop) {
-    let to_ret_prop = `${indentation}${prefix}${prop.name}${separator} `;
-    let value = prop.value;
-
-    /**
-     * A single value can have multiple references either by interpolation:
-     * "value": "{size.border.width.value} solid {color.border.primary.value}"
-     * or if the value is an object:
-     * "value": {
-     *    "size": "{size.border.width.value}",
-     *    "style": "solid",
-     *    "color": "{color.border.primary.value"}
-     * }
-     * This will see if there are references and if there are, replace
-     * the resolved value with the reference's name.
-     */
-    if (outputReferences && dictionary.usesReference(prop.original.value)) {
-      // Formats that use this function expect `value` to be a string
-      // or else you will get '[object Object]' in the output
-      if (typeof value === 'string') {
-        const refs = dictionary.getReferences(prop.original.value);
-        refs.forEach(ref => {
-          // value should be a string that contains the resolved reference
-          // because Style Dictionary resolved this in the resolution step.
-          // Here we are undoing that by replacing the value with
-          // the reference's name
-
-          if (ref.value && ref.name && ref.name.indexOf('options')) {
-            value = value.replace(ref.value, function() {
-              if (format === 'css') {
-                if (outputReferenceFallbacks) {
-                  return `var(${prefix}${ref.name}, ${ref.value})`;
-                } else {
-                  return `var(${prefix}${ref.name})`;
-                }
-              } else {
-                return `${prefix}${ref.name}`;
+        .sort(sortByReference(dictionary))
+        .map(token => {
+          let value = JSON.stringify(token.value);
+          //if (dictionary.usesReference(token.original.value)) {
+            const refs = dictionary.getReferences(token.original.value);
+            refs.forEach(ref => {
+              if (ref.name && ref.name.indexOf('cdr-options') === -1) {
+                value = value.replace(ref.value, function () {
+                  return `$${ref.name}`;
+                });
               }
             });
-          }
-        });
-      }
+//}
+          return `$${token.name}: ${value};`
+            .replaceAll('\"', '')
+            .replaceAll('\\', '\"') //for font quotes
+        })
+        .join('\n');
     }
-
-    to_ret_prop += prop.attributes.category === 'asset' ? `"${value}"` : value;
-
-    const themeable_prop = typeof prop.themeable === 'boolean' ? prop.themeable : themeable;
-    if (format === 'sass' && themeable_prop) {
-      to_ret_prop += ' !default';
-    }
-
-    to_ret_prop += suffix;
-
-    if (prop.comment && commentStyle !== 'none') {
-      if (commentStyle === 'short') {
-        to_ret_prop = to_ret_prop.concat(` // ${prop.comment}`);
-      } else {
-        to_ret_prop = to_ret_prop.concat(` /* ${prop.comment} */`);
-      }
-    }
-
-    return to_ret_prop;
-  }
+  })
 }
