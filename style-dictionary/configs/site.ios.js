@@ -7,6 +7,10 @@ module.exports = {
       {
         destination: 'ios.json',
         format: 'site',
+        filter: 'removeOptions',
+        options: {
+          showFileHeader: false,
+        },
       },
     ],
   },

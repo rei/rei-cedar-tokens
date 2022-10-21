@@ -7,10 +7,17 @@ module.exports = {
       {
         destination: 'cdr-variable.scss',
         format: 'scss/variables',
+        filter: 'removeOptions',
+        options: {
+          showFileHeader: false,
+        },
       },
       {
         destination: 'cdr-mixins.scss',
         format: 'scss/mixin',
+        options: {
+          showFileHeader: false,
+        },
       },
       // {
       //   destination: 'cdr-deprecated.scss',

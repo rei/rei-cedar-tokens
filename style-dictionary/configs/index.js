@@ -13,29 +13,18 @@ const siteIosConfig = require('./site.ios');
 const sketchConfig = require('./sketch');
 const figmaConfig = require('./figma');
 
-// this is the filter for excluding "option" tokens
-// and works in concert with transforms/attribute/option.js
-const filterObj = {
-  options: {
-    showFileHeader: false,
-  },
-  filter: {
-    attributes: {
-      option: false,
-    },
-  },
-};
-
-// adds filter for "options" to all file outputs
-function filterOptions(platforms) {
-  const platformObj = {};
-  platforms.map(p => Object.assign(platformObj, p));
-  Object.keys(platformObj).forEach((p) => {
-    platformObj[p].files.map(f => _.merge(f, filterObj));
-  });
-  return platformObj;
-}
-
+const allPlatforms = {
+  'web':  {...scssConfig, ...lessConfig, ...jsConfig},
+  'android': {...androidConfig},
+  'figma': {...figmaConfig},
+  'ios': {...iosConfig},
+  'site/global': {...siteGlobalConfig},
+  'site/web': {...siteWebConfig},
+  'site/android': {...siteAndroidConfig},
+  'site/ios': {...siteIosConfig},
+  'sketch': {...sketchConfig},
+ }
+ 
 function getSources(platform) {
   if (platform === 'site/global') {
     return [];
@@ -62,36 +51,6 @@ function getSources(platform) {
   }
 }
 
-function getConfigs(platform) {
-  if (platform === 'web') {
-    return filterOptions([scssConfig, lessConfig, jsConfig]);
-  }
-  if (platform === 'android') {
-    return filterOptions([androidConfig]);
-  }
-  if (platform === 'figma') {
-    return filterOptions([figmaConfig]);
-  }
-  if (platform === 'ios') {
-    return filterOptions([iosConfig]);
-  }
-  if (platform === 'site/global') {
-    return filterOptions([siteGlobalConfig]);
-  }
-  if (platform === 'site/web') {
-    return filterOptions([siteWebConfig]);
-  }
-  if (platform === 'site/android') {
-    return filterOptions([siteAndroidConfig]);
-  }
-  if (platform === 'site/ios') {
-    return filterOptions([siteIosConfig]);
-  }
-  if (platform === 'sketch') {
-    return filterOptions([sketchConfig]);
-  }
-}
-
 module.exports = (platform) => {
   const sources = [
     'tokens/_options/**/*.json5',
@@ -100,6 +59,6 @@ module.exports = (platform) => {
   ];
   return {
     source: sources,
-    platforms: getConfigs(platform),
+    platforms: allPlatforms[platform],
   };
 };

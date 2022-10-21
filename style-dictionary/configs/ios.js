@@ -9,32 +9,29 @@ module.exports = {
         format: 'ios/static.h',
         type: 'float',
         className: 'CdrSize',
-        filter: {
-          attributes: {
-            category: 'size',
-          },
-        },
+        filter: 'iosSize',
+        options: {
+          showFileHeader: false,
+        }
       },
       {
         destination: 'CdrSize.m',
         format: 'ios/static.m',
         type: 'float',
         className: 'CdrSize',
-        filter: {
-          attributes: {
-            category: 'size',
-          },
-        },
+        filter: 'iosSize',
+        options: {
+          showFileHeader: false,
+        }
       },
       {
         destination: 'CdrColor.h',
         format: 'ios/colors.h',
         className: 'CdrColor',
         type: 'CdrColorName',
-        filter: {
-          attributes: {
-            category: 'color',
-          },
+        filter: 'iosColor',
+        options: {
+          showFileHeader: false,
         },
       },
       {
@@ -42,10 +39,9 @@ module.exports = {
         format: 'ios/colors.m',
         className: 'CdrColor',
         type: 'CdrColorName',
-        filter: {
-          attributes: {
-            category: 'color',
-          },
+        filter: 'iosColor',
+        options: {
+          showFileHeader: false,
         },
       },
     ],

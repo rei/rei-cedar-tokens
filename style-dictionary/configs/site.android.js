@@ -7,6 +7,10 @@ module.exports = {
       {
         destination: 'android.json',
         format: 'site',
+        options: {
+          showFileHeader: false,
+        },
+        filter: 'removeOptions',
       },
     ],
   },

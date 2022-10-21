@@ -7,10 +7,18 @@ module.exports = {
       {
         destination: 'cdr-tokens.common.js',
         format: 'js/commonjs',
+        filter: 'removeOptions',
+        options: {
+          showFileHeader: false,
+        },
       },
       {
         destination: 'cdr-tokens.mjs',
         format: 'javascript/es6',
+        filter: 'removeOptions',
+        options: {
+          showFileHeader: false,
+        },
       },
     ],
   },

@@ -7,6 +7,7 @@ module.exports = {
         {
           destination: 'figma.json',
           format: 'json',
+          showFileHeader: false,
         },
       ],
     },

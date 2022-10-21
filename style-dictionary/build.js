@@ -36,11 +36,17 @@ require('./formats/sketch')(StyleDictionary);
 
 // ==== Include custom actions ====
 require('./actions/concat_files')(StyleDictionary);
-require('./actions/include_deprecate_scss')(StyleDictionary);
 require('./actions/include_media_queries_scss')(StyleDictionary);
 require('./actions/include_media_queries_less')(StyleDictionary);
 require('./actions/include_display_scss')(StyleDictionary);
 require('./actions/include_display_less')(StyleDictionary);
+require('./actions/include_deprecate_scss')(StyleDictionary);
+
+// ==== Include custom filters ====
+require('./filters/options')(StyleDictionary);
+require('./filters/ios-color')(StyleDictionary);
+require('./filters/ios-size')(StyleDictionary);
+
 
 // --------------------------------------------------------------------
 

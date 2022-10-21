@@ -7,6 +7,10 @@ module.exports = {
       {
         destination: 'sketch.json',
         format: 'sketch',
+        options: {
+          showFileHeader: false,
+        },
+        filter: 'removeOptions',
       },
     ],
   },

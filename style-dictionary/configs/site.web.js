@@ -7,6 +7,10 @@ module.exports = {
       {
         destination: 'web.json',
         format: 'site',
+        options: {
+          showFileHeader: false,
+        },
+        filter: 'removeOptions',
       },
     ],
   },

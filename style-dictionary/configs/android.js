@@ -6,14 +6,26 @@ module.exports = {
     files: [
       {
         destination: 'colors.xml',
+        filter: "removeOptions",
+        options: {
+          showFileHeader: false,
+        },
         format: 'android/colors',
       },
       {
         destination: 'font_dimens.xml',
+        filter: "removeOptions",
+        options: {
+          showFileHeader: false,
+        },
         format: 'android/fontDimens',
       },
       {
         destination: 'dimens.xml',
+        filter: "removeOptions",
+        options: {
+          showFileHeader: false,
+        },
         format: 'android/dimens',
       },
     ],
