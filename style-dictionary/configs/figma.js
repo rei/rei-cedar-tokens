@@ -7,7 +7,10 @@ module.exports = {
         {
           destination: 'figma.json',
           format: 'json',
-          showFileHeader: false,
+          options: {
+            showFileHeader: false,
+          },
+          filter: 'removeOptions'
         },
       ],
     },
