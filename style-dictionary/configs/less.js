@@ -1,7 +1,7 @@
-module.exports = {
+module.exports = function (theme) { return {
   less: {
     transformGroup: 'custom/less',
-    buildPath: 'dist/less/',
+    buildPath: `dist/${theme}/less/`,
     prefix: 'cdr',
     files: [
       {
@@ -22,4 +22,4 @@ module.exports = {
     ],
     actions: ['include_media_queries_less', 'include_display_less', 'concat_files'],
   },
-};
+}};

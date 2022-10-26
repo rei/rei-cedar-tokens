@@ -13,52 +13,46 @@ const siteIosConfig = require('./site.ios');
 const sketchConfig = require('./sketch');
 const figmaConfig = require('./figma');
 
-const allPlatforms = {
-  'web':  {...scssConfig, ...lessConfig, ...jsConfig},
-  'android': {...androidConfig},
-  'figma': {...figmaConfig},
-  'ios': {...iosConfig},
-  'site/global': {...siteGlobalConfig},
-  'site/web': {...siteWebConfig},
-  'site/android': {...siteAndroidConfig},
-  'site/ios': {...siteIosConfig},
-  'sketch': {...sketchConfig},
- }
- 
 function getSources(platform) {
-  if (platform === 'site/global') {
-    return [];
+  const sources = {
+    'site/global': [],
+    'site/web': ['tokens/web/**/*.json5'],
+    'site/android': ['tokens/mobile/**/*.json5'],
+    'site/ios': ['tokens/mobile/**/*.json5'],
+    'web': ['tokens/web/**/*.json5'],
+    'android': ['tokens/mobile/**/*.json5'],
+    'ios': ['tokens/mobile/**/*.json5'],
+    'figma': [`tokens/web/**/*.json5`],
+    'sketch': [`tokens/web/**/*.json5`],
   }
-  if (platform === 'web' || platform === 'site/web') {
-    // eslint-disable-next-line quotes
-    return [`tokens/web/**/*.json5`];
-  }
-  if (platform === 'android' || platform === 'site/android') {
-    // eslint-disable-next-line quotes
-    return [`tokens/mobile/**/*.json5`];
-  }
-  if (platform === 'ios' || platform === 'site/ios') {
-    // eslint-disable-next-line quotes
-    return [`tokens/mobile/**/*.json5`];
-  }
-  if (platform === 'sketch') {
-    // eslint-disable-next-line quotes
-    return [`tokens/web/**/*.json5`];
-  }
-  if (platform === 'figma') {
-    // eslint-disable-next-line quotes
-    return [`tokens/web/**/*.json5`];
-  }
+  return sources[platform];
 }
 
-module.exports = (platform) => {
+const allPlatforms = (platform, theme) => {
+  let platforms = {
+    'web': { ...scssConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
+    'android': { ...androidConfig(theme) },
+    'site/global': { ...siteGlobalConfig(theme) },
+    'site/web': { ...siteWebConfig(theme) },
+    'site/android': { ...siteAndroidConfig(theme) },
+    'site/ios': { ...siteIosConfig(theme) },
+    'ios': { ...iosConfig(theme) },
+    'figma': { ...figmaConfig(theme) },
+    'sketch': { ...sketchConfig(theme) }
+  }
+
+  return platforms[platform];
+}
+
+module.exports = (platform, theme) => {
   const sources = [
     'tokens/_options/**/*.json5',
+    `tokens/themes/${theme}/**/*.json5`,
     'tokens/global/**/*.json5',
-    ...getSources(platform),
+    ...getSources(platform)
   ];
   return {
     source: sources,
-    platforms: allPlatforms[platform],
+    platforms: allPlatforms(platform, theme),
   };
 };

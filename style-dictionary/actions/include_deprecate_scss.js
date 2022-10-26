@@ -8,7 +8,7 @@ module.exports = (StyleDictionary) => {
     do(dictionary, config) {
       const deprecateScss = path.join(__dirname, '../utilities/deprecate.scss');
       const outputDir = path.join(__dirname, '../../', config.buildPath, 'deprecate.scss');
-      fs.copyFileSync(deprecateScss, outputDir);
+      fs.copySync(deprecateScss, outputDir);
     },
     undo(dictionary, config) {
       fs.removeSync(path.join(__dirname, '../../', config.buildPath));

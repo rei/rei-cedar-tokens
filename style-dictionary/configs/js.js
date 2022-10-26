@@ -1,7 +1,7 @@
-module.exports = {
+module.exports = function (theme) { return {
   js: {
     transformGroup: 'custom/js',
-    buildPath: 'dist/js/',
+    buildPath: `dist/${theme}/js/`,
     prefix: 'cdr',
     files: [
       {
@@ -22,4 +22,4 @@ module.exports = {
       },
     ],
   },
-};
+}}

@@ -1,7 +1,8 @@
-module.exports = {
+module.exports = function (theme) {
+  return {
     figma: {
       transformGroup: 'custom/figma',
-      buildPath: 'dist/figma/',
+      buildPath: `dist/${theme}/figma/`,
       prefix: 'cdr',
       files: [
         {
@@ -13,6 +14,6 @@ module.exports = {
           filter: 'removeOptions'
         },
       ],
-    },
-  };
-  
+    }
+  }
+};

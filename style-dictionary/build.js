@@ -47,33 +47,38 @@ require('./filters/options')(StyleDictionary);
 require('./filters/ios-color')(StyleDictionary);
 require('./filters/ios-size')(StyleDictionary);
 
+const getConfig = require('./configs');
 
-// --------------------------------------------------------------------
-
-// ==== Run build ====
-console.log('Build started...'); // eslint-disable-line no-console
-console.log('\n=============================================='); // eslint-disable-line no-console
-
-[
-  'web',
-  'android',
-  'ios',
+const themes = [
+  'rei-brand', 
+  'docsite',
+];
+const platforms = [
   'site/global',
   'site/web',
   'site/android',
   'site/ios',
-  'sketch',
-  'figma'
-].map((platform) => {
-  // APPLY THE CONFIGURATION
-  // Very important: the registration of custom transforms
-  // needs to be done _before_ applying the configuration
-  const StyleDictionaryExtended = StyleDictionary.extend(getPlatformConfig(platform));
+  'web',
+  'android',
+  'ios',
+  'figma',
+  'sketch'
+]
 
+themes.map(function (theme) {
+  platforms.map(function (platform) {
 
-  // FINALLY, BUILD ALL THE PLATFORMS
-  StyleDictionaryExtended.buildAllPlatforms();
-});
+    console.log('\n==============================================');
+    console.log(`\nProcessing: [${platform}] [${theme}]`);
+
+    const foo = StyleDictionary.extend(getConfig(platform, theme));
+
+    foo.buildAllPlatforms();
+
+    console.log('\nEnd processing');
+
+  })
+})
 
 
 console.log('\n=============================================='); // eslint-disable-line no-console
