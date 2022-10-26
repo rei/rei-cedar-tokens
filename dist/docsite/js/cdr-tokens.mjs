@@ -1,9 +1,3 @@
-export const CdrThemeColorTextPrimary = "rgba(3, 3, 1, 0.9)";
-export const CdrThemeColorTextSecondary = "rgba(12, 11, 8, 0.75)";
-export const CdrThemeColorBackgroundPrimary = "#f4f2ed";
-export const CdrThemeColorBackgroundSecondary = "#ffffff";
-export const CdrThemeColorBorderPrimary = "#dcd6cb";
-export const CdrThemeColorBorderSecondary = "#928b80";
 export const CdrKnockoutColorTextPrimary = "#f9f8f6";
 export const CdrKnockoutColorTextSecondary = "#d1cbbd";
 export const CdrKnockoutColorBackgroundPrimary = "#373734";

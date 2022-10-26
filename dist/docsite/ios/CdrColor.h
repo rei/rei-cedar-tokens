@@ -6,12 +6,6 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, CdrColorName) {
-CdrThemeColorTextPrimary,
-CdrThemeColorTextSecondary,
-CdrThemeColorBackgroundPrimary,
-CdrThemeColorBackgroundSecondary,
-CdrThemeColorBorderPrimary,
-CdrThemeColorBorderSecondary,
 CdrKnockoutColorTextPrimary,
 CdrKnockoutColorTextSecondary,
 CdrKnockoutColorBackgroundPrimary,

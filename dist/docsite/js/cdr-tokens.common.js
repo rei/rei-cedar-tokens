@@ -1,10 +1,4 @@
 module.exports = {
-  CdrThemeColorTextPrimary: "rgba(3, 3, 1, 0.9)",
-  CdrThemeColorTextSecondary: "rgba(12, 11, 8, 0.75)",
-  CdrThemeColorBackgroundPrimary: "#f4f2ed",
-  CdrThemeColorBackgroundSecondary: "#ffffff",
-  CdrThemeColorBorderPrimary: "#dcd6cb",
-  CdrThemeColorBorderSecondary: "#928b80",
   CdrKnockoutColorTextPrimary: "#f9f8f6",
   CdrKnockoutColorTextSecondary: "#d1cbbd",
   CdrKnockoutColorBackgroundPrimary: "#373734",

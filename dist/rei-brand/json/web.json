@@ -1,144 +1,4 @@
 {
-  "misc": [
-    {
-      "value": "rgba(12, 11, 8, 0.75)",
-      "category": "color",
-      "filePath": "tokens/themes/rei-brand/color.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-900-75.value}",
-        "category": "color"
-      },
-      "name": "cdr-theme-color-text-primary",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "rgba(66, 59, 47, 0.75)",
-      "category": "color",
-      "filePath": "tokens/themes/rei-brand/color.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-800-75.value}",
-        "category": "color"
-      },
-      "name": "cdr-theme-color-text-secondary",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ffffff",
-      "category": "color",
-      "filePath": "tokens/themes/rei-brand/color.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.white.value}",
-        "category": "color"
-      },
-      "name": "cdr-theme-color-background-primary",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#f4f2ed",
-      "category": "color",
-      "filePath": "tokens/themes/rei-brand/color.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-200.value}",
-        "category": "color"
-      },
-      "name": "cdr-theme-color-background-secondary",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#dcd6cb",
-      "category": "color",
-      "filePath": "tokens/themes/rei-brand/color.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-400.value}",
-        "category": "color"
-      },
-      "name": "cdr-theme-color-border-primary",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#928b80",
-      "category": "color",
-      "filePath": "tokens/themes/rei-brand/color.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-700.value}",
-        "category": "color"
-      },
-      "name": "cdr-theme-color-border-secondary",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "Stuart",
-      "filePath": "tokens/web/font.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.font.family.serif-main.value}"
-      },
-      "name": "cdr-font-family-serif-brand-font",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "value": "Stuart, Georgia, serif",
-      "filePath": "tokens/web/font.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.font.family.serif.value}"
-      },
-      "name": "cdr-font-family-serif",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "value": "Graphik",
-      "filePath": "tokens/web/font.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.font.family.sans-main.value}"
-      },
-      "name": "cdr-font-family-sans-brand-font",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "value": "Graphik, \"Helvetica Neue\", sans-serif",
-      "filePath": "tokens/web/font.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.font.family.sans.value}"
-      },
-      "name": "cdr-font-family-sans",
-      "attributes": {
-        "deprecated": false
-      }
-    }
-  ],
   "colors": [
     {
       "value": "#f9f8f6",
@@ -9407,6 +9267,56 @@
       "attributes": {
         "deprecated": false,
         "category": "breakpoint"
+      }
+    }
+  ],
+  "misc": [
+    {
+      "value": "Stuart",
+      "filePath": "tokens/web/font.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.font.family.serif-main.value}"
+      },
+      "name": "cdr-font-family-serif-brand-font",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "value": "Stuart, Georgia, serif",
+      "filePath": "tokens/web/font.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.font.family.serif.value}"
+      },
+      "name": "cdr-font-family-serif",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "value": "Graphik",
+      "filePath": "tokens/web/font.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.font.family.sans-main.value}"
+      },
+      "name": "cdr-font-family-sans-brand-font",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "value": "Graphik, \"Helvetica Neue\", sans-serif",
+      "filePath": "tokens/web/font.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.font.family.sans.value}"
+      },
+      "name": "cdr-font-family-sans",
+      "attributes": {
+        "deprecated": false
       }
     }
   ],

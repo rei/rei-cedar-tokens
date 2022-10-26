@@ -1,8 +1,8 @@
 module.exports = (StyleDictionary) => {
     StyleDictionary.registerFilter({
-        name: 'removeOptions',
+        name: 'removeSourceTokens',
         matcher: function(prop) {
-          return prop.path[0] !== 'options'
+          return prop.path[0] !== 'options' && prop.path[0] !== 'theme'
         }
     });
 }

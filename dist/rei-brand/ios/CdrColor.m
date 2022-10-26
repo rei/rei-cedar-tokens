@@ -17,12 +17,6 @@
 
   dispatch_once(&onceToken, ^{
     colorArray = @[
-[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.749f],
-[UIColor colorWithRed:0.259f green:0.231f blue:0.184f alpha:0.749f],
-[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f],
-[UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f],
-[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f],
-[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f],
 [UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f],
 [UIColor colorWithRed:0.122f green:0.318f blue:0.247f alpha:1.000f],
 [UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f],

@@ -7,7 +7,7 @@ module.exports = function (theme) {
       files: [
         {
           destination: 'colors.xml',
-          filter: "removeOptions",
+          filter: "removeSourceTokens",
           options: {
             showFileHeader: false,
           },
@@ -15,7 +15,7 @@ module.exports = function (theme) {
         },
         {
           destination: 'font_dimens.xml',
-          filter: "removeOptions",
+          filter: "removeSourceTokens",
           options: {
             showFileHeader: false,
           },
@@ -23,7 +23,7 @@ module.exports = function (theme) {
         },
         {
           destination: 'dimens.xml',
-          filter: "removeOptions",
+          filter: "removeSourceTokens",
           options: {
             showFileHeader: false,
           },

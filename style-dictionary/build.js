@@ -43,7 +43,7 @@ require('./actions/include_display_less')(StyleDictionary);
 require('./actions/include_deprecate_scss')(StyleDictionary);
 
 // ==== Include custom filters ====
-require('./filters/options')(StyleDictionary);
+require('./filters/source-tokens')(StyleDictionary);
 require('./filters/ios-color')(StyleDictionary);
 require('./filters/ios-size')(StyleDictionary);
 

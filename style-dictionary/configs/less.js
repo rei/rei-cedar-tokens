@@ -7,7 +7,7 @@ module.exports = function (theme) { return {
       {
         destination: 'cdr-variable.less',
         format: 'less/variables',
-        filter: 'removeOptions',
+        filter: 'removeSourceTokens',
         options: {
           showFileHeader: false,
         },

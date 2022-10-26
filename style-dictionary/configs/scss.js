@@ -8,7 +8,7 @@ module.exports = function(theme) {
         {
           destination: 'cdr-variable.scss',
           format: 'scss/variables',
-          filter: 'removeOptions',
+          filter: 'removeSourceTokens',
           options: {
             showFileHeader: false,
           },

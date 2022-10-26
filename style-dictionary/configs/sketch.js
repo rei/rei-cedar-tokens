@@ -11,7 +11,7 @@ module.exports = function (theme) {
           options: {
             showFileHeader: false,
           },
-          filter: 'removeOptions',
+          filter: 'removeSourceTokens',
         },
       ],
     }

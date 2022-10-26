@@ -8,7 +8,7 @@ module.exports = function (theme) {
         {
           destination: 'ios.json',
           format: 'site',
-          filter: 'removeOptions',
+          filter: 'removeSourceTokens',
           options: {
             showFileHeader: false,
           },
