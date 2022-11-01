@@ -1,0 +1,64 @@
+{
+  color: {
+    background: {
+      'table-header': {
+        value: '{options.color.warm-grey-100.value}',
+        category: 'color',
+      },
+      'table-row': {
+        value: '{options.color.warm-grey-200.value}',
+        category: 'color',
+      },
+    },
+    border: {
+      'table-row': {
+        value: '{options.color.warm-grey-400.value}',
+        category: 'color',
+      },
+    },
+    text: {
+      table: {
+        primary: {
+          value: '{options.color.warm-grey-1200-90.value}',
+          category: 'color',
+        },
+        secondary: {
+          value: '{options.color.warm-grey-1150-75.value}',
+          category: 'color',
+        },
+      },
+    },
+  },
+  knockout: {
+    color: {
+      background: {
+        'table-header': {
+          value: '{options.color.warm-grey-900-50.value}',
+          category: 'color',
+        },
+        'table-row': {
+          value: '{options.color.warm-grey-1000.value}',
+          category: 'color',
+        },
+      },
+      border: {
+        'table-row': {
+          value: '{options.color.warm-grey-900.value}',
+          category: 'color',
+        },
+      },
+      text: {
+        table: {
+          primary: {
+            value: '{options.color.warm-grey-100.value}',
+            category: 'color',
+          },
+          secondary: {
+            value: '{options.color.warm-grey-500.value}',
+            category: 'color',
+          },
+        },
+      },
+    },
+  },
+}

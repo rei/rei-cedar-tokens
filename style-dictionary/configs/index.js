@@ -47,12 +47,13 @@ const allPlatforms = (platform, theme) => {
 module.exports = (platform, theme) => {
   const sources = [
     'tokens/_options/**/*.json5',
-    `tokens/themes/${theme}/**/*.json5`,
     'tokens/global/**/*.json5',
     ...getSources(platform)
   ];
+  const themePath = [`tokens/themes/${theme}/**/*.json5`];
   return {
-    source: sources,
+    include: sources,
+    source: themePath,
     platforms: allPlatforms(platform, theme),
   };
 };

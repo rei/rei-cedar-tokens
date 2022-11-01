@@ -1,42 +1,40 @@
 {
-  theme: {
-    color: {
-      text: {
-        primary: {
-          value: '{options.color.warm-grey-1200-90.value}',
-          category: 'color',
-        },
-        secondary: {
-          value: '{options.color.warm-grey-1150-75.value}',
-          category: 'color',
-        },
+  color: {
+    text: {
+      primary: {
+        value: '{options.color.warm-grey-1200-90.value}',
+        category: 'color',
       },
-      background: {
-        primary: {
-          value: '{options.color.warm-grey-200.value}',
-          category: 'color',
-        },
-        secondary: {
-          value: '{options.color.white.value}',
-          category: 'color',
-        },
+      secondary: {
+        value: '{options.color.warm-grey-1150-75.value}',
+        category: 'color',
       },
-      border: {
-        primary: {
-          value: '{options.color.warm-grey-400.value}',
-          category: 'color',
-        },
-        secondary: {
-          value: '{options.color.warm-grey-700.value}',
-          category: 'color',
-        },
+    },
+    background: {
+      primary: {
+        value: '{options.color.warm-grey-200.value}',
+        category: 'color',
       },
-      icon: {
-        default: {
-          value: '{options.color.warm-grey-900.value}',
-          category: 'color',
-        },
-      }
+      secondary: {
+        value: '{options.color.white.value}',
+        category: 'color',
+      },
+    },
+    border: {
+      primary: {
+        value: '{options.color.warm-grey-400.value}',
+        category: 'color',
+      },
+      secondary: {
+        value: '{options.color.warm-grey-700.value}',
+        category: 'color',
+      },
+    },
+    icon: {
+      default: {
+        value: '{options.color.warm-grey-900.value}',
+        category: 'color',
+      },
     },
   },
   knockout: {
@@ -73,10 +71,10 @@
         inverse: {
           default: {
             value: '{options.color.warm-grey-400.value}',
-            category: 'color', 
-          }
-        }
-      }
+            category: 'color',
+          },
+        },
+      },
     },
   },
 }
