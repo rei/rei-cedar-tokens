@@ -45,15 +45,15 @@ const allPlatforms = (platform, theme) => {
 }
 
 module.exports = (platform, theme) => {
-  const sources = [
+  const defaultTokens = [
     'tokens/_options/**/*.json5',
     'tokens/global/**/*.json5',
     ...getSources(platform)
   ];
-  const themePath = [`tokens/themes/${theme}/**/*.json5`];
+  const themeOverrides = [`tokens/themes/${theme}/**/*.json5`];
   return {
-    include: sources,
-    source: themePath,
+    include: defaultTokens,
+    source: themeOverrides,
     platforms: allPlatforms(platform, theme),
   };
 };

@@ -2,28 +2,30 @@
   color: {
     background: {
       'table-header': {
-        value: '{options.color.warm-grey-100.value}',
+        value: '{options.color.warm-grey-100}',
         category: 'color',
       },
       'table-row': {
-        value: '{options.color.warm-grey-200.value}',
+        value: '{options.color.warm-grey-200}',
         category: 'color',
       },
     },
     border: {
       'table-row': {
-        value: '{options.color.warm-grey-400.value}',
+        value: '{options.color.warm-grey-400}',
         category: 'color',
       },
     },
     text: {
       table: {
         primary: {
-          value: '{options.color.warm-grey-1200-90.value}',
+          value: '{options.color.warm-grey-1200}',
+          alpha: .90,
           category: 'color',
         },
         secondary: {
-          value: '{options.color.warm-grey-1150-75.value}',
+          value: '{options.color.warm-grey-1150}',
+          alpha: .75,
           category: 'color',
         },
       },
@@ -33,28 +35,29 @@
     color: {
       background: {
         'table-header': {
-          value: '{options.color.warm-grey-900-50.value}',
+          value: '{options.color.warm-grey-900}',
+          alpha: .50,
           category: 'color',
         },
         'table-row': {
-          value: '{options.color.warm-grey-1000.value}',
+          value: '{options.color.warm-grey-1000}',
           category: 'color',
         },
       },
       border: {
         'table-row': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-900}',
           category: 'color',
         },
       },
       text: {
         table: {
           primary: {
-            value: '{options.color.warm-grey-100.value}',
+            value: '{options.color.warm-grey-100}',
             category: 'color',
           },
           secondary: {
-            value: '{options.color.warm-grey-500.value}',
+            value: '{options.color.warm-grey-500}',
             category: 'color',
           },
         },

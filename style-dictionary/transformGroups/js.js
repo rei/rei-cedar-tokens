@@ -7,7 +7,8 @@ module.exports = (StyleDictionary) => {
       'name/cti/pascal',
       'size/strip-all-px-js',
       'size/space-js',
-      'color/css',
+      'color/alpha',
+      'color/css-transitive',
     ],
   });
 };

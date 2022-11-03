@@ -8,7 +8,8 @@ module.exports = (StyleDictionary) => {
       'size/space',
       'size/dp-transitive',
       'size/sp',
-      'color/hex8android',
+      'color/alpha',
+      'color/hex8android-transitive',
     ],
   });
 };

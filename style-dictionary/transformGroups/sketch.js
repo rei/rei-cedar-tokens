@@ -6,6 +6,7 @@ module.exports = (StyleDictionary) => {
       'name/cti/kebab',
       'size/strip-all-px',
       'size/space',
+      'color/alpha',
       'color/custom-sketch',
       'time/seconds',
     ],

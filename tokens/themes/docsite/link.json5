@@ -3,15 +3,18 @@
     text: {
       link: {
         rest: {
-          value: '{options.color.warm-grey-1200-90.value}',
+          value: '{options.color.warm-grey-1200}',
+          alpha: .90,
           category: 'color',
         },
         hover: {
-          value: '{options.color.warm-grey-1200-90.value}',
+          value: '{options.color.warm-grey-1200}',
+          alpha: .90,
           category: 'color',
         },
         active: {
-          value: '{options.color.warm-grey-1150-75.value}',
+          value: '{options.color.warm-grey-1150}',
+          alpha: .75,
           category: 'color',
         },
       },
@@ -19,7 +22,7 @@
     border: {
       link: {
         rest: {
-          value: '{options.color.black.value}',
+          value: '{options.color.black}',
           category: 'color',
         },
       },

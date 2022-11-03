@@ -13,7 +13,13 @@ require('./transforms/size/strip-px')(StyleDictionary);
 require('./transforms/size/strip-all-px')(StyleDictionary);
 require('./transforms/size/strip-all-px-js')(StyleDictionary);
 require('./transforms/size/float')(StyleDictionary);
+require('./transforms/color/alpha')(StyleDictionary);
+require('./transforms/color/color-css-transitive')(StyleDictionary);
+require('./transforms/color/hex8-android-transitive')(StyleDictionary);
 require('./transforms/color/sketch')(StyleDictionary);
+require('./transforms/color/uicolor-transitive')(StyleDictionary);
+
+
 
 // ==== Include custom transform groups ====
 require('./transformGroups/scss')(StyleDictionary);

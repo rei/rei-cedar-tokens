@@ -1,10 +1,10 @@
 {
   color: {
-
     text: {
       rating: {
         default: {
-          value: '{options.color.warm-grey-900-75.value}',
+          value: '{options.color.warm-grey-1150}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -14,7 +14,7 @@
           },
         },
         hover: {
-          value: '{options.color.alpine-lake-blue-800.value}',
+          value: '{options.color.alpine-lake-blue-800}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -24,7 +24,7 @@
           },
         },
         separator: {
-          value: '{options.color.warm-grey-600.value}',
+          value: '{options.color.warm-grey-600}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -38,7 +38,7 @@
 
     background: {
       'rating-star-default': {
-        value: '{options.color.warm-grey-100.value}',
+        value: '{options.color.warm-grey-100}',
         category: 'color',
         docs: {
           category: 'colors',
@@ -48,7 +48,7 @@
         },
       },
       'rating-star-highlighted': {
-        value: '{options.color.golden-yellow-500.value}',
+        value: '{options.color.golden-yellow-500}',
         category: 'color',
         docs: {
           category: 'colors',
@@ -62,7 +62,7 @@
     border: {
       'rating-star': {
         default: {
-          value: '{options.color.warm-grey-700.value}',
+          value: '{options.color.warm-grey-700}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -72,7 +72,7 @@
           },
         },
         highlighted: {
-          value: '{options.color.golden-yellow-800.value}',
+          value: '{options.color.golden-yellow-800}',
           category: 'color',
           docs: {
             category: 'colors',

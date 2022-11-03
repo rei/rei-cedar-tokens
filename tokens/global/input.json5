@@ -3,7 +3,7 @@
     text: {
       input: {
         default: {
-          value: '{options.color.warm-grey-1100.value}',
+          value: '{options.color.warm-grey-1100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -13,7 +13,8 @@
           },
         },
         label: {
-          value: '{options.color.warm-grey-900-75.value}',
+          value: '{options.color.warm-grey-1150}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -23,7 +24,7 @@
           },
         },
         'label-disabled': {
-          value: '{options.color.warm-grey-600.value}',
+          value: '{options.color.warm-grey-600}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -33,7 +34,8 @@
           },
         },
         placeholder: {
-          value: '{options.color.warm-grey-800-75.value}',
+          value: '{options.color.warm-grey-950}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -43,7 +45,8 @@
           },
         },
         required: {
-          value: '{options.color.warm-grey-900-75.value}',
+          value: '{options.color.warm-grey-1150}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -53,7 +56,8 @@
           },
         },
         optional: {
-          value: '{options.color.warm-grey-800-75.value}',
+          value: '{options.color.warm-grey-950}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -63,7 +67,7 @@
           },
         },
         disabled: {
-          value: '{options.color.warm-grey-500.value}',
+          value: '{options.color.warm-grey-500}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -73,7 +77,7 @@
           },
         },
         filled: {
-          value: '{options.color.warm-grey-1100.value}',
+          value: '{options.color.warm-grey-1100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -83,7 +87,8 @@
           },
         },
         help: {
-          value: '{options.color.warm-grey-800-75.value}',
+          value: '{options.color.warm-grey-950}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -93,7 +98,7 @@
           },
         },
         error: {
-          value: '{options.color.error-red-850.value}',
+          value: '{options.color.error-red-850}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -107,7 +112,7 @@
 
     icon: {
       'checkbox-default-selected': {
-        value: '{options.color.white.value}',
+        value: '{options.color.white}',
         category: 'color',
         docs: {
           category: 'colors',
@@ -117,7 +122,7 @@
         },
       },
       'checkbox-default-selected-hover': {
-        value: '{options.color.white.value}',
+        value: '{options.color.white}',
         category: 'color',
         docs: {
           category: 'colors',
@@ -127,7 +132,7 @@
         },
       },
       'checkbox-default-selected-active': {
-        value: '{options.color.warm-grey-900.value}',
+        value: '{options.color.warm-grey-900}',
         category: 'color',
         docs: {
           category: 'colors',
@@ -142,7 +147,7 @@
     background: {
       label: {
         'default-hover': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -152,7 +157,7 @@
           },
         },
         'default-active': {
-          value: '{options.color.warm-grey-300.value}',
+          value: '{options.color.warm-grey-300}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -162,7 +167,7 @@
           },
         },
         'default-focus': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -172,7 +177,8 @@
           },
         },
         'secondary-hover': {
-          value: '{options.color.white-75.value}',
+          value: '{options.color.white}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -182,7 +188,7 @@
           },
         },
         'secondary-active': {
-          value: '{options.color.white.value}',
+          value: '{options.color.white}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -192,7 +198,8 @@
           },
         },
         'secondary-focus': {
-          value: '{options.color.white-75.value}',
+          value: '{options.color.white}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -204,7 +211,8 @@
       },
       input: {
         default: {
-          value: '{options.color.warm-grey-200-15.value}',
+          value: '{options.color.warm-grey-200}',
+          alpha: .15,
           category: 'color',
           docs: {
             category: 'colors',
@@ -214,7 +222,8 @@
           },
         },
         secondary: {
-          value: '{options.color.white-85.value}',
+          value: '{options.color.white}',
+          alpha: .85,
           category: 'color',
           docs: {
             category: 'colors',
@@ -224,7 +233,8 @@
           },
         },
         error: {
-          value: '{options.color.error-red-50-75.value}',
+          value: '{options.color.error-red-50}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -234,7 +244,7 @@
           },
         },
         'default-hover': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -244,7 +254,7 @@
           },
         },
         'default-active': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -254,7 +264,7 @@
           },
         },
         'default-selected': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-900}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -264,7 +274,7 @@
           },
         },
         'secondary-active': {
-          value: '{options.color.white.value}',
+          value: '{options.color.white}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -274,7 +284,7 @@
           },
         },
         'default-selected-hover': {
-          value: '{options.color.warm-grey-700.value}',
+          value: '{options.color.warm-grey-700}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -284,7 +294,7 @@
           },
         },
         'default-disabled': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -294,7 +304,7 @@
           },
         },
         'default-selected-focus': {
-          value: '{options.color.warm-grey-700.value}',
+          value: '{options.color.warm-grey-700}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -304,7 +314,7 @@
           },
         },
         'default-focus': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -319,7 +329,7 @@
     border: {
       label: {
         'default-focus': {
-          value: '{options.color.warm-grey-1100.value}',
+          value: '{options.color.warm-grey-1100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -331,7 +341,7 @@
       },
       input: {
         default: {
-          value: '{options.color.warm-grey-700.value}',
+          value: '{options.color.warm-grey-700}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -341,7 +351,7 @@
           },
         },
         error: {
-          value: '{options.color.error-red-850.value}',
+          value: '{options.color.error-red-850}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -351,7 +361,7 @@
           },
         },
         'default-active': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-900}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -361,7 +371,7 @@
           },
         },
         'default-selected': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-900}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -371,7 +381,7 @@
           },
         },
         'default-focus': {
-          value: '{options.color.warm-grey-1100.value}',
+          value: '{options.color.warm-grey-1100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -381,7 +391,7 @@
           },
         },
         'default-selected-hover': {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-900}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -391,7 +401,7 @@
           },
         },
         'default-hover': {
-          value: '{options.color.warm-grey-1100.value}',
+          value: '{options.color.warm-grey-1100}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -401,7 +411,7 @@
           },
         },
         'default-disabled': {
-          value: '{options.color.warm-grey-500.value}',
+          value: '{options.color.warm-grey-500}',
           category: 'color',
           docs: {
             category: 'colors',
