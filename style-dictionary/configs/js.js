@@ -7,7 +7,6 @@ module.exports = function (theme) { return {
       {
         destination: 'cdr-tokens.common.js',
         format: 'js/commonjs',
-        filter: 'removeSourceTokens',
         options: {
           showFileHeader: false,
         },
