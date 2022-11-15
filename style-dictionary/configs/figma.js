@@ -7,7 +7,7 @@ module.exports = function (theme) {
       files: [
         {
           destination: 'figma.json',
-          format: 'json',
+          format: 'figma',
           options: {
             showFileHeader: false,
           },
