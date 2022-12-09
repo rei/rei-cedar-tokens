@@ -2,6 +2,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransform({
     name: 'size/float',
     type: 'value',
+    transitive: true,
     matcher(prop) {
       return prop.attributes.category === 'size';
     },

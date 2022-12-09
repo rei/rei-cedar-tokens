@@ -1,0 +1,56 @@
+{
+  color: {
+    background: {
+      'link-card': {
+        rest: {
+          value: '{options.color.white}',
+          category: 'color',
+        },
+        active: {
+          value: '{options.color.warm-grey-1000}',
+          category: 'color',
+        },
+      },
+      border: {
+        'link-card': {
+          hover: {
+            value: '{options.color.warm-grey-900}',
+            category: 'color',
+          },
+          active: {
+            value: '{options.color.warm-grey-900}',
+            category: 'color',
+          },
+        },
+      },
+    },
+  },
+  knockout: {
+    color: {
+      background: {
+        'link-card': {
+          rest: {
+            value: '{options.color.warm-grey-900}',
+            category: 'color',
+          },
+          active: {
+            value: '{options.color.warm-grey-1100}',
+            category: 'color',
+          },
+        },
+        border: {
+          'link-card': {
+            hover: {
+              value: '{options.color.warm-grey-400}',
+              category: 'color',
+            },
+            active: {
+              value: '{options.color.warm-grey-900}',
+              category: 'color',
+            },
+          },
+        },
+      },
+    },
+  },
+}

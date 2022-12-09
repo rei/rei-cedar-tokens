@@ -4,7 +4,7 @@ module.exports = (StyleDictionary) => {
   /* scss mixin */
   StyleDictionary.registerFormat({
     name: 'scss/map',
-    formatter(dictionary, config) {
+    formatter({ dictionary }, config) {
       // const prefix = config.prefix ? `${config.prefix}-` : '';
       let scss = '';
       const utilityTokens = _.filter(dictionary.allProperties, o => o['utility-class'] === true);

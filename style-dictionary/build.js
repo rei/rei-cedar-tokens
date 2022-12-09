@@ -5,12 +5,21 @@ const getPlatformConfig = require('./configs');
 require('./transforms/attribute/options')(StyleDictionary);
 require('./transforms/attribute/deprecated')(StyleDictionary);
 require('./transforms/attribute/cdr-cti')(StyleDictionary);
+require('./transforms/size/dp-transitive')(StyleDictionary);
+require('./transforms/size/space')(StyleDictionary);
+require('./transforms/size/space-js')(StyleDictionary);
 require('./transforms/size/px-to-rem')(StyleDictionary);
 require('./transforms/size/strip-px')(StyleDictionary);
 require('./transforms/size/strip-all-px')(StyleDictionary);
 require('./transforms/size/strip-all-px-js')(StyleDictionary);
 require('./transforms/size/float')(StyleDictionary);
+require('./transforms/color/alpha')(StyleDictionary);
+require('./transforms/color/color-css-transitive')(StyleDictionary);
+require('./transforms/color/hex8-android-transitive')(StyleDictionary);
 require('./transforms/color/sketch')(StyleDictionary);
+require('./transforms/color/uicolor-transitive')(StyleDictionary);
+
+
 
 // ==== Include custom transform groups ====
 require('./transformGroups/scss')(StyleDictionary);
@@ -19,6 +28,7 @@ require('./transformGroups/js')(StyleDictionary);
 require('./transformGroups/android')(StyleDictionary);
 require('./transformGroups/ios')(StyleDictionary);
 require('./transformGroups/sketch')(StyleDictionary);
+require('./transformGroups/figma')(StyleDictionary);
 
 // ==== Include custom formats ====
 require('./formats/scss-mixin')(StyleDictionary);
@@ -27,41 +37,54 @@ require('./formats/scss-map')(StyleDictionary);
 require('./formats/less')(StyleDictionary);
 require('./formats/js')(StyleDictionary);
 require('./formats/site')(StyleDictionary);
+require('./formats/figma')(StyleDictionary);
 require('./formats/sketch')(StyleDictionary);
 
 // ==== Include custom actions ====
 require('./actions/concat_files')(StyleDictionary);
-require('./actions/include_deprecate_scss')(StyleDictionary);
 require('./actions/include_media_queries_scss')(StyleDictionary);
 require('./actions/include_media_queries_less')(StyleDictionary);
 require('./actions/include_display_scss')(StyleDictionary);
 require('./actions/include_display_less')(StyleDictionary);
+require('./actions/include_deprecate_scss')(StyleDictionary);
 
-// --------------------------------------------------------------------
+// ==== Include custom filters ====
+require('./filters/source-tokens')(StyleDictionary);
+require('./filters/ios-color')(StyleDictionary);
+require('./filters/ios-size')(StyleDictionary);
 
-// ==== Run build ====
-console.log('Build started...'); // eslint-disable-line no-console
-console.log('\n=============================================='); // eslint-disable-line no-console
+const getConfig = require('./configs');
 
-[
-  'web',
-  'android',
-  'ios',
+const themes = [
+  'rei-dot-com', 
+  'docsite',
+];
+const platforms = [
   'site/global',
   'site/web',
   'site/android',
   'site/ios',
-  'sketch',
-].map((platform) => {
-  // APPLY THE CONFIGURATION
-  // Very important: the registration of custom transforms
-  // needs to be done _before_ applying the configuration
-  const StyleDictionaryExtended = StyleDictionary.extend(getPlatformConfig(platform));
+  'web',
+  'android',
+  'ios',
+  'figma',
+  'sketch'
+]
 
+themes.map(function (theme) {
+  platforms.map(function (platform) {
 
-  // FINALLY, BUILD ALL THE PLATFORMS
-  StyleDictionaryExtended.buildAllPlatforms();
-});
+    console.log('\n==============================================');
+    console.log(`\nProcessing: [${platform}] [${theme}]`);
+
+    const foo = StyleDictionary.extend(getConfig(platform, theme));
+
+    foo.buildAllPlatforms();
+
+    console.log('\nEnd processing');
+
+  })
+})
 
 
 console.log('\n=============================================='); // eslint-disable-line no-console

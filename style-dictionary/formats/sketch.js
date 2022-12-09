@@ -152,7 +152,7 @@ module.exports = (StyleDictionary) => {
   /* js module */
   StyleDictionary.registerFormat({
     name: 'sketch',
-    formatter(dictionary, config) {
+    formatter({ dictionary }, config) {
       const prefix = config.prefix ? `${config.prefix}-` : '';
       const finalObj = {};
       const grouped = _.groupBy(dictionary.allProperties, 'docs.category');

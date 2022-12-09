@@ -1,478 +1,119 @@
 {
   options: {
     color: {
-      'black': {
-        value: '#000000',
-        category: 'color',
-      },
-      'white': {
-        value: '#ffffff',
-        category: 'color',
-      },
-      'white-75': { // semi-transparent color for use with form element backgrounds
-        value: '#ffffffBF',
-        category: 'color',
-      },
-      'white-85': { // semi-transparent color for use with form element backgrounds
-        value: '#ffffffD9',
-        category: 'color',
-      },
-      'warm-grey-100': {
-        value: '#f9f8f6',
-        category: 'color',
-      },
-      'warm-grey-200': {
-        value: '#f4f2ed',
-        category: 'color',
-      },
-      'warm-grey-200-15': { // semi-transparent color for use with input backgrounds
-        value: '#f4f2ed26',
-        category: 'color',
-      },
-      'warm-grey-200-85': { // semi-transparent color for use with modal overlays
-        value: '#f4f2edD9',
-        category: 'color',
-      },
-      'warm-grey-300': {
-        value: '#edeae3',
-        category: 'color',
-      },
-      'warm-grey-400': {
-        value: '#dcd6cb',
-        category: 'color',
-      },
-      'warm-grey-500': {
-        value: '#d1cbbd',
-        category: 'color',
-      },
-      'warm-grey-600': {
-        value: '#b2ab9f',
-        category: 'color',
-      },
-      'warm-grey-700': {
-        value: '#928b80',
-        category: 'color',
-      },
-      'warm-grey-800': {
-        value: '#726d64',
-        category: 'color',
-      },
-      'warm-grey-800-75': { // semi-transparent color for use with typography
-        value: '#423B2FBF',
-        category: 'color',
-      },
-      'warm-grey-900': {
-        value: '#4e4d49',
-        category: 'color',
-      },
-      'warm-grey-900-20': { // semi-transparent color for use with drop shadows
-        value: '#0C0B0833',
-        category: 'color',
-      },
-      'warm-grey-900-75': { // semi-transparent color for use with typography
-        value: '#0C0B08BF',
-        category: 'color',
-      },
-      'warm-grey-1000': {
-        value: '#373734',
-        category: 'color',
-      },
-      'warm-grey-1000-90': {
-        value: '#030301e6',
-        category: 'color',
-      },
-      'warm-grey-1100': {
-        value: '#20201D',
-        category: 'color',
-      }, // sage green
-      'sage-green-100': {
-        value: '#F3FCF4',
-        category: 'color',
-      },
-      'sage-green-200': {
-        value: '#E9F7EB',
-        category: 'color',
-      },
-      'sage-green-300': {
-        value: '#DAECE0',
-        category: 'color',
-      },
-      'sage-green-400': {
-        value: '#C7DFD1',
-        category: 'color',
-      },
-      'sage-green-500': {
-        value: '#B8D6C8',
-        category: 'color',
-      },
-      'sage-green-600': {
-        value: '#9CC4B3',
-        category: 'color',
-      }, // blue spruce green
-      'blue-spruce-green-600': {
-        value: '#8DD3B4',
-        category: 'color',
-      },
-      'blue-spruce-green-700': {
-        value: '#5DB694',
-        category: 'color',
-      },
-      'blue-spruce-green-800': {
-        value: '#469178',
-        category: 'color',
-      },
-      'blue-spruce-green-900': {
-        value: '#2F6A59',
-        category: 'color',
-      },
-      'blue-spruce-green-1000': {
-        value: '#1F513F',
-        category: 'color',
-      },
-      'blue-spruce-green-1100': {
-        value: '#113731',
-        category: 'color',
-      }, // alpine lake blue
-      'alpine-lake-blue-100': {
-        value: '#F0FAFF',
-        category: 'color',
-      },
-      'alpine-lake-blue-200': {
-        value: '#E2F4FE',
-        category: 'color',
-      },
-      'alpine-lake-blue-300': {
-        value: '#D3EEFD',
-        category: 'color',
-      },
-      'alpine-lake-blue-400': {
-        value: '#B7E0FA',
-        category: 'color',
-      },
-      'alpine-lake-blue-500': {
-        value: '#9ACCF3',
-        category: 'color',
-      },
-      'alpine-lake-blue-600': {
-        value: '#78B1E8',
-        category: 'color',
-      },
-      'alpine-lake-blue-700': {
-        value: '#5D98DD',
-        category: 'color',
-      },
-      'alpine-lake-blue-800': {
-        value: '#406EB5',
-        category: 'color',
-      },
-      'alpine-lake-blue-900': {
-        value: '#1B437E',
-        category: 'color',
-      },
-      'alpine-lake-blue-1000': {
-        value: '#0B2D60',
-        category: 'color',
-      },
-      'alpine-lake-blue-1100': {
-        value: '#061A37',
-        category: 'color',
-      }, // golden yellow
-      'golden-yellow-100': {
-        value: '#FFFCF0',
-        category: 'color',
-      },
-      'golden-yellow-200': {
-        value: '#FFF8E0',
-        category: 'color',
-      },
-      'golden-yellow-300': {
-        value: '#FFF3D1',
-        category: 'color',
-      },
-      'golden-yellow-400': {
-        value: '#FFE7B3',
-        category: 'color',
-      },
-      'golden-yellow-500': {
-        value: '#FFD280',
-        category: 'color',
-      },
-      'golden-yellow-600': {
-        value: '#FFBF59',
-        category: 'color',
-      },
-      'golden-yellow-700': {
-        value: '#DA953A',
-        category: 'color',
-      },
-      'golden-yellow-800': {
-        value: '#BD7B2D',
-        category: 'color',
-      },
-      'golden-yellow-900': {
-        value: '#814C18',
-        category: 'color',
-      },
-      'golden-yellow-1000': {
-        value: '#5E320D',
-        category: 'color',
-      },
-      'golden-yellow-1100': {
-        value: '#381A06',
-        category: 'color',
-      }, // smoked salmon red
-      'smoked-salmon-red-100': {
-        value: '#FEF5F0',
-        category: 'color',
-      },
-      'smoked-salmon-red-200': {
-        value: '#FEEAE1',
-        category: 'color',
-      },
-      'smoked-salmon-red-300': {
-        value: '#FEDDD2',
-        category: 'color',
-      },
-      'smoked-salmon-red-400': {
-        value: '#FEC3B3',
-        category: 'color',
-      },
-      'smoked-salmon-red-500': {
-        value: '#FE9580',
-        category: 'color',
-      },
-      'smoked-salmon-red-600': {
-        value: '#FE5F47',
-        category: 'color',
-      },
-      'smoked-salmon-red-700': {
-        value: '#DB4638',
-        category: 'color',
-      },
-      'smoked-salmon-red-800': {
-        value: '#BE342D',
-        category: 'color',
-      },
-      'smoked-salmon-red-900': {
-        value: '#851414',
-        category: 'color',
-      },
-      'smoked-salmon-red-1000': {
-        value: '#610A0A',
-        category: 'color',
-      },
-      'smoked-salmon-red-1100': {
-        value: '#38050B',
-        category: 'color',
-      }, // sale red
-      'sale-red-100': {
-        value: '#FEF1F1',
-        category: 'color',
-      },
-      'sale-red-200': {
-        value: '#F4F2ED',
-        category: 'color',
-      },
-      'sale-red-300': {
-        value: '#FCD4D4',
-        category: 'color',
-      },
-      'sale-red-400': {
-        value: '#FCB6B6',
-        category: 'color',
-      },
-      'sale-red-500': {
-        value: '#F99595',
-        category: 'color',
-      },
-      'sale-red-600': {
-        value: '#F16363',
-        category: 'color',
-      },
-      'sale-red-700': {
-        value: '#DC2323',
-        category: 'color',
-      },
-      'sale-red-800': {
-        value: '#C7370F',
-        category: 'color',
-      },
-      'sale-red-900': {
-        value: '#990000',
-        category: 'color',
-      },
-      'sale-red-1000': {
-        value: '#6B0000',
-        category: 'color',
-      },
-      'sale-red-1100': {
-        value: '#3D0000',
-        category: 'color',
-      },
-      'success-green-100': {
-        value: '#F4FBF5',
-        category: 'color',
-      },
-      'success-green-200': {
-        value: '#ECF9E6',
-        category: 'color',
-      },
-      'success-green-300': {
-        value: '#D5E6CB',
-        category: 'color',
-      },
-      'success-green-400': {
-        value: '#C3F0B9',
-        category: 'color',
-      },
-      'success-green-500': {
-        value: '#B1E6A8',
-        category: 'color',
-      },
-      'success-green-600': {
-        value: '#8CD085',
-        category: 'color',
-      },
-      'success-green-700': {
-        value: '#5FA65F',
-        category: 'color',
-      },
-      'success-green-800': {
-        value: '#3B8349',
-        category: 'color',
-      },
-      'success-green-900': {
-        value: '#2E6B34',
-        category: 'color',
-      },
-      'success-green-1000': {
-        value: '#1C4F26',
-        category: 'color',
-      },
-      'success-green-1100': {
-        value: '#0E2F17',
-        category: 'color',
-      }, // warning yellow
-      'warning-yellow-100': {
-        value: '#FEFCF1',
-        category: 'color',
-      },
-      'warning-yellow-200': {
-        value: '#FDF6E2',
-        category: 'color',
-      },
-      'warning-yellow-300': {
-        value: '#F5E9B7',
-        category: 'color',
-      },
-      'warning-yellow-400': {
-        value: '#FAE5B7',
-        category: 'color',
-      },
-      'warning-yellow-500': {
-        value: '#F7D088',
-        category: 'color',
-      },
-      'warning-yellow-600': {
-        value: '#EDBC73',
-        category: 'color',
-      },
-      'warning-yellow-700': {
-        value: '#D8913B',
-        category: 'color',
-      },
-      'warning-yellow-800': {
-        value: '#B68B37',
-        category: 'color',
-      },
-      'warning-yellow-900': {
-        value: '#854714',
-        category: 'color',
-      },
-      'warning-yellow-1000': {
-        value: '#602D0B',
-        category: 'color',
-      },
-      'warning-yellow-1100': {
-        value: '#381705',
-        category: 'color',
-      }, // error red
-      'error-red-50-75': {
-        value: '#FFF2F2BF',
-        category: 'color',
-      },
-      'error-red-100': {
-        value: '#FDF7F7',
-        category: 'color',
-      },
-      'error-red-200': {
-        value: '#FCEFE8',
-        category: 'color',
-      },
-      'error-red-300': {
-        value: '#EECBC1',
-        category: 'color',
-      },
-      'error-red-400': {
-        value: '#F7CFBB',
-        category: 'color',
-      },
-      'error-red-500': {
-        value: '#EFA78F',
-        category: 'color',
-      },
-      'error-red-600': {
-        value: '#E78B79',
-        category: 'color',
-      },
-      'error-red-700': {
-        value: '#CD5046',
-        category: 'color',
-      },
-      'error-red-800': {
-        value: '#BB4045',
-        category: 'color',
-      },
-      'error-red-850': {
-        value: '#B33322',
-        category: 'color',
-      },
-      'error-red-900': {
-        value: '#811823',
-        category: 'color',
-      },
-      'error-red-1000': {
-        value: '#5D0E1D',
-        category: 'color',
-      },
-      'error-red-1100': {
-        value: '#390518',
-        category: 'color',
-      }, // info blue
-      'info-blue-100': {
-        value: '#EDF4F5',
-        category: 'color',
-      },
-      'info-blue-300': {
-        value: '#C2D8DB',
-        category: 'color',
-      },
-      'info-blue-800': {
-        value: '#408E86',
-        category: 'color',
-      }, // default-grey
-      'default-grey-100': {
-        value: '#F9F8F6',
-        category: 'color',
-      },
-      'default-grey-300': {
-        value: '#E8E0CE',
-        category: 'color',
-      },
-      'default-grey-800': {
-        value: '#726D64',
-        category: 'color',
-      },
-    }
-  }
+      black: '#000000',
+      white: '#ffffff',
+      'warm-grey-100': '#f9f8f6',
+      'warm-grey-200': '#f4f2ed',
+      'warm-grey-300': '#edeae3',
+      'warm-grey-400': '#dcd6cb',
+      'warm-grey-500': '#d1cbbd',
+      'warm-grey-600': '#b2ab9f',
+      'warm-grey-700': '#928b80',
+      'warm-grey-800': '#726d64',
+      'warm-grey-900': '#4e4d49',
+      'warm-grey-950': '#423B2F',
+      'warm-grey-1000': '#373734',
+      'warm-grey-1100': '#20201D',
+      'warm-grey-1150': '#0C0B08',
+      'warm-grey-1200': '#030301',
+      'sage-green-100': '#F3FCF4',
+      'sage-green-200': '#E9F7EB',
+      'sage-green-300': '#DAECE0',
+      'sage-green-400': '#C7DFD1',
+      'sage-green-500': '#B8D6C8',
+      'sage-green-600': '#9CC4B3',
+      'blue-spruce-green-600': '#8DD3B4',
+      'blue-spruce-green-700': '#5DB694',
+      'blue-spruce-green-800': '#469178',
+      'blue-spruce-green-900': '#2F6A59',
+      'blue-spruce-green-1000': '#1F513F',
+      'blue-spruce-green-1100': '#113731',
+      'alpine-lake-blue-100': '#F0FAFF',
+      'alpine-lake-blue-200': '#E2F4FE',
+      'alpine-lake-blue-300': '#D3EEFD',
+      'alpine-lake-blue-400': '#B7E0FA',
+      'alpine-lake-blue-500': '#9ACCF3',
+      'alpine-lake-blue-600': '#78B1E8',
+      'alpine-lake-blue-700': '#5D98DD',
+      'alpine-lake-blue-800': '#406EB5',
+      'alpine-lake-blue-900': '#1B437E',
+      'alpine-lake-blue-1000': '#0B2D60',
+      'alpine-lake-blue-1100': '#061A37',
+      'golden-yellow-100': '#FFFCF0',
+      'golden-yellow-200': '#FFF8E0',
+      'golden-yellow-300': '#FFF3D1',
+      'golden-yellow-400': '#FFE7B3',
+      'golden-yellow-500': '#FFD280',
+      'golden-yellow-600': '#FFBF59',
+      'golden-yellow-700': '#DA953A',
+      'golden-yellow-800': '#BD7B2D',
+      'golden-yellow-900': '#814C18',
+      'golden-yellow-1000': '#5E320D',
+      'golden-yellow-1100': '#381A06',
+      'smoked-salmon-red-100': '#FEF5F0',
+      'smoked-salmon-red-200': '#FEEAE1',
+      'smoked-salmon-red-300': '#FEDDD2',
+      'smoked-salmon-red-400': '#FEC3B3',
+      'smoked-salmon-red-500': '#FE9580',
+      'smoked-salmon-red-600': '#FE5F47',
+      'smoked-salmon-red-700': '#DB4638',
+      'smoked-salmon-red-800': '#BE342D',
+      'smoked-salmon-red-900': '#851414',
+      'smoked-salmon-red-1000': '#610A0A',
+      'smoked-salmon-red-1100': '#38050B',
+      'sale-red-100': '#FEF1F1',
+      'sale-red-200': '#F4F2ED',
+      'sale-red-300': '#FCD4D4',
+      'sale-red-400': '#FCB6B6',
+      'sale-red-500': '#F99595',
+      'sale-red-600': '#F16363',
+      'sale-red-700': '#DC2323',
+      'sale-red-800': '#C7370F',
+      'sale-red-900': '#990000',
+      'sale-red-1000': '#6B0000',
+      'sale-red-1100': '#3D0000',
+      'success-green-100': '#F4FBF5',
+      'success-green-200': '#ECF9E6',
+      'success-green-300': '#D5E6CB',
+      'success-green-400': '#C3F0B9',
+      'success-green-500': '#B1E6A8',
+      'success-green-600': '#8CD085',
+      'success-green-700': '#5FA65F',
+      'success-green-800': '#3B8349',
+      'success-green-900': '#2E6B34',
+      'success-green-1000': '#1C4F26',
+      'success-green-1100': '#0E2F17',
+      'warning-yellow-100': '#FEFCF1',
+      'warning-yellow-200': '#FDF6E2',
+      'warning-yellow-300': '#F5E9B7',
+      'warning-yellow-400': '#FAE5B7',
+      'warning-yellow-500': '#F7D088',
+      'warning-yellow-600': '#EDBC73',
+      'warning-yellow-700': '#D8913B',
+      'warning-yellow-800': '#B68B37',
+      'warning-yellow-900': '#854714',
+      'warning-yellow-1000': '#602D0B',
+      'warning-yellow-1100': '#381705',
+      'error-red-50': '#FFF2F2',
+      'error-red-100': '#FDF7F7',
+      'error-red-200': '#FCEFE8',
+      'error-red-300': '#EECBC1',
+      'error-red-400': '#F7CFBB',
+      'error-red-500': '#EFA78F',
+      'error-red-600': '#E78B79',
+      'error-red-700': '#CD5046',
+      'error-red-800': '#BB4045',
+      'error-red-850': '#B33322',
+      'error-red-900': '#811823',
+      'error-red-1000': '#5D0E1D',
+      'error-red-1100': '#390518',
+      'info-blue-100': '#EDF4F5',
+      'info-blue-300': '#C2D8DB',
+      'info-blue-800': '#408E86',
+      'default-grey-100': '#F9F8F6',
+      'default-grey-300': '#E8E0CE',
+      'default-grey-800': '#726D64',
+    },
+  },
 }

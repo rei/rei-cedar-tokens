@@ -1,0 +1,45 @@
+{
+  color: {
+    background: {
+      note: {
+        value: '{options.color.warm-grey-100}',
+        category: 'color',
+      },
+    },
+    border: {
+      note: {
+        value: '{theme.color.primary-100}',
+        category: 'color',
+      },
+    },
+    'icon-background': {
+      note: {
+        value: '{theme.color.primary-100}',
+        category: 'color',
+      },
+    },
+  },
+  knockout: {
+    color: {
+      background: {
+        note: {
+          value: '{options.color.warm-grey-900}',
+          alpha: .50,
+          category: 'color',
+        },
+      },
+      border: {
+        note: {
+          value: '{theme.color.primary-100}',
+          category: 'color',
+        },
+      },
+      'icon-background': {
+        note: {
+          value: '{theme.color.primary-100}',
+          category: 'color',
+        },
+      },
+    },
+  },
+}

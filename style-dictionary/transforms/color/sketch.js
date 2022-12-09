@@ -4,6 +4,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransform({
     name: 'color/custom-sketch',
     type: 'value',
+    transitive: true,
     matcher(prop) {
       return prop.attributes.category === 'color';
     },

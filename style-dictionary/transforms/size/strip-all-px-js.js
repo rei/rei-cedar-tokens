@@ -4,6 +4,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransform({
     name: 'size/strip-all-px-js',
     type: 'value',
+    transitive: true,
     matcher(prop) {
       return !prop.name.match('Prominence');
     },

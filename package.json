@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "11.0.0",
+  "version": "12.0.0-alpha.1",
   "description": "Tokens for REI cedar design system",
   "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -36,9 +36,10 @@
     "validate": "node ./validate.js"
   },
   "devDependencies": {
+    "@divriots/style-dictionary-to-figma": "^0.4.0",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.1.0",
     "glob": "^7.1.6",
     "json5": "^2.2.0",
     "lodash": "^4.17.21",
@@ -46,7 +47,7 @@
     "query-string": "^6.14.1",
     "require-json5": "^1.1.0",
     "rimraf": "^3.0.2",
-    "style-dictionary": "^2.10.2",
+    "style-dictionary": "^3.7.1",
     "tinycolor2": "^1.4.2"
   },
   "engines": {

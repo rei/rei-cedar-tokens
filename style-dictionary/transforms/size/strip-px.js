@@ -4,6 +4,7 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransform({
     name: 'size/strip-px',
     type: 'value',
+    transitive: true,
     matcher(prop) {
       let shouldStrip;
       switch (prop.attributes.category) {

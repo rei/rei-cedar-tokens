@@ -4,7 +4,7 @@ module.exports = (StyleDictionary) => {
   /* scss mixin */
   StyleDictionary.registerFormat({
     name: 'scss/mixin',
-    formatter(dictionary, config) {
+    formatter( { dictionary }, config) {
       const prefix = config.prefix ? `${config.prefix}-` : '';
       const mixins = ['@import \'./deprecate.scss\';\n\n'];
       const mixinProperties = _.filter(dictionary.allProperties, o => _.has(o, 'mixin'));
