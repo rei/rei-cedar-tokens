@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
 
-['docsite', 'rei-brand'].forEach((theme)=>{
+['docsite', 'rei-dot-com'].forEach((theme)=>{
   const rawGlobal = require(`./dist/${theme}/json/global.json`);
   const rawWeb = require(`./dist/${theme}/json/web.json`);
   const rawAndroid = require(`./dist/${theme}/json/android.json`);

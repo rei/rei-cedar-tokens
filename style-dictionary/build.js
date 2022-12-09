@@ -56,7 +56,7 @@ require('./filters/ios-size')(StyleDictionary);
 const getConfig = require('./configs');
 
 const themes = [
-  'rei-brand', 
+  'rei-dot-com', 
   'docsite',
 ];
 const platforms = [
