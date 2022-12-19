@@ -75,7 +75,7 @@ module.exports = {
   CdrColorBackgroundChipDefaultFocus: "#ffffff",
   CdrColorBackgroundChipDefaultActive: "#edeae3",
   CdrColorBackgroundChipDefaultSelected: "#dcd6cb",
-  CdrColorBackgroundChipDefaultSelectedHover: "#dcd6cb",
+  CdrColorBackgroundChipDefaultSelectedHover: "#edeae3",
   CdrColorBackgroundChipDefaultSelectedFocus: "#dcd6cb",
   CdrColorBackgroundChipDefaultSelectedActive: "#edeae3",
   CdrColorBackgroundPrimary: "#ffffff",
