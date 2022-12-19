@@ -449,7 +449,8 @@
       }
     },
     {
-      "value": "#4e4d49",
+      "value": "rgba(12, 11, 8, 0.75)",
+      "alpha": 0.75,
       "category": "color",
       "docs": {
         "category": "colors",
@@ -460,7 +461,8 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-900}",
+        "value": "{options.color.warm-grey-1150}",
+        "alpha": 0.75,
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1983,7 +1985,7 @@
       }
     },
     {
-      "value": "#f9f8f6",
+      "value": "#f4f2ed",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -1994,7 +1996,7 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-100}",
+        "value": "{options.color.warm-grey-200}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2064,7 +2066,7 @@
       }
     },
     {
-      "value": "#edeae3",
+      "value": "#dcd6cb",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2075,7 +2077,7 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-300}",
+        "value": "{options.color.warm-grey-400}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2118,7 +2120,7 @@
       }
     },
     {
-      "value": "#edeae3",
+      "value": "#dcd6cb",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2129,7 +2131,7 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-300}",
+        "value": "{options.color.warm-grey-400}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -6255,6 +6257,31 @@
         }
       },
       "name": "cdr-color-icon-switch-selected-default-focus",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    }
+  ],
+  "misc": [
+    {
+      "value": "#edeae3",
+      "category": "color",
+      "docs": {
+        "type": "chip",
+        "description": "Background color for active selected chips"
+      },
+      "filePath": "tokens/global/chip.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.color.warm-grey-300}",
+        "category": "color",
+        "docs": {
+          "type": "chip",
+          "description": "Background color for active selected chips"
+        }
+      },
+      "name": "cdr-color-background-chip-default-selected-active",
       "attributes": {
         "deprecated": false,
         "category": "color"

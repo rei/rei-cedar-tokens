@@ -449,7 +449,8 @@
       }
     },
     {
-      "value": "#ff4e4d49",
+      "value": "#bf0c0b08",
+      "alpha": 0.75,
       "category": "color",
       "docs": {
         "category": "colors",
@@ -460,7 +461,8 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-900}",
+        "value": "{options.color.warm-grey-1150}",
+        "alpha": 0.75,
         "category": "color",
         "docs": {
           "category": "colors",
@@ -1989,7 +1991,7 @@
       }
     },
     {
-      "value": "#fff9f8f6",
+      "value": "#fff4f2ed",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2000,7 +2002,7 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-100}",
+        "value": "{options.color.warm-grey-200}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2070,7 +2072,7 @@
       }
     },
     {
-      "value": "#ffedeae3",
+      "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2081,7 +2083,7 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-300}",
+        "value": "{options.color.warm-grey-400}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -2124,7 +2126,7 @@
       }
     },
     {
-      "value": "#ffedeae3",
+      "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
         "category": "colors",
@@ -2135,7 +2137,7 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "value": "{options.color.warm-grey-300}",
+        "value": "{options.color.warm-grey-400}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -6342,6 +6344,29 @@
         "category": "color"
       },
       "name": "cdr_color_text_usage_caution",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffedeae3",
+      "category": "color",
+      "docs": {
+        "type": "chip",
+        "description": "Background color for active selected chips"
+      },
+      "filePath": "tokens/global/chip.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.color.warm-grey-300}",
+        "category": "color",
+        "docs": {
+          "type": "chip",
+          "description": "Background color for active selected chips"
+        }
+      },
+      "name": "cdr_color_background_chip_default_selected_active",
       "attributes": {
         "deprecated": false,
         "category": "color"
