@@ -4,7 +4,8 @@
     text: {
       chip: {
         default: {
-          value: '{options.color.warm-grey-900}',
+          value: '{options.color.warm-grey-1150}',
+          alpha: .75,
           category: 'color',
           docs: {
             category: 'colors',
@@ -49,7 +50,7 @@
           }
         },
         'default-hover': {
-          value: '{options.color.warm-grey-100}',
+          value: '{options.color.warm-grey-200}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -79,7 +80,7 @@
           }
         },
         'default-selected': {
-          value: '{options.color.warm-grey-300}',
+          value: '{options.color.warm-grey-400}',
           category: 'color',
           docs: {
             category: 'colors',
@@ -99,13 +100,21 @@
           }
         },
         'default-selected-focus': {
-          value: '{options.color.warm-grey-300}',
+          value: '{options.color.warm-grey-400}',
           category: 'color',
           docs: {
             category: 'colors',
             type: 'chip',
             example: 'color',
             description: 'Background color for focused selected chips',
+          }
+        },
+        'default-selected-active': {
+          value: '{options.color.warm-grey-300}',
+          category: 'color',
+          docs: {
+            type: 'chip',
+            description: 'Background color for active selected chips',
           }
         },
       },

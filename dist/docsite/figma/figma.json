@@ -69,7 +69,8 @@
       },
       "chip": {
         "default": {
-          "value": "#4e4d49",
+          "value": "rgba(12, 11, 8, 0.75)",
+          "alpha": 0.75,
           "type": "color"
         },
         "disabled": {
@@ -361,7 +362,7 @@
           "type": "color"
         },
         "default-hover": {
-          "value": "#f9f8f6",
+          "value": "#f4f2ed",
           "type": "color"
         },
         "default-focus": {
@@ -373,7 +374,7 @@
           "type": "color"
         },
         "default-selected": {
-          "value": "#edeae3",
+          "value": "#dcd6cb",
           "type": "color"
         },
         "default-selected-hover": {
@@ -381,6 +382,10 @@
           "type": "color"
         },
         "default-selected-focus": {
+          "value": "#dcd6cb",
+          "type": "color"
+        },
+        "default-selected-active": {
           "value": "#edeae3",
           "type": "color"
         }
