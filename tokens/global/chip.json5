@@ -5,7 +5,7 @@
     text: {
       chip: {
         default: {
-          value: '{options.color.warm-grey-900.value}',
+          value: '{options.color.warm-grey-900-75.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -50,7 +50,7 @@
           }
         },
         'default-hover': {
-          value: '{options.color.warm-grey-100.value}',
+          value: '{options.color.warm-grey-200.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -80,7 +80,7 @@
           }
         },
         'default-selected': {
-          value: '{options.color.warm-grey-300.value}',
+          value: '{options.color.warm-grey-400.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -90,7 +90,7 @@
           }
         },
         'default-selected-hover': {
-          value: '{options.color.warm-grey-300.value}',
+          value: '{options.color.warm-grey-400.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
@@ -100,13 +100,23 @@
           }
         },
         'default-selected-focus': {
-          value: '{options.color.warm-grey-300.value}',
+          value: '{options.color.warm-grey-400.value}',
           category: 'color',
           docs: {
             category: '{color.docCategory}',
             type: 'chip',
             example: '{color.docExample}',
             description: 'Background color for focused selected chips',
+          }
+        },
+        'default-selected-active': {
+          value: '{options.color.warm-grey-300.value}',
+          category: 'color',
+          docs: {
+            category: '{color.docCategory}',
+            type: 'chip',
+            example: '{color.docExample}',
+            description: 'Background color for active selected chips',
           }
         },
       },
