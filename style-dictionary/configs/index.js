@@ -1,6 +1,7 @@
 const _ = require('lodash');
 
 // Import platform configs and add them below
+const cssConfig = require('./css');
 const scssConfig = require('./scss');
 const lessConfig = require('./less');
 const jsConfig = require('./js');
@@ -30,7 +31,7 @@ function getSources(platform) {
 
 const allPlatforms = (platform, theme) => {
   let platforms = {
-    'web': { ...scssConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
+    'web': {...cssConfig(theme), ...scssConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
     'android': { ...androidConfig(theme) },
     'site/global': { ...siteGlobalConfig(theme) },
     'site/web': { ...siteWebConfig(theme) },

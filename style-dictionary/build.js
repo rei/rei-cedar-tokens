@@ -22,6 +22,7 @@ require('./transforms/color/uicolor-transitive')(StyleDictionary);
 
 
 // ==== Include custom transform groups ====
+require('./transformGroups/css')(StyleDictionary);
 require('./transformGroups/scss')(StyleDictionary);
 require('./transformGroups/less')(StyleDictionary);
 require('./transformGroups/js')(StyleDictionary);
