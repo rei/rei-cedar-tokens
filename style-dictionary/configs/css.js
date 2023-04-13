@@ -10,7 +10,7 @@ module.exports = function(theme) {
             format: 'css/variables',
             options: {
               showFileHeader: false,
-              outputReferences: true,
+              outputVariables: false,
             },
           },
           // {
