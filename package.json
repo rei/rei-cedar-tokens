@@ -16,12 +16,16 @@
   "files": [
     "dist"
   ],
-  "main": "dist/js/cdr-tokens.common.js",
-  "module": "dist/js/cdr-tokens.mjs",
+  "main": "./dist/rei-dot-com/js/cdr-tokens.common.js",
+  "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
   "exports": {
     ".": {
-      "import": "./dist/js/cdr-tokens.mjs",
-      "require": "./dist/js/cdr-tokens.common.js"
+      "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.common.js"
+    },
+    "docsite": {
+      "import": "./dist/docsite/js/cdr-tokens.mjs",
+      "require": "./dist/docsite/js/cdr-tokens.common.js"
     },
     "./dist/": "./dist/"
   },
