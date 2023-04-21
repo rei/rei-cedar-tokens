@@ -11,7 +11,8 @@
           category: 'color',
         },
       },
-      border: {
+    },
+    border: {
         'link-card': {
           hover: {
             value: '{options.color.warm-grey-900}',
@@ -23,7 +24,6 @@
           },
         },
       },
-    },
   },
   knockout: {
     color: {
@@ -38,16 +38,16 @@
             category: 'color',
           },
         },
-        border: {
-          'link-card': {
-            hover: {
-              value: '{options.color.warm-grey-400}',
-              category: 'color',
-            },
-            active: {
-              value: '{options.color.warm-grey-900}',
-              category: 'color',
-            },
+      },
+    border: {
+      'link-card': {
+          hover: {
+            value: '{options.color.warm-grey-400}',
+            category: 'color',
+          },
+          active: {
+            value: '{options.color.warm-grey-900}',
+            category: 'color',
           },
         },
       },
