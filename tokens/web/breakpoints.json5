@@ -2,39 +2,43 @@
 
 {
   breakpoint: {
-    docCategory: 'breakpoints',
-    docExample: 'breakpoint',
+    docCategory: "breakpoints",
+    docExample: "breakpoint",
     xs: {
-      value: '0',
-      category: 'breakpoint',
+      value: "0",
+      category: "breakpoint",
       docs: {
-        category: '{breakpoint.docCategory}',
-        example: '{breakpoint.docExample}',
+        type: "breakpoint",
+        category: "{breakpoint.docCategory}",
+        example: "{breakpoint.docExample}",
       },
     },
     sm: {
-      value: '768px',
-      category: 'breakpoint',
+      value: "768px",
+      category: "breakpoint",
       docs: {
-        category: '{breakpoint.docCategory}',
-        example: '{breakpoint.docExample}',
+        type: "breakpoint",
+        category: "{breakpoint.docCategory}",
+        example: "{breakpoint.docExample}",
       },
     },
     md: {
-      value: '992px',
-      category: 'breakpoint',
+      value: "992px",
+      category: "breakpoint",
       docs: {
-        category: '{breakpoint.docCategory}',
-        example: '{breakpoint.docExample}',
+        type: "breakpoint",
+        category: "{breakpoint.docCategory}",
+        example: "{breakpoint.docExample}",
       },
     },
     lg: {
-      value: '1232px',
-      category: 'breakpoint',
+      value: "1232px",
+      category: "breakpoint",
       docs: {
-        category: '{breakpoint.docCategory}',
-        example: '{breakpoint.docExample}',
+        type: "breakpoint",
+        category: "{breakpoint.docCategory}",
+        example: "{breakpoint.docExample}",
       },
     },
-  }
+  },
 }

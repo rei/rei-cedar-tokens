@@ -30,10 +30,16 @@
       background: {
         'link-card': {
           rest: {
+            docs: {
+              type: 'link-card',
+            },
             value: '{options.color.warm-grey-900}',
             category: 'color',
           },
           active: {
+            docs: {
+              type: 'link-card',
+            },
             value: '{options.color.warm-grey-1100}',
             category: 'color',
           },
@@ -41,10 +47,16 @@
         border: {
           'link-card': {
             hover: {
+              docs: {
+                type: 'link-card',
+              },
               value: '{options.color.warm-grey-400}',
               category: 'color',
             },
             active: {
+              docs: {
+                type: 'link-card',
+              },
               value: '{options.color.warm-grey-900}',
               category: 'color',
             },

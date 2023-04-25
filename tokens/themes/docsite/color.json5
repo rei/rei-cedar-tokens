@@ -3,11 +3,17 @@
     text: {
       primary: {
         value: '{options.color.warm-grey-1200}',
+        docs: {
+            type: 'text',
+        },
         alpha: .90,
         category: 'color',
       },
       secondary: {
         value: '{options.color.warm-grey-1150}',
+         docs: {
+            type: 'text',
+        },
         alpha: .75,
         category: 'color',
       },
@@ -15,26 +21,41 @@
     background: {
       primary: {
         value: '{options.color.warm-grey-200}',
+        docs: {
+            type: 'background',
+        },
         category: 'color',
       },
       secondary: {
         value: '{options.color.white}',
+        docs: {
+            type: 'background',
+        },
         category: 'color',
       },
     },
     border: {
       primary: {
         value: '{options.color.warm-grey-400}',
+        docs: {
+            type: 'border',
+        },
         category: 'color',
       },
       secondary: {
         value: '{options.color.warm-grey-700}',
+        docs: {
+            type: 'border',
+        },
         category: 'color',
       },
     },
     icon: {
       default: {
         value: '{options.color.warm-grey-900}',
+        docs: {
+            type: 'icon',
+        },
         category: 'color',
       },
     },
@@ -43,16 +64,25 @@
     color: {
       text: {
         primary: {
+          docs: {
+            type: 'text',
+          },
           value: '{options.color.warm-grey-100}',
           category: 'color',
         },
         secondary: {
+          docs: {
+            type: 'text',
+          },
           value: '{options.color.warm-grey-500}',
           category: 'color',
         },
       },
       background: {
         primary: {
+          docs: {
+            type: 'background',
+          },
           value: '{options.color.warm-grey-1000}',
           category: 'color',
         },
