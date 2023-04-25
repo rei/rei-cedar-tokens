@@ -1,39 +1,43 @@
 {
   radius: {
-    docCategory: 'radius',
-    docExample: 'radius',
+    docCategory: "radius",
+    docExample: "radius",
     sharp: {
-      value: '0',
-      category: 'size',
+      value: "0",
+      category: "size",
       docs: {
-        category: '{radius.docCategory}',
-        example: '{radius.docExample}',
-      }
+        type: "radius",
+        category: "{radius.docCategory}",
+        example: "{radius.docExample}",
+      },
     },
     soft: {
-      value: '2px',
-      category: 'size',
+      value: "2px",
+      category: "size",
       docs: {
-        category: '{radius.docCategory}',
-        example: '{radius.docExample}',
-      }
+        type: "radius",
+        category: "{radius.docCategory}",
+        example: "{radius.docExample}",
+      },
     },
     softer: {
-      value: '4px',
-      category: 'size',
+      value: "4px",
+      category: "size",
       docs: {
-        category: '{radius.docCategory}',
-        example: '{radius.docExample}',
-      }
+        type: "radius",
+        category: "{radius.docCategory}",
+        example: "{radius.docExample}",
+      },
     },
     round: {
-      value: '9999px', // pill
+      value: "9999px", // pill
       // value: '50%', // oval
-      category: 'size',
+      category: "size",
       docs: {
-        category: '{radius.docCategory}',
-        example: '{radius.docExample}',
-      }
+        type: "radius",
+        category: "{radius.docCategory}",
+        example: "{radius.docExample}",
+      },
     },
-  }
+  },
 }

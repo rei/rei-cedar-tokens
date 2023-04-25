@@ -16,7 +16,6 @@ require('./transforms/size/float')(StyleDictionary);
 require('./transforms/color/alpha')(StyleDictionary);
 require('./transforms/color/color-css-transitive')(StyleDictionary);
 require('./transforms/color/hex8-android-transitive')(StyleDictionary);
-require('./transforms/color/sketch')(StyleDictionary);
 require('./transforms/color/uicolor-transitive')(StyleDictionary);
 
 
@@ -27,7 +26,6 @@ require('./transformGroups/less')(StyleDictionary);
 require('./transformGroups/js')(StyleDictionary);
 require('./transformGroups/android')(StyleDictionary);
 require('./transformGroups/ios')(StyleDictionary);
-require('./transformGroups/sketch')(StyleDictionary);
 require('./transformGroups/figma')(StyleDictionary);
 
 // ==== Include custom formats ====
@@ -68,7 +66,6 @@ const platforms = [
   'android',
   'ios',
   'figma',
-  'sketch'
 ]
 
 themes.map(function (theme) {
