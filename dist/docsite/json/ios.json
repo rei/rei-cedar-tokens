@@ -6355,12 +6355,18 @@
       "value": "[UIColor colorWithRed:0.012f green:0.012f blue:0.004f alpha:0.900f]",
       "alpha": 0.9,
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1200}",
         "alpha": 0.9,
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrColorTextTablePrimary",
       "attributes": {
@@ -6372,12 +6378,18 @@
       "value": "[UIColor colorWithRed:0.047f green:0.043f blue:0.031f alpha:0.750f]",
       "alpha": 0.75,
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1150}",
         "alpha": 0.75,
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrColorTextTableSecondary",
       "attributes": {
@@ -6388,11 +6400,17 @@
     {
       "value": "[UIColor colorWithRed:0.231f green:0.514f blue:0.286f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/usage.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.success-green-800}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrColorTextUsageAffirmative",
       "attributes": {
@@ -6403,11 +6421,17 @@
     {
       "value": "[UIColor colorWithRed:0.733f green:0.251f blue:0.271f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/usage.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.error-red-800}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrColorTextUsageNegative",
       "attributes": {
@@ -6418,11 +6442,17 @@
     {
       "value": "[UIColor colorWithRed:0.714f green:0.545f blue:0.216f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/usage.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warning-yellow-800}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrColorTextUsageCaution",
       "attributes": {
@@ -6456,11 +6486,17 @@
     {
       "value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
       "filePath": "tokens/themes/docsite/code-snippet.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-300}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
       },
       "name": "CdrColorBackgroundCodeSnippet",
       "attributes": {
@@ -6471,11 +6507,17 @@
     {
       "value": "[UIColor colorWithRed:0.125f green:0.125f blue:0.114f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
       "filePath": "tokens/themes/docsite/code.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
       },
       "name": "CdrColorBackgroundCode",
       "attributes": {
@@ -6486,11 +6528,17 @@
     {
       "value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
       "filePath": "tokens/themes/docsite/link-card.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.white}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
       },
       "name": "CdrColorBackgroundLinkCardRest",
       "attributes": {
@@ -6501,11 +6549,17 @@
     {
       "value": "[UIColor colorWithRed:0.216f green:0.216f blue:0.204f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
       "filePath": "tokens/themes/docsite/link-card.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1000}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
       },
       "name": "CdrColorBackgroundLinkCardActive",
       "attributes": {
@@ -6514,43 +6568,19 @@
       }
     },
     {
-      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
-      "category": "color",
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-900}",
-        "category": "color"
-      },
-      "name": "CdrColorBackgroundBorderLinkCardHover",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
-      "category": "color",
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-900}",
-        "category": "color"
-      },
-      "name": "CdrColorBackgroundBorderLinkCardActive",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
       "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "note"
+      },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "note"
+        }
       },
       "name": "CdrColorBackgroundNote",
       "attributes": {
@@ -6561,11 +6591,17 @@
     {
       "value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "background"
+      },
       "filePath": "tokens/themes/docsite/tag.json5",
       "isSource": true,
       "original": {
         "value": "{theme.color.primary-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "background"
+        }
       },
       "name": "CdrColorBackgroundTag",
       "attributes": {
@@ -6576,11 +6612,17 @@
     {
       "value": "[UIColor colorWithRed:0.573f green:0.545f blue:0.502f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
       "filePath": "tokens/themes/docsite/code.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-700}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
       },
       "name": "CdrColorBorderCode",
       "attributes": {
@@ -6589,13 +6631,61 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.color.warm-grey-900}",
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrColorBorderLinkCardHover",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.color.warm-grey-900}",
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrColorBorderLinkCardActive",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "note"
+      },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
         "value": "{theme.color.primary-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "note"
+        }
       },
       "name": "CdrColorBorderNote",
       "attributes": {
@@ -6606,11 +6696,17 @@
     {
       "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-400}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrColorBorderTableRow",
       "attributes": {
@@ -6621,11 +6717,17 @@
     {
       "value": "[UIColor colorWithRed:0.231f green:0.514f blue:0.286f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "border"
+      },
       "filePath": "tokens/themes/docsite/usage.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.success-green-800}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "border"
+        }
       },
       "name": "CdrColorBorderUsageAffirmative",
       "attributes": {
@@ -6636,11 +6738,17 @@
     {
       "value": "[UIColor colorWithRed:0.733f green:0.251f blue:0.271f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "border"
+      },
       "filePath": "tokens/themes/docsite/usage.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.error-red-800}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "border"
+        }
       },
       "name": "CdrColorBorderUsageNegative",
       "attributes": {
@@ -6651,11 +6759,17 @@
     {
       "value": "[UIColor colorWithRed:0.714f green:0.545f blue:0.216f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "border"
+      },
       "filePath": "tokens/themes/docsite/usage.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warning-yellow-800}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "border"
+        }
       },
       "name": "CdrColorBorderUsageCaution",
       "attributes": {
@@ -6666,11 +6780,17 @@
     {
       "value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "note"
+      },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
         "value": "{theme.color.primary-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "note"
+        }
       },
       "name": "CdrColorIconBackgroundNote",
       "attributes": {
@@ -6681,11 +6801,17 @@
     {
       "value": "[UIColor colorWithRed:0.125f green:0.125f blue:0.114f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
       "filePath": "tokens/themes/docsite/code-snippet.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
       },
       "name": "CdrKnockoutBackgroundCodeSnippet",
       "attributes": {
@@ -6696,11 +6822,17 @@
     {
       "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrKnockoutColorTextPrimary",
       "attributes": {
@@ -6711,11 +6843,17 @@
     {
       "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-500}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrKnockoutColorTextSecondary",
       "attributes": {
@@ -6726,11 +6864,17 @@
     {
       "value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrKnockoutColorTextTablePrimary",
       "attributes": {
@@ -6741,11 +6885,17 @@
     {
       "value": "[UIColor colorWithRed:0.820f green:0.796f blue:0.741f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-500}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrKnockoutColorTextTableSecondary",
       "attributes": {
@@ -6756,11 +6906,17 @@
     {
       "value": "[UIColor colorWithRed:0.216f green:0.216f blue:0.204f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1000}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrKnockoutColorBackgroundPrimary",
       "attributes": {
@@ -6771,11 +6927,17 @@
     {
       "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
       "filePath": "tokens/themes/docsite/link-card.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-900}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
       },
       "name": "CdrKnockoutColorBackgroundLinkCardRest",
       "attributes": {
@@ -6786,43 +6948,19 @@
     {
       "value": "[UIColor colorWithRed:0.125f green:0.125f blue:0.114f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
       "filePath": "tokens/themes/docsite/link-card.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
       },
       "name": "CdrKnockoutColorBackgroundLinkCardActive",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
-      "category": "color",
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-400}",
-        "category": "color"
-      },
-      "name": "CdrKnockoutColorBackgroundBorderLinkCardHover",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
-      "category": "color",
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "value": "{options.color.warm-grey-900}",
-        "category": "color"
-      },
-      "name": "CdrKnockoutColorBackgroundBorderLinkCardActive",
       "attributes": {
         "deprecated": false,
         "category": "color"
@@ -6832,12 +6970,18 @@
       "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:0.500f]",
       "alpha": 0.5,
       "category": "color",
+      "docs": {
+        "type": "note"
+      },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-900}",
         "alpha": 0.5,
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "note"
+        }
       },
       "name": "CdrKnockoutColorBackgroundNote",
       "attributes": {
@@ -6849,12 +6993,18 @@
       "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:0.500f]",
       "alpha": 0.5,
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-900}",
         "alpha": 0.5,
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrKnockoutColorBackgroundTableHeader",
       "attributes": {
@@ -6865,11 +7015,17 @@
     {
       "value": "[UIColor colorWithRed:0.216f green:0.216f blue:0.204f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-1000}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrKnockoutColorBackgroundTableRow",
       "attributes": {
@@ -6880,11 +7036,17 @@
     {
       "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-900}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrKnockoutColorBorderInversePrimary",
       "attributes": {
@@ -6895,11 +7057,17 @@
     {
       "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-400}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrKnockoutColorBorderInverseSecondary",
       "attributes": {
@@ -6908,13 +7076,61 @@
       }
     },
     {
+      "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.color.warm-grey-400}",
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrKnockoutColorBorderLinkCardHover",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
+      "category": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.color.warm-grey-900}",
+        "category": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrKnockoutColorBorderLinkCardActive",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "note"
+      },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
         "value": "{theme.color.primary-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "note"
+        }
       },
       "name": "CdrKnockoutColorBorderNote",
       "attributes": {
@@ -6925,11 +7141,17 @@
     {
       "value": "[UIColor colorWithRed:0.306f green:0.302f blue:0.286f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "table"
+      },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-900}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "name": "CdrKnockoutColorBorderTableRow",
       "attributes": {
@@ -6940,11 +7162,17 @@
     {
       "value": "[UIColor colorWithRed:0.863f green:0.839f blue:0.796f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "text"
+      },
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
         "value": "{options.color.warm-grey-400}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "text"
+        }
       },
       "name": "CdrKnockoutColorIconInverseDefault",
       "attributes": {
@@ -6955,11 +7183,17 @@
     {
       "value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
       "category": "color",
+      "docs": {
+        "type": "note"
+      },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
         "value": "{theme.color.primary-100}",
-        "category": "color"
+        "category": "color",
+        "docs": {
+          "type": "note"
+        }
       },
       "name": "CdrKnockoutColorIconBackgroundNote",
       "attributes": {
@@ -6973,6 +7207,7 @@
       "value": "40.0f",
       "category": "size",
       "docs": {
+        "type": "form",
         "category": "form",
         "example": "form"
       },
@@ -6982,6 +7217,7 @@
         "value": "40px",
         "category": "size",
         "docs": {
+          "type": "form",
           "category": "{form.docCategory}",
           "example": "{form.docExample}"
         }
@@ -6996,6 +7232,7 @@
       "value": "48.0f",
       "category": "size",
       "docs": {
+        "type": "form",
         "category": "form",
         "example": "form"
       },
@@ -7005,6 +7242,7 @@
         "value": "48px",
         "category": "size",
         "docs": {
+          "type": "form",
           "category": "{form.docCategory}",
           "example": "{form.docExample}"
         }
@@ -7019,6 +7257,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "form",
         "category": "form",
         "example": "form"
       },
@@ -7028,6 +7267,7 @@
         "value": "16px",
         "category": "size",
         "docs": {
+          "type": "form",
           "category": "{form.docCategory}",
           "example": "{form.docExample}"
         }
@@ -7042,6 +7282,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "form",
         "category": "form",
         "example": "form"
       },
@@ -7051,6 +7292,7 @@
         "value": "16px",
         "category": "size",
         "docs": {
+          "type": "form",
           "category": "{form.docCategory}",
           "example": "{form.docExample}"
         }
@@ -7065,6 +7307,7 @@
       "value": "20.0f",
       "category": "size",
       "docs": {
+        "type": "form",
         "category": "form",
         "example": "form"
       },
@@ -7074,6 +7317,7 @@
         "value": "20px",
         "category": "size",
         "docs": {
+          "type": "form",
           "category": "{form.docCategory}",
           "example": "{form.docExample}"
         }
@@ -7385,6 +7629,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7393,6 +7638,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7406,6 +7652,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7414,6 +7661,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7427,6 +7675,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7435,6 +7684,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7448,6 +7698,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7456,6 +7707,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7470,6 +7722,7 @@
       "alpha": 0.2,
       "category": "color",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7479,6 +7732,7 @@
         "alpha": 0.2,
         "category": "color",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7492,6 +7746,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7500,6 +7755,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7513,6 +7769,7 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7521,6 +7778,7 @@
         "value": "2px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7534,6 +7792,7 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7542,6 +7801,7 @@
         "value": "2px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7555,6 +7815,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7563,6 +7824,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7577,6 +7839,7 @@
       "alpha": 0.2,
       "category": "color",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7586,6 +7849,7 @@
         "alpha": 0.2,
         "category": "color",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7599,6 +7863,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7607,6 +7872,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7620,6 +7886,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7628,6 +7895,7 @@
         "value": "4px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7641,6 +7909,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7649,6 +7918,7 @@
         "value": "4px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7662,6 +7932,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7670,6 +7941,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7684,6 +7956,7 @@
       "alpha": 0.2,
       "category": "color",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7693,6 +7966,7 @@
         "alpha": 0.2,
         "category": "color",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7706,6 +7980,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7714,6 +7989,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7727,6 +8003,7 @@
       "value": "8.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7735,6 +8012,7 @@
         "value": "8px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7748,6 +8026,7 @@
       "value": "8.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7756,6 +8035,7 @@
         "value": "8px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7769,6 +8049,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7777,6 +8058,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7791,6 +8073,7 @@
       "alpha": 0.2,
       "category": "color",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7800,6 +8083,7 @@
         "alpha": 0.2,
         "category": "color",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7813,6 +8097,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7821,6 +8106,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7834,6 +8120,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7842,6 +8129,7 @@
         "value": "16px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7855,6 +8143,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7863,6 +8152,7 @@
         "value": "16px",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7876,6 +8166,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7884,6 +8175,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7898,6 +8190,7 @@
       "alpha": 0.2,
       "category": "color",
       "docs": {
+        "type": "prominence",
         "category": "prominence"
       },
       "filePath": "tokens/global/prominence.json5",
@@ -7907,6 +8200,7 @@
         "alpha": 0.2,
         "category": "color",
         "docs": {
+          "type": "prominence",
           "category": "{prominence.docCategory}"
         }
       },
@@ -7922,6 +8216,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "radius",
         "category": "radius",
         "example": "radius"
       },
@@ -7931,6 +8226,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "radius",
           "category": "{radius.docCategory}",
           "example": "{radius.docExample}"
         }
@@ -7945,6 +8241,7 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
+        "type": "radius",
         "category": "radius",
         "example": "radius"
       },
@@ -7954,6 +8251,7 @@
         "value": "2px",
         "category": "size",
         "docs": {
+          "type": "radius",
           "category": "{radius.docCategory}",
           "example": "{radius.docExample}"
         }
@@ -7968,6 +8266,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "radius",
         "category": "radius",
         "example": "radius"
       },
@@ -7977,6 +8276,7 @@
         "value": "4px",
         "category": "size",
         "docs": {
+          "type": "radius",
           "category": "{radius.docCategory}",
           "example": "{radius.docExample}"
         }
@@ -7991,6 +8291,7 @@
       "value": "9999.0f",
       "category": "size",
       "docs": {
+        "type": "radius",
         "category": "radius",
         "example": "radius"
       },
@@ -8000,6 +8301,7 @@
         "value": "9999px",
         "category": "size",
         "docs": {
+          "type": "radius",
           "category": "{radius.docCategory}",
           "example": "{radius.docExample}"
         }
@@ -8016,6 +8318,7 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8026,6 +8329,7 @@
         "value": "{options.space.eighth-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8041,6 +8345,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8051,6 +8356,7 @@
         "value": "{options.space.quarter-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8066,6 +8372,7 @@
       "value": "8.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8076,6 +8383,7 @@
         "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8091,6 +8399,7 @@
       "value": "12.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8101,6 +8410,7 @@
         "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8116,6 +8426,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8126,6 +8437,7 @@
         "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8141,6 +8453,7 @@
       "value": "24.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8151,6 +8464,7 @@
         "value": "24px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8166,6 +8480,7 @@
       "value": "32.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8176,6 +8491,7 @@
         "value": "32px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8191,6 +8507,7 @@
       "value": "48.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8201,6 +8518,7 @@
         "value": "48px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8216,6 +8534,7 @@
       "value": "64.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8226,6 +8545,7 @@
         "value": "64px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         },
@@ -8241,8 +8561,8 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8252,8 +8572,8 @@
         "value": "{space.eighth-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -8268,6 +8588,7 @@
       "value": "0.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8277,6 +8598,7 @@
         "value": "0",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8291,6 +8613,7 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8300,6 +8623,7 @@
         "value": "2px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8314,6 +8638,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8323,6 +8648,7 @@
         "value": "4px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8337,6 +8663,7 @@
       "value": "2.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8346,6 +8673,7 @@
         "value": "2px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8360,8 +8688,8 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8371,8 +8699,8 @@
         "value": "{space.quarter-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -8388,6 +8716,7 @@
       "spacingModifier": 0.5,
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8398,6 +8727,7 @@
         "spacingModifier": "{options.space.squish}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8412,6 +8742,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8421,6 +8752,7 @@
         "value": "{options.space.quarter-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8436,6 +8768,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8446,6 +8779,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8460,6 +8794,7 @@
       "value": "4.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8469,6 +8804,7 @@
         "value": "{options.space.quarter-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8483,8 +8819,8 @@
       "value": "8.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8494,8 +8830,8 @@
         "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -8511,6 +8847,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8521,6 +8858,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8535,6 +8873,7 @@
       "value": "8.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8544,6 +8883,7 @@
         "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8559,6 +8899,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8569,6 +8910,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8583,6 +8925,7 @@
       "value": "8.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8592,6 +8935,7 @@
         "value": "{options.space.half-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8606,8 +8950,8 @@
       "value": "12.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8617,8 +8961,8 @@
         "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -8634,6 +8978,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8644,6 +8989,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8658,6 +9004,7 @@
       "value": "12.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8667,6 +9014,7 @@
         "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8682,6 +9030,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8692,6 +9041,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8706,6 +9056,7 @@
       "value": "12.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8715,6 +9066,7 @@
         "value": "{options.space.three-quarter-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8729,8 +9081,8 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8740,8 +9092,8 @@
         "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -8757,6 +9109,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8767,6 +9120,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8781,6 +9135,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8790,6 +9145,7 @@
         "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8805,6 +9161,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8815,6 +9172,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8829,6 +9187,7 @@
       "value": "16.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8838,6 +9197,7 @@
         "value": "{options.space.one-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8852,8 +9212,8 @@
       "value": "24.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8863,8 +9223,8 @@
         "value": "{options.space.one-and-a-half-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -8880,6 +9240,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8890,6 +9251,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8904,6 +9266,7 @@
       "value": "24.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8913,6 +9276,7 @@
         "value": "{options.space.one-and-a-half-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8928,6 +9292,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8938,6 +9303,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8952,6 +9318,7 @@
       "value": "24.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -8961,6 +9328,7 @@
         "value": "{options.space.one-and-a-half-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -8975,8 +9343,8 @@
       "value": "32.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -8986,8 +9354,8 @@
         "value": "{options.space.two-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -9003,6 +9371,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9013,6 +9382,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9027,6 +9397,7 @@
       "value": "32.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9036,6 +9407,7 @@
         "value": "{options.space.two-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9051,6 +9423,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9061,6 +9434,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9075,6 +9449,7 @@
       "value": "32.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9084,6 +9459,7 @@
         "value": "{options.space.two-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9098,8 +9474,8 @@
       "value": "48.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -9109,8 +9485,8 @@
         "value": "{options.space.three-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -9126,6 +9502,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9136,6 +9513,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9150,6 +9528,7 @@
       "value": "48.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9159,6 +9538,7 @@
         "value": "{options.space.three-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9174,6 +9554,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9184,6 +9565,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9198,6 +9580,7 @@
       "value": "48.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9207,6 +9590,7 @@
         "value": "{options.space.three-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9221,8 +9605,8 @@
       "value": "64.0f",
       "category": "size",
       "docs": {
-        "category": "spacing",
         "type": "inset",
+        "category": "spacing",
         "example": "inset"
       },
       "utility-class": true,
@@ -9232,8 +9616,8 @@
         "value": "{options.space.four-x}",
         "category": "size",
         "docs": {
-          "category": "{space.docCategory}",
           "type": "inset",
+          "category": "{space.docCategory}",
           "example": "inset"
         },
         "utility-class": true
@@ -9249,6 +9633,7 @@
       "category": "size",
       "spacingModifier": 0.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9259,6 +9644,7 @@
         "category": "size",
         "spacingModifier": "{options.space.squish}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9273,6 +9659,7 @@
       "value": "64.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9282,6 +9669,7 @@
         "value": "{options.space.four-x}",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9297,6 +9685,7 @@
       "category": "size",
       "spacingModifier": 1.5,
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9307,6 +9696,7 @@
         "category": "size",
         "spacingModifier": "{options.space.stretch}",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
@@ -9321,6 +9711,7 @@
       "value": "64.0f",
       "category": "size",
       "docs": {
+        "type": "spacing",
         "category": "spacing",
         "example": "spacing"
       },
@@ -9330,6 +9721,7 @@
         "value": "64px",
         "category": "size",
         "docs": {
+          "type": "spacing",
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }

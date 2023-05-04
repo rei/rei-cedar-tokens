@@ -1,25 +1,37 @@
 {
   color: {
     background: {
-      'link-card': {
+      "link-card": {
         rest: {
-          value: '{options.color.white}',
-          category: 'color',
+          value: "{options.color.white}",
+          category: "color",
+          docs: {
+            type: "link-card",
+          },
         },
         active: {
-          value: '{options.color.warm-grey-1000}',
-          category: 'color',
+          value: "{options.color.warm-grey-1000}",
+          category: "color",
+          docs: {
+            type: "link-card",
+          },
         },
       },
-      border: {
-        'link-card': {
-          hover: {
-            value: '{options.color.warm-grey-900}',
-            category: 'color',
+    },
+    border: {
+      "link-card": {
+        hover: {
+          value: "{options.color.warm-grey-900}",
+          category: "color",
+          docs: {
+            type: "link-card",
           },
-          active: {
-            value: '{options.color.warm-grey-900}',
-            category: 'color',
+        },
+        active: {
+          value: "{options.color.warm-grey-900}",
+          category: "color",
+          docs: {
+            type: "link-card",
           },
         },
       },
@@ -28,25 +40,37 @@
   knockout: {
     color: {
       background: {
-        'link-card': {
+        "link-card": {
           rest: {
-            value: '{options.color.warm-grey-900}',
-            category: 'color',
+            value: "{options.color.warm-grey-900}",
+            category: "color",
+            docs: {
+              type: "link-card",
+            },
           },
           active: {
-            value: '{options.color.warm-grey-1100}',
-            category: 'color',
+            value: "{options.color.warm-grey-1100}",
+            category: "color",
+            docs: {
+              type: "link-card",
+            },
           },
         },
-        border: {
-          'link-card': {
-            hover: {
-              value: '{options.color.warm-grey-400}',
-              category: 'color',
+      },
+      border: {
+        "link-card": {
+          hover: {
+            value: "{options.color.warm-grey-400}",
+            category: "color",
+            docs: {
+              type: "link-card",
             },
-            active: {
-              value: '{options.color.warm-grey-900}',
-              category: 'color',
+          },
+          active: {
+            value: "{options.color.warm-grey-900}",
+            category: "color",
+            docs: {
+              type: "link-card",
             },
           },
         },
