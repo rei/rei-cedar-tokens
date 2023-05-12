@@ -1000,21 +1000,63 @@ $cdr-UI-settings: (
   cdr-palette--sandstone: (
     cdr-text: (
       default: (
+        text: --cdr-sandstone-text-default,
+        text-subdued: --cdr-sandstone-text-subdued,
         text-emphasis: --cdr-sandstone-text-emphasis,
+      ),
+    ),
+    cdr-background: (
+      default: (
+        background: --cdr-sandstone-background-default,
+        background-highlight: --cdr-sandstone-background-highlight,
+      ),
+    ),
+    cdr-border: (
+      default: (
+        border: --cdr-sandstone-border-default,
+        border-strong: --cdr-sandstone-border-strong,
       ),
     ),
   ),
   cdr-palette--midnight: (
     cdr-text: (
       default: (
+        text: --cdr-midnight-text-default,
+        text-subdued: --cdr-midnight-text-subdued,
         text-emphasis: --cdr-midnight-text-emphasis,
+      ),
+    ),
+    cdr-background: (
+      default: (
+        background: --cdr-midnight-background-default,
+        background-highlight: --cdr-midnight-background-highlight,
+        background-border: --cdr-midnight-border-default,
+      ),
+    ),
+    cdr-border: (
+      default: (
+        border-strong: --cdr-midnight-border-strong,
       ),
     ),
   ),
   cdr-palette--obsidian: (
     cdr-text: (
       default: (
+        text: --cdr-obsidian-text-default,
+        text-subdued: --cdr-obsidian-text-subdued,
         text-emphasis: --cdr-obsidian-text-emphasis,
+      ),
+    ),
+    cdr-background: (
+      default: (
+        background: --cdr-obsidian-background-default,
+        background-highlight: --cdr-obsidian-background-highlight,
+      ),
+    ),
+    cdr-border: (
+      default: (
+        border: --cdr-obsidian-border-default,
+        border-strong: --cdr-obsidian-border-strong,
       ),
     ),
   ),

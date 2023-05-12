@@ -6269,27 +6269,243 @@
       }
     },
     {
+      "value": "#ff3b3a38",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The default text color in sandstone"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.sandstone.color.warm-grey-900}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default text color in sandstone"
+        }
+      },
+      "name": "cdr_sandstone_text_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff666057",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "Subdued text color in sandstone"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.sandstone.color.warm-grey-750}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Subdued text color in sandstone"
+        }
+      },
+      "name": "cdr_sandstone_text_subdued",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
       "value": "#ff080808",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "The default, secondary text color in sandstone"
+        "description": "Emphasis text color in sandstone"
       },
       "filePath": "tokens/global/color.json5",
       "isSource": false,
       "original": {
-        "value": "{options.sandstone.color.warm-grey-1200}",
+        "value": "{options.sandstone.color.warm-grey-1000}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, secondary text color in sandstone"
+          "description": "Emphasis text color in sandstone"
         }
       },
       "name": "cdr_sandstone_text_emphasis",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff6f4f0",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The default, primary background color of most pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.sandstone.color.warm-grey-000}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The default, primary background color of most pages"
+        }
+      },
+      "name": "cdr_sandstone_background_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffffffff",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.color.white}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_sandstone_background_highlight",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff000000",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.sandstone.color.warm-grey-1000",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_sandstone_border_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffcbc5b7",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.sandstone.color.warm-grey-250}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_sandstone_border_strong",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff1eee9",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The default, primary text color in midnight"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-900}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default, primary text color in midnight"
+        }
+      },
+      "name": "cdr_midnight_text_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffdbd6cc",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The default, secondary text color in midnight"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-750}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default, secondary text color in midnight"
+        }
+      },
+      "name": "cdr_midnight_text_subdued",
       "attributes": {
         "deprecated": false,
         "category": "color"
@@ -6302,12 +6518,174 @@
         "category": "colors",
         "type": "text",
         "example": "color",
+        "description": "The default, emphasis text color in midnight"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-1000}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default, emphasis text color in midnight"
+        }
+      },
+      "name": "cdr_midnight_text_emphasis",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff373734",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The default, primary background color of most pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-000}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The default, primary background color of most pages"
+        }
+      },
+      "name": "cdr_midnight_background_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff454440",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-025}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_midnight_background_highlight",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff827c72",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-300}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_midnight_border_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fffdfdfc",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.midnight.color.warm-grey-1000}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_midnight_border_strong",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffeae7df",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
+        "description": "The default, primary text color in sandstone"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.obsidian.color.warm-grey-900}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default, primary text color in sandstone"
+        }
+      },
+      "name": "cdr_obsidian_text_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ffd4cec1",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "text",
+        "example": "color",
         "description": "The default, secondary text color in sandstone"
       },
       "filePath": "tokens/global/color.json5",
       "isSource": false,
       "original": {
-        "value": "{options.midnight.color.warm-grey-1200}",
+        "value": "{options.obsidian.color.warm-grey-750}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -6316,7 +6694,7 @@
           "description": "The default, secondary text color in sandstone"
         }
       },
-      "name": "cdr_midnight_text_emphasis",
+      "name": "cdr_obsidian_text_subdued",
       "attributes": {
         "deprecated": false,
         "category": "color"
@@ -6334,7 +6712,7 @@
       "filePath": "tokens/global/color.json5",
       "isSource": false,
       "original": {
-        "value": "{options.obsidian.color.warm-grey-1200}",
+        "value": "{options.obsidian.color.warm-grey-1000}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -6344,6 +6722,114 @@
         }
       },
       "name": "cdr_obsidian_text_emphasis",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff20201d",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The default, primary background color of most pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.obsidian.color.warm-grey-000}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The default, primary background color of most pages"
+        }
+      },
+      "name": "cdr_obsidian_background_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff31302b",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.obsidian.color.warm-grey-025}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_obsidian_background_highlight",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#ff746f65",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.obsidian.color.warm-grey-250}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_obsidian_border_default",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff7f6f2",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "An alternate, secondary background color used on some pages"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "value": "{options.obsidian.color.warm-grey-1000}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "An alternate, secondary background color used on some pages"
+        }
+      },
+      "name": "cdr_obsidian_border_strong",
       "attributes": {
         "deprecated": false,
         "category": "color"
