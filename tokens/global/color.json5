@@ -629,6 +629,84 @@
       },
     },
   },
+  avalanche: {
+    text: {
+      default: {
+        value: "{options.avalanche.color.warm-grey-900}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "text",
+          example: "color",
+          description: "The default text color in avalanche",
+        },
+      },
+      subdued: {
+        value: "{options.avalanche.color.warm-grey-750}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "text",
+          example: "color",
+          description: "Subdued text color in avalanche",
+        },
+      },
+      emphasis: {
+        value: "{options.avalanche.color.warm-grey-1000}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "text",
+          example: "color",
+          description: "Emphasis text color in avalanche",
+        },
+      },
+    },
+    background: {
+      default: {
+        value: "{options.avalanche.color.warm-grey-000}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "background",
+          example: "color",
+          description: "The default background color of most pages in avalanche",
+        },
+      },
+      highlight: {
+        value: "{options.avalanche.color.warm-grey-025}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "background",
+          example: "color",
+          description: "A highlight background color for avalanche",
+        },
+      },
+    },
+    border: {
+      default: {
+        value: "{options.avalanche.color.warm-grey-1000",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "border",
+          example: "color",
+          description: "The default border color in avalanche",
+        },
+      },
+      strong: {
+        value: "{options.sandstone.color.warm-grey-250}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "border",
+          example: "color",
+          description: "A bold border color in avalanche",
+        },
+      },
+    },
+  },
   sandstone: {
     text: {
       default: {
@@ -670,17 +748,17 @@
           category: "colors",
           type: "background",
           example: "color",
-          description: "The default, primary background color of most pages",
+          description: "The default background color of in sandstone",
         },
       },
       highlight: {
-        value: "{options.color.white}",
+        value: "{options.sandstone.color.warm-grey-025}",
         category: "color",
         docs: {
           category: "colors",
           type: "background",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "A highlight background color in sandstone",
         },
       },
     },
@@ -692,7 +770,7 @@
           category: "colors",
           type: "border",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "The default border color in sandstone",
         },
       },
       strong: {
@@ -702,7 +780,7 @@
           category: "colors",
           type: "border",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "A bold border color in sandstone",
         },
       },
     },
@@ -716,7 +794,7 @@
           category: "colors",
           type: "text",
           example: "color",
-          description: "The default, primary text color in midnight",
+          description: "The default text color in midnight",
         },
       },
       subdued: {
@@ -726,7 +804,7 @@
           category: "colors",
           type: "text",
           example: "color",
-          description: "The default, secondary text color in midnight",
+          description: "Subdued text color in midnight",
         },
       },
       emphasis: {
@@ -736,7 +814,7 @@
           category: "colors",
           type: "text",
           example: "color",
-          description: "The default, emphasis text color in midnight",
+          description: "Emphasis text color in midnight",
         },
       },
     },
@@ -748,7 +826,7 @@
           category: "colors",
           type: "background",
           example: "color",
-          description: "The default, primary background color of most pages",
+          description: "The default background color of in midnight",
         },
       },
       highlight: {
@@ -758,7 +836,7 @@
           category: "colors",
           type: "background",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "The highlight background color in midnight",
         },
       },
     },
@@ -770,7 +848,7 @@
           category: "colors",
           type: "background",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "The default border color in midnight",
         },
       },
       strong: {
@@ -780,7 +858,7 @@
           category: "colors",
           type: "border",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "A bold border color in midnight",
         },
       },
     },
@@ -794,7 +872,7 @@
         category: "colors",
         type: "text",
         example: "color",
-        description: "The default, primary text color in sandstone",
+        description: "The text color in obsidian",
       },
     },
       subdued: {
@@ -804,7 +882,7 @@
           category: "colors",
           type: "text",
           example: "color",
-          description: "The default, secondary text color in sandstone",
+          description: "Subdued text color in obsidian",
         },
       },
       emphasis: {
@@ -814,7 +892,7 @@
           category: "colors",
           type: "text",
           example: "color",
-          description: "The default, secondary text color in sandstone",
+          description: "Emphasis color in obsidian",
         },
       },
     },
@@ -826,7 +904,7 @@
           category: "colors",
           type: "background",
           example: "color",
-          description: "The default, primary background color of most pages",
+          description: "The default background color in obsidian",
         },
       },
       highlight: {
@@ -836,7 +914,7 @@
           category: "colors",
           type: "background",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "The highligh background color in obsidian",
         },
       },
     },
@@ -848,7 +926,7 @@
           category: "colors",
           type: "border",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "The default border color in obsidian",
         },
       },
       strong: {
@@ -858,7 +936,7 @@
           category: "colors",
           type: "border",
           example: "color",
-          description: "An alternate, secondary background color used on some pages",
+          description: "Bold border color in obsidian",
         },
       },
     },
