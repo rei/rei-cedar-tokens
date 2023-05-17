@@ -6264,6 +6264,195 @@
         }
       },
       {
+        "value": "#4b4a48",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "The default text color in avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.avalanche.color.warm-grey-900}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "The default text color in avalanche"
+          }
+        },
+        "name": "cdr-avalanche-text-default",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#736e65",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Subdued text color in avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.avalanche.color.warm-grey-750}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Subdued text color in avalanche"
+          }
+        },
+        "name": "cdr-avalanche-text-subdued",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#2e2e2b",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "text",
+          "example": "color",
+          "description": "Emphasis text color in avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.avalanche.color.warm-grey-1000}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "text",
+            "example": "color",
+            "description": "Emphasis text color in avalanche"
+          }
+        },
+        "name": "cdr-avalanche-text-emphasis",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#ffffff",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The default background color of most pages in avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.avalanche.color.warm-grey-000}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "The default background color of most pages in avalanche"
+          }
+        },
+        "name": "cdr-avalanche-background-default",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#f7f5f3",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "A highlight background color for avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.avalanche.color.warm-grey-025}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "background",
+            "example": "color",
+            "description": "A highlight background color for avalanche"
+          }
+        },
+        "name": "cdr-avalanche-background-highlight",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#000000",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "The default border color in avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.avalanche.color.warm-grey-1000",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "The default border color in avalanche"
+          }
+        },
+        "name": "cdr-avalanche-border-default",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
+        "value": "#cbc5b7",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "A bold border color in avalanche"
+        },
+        "filePath": "tokens/global/color.json5",
+        "isSource": false,
+        "original": {
+          "value": "{options.sandstone.color.warm-grey-250}",
+          "category": "color",
+          "docs": {
+            "category": "colors",
+            "type": "border",
+            "example": "color",
+            "description": "A bold border color in avalanche"
+          }
+        },
+        "name": "cdr-avalanche-border-strong",
+        "attributes": {
+          "deprecated": false,
+          "category": "color"
+        }
+      },
+      {
         "value": "#3b3a38",
         "category": "color",
         "docs": {
@@ -6351,7 +6540,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "The default, primary background color of most pages"
+          "description": "The default background color of in sandstone"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6362,7 +6551,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "The default, primary background color of most pages"
+            "description": "The default background color of in sandstone"
           }
         },
         "name": "cdr-sandstone-background-default",
@@ -6372,24 +6561,24 @@
         }
       },
       {
-        "value": "#ffffff",
+        "value": "#edebe5",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "A highlight background color in sandstone"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
         "original": {
-          "value": "{options.color.white}",
+          "value": "{options.sandstone.color.warm-grey-025}",
           "category": "color",
           "docs": {
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "A highlight background color in sandstone"
           }
         },
         "name": "cdr-sandstone-background-highlight",
@@ -6405,7 +6594,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "The default border color in sandstone"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6416,7 +6605,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "The default border color in sandstone"
           }
         },
         "name": "cdr-sandstone-border-default",
@@ -6432,7 +6621,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "A bold border color in sandstone"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6443,7 +6632,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "A bold border color in sandstone"
           }
         },
         "name": "cdr-sandstone-border-strong",
@@ -6459,7 +6648,7 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, primary text color in midnight"
+          "description": "The default text color in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6470,7 +6659,7 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "The default, primary text color in midnight"
+            "description": "The default text color in midnight"
           }
         },
         "name": "cdr-midnight-text-default",
@@ -6486,7 +6675,7 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, secondary text color in midnight"
+          "description": "Subdued text color in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6497,7 +6686,7 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "The default, secondary text color in midnight"
+            "description": "Subdued text color in midnight"
           }
         },
         "name": "cdr-midnight-text-subdued",
@@ -6513,7 +6702,7 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, emphasis text color in midnight"
+          "description": "Emphasis text color in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6524,7 +6713,7 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "The default, emphasis text color in midnight"
+            "description": "Emphasis text color in midnight"
           }
         },
         "name": "cdr-midnight-text-emphasis",
@@ -6540,7 +6729,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "The default, primary background color of most pages"
+          "description": "The default background color of in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6551,7 +6740,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "The default, primary background color of most pages"
+            "description": "The default background color of in midnight"
           }
         },
         "name": "cdr-midnight-background-default",
@@ -6567,7 +6756,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "The highlight background color in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6578,7 +6767,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "The highlight background color in midnight"
           }
         },
         "name": "cdr-midnight-background-highlight",
@@ -6594,7 +6783,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "The default border color in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6605,7 +6794,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "The default border color in midnight"
           }
         },
         "name": "cdr-midnight-border-default",
@@ -6621,7 +6810,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "A bold border color in midnight"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6632,7 +6821,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "A bold border color in midnight"
           }
         },
         "name": "cdr-midnight-border-strong",
@@ -6648,7 +6837,7 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, primary text color in sandstone"
+          "description": "The text color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6659,7 +6848,7 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "The default, primary text color in sandstone"
+            "description": "The text color in obsidian"
           }
         },
         "name": "cdr-obsidian-text-default",
@@ -6675,7 +6864,7 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, secondary text color in sandstone"
+          "description": "Subdued text color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6686,7 +6875,7 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "The default, secondary text color in sandstone"
+            "description": "Subdued text color in obsidian"
           }
         },
         "name": "cdr-obsidian-text-subdued",
@@ -6702,7 +6891,7 @@
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default, secondary text color in sandstone"
+          "description": "Emphasis color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6713,7 +6902,7 @@
             "category": "colors",
             "type": "text",
             "example": "color",
-            "description": "The default, secondary text color in sandstone"
+            "description": "Emphasis color in obsidian"
           }
         },
         "name": "cdr-obsidian-text-emphasis",
@@ -6729,7 +6918,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "The default, primary background color of most pages"
+          "description": "The default background color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6740,7 +6929,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "The default, primary background color of most pages"
+            "description": "The default background color in obsidian"
           }
         },
         "name": "cdr-obsidian-background-default",
@@ -6756,7 +6945,7 @@
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "The highligh background color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6767,7 +6956,7 @@
             "category": "colors",
             "type": "background",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "The highligh background color in obsidian"
           }
         },
         "name": "cdr-obsidian-background-highlight",
@@ -6783,7 +6972,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "The default border color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6794,7 +6983,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "The default border color in obsidian"
           }
         },
         "name": "cdr-obsidian-border-default",
@@ -6810,7 +6999,7 @@
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "An alternate, secondary background color used on some pages"
+          "description": "Bold border color in obsidian"
         },
         "filePath": "tokens/global/color.json5",
         "isSource": false,
@@ -6821,7 +7010,7 @@
             "category": "colors",
             "type": "border",
             "example": "color",
-            "description": "An alternate, secondary background color used on some pages"
+            "description": "Bold border color in obsidian"
           }
         },
         "name": "cdr-obsidian-border-strong",
