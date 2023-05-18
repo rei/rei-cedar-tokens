@@ -6269,54 +6269,58 @@
       }
     },
     {
-      "value": "#ff4b4a48",
+      "value": "#e6030301",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "The default text color in avalanche"
+        "description": "The default text color in core"
       },
-      "filePath": "tokens/global/color.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "alpha": 0.9,
       "original": {
-        "value": "{options.avalanche.color.warm-grey-900}",
+        "value": "{options.color.warm-grey-1200}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "The default text color in avalanche"
-        }
+          "description": "The default text color in core"
+        },
+        "alpha": 0.9
       },
-      "name": "cdr_avalanche_text_default",
+      "name": "cdr_core_text_default",
       "attributes": {
         "deprecated": false,
         "category": "color"
       }
     },
     {
-      "value": "#ff736e65",
+      "value": "#bf0c0b08",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "text",
         "example": "color",
-        "description": "Subdued text color in avalanche"
+        "description": "Subdued text color in core"
       },
-      "filePath": "tokens/global/color.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "alpha": 0.75,
       "original": {
-        "value": "{options.avalanche.color.warm-grey-750}",
+        "value": "{options.color.warm-grey-1150}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "text",
           "example": "color",
-          "description": "Subdued text color in avalanche"
-        }
+          "description": "Subdued text color in core"
+        },
+        "alpha": 0.75
       },
-      "name": "cdr_avalanche_text_subdued",
+      "name": "cdr_core_text_subdued",
       "attributes": {
         "deprecated": false,
         "category": "color"
@@ -6334,7 +6338,7 @@
       "filePath": "tokens/global/color.json5",
       "isSource": false,
       "original": {
-        "value": "{options.avalanche.color.warm-grey-1000}",
+        "value": "{options.core.color.warm-grey-1000}",
         "category": "color",
         "docs": {
           "category": "colors",
@@ -6343,7 +6347,34 @@
           "description": "Emphasis text color in avalanche"
         }
       },
-      "name": "cdr_avalanche_text_emphasis",
+      "name": "cdr_core_text_emphasis",
+      "attributes": {
+        "deprecated": false,
+        "category": "color"
+      }
+    },
+    {
+      "value": "#fff4f2ed",
+      "category": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "The default background color of most pages in core"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "value": "{options.color.warm-grey-200}",
+        "category": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "The default background color of most pages in core"
+        }
+      },
+      "name": "cdr_core_background_default",
       "attributes": {
         "deprecated": false,
         "category": "color"
@@ -6356,102 +6387,75 @@
         "category": "colors",
         "type": "background",
         "example": "color",
-        "description": "The default background color of most pages in avalanche"
+        "description": "A highlight background color for core"
       },
-      "filePath": "tokens/global/color.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
       "original": {
-        "value": "{options.avalanche.color.warm-grey-000}",
+        "value": "{options.color.white}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "background",
           "example": "color",
-          "description": "The default background color of most pages in avalanche"
+          "description": "A highlight background color for core"
         }
       },
-      "name": "cdr_avalanche_background_default",
+      "name": "cdr_core_background_highlight",
       "attributes": {
         "deprecated": false,
         "category": "color"
       }
     },
     {
-      "value": "#fff7f5f3",
-      "category": "color",
-      "docs": {
-        "category": "colors",
-        "type": "background",
-        "example": "color",
-        "description": "A highlight background color for avalanche"
-      },
-      "filePath": "tokens/global/color.json5",
-      "isSource": false,
-      "original": {
-        "value": "{options.avalanche.color.warm-grey-025}",
-        "category": "color",
-        "docs": {
-          "category": "colors",
-          "type": "background",
-          "example": "color",
-          "description": "A highlight background color for avalanche"
-        }
-      },
-      "name": "cdr_avalanche_background_highlight",
-      "attributes": {
-        "deprecated": false,
-        "category": "color"
-      }
-    },
-    {
-      "value": "#ff000000",
+      "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "border",
         "example": "color",
-        "description": "The default border color in avalanche"
+        "description": "The default border color in core"
       },
-      "filePath": "tokens/global/color.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
       "original": {
-        "value": "{options.avalanche.color.warm-grey-1000",
+        "value": "{options.color.warm-grey-400}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "The default border color in avalanche"
+          "description": "The default border color in core"
         }
       },
-      "name": "cdr_avalanche_border_default",
+      "name": "cdr_core_border_default",
       "attributes": {
         "deprecated": false,
         "category": "color"
       }
     },
     {
-      "value": "#ffcbc5b7",
+      "value": "#ff928b80",
       "category": "color",
       "docs": {
         "category": "colors",
         "type": "border",
         "example": "color",
-        "description": "A bold border color in avalanche"
+        "description": "A bold border color in core"
       },
-      "filePath": "tokens/global/color.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
       "original": {
-        "value": "{options.sandstone.color.warm-grey-250}",
+        "value": "{options.color.warm-grey-700}",
         "category": "color",
         "docs": {
           "category": "colors",
           "type": "border",
           "example": "color",
-          "description": "A bold border color in avalanche"
+          "description": "A bold border color in core"
         }
       },
-      "name": "cdr_avalanche_border_strong",
+      "name": "cdr_core_border_strong",
       "attributes": {
         "deprecated": false,
         "category": "color"
@@ -7709,7 +7713,7 @@
       }
     },
     {
-      "value": "#ff4e4d49",
+      "value": "#ffdcd6cb",
       "category": "color",
       "docs": {
         "type": "text"
@@ -7717,7 +7721,7 @@
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
-        "value": "{options.color.warm-grey-900}",
+        "value": "{options.color.warm-grey-400}",
         "category": "color",
         "docs": {
           "type": "text"

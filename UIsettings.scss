@@ -99,9 +99,6 @@ $cdr-UI-settings: (
         text-error: --cdr-color-text-error,
         text-info: --cdr-color-text-info,
         text-message-error: --cdr-color-text-message-error,
-        text-usage-affirmative: --cdr-color-text-usage-affirmative,
-        text-usage-negative: --cdr-color-text-usage-negative,
-        text-usage-caution: --cdr-color-text-usage-caution,
       ),
     ),
     cdr-input: (
@@ -232,7 +229,6 @@ $cdr-UI-settings: (
         background-message-info-01: --cdr-color-background-message-info-01,
         background-message-info-02: --cdr-color-background-message-info-02,
         background-message-sale: --cdr-color-background-message-sale,
-        background-tag: --cdr-color-background-tag,
       ),
     ),
     cdr-accordion: (
@@ -281,13 +277,6 @@ $cdr-UI-settings: (
         table-background-row-alt: --cdr-color-background-table-row-alt,
         table-border: --cdr-color-border-table-default,
         table-border-head: --cdr-color-border-table-head,
-        table-border-row: --cdr-color-border-table-row,
-      ),
-      primary: (
-        table-text: --cdr-color-text-table-primary,
-      ),
-      secondary: (
-        table-text: --cdr-color-text-table-secondary,
       ),
     ),
     cdr-toggle group: (
@@ -317,9 +306,6 @@ $cdr-UI-settings: (
         border-message-error-02: --cdr-color-border-message-error-02,
         border-message-info-01: --cdr-color-border-message-info-01,
         border-message-info-02: --cdr-color-border-message-info-02,
-        border-usage-affirmative: --cdr-color-border-usage-affirmative,
-        border-usage-negative: --cdr-color-border-usage-negative,
-        border-usage-caution: --cdr-color-border-usage-caution,
       ),
     ),
     cdr-icon: (
@@ -336,28 +322,6 @@ $cdr-UI-settings: (
         icon-size-sm: --cdr-icon-size-sm,
         icon-size: --cdr-icon-size,
         icon-size-lg: --cdr-icon-size-lg,
-      ),
-    ),
-    cdr-code-snippet: (
-      default: (
-        code-snippet-background-code-snippet: --cdr-color-background-code-snippet,
-        code-snippet-background-code: --cdr-color-background-code,
-        code-snippet-border-code: --cdr-color-border-code,
-      ),
-    ),
-    cdr-link-card: (
-      default: (
-        link-card-background-link-card-rest: --cdr-color-background-link-card-rest,
-        link-card-background-link-card-active: --cdr-color-background-link-card-active,
-        link-card-border-link-card-hover: --cdr-color-border-link-card-hover,
-        link-card-border-link-card-active: --cdr-color-border-link-card-active,
-      ),
-    ),
-    cdr-note: (
-      default: (
-        note-background: --cdr-color-background-note,
-        note-border: --cdr-color-border-note,
-        note-icon-background: --cdr-color-icon-background-note,
       ),
     ),
     cdr-font-family: (
@@ -997,6 +961,27 @@ $cdr-UI-settings: (
       ),
     ),
   ),
+  cdr-palette--core: (
+    cdr-text: (
+      default: (
+        text: --cdr-core-text-default,
+        text-subdued: --cdr-core-text-subdued,
+        text-emphasis: --cdr-core-text-emphasis,
+      ),
+    ),
+    cdr-background: (
+      default: (
+        background: --cdr-core-background-default,
+        background-highlight: --cdr-core-background-highlight,
+      ),
+    ),
+    cdr-border: (
+      default: (
+        border: --cdr-core-border-default,
+        border-strong: --cdr-core-border-strong,
+      ),
+    ),
+  ),
   cdr-palette--sandstone: (
     cdr-text: (
       default: (
@@ -1057,55 +1042,6 @@ $cdr-UI-settings: (
       default: (
         border: --cdr-obsidian-border-default,
         border-strong: --cdr-obsidian-border-strong,
-      ),
-    ),
-  ),
-  cdr-palette--knockout: (
-    cdr-code-snippet: (
-      default: (
-        code-snippet-background-code-snippet: --cdr-knockout-background-code-snippet,
-      ),
-    ),
-    cdr-text: (
-      primary: (
-        text-color: --cdr-knockout-color-text-primary,
-        text-color-background: --cdr-knockout-color-background-primary,
-        text-color-border-inverse: --cdr-knockout-color-border-inverse-primary,
-      ),
-      secondary: (
-        text-color: --cdr-knockout-color-text-secondary,
-        text-color-border-inverse: --cdr-knockout-color-border-inverse-secondary,
-      ),
-      default: (
-        text-color-icon-inverse: --cdr-knockout-color-icon-inverse-default,
-      ),
-    ),
-    cdr-table: (
-      primary: (
-        table-color-text: --cdr-knockout-color-text-table-primary,
-      ),
-      secondary: (
-        table-color-text: --cdr-knockout-color-text-table-secondary,
-      ),
-      default: (
-        table-color-background-header: --cdr-knockout-color-background-table-header,
-        table-color-background-row: --cdr-knockout-color-background-table-row,
-        table-color-border-row: --cdr-knockout-color-border-table-row,
-      ),
-    ),
-    cdr-link-card: (
-      default: (
-        link-card-color-background-link-card-rest: --cdr-knockout-color-background-link-card-rest,
-        link-card-color-background-link-card-active: --cdr-knockout-color-background-link-card-active,
-        link-card-color-border-link-card-hover: --cdr-knockout-color-border-link-card-hover,
-        link-card-color-border-link-card-active: --cdr-knockout-color-border-link-card-active,
-      ),
-    ),
-    cdr-note: (
-      default: (
-        note-color-background: --cdr-knockout-color-background-note,
-        note-color-border: --cdr-knockout-color-border-note,
-        note-color-icon-background: --cdr-knockout-color-icon-background-note,
       ),
     ),
   ),

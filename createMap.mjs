@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
-import data from './dist/docsite/json/web.json' assert { type: 'json' };
+import data from './dist/rei-dot-com/json/web.json' assert { type: 'json' };
 
-const palettesList = ['knockout', 'sandstone', 'midnight', 'obsidian']; // Add your palette names here
+const palettesList = ['knockout', 'core', 'sandstone', 'midnight', 'obsidian']; // Add your palette names here
 const customComponentNames = []; // Add your custom component names here
 const scssMap = generateScssMap(data, palettesList, customComponentNames);
 fs.writeFileSync('UIsettings.scss', scssMap);

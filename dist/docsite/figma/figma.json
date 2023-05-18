@@ -1152,15 +1152,17 @@
       }
     }
   },
-  "avalanche": {
+  "core": {
     "text": {
       "default": {
-        "value": "#4b4a48",
-        "type": "color"
+        "value": "rgba(3, 3, 1, 0.9)",
+        "type": "color",
+        "alpha": 0.9
       },
       "subdued": {
-        "value": "#736e65",
-        "type": "color"
+        "value": "rgba(12, 11, 8, 0.75)",
+        "type": "color",
+        "alpha": 0.75
       },
       "emphasis": {
         "value": "#2e2e2b",
@@ -1169,21 +1171,21 @@
     },
     "background": {
       "default": {
-        "value": "#ffffff",
+        "value": "#f4f2ed",
         "type": "color"
       },
       "highlight": {
-        "value": "#f7f5f3",
+        "value": "#ffffff",
         "type": "color"
       }
     },
     "border": {
       "default": {
-        "value": "#000000",
+        "value": "#dcd6cb",
         "type": "color"
       },
       "strong": {
-        "value": "#cbc5b7",
+        "value": "#928b80",
         "type": "color"
       }
     }
@@ -4590,7 +4592,7 @@
       "border": {
         "inverse": {
           "primary": {
-            "value": "#4e4d49",
+            "value": "#dcd6cb",
             "type": "color"
           },
           "secondary": {
