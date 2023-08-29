@@ -280,13 +280,7 @@ CdrKnockoutColorBorderLinkCardActive,
 CdrKnockoutColorBorderNote,
 CdrKnockoutColorBorderTableRow,
 CdrKnockoutColorIconInverseDefault,
-CdrKnockoutColorIconBackgroundNote,
-CdrCoreTextDefault,
-CdrCoreTextSubdued,
-CdrCoreBackgroundDefault,
-CdrCoreBackgroundHighlight,
-CdrCoreBorderDefault,
-CdrCoreBorderStrong
+CdrKnockoutColorIconBackgroundNote
 };
 
 @interface CdrColor : NSObject

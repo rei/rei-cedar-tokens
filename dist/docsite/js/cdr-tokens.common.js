@@ -848,10 +848,4 @@ module.exports = {
   CdrKnockoutColorBorderTableRow: "#4e4d49",
   CdrKnockoutColorIconInverseDefault: "#dcd6cb",
   CdrKnockoutColorIconBackgroundNote: "#c4b03b",
-  CdrCoreTextDefault: "rgba(3, 3, 1, 0.9)",
-  CdrCoreTextSubdued: "rgba(12, 11, 8, 0.75)",
-  CdrCoreBackgroundDefault: "#f4f2ed",
-  CdrCoreBackgroundHighlight: "#ffffff",
-  CdrCoreBorderDefault: "#dcd6cb",
-  CdrCoreBorderStrong: "#928b80",
 };
