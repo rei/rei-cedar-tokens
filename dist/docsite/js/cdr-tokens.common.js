@@ -840,7 +840,7 @@ module.exports = {
   CdrKnockoutColorBackgroundNote: "rgba(78, 77, 73, 0.5)",
   CdrKnockoutColorBackgroundTableHeader: "rgba(78, 77, 73, 0.5)",
   CdrKnockoutColorBackgroundTableRow: "#373734",
-  CdrKnockoutColorBorderInversePrimary: "#dcd6cb",
+  CdrKnockoutColorBorderInversePrimary: "#4e4d49",
   CdrKnockoutColorBorderInverseSecondary: "#dcd6cb",
   CdrKnockoutColorBorderLinkCardHover: "#dcd6cb",
   CdrKnockoutColorBorderLinkCardActive: "#4e4d49",
