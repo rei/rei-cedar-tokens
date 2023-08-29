@@ -19,6 +19,10 @@ module.exports = function (theme) { return {
           showFileHeader: false,
         },
       },
+      {
+        "format": "typescript/es6-declarations",
+        "destination": "cdr-tokens.d.ts"
+      }
     ],
   },
 }}
