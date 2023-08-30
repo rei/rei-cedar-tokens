@@ -18,15 +18,15 @@
   ],
   "main": "./dist/rei-dot-com/js/cdr-tokens.common.js",
   "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
-  "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
+  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
   "exports": {
     ".": {
-      "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.common.js"
     },
     "./docsite": {
-      "types": "./dist/docsite/js/cdr-tokens.d.ts",
+      "types": "./dist/docsite/js/cdr-tokens.d.mts",
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.common.js"
     },

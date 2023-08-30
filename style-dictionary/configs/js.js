@@ -21,7 +21,7 @@ module.exports = function (theme) { return {
       },
       {
         "format": "typescript/es6-declarations",
-        "destination": "cdr-tokens.d.ts"
+        "destination": "cdr-tokens.d.mts"
       }
     ],
   },
