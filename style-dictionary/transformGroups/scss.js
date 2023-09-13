@@ -2,13 +2,13 @@ module.exports = (StyleDictionary) => {
   StyleDictionary.registerTransformGroup({
     name: 'custom/scss',
     transforms: [
-      'attribute/option',
       'attribute/deprecated',
       'attribute/cdr-cti',
       'name/cti/kebab',
-      'size/strip-px',
+      'size/space',
       'size/px-to-rem',
-      'color/css',
+      'color/alpha',
+      'color/css-transitive',
       'time/seconds',
       // 'content/icon',
     ],

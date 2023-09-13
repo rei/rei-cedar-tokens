@@ -1,0 +1,121 @@
+{
+  color: {
+    text: {
+      primary: {
+        value: '{options.color.warm-grey-1200}',
+        alpha: .90,
+        category: 'color',
+        docs: {
+          'type': 'text'
+        }
+      },
+      secondary: {
+        value: '{options.color.warm-grey-1150}',
+        alpha: .75,
+        category: 'color',
+        docs: {
+          'type': 'text'
+        }
+      },
+    },
+    background: {
+      primary: {
+        value: '{options.color.warm-grey-200}',
+        category: 'color',
+        docs: {
+          'type': 'background'
+        }
+      },
+      secondary: {
+        value: '{options.color.white}',
+        category: 'color',
+        docs: {
+          'type': 'background'
+        }
+      },
+    },
+    border: {
+      primary: {
+        value: '{options.color.warm-grey-400}',
+        category: 'color',
+        docs: {
+          'type': 'border'
+        }
+      },
+      secondary: {
+        value: '{options.color.warm-grey-700}',
+        category: 'color',
+        docs: {
+          'type': 'border'
+        }
+      },
+    },
+    icon: {
+      default: {
+        value: '{options.color.warm-grey-900}',
+        category: 'color',
+        docs: {
+          'type': 'icon'
+        }
+      },
+    },
+  },
+  knockout: {
+    color: {
+      text: {
+        primary: {
+          value: '{options.color.warm-grey-100}',
+          category: 'color',
+        docs: {
+          'type': 'text'
+        }
+        },
+        secondary: {
+          value: '{options.color.warm-grey-500}',
+          category: 'color',
+        docs: {
+          'type': 'text'
+        }
+        },
+      },
+      background: {
+        primary: {
+          value: '{options.color.warm-grey-1000}',
+          category: 'color',
+        docs: {
+          'type': 'text'
+        }
+        },
+      },
+      border: {
+        inverse: {
+          primary: {
+            value: '{options.color.warm-grey-900}',
+            category: 'color',
+        docs: {
+          'type': 'text'
+        }
+          },
+          secondary: {
+            value: '{options.color.warm-grey-400}',
+            category: 'color',
+        docs: {
+          'type': 'text'
+        }
+          },
+        },
+      },
+      icon: {
+        inverse: {
+          default: {
+            value: '{options.color.warm-grey-400}',
+            category: 'color',
+        docs: {
+          'type': 'text'
+        }
+          },
+        },
+      },
+    },
+  },
+}

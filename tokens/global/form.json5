@@ -1,46 +1,51 @@
 {
   form: {
-    docCategory: 'form',
-    docExample: 'form',
-    'input-height-default': {
-      value: '40px',
-      category: 'size',
+    docCategory: "form",
+    docExample: "form",
+    "input-height-default": {
+      value: "40px",
+      category: "size",
       docs: {
-        category: '{form.docCategory}',
-        example: '{form.docExample}',
-      }
+        type: "form",
+        category: "{form.docCategory}",
+        example: "{form.docExample}",
+      },
     },
-    'input-height-large': {
-      value: '48px',
-      category: 'size',
+    "input-height-large": {
+      value: "48px",
+      category: "size",
       docs: {
-        category: '{form.docCategory}',
-        example: '{form.docExample}',
-      }
+        type: "form",
+        category: "{form.docCategory}",
+        example: "{form.docExample}",
+      },
     },
-    'figure-size-small': {
-      value: '16px',
-      category: 'size',
+    "figure-size-small": {
+      value: "16px",
+      category: "size",
       docs: {
-        category: '{form.docCategory}',
-        example: '{form.docExample}',
-      }
+        type: "form",
+        category: "{form.docCategory}",
+        example: "{form.docExample}",
+      },
     },
-    'figure-size-medium': {
-      value: '16px',
-      category: 'size',
+    "figure-size-medium": {
+      value: "16px",
+      category: "size",
       docs: {
-        category: '{form.docCategory}',
-        example: '{form.docExample}',
-      }
+        type: "form",
+        category: "{form.docCategory}",
+        example: "{form.docExample}",
+      },
     },
-    'figure-size-large': {
-      value: '20px',
-      category: 'size',
+    "figure-size-large": {
+      value: "20px",
+      category: "size",
       docs: {
-        category: '{form.docCategory}',
-        example: '{form.docExample}',
-      }
+        type: "form",
+        category: "{form.docCategory}",
+        example: "{form.docExample}",
+      },
     },
-  }
+  },
 }

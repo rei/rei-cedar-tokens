@@ -2,7 +2,7 @@
   // default
   'text-default': {
     family: {
-      value: '{options.font.family.sans.value}',
+      value: '{options.font.family.sans}',
       mixin: 'textDefault',
       property: 'font-family',
       docs: {
@@ -12,7 +12,7 @@
       },
     },
     style: {
-      value: '{options.font.style.normal.value}',
+      value: '{options.font.style.normal}',
       mixin: 'textDefault',
       property: 'font-style',
       docs: {
@@ -22,7 +22,7 @@
       },
     },
     weight: {
-      value: '{options.font.weight.normal.value}',
+      value: '{options.font.weight.normal}',
       mixin: 'textDefault',
       property: 'font-weight',
       docs: {
@@ -32,7 +32,7 @@
       },
     },
     spacing: {
-      value: '{options.font.spacing.tight.value}',
+      value: '{options.font.spacing.tight}',
       category: 'letter-spacing',
       mixin: 'textDefault',
       property: 'letter-spacing',
@@ -43,7 +43,7 @@
       },
     },
     size: {
-      value: '{options.font.size.300.value}',
+      value: '{options.font.size.300}',
       category: 'font-size',
       mixin: 'textDefault',
       property: 'font-size',
@@ -54,7 +54,7 @@
       },
     },
     height: {
-      value: '{options.font.height.400.value}',
+      value: '{options.font.height.400}',
       category: 'size',
       mixin: 'textDefault',
       property: 'line-height',

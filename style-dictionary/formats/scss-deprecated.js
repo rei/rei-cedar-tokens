@@ -6,7 +6,7 @@ module.exports = (StyleDictionary) => {
   /* scss mixin */
   StyleDictionary.registerFormat({
     name: 'scss/deprecated',
-    formatter(dictionary, config) {
+    formatter({ dictionary }, config) {
       const prefix = config.prefix ? `${config.prefix}-` : '';
       let fileContents = '@import \'./deprecate.scss\';\n\n';
 

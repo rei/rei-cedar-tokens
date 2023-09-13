@@ -4,7 +4,7 @@ module.exports = (StyleDictionary) => {
   /* less mixin */
   StyleDictionary.registerFormat({
     name: 'less/mixin',
-    formatter(dictionary, config) {
+    formatter({ dictionary }, config ) {
       const prefix = config.prefix ? `${config.prefix}-` : '';
       const mixins = [];
       const mixinProperties = _.filter(dictionary.allProperties, o => _.has(o, 'mixin'));

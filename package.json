@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "11.0.1",
+  "version": "12.0.0",
   "description": "Tokens for REI cedar design system",
   "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -16,12 +16,19 @@
   "files": [
     "dist"
   ],
-  "main": "dist/js/cdr-tokens.common.js",
-  "module": "dist/js/cdr-tokens.mjs",
+  "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
+  "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
+  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
   "exports": {
     ".": {
-      "import": "./dist/js/cdr-tokens.mjs",
-      "require": "./dist/js/cdr-tokens.common.js"
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+      "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
+    },
+    "./docsite": {
+      "types": "./dist/docsite/js/cdr-tokens.d.mts",
+      "import": "./dist/docsite/js/cdr-tokens.mjs",
+      "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
     "./dist/": "./dist/"
   },
@@ -36,9 +43,10 @@
     "validate": "node ./validate.js"
   },
   "devDependencies": {
+    "@divriots/style-dictionary-to-figma": "^0.4.0",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.1.0",
     "glob": "^7.1.6",
     "json5": "^2.2.0",
     "lodash": "^4.17.21",
@@ -46,7 +54,7 @@
     "query-string": "^6.14.1",
     "require-json5": "^1.1.0",
     "rimraf": "^3.0.2",
-    "style-dictionary": "^2.10.2",
+    "style-dictionary": "^3.7.1",
     "tinycolor2": "^1.4.2"
   },
   "engines": {

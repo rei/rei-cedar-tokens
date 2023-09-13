@@ -4,7 +4,7 @@ module.exports = (StyleDictionary) => {
   /* js module */
   StyleDictionary.registerFormat({
     name: 'js/commonjs',
-    formatter(dictionary) {
+    formatter({ dictionary }) {
       const result = [];
       dictionary.allProperties.forEach((p) => {
         const k = p.name;

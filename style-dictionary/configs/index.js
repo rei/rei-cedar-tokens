@@ -1,6 +1,7 @@
 const _ = require('lodash');
 
 // Import platform configs and add them below
+const cssConfig = require('./css');
 const scssConfig = require('./scss');
 const lessConfig = require('./less');
 const jsConfig = require('./js');
@@ -11,87 +12,49 @@ const siteWebConfig = require('./site.web');
 const siteAndroidConfig = require('./site.android');
 const siteIosConfig = require('./site.ios');
 const sketchConfig = require('./sketch');
-
-// this is the filter for excluding "option" tokens
-// and works in concert with transforms/attribute/option.js
-const filterObj = {
-  options: {
-    showFileHeader: false,
-  },
-  filter: {
-    attributes: {
-      option: false,
-    },
-  },
-};
-
-// adds filter for "options" to all file outputs
-function filterOptions(platforms) {
-  const platformObj = {};
-  platforms.map(p => Object.assign(platformObj, p));
-  Object.keys(platformObj).forEach((p) => {
-    platformObj[p].files.map(f => _.merge(f, filterObj));
-  });
-  return platformObj;
-}
+const figmaConfig = require('./figma');
 
 function getSources(platform) {
-  if (platform === 'site/global') {
-    return [];
+  const sources = {
+    'site/global': [],
+    'site/web': ['tokens/web/**/*.json5'],
+    'site/android': ['tokens/mobile/**/*.json5'],
+    'site/ios': ['tokens/mobile/**/*.json5'],
+    'web': ['tokens/web/**/*.json5'],
+    'android': ['tokens/mobile/**/*.json5'],
+    'ios': ['tokens/mobile/**/*.json5'],
+    'figma': [`tokens/web/**/*.json5`],
+    'sketch': [`tokens/web/**/*.json5`],
   }
-  if (platform === 'web' || platform === 'site/web') {
-    // eslint-disable-next-line quotes
-    return [`tokens/web/**/*.json5`];
-  }
-  if (platform === 'android' || platform === 'site/android') {
-    // eslint-disable-next-line quotes
-    return [`tokens/mobile/**/*.json5`];
-  }
-  if (platform === 'ios' || platform === 'site/ios') {
-    // eslint-disable-next-line quotes
-    return [`tokens/mobile/**/*.json5`];
-  }
-  if (platform === 'sketch') {
-    // eslint-disable-next-line quotes
-    return [`tokens/web/**/*.json5`];
-  }
+  return sources[platform];
 }
 
-function getConfigs(platform) {
-  if (platform === 'web') {
-    return filterOptions([scssConfig, lessConfig, jsConfig]);
+const allPlatforms = (platform, theme) => {
+  let platforms = {
+    'web': {...cssConfig(theme), ...scssConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
+    'android': { ...androidConfig(theme) },
+    'site/global': { ...siteGlobalConfig(theme) },
+    'site/web': { ...siteWebConfig(theme) },
+    'site/android': { ...siteAndroidConfig(theme) },
+    'site/ios': { ...siteIosConfig(theme) },
+    'ios': { ...iosConfig(theme) },
+    'figma': { ...figmaConfig(theme) },
+    'sketch': { ...sketchConfig(theme) }
   }
-  if (platform === 'android') {
-    return filterOptions([androidConfig]);
-  }
-  if (platform === 'ios') {
-    return filterOptions([iosConfig]);
-  }
-  if (platform === 'site/global') {
-    return filterOptions([siteGlobalConfig]);
-  }
-  if (platform === 'site/web') {
-    return filterOptions([siteWebConfig]);
-  }
-  if (platform === 'site/android') {
-    return filterOptions([siteAndroidConfig]);
-  }
-  if (platform === 'site/ios') {
-    return filterOptions([siteIosConfig]);
-  }
-  if (platform === 'sketch') {
-    return filterOptions([sketchConfig]);
-  }
+
+  return platforms[platform];
 }
 
-module.exports = (platform) => {
-  const sources = [
+module.exports = (platform, theme) => {
+  const defaultTokens = [
     'tokens/_options/**/*.json5',
     'tokens/global/**/*.json5',
-    ...getSources(platform),
+    ...getSources(platform)
   ];
+  const themeOverrides = [`tokens/themes/${theme}/**/*.json5`];
   return {
-    source: sources,
-    platforms: getConfigs(platform),
+    include: defaultTokens,
+    source: themeOverrides,
+    platforms: allPlatforms(platform, theme),
   };
 };

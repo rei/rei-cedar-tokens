@@ -4,7 +4,7 @@ module.exports = (StyleDictionary) => {
   /* js module */
   StyleDictionary.registerFormat({
     name: 'site',
-    formatter(dictionary, config) {
+    formatter({ dictionary }, config) {
       const prefix = config.prefix ? `${config.prefix}-` : '';
       const toRet = {};
       const grouped = _.groupBy(dictionary.allProperties, 'docs.category');
