@@ -18,8 +18,11 @@ module.exports = (StyleDictionary) => {
         const types = _.groupBy(categories[cat], 'docs.type');
         const typeKeys = Object.keys(types);
         typeKeys.forEach((type, idx) => {
-          const formattedType = type === 'undefined' ? '' : `-${type}`;
 
+          let formattedType = type === 'undefined' ? '' : `-${type}`;
+          if (type === cat) {
+            formattedType = '';
+          }
           scss += `$${cat}${formattedType}: (\n  `;
 
           types[type].forEach((token, i) => {

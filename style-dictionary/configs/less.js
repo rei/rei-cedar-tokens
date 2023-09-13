@@ -9,7 +9,6 @@ module.exports = function (theme) { return {
         format: 'less/variables',
         options: {
           showFileHeader: false,
-          outputReferences: true,
         },
       },
       {

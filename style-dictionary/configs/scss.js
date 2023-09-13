@@ -10,7 +10,6 @@ module.exports = function(theme) {
           format: 'scss/variables',
           options: {
             showFileHeader: false,
-            outputReferences: true,
           },
         },
         {

@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "12.0.0-alpha.5",
+  "version": "12.0.0",
   "description": "Tokens for REI cedar design system",
   "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -16,12 +16,19 @@
   "files": [
     "dist"
   ],
-  "main": "dist/js/cdr-tokens.common.js",
-  "module": "dist/js/cdr-tokens.mjs",
+  "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
+  "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
+  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
   "exports": {
     ".": {
-      "import": "./dist/js/cdr-tokens.mjs",
-      "require": "./dist/js/cdr-tokens.common.js"
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+      "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
+    },
+    "./docsite": {
+      "types": "./dist/docsite/js/cdr-tokens.d.mts",
+      "import": "./dist/docsite/js/cdr-tokens.mjs",
+      "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
     "./dist/": "./dist/"
   },

@@ -5,7 +5,7 @@ module.exports = function (theme) { return {
     prefix: 'cdr',
     files: [
       {
-        destination: 'cdr-tokens.common.js',
+        destination: 'cdr-tokens.cjs',
         format: 'js/commonjs',
         options: {
           showFileHeader: false,
@@ -19,6 +19,10 @@ module.exports = function (theme) { return {
           showFileHeader: false,
         },
       },
+      {
+        "format": "typescript/es6-declarations",
+        "destination": "cdr-tokens.d.mts"
+      }
     ],
   },
 }}

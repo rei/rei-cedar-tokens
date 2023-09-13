@@ -1,10 +1,30 @@
 {
   font: {
-      family: {
-        'serif-brand-font': { value: '{options.font.family.serif-main}'},
-        'serif': { value: '{options.font.family.serif}'},
-        'sans-brand-font': { value: '{options.font.family.sans-main}'},
-        'sans': { value: '{options.font.family.sans}'},
-      }
-  }
+    family: {
+      "serif-brand-font": {
+        value: "{options.font.family.serif-main}",
+        docs: {
+          type: "font-family",
+        },
+      },
+      serif: {
+        value: "{options.font.family.serif}",
+        docs: {
+          type: "font-family",
+        },
+      },
+      "sans-brand-font": {
+        value: "{options.font.family.sans-main}",
+        docs: {
+          type: "font-family",
+        },
+      },
+      sans: {
+        value: "{options.font.family.sans}",
+        docs: {
+          type: "font-family",
+        },
+      },
+    },
+  },
 }
