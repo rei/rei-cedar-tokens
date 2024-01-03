@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 13 Sep 2023 22:46:21 GMT
+ * Generated on Wed, 03 Jan 2024 19:26:00 GMT
  */
 
 export const CdrColorTextButtonPrimary : string;
@@ -253,6 +253,8 @@ export const CdrColorIconCheckboxDefaultSelectedActive : string;
 export const CdrColorIconSwitchSelectedDefaultRest : string;
 export const CdrColorIconSwitchSelectedDefaultHover : string;
 export const CdrColorIconSwitchSelectedDefaultFocus : string;
+export const CdrColorSurfacePrimary : string;
+export const CdrColorSurfaceSecondary : string;
 export const CdrColorIconBackgroundNote : string;
 export const CdrFormInputHeightDefault : string;
 export const CdrFormInputHeightLarge : string;
