@@ -628,5 +628,27 @@
         },
       },
     },
+    surface: {
+      primary: {
+        value: "{options.color.white}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "surface",
+          example: "color",
+          description: "The default, primary surface color of most pages",
+        },
+      },
+      secondary: {
+        value: "{options.color.warm-grey-200}",
+        category: "color",
+        docs: {
+          category: "colors",
+          type: "surface",
+          example: "color",
+          description: "An alternate, secondary surface color used on some pages",
+        },
+      },
+    },
   }
 }

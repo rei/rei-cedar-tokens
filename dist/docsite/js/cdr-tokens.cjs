@@ -249,6 +249,8 @@ module.exports = {
   CdrColorIconSwitchSelectedDefaultRest: "#dcd6cb",
   CdrColorIconSwitchSelectedDefaultHover: "#dcd6cb",
   CdrColorIconSwitchSelectedDefaultFocus: "#dcd6cb",
+  CdrColorSurfacePrimary: "#ffffff",
+  CdrColorSurfaceSecondary: "#f4f2ed",
   CdrColorIconBackgroundNote: "#c4b03b",
   CdrFormInputHeightDefault: "40",
   CdrFormInputHeightLarge: "48",
