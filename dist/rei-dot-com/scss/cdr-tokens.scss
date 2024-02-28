@@ -3,7 +3,7 @@
 
 
 @mixin cdr-text-body-300() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.08px;
@@ -12,7 +12,7 @@
 }
 
 %cdr-text-body-300 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.08px;
@@ -21,7 +21,7 @@
 }
 
 @mixin cdr-text-body-400() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -30,7 +30,7 @@
 }
 
 %cdr-text-body-400 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -39,7 +39,7 @@
 }
 
 @mixin cdr-text-body-500() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -48,7 +48,7 @@
 }
 
 %cdr-text-body-500 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -57,7 +57,7 @@
 }
 
 @mixin cdr-text-body-strong-300() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.08px;
@@ -66,7 +66,7 @@
 }
 
 %cdr-text-body-strong-300 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.08px;
@@ -75,7 +75,7 @@
 }
 
 @mixin cdr-text-body-strong-400() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -84,7 +84,7 @@
 }
 
 %cdr-text-body-strong-400 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -93,7 +93,7 @@
 }
 
 @mixin cdr-text-body-strong-500() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -102,7 +102,7 @@
 }
 
 %cdr-text-body-strong-500 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -111,7 +111,7 @@
 }
 
 @mixin cdr-text-default() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -120,7 +120,7 @@
 }
 
 %cdr-text-default {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -129,7 +129,7 @@
 }
 
 @mixin cdr-text-eyebrow-100() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.32px;
@@ -139,7 +139,7 @@
 }
 
 %cdr-text-eyebrow-100 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.32px;
@@ -149,7 +149,7 @@
 }
 
 @mixin cdr-text-heading-sans-200() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -158,7 +158,7 @@
 }
 
 %cdr-text-heading-sans-200 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -167,7 +167,7 @@
 }
 
 @mixin cdr-text-heading-sans-300() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -176,7 +176,7 @@
 }
 
 %cdr-text-heading-sans-300 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -185,7 +185,7 @@
 }
 
 @mixin cdr-text-heading-sans-400() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -194,7 +194,7 @@
 }
 
 %cdr-text-heading-sans-400 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -203,7 +203,7 @@
 }
 
 @mixin cdr-text-heading-sans-500() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -212,7 +212,7 @@
 }
 
 %cdr-text-heading-sans-500 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -221,7 +221,7 @@
 }
 
 @mixin cdr-text-heading-sans-600() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -230,7 +230,7 @@
 }
 
 %cdr-text-heading-sans-600 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -239,7 +239,7 @@
 }
 
 @mixin cdr-text-heading-serif-200() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -248,7 +248,7 @@
 }
 
 %cdr-text-heading-serif-200 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -257,7 +257,7 @@
 }
 
 @mixin cdr-text-heading-serif-300() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -266,7 +266,7 @@
 }
 
 %cdr-text-heading-serif-300 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -275,7 +275,7 @@
 }
 
 @mixin cdr-text-heading-serif-400() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -284,7 +284,7 @@
 }
 
 %cdr-text-heading-serif-400 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -293,7 +293,7 @@
 }
 
 @mixin cdr-text-heading-serif-500() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -302,7 +302,7 @@
 }
 
 %cdr-text-heading-serif-500 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -311,7 +311,7 @@
 }
 
 @mixin cdr-text-heading-serif-600() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -320,7 +320,7 @@
 }
 
 %cdr-text-heading-serif-600 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -329,7 +329,7 @@
 }
 
 @mixin cdr-text-heading-serif-700() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -338,7 +338,7 @@
 }
 
 %cdr-text-heading-serif-700 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -347,7 +347,7 @@
 }
 
 @mixin cdr-text-heading-serif-800() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -356,7 +356,7 @@
 }
 
 %cdr-text-heading-serif-800 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -365,7 +365,7 @@
 }
 
 @mixin cdr-text-heading-serif-900() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -374,7 +374,7 @@
 }
 
 %cdr-text-heading-serif-900 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -383,7 +383,7 @@
 }
 
 @mixin cdr-text-heading-serif-1000() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -392,7 +392,7 @@
 }
 
 %cdr-text-heading-serif-1000 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -401,7 +401,7 @@
 }
 
 @mixin cdr-text-heading-serif-1100() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -410,7 +410,7 @@
 }
 
 %cdr-text-heading-serif-1100 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -419,7 +419,7 @@
 }
 
 @mixin cdr-text-heading-serif-1200() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -428,7 +428,7 @@
 }
 
 %cdr-text-heading-serif-1200 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -437,7 +437,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-600() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -446,7 +446,7 @@
 }
 
 %cdr-text-heading-serif-strong-600 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -455,7 +455,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-700() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -464,7 +464,7 @@
 }
 
 %cdr-text-heading-serif-strong-700 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -473,7 +473,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-800() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -482,7 +482,7 @@
 }
 
 %cdr-text-heading-serif-strong-800 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -491,7 +491,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-900() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -500,7 +500,7 @@
 }
 
 %cdr-text-heading-serif-strong-900 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -509,7 +509,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-1000() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -518,7 +518,7 @@
 }
 
 %cdr-text-heading-serif-strong-1000 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -527,7 +527,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-1100() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -536,7 +536,7 @@
 }
 
 %cdr-text-heading-serif-strong-1100 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -545,7 +545,7 @@
 }
 
 @mixin cdr-text-heading-serif-strong-1200() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -554,7 +554,7 @@
 }
 
 %cdr-text-heading-serif-strong-1200 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
@@ -563,7 +563,7 @@
 }
 
 @mixin cdr-text-heading-display-800() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -572,7 +572,7 @@
 }
 
 %cdr-text-heading-display-800 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -581,7 +581,7 @@
 }
 
 @mixin cdr-text-heading-display-900() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -590,7 +590,7 @@
 }
 
 %cdr-text-heading-display-900 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -599,7 +599,7 @@
 }
 
 @mixin cdr-text-heading-display-1000() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -608,7 +608,7 @@
 }
 
 %cdr-text-heading-display-1000 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -617,7 +617,7 @@
 }
 
 @mixin cdr-text-heading-display-1100() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -626,7 +626,7 @@
 }
 
 %cdr-text-heading-display-1100 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -635,7 +635,7 @@
 }
 
 @mixin cdr-text-heading-display-1200() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -644,7 +644,7 @@
 }
 
 %cdr-text-heading-display-1200 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -653,7 +653,7 @@
 }
 
 @mixin cdr-text-heading-display-1300() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -662,7 +662,7 @@
 }
 
 %cdr-text-heading-display-1300 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -671,7 +671,7 @@
 }
 
 @mixin cdr-text-heading-display-1400() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -680,7 +680,7 @@
 }
 
 %cdr-text-heading-display-1400 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -689,7 +689,7 @@
 }
 
 @mixin cdr-text-heading-display-1500() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -698,7 +698,7 @@
 }
 
 %cdr-text-heading-display-1500 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -707,7 +707,7 @@
 }
 
 @mixin cdr-text-heading-display-1600() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -716,7 +716,7 @@
 }
 
 %cdr-text-heading-display-1600 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -725,7 +725,7 @@
 }
 
 @mixin cdr-text-subheading-sans-300() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -734,7 +734,7 @@
 }
 
 %cdr-text-subheading-sans-300 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -743,7 +743,7 @@
 }
 
 @mixin cdr-text-subheading-sans-400() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -752,7 +752,7 @@
 }
 
 %cdr-text-subheading-sans-400 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -761,7 +761,7 @@
 }
 
 @mixin cdr-text-subheading-sans-500() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -770,7 +770,7 @@
 }
 
 %cdr-text-subheading-sans-500 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -779,7 +779,7 @@
 }
 
 @mixin cdr-text-subheading-sans-600() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -788,7 +788,7 @@
 }
 
 %cdr-text-subheading-sans-600 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -797,7 +797,7 @@
 }
 
 @mixin cdr-text-utility-sans-100() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.08px;
@@ -806,7 +806,7 @@
 }
 
 %cdr-text-utility-sans-100 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.08px;
@@ -815,7 +815,7 @@
 }
 
 @mixin cdr-text-utility-sans-200() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -824,7 +824,7 @@
 }
 
 %cdr-text-utility-sans-200 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -833,7 +833,7 @@
 }
 
 @mixin cdr-text-utility-sans-300() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -842,7 +842,7 @@
 }
 
 %cdr-text-utility-sans-300 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -851,7 +851,7 @@
 }
 
 @mixin cdr-text-utility-sans-400() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -860,7 +860,7 @@
 }
 
 %cdr-text-utility-sans-400 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -869,7 +869,7 @@
 }
 
 @mixin cdr-text-utility-sans-500() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -878,7 +878,7 @@
 }
 
 %cdr-text-utility-sans-500 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -887,7 +887,7 @@
 }
 
 @mixin cdr-text-utility-sans-600() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -896,7 +896,7 @@
 }
 
 %cdr-text-utility-sans-600 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -905,7 +905,7 @@
 }
 
 @mixin cdr-text-utility-sans-700() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -914,7 +914,7 @@
 }
 
 %cdr-text-utility-sans-700 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -923,7 +923,7 @@
 }
 
 @mixin cdr-text-utility-sans-800() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.64px;
@@ -932,7 +932,7 @@
 }
 
 %cdr-text-utility-sans-800 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.64px;
@@ -941,7 +941,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-100() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -950,7 +950,7 @@
 }
 
 %cdr-text-utility-sans-strong-100 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -959,7 +959,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-200() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -968,7 +968,7 @@
 }
 
 %cdr-text-utility-sans-strong-200 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -977,7 +977,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-300() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -986,7 +986,7 @@
 }
 
 %cdr-text-utility-sans-strong-300 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -995,7 +995,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-400() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1004,7 +1004,7 @@
 }
 
 %cdr-text-utility-sans-strong-400 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1013,7 +1013,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-500() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1022,7 +1022,7 @@
 }
 
 %cdr-text-utility-sans-strong-500 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1031,7 +1031,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-600() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1040,7 +1040,7 @@
 }
 
 %cdr-text-utility-sans-strong-600 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1049,7 +1049,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-700() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1058,7 +1058,7 @@
 }
 
 %cdr-text-utility-sans-strong-700 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1067,7 +1067,7 @@
 }
 
 @mixin cdr-text-utility-sans-strong-800() {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.32px;
@@ -1076,7 +1076,7 @@
 }
 
 %cdr-text-utility-sans-strong-800 {
-  font-family: Graphik, "Helvetica Neue", sans-serif;
+  font-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.32px;
@@ -1085,7 +1085,7 @@
 }
 
 @mixin cdr-text-utility-serif-200() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.08px;
@@ -1094,7 +1094,7 @@
 }
 
 %cdr-text-utility-serif-200 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.08px;
@@ -1103,7 +1103,7 @@
 }
 
 @mixin cdr-text-utility-serif-300() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.08px;
@@ -1112,7 +1112,7 @@
 }
 
 %cdr-text-utility-serif-300 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.08px;
@@ -1121,7 +1121,7 @@
 }
 
 @mixin cdr-text-utility-serif-400() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -1130,7 +1130,7 @@
 }
 
 %cdr-text-utility-serif-400 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.16px;
@@ -1139,7 +1139,7 @@
 }
 
 @mixin cdr-text-utility-serif-500() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1148,7 +1148,7 @@
 }
 
 %cdr-text-utility-serif-500 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1157,7 +1157,7 @@
 }
 
 @mixin cdr-text-utility-serif-600() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1166,7 +1166,7 @@
 }
 
 %cdr-text-utility-serif-600 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1175,7 +1175,7 @@
 }
 
 @mixin cdr-text-utility-serif-700() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1184,7 +1184,7 @@
 }
 
 %cdr-text-utility-serif-700 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1193,7 +1193,7 @@
 }
 
 @mixin cdr-text-utility-serif-800() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1202,7 +1202,7 @@
 }
 
 %cdr-text-utility-serif-800 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -1211,7 +1211,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-200() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1220,7 +1220,7 @@
 }
 
 %cdr-text-utility-serif-strong-200 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1229,7 +1229,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-300() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1238,7 +1238,7 @@
 }
 
 %cdr-text-utility-serif-strong-300 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1247,7 +1247,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-400() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1256,7 +1256,7 @@
 }
 
 %cdr-text-utility-serif-strong-400 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1265,7 +1265,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-500() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1274,7 +1274,7 @@
 }
 
 %cdr-text-utility-serif-strong-500 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.08px;
@@ -1283,7 +1283,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-600() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1292,7 +1292,7 @@
 }
 
 %cdr-text-utility-serif-strong-600 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1301,7 +1301,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-700() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1310,7 +1310,7 @@
 }
 
 %cdr-text-utility-serif-strong-700 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1319,7 +1319,7 @@
 }
 
 @mixin cdr-text-utility-serif-strong-800() {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1328,7 +1328,7 @@
 }
 
 %cdr-text-utility-serif-strong-800 {
-  font-family: Stuart, Georgia, serif;
+  font-family: Stuart, "Stuart fallback", Georgia, serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.16px;
@@ -1715,449 +1715,449 @@ $cdr-breakpoint-sm: 768px;
 $cdr-breakpoint-md: 992px;
 $cdr-breakpoint-lg: 1232px;
 $cdr-font-family-serif-brand-font: Stuart;
-$cdr-font-family-serif: Stuart, Georgia, serif;
+$cdr-font-family-serif: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-font-family-sans-brand-font: Graphik;
-$cdr-font-family-sans: Graphik, "Helvetica Neue", sans-serif;
-$cdr-text-body-300-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-font-family-sans: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
+$cdr-text-body-300-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-body-300-style: normal;
 $cdr-text-body-300-weight: 400;
 $cdr-text-body-300-spacing: 0.08px;
 $cdr-text-body-300-size: 1.6rem;
 $cdr-text-body-300-height: 2.6rem;
-$cdr-text-body-400-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-body-400-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-body-400-style: normal;
 $cdr-text-body-400-weight: 400;
 $cdr-text-body-400-spacing: 0px;
 $cdr-text-body-400-size: 1.8rem;
 $cdr-text-body-400-height: 3rem;
-$cdr-text-body-500-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-body-500-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-body-500-style: normal;
 $cdr-text-body-500-weight: 400;
 $cdr-text-body-500-spacing: -0.16px;
 $cdr-text-body-500-size: 2rem;
 $cdr-text-body-500-height: 3.6rem;
-$cdr-text-body-strong-300-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-body-strong-300-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-body-strong-300-style: normal;
 $cdr-text-body-strong-300-weight: 600;
 $cdr-text-body-strong-300-spacing: 0.08px;
 $cdr-text-body-strong-300-size: 1.6rem;
 $cdr-text-body-strong-300-height: 2.6rem;
-$cdr-text-body-strong-400-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-body-strong-400-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-body-strong-400-style: normal;
 $cdr-text-body-strong-400-weight: 600;
 $cdr-text-body-strong-400-spacing: 0px;
 $cdr-text-body-strong-400-size: 1.8rem;
 $cdr-text-body-strong-400-height: 3rem;
-$cdr-text-body-strong-500-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-body-strong-500-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-body-strong-500-style: normal;
 $cdr-text-body-strong-500-weight: 600;
 $cdr-text-body-strong-500-spacing: -0.08px;
 $cdr-text-body-strong-500-size: 2rem;
 $cdr-text-body-strong-500-height: 3.6rem;
-$cdr-text-default-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-default-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-default-style: normal;
 $cdr-text-default-weight: 400;
 $cdr-text-default-spacing: -0.16px;
 $cdr-text-default-size: 1.6rem;
 $cdr-text-default-height: 2.2rem;
-$cdr-text-eyebrow-100-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-eyebrow-100-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-eyebrow-100-style: normal;
 $cdr-text-eyebrow-100-weight: 500;
 $cdr-text-eyebrow-100-spacing: 0.32px;
 $cdr-text-eyebrow-100-size: 1.2rem;
 $cdr-text-eyebrow-100-height: 1.8rem;
 $cdr-text-eyebrow-100-transform: uppercase;
-$cdr-text-heading-sans-200-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-heading-sans-200-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-heading-sans-200-style: normal;
 $cdr-text-heading-sans-200-weight: 500;
 $cdr-text-heading-sans-200-spacing: 0px;
 $cdr-text-heading-sans-200-size: 1.4rem;
 $cdr-text-heading-sans-200-height: 1.8rem;
-$cdr-text-heading-sans-300-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-heading-sans-300-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-heading-sans-300-style: normal;
 $cdr-text-heading-sans-300-weight: 500;
 $cdr-text-heading-sans-300-spacing: 0px;
 $cdr-text-heading-sans-300-size: 1.6rem;
 $cdr-text-heading-sans-300-height: 2rem;
-$cdr-text-heading-sans-400-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-heading-sans-400-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-heading-sans-400-style: normal;
 $cdr-text-heading-sans-400-weight: 500;
 $cdr-text-heading-sans-400-spacing: 0px;
 $cdr-text-heading-sans-400-size: 1.8rem;
 $cdr-text-heading-sans-400-height: 2.4rem;
-$cdr-text-heading-sans-500-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-heading-sans-500-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-heading-sans-500-style: normal;
 $cdr-text-heading-sans-500-weight: 500;
 $cdr-text-heading-sans-500-spacing: 0px;
 $cdr-text-heading-sans-500-size: 2rem;
 $cdr-text-heading-sans-500-height: 2.6rem;
-$cdr-text-heading-sans-600-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-heading-sans-600-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-heading-sans-600-style: normal;
 $cdr-text-heading-sans-600-weight: 500;
 $cdr-text-heading-sans-600-spacing: 0px;
 $cdr-text-heading-sans-600-size: 2.4rem;
 $cdr-text-heading-sans-600-height: 3rem;
-$cdr-text-heading-serif-200-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-200-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-200-style: normal;
 $cdr-text-heading-serif-200-weight: 500;
 $cdr-text-heading-serif-200-spacing: 0px;
 $cdr-text-heading-serif-200-size: 1.4rem;
 $cdr-text-heading-serif-200-height: 1.8rem;
-$cdr-text-heading-serif-300-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-300-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-300-style: normal;
 $cdr-text-heading-serif-300-weight: 500;
 $cdr-text-heading-serif-300-spacing: 0px;
 $cdr-text-heading-serif-300-size: 1.6rem;
 $cdr-text-heading-serif-300-height: 2rem;
-$cdr-text-heading-serif-400-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-400-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-400-style: normal;
 $cdr-text-heading-serif-400-weight: 500;
 $cdr-text-heading-serif-400-spacing: 0px;
 $cdr-text-heading-serif-400-size: 1.8rem;
 $cdr-text-heading-serif-400-height: 2.4rem;
-$cdr-text-heading-serif-500-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-500-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-500-style: normal;
 $cdr-text-heading-serif-500-weight: 500;
 $cdr-text-heading-serif-500-spacing: 0px;
 $cdr-text-heading-serif-500-size: 2rem;
 $cdr-text-heading-serif-500-height: 2.6rem;
-$cdr-text-heading-serif-600-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-600-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-600-style: normal;
 $cdr-text-heading-serif-600-weight: 500;
 $cdr-text-heading-serif-600-spacing: 0px;
 $cdr-text-heading-serif-600-size: 2.4rem;
 $cdr-text-heading-serif-600-height: 3rem;
-$cdr-text-heading-serif-700-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-700-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-700-style: normal;
 $cdr-text-heading-serif-700-weight: 500;
 $cdr-text-heading-serif-700-spacing: 0px;
 $cdr-text-heading-serif-700-size: 2.8rem;
 $cdr-text-heading-serif-700-height: 3.2rem;
-$cdr-text-heading-serif-800-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-800-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-800-style: normal;
 $cdr-text-heading-serif-800-weight: 500;
 $cdr-text-heading-serif-800-spacing: 0px;
 $cdr-text-heading-serif-800-size: 3.2rem;
 $cdr-text-heading-serif-800-height: 3.6rem;
-$cdr-text-heading-serif-900-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-900-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-900-style: normal;
 $cdr-text-heading-serif-900-weight: 500;
 $cdr-text-heading-serif-900-spacing: 0px;
 $cdr-text-heading-serif-900-size: 3.6rem;
 $cdr-text-heading-serif-900-height: 4.4rem;
-$cdr-text-heading-serif-1000-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-1000-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-1000-style: normal;
 $cdr-text-heading-serif-1000-weight: 500;
 $cdr-text-heading-serif-1000-spacing: 0px;
 $cdr-text-heading-serif-1000-size: 4.2rem;
 $cdr-text-heading-serif-1000-height: 5rem;
-$cdr-text-heading-serif-1100-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-1100-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-1100-style: normal;
 $cdr-text-heading-serif-1100-weight: 500;
 $cdr-text-heading-serif-1100-spacing: 0px;
 $cdr-text-heading-serif-1100-size: 4.8rem;
 $cdr-text-heading-serif-1100-height: 5.6rem;
-$cdr-text-heading-serif-1200-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-1200-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-1200-style: normal;
 $cdr-text-heading-serif-1200-weight: 500;
 $cdr-text-heading-serif-1200-spacing: 0px;
 $cdr-text-heading-serif-1200-size: 5.4rem;
 $cdr-text-heading-serif-1200-height: 6.4rem;
-$cdr-text-heading-serif-strong-600-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-600-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-600-style: normal;
 $cdr-text-heading-serif-strong-600-weight: 600;
 $cdr-text-heading-serif-strong-600-spacing: 0px;
 $cdr-text-heading-serif-strong-600-size: 2.4rem;
 $cdr-text-heading-serif-strong-600-height: 3rem;
-$cdr-text-heading-serif-strong-700-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-700-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-700-style: normal;
 $cdr-text-heading-serif-strong-700-weight: 600;
 $cdr-text-heading-serif-strong-700-spacing: 0px;
 $cdr-text-heading-serif-strong-700-size: 2.8rem;
 $cdr-text-heading-serif-strong-700-height: 3.2rem;
-$cdr-text-heading-serif-strong-800-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-800-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-800-style: normal;
 $cdr-text-heading-serif-strong-800-weight: 600;
 $cdr-text-heading-serif-strong-800-spacing: 0px;
 $cdr-text-heading-serif-strong-800-size: 3.2rem;
 $cdr-text-heading-serif-strong-800-height: 3.6rem;
-$cdr-text-heading-serif-strong-900-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-900-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-900-style: normal;
 $cdr-text-heading-serif-strong-900-weight: 600;
 $cdr-text-heading-serif-strong-900-spacing: 0px;
 $cdr-text-heading-serif-strong-900-size: 3.6rem;
 $cdr-text-heading-serif-strong-900-height: 4.4rem;
-$cdr-text-heading-serif-strong-1000-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-1000-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-1000-style: normal;
 $cdr-text-heading-serif-strong-1000-weight: 600;
 $cdr-text-heading-serif-strong-1000-spacing: 0px;
 $cdr-text-heading-serif-strong-1000-size: 4.2rem;
 $cdr-text-heading-serif-strong-1000-height: 5rem;
-$cdr-text-heading-serif-strong-1100-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-1100-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-1100-style: normal;
 $cdr-text-heading-serif-strong-1100-weight: 600;
 $cdr-text-heading-serif-strong-1100-spacing: 0px;
 $cdr-text-heading-serif-strong-1100-size: 4.8rem;
 $cdr-text-heading-serif-strong-1100-height: 5.6rem;
-$cdr-text-heading-serif-strong-1200-family: Stuart, Georgia, serif;
+$cdr-text-heading-serif-strong-1200-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-serif-strong-1200-style: normal;
 $cdr-text-heading-serif-strong-1200-weight: 600;
 $cdr-text-heading-serif-strong-1200-spacing: 0px;
 $cdr-text-heading-serif-strong-1200-size: 5.4rem;
 $cdr-text-heading-serif-strong-1200-height: 6.4rem;
-$cdr-text-heading-display-800-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-800-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-800-style: normal;
 $cdr-text-heading-display-800-weight: 400;
 $cdr-text-heading-display-800-spacing: 0px;
 $cdr-text-heading-display-800-size: 3.2rem;
 $cdr-text-heading-display-800-height: 3.6rem;
-$cdr-text-heading-display-900-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-900-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-900-style: normal;
 $cdr-text-heading-display-900-weight: 400;
 $cdr-text-heading-display-900-spacing: 0px;
 $cdr-text-heading-display-900-size: 3.6rem;
 $cdr-text-heading-display-900-height: 4rem;
-$cdr-text-heading-display-1000-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1000-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1000-style: normal;
 $cdr-text-heading-display-1000-weight: 400;
 $cdr-text-heading-display-1000-spacing: 0px;
 $cdr-text-heading-display-1000-size: 4.2rem;
 $cdr-text-heading-display-1000-height: 4.8rem;
-$cdr-text-heading-display-1100-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1100-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1100-style: normal;
 $cdr-text-heading-display-1100-weight: 400;
 $cdr-text-heading-display-1100-spacing: 0px;
 $cdr-text-heading-display-1100-size: 4.8rem;
 $cdr-text-heading-display-1100-height: 5.2rem;
-$cdr-text-heading-display-1200-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1200-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1200-style: normal;
 $cdr-text-heading-display-1200-weight: 400;
 $cdr-text-heading-display-1200-spacing: 0px;
 $cdr-text-heading-display-1200-size: 5.4rem;
 $cdr-text-heading-display-1200-height: 6rem;
-$cdr-text-heading-display-1300-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1300-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1300-style: normal;
 $cdr-text-heading-display-1300-weight: 400;
 $cdr-text-heading-display-1300-spacing: 0px;
 $cdr-text-heading-display-1300-size: 6rem;
 $cdr-text-heading-display-1300-height: 6.4rem;
-$cdr-text-heading-display-1400-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1400-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1400-style: normal;
 $cdr-text-heading-display-1400-weight: 400;
 $cdr-text-heading-display-1400-spacing: 0px;
 $cdr-text-heading-display-1400-size: 6.8rem;
 $cdr-text-heading-display-1400-height: 7.2rem;
-$cdr-text-heading-display-1500-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1500-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1500-style: normal;
 $cdr-text-heading-display-1500-weight: 400;
 $cdr-text-heading-display-1500-spacing: 0px;
 $cdr-text-heading-display-1500-size: 7.6rem;
 $cdr-text-heading-display-1500-height: 8rem;
-$cdr-text-heading-display-1600-family: Stuart, Georgia, serif;
+$cdr-text-heading-display-1600-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-heading-display-1600-style: normal;
 $cdr-text-heading-display-1600-weight: 400;
 $cdr-text-heading-display-1600-spacing: 0px;
 $cdr-text-heading-display-1600-size: 8.6rem;
 $cdr-text-heading-display-1600-height: 9.2rem;
-$cdr-text-subheading-sans-300-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-subheading-sans-300-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-subheading-sans-300-style: normal;
 $cdr-text-subheading-sans-300-weight: 500;
 $cdr-text-subheading-sans-300-spacing: 0px;
 $cdr-text-subheading-sans-300-size: 1.6rem;
 $cdr-text-subheading-sans-300-height: 2rem;
-$cdr-text-subheading-sans-400-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-subheading-sans-400-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-subheading-sans-400-style: normal;
 $cdr-text-subheading-sans-400-weight: 500;
 $cdr-text-subheading-sans-400-spacing: 0px;
 $cdr-text-subheading-sans-400-size: 1.8rem;
 $cdr-text-subheading-sans-400-height: 2.4rem;
-$cdr-text-subheading-sans-500-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-subheading-sans-500-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-subheading-sans-500-style: normal;
 $cdr-text-subheading-sans-500-weight: 500;
 $cdr-text-subheading-sans-500-spacing: 0px;
 $cdr-text-subheading-sans-500-size: 2rem;
 $cdr-text-subheading-sans-500-height: 2.6rem;
-$cdr-text-subheading-sans-600-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-subheading-sans-600-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-subheading-sans-600-style: normal;
 $cdr-text-subheading-sans-600-weight: 500;
 $cdr-text-subheading-sans-600-spacing: 0px;
 $cdr-text-subheading-sans-600-size: 2.4rem;
 $cdr-text-subheading-sans-600-height: 3rem;
-$cdr-text-utility-sans-100-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-100-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-100-style: normal;
 $cdr-text-utility-sans-100-weight: 400;
 $cdr-text-utility-sans-100-spacing: -0.08px;
 $cdr-text-utility-sans-100-size: 1.2rem;
 $cdr-text-utility-sans-100-height: 1.6rem;
-$cdr-text-utility-sans-200-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-200-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-200-style: normal;
 $cdr-text-utility-sans-200-weight: 400;
 $cdr-text-utility-sans-200-spacing: -0.16px;
 $cdr-text-utility-sans-200-size: 1.4rem;
 $cdr-text-utility-sans-200-height: 1.8rem;
-$cdr-text-utility-sans-300-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-300-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-300-style: normal;
 $cdr-text-utility-sans-300-weight: 400;
 $cdr-text-utility-sans-300-spacing: -0.16px;
 $cdr-text-utility-sans-300-size: 1.6rem;
 $cdr-text-utility-sans-300-height: 2.2rem;
-$cdr-text-utility-sans-400-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-400-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-400-style: normal;
 $cdr-text-utility-sans-400-weight: 400;
 $cdr-text-utility-sans-400-spacing: -0.16px;
 $cdr-text-utility-sans-400-size: 1.8rem;
 $cdr-text-utility-sans-400-height: 2.4rem;
-$cdr-text-utility-sans-500-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-500-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-500-style: normal;
 $cdr-text-utility-sans-500-weight: 400;
 $cdr-text-utility-sans-500-spacing: -0.32px;
 $cdr-text-utility-sans-500-size: 2rem;
 $cdr-text-utility-sans-500-height: 2.6rem;
-$cdr-text-utility-sans-600-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-600-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-600-style: normal;
 $cdr-text-utility-sans-600-weight: 400;
 $cdr-text-utility-sans-600-spacing: -0.32px;
 $cdr-text-utility-sans-600-size: 2.4rem;
 $cdr-text-utility-sans-600-height: 3rem;
-$cdr-text-utility-sans-700-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-700-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-700-style: normal;
 $cdr-text-utility-sans-700-weight: 400;
 $cdr-text-utility-sans-700-spacing: -0.32px;
 $cdr-text-utility-sans-700-size: 2.8rem;
 $cdr-text-utility-sans-700-height: 3.6rem;
-$cdr-text-utility-sans-800-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-800-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-800-style: normal;
 $cdr-text-utility-sans-800-weight: 400;
 $cdr-text-utility-sans-800-spacing: -0.64px;
 $cdr-text-utility-sans-800-size: 3.2rem;
 $cdr-text-utility-sans-800-height: 4rem;
-$cdr-text-utility-sans-strong-100-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-100-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-100-style: normal;
 $cdr-text-utility-sans-strong-100-weight: 600;
 $cdr-text-utility-sans-strong-100-spacing: -0.08px;
 $cdr-text-utility-sans-strong-100-size: 1.2rem;
 $cdr-text-utility-sans-strong-100-height: 1.6rem;
-$cdr-text-utility-sans-strong-200-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-200-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-200-style: normal;
 $cdr-text-utility-sans-strong-200-weight: 600;
 $cdr-text-utility-sans-strong-200-spacing: -0.08px;
 $cdr-text-utility-sans-strong-200-size: 1.4rem;
 $cdr-text-utility-sans-strong-200-height: 1.8rem;
-$cdr-text-utility-sans-strong-300-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-300-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-300-style: normal;
 $cdr-text-utility-sans-strong-300-weight: 600;
 $cdr-text-utility-sans-strong-300-spacing: -0.08px;
 $cdr-text-utility-sans-strong-300-size: 1.6rem;
 $cdr-text-utility-sans-strong-300-height: 2.2rem;
-$cdr-text-utility-sans-strong-400-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-400-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-400-style: normal;
 $cdr-text-utility-sans-strong-400-weight: 600;
 $cdr-text-utility-sans-strong-400-spacing: -0.08px;
 $cdr-text-utility-sans-strong-400-size: 1.8rem;
 $cdr-text-utility-sans-strong-400-height: 2.4rem;
-$cdr-text-utility-sans-strong-500-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-500-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-500-style: normal;
 $cdr-text-utility-sans-strong-500-weight: 600;
 $cdr-text-utility-sans-strong-500-spacing: -0.16px;
 $cdr-text-utility-sans-strong-500-size: 2rem;
 $cdr-text-utility-sans-strong-500-height: 2.6rem;
-$cdr-text-utility-sans-strong-600-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-600-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-600-style: normal;
 $cdr-text-utility-sans-strong-600-weight: 600;
 $cdr-text-utility-sans-strong-600-spacing: -0.16px;
 $cdr-text-utility-sans-strong-600-size: 2.4rem;
 $cdr-text-utility-sans-strong-600-height: 3rem;
-$cdr-text-utility-sans-strong-700-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-700-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-700-style: normal;
 $cdr-text-utility-sans-strong-700-weight: 600;
 $cdr-text-utility-sans-strong-700-spacing: -0.16px;
 $cdr-text-utility-sans-strong-700-size: 2.8rem;
 $cdr-text-utility-sans-strong-700-height: 3.6rem;
-$cdr-text-utility-sans-strong-800-family: Graphik, "Helvetica Neue", sans-serif;
+$cdr-text-utility-sans-strong-800-family: Graphik, "Graphik fallback", "Helvetica Neue", sans-serif;
 $cdr-text-utility-sans-strong-800-style: normal;
 $cdr-text-utility-sans-strong-800-weight: 600;
 $cdr-text-utility-sans-strong-800-spacing: -0.32px;
 $cdr-text-utility-sans-strong-800-size: 3.2rem;
 $cdr-text-utility-sans-strong-800-height: 4rem;
-$cdr-text-utility-serif-200-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-200-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-200-style: normal;
 $cdr-text-utility-serif-200-weight: 400;
 $cdr-text-utility-serif-200-spacing: -0.08px;
 $cdr-text-utility-serif-200-size: 1.4rem;
 $cdr-text-utility-serif-200-height: 1.8rem;
-$cdr-text-utility-serif-300-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-300-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-300-style: normal;
 $cdr-text-utility-serif-300-weight: 400;
 $cdr-text-utility-serif-300-spacing: -0.08px;
 $cdr-text-utility-serif-300-size: 1.6rem;
 $cdr-text-utility-serif-300-height: 2.2rem;
-$cdr-text-utility-serif-400-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-400-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-400-style: normal;
 $cdr-text-utility-serif-400-weight: 400;
 $cdr-text-utility-serif-400-spacing: -0.16px;
 $cdr-text-utility-serif-400-size: 1.8rem;
 $cdr-text-utility-serif-400-height: 2.4rem;
-$cdr-text-utility-serif-500-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-500-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-500-style: normal;
 $cdr-text-utility-serif-500-weight: 400;
 $cdr-text-utility-serif-500-spacing: -0.32px;
 $cdr-text-utility-serif-500-size: 2rem;
 $cdr-text-utility-serif-500-height: 2.6rem;
-$cdr-text-utility-serif-600-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-600-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-600-style: normal;
 $cdr-text-utility-serif-600-weight: 400;
 $cdr-text-utility-serif-600-spacing: -0.32px;
 $cdr-text-utility-serif-600-size: 2.4rem;
 $cdr-text-utility-serif-600-height: 3rem;
-$cdr-text-utility-serif-700-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-700-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-700-style: normal;
 $cdr-text-utility-serif-700-weight: 400;
 $cdr-text-utility-serif-700-spacing: -0.32px;
 $cdr-text-utility-serif-700-size: 2.8rem;
 $cdr-text-utility-serif-700-height: 3.6rem;
-$cdr-text-utility-serif-800-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-800-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-800-style: normal;
 $cdr-text-utility-serif-800-weight: 400;
 $cdr-text-utility-serif-800-spacing: -0.32px;
 $cdr-text-utility-serif-800-size: 3.2rem;
 $cdr-text-utility-serif-800-height: 4rem;
-$cdr-text-utility-serif-strong-200-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-200-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-200-style: normal;
 $cdr-text-utility-serif-strong-200-weight: 600;
 $cdr-text-utility-serif-strong-200-spacing: -0.08px;
 $cdr-text-utility-serif-strong-200-size: 1.4rem;
 $cdr-text-utility-serif-strong-200-height: 1.8rem;
-$cdr-text-utility-serif-strong-300-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-300-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-300-style: normal;
 $cdr-text-utility-serif-strong-300-weight: 600;
 $cdr-text-utility-serif-strong-300-spacing: -0.08px;
 $cdr-text-utility-serif-strong-300-size: 1.6rem;
 $cdr-text-utility-serif-strong-300-height: 2.2rem;
-$cdr-text-utility-serif-strong-400-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-400-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-400-style: normal;
 $cdr-text-utility-serif-strong-400-weight: 600;
 $cdr-text-utility-serif-strong-400-spacing: -0.08px;
 $cdr-text-utility-serif-strong-400-size: 1.8rem;
 $cdr-text-utility-serif-strong-400-height: 2.4rem;
-$cdr-text-utility-serif-strong-500-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-500-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-500-style: normal;
 $cdr-text-utility-serif-strong-500-weight: 600;
 $cdr-text-utility-serif-strong-500-spacing: -0.08px;
 $cdr-text-utility-serif-strong-500-size: 2rem;
 $cdr-text-utility-serif-strong-500-height: 2.6rem;
-$cdr-text-utility-serif-strong-600-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-600-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-600-style: normal;
 $cdr-text-utility-serif-strong-600-weight: 600;
 $cdr-text-utility-serif-strong-600-spacing: -0.16px;
 $cdr-text-utility-serif-strong-600-size: 2.4rem;
 $cdr-text-utility-serif-strong-600-height: 3rem;
-$cdr-text-utility-serif-strong-700-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-700-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-700-style: normal;
 $cdr-text-utility-serif-strong-700-weight: 600;
 $cdr-text-utility-serif-strong-700-spacing: -0.16px;
 $cdr-text-utility-serif-strong-700-size: 2.8rem;
 $cdr-text-utility-serif-strong-700-height: 3.6rem;
-$cdr-text-utility-serif-strong-800-family: Stuart, Georgia, serif;
+$cdr-text-utility-serif-strong-800-family: Stuart, "Stuart fallback", Georgia, serif;
 $cdr-text-utility-serif-strong-800-style: normal;
 $cdr-text-utility-serif-strong-800-weight: 600;
 $cdr-text-utility-serif-strong-800-spacing: -0.16px;

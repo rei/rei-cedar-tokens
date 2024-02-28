@@ -1743,20 +1743,20 @@
         "value": "Stuart"
       },
       "serif": {
-        "value": "Stuart, Georgia, serif"
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif"
       },
       "sans-brand-font": {
         "value": "Graphik"
       },
       "sans": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif"
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif"
       }
     }
   },
   "text-body": {
     "300": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textBody300",
         "property": "font-family"
       },
@@ -1791,7 +1791,7 @@
     },
     "400": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textBody400",
         "property": "font-family"
       },
@@ -1826,7 +1826,7 @@
     },
     "500": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textBody500",
         "property": "font-family"
       },
@@ -1863,7 +1863,7 @@
   "text-body-strong": {
     "300": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textBodyStrong300",
         "property": "font-family"
       },
@@ -1898,7 +1898,7 @@
     },
     "400": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textBodyStrong400",
         "property": "font-family"
       },
@@ -1933,7 +1933,7 @@
     },
     "500": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textBodyStrong500",
         "property": "font-family"
       },
@@ -1969,7 +1969,7 @@
   },
   "text-default": {
     "family": {
-      "value": "Graphik, \"Helvetica Neue\", sans-serif",
+      "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
       "mixin": "textDefault",
       "property": "font-family"
     },
@@ -2005,7 +2005,7 @@
   "text-eyebrow": {
     "100": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textEyebrow100",
         "property": "font-family"
       },
@@ -2048,7 +2048,7 @@
     "sans": {
       "200": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textHeadingSans200",
           "property": "font-family"
         },
@@ -2083,7 +2083,7 @@
       },
       "300": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textHeadingSans300",
           "property": "font-family"
         },
@@ -2118,7 +2118,7 @@
       },
       "400": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textHeadingSans400",
           "property": "font-family"
         },
@@ -2153,7 +2153,7 @@
       },
       "500": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textHeadingSans500",
           "property": "font-family"
         },
@@ -2188,7 +2188,7 @@
       },
       "600": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textHeadingSans600",
           "property": "font-family"
         },
@@ -2225,7 +2225,7 @@
     "serif": {
       "200": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif200",
           "property": "font-family"
         },
@@ -2260,7 +2260,7 @@
       },
       "300": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif300",
           "property": "font-family"
         },
@@ -2295,7 +2295,7 @@
       },
       "400": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif400",
           "property": "font-family"
         },
@@ -2330,7 +2330,7 @@
       },
       "500": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif500",
           "property": "font-family"
         },
@@ -2365,7 +2365,7 @@
       },
       "600": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif600",
           "property": "font-family"
         },
@@ -2400,7 +2400,7 @@
       },
       "700": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif700",
           "property": "font-family"
         },
@@ -2435,7 +2435,7 @@
       },
       "800": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif800",
           "property": "font-family"
         },
@@ -2470,7 +2470,7 @@
       },
       "900": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif900",
           "property": "font-family"
         },
@@ -2505,7 +2505,7 @@
       },
       "1000": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif1000",
           "property": "font-family"
         },
@@ -2540,7 +2540,7 @@
       },
       "1100": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif1100",
           "property": "font-family"
         },
@@ -2575,7 +2575,7 @@
       },
       "1200": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerif1200",
           "property": "font-family"
         },
@@ -2612,7 +2612,7 @@
     "serif-strong": {
       "600": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong600",
           "property": "font-family"
         },
@@ -2647,7 +2647,7 @@
       },
       "700": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong700",
           "property": "font-family"
         },
@@ -2682,7 +2682,7 @@
       },
       "800": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong800",
           "property": "font-family"
         },
@@ -2717,7 +2717,7 @@
       },
       "900": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong900",
           "property": "font-family"
         },
@@ -2752,7 +2752,7 @@
       },
       "1000": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong1000",
           "property": "font-family"
         },
@@ -2787,7 +2787,7 @@
       },
       "1100": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong1100",
           "property": "font-family"
         },
@@ -2822,7 +2822,7 @@
       },
       "1200": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingSerifStrong1200",
           "property": "font-family"
         },
@@ -2859,7 +2859,7 @@
     "display": {
       "800": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay800",
           "property": "font-family"
         },
@@ -2894,7 +2894,7 @@
       },
       "900": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay900",
           "property": "font-family"
         },
@@ -2929,7 +2929,7 @@
       },
       "1000": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1000",
           "property": "font-family"
         },
@@ -2964,7 +2964,7 @@
       },
       "1100": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1100",
           "property": "font-family"
         },
@@ -2999,7 +2999,7 @@
       },
       "1200": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1200",
           "property": "font-family"
         },
@@ -3034,7 +3034,7 @@
       },
       "1300": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1300",
           "property": "font-family"
         },
@@ -3069,7 +3069,7 @@
       },
       "1400": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1400",
           "property": "font-family"
         },
@@ -3104,7 +3104,7 @@
       },
       "1500": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1500",
           "property": "font-family"
         },
@@ -3139,7 +3139,7 @@
       },
       "1600": {
         "family": {
-          "value": "Stuart, Georgia, serif",
+          "value": "Stuart, \"Stuart fallback\", Georgia, serif",
           "mixin": "textHeadingDisplay1600",
           "property": "font-family"
         },
@@ -3178,7 +3178,7 @@
     "sans": {
       "300": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textSubheadingSans300",
           "property": "font-family"
         },
@@ -3213,7 +3213,7 @@
       },
       "400": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textSubheadingSans400",
           "property": "font-family"
         },
@@ -3248,7 +3248,7 @@
       },
       "500": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textSubheadingSans500",
           "property": "font-family"
         },
@@ -3283,7 +3283,7 @@
       },
       "600": {
         "family": {
-          "value": "Graphik, \"Helvetica Neue\", sans-serif",
+          "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
           "mixin": "textSubheadingSans600",
           "property": "font-family"
         },
@@ -3321,7 +3321,7 @@
   "text-utility-sans": {
     "100": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans100",
         "property": "font-family"
       },
@@ -3356,7 +3356,7 @@
     },
     "200": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans200",
         "property": "font-family"
       },
@@ -3391,7 +3391,7 @@
     },
     "300": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans300",
         "property": "font-family"
       },
@@ -3426,7 +3426,7 @@
     },
     "400": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans400",
         "property": "font-family"
       },
@@ -3461,7 +3461,7 @@
     },
     "500": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans500",
         "property": "font-family"
       },
@@ -3496,7 +3496,7 @@
     },
     "600": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans600",
         "property": "font-family"
       },
@@ -3531,7 +3531,7 @@
     },
     "700": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans700",
         "property": "font-family"
       },
@@ -3566,7 +3566,7 @@
     },
     "800": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySans800",
         "property": "font-family"
       },
@@ -3603,7 +3603,7 @@
   "text-utility-sans-strong": {
     "100": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong100",
         "property": "font-family"
       },
@@ -3638,7 +3638,7 @@
     },
     "200": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong200",
         "property": "font-family"
       },
@@ -3673,7 +3673,7 @@
     },
     "300": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong300",
         "property": "font-family"
       },
@@ -3708,7 +3708,7 @@
     },
     "400": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong400",
         "property": "font-family"
       },
@@ -3743,7 +3743,7 @@
     },
     "500": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong500",
         "property": "font-family"
       },
@@ -3778,7 +3778,7 @@
     },
     "600": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong600",
         "property": "font-family"
       },
@@ -3813,7 +3813,7 @@
     },
     "700": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong700",
         "property": "font-family"
       },
@@ -3848,7 +3848,7 @@
     },
     "800": {
       "family": {
-        "value": "Graphik, \"Helvetica Neue\", sans-serif",
+        "value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mixin": "textUtilitySansStrong800",
         "property": "font-family"
       },
@@ -3885,7 +3885,7 @@
   "text-utility-serif": {
     "200": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif200",
         "property": "font-family"
       },
@@ -3920,7 +3920,7 @@
     },
     "300": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif300",
         "property": "font-family"
       },
@@ -3955,7 +3955,7 @@
     },
     "400": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif400",
         "property": "font-family"
       },
@@ -3990,7 +3990,7 @@
     },
     "500": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif500",
         "property": "font-family"
       },
@@ -4025,7 +4025,7 @@
     },
     "600": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif600",
         "property": "font-family"
       },
@@ -4060,7 +4060,7 @@
     },
     "700": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif700",
         "property": "font-family"
       },
@@ -4095,7 +4095,7 @@
     },
     "800": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerif800",
         "property": "font-family"
       },
@@ -4132,7 +4132,7 @@
   "text-utility-serif-strong": {
     "200": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong200",
         "property": "font-family"
       },
@@ -4167,7 +4167,7 @@
     },
     "300": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong300",
         "property": "font-family"
       },
@@ -4202,7 +4202,7 @@
     },
     "400": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong400",
         "property": "font-family"
       },
@@ -4237,7 +4237,7 @@
     },
     "500": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong500",
         "property": "font-family"
       },
@@ -4272,7 +4272,7 @@
     },
     "600": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong600",
         "property": "font-family"
       },
@@ -4307,7 +4307,7 @@
     },
     "700": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong700",
         "property": "font-family"
       },
@@ -4342,7 +4342,7 @@
     },
     "800": {
       "family": {
-        "value": "Stuart, Georgia, serif",
+        "value": "Stuart, \"Stuart fallback\", Georgia, serif",
         "mixin": "textUtilitySerifStrong800",
         "property": "font-family"
       },
