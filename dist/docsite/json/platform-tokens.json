@@ -7382,7 +7382,7 @@
     ],
     "motion": [
       {
-        "value": "0.10s",
+        "value": "100ms",
         "category": "time",
         "docs": {
           "category": "motion",
@@ -7407,7 +7407,7 @@
         }
       },
       {
-        "value": "0.20s",
+        "value": "200ms",
         "category": "time",
         "docs": {
           "category": "motion",
@@ -7432,7 +7432,7 @@
         }
       },
       {
-        "value": "0.30s",
+        "value": "300ms",
         "category": "time",
         "docs": {
           "category": "motion",
@@ -7457,7 +7457,7 @@
         }
       },
       {
-        "value": "0.40s",
+        "value": "400ms",
         "category": "time",
         "docs": {
           "category": "motion",
@@ -7482,7 +7482,7 @@
         }
       },
       {
-        "value": "0.50s",
+        "value": "500ms",
         "category": "time",
         "docs": {
           "category": "motion",
@@ -7507,7 +7507,7 @@
         }
       },
       {
-        "value": "0.60s",
+        "value": "600ms",
         "category": "time",
         "docs": {
           "category": "motion",
@@ -9882,6 +9882,9 @@
         },
         "name": "cdr-font-family-serif-brand-font",
         "attributes": {
+          "category": "font",
+          "type": "family",
+          "item": "serif-brand-font",
           "deprecated": false
         }
       },
@@ -9900,6 +9903,9 @@
         },
         "name": "cdr-font-family-serif",
         "attributes": {
+          "category": "font",
+          "type": "family",
+          "item": "serif",
           "deprecated": false
         }
       },
@@ -9918,6 +9924,9 @@
         },
         "name": "cdr-font-family-sans-brand-font",
         "attributes": {
+          "category": "font",
+          "type": "family",
+          "item": "sans-brand-font",
           "deprecated": false
         }
       },
@@ -9936,6 +9945,9 @@
         },
         "name": "cdr-font-family-sans",
         "attributes": {
+          "category": "font",
+          "type": "family",
+          "item": "sans",
           "deprecated": false
         }
       }
@@ -9945,7 +9957,7 @@
     "motion": [],
     "prominence": [
       {
-        "value": "0 0 0 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 0 0 0 #0C0B08",
         "docs": {
           "type": "prominence",
           "category": "prominence",
@@ -9963,11 +9975,13 @@
         },
         "name": "cdr-prominence-flat",
         "attributes": {
+          "category": "prominence",
+          "type": "flat",
           "deprecated": false
         }
       },
       {
-        "value": "0 0.2rem 0.2rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 2px 2px 0 #0C0B08",
         "docs": {
           "type": "prominence",
           "category": "prominence",
@@ -9985,11 +9999,13 @@
         },
         "name": "cdr-prominence-raised",
         "attributes": {
+          "category": "prominence",
+          "type": "raised",
           "deprecated": false
         }
       },
       {
-        "value": "0 0.4rem 0.4rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 4px 4px 0 #0C0B08",
         "docs": {
           "type": "prominence",
           "category": "prominence",
@@ -10007,11 +10023,13 @@
         },
         "name": "cdr-prominence-elevated",
         "attributes": {
+          "category": "prominence",
+          "type": "elevated",
           "deprecated": false
         }
       },
       {
-        "value": "0 0.8rem 0.8rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 8px 8px 0 #0C0B08",
         "docs": {
           "type": "prominence",
           "category": "prominence",
@@ -10029,11 +10047,13 @@
         },
         "name": "cdr-prominence-floating",
         "attributes": {
+          "category": "prominence",
+          "type": "floating",
           "deprecated": false
         }
       },
       {
-        "value": "0 1.6rem 1.6rem 0 rgba(12, 11, 8, 0.2)",
+        "value": "0 16px 16px 0 #0C0B08",
         "docs": {
           "type": "prominence",
           "category": "prominence",
@@ -10051,6 +10071,8 @@
         },
         "name": "cdr-prominence-lifted",
         "attributes": {
+          "category": "prominence",
+          "type": "lifted",
           "deprecated": false
         }
       }
@@ -10058,7 +10080,7 @@
     "radius": [],
     "spacing": [
       {
-        "value": "0 0.2rem",
+        "value": "0 2px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10080,12 +10102,14 @@
         },
         "name": "cdr-space-inset-eighth-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "eighth-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "0.4rem 0.2rem",
+        "value": "4px 2px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10107,12 +10131,14 @@
         },
         "name": "cdr-space-inset-eighth-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "eighth-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "0.2rem 0.4rem",
+        "value": "4px 4px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10134,12 +10160,14 @@
         },
         "name": "cdr-space-inset-quarter-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "quarter-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "0.6rem 0.4rem",
+        "value": "4px 4px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10161,12 +10189,14 @@
         },
         "name": "cdr-space-inset-quarter-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "quarter-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "0.4rem 0.8rem",
+        "value": "8px 8px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10188,12 +10218,14 @@
         },
         "name": "cdr-space-inset-half-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "half-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "1.2rem 0.8rem",
+        "value": "8px 8px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10215,12 +10247,14 @@
         },
         "name": "cdr-space-inset-half-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "half-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "0.6rem 1.2rem",
+        "value": "12px 12px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10242,12 +10276,14 @@
         },
         "name": "cdr-space-inset-three-quarter-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "three-quarter-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem 1.2rem",
+        "value": "12px 12px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10269,12 +10305,14 @@
         },
         "name": "cdr-space-inset-three-quarter-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "three-quarter-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "0.8rem 1.6rem",
+        "value": "16px 16px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10296,12 +10334,14 @@
         },
         "name": "cdr-space-inset-one-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "one-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem 1.6rem",
+        "value": "16px 16px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10323,12 +10363,14 @@
         },
         "name": "cdr-space-inset-one-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "one-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "1.2rem 2.4rem",
+        "value": "24px 24px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10350,12 +10392,14 @@
         },
         "name": "cdr-space-inset-one-and-a-half-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "one-and-a-half-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem 2.4rem",
+        "value": "24px 24px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10377,12 +10421,14 @@
         },
         "name": "cdr-space-inset-one-and-a-half-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "one-and-a-half-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem 3.2rem",
+        "value": "32px 32px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10404,12 +10450,14 @@
         },
         "name": "cdr-space-inset-two-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "two-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "4.8rem 3.2rem",
+        "value": "32px 32px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10431,12 +10479,14 @@
         },
         "name": "cdr-space-inset-two-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "two-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem 4.8rem",
+        "value": "48px 48px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10458,12 +10508,14 @@
         },
         "name": "cdr-space-inset-three-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "three-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "7.2rem 4.8rem",
+        "value": "48px 48px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10485,12 +10537,14 @@
         },
         "name": "cdr-space-inset-three-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "three-x-stretch",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem 6.4rem",
+        "value": "64px 64px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10512,12 +10566,14 @@
         },
         "name": "cdr-space-inset-four-x-squish",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "four-x-squish",
+          "deprecated": false
         }
       },
       {
-        "value": "9.6rem 6.4rem",
+        "value": "64px 64px",
         "category": "size",
         "docs": {
           "type": "inset",
@@ -10539,8 +10595,10 @@
         },
         "name": "cdr-space-inset-four-x-stretch",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "space",
+          "type": "inset",
+          "item": "four-x-stretch",
+          "deprecated": false
         }
       }
     ],
@@ -10566,8 +10624,9 @@
         },
         "name": "cdr-breakpoint-xs",
         "attributes": {
-          "deprecated": false,
-          "category": "breakpoint"
+          "category": "breakpoint",
+          "type": "xs",
+          "deprecated": false
         }
       },
       {
@@ -10591,8 +10650,9 @@
         },
         "name": "cdr-breakpoint-sm",
         "attributes": {
-          "deprecated": false,
-          "category": "breakpoint"
+          "category": "breakpoint",
+          "type": "sm",
+          "deprecated": false
         }
       },
       {
@@ -10616,8 +10676,9 @@
         },
         "name": "cdr-breakpoint-md",
         "attributes": {
-          "deprecated": false,
-          "category": "breakpoint"
+          "category": "breakpoint",
+          "type": "md",
+          "deprecated": false
         }
       },
       {
@@ -10641,8 +10702,9 @@
         },
         "name": "cdr-breakpoint-lg",
         "attributes": {
-          "deprecated": false,
-          "category": "breakpoint"
+          "category": "breakpoint",
+          "type": "lg",
+          "deprecated": false
         }
       }
     ],
@@ -10670,6 +10732,9 @@
         },
         "name": "cdr-text-body-300-family",
         "attributes": {
+          "category": "text-body",
+          "type": "300",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -10696,6 +10761,9 @@
         },
         "name": "cdr-text-body-300-style",
         "attributes": {
+          "category": "text-body",
+          "type": "300",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -10722,6 +10790,9 @@
         },
         "name": "cdr-text-body-300-weight",
         "attributes": {
+          "category": "text-body",
+          "type": "300",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -10750,12 +10821,14 @@
         },
         "name": "cdr-text-body-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-body",
+          "type": "300",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textBody300",
         "property": "font-size",
@@ -10779,13 +10852,14 @@
         },
         "name": "cdr-text-body-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-body",
+          "type": "300",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textBody300",
         "property": "line-height",
@@ -10809,8 +10883,10 @@
         },
         "name": "cdr-text-body-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-body",
+          "type": "300",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -10836,6 +10912,9 @@
         },
         "name": "cdr-text-body-400-family",
         "attributes": {
+          "category": "text-body",
+          "type": "400",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -10862,6 +10941,9 @@
         },
         "name": "cdr-text-body-400-style",
         "attributes": {
+          "category": "text-body",
+          "type": "400",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -10888,6 +10970,9 @@
         },
         "name": "cdr-text-body-400-weight",
         "attributes": {
+          "category": "text-body",
+          "type": "400",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -10916,12 +11001,14 @@
         },
         "name": "cdr-text-body-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-body",
+          "type": "400",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textBody400",
         "property": "font-size",
@@ -10945,13 +11032,14 @@
         },
         "name": "cdr-text-body-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-body",
+          "type": "400",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textBody400",
         "property": "line-height",
@@ -10975,8 +11063,10 @@
         },
         "name": "cdr-text-body-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-body",
+          "type": "400",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -11002,6 +11092,9 @@
         },
         "name": "cdr-text-body-500-family",
         "attributes": {
+          "category": "text-body",
+          "type": "500",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -11028,6 +11121,9 @@
         },
         "name": "cdr-text-body-500-style",
         "attributes": {
+          "category": "text-body",
+          "type": "500",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -11054,6 +11150,9 @@
         },
         "name": "cdr-text-body-500-weight",
         "attributes": {
+          "category": "text-body",
+          "type": "500",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -11082,12 +11181,14 @@
         },
         "name": "cdr-text-body-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-body",
+          "type": "500",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textBody500",
         "property": "font-size",
@@ -11111,13 +11212,14 @@
         },
         "name": "cdr-text-body-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-body",
+          "type": "500",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textBody500",
         "property": "line-height",
@@ -11141,8 +11243,10 @@
         },
         "name": "cdr-text-body-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-body",
+          "type": "500",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -11168,6 +11272,9 @@
         },
         "name": "cdr-text-body-strong-300-family",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "300",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -11194,6 +11301,9 @@
         },
         "name": "cdr-text-body-strong-300-style",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "300",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -11220,6 +11330,9 @@
         },
         "name": "cdr-text-body-strong-300-weight",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "300",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -11248,12 +11361,14 @@
         },
         "name": "cdr-text-body-strong-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-body-strong",
+          "type": "300",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textBodyStrong300",
         "property": "font-size",
@@ -11277,13 +11392,14 @@
         },
         "name": "cdr-text-body-strong-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-body-strong",
+          "type": "300",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textBodyStrong300",
         "property": "line-height",
@@ -11307,8 +11423,10 @@
         },
         "name": "cdr-text-body-strong-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-body-strong",
+          "type": "300",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -11334,6 +11452,9 @@
         },
         "name": "cdr-text-body-strong-400-family",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "400",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -11360,6 +11481,9 @@
         },
         "name": "cdr-text-body-strong-400-style",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "400",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -11386,6 +11510,9 @@
         },
         "name": "cdr-text-body-strong-400-weight",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "400",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -11414,12 +11541,14 @@
         },
         "name": "cdr-text-body-strong-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-body-strong",
+          "type": "400",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textBodyStrong400",
         "property": "font-size",
@@ -11443,13 +11572,14 @@
         },
         "name": "cdr-text-body-strong-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-body-strong",
+          "type": "400",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textBodyStrong400",
         "property": "line-height",
@@ -11473,8 +11603,10 @@
         },
         "name": "cdr-text-body-strong-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-body-strong",
+          "type": "400",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -11500,6 +11632,9 @@
         },
         "name": "cdr-text-body-strong-500-family",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "500",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -11526,6 +11661,9 @@
         },
         "name": "cdr-text-body-strong-500-style",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "500",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -11552,6 +11690,9 @@
         },
         "name": "cdr-text-body-strong-500-weight",
         "attributes": {
+          "category": "text-body-strong",
+          "type": "500",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -11580,12 +11721,14 @@
         },
         "name": "cdr-text-body-strong-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-body-strong",
+          "type": "500",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textBodyStrong500",
         "property": "font-size",
@@ -11609,13 +11752,14 @@
         },
         "name": "cdr-text-body-strong-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-body-strong",
+          "type": "500",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textBodyStrong500",
         "property": "line-height",
@@ -11639,8 +11783,10 @@
         },
         "name": "cdr-text-body-strong-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-body-strong",
+          "type": "500",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -11666,6 +11812,8 @@
         },
         "name": "cdr-text-default-family",
         "attributes": {
+          "category": "text-default",
+          "type": "family",
           "deprecated": false
         }
       },
@@ -11692,6 +11840,8 @@
         },
         "name": "cdr-text-default-style",
         "attributes": {
+          "category": "text-default",
+          "type": "style",
           "deprecated": false
         }
       },
@@ -11718,6 +11868,8 @@
         },
         "name": "cdr-text-default-weight",
         "attributes": {
+          "category": "text-default",
+          "type": "weight",
           "deprecated": false
         }
       },
@@ -11746,12 +11898,13 @@
         },
         "name": "cdr-text-default-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-default",
+          "type": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textDefault",
         "property": "font-size",
@@ -11775,13 +11928,13 @@
         },
         "name": "cdr-text-default-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-default",
+          "type": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.2rem",
+        "value": "22px",
         "category": "size",
         "mixin": "cdr-textDefault",
         "property": "line-height",
@@ -11805,8 +11958,9 @@
         },
         "name": "cdr-text-default-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-default",
+          "type": "height",
+          "deprecated": false
         }
       },
       {
@@ -11832,6 +11986,9 @@
         },
         "name": "cdr-text-eyebrow-100-family",
         "attributes": {
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -11858,6 +12015,9 @@
         },
         "name": "cdr-text-eyebrow-100-style",
         "attributes": {
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -11884,6 +12044,9 @@
         },
         "name": "cdr-text-eyebrow-100-weight",
         "attributes": {
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -11912,12 +12075,14 @@
         },
         "name": "cdr-text-eyebrow-100-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.2rem",
+        "value": "12px",
         "category": "font-size",
         "mixin": "cdr-textEyebrow100",
         "property": "font-size",
@@ -11941,13 +12106,14 @@
         },
         "name": "cdr-text-eyebrow-100-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textEyebrow100",
         "property": "line-height",
@@ -11971,8 +12137,10 @@
         },
         "name": "cdr-text-eyebrow-100-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -11998,6 +12166,9 @@
         },
         "name": "cdr-text-eyebrow-100-transform",
         "attributes": {
+          "category": "text-eyebrow",
+          "type": "100",
+          "item": "transform",
           "deprecated": false
         }
       },
@@ -12024,6 +12195,10 @@
         },
         "name": "cdr-text-heading-sans-200-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "200",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -12050,6 +12225,10 @@
         },
         "name": "cdr-text-heading-sans-200-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "200",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -12076,6 +12255,10 @@
         },
         "name": "cdr-text-heading-sans-200-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "200",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -12104,12 +12287,15 @@
         },
         "name": "cdr-text-heading-sans-200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "200",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.4rem",
+        "value": "14px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSans200",
         "property": "font-size",
@@ -12133,13 +12319,15 @@
         },
         "name": "cdr-text-heading-sans-200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "200",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textHeadingSans200",
         "property": "line-height",
@@ -12163,8 +12351,11 @@
         },
         "name": "cdr-text-heading-sans-200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "200",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -12190,6 +12381,10 @@
         },
         "name": "cdr-text-heading-sans-300-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -12216,6 +12411,10 @@
         },
         "name": "cdr-text-heading-sans-300-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -12242,6 +12441,10 @@
         },
         "name": "cdr-text-heading-sans-300-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -12270,12 +12473,15 @@
         },
         "name": "cdr-text-heading-sans-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSans300",
         "property": "font-size",
@@ -12299,13 +12505,15 @@
         },
         "name": "cdr-text-heading-sans-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "size",
         "mixin": "cdr-textHeadingSans300",
         "property": "line-height",
@@ -12329,8 +12537,11 @@
         },
         "name": "cdr-text-heading-sans-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -12356,6 +12567,10 @@
         },
         "name": "cdr-text-heading-sans-400-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -12382,6 +12597,10 @@
         },
         "name": "cdr-text-heading-sans-400-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -12408,6 +12627,10 @@
         },
         "name": "cdr-text-heading-sans-400-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -12436,12 +12659,15 @@
         },
         "name": "cdr-text-heading-sans-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSans400",
         "property": "font-size",
@@ -12465,13 +12691,15 @@
         },
         "name": "cdr-text-heading-sans-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textHeadingSans400",
         "property": "line-height",
@@ -12495,8 +12723,11 @@
         },
         "name": "cdr-text-heading-sans-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -12522,6 +12753,10 @@
         },
         "name": "cdr-text-heading-sans-500-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -12548,6 +12783,10 @@
         },
         "name": "cdr-text-heading-sans-500-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -12574,6 +12813,10 @@
         },
         "name": "cdr-text-heading-sans-500-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -12602,12 +12845,15 @@
         },
         "name": "cdr-text-heading-sans-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSans500",
         "property": "font-size",
@@ -12631,13 +12877,15 @@
         },
         "name": "cdr-text-heading-sans-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textHeadingSans500",
         "property": "line-height",
@@ -12661,8 +12909,11 @@
         },
         "name": "cdr-text-heading-sans-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -12688,6 +12939,10 @@
         },
         "name": "cdr-text-heading-sans-600-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -12714,6 +12969,10 @@
         },
         "name": "cdr-text-heading-sans-600-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -12740,6 +12999,10 @@
         },
         "name": "cdr-text-heading-sans-600-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -12768,12 +13031,15 @@
         },
         "name": "cdr-text-heading-sans-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSans600",
         "property": "font-size",
@@ -12797,13 +13063,15 @@
         },
         "name": "cdr-text-heading-sans-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textHeadingSans600",
         "property": "line-height",
@@ -12827,8 +13095,11 @@
         },
         "name": "cdr-text-heading-sans-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -12854,6 +13125,10 @@
         },
         "name": "cdr-text-heading-serif-200-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "200",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -12880,6 +13155,10 @@
         },
         "name": "cdr-text-heading-serif-200-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "200",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -12906,6 +13185,10 @@
         },
         "name": "cdr-text-heading-serif-200-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "200",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -12934,12 +13217,15 @@
         },
         "name": "cdr-text-heading-serif-200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "200",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.4rem",
+        "value": "14px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif200",
         "property": "font-size",
@@ -12963,13 +13249,15 @@
         },
         "name": "cdr-text-heading-serif-200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "200",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif200",
         "property": "line-height",
@@ -12993,8 +13281,11 @@
         },
         "name": "cdr-text-heading-serif-200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "200",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -13020,6 +13311,10 @@
         },
         "name": "cdr-text-heading-serif-300-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "300",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -13046,6 +13341,10 @@
         },
         "name": "cdr-text-heading-serif-300-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "300",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -13072,6 +13371,10 @@
         },
         "name": "cdr-text-heading-serif-300-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "300",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -13100,12 +13403,15 @@
         },
         "name": "cdr-text-heading-serif-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "300",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif300",
         "property": "font-size",
@@ -13129,13 +13435,15 @@
         },
         "name": "cdr-text-heading-serif-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "300",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif300",
         "property": "line-height",
@@ -13159,8 +13467,11 @@
         },
         "name": "cdr-text-heading-serif-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "300",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -13186,6 +13497,10 @@
         },
         "name": "cdr-text-heading-serif-400-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "400",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -13212,6 +13527,10 @@
         },
         "name": "cdr-text-heading-serif-400-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "400",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -13238,6 +13557,10 @@
         },
         "name": "cdr-text-heading-serif-400-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "400",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -13266,12 +13589,15 @@
         },
         "name": "cdr-text-heading-serif-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "400",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif400",
         "property": "font-size",
@@ -13295,13 +13621,15 @@
         },
         "name": "cdr-text-heading-serif-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "400",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif400",
         "property": "line-height",
@@ -13325,8 +13653,11 @@
         },
         "name": "cdr-text-heading-serif-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "400",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -13352,6 +13683,10 @@
         },
         "name": "cdr-text-heading-serif-500-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "500",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -13378,6 +13713,10 @@
         },
         "name": "cdr-text-heading-serif-500-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "500",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -13404,6 +13743,10 @@
         },
         "name": "cdr-text-heading-serif-500-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "500",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -13432,12 +13775,15 @@
         },
         "name": "cdr-text-heading-serif-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "500",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif500",
         "property": "font-size",
@@ -13461,13 +13807,15 @@
         },
         "name": "cdr-text-heading-serif-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "500",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif500",
         "property": "line-height",
@@ -13491,8 +13839,11 @@
         },
         "name": "cdr-text-heading-serif-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "500",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -13518,6 +13869,10 @@
         },
         "name": "cdr-text-heading-serif-600-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "600",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -13544,6 +13899,10 @@
         },
         "name": "cdr-text-heading-serif-600-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "600",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -13570,6 +13929,10 @@
         },
         "name": "cdr-text-heading-serif-600-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "600",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -13598,12 +13961,15 @@
         },
         "name": "cdr-text-heading-serif-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "600",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif600",
         "property": "font-size",
@@ -13627,13 +13993,15 @@
         },
         "name": "cdr-text-heading-serif-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "600",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif600",
         "property": "line-height",
@@ -13657,8 +14025,11 @@
         },
         "name": "cdr-text-heading-serif-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "600",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -13684,6 +14055,10 @@
         },
         "name": "cdr-text-heading-serif-700-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "700",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -13710,6 +14085,10 @@
         },
         "name": "cdr-text-heading-serif-700-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "700",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -13736,6 +14115,10 @@
         },
         "name": "cdr-text-heading-serif-700-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "700",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -13764,12 +14147,15 @@
         },
         "name": "cdr-text-heading-serif-700-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "700",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.8rem",
+        "value": "28px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif700",
         "property": "font-size",
@@ -13793,13 +14179,15 @@
         },
         "name": "cdr-text-heading-serif-700-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "700",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif700",
         "property": "line-height",
@@ -13823,8 +14211,11 @@
         },
         "name": "cdr-text-heading-serif-700-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "700",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -13850,6 +14241,10 @@
         },
         "name": "cdr-text-heading-serif-800-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "800",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -13876,6 +14271,10 @@
         },
         "name": "cdr-text-heading-serif-800-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "800",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -13902,6 +14301,10 @@
         },
         "name": "cdr-text-heading-serif-800-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "800",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -13930,12 +14333,15 @@
         },
         "name": "cdr-text-heading-serif-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "800",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif800",
         "property": "font-size",
@@ -13959,13 +14365,15 @@
         },
         "name": "cdr-text-heading-serif-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "800",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif800",
         "property": "line-height",
@@ -13989,8 +14397,11 @@
         },
         "name": "cdr-text-heading-serif-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "800",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -14016,6 +14427,10 @@
         },
         "name": "cdr-text-heading-serif-900-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "900",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -14042,6 +14457,10 @@
         },
         "name": "cdr-text-heading-serif-900-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "900",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -14068,6 +14487,10 @@
         },
         "name": "cdr-text-heading-serif-900-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "900",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -14096,12 +14519,15 @@
         },
         "name": "cdr-text-heading-serif-900-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "900",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif900",
         "property": "font-size",
@@ -14125,13 +14551,15 @@
         },
         "name": "cdr-text-heading-serif-900-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "900",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4.4rem",
+        "value": "44px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif900",
         "property": "line-height",
@@ -14155,8 +14583,11 @@
         },
         "name": "cdr-text-heading-serif-900-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "900",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -14182,6 +14613,10 @@
         },
         "name": "cdr-text-heading-serif-1000-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1000",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -14208,6 +14643,10 @@
         },
         "name": "cdr-text-heading-serif-1000-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1000",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -14234,6 +14673,10 @@
         },
         "name": "cdr-text-heading-serif-1000-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1000",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -14262,12 +14705,15 @@
         },
         "name": "cdr-text-heading-serif-1000-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1000",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "4.2rem",
+        "value": "42px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif1000",
         "property": "font-size",
@@ -14291,13 +14737,15 @@
         },
         "name": "cdr-text-heading-serif-1000-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1000",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "5rem",
+        "value": "50px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif1000",
         "property": "line-height",
@@ -14321,8 +14769,11 @@
         },
         "name": "cdr-text-heading-serif-1000-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1000",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -14348,6 +14799,10 @@
         },
         "name": "cdr-text-heading-serif-1100-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1100",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -14374,6 +14829,10 @@
         },
         "name": "cdr-text-heading-serif-1100-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1100",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -14400,6 +14859,10 @@
         },
         "name": "cdr-text-heading-serif-1100-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1100",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -14428,12 +14891,15 @@
         },
         "name": "cdr-text-heading-serif-1100-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1100",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "4.8rem",
+        "value": "48px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif1100",
         "property": "font-size",
@@ -14457,13 +14923,15 @@
         },
         "name": "cdr-text-heading-serif-1100-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1100",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "5.6rem",
+        "value": "56px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif1100",
         "property": "line-height",
@@ -14487,8 +14955,11 @@
         },
         "name": "cdr-text-heading-serif-1100-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1100",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -14514,6 +14985,10 @@
         },
         "name": "cdr-text-heading-serif-1200-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1200",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -14540,6 +15015,10 @@
         },
         "name": "cdr-text-heading-serif-1200-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1200",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -14566,6 +15045,10 @@
         },
         "name": "cdr-text-heading-serif-1200-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1200",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -14594,12 +15077,15 @@
         },
         "name": "cdr-text-heading-serif-1200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1200",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "5.4rem",
+        "value": "54px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerif1200",
         "property": "font-size",
@@ -14623,13 +15109,15 @@
         },
         "name": "cdr-text-heading-serif-1200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1200",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "6.4rem",
+        "value": "64px",
         "category": "size",
         "mixin": "cdr-textHeadingSerif1200",
         "property": "line-height",
@@ -14653,8 +15141,11 @@
         },
         "name": "cdr-text-heading-serif-1200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif",
+          "item": "1200",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -14680,6 +15171,10 @@
         },
         "name": "cdr-text-heading-serif-strong-600-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "600",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -14706,6 +15201,10 @@
         },
         "name": "cdr-text-heading-serif-strong-600-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "600",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -14732,6 +15231,10 @@
         },
         "name": "cdr-text-heading-serif-strong-600-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "600",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -14760,12 +15263,15 @@
         },
         "name": "cdr-text-heading-serif-strong-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "600",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong600",
         "property": "font-size",
@@ -14789,13 +15295,15 @@
         },
         "name": "cdr-text-heading-serif-strong-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "600",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong600",
         "property": "line-height",
@@ -14819,8 +15327,11 @@
         },
         "name": "cdr-text-heading-serif-strong-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "600",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -14846,6 +15357,10 @@
         },
         "name": "cdr-text-heading-serif-strong-700-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "700",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -14872,6 +15387,10 @@
         },
         "name": "cdr-text-heading-serif-strong-700-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "700",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -14898,6 +15417,10 @@
         },
         "name": "cdr-text-heading-serif-strong-700-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "700",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -14926,12 +15449,15 @@
         },
         "name": "cdr-text-heading-serif-strong-700-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "700",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.8rem",
+        "value": "28px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong700",
         "property": "font-size",
@@ -14955,13 +15481,15 @@
         },
         "name": "cdr-text-heading-serif-strong-700-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "700",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong700",
         "property": "line-height",
@@ -14985,8 +15513,11 @@
         },
         "name": "cdr-text-heading-serif-strong-700-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "700",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -15012,6 +15543,10 @@
         },
         "name": "cdr-text-heading-serif-strong-800-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "800",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -15038,6 +15573,10 @@
         },
         "name": "cdr-text-heading-serif-strong-800-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "800",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -15064,6 +15603,10 @@
         },
         "name": "cdr-text-heading-serif-strong-800-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "800",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -15092,12 +15635,15 @@
         },
         "name": "cdr-text-heading-serif-strong-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "800",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong800",
         "property": "font-size",
@@ -15121,13 +15667,15 @@
         },
         "name": "cdr-text-heading-serif-strong-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "800",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong800",
         "property": "line-height",
@@ -15151,8 +15699,11 @@
         },
         "name": "cdr-text-heading-serif-strong-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "800",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -15178,6 +15729,10 @@
         },
         "name": "cdr-text-heading-serif-strong-900-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "900",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -15204,6 +15759,10 @@
         },
         "name": "cdr-text-heading-serif-strong-900-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "900",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -15230,6 +15789,10 @@
         },
         "name": "cdr-text-heading-serif-strong-900-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "900",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -15258,12 +15821,15 @@
         },
         "name": "cdr-text-heading-serif-strong-900-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "900",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong900",
         "property": "font-size",
@@ -15287,13 +15853,15 @@
         },
         "name": "cdr-text-heading-serif-strong-900-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "900",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4.4rem",
+        "value": "44px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong900",
         "property": "line-height",
@@ -15317,8 +15885,11 @@
         },
         "name": "cdr-text-heading-serif-strong-900-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "900",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -15344,6 +15915,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1000-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1000",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -15370,6 +15945,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1000-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1000",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -15396,6 +15975,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1000-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1000",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -15424,12 +16007,15 @@
         },
         "name": "cdr-text-heading-serif-strong-1000-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1000",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "4.2rem",
+        "value": "42px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong1000",
         "property": "font-size",
@@ -15453,13 +16039,15 @@
         },
         "name": "cdr-text-heading-serif-strong-1000-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1000",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "5rem",
+        "value": "50px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong1000",
         "property": "line-height",
@@ -15483,8 +16071,11 @@
         },
         "name": "cdr-text-heading-serif-strong-1000-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1000",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -15510,6 +16101,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1100-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1100",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -15536,6 +16131,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1100-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1100",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -15562,6 +16161,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1100-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1100",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -15590,12 +16193,15 @@
         },
         "name": "cdr-text-heading-serif-strong-1100-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1100",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "4.8rem",
+        "value": "48px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong1100",
         "property": "font-size",
@@ -15619,13 +16225,15 @@
         },
         "name": "cdr-text-heading-serif-strong-1100-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1100",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "5.6rem",
+        "value": "56px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong1100",
         "property": "line-height",
@@ -15649,8 +16257,11 @@
         },
         "name": "cdr-text-heading-serif-strong-1100-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1100",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -15676,6 +16287,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1200-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1200",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -15702,6 +16317,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1200-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1200",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -15728,6 +16347,10 @@
         },
         "name": "cdr-text-heading-serif-strong-1200-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1200",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -15756,12 +16379,15 @@
         },
         "name": "cdr-text-heading-serif-strong-1200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1200",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "5.4rem",
+        "value": "54px",
         "category": "font-size",
         "mixin": "cdr-textHeadingSerifStrong1200",
         "property": "font-size",
@@ -15785,13 +16411,15 @@
         },
         "name": "cdr-text-heading-serif-strong-1200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1200",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "6.4rem",
+        "value": "64px",
         "category": "size",
         "mixin": "cdr-textHeadingSerifStrong1200",
         "property": "line-height",
@@ -15815,8 +16443,11 @@
         },
         "name": "cdr-text-heading-serif-strong-1200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "serif-strong",
+          "item": "1200",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -15842,6 +16473,10 @@
         },
         "name": "cdr-text-heading-display-800-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "800",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -15868,6 +16503,10 @@
         },
         "name": "cdr-text-heading-display-800-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "800",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -15894,6 +16533,10 @@
         },
         "name": "cdr-text-heading-display-800-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "800",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -15922,12 +16565,15 @@
         },
         "name": "cdr-text-heading-display-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "800",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay800",
         "property": "font-size",
@@ -15951,13 +16597,15 @@
         },
         "name": "cdr-text-heading-display-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "800",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay800",
         "property": "line-height",
@@ -15981,8 +16629,11 @@
         },
         "name": "cdr-text-heading-display-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "800",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -16008,6 +16659,10 @@
         },
         "name": "cdr-text-heading-display-900-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "900",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -16034,6 +16689,10 @@
         },
         "name": "cdr-text-heading-display-900-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "900",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -16060,6 +16719,10 @@
         },
         "name": "cdr-text-heading-display-900-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "900",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -16088,12 +16751,15 @@
         },
         "name": "cdr-text-heading-display-900-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "900",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay900",
         "property": "font-size",
@@ -16117,13 +16783,15 @@
         },
         "name": "cdr-text-heading-display-900-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "900",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4rem",
+        "value": "40px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay900",
         "property": "line-height",
@@ -16147,8 +16815,11 @@
         },
         "name": "cdr-text-heading-display-900-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "900",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -16174,6 +16845,10 @@
         },
         "name": "cdr-text-heading-display-1000-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1000",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -16200,6 +16875,10 @@
         },
         "name": "cdr-text-heading-display-1000-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1000",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -16226,6 +16905,10 @@
         },
         "name": "cdr-text-heading-display-1000-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1000",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -16254,12 +16937,15 @@
         },
         "name": "cdr-text-heading-display-1000-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1000",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "4.2rem",
+        "value": "42px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1000",
         "property": "font-size",
@@ -16283,13 +16969,15 @@
         },
         "name": "cdr-text-heading-display-1000-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1000",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4.8rem",
+        "value": "48px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1000",
         "property": "line-height",
@@ -16313,8 +17001,11 @@
         },
         "name": "cdr-text-heading-display-1000-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1000",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -16340,6 +17031,10 @@
         },
         "name": "cdr-text-heading-display-1100-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1100",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -16366,6 +17061,10 @@
         },
         "name": "cdr-text-heading-display-1100-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1100",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -16392,6 +17091,10 @@
         },
         "name": "cdr-text-heading-display-1100-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1100",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -16420,12 +17123,15 @@
         },
         "name": "cdr-text-heading-display-1100-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1100",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "4.8rem",
+        "value": "48px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1100",
         "property": "font-size",
@@ -16449,13 +17155,15 @@
         },
         "name": "cdr-text-heading-display-1100-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1100",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "5.2rem",
+        "value": "52px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1100",
         "property": "line-height",
@@ -16479,8 +17187,11 @@
         },
         "name": "cdr-text-heading-display-1100-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1100",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -16506,6 +17217,10 @@
         },
         "name": "cdr-text-heading-display-1200-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1200",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -16532,6 +17247,10 @@
         },
         "name": "cdr-text-heading-display-1200-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1200",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -16558,6 +17277,10 @@
         },
         "name": "cdr-text-heading-display-1200-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1200",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -16586,12 +17309,15 @@
         },
         "name": "cdr-text-heading-display-1200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1200",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "5.4rem",
+        "value": "54px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1200",
         "property": "font-size",
@@ -16615,13 +17341,15 @@
         },
         "name": "cdr-text-heading-display-1200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1200",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "6rem",
+        "value": "60px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1200",
         "property": "line-height",
@@ -16645,8 +17373,11 @@
         },
         "name": "cdr-text-heading-display-1200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1200",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -16672,6 +17403,10 @@
         },
         "name": "cdr-text-heading-display-1300-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1300",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -16698,6 +17433,10 @@
         },
         "name": "cdr-text-heading-display-1300-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1300",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -16724,6 +17463,10 @@
         },
         "name": "cdr-text-heading-display-1300-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1300",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -16752,12 +17495,15 @@
         },
         "name": "cdr-text-heading-display-1300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1300",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "6rem",
+        "value": "60px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1300",
         "property": "font-size",
@@ -16781,13 +17527,15 @@
         },
         "name": "cdr-text-heading-display-1300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1300",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "6.4rem",
+        "value": "64px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1300",
         "property": "line-height",
@@ -16811,8 +17559,11 @@
         },
         "name": "cdr-text-heading-display-1300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1300",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -16838,6 +17589,10 @@
         },
         "name": "cdr-text-heading-display-1400-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1400",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -16864,6 +17619,10 @@
         },
         "name": "cdr-text-heading-display-1400-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1400",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -16890,6 +17649,10 @@
         },
         "name": "cdr-text-heading-display-1400-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1400",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -16918,12 +17681,15 @@
         },
         "name": "cdr-text-heading-display-1400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1400",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "6.8rem",
+        "value": "68px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1400",
         "property": "font-size",
@@ -16947,13 +17713,15 @@
         },
         "name": "cdr-text-heading-display-1400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1400",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "7.2rem",
+        "value": "72px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1400",
         "property": "line-height",
@@ -16977,8 +17745,11 @@
         },
         "name": "cdr-text-heading-display-1400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1400",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -17004,6 +17775,10 @@
         },
         "name": "cdr-text-heading-display-1500-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1500",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -17030,6 +17805,10 @@
         },
         "name": "cdr-text-heading-display-1500-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1500",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -17056,6 +17835,10 @@
         },
         "name": "cdr-text-heading-display-1500-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1500",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -17084,12 +17867,15 @@
         },
         "name": "cdr-text-heading-display-1500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1500",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "7.6rem",
+        "value": "76px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1500",
         "property": "font-size",
@@ -17113,13 +17899,15 @@
         },
         "name": "cdr-text-heading-display-1500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1500",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "8rem",
+        "value": "80px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1500",
         "property": "line-height",
@@ -17143,8 +17931,11 @@
         },
         "name": "cdr-text-heading-display-1500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1500",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -17170,6 +17961,10 @@
         },
         "name": "cdr-text-heading-display-1600-family",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1600",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -17196,6 +17991,10 @@
         },
         "name": "cdr-text-heading-display-1600-style",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1600",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -17222,6 +18021,10 @@
         },
         "name": "cdr-text-heading-display-1600-weight",
         "attributes": {
+          "category": "text-heading",
+          "type": "display",
+          "item": "1600",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -17250,12 +18053,15 @@
         },
         "name": "cdr-text-heading-display-1600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1600",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "8.6rem",
+        "value": "86px",
         "category": "font-size",
         "mixin": "cdr-textHeadingDisplay1600",
         "property": "font-size",
@@ -17279,13 +18085,15 @@
         },
         "name": "cdr-text-heading-display-1600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1600",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "9.2rem",
+        "value": "92px",
         "category": "size",
         "mixin": "cdr-textHeadingDisplay1600",
         "property": "line-height",
@@ -17309,8 +18117,11 @@
         },
         "name": "cdr-text-heading-display-1600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-heading",
+          "type": "display",
+          "item": "1600",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -17336,6 +18147,10 @@
         },
         "name": "cdr-text-subheading-sans-300-family",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -17362,6 +18177,10 @@
         },
         "name": "cdr-text-subheading-sans-300-style",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -17388,6 +18207,10 @@
         },
         "name": "cdr-text-subheading-sans-300-weight",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -17416,12 +18239,15 @@
         },
         "name": "cdr-text-subheading-sans-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textSubheadingSans300",
         "property": "font-size",
@@ -17445,13 +18271,15 @@
         },
         "name": "cdr-text-subheading-sans-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "size",
         "mixin": "cdr-textSubheadingSans300",
         "property": "line-height",
@@ -17475,8 +18303,11 @@
         },
         "name": "cdr-text-subheading-sans-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "300",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -17502,6 +18333,10 @@
         },
         "name": "cdr-text-subheading-sans-400-family",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -17528,6 +18363,10 @@
         },
         "name": "cdr-text-subheading-sans-400-style",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -17554,6 +18393,10 @@
         },
         "name": "cdr-text-subheading-sans-400-weight",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -17582,12 +18425,15 @@
         },
         "name": "cdr-text-subheading-sans-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textSubheadingSans400",
         "property": "font-size",
@@ -17611,13 +18457,15 @@
         },
         "name": "cdr-text-subheading-sans-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textSubheadingSans400",
         "property": "line-height",
@@ -17641,8 +18489,11 @@
         },
         "name": "cdr-text-subheading-sans-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "400",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -17668,6 +18519,10 @@
         },
         "name": "cdr-text-subheading-sans-500-family",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -17694,6 +18549,10 @@
         },
         "name": "cdr-text-subheading-sans-500-style",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -17720,6 +18579,10 @@
         },
         "name": "cdr-text-subheading-sans-500-weight",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -17748,12 +18611,15 @@
         },
         "name": "cdr-text-subheading-sans-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textSubheadingSans500",
         "property": "font-size",
@@ -17777,13 +18643,15 @@
         },
         "name": "cdr-text-subheading-sans-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textSubheadingSans500",
         "property": "line-height",
@@ -17807,8 +18675,11 @@
         },
         "name": "cdr-text-subheading-sans-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "500",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -17834,6 +18705,10 @@
         },
         "name": "cdr-text-subheading-sans-600-family",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "family",
           "deprecated": false
         }
       },
@@ -17860,6 +18735,10 @@
         },
         "name": "cdr-text-subheading-sans-600-style",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "style",
           "deprecated": false
         }
       },
@@ -17886,6 +18765,10 @@
         },
         "name": "cdr-text-subheading-sans-600-weight",
         "attributes": {
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "weight",
           "deprecated": false
         }
       },
@@ -17914,12 +18797,15 @@
         },
         "name": "cdr-text-subheading-sans-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textSubheadingSans600",
         "property": "font-size",
@@ -17943,13 +18829,15 @@
         },
         "name": "cdr-text-subheading-sans-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textSubheadingSans600",
         "property": "line-height",
@@ -17973,8 +18861,11 @@
         },
         "name": "cdr-text-subheading-sans-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-subheading",
+          "type": "sans",
+          "item": "600",
+          "subitem": "height",
+          "deprecated": false
         }
       },
       {
@@ -18000,6 +18891,9 @@
         },
         "name": "cdr-text-utility-sans-100-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "100",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -18026,6 +18920,9 @@
         },
         "name": "cdr-text-utility-sans-100-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "100",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -18052,6 +18949,9 @@
         },
         "name": "cdr-text-utility-sans-100-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "100",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -18080,12 +18980,14 @@
         },
         "name": "cdr-text-utility-sans-100-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "100",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.2rem",
+        "value": "12px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans100",
         "property": "font-size",
@@ -18109,13 +19011,14 @@
         },
         "name": "cdr-text-utility-sans-100-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "100",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "size",
         "mixin": "cdr-textUtilitySans100",
         "property": "line-height",
@@ -18139,8 +19042,10 @@
         },
         "name": "cdr-text-utility-sans-100-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "100",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -18166,6 +19071,9 @@
         },
         "name": "cdr-text-utility-sans-200-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "200",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -18192,6 +19100,9 @@
         },
         "name": "cdr-text-utility-sans-200-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "200",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -18218,6 +19129,9 @@
         },
         "name": "cdr-text-utility-sans-200-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "200",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -18246,12 +19160,14 @@
         },
         "name": "cdr-text-utility-sans-200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "200",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.4rem",
+        "value": "14px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans200",
         "property": "font-size",
@@ -18275,13 +19191,14 @@
         },
         "name": "cdr-text-utility-sans-200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "200",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textUtilitySans200",
         "property": "line-height",
@@ -18305,8 +19222,10 @@
         },
         "name": "cdr-text-utility-sans-200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "200",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -18332,6 +19251,9 @@
         },
         "name": "cdr-text-utility-sans-300-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "300",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -18358,6 +19280,9 @@
         },
         "name": "cdr-text-utility-sans-300-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "300",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -18384,6 +19309,9 @@
         },
         "name": "cdr-text-utility-sans-300-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "300",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -18412,12 +19340,14 @@
         },
         "name": "cdr-text-utility-sans-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "300",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans300",
         "property": "font-size",
@@ -18441,13 +19371,14 @@
         },
         "name": "cdr-text-utility-sans-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "300",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.2rem",
+        "value": "22px",
         "category": "size",
         "mixin": "cdr-textUtilitySans300",
         "property": "line-height",
@@ -18471,8 +19402,10 @@
         },
         "name": "cdr-text-utility-sans-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "300",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -18498,6 +19431,9 @@
         },
         "name": "cdr-text-utility-sans-400-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "400",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -18524,6 +19460,9 @@
         },
         "name": "cdr-text-utility-sans-400-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "400",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -18550,6 +19489,9 @@
         },
         "name": "cdr-text-utility-sans-400-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "400",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -18578,12 +19520,14 @@
         },
         "name": "cdr-text-utility-sans-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "400",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans400",
         "property": "font-size",
@@ -18607,13 +19551,14 @@
         },
         "name": "cdr-text-utility-sans-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "400",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textUtilitySans400",
         "property": "line-height",
@@ -18637,8 +19582,10 @@
         },
         "name": "cdr-text-utility-sans-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "400",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -18664,6 +19611,9 @@
         },
         "name": "cdr-text-utility-sans-500-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "500",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -18690,6 +19640,9 @@
         },
         "name": "cdr-text-utility-sans-500-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "500",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -18716,6 +19669,9 @@
         },
         "name": "cdr-text-utility-sans-500-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "500",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -18744,12 +19700,14 @@
         },
         "name": "cdr-text-utility-sans-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "500",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans500",
         "property": "font-size",
@@ -18773,13 +19731,14 @@
         },
         "name": "cdr-text-utility-sans-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "500",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textUtilitySans500",
         "property": "line-height",
@@ -18803,8 +19762,10 @@
         },
         "name": "cdr-text-utility-sans-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "500",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -18830,6 +19791,9 @@
         },
         "name": "cdr-text-utility-sans-600-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "600",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -18856,6 +19820,9 @@
         },
         "name": "cdr-text-utility-sans-600-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "600",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -18882,6 +19849,9 @@
         },
         "name": "cdr-text-utility-sans-600-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "600",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -18910,12 +19880,14 @@
         },
         "name": "cdr-text-utility-sans-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "600",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans600",
         "property": "font-size",
@@ -18939,13 +19911,14 @@
         },
         "name": "cdr-text-utility-sans-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "600",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textUtilitySans600",
         "property": "line-height",
@@ -18969,8 +19942,10 @@
         },
         "name": "cdr-text-utility-sans-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "600",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -18996,6 +19971,9 @@
         },
         "name": "cdr-text-utility-sans-700-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "700",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -19022,6 +20000,9 @@
         },
         "name": "cdr-text-utility-sans-700-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "700",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -19048,6 +20029,9 @@
         },
         "name": "cdr-text-utility-sans-700-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "700",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -19076,12 +20060,14 @@
         },
         "name": "cdr-text-utility-sans-700-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "700",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.8rem",
+        "value": "28px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans700",
         "property": "font-size",
@@ -19105,13 +20091,14 @@
         },
         "name": "cdr-text-utility-sans-700-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "700",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textUtilitySans700",
         "property": "line-height",
@@ -19135,8 +20122,10 @@
         },
         "name": "cdr-text-utility-sans-700-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "700",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -19162,6 +20151,9 @@
         },
         "name": "cdr-text-utility-sans-800-family",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "800",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -19188,6 +20180,9 @@
         },
         "name": "cdr-text-utility-sans-800-style",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "800",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -19214,6 +20209,9 @@
         },
         "name": "cdr-text-utility-sans-800-weight",
         "attributes": {
+          "category": "text-utility-sans",
+          "type": "800",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -19242,12 +20240,14 @@
         },
         "name": "cdr-text-utility-sans-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans",
+          "type": "800",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySans800",
         "property": "font-size",
@@ -19271,13 +20271,14 @@
         },
         "name": "cdr-text-utility-sans-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans",
+          "type": "800",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4rem",
+        "value": "40px",
         "category": "size",
         "mixin": "cdr-textUtilitySans800",
         "property": "line-height",
@@ -19301,8 +20302,10 @@
         },
         "name": "cdr-text-utility-sans-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans",
+          "type": "800",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -19328,6 +20331,9 @@
         },
         "name": "cdr-text-utility-sans-strong-100-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "100",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -19354,6 +20360,9 @@
         },
         "name": "cdr-text-utility-sans-strong-100-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "100",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -19380,6 +20389,9 @@
         },
         "name": "cdr-text-utility-sans-strong-100-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "100",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -19408,12 +20420,14 @@
         },
         "name": "cdr-text-utility-sans-strong-100-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "100",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.2rem",
+        "value": "12px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong100",
         "property": "font-size",
@@ -19437,13 +20451,14 @@
         },
         "name": "cdr-text-utility-sans-strong-100-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "100",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong100",
         "property": "line-height",
@@ -19467,8 +20482,10 @@
         },
         "name": "cdr-text-utility-sans-strong-100-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "100",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -19494,6 +20511,9 @@
         },
         "name": "cdr-text-utility-sans-strong-200-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "200",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -19520,6 +20540,9 @@
         },
         "name": "cdr-text-utility-sans-strong-200-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "200",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -19546,6 +20569,9 @@
         },
         "name": "cdr-text-utility-sans-strong-200-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "200",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -19574,12 +20600,14 @@
         },
         "name": "cdr-text-utility-sans-strong-200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "200",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.4rem",
+        "value": "14px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong200",
         "property": "font-size",
@@ -19603,13 +20631,14 @@
         },
         "name": "cdr-text-utility-sans-strong-200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "200",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong200",
         "property": "line-height",
@@ -19633,8 +20662,10 @@
         },
         "name": "cdr-text-utility-sans-strong-200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "200",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -19660,6 +20691,9 @@
         },
         "name": "cdr-text-utility-sans-strong-300-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "300",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -19686,6 +20720,9 @@
         },
         "name": "cdr-text-utility-sans-strong-300-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "300",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -19712,6 +20749,9 @@
         },
         "name": "cdr-text-utility-sans-strong-300-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "300",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -19740,12 +20780,14 @@
         },
         "name": "cdr-text-utility-sans-strong-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "300",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong300",
         "property": "font-size",
@@ -19769,13 +20811,14 @@
         },
         "name": "cdr-text-utility-sans-strong-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "300",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.2rem",
+        "value": "22px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong300",
         "property": "line-height",
@@ -19799,8 +20842,10 @@
         },
         "name": "cdr-text-utility-sans-strong-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "300",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -19826,6 +20871,9 @@
         },
         "name": "cdr-text-utility-sans-strong-400-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "400",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -19852,6 +20900,9 @@
         },
         "name": "cdr-text-utility-sans-strong-400-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "400",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -19878,6 +20929,9 @@
         },
         "name": "cdr-text-utility-sans-strong-400-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "400",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -19906,12 +20960,14 @@
         },
         "name": "cdr-text-utility-sans-strong-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "400",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong400",
         "property": "font-size",
@@ -19935,13 +20991,14 @@
         },
         "name": "cdr-text-utility-sans-strong-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "400",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong400",
         "property": "line-height",
@@ -19965,8 +21022,10 @@
         },
         "name": "cdr-text-utility-sans-strong-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "400",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -19992,6 +21051,9 @@
         },
         "name": "cdr-text-utility-sans-strong-500-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "500",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -20018,6 +21080,9 @@
         },
         "name": "cdr-text-utility-sans-strong-500-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "500",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -20044,6 +21109,9 @@
         },
         "name": "cdr-text-utility-sans-strong-500-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "500",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -20072,12 +21140,14 @@
         },
         "name": "cdr-text-utility-sans-strong-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "500",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong500",
         "property": "font-size",
@@ -20101,13 +21171,14 @@
         },
         "name": "cdr-text-utility-sans-strong-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "500",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong500",
         "property": "line-height",
@@ -20131,8 +21202,10 @@
         },
         "name": "cdr-text-utility-sans-strong-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "500",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -20158,6 +21231,9 @@
         },
         "name": "cdr-text-utility-sans-strong-600-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "600",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -20184,6 +21260,9 @@
         },
         "name": "cdr-text-utility-sans-strong-600-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "600",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -20210,6 +21289,9 @@
         },
         "name": "cdr-text-utility-sans-strong-600-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "600",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -20238,12 +21320,14 @@
         },
         "name": "cdr-text-utility-sans-strong-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "600",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong600",
         "property": "font-size",
@@ -20267,13 +21351,14 @@
         },
         "name": "cdr-text-utility-sans-strong-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "600",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong600",
         "property": "line-height",
@@ -20297,8 +21382,10 @@
         },
         "name": "cdr-text-utility-sans-strong-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "600",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -20324,6 +21411,9 @@
         },
         "name": "cdr-text-utility-sans-strong-700-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "700",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -20350,6 +21440,9 @@
         },
         "name": "cdr-text-utility-sans-strong-700-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "700",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -20376,6 +21469,9 @@
         },
         "name": "cdr-text-utility-sans-strong-700-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "700",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -20404,12 +21500,14 @@
         },
         "name": "cdr-text-utility-sans-strong-700-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "700",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.8rem",
+        "value": "28px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong700",
         "property": "font-size",
@@ -20433,13 +21531,14 @@
         },
         "name": "cdr-text-utility-sans-strong-700-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "700",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong700",
         "property": "line-height",
@@ -20463,8 +21562,10 @@
         },
         "name": "cdr-text-utility-sans-strong-700-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "700",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -20490,6 +21591,9 @@
         },
         "name": "cdr-text-utility-sans-strong-800-family",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "800",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -20516,6 +21620,9 @@
         },
         "name": "cdr-text-utility-sans-strong-800-style",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "800",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -20542,6 +21649,9 @@
         },
         "name": "cdr-text-utility-sans-strong-800-weight",
         "attributes": {
+          "category": "text-utility-sans-strong",
+          "type": "800",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -20570,12 +21680,14 @@
         },
         "name": "cdr-text-utility-sans-strong-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-sans-strong",
+          "type": "800",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySansStrong800",
         "property": "font-size",
@@ -20599,13 +21711,14 @@
         },
         "name": "cdr-text-utility-sans-strong-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-sans-strong",
+          "type": "800",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4rem",
+        "value": "40px",
         "category": "size",
         "mixin": "cdr-textUtilitySansStrong800",
         "property": "line-height",
@@ -20629,8 +21742,10 @@
         },
         "name": "cdr-text-utility-sans-strong-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-sans-strong",
+          "type": "800",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -20656,6 +21771,9 @@
         },
         "name": "cdr-text-utility-serif-200-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "200",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -20682,6 +21800,9 @@
         },
         "name": "cdr-text-utility-serif-200-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "200",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -20708,6 +21829,9 @@
         },
         "name": "cdr-text-utility-serif-200-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "200",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -20736,12 +21860,14 @@
         },
         "name": "cdr-text-utility-serif-200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "200",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.4rem",
+        "value": "14px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif200",
         "property": "font-size",
@@ -20765,13 +21891,14 @@
         },
         "name": "cdr-text-utility-serif-200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "200",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif200",
         "property": "line-height",
@@ -20795,8 +21922,10 @@
         },
         "name": "cdr-text-utility-serif-200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "200",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -20822,6 +21951,9 @@
         },
         "name": "cdr-text-utility-serif-300-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "300",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -20848,6 +21980,9 @@
         },
         "name": "cdr-text-utility-serif-300-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "300",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -20874,6 +22009,9 @@
         },
         "name": "cdr-text-utility-serif-300-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "300",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -20902,12 +22040,14 @@
         },
         "name": "cdr-text-utility-serif-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "300",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif300",
         "property": "font-size",
@@ -20931,13 +22071,14 @@
         },
         "name": "cdr-text-utility-serif-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "300",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.2rem",
+        "value": "22px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif300",
         "property": "line-height",
@@ -20961,8 +22102,10 @@
         },
         "name": "cdr-text-utility-serif-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "300",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -20988,6 +22131,9 @@
         },
         "name": "cdr-text-utility-serif-400-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "400",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -21014,6 +22160,9 @@
         },
         "name": "cdr-text-utility-serif-400-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "400",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -21040,6 +22189,9 @@
         },
         "name": "cdr-text-utility-serif-400-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "400",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -21068,12 +22220,14 @@
         },
         "name": "cdr-text-utility-serif-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "400",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif400",
         "property": "font-size",
@@ -21097,13 +22251,14 @@
         },
         "name": "cdr-text-utility-serif-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "400",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif400",
         "property": "line-height",
@@ -21127,8 +22282,10 @@
         },
         "name": "cdr-text-utility-serif-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "400",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -21154,6 +22311,9 @@
         },
         "name": "cdr-text-utility-serif-500-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "500",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -21180,6 +22340,9 @@
         },
         "name": "cdr-text-utility-serif-500-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "500",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -21206,6 +22369,9 @@
         },
         "name": "cdr-text-utility-serif-500-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "500",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -21234,12 +22400,14 @@
         },
         "name": "cdr-text-utility-serif-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "500",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif500",
         "property": "font-size",
@@ -21263,13 +22431,14 @@
         },
         "name": "cdr-text-utility-serif-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "500",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif500",
         "property": "line-height",
@@ -21293,8 +22462,10 @@
         },
         "name": "cdr-text-utility-serif-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "500",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -21320,6 +22491,9 @@
         },
         "name": "cdr-text-utility-serif-600-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "600",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -21346,6 +22520,9 @@
         },
         "name": "cdr-text-utility-serif-600-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "600",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -21372,6 +22549,9 @@
         },
         "name": "cdr-text-utility-serif-600-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "600",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -21400,12 +22580,14 @@
         },
         "name": "cdr-text-utility-serif-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "600",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif600",
         "property": "font-size",
@@ -21429,13 +22611,14 @@
         },
         "name": "cdr-text-utility-serif-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "600",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif600",
         "property": "line-height",
@@ -21459,8 +22642,10 @@
         },
         "name": "cdr-text-utility-serif-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "600",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -21486,6 +22671,9 @@
         },
         "name": "cdr-text-utility-serif-700-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "700",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -21512,6 +22700,9 @@
         },
         "name": "cdr-text-utility-serif-700-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "700",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -21538,6 +22729,9 @@
         },
         "name": "cdr-text-utility-serif-700-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "700",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -21566,12 +22760,14 @@
         },
         "name": "cdr-text-utility-serif-700-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "700",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.8rem",
+        "value": "28px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif700",
         "property": "font-size",
@@ -21595,13 +22791,14 @@
         },
         "name": "cdr-text-utility-serif-700-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "700",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif700",
         "property": "line-height",
@@ -21625,8 +22822,10 @@
         },
         "name": "cdr-text-utility-serif-700-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "700",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -21652,6 +22851,9 @@
         },
         "name": "cdr-text-utility-serif-800-family",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "800",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -21678,6 +22880,9 @@
         },
         "name": "cdr-text-utility-serif-800-style",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "800",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -21704,6 +22909,9 @@
         },
         "name": "cdr-text-utility-serif-800-weight",
         "attributes": {
+          "category": "text-utility-serif",
+          "type": "800",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -21732,12 +22940,14 @@
         },
         "name": "cdr-text-utility-serif-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif",
+          "type": "800",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerif800",
         "property": "font-size",
@@ -21761,13 +22971,14 @@
         },
         "name": "cdr-text-utility-serif-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif",
+          "type": "800",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4rem",
+        "value": "40px",
         "category": "size",
         "mixin": "cdr-textUtilitySerif800",
         "property": "line-height",
@@ -21791,8 +23002,10 @@
         },
         "name": "cdr-text-utility-serif-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif",
+          "type": "800",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -21818,6 +23031,9 @@
         },
         "name": "cdr-text-utility-serif-strong-200-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "200",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -21844,6 +23060,9 @@
         },
         "name": "cdr-text-utility-serif-strong-200-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "200",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -21870,6 +23089,9 @@
         },
         "name": "cdr-text-utility-serif-strong-200-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "200",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -21898,12 +23120,14 @@
         },
         "name": "cdr-text-utility-serif-strong-200-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "200",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.4rem",
+        "value": "14px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong200",
         "property": "font-size",
@@ -21927,13 +23151,14 @@
         },
         "name": "cdr-text-utility-serif-strong-200-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "200",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong200",
         "property": "line-height",
@@ -21957,8 +23182,10 @@
         },
         "name": "cdr-text-utility-serif-strong-200-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "200",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -21984,6 +23211,9 @@
         },
         "name": "cdr-text-utility-serif-strong-300-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "300",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -22010,6 +23240,9 @@
         },
         "name": "cdr-text-utility-serif-strong-300-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "300",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -22036,6 +23269,9 @@
         },
         "name": "cdr-text-utility-serif-strong-300-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "300",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -22064,12 +23300,14 @@
         },
         "name": "cdr-text-utility-serif-strong-300-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "300",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.6rem",
+        "value": "16px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong300",
         "property": "font-size",
@@ -22093,13 +23331,14 @@
         },
         "name": "cdr-text-utility-serif-strong-300-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "300",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.2rem",
+        "value": "22px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong300",
         "property": "line-height",
@@ -22123,8 +23362,10 @@
         },
         "name": "cdr-text-utility-serif-strong-300-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "300",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -22150,6 +23391,9 @@
         },
         "name": "cdr-text-utility-serif-strong-400-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "400",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -22176,6 +23420,9 @@
         },
         "name": "cdr-text-utility-serif-strong-400-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "400",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -22202,6 +23449,9 @@
         },
         "name": "cdr-text-utility-serif-strong-400-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "400",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -22230,12 +23480,14 @@
         },
         "name": "cdr-text-utility-serif-strong-400-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "400",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "1.8rem",
+        "value": "18px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong400",
         "property": "font-size",
@@ -22259,13 +23511,14 @@
         },
         "name": "cdr-text-utility-serif-strong-400-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "400",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong400",
         "property": "line-height",
@@ -22289,8 +23542,10 @@
         },
         "name": "cdr-text-utility-serif-strong-400-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "400",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -22316,6 +23571,9 @@
         },
         "name": "cdr-text-utility-serif-strong-500-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "500",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -22342,6 +23600,9 @@
         },
         "name": "cdr-text-utility-serif-strong-500-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "500",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -22368,6 +23629,9 @@
         },
         "name": "cdr-text-utility-serif-strong-500-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "500",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -22396,12 +23660,14 @@
         },
         "name": "cdr-text-utility-serif-strong-500-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "500",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2rem",
+        "value": "20px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong500",
         "property": "font-size",
@@ -22425,13 +23691,14 @@
         },
         "name": "cdr-text-utility-serif-strong-500-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "500",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "2.6rem",
+        "value": "26px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong500",
         "property": "line-height",
@@ -22455,8 +23722,10 @@
         },
         "name": "cdr-text-utility-serif-strong-500-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "500",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -22482,6 +23751,9 @@
         },
         "name": "cdr-text-utility-serif-strong-600-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "600",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -22508,6 +23780,9 @@
         },
         "name": "cdr-text-utility-serif-strong-600-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "600",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -22534,6 +23809,9 @@
         },
         "name": "cdr-text-utility-serif-strong-600-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "600",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -22562,12 +23840,14 @@
         },
         "name": "cdr-text-utility-serif-strong-600-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "600",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.4rem",
+        "value": "24px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong600",
         "property": "font-size",
@@ -22591,13 +23871,14 @@
         },
         "name": "cdr-text-utility-serif-strong-600-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "600",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3rem",
+        "value": "30px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong600",
         "property": "line-height",
@@ -22621,8 +23902,10 @@
         },
         "name": "cdr-text-utility-serif-strong-600-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "600",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -22648,6 +23931,9 @@
         },
         "name": "cdr-text-utility-serif-strong-700-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "700",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -22674,6 +23960,9 @@
         },
         "name": "cdr-text-utility-serif-strong-700-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "700",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -22700,6 +23989,9 @@
         },
         "name": "cdr-text-utility-serif-strong-700-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "700",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -22728,12 +24020,14 @@
         },
         "name": "cdr-text-utility-serif-strong-700-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "700",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "2.8rem",
+        "value": "28px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong700",
         "property": "font-size",
@@ -22757,13 +24051,14 @@
         },
         "name": "cdr-text-utility-serif-strong-700-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "700",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "3.6rem",
+        "value": "36px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong700",
         "property": "line-height",
@@ -22787,8 +24082,10 @@
         },
         "name": "cdr-text-utility-serif-strong-700-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "700",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -22814,6 +24111,9 @@
         },
         "name": "cdr-text-utility-serif-strong-800-family",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "800",
+          "item": "family",
           "deprecated": false
         }
       },
@@ -22840,6 +24140,9 @@
         },
         "name": "cdr-text-utility-serif-strong-800-style",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "800",
+          "item": "style",
           "deprecated": false
         }
       },
@@ -22866,6 +24169,9 @@
         },
         "name": "cdr-text-utility-serif-strong-800-weight",
         "attributes": {
+          "category": "text-utility-serif-strong",
+          "type": "800",
+          "item": "weight",
           "deprecated": false
         }
       },
@@ -22894,12 +24200,14 @@
         },
         "name": "cdr-text-utility-serif-strong-800-spacing",
         "attributes": {
-          "deprecated": false,
-          "category": "letter-spacing"
+          "category": "text-utility-serif-strong",
+          "type": "800",
+          "item": "spacing",
+          "deprecated": false
         }
       },
       {
-        "value": "3.2rem",
+        "value": "32px",
         "category": "font-size",
         "mixin": "cdr-textUtilitySerifStrong800",
         "property": "font-size",
@@ -22923,13 +24231,14 @@
         },
         "name": "cdr-text-utility-serif-strong-800-size",
         "attributes": {
-          "deprecated": false,
-          "category": "size",
-          "type": "font"
+          "category": "text-utility-serif-strong",
+          "type": "800",
+          "item": "size",
+          "deprecated": false
         }
       },
       {
-        "value": "4rem",
+        "value": "40px",
         "category": "size",
         "mixin": "cdr-textUtilitySerifStrong800",
         "property": "line-height",
@@ -22953,8 +24262,10 @@
         },
         "name": "cdr-text-utility-serif-strong-800-height",
         "attributes": {
-          "deprecated": false,
-          "category": "size"
+          "category": "text-utility-serif-strong",
+          "type": "800",
+          "item": "height",
+          "deprecated": false
         }
       },
       {
@@ -22980,6 +24291,8 @@
         },
         "name": "cdr-text-italic-variation",
         "attributes": {
+          "category": "text-italic",
+          "type": "variation",
           "deprecated": false
         }
       },
@@ -23006,6 +24319,8 @@
         },
         "name": "cdr-text-italic-style",
         "attributes": {
+          "category": "text-italic",
+          "type": "style",
           "deprecated": false
         }
       },
@@ -23032,6 +24347,8 @@
         },
         "name": "cdr-text-strong-weight",
         "attributes": {
+          "category": "text-strong",
+          "type": "weight",
           "deprecated": false
         }
       }
@@ -23049,7 +24366,7 @@
     "breakpoints": [],
     "text": [
       {
-        "value": "34.00sp",
+        "value": "34px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23140,7 +24457,7 @@
         }
       },
       {
-        "value": "26.00sp",
+        "value": "26px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23231,7 +24548,7 @@
         }
       },
       {
-        "value": "24.00sp",
+        "value": "24px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23322,7 +24639,7 @@
         }
       },
       {
-        "value": "19.00sp",
+        "value": "19px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23413,7 +24730,7 @@
         }
       },
       {
-        "value": "17.00sp",
+        "value": "17px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23476,7 +24793,7 @@
         }
       },
       {
-        "value": "15.00sp",
+        "value": "15px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23539,7 +24856,7 @@
         }
       },
       {
-        "value": "15.00sp",
+        "value": "15px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23602,7 +24919,7 @@
         }
       },
       {
-        "value": "12.00sp",
+        "value": "12px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23665,7 +24982,7 @@
         }
       },
       {
-        "value": "12.00sp",
+        "value": "12px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23728,7 +25045,7 @@
         }
       },
       {
-        "value": "11.00sp",
+        "value": "11px",
         "category": "font-size",
         "property": "font-size",
         "docs": {
@@ -23791,7 +25108,7 @@
         }
       },
       {
-        "value": "15.00sp",
+        "value": "15px",
         "category": "font-size",
         "property": "font-size",
         "docs": {

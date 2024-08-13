@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 28 Feb 2024 20:15:50 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 export const CdrColorTextButtonPrimary : string;

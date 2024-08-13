@@ -1,6 +1,7 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "12.2.0",
+  "version": "13.0.0",
+  "type": "module",
   "description": "Tokens for REI cedar design system",
   "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -35,17 +36,21 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
-    "build:tokens": "npm run clean && node ./style-dictionary/build.js",
+    "build:tokens": "npm run clean && node ./style-dictionary/build.mjs",
     "clean": "rimraf dist/",
     "build": "npm run clean && npm run validate && npm run build:tokens && npm run site-tokens",
-    "build:grid": "node grid.js",
-    "site-tokens": "node ./siteTokens.js",
-    "validate": "node ./validate.js"
+    "build:grid": "node grid.mjs",
+    "site-tokens": "node ./site-tokens.mjs",
+    "validate": "node ./validate.mjs",
+    "format": "eslint --fix \"style-dictionary/**/*.mjs\"",
+    "lint": "eslint \"style-dictionary/**/*.mjs\""
   },
   "devDependencies": {
     "@divriots/style-dictionary-to-figma": "^0.4.0",
+    "@tokens-studio/sd-transforms": "^1.2.2",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
     "fs-extra": "^10.1.0",
     "glob": "^7.1.6",
     "json5": "^2.2.0",
@@ -54,8 +59,16 @@
     "query-string": "^6.14.1",
     "require-json5": "^1.1.0",
     "rimraf": "^3.0.2",
-    "style-dictionary": "^3.7.1",
+    "standard": "^17.1.0",
+    "style-dictionary": "^4.0.1",
     "tinycolor2": "^1.4.2"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "ignorePatterns": [
+      "dist/",
+      "node_modules/"
+    ]
   },
   "engines": {
     "node": ">= 8.0.0",
