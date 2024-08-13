@@ -11,13 +11,13 @@ export const concatFiles = (StyleDictionary) => {
   StyleDictionary.registerAction({
     name: 'concat-files',
     do: async (dictionary, config) => {
-      await fs.readdir(config.buildPath, (err, files) => {
+      await fs.readdir(config.buildPath, async (err, files) => {
         if (err) { throw err }
 
         const extension = path.extname(files[0])
         const concatPaths = files.map(f => path.join(__dirname, '../../', config.buildPath, f))
 
-        _.pullAllWith(concatPaths, '.', async (v1) => {
+        _.pullAllWith([...concatPaths], '.', async (v1) => {
           if (v1.includes('.no_concat')) {
             const newPath = v1.replace('.no_concat', '')
             // rename file that won't be concated to remove the .no_concat
@@ -27,11 +27,16 @@ export const concatFiles = (StyleDictionary) => {
           return false
         })
 
+        const newConcatPaths = concatPaths.map(f => f.replace('.no_concat', ''))
+
         // output concat paths
-        concat(concatPaths).then(async (r) => {
-          const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`)
-          await fs.outputFile(outFile, r)
-        })
+        concat(newConcatPaths)
+          .then(async (r) => {
+            const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`)
+            await fs.outputFile(outFile, r)
+          }).catch((err) => {
+            console.error('Error concatenating files', err)
+          })
 
         // remove concated files
         concatPaths.forEach(async (p) => {
