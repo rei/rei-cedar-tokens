@@ -10,7 +10,7 @@ export const less = (theme) => ({
       'size/px-to-rem',
       'color/alpha',
       'color/css-transitive',
-      'time/seconds'
+      'time-seconds'
     ],
     buildPath: `dist/${theme}/less/`,
     files: [

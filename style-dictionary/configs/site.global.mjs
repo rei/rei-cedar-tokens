@@ -1,6 +1,14 @@
 export const siteGlobal = (theme) => ({
   siteWeb: {
-    transformGroup: 'custom/scss',
+    transforms: [
+      'attribute/deprecated',
+      'attribute/cdr-cti',
+      'name/pascal',
+      'size/strip-all-px-js',
+      'size/space-js',
+      'color/alpha',
+      'color/css-transitive'
+    ],
     buildPath: `dist/${theme}/json/`,
     prefix: 'cdr',
     files: [

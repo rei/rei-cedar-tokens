@@ -18,15 +18,8 @@ import { alpha } from './transforms/color/alpha.mjs'
 import { colorCssTransitive } from './transforms/color/color-css-transitive.mjs'
 import { hex8AndroidTransitive } from './transforms/color/hex8-android-transitive.mjs'
 import { uiColorTransitive } from './transforms/color/uicolor-transitive.mjs'
-
-// ==== Include custom transform groups ====
-import { css } from './transform-groups/css.mjs'
-import { scss } from './transform-groups/scss.mjs'
-import { less } from './transform-groups/less.mjs'
-import { js } from './transform-groups/js.mjs'
-import { android } from './transform-groups/android.mjs'
-import { ios } from './transform-groups/ios.mjs'
-import { figma } from './transform-groups/figma.mjs'
+import { spTransitive } from './transforms/size/sp-transitive.mjs'
+import { timeSeconds } from './transforms/value/time-seconds.mjs'
 
 // ==== Include custom formats ====
 import { scssMixin } from './formats/scss-mixin.mjs'
@@ -35,6 +28,7 @@ import { less as lessFormat } from './formats/less.mjs'
 import { js as jsFormat } from './formats/js.mjs'
 import { site } from './formats/site.mjs'
 import { figma as figmaFormat } from './formats/figma.mjs'
+import { androidColors, androidDimens, androidFontDimens } from './formats/android.mjs'
 
 // ==== Include custom formats ====
 import { concatFiles } from './actions/concat-files.mjs'
@@ -68,15 +62,8 @@ alpha(StyleDictionary)
 colorCssTransitive(StyleDictionary)
 hex8AndroidTransitive(StyleDictionary)
 uiColorTransitive(StyleDictionary)
-
-// ==== Register custom transform groups ====
-css(StyleDictionary)
-scss(StyleDictionary)
-less(StyleDictionary)
-js(StyleDictionary)
-android(StyleDictionary)
-ios(StyleDictionary)
-figma(StyleDictionary)
+spTransitive(StyleDictionary)
+timeSeconds(StyleDictionary)
 
 // ==== Register custom formats ====
 scssMixin(StyleDictionary)
@@ -85,6 +72,9 @@ lessFormat(StyleDictionary)
 jsFormat(StyleDictionary)
 site(StyleDictionary)
 figmaFormat(StyleDictionary)
+androidColors(StyleDictionary)
+androidDimens(StyleDictionary)
+androidFontDimens(StyleDictionary)
 
 // ==== Register custom actions ====
 concatFiles(StyleDictionary)
