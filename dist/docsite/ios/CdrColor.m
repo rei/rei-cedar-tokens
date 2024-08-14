@@ -3,11 +3,11 @@
 // CdrColor.m
 //
 
-#import ".h"
+#import "CdrColor.h"
 
-@implementation 
+@implementation CdrColor
 
-+ (UIColor *)color:()colorEnum{
++ (UIColor *)color:(CdrColorName)colorEnum{
   return [[self values] objectAtIndex:colorEnum];
 }
 

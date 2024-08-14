@@ -15,7 +15,7 @@ export const ios = (theme) => ({
     files: [
       {
         destination: 'CdrSize.h',
-        format: 'ios/static.h',
+        format: 'ios-static-h',
         type: 'float',
         className: 'CdrSize',
         filter: 'ios-size',
@@ -25,7 +25,7 @@ export const ios = (theme) => ({
       },
       {
         destination: 'CdrSize.m',
-        format: 'ios/static.m',
+        format: 'ios-static-m',
         type: 'float',
         className: 'CdrSize',
         filter: 'ios-size',
@@ -35,7 +35,7 @@ export const ios = (theme) => ({
       },
       {
         destination: 'CdrColor.h',
-        format: 'ios/colors.h',
+        format: 'ios-colors-h',
         className: 'CdrColor',
         type: 'CdrColorName',
         filter: 'ios-color',
@@ -45,7 +45,7 @@ export const ios = (theme) => ({
       },
       {
         destination: 'CdrColor.m',
-        format: 'ios/colors.m',
+        format: 'ios-colors-m',
         className: 'CdrColor',
         type: 'CdrColorName',
         filter: 'ios-color',

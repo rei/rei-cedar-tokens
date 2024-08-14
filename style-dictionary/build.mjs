@@ -29,6 +29,7 @@ import { js as jsFormat } from './formats/js.mjs'
 import { site } from './formats/site.mjs'
 import { figma as figmaFormat } from './formats/figma.mjs'
 import { androidColors, androidDimens, androidFontDimens } from './formats/android.mjs'
+import { iosColorsH, iosColorsM, iosStaticH, iosStaticM } from './formats/ios.mjs'
 
 // ==== Include custom formats ====
 import { concatFiles } from './actions/concat-files.mjs'
@@ -75,6 +76,10 @@ figmaFormat(StyleDictionary)
 androidColors(StyleDictionary)
 androidDimens(StyleDictionary)
 androidFontDimens(StyleDictionary)
+iosColorsH(StyleDictionary)
+iosColorsM(StyleDictionary)
+iosStaticH(StyleDictionary)
+iosStaticM(StyleDictionary)
 
 // ==== Register custom actions ====
 concatFiles(StyleDictionary)
