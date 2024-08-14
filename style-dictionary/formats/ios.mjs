@@ -22,7 +22,7 @@ ${dictionary.allTokens.map((token) => `${token.name}`).join(',\n')}
 export const iosColorsM = (StyleDictionary) => {
   StyleDictionary.registerFormat({
     name: 'ios-colors-m',
-    format: ({ dictionary, options, file, header }) => console.log(file) || `
+    format: ({ dictionary, options, file, header }) => `
 //
 // ${file.destination ?? ''}
 //
