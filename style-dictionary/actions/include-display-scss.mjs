@@ -7,13 +7,13 @@ const __dirname = getDirname(import.meta.url)
 export const includeDisplayScss = (StyleDictionary) => {
   StyleDictionary.registerAction({
     name: 'include-display-scss',
-    do: async (dictionary, config) => {
+    do: (dictionary, config) => {
       const scss = path.join(__dirname, '../utilities/display.scss')
       const outputDir = path.join(__dirname, '../../', config.buildPath, 'display.scss')
-      await fs.copyFile(scss, outputDir)
+      fs.copyFileSync(scss, outputDir)
     },
-    undo: async (dictionary, config) => {
-      await fs.remove(path.join(__dirname, '../../', config.buildPath))
+    undo: (dictionary, config) => {
+      fs.removeSync(path.join(__dirname, '../../', config.buildPath))
     }
   })
 }

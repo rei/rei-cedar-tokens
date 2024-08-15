@@ -8,13 +8,13 @@ export const includeMediaQueriesScss = (StyleDictionary) => {
   // concat all files in buildPath to a given filename
   StyleDictionary.registerAction({
     name: 'include-media-queries-scss',
-    do: async (dictionary, config) => {
+    do: (dictionary, config) => {
       const scss = path.join(__dirname, '../utilities/media-queries.scss')
       const outputDir = path.join(__dirname, '../../', config.buildPath, 'media-queries.scss')
-      await fs.copyFile(scss, outputDir)
+      fs.copyFileSync(scss, outputDir)
     },
-    undo: async (dictionary, config) => {
-      await fs.remove(path.join(__dirname, '../../', config.buildPath))
+    undo: (dictionary, config) => {
+      fs.removeSync(path.join(__dirname, '../../', config.buildPath))
     }
   })
 }

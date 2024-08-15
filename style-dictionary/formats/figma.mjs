@@ -9,7 +9,7 @@ export const figma = (StyleDictionary) => {
   StyleDictionary.registerFormat({
     name: 'figma',
     format: ({ dictionary }) => {
-      const propsToRemove = ['filePath', 'isSource', 'original', 'attributes', 'path', 'docs', 'newToken', 'name']
+      const propsToRemove = ['isSource', 'original', 'attributes', 'path', 'docs', 'newToken', 'name']
       const transformedTokens = cleanMeta(dictionary.tokens, { cleanMeta: propsToRemove })
       const mappedObject = _.deep(transformedTokens, (x) => _.mapKeys(x, (val, key) => {
         if (key === 'category') {

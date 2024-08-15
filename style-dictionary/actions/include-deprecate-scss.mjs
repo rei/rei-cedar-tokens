@@ -8,13 +8,13 @@ export const includeDeprecateScss = (StyleDictionary) => {
   // concat all files in buildPath to a given filename
   StyleDictionary.registerAction({
     name: 'include-deprecate-scss',
-    do: async (dictionary, config) => {
+    do: (dictionary, config) => {
       const deprecateScss = path.join(__dirname, '../utilities/deprecate.scss')
       const outputDir = path.join(__dirname, '../../', config.buildPath, 'deprecate.scss')
-      await fs.copy(deprecateScss, outputDir)
+      fs.copyFileSync(deprecateScss, outputDir)
     },
-    undo: async (dictionary, config) => {
-      await fs.remove(path.join(__dirname, '../../', config.buildPath))
+    undo: (dictionary, config) => {
+      fs.removeSync(path.join(__dirname, '../../', config.buildPath))
     }
   })
 }

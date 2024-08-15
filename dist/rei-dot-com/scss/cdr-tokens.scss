@@ -2170,43 +2170,176 @@ $cdr-text-italic-variation: 'ital' 1;
 $cdr-text-italic-style: italic;
 $cdr-text-strong-weight: 700;
 
-$spacing: (
-  cdr-space-eighth-x: 0.2rem,
-  cdr-space-quarter-x: 0.4rem,
-  cdr-space-half-x: 0.8rem,
-  cdr-space-three-quarter-x: 1.2rem,
-  cdr-space-one-x: 1.6rem,
-  cdr-space-one-and-a-half-x: 2.4rem,
-  cdr-space-two-x: 3.2rem,
-  cdr-space-three-x: 4.8rem,
-  cdr-space-four-x: 6.4rem
-);
-$spacing-inset: (
-  cdr-space-inset-eighth-x: 0.2rem,
-  cdr-space-inset-quarter-x: 0.4rem,
-  cdr-space-inset-half-x: 0.8rem,
-  cdr-space-inset-three-quarter-x: 1.2rem,
-  cdr-space-inset-one-x: 1.6rem,
-  cdr-space-inset-one-and-a-half-x: 2.4rem,
-  cdr-space-inset-two-x: 3.2rem,
-  cdr-space-inset-three-x: 4.8rem,
-  cdr-space-inset-four-x: 6.4rem,
-  cdr-space-inset-eighth-x-squish: 0 0.2rem,
-  cdr-space-inset-eighth-x-stretch: 0.4rem 0.2rem,
-  cdr-space-inset-quarter-x-squish: 0.2rem 0.4rem,
-  cdr-space-inset-quarter-x-stretch: 0.6rem 0.4rem,
-  cdr-space-inset-half-x-squish: 0.4rem 0.8rem,
-  cdr-space-inset-half-x-stretch: 1.2rem 0.8rem,
-  cdr-space-inset-three-quarter-x-squish: 0.6rem 1.2rem,
-  cdr-space-inset-three-quarter-x-stretch: 1.8rem 1.2rem,
-  cdr-space-inset-one-x-squish: 0.8rem 1.6rem,
-  cdr-space-inset-one-x-stretch: 2.4rem 1.6rem,
-  cdr-space-inset-one-and-a-half-x-squish: 1.2rem 2.4rem,
-  cdr-space-inset-one-and-a-half-x-stretch: 3.6rem 2.4rem,
-  cdr-space-inset-two-x-squish: 1.6rem 3.2rem,
-  cdr-space-inset-two-x-stretch: 4.8rem 3.2rem,
-  cdr-space-inset-three-x-squish: 2.4rem 4.8rem,
-  cdr-space-inset-three-x-stretch: 7.2rem 4.8rem,
-  cdr-space-inset-four-x-squish: 3.2rem 6.4rem,
-  cdr-space-inset-four-x-stretch: 9.6rem 6.4rem
-);
+@mixin cdr-display-sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+%cdr-display-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin cdr-display-sr-focusable () {
+  @include cdr-display-sr-only;
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+%cdr-display-sr-focusable {
+  @include cdr-display-sr-only;
+  &:hover,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+@mixin cdr-container-base {
+  padding-left: $cdr-space-one-x;
+  padding-right: $cdr-space-one-x;
+  width: 100%;
+  @include cdr-md-mq-up {
+    padding-left: $cdr-space-two-x;
+    padding-right: $cdr-space-two-x;
+  }
+}
+
+@mixin cdr-container-static {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $cdr-breakpoint-lg;
+}
+
+@mixin cdr-container {
+  @include cdr-text-default;
+  @include cdr-container-base;
+  @include cdr-container-static;
+}
+
+@mixin cdr-container-fluid {
+  @include cdr-text-default;
+  @include cdr-container-base;
+}
+
+// XS
+@mixin cdr-xs-mq-up {
+  @media (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin cdr-xs-mq-only {
+  @media (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+}
+
+// SM
+@mixin cdr-sm-mq-down {
+  @media (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq-up {
+  @media (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq-only {
+  @media (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+}
+
+// MD
+@mixin cdr-md-mq-down {
+  @media (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq-up {
+  @media (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq-only {
+  @media (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+}
+
+// LG
+@mixin cdr-lg-mq-down {
+  @media (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq-up {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq-only {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+// DEPRECATED summer 2020
+@mixin cdr-xs-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-xs-mq', 'cdr-xs-mq-up');
+  @media (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-sm-mq', 'cdr-sm-mq-up');
+  @media (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-md-mq', 'cdr-md-mq-up');
+  @media (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-lg-mq', 'cdr-lg-mq-up');
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
