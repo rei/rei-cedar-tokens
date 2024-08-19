@@ -1,79 +1,79 @@
 {
-  options: {
-    font: {
-      family: {
-        'serif-main': 'Stuart',
-        'serif-fallback': '"Stuart fallback", Georgia, serif',
-        'sans-main': 'Graphik',
-        'sans-fallback': '"Graphik fallback", "Helvetica Neue", sans-serif',
-        serif: '{options.font.family.serif-main}, {options.font.family.serif-fallback}',
-        sans: '{options.font.family.sans-main}, {options.font.family.sans-fallback}',
-        mono: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace',
-        legacy: {
-          serif: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
-          sans: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
-          'sans-condensed': '"Roboto Condensed", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
-        },
+  "options": {
+    "font": {
+      "family": {
+        "serif-main": "Stuart",
+        "serif-fallback": "\"Stuart fallback\", Georgia, serif",
+        "sans-main": "Graphik",
+        "sans-fallback": "\"Graphik fallback\", \"Helvetica Neue\", sans-serif",
+        "serif": "{options.font.family.serif-main}, {options.font.family.serif-fallback}",
+        "sans": "{options.font.family.sans-main}, {options.font.family.sans-fallback}",
+        "mono": "SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace",
+        "legacy": {
+          "serif": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "sans": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "sans-condensed": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
+        }
       },
-      style: {
-        normal: 'normal',
-        italic: 'italic',
+      "style": {
+        "normal": "normal",
+        "italic": "italic"
       },
-      size: {
-        '100': '12px',
-        '200': '14px',
-        '300': '16px',
-        '400': '18px',
-        '500': '20px',
-        '600': '24px',
-        '700': '28px',
-        '800': '32px',
-        '900': '36px',
-        '1000': '42px',
-        '1100': '48px',
-        '1200': '54px',
-        '1300': '60px',
-        '1400': '68px',
-        '1500': '76px',
-        '1600': '86px',
+      "size": {
+        "100": "12px",
+        "200": "14px",
+        "300": "16px",
+        "400": "18px",
+        "500": "20px",
+        "600": "24px",
+        "700": "28px",
+        "800": "32px",
+        "900": "36px",
+        "1000": "42px",
+        "1100": "48px",
+        "1200": "54px",
+        "1300": "60px",
+        "1400": "68px",
+        "1500": "76px",
+        "1600": "86px"
       },
-      weight: {
-        normal: '400',
-        medium: '500',
-        semibold: '600',
-        strong: '700',
+      "weight": {
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "strong": "700"
       },
-      spacing: {
-        tightest: '-0.64px',
-        tighter: '-0.32px',
-        tight: '-0.16px',
-        tightish: '-0.08px',
-        normal: '0px',
-        looseish: '0.08px',
-        loose: '0.16px',
-        looser: '0.32px',
-        loosest: '0.64px',
+      "spacing": {
+        "tightest": "-0.64px",
+        "tighter": "-0.32px",
+        "tight": "-0.16px",
+        "tightish": "-0.08px",
+        "normal": "0px",
+        "looseish": "0.08px",
+        "loose": "0.16px",
+        "looser": "0.32px",
+        "loosest": "0.64px"
       },
-      height: {
-        '100': '16px',
-        '200': '18px',
-        '300': '20px',
-        '400': '22px',
-        '500': '24px',
-        '600': '26px',
-        '700': '28px',
-        '800': '30px',
-        '900': '32px',
-        '1000': '36px',
-        '1100': '40px',
-        '1200': '44px',
-        '1300': '50px',
-        '1400': '56px',
-        '1500': '64px',
-        '1600': '72px',
-        '1700': '80px',
-        '1800': '92px',
-      },
-    },
-  },
+      "height": {
+        "100": "16px",
+        "200": "18px",
+        "300": "20px",
+        "400": "22px",
+        "500": "24px",
+        "600": "26px",
+        "700": "28px",
+        "800": "30px",
+        "900": "32px",
+        "1000": "36px",
+        "1100": "40px",
+        "1200": "44px",
+        "1300": "50px",
+        "1400": "56px",
+        "1500": "64px",
+        "1600": "72px",
+        "1700": "80px",
+        "1800": "92px"
+      }
+    }
+  }
 }

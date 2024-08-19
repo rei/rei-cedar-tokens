@@ -5,9 +5,10 @@ export const uiColorTransitive = (StyleDictionary) => {
     {
       name: 'color/UIColor-transitive',
       type: 'value',
-      filter: (prop) => prop.attributes.category === 'color',
-      transform: (prop) => {
-        const rgb = tinycolor(prop.value).toRgb()
+      transitive: true,
+      filter: (token) => token.$type === 'color',
+      transform: (token) => {
+        const rgb = tinycolor(token.$value).toRgb()
         return (
           '[UIColor colorWithRed:' +
           (rgb.r / 255).toFixed(3) +
@@ -22,8 +23,7 @@ export const uiColorTransitive = (StyleDictionary) => {
           rgb.a.toFixed(3) +
           'f]'
         )
-      },
-      transitive: true
+      }
     }
   )
 }

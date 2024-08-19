@@ -27,9 +27,9 @@ export const scssMap = (StyleDictionary) => {
               scss += ',\n  '
             }
             if (token.name.includes('-family')) {
-              scss += `${token.name}: '${token.value}'`
+              scss += `${token.name}: '${token.$value}'`
             } else {
-              scss += `${token.name}: ${token.value}`
+              scss += `${token.name}: ${token.$value}`
             }
           })
 

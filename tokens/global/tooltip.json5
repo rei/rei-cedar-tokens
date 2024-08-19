@@ -1,48 +1,46 @@
 {
-  color: {
-    text: {
-      tooltip: {
-        default: {
-          value: '{options.color.warm-grey-100}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tooltip',
-            example: 'color',
-            description: 'Text color for tooltips',
+  "color": {
+    "text": {
+      "tooltip": {
+        "default": {
+          "$value": "{options.color.warm-grey-100}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tooltip",
+            "example": "color",
+            "description": "Text color for tooltips"
           }
         }
-      },
+      }
     },
-
-    background: {
-      tooltip: {
-        default: {
-          value: '{options.color.warm-grey-1000}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tooltip',
-            example: 'color',
-            description: 'Background color for tooltips',
+    "background": {
+      "tooltip": {
+        "default": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tooltip",
+            "example": "color",
+            "description": "Background color for tooltips"
           }
         }
-      },
+      }
     },
-
-    border: {
-      tooltip: {
-        default: {
-          value: '{options.color.warm-grey-100}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tooltip',
-            example: 'color',
-            description: 'Border color for tooltips',
+    "border": {
+      "tooltip": {
+        "default": {
+          "$value": "{options.color.warm-grey-100}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tooltip",
+            "example": "color",
+            "description": "Border color for tooltips"
           }
         }
-      },
-    },
-  },
+      }
+    }
+  }
 }

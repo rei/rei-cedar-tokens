@@ -1,129 +1,128 @@
 {
-  color: {
-
-    text: {
-      'toggle-button': {
-        'default-rest': {
-          value: '{options.color.warm-grey-900}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'toggle button',
-            example: 'color',
-            description: 'The text color of a toggle button on rest',
-          },
-        },
-      },
+  "color": {
+    "text": {
+      "toggle-button": {
+        "default-rest": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "toggle button",
+            "example": "color",
+            "description": "The text color of a toggle button on rest"
+          }
+        }
+      }
     },
-    background: {
-      'toggle-group' : {
-        default :{
-          rest: {
-            value: '{options.color.warm-grey-100}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'toggle group',
-              example: 'color',
-              description: 'The background color of a toggle group on rest',
-            },
-          },
+    "background": {
+      "toggle-group": {
+        "default": {
+          "rest": {
+            "$value": "{options.color.warm-grey-100}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "toggle group",
+              "example": "color",
+              "description": "The background color of a toggle group on rest"
+            }
+          }
         }
       },
-      'toggle-button': {
-        default: {
-          rest: {
-            value: '{options.color.warm-grey-100}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'toggle button',
-              example: 'color',
-              description: 'The background color of a toggle button on rest',
-            },
+      "toggle-button": {
+        "default": {
+          "rest": {
+            "$value": "{options.color.warm-grey-100}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "toggle button",
+              "example": "color",
+              "description": "The background color of a toggle button on rest"
+            }
           },
-          hover: {
-            value: '{options.color.warm-grey-300}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'toggle button',
-              example: 'color',
-              description: 'The background color of a toggle button on hover',
-            },
+          "hover": {
+            "$value": "{options.color.warm-grey-300}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "toggle button",
+              "example": "color",
+              "description": "The background color of a toggle button on hover"
+            }
           },
-          focus: {
-            value: '{options.color.warm-grey-300}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'toggle button',
-              example: 'color',
-              description: 'The background color of a toggle button on focus',
-            },
+          "focus": {
+            "$value": "{options.color.warm-grey-300}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "toggle button",
+              "example": "color",
+              "description": "The background color of a toggle button on focus"
+            }
           },
-          selected: {
-            rest: {
-              value: '{options.color.white}',
-              category: 'color',
-              docs: {
-                category: 'colors',
-                type: 'toggle button',
-                example: 'color',
-                description: 'The background color of a selected toggle button on rest',
-              },
+          "selected": {
+            "rest": {
+              "$value": "{options.color.white}",
+              "$type": "color",
+              "docs": {
+                "category": "colors",
+                "type": "toggle button",
+                "example": "color",
+                "description": "The background color of a selected toggle button on rest"
+              }
             },
-            hover: {
-              value: '{options.color.white}',
-              category: 'color',
-              docs: {
-                category: 'colors',
-                type: 'toggle button',
-                example: 'color',
-                description: 'The background color of a selected toggle button on hover',
-              },
-            },
-          },
-        },
-      },
+            "hover": {
+              "$value": "{options.color.white}",
+              "$type": "color",
+              "docs": {
+                "category": "colors",
+                "type": "toggle button",
+                "example": "color",
+                "description": "The background color of a selected toggle button on hover"
+              }
+            }
+          }
+        }
+      }
     },
-    border: {
-      'toggle-button': {
-        default: {
-          focus: {
-            value: '{options.color.warm-grey-900}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'toggle button',
-              example: 'color',
-              description: 'Border color for a toggle button that is not selected on focus',
-            },
+    "border": {
+      "toggle-button": {
+        "default": {
+          "focus": {
+            "$value": "{options.color.warm-grey-900}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "toggle button",
+              "example": "color",
+              "description": "Border color for a toggle button that is not selected on focus"
+            }
           },
-          selected: {
-            rest: {
-              value: '{options.color.warm-grey-900}',
-              category: 'color',
-              docs: {
-                category: 'colors',
-                type: 'toggle button',
-                example: 'color',
-                description: 'Border color for a selected toggle button on rest',
-              },
+          "selected": {
+            "rest": {
+              "$value": "{options.color.warm-grey-900}",
+              "$type": "color",
+              "docs": {
+                "category": "colors",
+                "type": "toggle button",
+                "example": "color",
+                "description": "Border color for a selected toggle button on rest"
+              }
             },
-            focus: {
-              value: '{options.color.warm-grey-900}',
-              category: 'color',
-              docs: {
-                category: 'colors',
-                type: 'toggle button',
-                example: 'color',
-                description: 'Border color for a selected toggle on focus',
-              },
-            },
-          },
-        },
-      },
-    },
-  },
+            "focus": {
+              "$value": "{options.color.warm-grey-900}",
+              "$type": "color",
+              "docs": {
+                "category": "colors",
+                "type": "toggle button",
+                "example": "color",
+                "description": "Border color for a selected toggle on focus"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

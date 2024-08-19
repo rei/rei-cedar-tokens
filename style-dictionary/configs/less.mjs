@@ -1,18 +1,17 @@
+import { commonConfig } from '../utils.mjs'
+
 export const less = (theme) => ({
   less: {
-    prefix: 'cdr',
+    ...commonConfig(theme, 'less'),
     transformGroup: 'tokens-studio',
     transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/kebab',
       'size/space',
-      'size/px-to-rem',
+      'size/px-to-rem-transitive',
       'color/alpha',
-      'color/css-transitive',
-      'time-seconds'
+      'color/css-transitive'
     ],
-    buildPath: `dist/${theme}/less/`,
     files: [
       {
         destination: 'cdr-variable.less',

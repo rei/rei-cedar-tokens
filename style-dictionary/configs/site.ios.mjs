@@ -1,8 +1,10 @@
+import { commonConfig } from '../utils.mjs'
+
 export const siteIos = (theme) => ({
   siteIos: {
+    ...commonConfig(theme, 'json'),
     transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/pascal',
       'color/alpha',
       'color/UIColor-transitive',
@@ -10,8 +12,6 @@ export const siteIos = (theme) => ({
       'size/space',
       'size/float'
     ],
-    buildPath: `dist/${theme}/json/`,
-    prefix: 'cdr',
     files: [
       {
         destination: 'ios.json',

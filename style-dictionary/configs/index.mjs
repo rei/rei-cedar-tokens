@@ -54,6 +54,7 @@ export const getConfig = (platform, theme) => {
     include: defaultTokens,
     source: themeOverrides,
     preprocessors: ['tokens-studio'],
-    platforms: allPlatforms(platform, theme)
+    platforms: allPlatforms(platform, theme),
+    usesDtcg: true
   }
 }

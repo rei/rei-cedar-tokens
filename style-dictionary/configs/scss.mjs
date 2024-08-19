@@ -1,30 +1,38 @@
+import { commonConfig } from '../utils.mjs'
+
 export const scss = (theme) => ({
   scss: {
-    prefix: 'cdr',
+    ...commonConfig(theme, 'scss'),
     transformGroup: 'tokens-studio',
     transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/kebab',
       'size/space',
-      'size/px-to-rem',
+      'size/px-to-rem-transitive',
       'color/alpha',
-      'color/css-transitive',
-      'time-seconds'
+      'color/css-transitive'
     ],
-    buildPath: `dist/${theme}/scss/`,
     files: [
       {
         destination: 'cdr-variable.scss',
-        format: 'scss/variables'
+        format: 'scss/variables',
+        options: {
+          showFileHeader: false
+        }
       },
       {
         destination: 'cdr-mixins.scss',
-        format: 'scss/mixin'
+        format: 'scss/mixin',
+        options: {
+          showFileHeader: false
+        }
       },
       {
         destination: 'utility-map.no_concat.scss',
-        format: 'scss/map'
+        format: 'scss/map',
+        options: {
+          showFileHeader: false
+        }
       }
     ],
     actions: ['include-media-queries-scss', 'include-display-scss', 'concat-files', 'include-deprecate-scss']

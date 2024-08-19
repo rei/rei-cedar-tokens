@@ -1,119 +1,116 @@
 {
-  color: {
-
-    text: {
-      tab: {
-        rest: {
-          value: '{options.color.warm-grey-950}',
-          alpha: .75,
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tabs',
-            example: 'color',
-            description: 'Text color for tabs',
-          },
+  "color": {
+    "text": {
+      "tab": {
+        "rest": {
+          "$value": "{options.color.warm-grey-950}",
+          "$type": "color",
+          "alpha": 0.75,
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Text color for tabs"
+          }
         },
-        active: {
-          value: '{options.color.warm-grey-1150}',
-          alpha: .75,
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tabs',
-            example: 'color',
-            description: 'Text color for the active and pressed states of tabs',
-          },
+        "active": {
+          "$value": "{options.color.warm-grey-1150}",
+          "$type": "color",
+          "alpha": 0.75,
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Text color for the active and pressed states of tabs"
+          }
         },
-        hover: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tabs',
-            example: 'color',
-            description: 'Text color for the hover state of tabs',
-          },
+        "hover": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Text color for the hover state of tabs"
+          }
         },
-        disabled: {
-          value: '{options.color.warm-grey-500}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'tabs',
-            example: 'color',
-            description: 'Disabled text color of tabs',
-          },
-        },
-      },
+        "disabled": {
+          "$value": "{options.color.warm-grey-500}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Disabled text color of tabs"
+          }
+        }
+      }
     },
-
-
-    border: {
-      tab: {
-        keyline: {
-          rest: {
-            value: '{options.color.warm-grey-700}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'tabs',
-              example: 'color',
-              description: 'The border color of tab keyline',
-            },
+    "border": {
+      "tab": {
+        "keyline": {
+          "rest": {
+            "$value": "{options.color.warm-grey-700}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "tabs",
+              "example": "color",
+              "description": "The border color of tab keyline"
+            }
           },
-          active: {
-            value: '{options.color.alpine-lake-blue-800}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'tabs',
-              example: 'color',
-              description: 'Border color for the active tab keyline',
-            },
+          "active": {
+            "$value": "{options.color.alpine-lake-blue-800}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "tabs",
+              "example": "color",
+              "description": "Border color for the active tab keyline"
+            }
           },
-          'active-alt': {
-            value: '{options.color.alpine-lake-blue-600}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'tabs',
-              example: 'color',
-              description: 'Alternative border color for the active tab keyline',
-            },
+          "active-alt": {
+            "$value": "{options.color.alpine-lake-blue-600}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "tabs",
+              "example": "color",
+              "description": "Alternative border color for the active tab keyline"
+            }
           },
-          hover: {
-            value: '{options.color.alpine-lake-blue-800}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'tabs',
-              example: 'color',
-              description: 'Border color for the tab keyline hover state',
-            },
+          "hover": {
+            "$value": "{options.color.alpine-lake-blue-800}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "tabs",
+              "example": "color",
+              "description": "Border color for the tab keyline hover state"
+            }
           },
-          'hover-alt': {
-            value: '{options.color.alpine-lake-blue-600}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'tabs',
-              example: 'color',
-              description: 'Alternative border color for the tab keyline hover state',
-            },
+          "hover-alt": {
+            "$value": "{options.color.alpine-lake-blue-600}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "tabs",
+              "example": "color",
+              "description": "Alternative border color for the tab keyline hover state"
+            }
           },
-          disabled: {
-            value: '{options.color.warm-grey-500}',
-            category: 'color',
-            docs: {
-              category: 'colors',
-              type: 'tabs',
-              example: 'color',
-              description: 'Border color for the disabled tab keyline',
-            },
-          },
-        },
-      },
-    },
-  },
+          "disabled": {
+            "$value": "{options.color.warm-grey-500}",
+            "$type": "color",
+            "docs": {
+              "category": "colors",
+              "type": "tabs",
+              "example": "color",
+              "description": "Border color for the disabled tab keyline"
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -7,7 +7,7 @@ $cdr-warn: true !default;
 // year/release cycle of cedar
 // UPDATE WITH EACH RELEASE
 $current-release-year: 2024;
-$current-release-cycle: "summer";
+$current-release-cycle: "q4";
 
 @function getDeprecationDate($year, $cycle) {
   @if $cycle == "winter" {

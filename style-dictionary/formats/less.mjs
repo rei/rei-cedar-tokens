@@ -16,7 +16,7 @@ export const less = (StyleDictionary) => {
         let mixin = ''
 
         singleMixinProps.forEach((o) => {
-          declarations.push(`${o.property}: ${o.value};`)
+          declarations.push(`${o.property}: ${o.$value};`)
         })
 
         mixin = `.${_.kebabCase([prefix, name])}() {

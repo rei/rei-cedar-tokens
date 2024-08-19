@@ -1,60 +1,60 @@
 {
-  color: {
-    background: {
-      'table-header': {
-        value: '{options.color.warm-grey-200}',
-        category: 'color',
-        docs: {
-          category: 'colors',
-          type: 'table',
-          example: 'color',
-          description: 'The background color of table headers',
-        },
+  "color": {
+    "background": {
+      "table-header": {
+        "$value": "{options.color.warm-grey-200}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "The background color of table headers"
+        }
       },
-      'table-row': {
-        value: '{options.color.white}',
-        category: 'color',
-        docs: {
-          category: 'colors',
-          type: 'table',
-          example: 'color',
-          description: 'The background color of table rows',
-        },
+      "table-row": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "The background color of table rows"
+        }
       },
-      'table-row-alt': {
-        value: '{options.color.warm-grey-100}',
-        category: 'color',
-        docs: {
-          category: 'colors',
-          type: 'table',
-          example: 'color',
-          description: 'An alternate row color to aid grouping row data',
-        },
-      },
+      "table-row-alt": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "An alternate row color to aid grouping row data"
+        }
+      }
     },
-    border: {
-      table: {
-        default: {
-          value: '{options.color.warm-grey-400}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'table',
-            example: 'color',
-            description: 'The border color of table rows and their corresponding data cells',
-          },
+    "border": {
+      "table": {
+        "default": {
+          "$value": "{options.color.warm-grey-400}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "The border color of table rows and their corresponding data cells"
+          }
         },
-        head: {
-          value: '{options.color.warm-grey-700}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'table',
-            example: 'color',
-            description: 'Border color separating complex table heads',
-          },
-        },
-      },
-    },
-  },
+        "head": {
+          "$value": "{options.color.warm-grey-700}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "Border color separating complex table heads"
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,17 +1,17 @@
+import { commonConfig } from '../utils.mjs'
+
 export const siteAndroid = (theme) => ({
   siteAndroid: {
+    ...commonConfig(theme, 'json'),
     transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/snake',
       'size/space',
       'size/dp-transitive',
-      'size/sp-transitive',
+      'size/sp',
       'color/alpha',
       'color/hex8android-transitive'
     ],
-    buildPath: `dist/${theme}/json/`,
-    prefix: 'cdr',
     files: [
       {
         destination: 'android.json',

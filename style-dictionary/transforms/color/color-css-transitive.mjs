@@ -4,15 +4,15 @@ export const colorCssTransitive = (StyleDictionary) => {
   StyleDictionary.registerTransform({
     name: 'color/css-transitive',
     type: 'value',
-    filter: (prop) => prop.attributes.category === 'color',
-    transform: (prop) => {
-      const color = tinycolor(prop.value)
+    transitive: true,
+    filter: (token) => token.$type === 'color',
+    transform: (token) => {
+      const color = tinycolor(token.$value)
       if (color.getAlpha() === 1) {
         return color.toHexString()
       } else {
         return color.toRgbString()
       }
-    },
-    transitive: true
+    }
   })
 }

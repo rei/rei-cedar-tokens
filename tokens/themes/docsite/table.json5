@@ -1,97 +1,97 @@
 {
-  color: {
-    background: {
+  "color": {
+    "background": {
       "table-header": {
-        value: "{options.color.warm-grey-100}",
-        category: "color",
-        docs: {
-          type: "table",
-        },
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
       },
       "table-row": {
-        value: "{options.color.warm-grey-200}",
-        category: "color",
-        docs: {
-          type: "table",
-        },
-      },
+        "$value": "{options.color.warm-grey-200}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      }
     },
-    border: {
+    "border": {
       "table-row": {
-        value: "{options.color.warm-grey-400}",
-        category: "color",
-        docs: {
-          type: "table",
-        },
-      },
+        "$value": "{options.color.warm-grey-400}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      }
     },
-    text: {
-      table: {
-        primary: {
-          value: "{options.color.warm-grey-1200}",
-          alpha: 0.9,
-          category: "color",
-          docs: {
-            type: "table",
-          },
+    "text": {
+      "table": {
+        "primary": {
+          "$value": "{options.color.warm-grey-1200}",
+          "$type": "color",
+          "alpha": 0.9,
+          "docs": {
+            "type": "table"
+          }
         },
-        secondary: {
-          value: "{options.color.warm-grey-1150}",
-          alpha: 0.75,
-          category: "color",
-          docs: {
-            type: "table",
-          },
-        },
-      },
-    },
+        "secondary": {
+          "$value": "{options.color.warm-grey-1150}",
+          "$type": "color",
+          "alpha": 0.75,
+          "docs": {
+            "type": "table"
+          }
+        }
+      }
+    }
   },
-  knockout: {
-    color: {
-      background: {
+  "knockout": {
+    "color": {
+      "background": {
         "table-header": {
-          value: "{options.color.warm-grey-900}",
-          alpha: 0.5,
-          category: "color",
-          docs: {
-            type: "table",
-          },
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "alpha": 0.5,
+          "docs": {
+            "type": "table"
+          }
         },
         "table-row": {
-          value: "{options.color.warm-grey-1000}",
-          category: "color",
-          docs: {
-            type: "table",
-          },
-        },
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        }
       },
-      border: {
+      "border": {
         "table-row": {
-          value: "{options.color.warm-grey-900}",
-          category: "color",
-          docs: {
-            type: "table",
-          },
-        },
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        }
       },
-      text: {
-        table: {
-          primary: {
-            value: "{options.color.warm-grey-100}",
-            category: "color",
-            docs: {
-              type: "table",
-            },
+      "text": {
+        "table": {
+          "primary": {
+            "$value": "{options.color.warm-grey-100}",
+            "$type": "color",
+            "docs": {
+              "type": "table"
+            }
           },
-          secondary: {
-            value: "{options.color.warm-grey-500}",
-            category: "color",
-            docs: {
-              type: "table",
-            },
-          },
-        },
-      },
-    },
-  },
+          "secondary": {
+            "$value": "{options.color.warm-grey-500}",
+            "$type": "color",
+            "docs": {
+              "type": "table"
+            }
+          }
+        }
+      }
+    }
+  }
 }

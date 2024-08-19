@@ -5,13 +5,12 @@ export const stripAllPxJs = (StyleDictionary) => {
     name: 'size/strip-all-px-js',
     type: 'value',
     transitive: true,
-    filter: (prop) => !prop.name.match('Prominence'),
-    transform: (prop) => {
-      let cleanVal = prop.value
-      if (_.endsWith(prop.value, 'px')) {
-        cleanVal = prop.value.slice(0, -2)
+    filter: (token) => !token.name.match('Prominence'),
+    transform: (token) => {
+      let cleanVal = token.$value
+      if (_.endsWith(token.$value, 'px')) {
+        cleanVal = token.$value.slice(0, -2)
       }
-
       return cleanVal
     }
   })

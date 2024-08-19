@@ -1,63 +1,63 @@
 {
-  color: {
-    background: {
-      note: {
-        value: '{options.color.warm-grey-100}',
-        category: 'color',
-        docs: {
-          'type': 'note'
+  "color": {
+    "background": {
+      "note": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
         }
-      },
+      }
     },
-    border: {
-      note: {
-        value: '{theme.color.primary-100}',
-        category: 'color',
-        docs: {
-          'type': 'note'
+    "border": {
+      "note": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
         }
-      },
+      }
     },
-    'icon-background': {
-      note: {
-        value: '{theme.color.primary-100}',
-        category: 'color',
-        docs: {
-          'type': 'note'
+    "icon-background": {
+      "note": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
         }
-      },
-    },
+      }
+    }
   },
-  knockout: {
-    color: {
-      background: {
-        note: {
-          value: '{options.color.warm-grey-900}',
-          alpha: .50,
-          category: 'color',
-          docs: {
-           'type': 'note'
+  "knockout": {
+    "color": {
+      "background": {
+        "note": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "alpha": 0.50,
+          "docs": {
+            "type": "note"
           }
-        },
+        }
       },
-      border: {
-        note: {
-          value: '{theme.color.primary-100}',
-          category: 'color',
-          docs: {
-           'type': 'note'
+      "border": {
+        "note": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
           }
-        },
+        }
       },
-      'icon-background': {
-        note: {
-          value: '{theme.color.primary-100}',
-          category: 'color',
-          docs: {
-           'type': 'note'
+      "icon-background": {
+        "note": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
           }
-        },
-      },
-    },
-  },
+        }
+      }
+    }
+  }
 }

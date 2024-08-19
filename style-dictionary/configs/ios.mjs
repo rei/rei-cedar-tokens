@@ -1,9 +1,10 @@
+import { commonConfig } from '../utils.mjs'
+
 export const ios = (theme) => ({
   ios: {
-    prefix: 'cdr',
+    ...commonConfig(theme, 'ios'),
     transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/pascal',
       'color/alpha',
       'color/UIColor-transitive',
@@ -11,45 +12,48 @@ export const ios = (theme) => ({
       'size/space',
       'size/float'
     ],
-    buildPath: `dist/${theme}/ios/`,
     files: [
       {
         destination: 'CdrSize.h',
-        format: 'ios-static-h',
-        type: 'float',
-        className: 'CdrSize',
+        format: 'ios/static.h',
         filter: 'ios-size',
         options: {
+          type: 'float',
+          className: 'CdrSize',
           showFileHeader: false
         }
       },
       {
         destination: 'CdrSize.m',
-        format: 'ios-static-m',
-        type: 'float',
-        className: 'CdrSize',
+        format: 'ios/static.m',
         filter: 'ios-size',
         options: {
+          type: 'float',
+          className: 'CdrSize',
           showFileHeader: false
         }
       },
       {
         destination: 'CdrColor.h',
-        format: 'ios-colors-h',
-        className: 'CdrColor',
+        format: 'ios/colors.h',
+        filter: {
+          $type: 'color'
+        },
         type: 'CdrColorName',
-        filter: 'ios-color',
+        className: 'CdrColor',
         options: {
           showFileHeader: false
         }
       },
       {
         destination: 'CdrColor.m',
-        format: 'ios-colors-m',
-        className: 'CdrColor',
-        type: 'CdrColorName',
-        filter: 'ios-color',
+        format: 'ios/colors.m',
+        filter: {
+          $type: 'color'
+        },
         options: {
+          type: 'CdrColorName',
+          className: 'CdrColor',
           showFileHeader: false
         }
       }

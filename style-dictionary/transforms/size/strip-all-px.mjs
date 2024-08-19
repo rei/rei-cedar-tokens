@@ -5,13 +5,11 @@ export const stripAllPx = (StyleDictionary) => {
     name: 'size/strip-all-px',
     type: 'value',
     transitive: true,
-    transform: (prop) => {
-      let cleanVal = prop.value
-
-      if (_.endsWith(prop.value, 'px')) {
-        cleanVal = prop.value.slice(0, -2)
+    transform: (token) => {
+      let cleanVal = token.$value
+      if (_.endsWith(token.$value, 'px')) {
+        cleanVal = token.$value.slice(0, -2)
       }
-
       return cleanVal
     }
   })

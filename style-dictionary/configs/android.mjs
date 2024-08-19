@@ -1,28 +1,46 @@
+import { commonConfig } from '../utils.mjs'
+
 export const android = (theme) => ({
   android: {
-    prefix: 'cdr',
-    buildPath: `dist/${theme}/android/`,
+    ...commonConfig(theme, 'android'),
     transforms: [
-      'attribute/cdr-cti',
       'name/snake',
       'size/space',
       'size/dp-transitive',
-      'size/sp-transitive',
+      'size/sp',
       'color/alpha',
       'color/hex8android-transitive'
     ],
     files: [
       {
         destination: 'colors.xml',
-        format: 'android-colors'
+        filter: {
+          $type: 'color'
+        },
+        options: {
+          showFileHeader: false
+        },
+        format: 'android/resources'
       },
       {
         destination: 'font_dimens.xml',
-        format: 'android-font-dimens'
+        filter: {
+          $type: 'fontSize'
+        },
+        options: {
+          showFileHeader: false
+        },
+        format: 'android/fontDimens'
       },
       {
         destination: 'dimens.xml',
-        format: 'android-dimens'
+        filter: {
+          $type: 'dimension'
+        },
+        options: {
+          showFileHeader: false
+        },
+        format: 'android/dimens'
       }
     ]
   }

@@ -1,20 +1,33 @@
-export const pxToRem = (StyleDictionary) => {
+import { BASE_FONT_SIZE } from '../../utils.mjs'
+
+export const pxToRemTransitive = (StyleDictionary) => {
   StyleDictionary.registerTransform({
-    name: 'size/px-to-rem',
+    name: 'size/px-to-rem-transitive',
     type: 'value',
     transitive: true,
-    filter: (prop) => prop.attributes.category === 'size',
-    transform: (prop) => {
-      // update what this is divided by if body font-size changes in rei-cedar
-      const REM = 10
+    filter: (token) => token.$type === 'dimension' || token.$type === 'fontSize',
+    transform: (token, config) => {
+      const REM = config.basePxFontSize || BASE_FONT_SIZE
+      const tokens = token.$value.split(' ')
 
-      if (`${prop.value}`.indexOf('rem') === -1) {
-        const num = (parseFloat(prop.value, 10) / REM)
-        const unit = num !== 0 ? 'rem' : ''
-        return `${num}${unit}`
-      }
+      const result = tokens.map((value) => {
+        const parsedValue = parseFloat(value, 10)
 
-      return prop.value
+        if (parsedValue === 0 || !value) {
+          return '0'
+        }
+
+        if (!value.includes('rem')) {
+          const num = (parseFloat(value, 10) / REM)
+          const unit = num !== 0 ? 'rem' : ''
+
+          return `${num}${unit}`
+        }
+
+        return value
+      })
+
+      return result.join(' ')
     }
   })
 }

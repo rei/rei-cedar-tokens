@@ -12,7 +12,6 @@ export const concatFiles = (StyleDictionary) => {
     name: 'concat-files',
     do: async (dictionary, config) => {
       await fs.readdir(config.buildPath, async (err, files) => {
-        console.log('FILES', files)
         if (err) { throw err }
 
         const extension = path.extname(files[0])

@@ -3,10 +3,9 @@ export const float = (StyleDictionary) => {
     name: 'size/float',
     type: 'value',
     transitive: true,
-    filter: (prop) => prop.attributes.category === 'size',
-    transform: (prop) => {
-      // convert integer to float format XX.Xf
-      const num = parseFloat(prop.value).toFixed(1)
+    filter: (token) => token.$type === 'dimension' || token.$type === 'fontSize',
+    transform: (token) => {
+      const num = parseFloat(token.$value).toFixed(1)
       const unit = 'f'
       return `${num}${unit}`
     }

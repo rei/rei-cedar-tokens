@@ -1,9 +1,10 @@
+import { commonConfig } from '../utils.mjs'
+
 export const siteWeb = (theme) => ({
   siteWeb: {
-    prefix: 'cdr',
-    buildPath: `dist/${theme}/json/`,
+    ...commonConfig(theme, 'json'),
     transformGroup: 'tokens-studio',
-    transforms: ['attribute/deprecated', 'name/kebab', 'size/rem'],
+    transforms: ['attribute/deprecated', 'name/kebab'],
     files: [
       {
         destination: 'web.json',

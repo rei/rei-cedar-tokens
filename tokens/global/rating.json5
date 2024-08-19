@@ -1,87 +1,85 @@
 {
-  color: {
-    text: {
-      rating: {
-        default: {
-          value: '{options.color.warm-grey-1150}',
-          alpha: .75,
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'rating',
-            example: 'color',
-            description: 'Text color for ratings',
-          },
+  "color": {
+    "text": {
+      "rating": {
+        "default": {
+          "$value": "{options.color.warm-grey-1150}",
+          "$type": "color",
+          "alpha": 0.75,
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Text color for ratings"
+          }
         },
-        hover: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'rating',
-            example: 'color',
-            description: 'Text color for the hover state of ratings',
-          },
+        "hover": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Text color for the hover state of ratings"
+          }
         },
-        separator: {
-          value: '{options.color.warm-grey-600}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'rating',
-            example: 'color',
-            description: 'Text color for the separator in ratings',
-          },
-        },
-      },
+        "separator": {
+          "$value": "{options.color.warm-grey-600}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Text color for the separator in ratings"
+          }
+        }
+      }
     },
-
-    background: {
-      'rating-star-default': {
-        value: '{options.color.warm-grey-100}',
-        category: 'color',
-        docs: {
-          category: 'colors',
-          type: 'rating',
-          example: 'color',
-          description: 'The defaul background color of the rating star icon',
-        },
+    "background": {
+      "rating-star-default": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "rating",
+          "example": "color",
+          "description": "The defaul background color of the rating star icon"
+        }
       },
-      'rating-star-highlighted': {
-        value: '{options.color.golden-yellow-500}',
-        category: 'color',
-        docs: {
-          category: 'colors',
-          type: 'rating',
-          example: 'color',
-          description: 'Background color for the highlighted rating icon',
-        },
-      },
+      "rating-star-highlighted": {
+        "$value": "{options.color.golden-yellow-500}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "rating",
+          "example": "color",
+          "description": "Background color for the highlighted rating icon"
+        }
+      }
     },
-
-    border: {
-      'rating-star': {
-        default: {
-          value: '{options.color.warm-grey-700}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'rating',
-            example: 'color',
-            description: 'Default border color for the unhighlighted rating icon',
-          },
+    "border": {
+      "rating-star": {
+        "default": {
+          "$value": "{options.color.warm-grey-700}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Default border color for the unhighlighted rating icon"
+          }
         },
-        highlighted: {
-          value: '{options.color.golden-yellow-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'rating',
-            example: 'color',
-            description: 'Border color for the highlighted rating icon',
-          },
-        },
-      },
-    },
-  },
+        "highlighted": {
+          "$value": "{options.color.golden-yellow-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Border color for the highlighted rating icon"
+          }
+        }
+      }
+    }
+  }
 }

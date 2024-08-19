@@ -6,7 +6,7 @@ export const scssMixin = (StyleDictionary) => {
     name: 'scss/mixin',
     format: ({ dictionary, platform }) => {
       const prefix = platform.prefix ? `${platform.prefix}-` : ''
-      const mixins = ['@import \'./deprecate.scss\';\n\n']
+      const mixins = ['@import \'./deprecate.scss\';\n']
       const mixinProperties = _.filter(dictionary.allTokens, o => _.has(o, 'mixin'))
       const mixinNames = _.uniq(mixinProperties.map(o => o.mixin))
 
@@ -16,7 +16,7 @@ export const scssMixin = (StyleDictionary) => {
         const declarations = []
         let mixin = ''
 
-        singleMixinProps.map(o => declarations.push(`${o.property}: ${o.value};`))
+        singleMixinProps.map(o => declarations.push(`${o.property}: ${o.$value};`))
 
         if (singleMixinProps[0].attributes.deprecated === true) {
           // DEPRECATED
@@ -38,14 +38,14 @@ export const scssMixin = (StyleDictionary) => {
   @mixin ${prefixedName}() {
   ${declarations.join('\n  ')}
   @include deprecate-mixin(${deprecateYear}, "${deprecateRelease}", "${prefixedName}", ${prefixedNewName});
-  }`
+}`
         } else {
           // NOT DEPRECATED
           mixin = `@mixin ${prefixedName}() {
-    ${declarations.join('\n  ')}
-  }\n\n%${prefixedName} {
-    ${declarations.join('\n  ')}
-  }`
+  ${declarations.join('\n  ')}
+}\n\n%${prefixedName} {
+  ${declarations.join('\n  ')}
+}`
         }
 
         mixins.push(mixin)

@@ -1,18 +1,17 @@
+import { commonConfig } from '../utils.mjs'
+
 export const figma = (theme) => ({
   figma: {
-    prefix: 'cdr',
+    ...commonConfig(theme, 'figma'),
     transformGroup: 'tokens-studio',
-    transform: [
+    transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/kebab',
       'size/space',
-      'size/px-to-rem',
+      'size/px-to-rem-transitive',
       'color/alpha',
-      'color/css-transitive',
-      'time-seconds'
+      'color/css-transitive'
     ],
-    buildPath: `dist/${theme}/figma/`,
     files: [
       {
         destination: 'figma.json',

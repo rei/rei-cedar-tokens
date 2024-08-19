@@ -3,11 +3,10 @@ export const spaceJs = (StyleDictionary) => {
     name: 'size/space-js',
     type: 'value',
     transitive: true,
-    filter: (prop) => (prop.attributes.category === 'size') && prop.spacingModifier,
-    transform: (prop) => {
-      const { value, spacingModifier } = prop
-
-      const num = (parseInt(value) * spacingModifier)
+    filter: (token) => (token.$type === 'dimension') && token.spacingModifier,
+    transform: (token) => {
+      const { $value, spacingModifier } = token
+      const num = (parseInt($value) * spacingModifier)
       return num.toString()
     }
   })

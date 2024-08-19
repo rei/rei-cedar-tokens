@@ -1,21 +1,20 @@
+import { commonConfig } from '../utils.mjs'
+
 export const js = (theme) => ({
   js: {
-    prefix: 'cdr',
-    transformGroup: 'tokens-studio',
+    ...commonConfig(theme, 'js'),
     transforms: [
       'attribute/deprecated',
-      'attribute/cdr-cti',
       'name/pascal',
       'size/strip-all-px-js',
       'size/space-js',
       'color/alpha',
       'color/css-transitive'
     ],
-    buildPath: `dist/${theme}/js/`,
     files: [
       {
         destination: 'cdr-tokens.cjs',
-        format: 'js/commonjs',
+        format: 'javascript/module-flat',
         options: {
           showFileHeader: false
         }

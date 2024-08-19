@@ -5,12 +5,12 @@ export const alpha = (StyleDictionary) => {
     name: 'color/alpha',
     type: 'value',
     transitive: true,
-    filter: (prop) => (prop.attributes.category === 'color') && prop.alpha,
-    transform: (prop) => {
-      const { value, alpha } = prop
-
-      const color = tinycolor(value)
+    filter: (token) => (token.$type === 'color') && token.alpha,
+    transform: (token) => {
+      const { $value, alpha } = token
+      const color = tinycolor($value)
       color.setAlpha(alpha)
+
       return color.toRgbString()
     }
   })
