@@ -1664,7 +1664,7 @@ $cdr-radius-soft: 0.2rem;
 $cdr-radius-softer: 0.4rem;
 $cdr-radius-softest: 0.6rem;
 $cdr-radius-round: 999.9rem;
-$cdr-space-zero-x: 0;
+$cdr-space-zero: 0;
 $cdr-space-sixteenth-x: 0.1rem;
 $cdr-space-eighth-x: 0.2rem;
 $cdr-space-three-sixteenth-x: 0.3rem;
@@ -2218,75 +2218,6 @@ $cdr-knockout-color-border-note: #c4b03b;
 $cdr-knockout-color-border-table-row: #4e4d49;
 $cdr-knockout-color-icon-inverse-default: #dcd6cb;
 $cdr-knockout-color-icon-background-note: #c4b03b;
-
-// DON'T MOVE THIS FILE
-// It will be copied into `dist`
-
-// Enable/disable warnings
-$cdr-warn: true !default;
-
-// year/release cycle of cedar
-// UPDATE WITH EACH RELEASE
-$current-release-year: 2024;
-$current-release-cycle: "q4";
-
-@function getDeprecationDate($year, $cycle) {
-  @if $cycle == "winter" {
-    @return "#{$year} summer";
-  }
-  @else if $cycle == "spring" {
-    @return "#{$year} fall";
-  }
-  @else if $cycle == "summer" {
-    $nextYear: $year + 1;
-    @return "#{$nextYear} winter";
-  }
-  @else if $cycle == "fall" {
-    $nextYear: $year + 1;
-    @return "#{$nextYear} spring";
-  }
-}
-
-@mixin deprecate($year, $cycle, $message) {
-  // warnings disabled
-  @if ($cdr-warn == false) {
-    @content;
-  }
-
-  @else {
-    @warn "Deprecated code found, remove before the #{getDeprecationDate($year, $cycle)} release: #{$message}";
-    @content;
-  }
-}
-
-@mixin deprecate-variables($year, $cycle, $variables) {
-  // warnings disabled
-  @if ($cdr-warn == false) {
-    @content;
-  }
-
-  @else {
-    @warn "The following variables have been deprecated and will be removed from `cdr-tokens` in the #{getDeprecationDate($year, $cycle)} release: #{$variables}";
-    @content;
-  }
-}
-
-@mixin deprecate-mixin($year, $cycle, $name, $newName: null) {
-  // warnings disabled
-  @if ($cdr-warn == false) {
-    @content;
-  }
-
-  @else if ($newName != null) {
-    @warn "Mixin '#{$name}' is deprecated and will be removed from `cdr-tokens` in the #{getDeprecationDate($year, $cycle)} release. Use '#{$newName}' instead";
-    @content;
-  }
-
-  @else {
-    @warn "Mixin '#{$name}' is deprecated and will be removed from `cdr-tokens` in the #{getDeprecationDate($year, $cycle)} release";
-    @content;
-  }
-}
 
 @mixin cdr-display-sr-only() {
   position: absolute;

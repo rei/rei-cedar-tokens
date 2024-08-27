@@ -293,7 +293,7 @@ export const CdrRadiusSoft : string;
 export const CdrRadiusSofter : string;
 export const CdrRadiusSoftest : string;
 export const CdrRadiusRound : string;
-export const CdrSpaceZeroX : number;
+export const CdrSpaceZero : number;
 export const CdrSpaceSixteenthX : string;
 export const CdrSpaceEighthX : string;
 export const CdrSpaceThreeSixteenthX : string;

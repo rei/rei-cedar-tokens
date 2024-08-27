@@ -38,7 +38,7 @@ extern float const CdrRadiusSoft;
 extern float const CdrRadiusSofter;
 extern float const CdrRadiusSoftest;
 extern float const CdrRadiusRound;
-extern float const CdrSpaceZeroX;
+extern float const CdrSpaceZero;
 extern float const CdrSpaceSixteenthX;
 extern float const CdrSpaceEighthX;
 extern float const CdrSpaceThreeSixteenthX;
