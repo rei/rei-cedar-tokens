@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, CdrColorName) {
+typedef NS_ENUM(NSInteger, ) {
 CdrColorTextButtonPrimary,
 CdrColorTextButtonPrimaryHover,
 CdrColorTextButtonPrimaryActive,
@@ -90,6 +90,7 @@ CdrColorBackgroundChipDefaultSelected,
 CdrColorBackgroundChipDefaultSelectedHover,
 CdrColorBackgroundChipDefaultSelectedFocus,
 CdrColorBackgroundChipDefaultSelectedActive,
+CdrColorBackgroundTransparent,
 CdrColorBackgroundPrimary,
 CdrColorBackgroundSecondary,
 CdrColorBackgroundBrandSpruce,
@@ -131,6 +132,8 @@ CdrColorBackgroundInputDefaultSelectedFocus,
 CdrColorBackgroundInputDefaultFocus,
 CdrColorBackgroundRatingStarDefault,
 CdrColorBackgroundRatingStarHighlighted,
+CdrColorBackgroundSurfacePrimary,
+CdrColorBackgroundSurfaceSecondary,
 CdrColorBackgroundSwitchDefaultRest,
 CdrColorBackgroundSwitchDefaultHover,
 CdrColorBackgroundSwitchDefaultFocus,
@@ -185,6 +188,7 @@ CdrColorBorderChipDefaultActive,
 CdrColorBorderChipDefaultSelectedRest,
 CdrColorBorderChipDefaultSelectedHover,
 CdrColorBorderChipDefaultSelectedFocus,
+CdrColorBorderTransparent,
 CdrColorBorderPrimary,
 CdrColorBorderSecondary,
 CdrColorBorderSuccess,
@@ -217,6 +221,8 @@ CdrColorBorderLinkDisabled,
 CdrColorBorderLinkVisited,
 CdrColorBorderRatingStarDefault,
 CdrColorBorderRatingStarHighlighted,
+CdrColorBorderSurfacePrimary,
+CdrColorBorderSurfaceSecondary,
 CdrColorBorderSwitchDefaultHover,
 CdrColorBorderSwitchHandleDefaultRest,
 CdrColorBorderSwitchHandleDefaultHover,
@@ -285,7 +291,7 @@ CdrKnockoutColorIconInverseDefault,
 CdrKnockoutColorIconBackgroundNote
 };
 
-@interface CdrColor : NSObject
+@interface : NSObject
 + (NSArray *)values;
-+ (UIColor *)color:(CdrColorName)color;
++ (UIColor *)color:()color;
 @end

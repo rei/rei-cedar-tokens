@@ -2384,6 +2384,35 @@
       }
     },
     {
+      "$value": "transparent",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "A transparent color option"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.transparent}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "A transparent color option"
+        }
+      },
+      "name": "cdr-color-background-transparent",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "transparent",
+        "deprecated": false
+      }
+    },
+    {
       "$value": "#ffffff",
       "$type": "color",
       "docs": {
@@ -3614,6 +3643,66 @@
         "category": "color",
         "type": "background",
         "item": "rating-star-highlighted",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "surface",
+        "example": "color",
+        "description": "Background color for the primary surface"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "surface",
+          "example": "color",
+          "description": "Background color for the primary surface"
+        }
+      },
+      "name": "cdr-color-background-surface-primary",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "surface",
+        "subitem": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#f4f2ed",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "surface",
+        "example": "color",
+        "description": "Background color for the secondary surface"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-200}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "surface",
+          "example": "color",
+          "description": "Background color for the secondary surface"
+        }
+      },
+      "name": "cdr-color-background-surface-secondary",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "surface",
+        "subitem": "secondary",
         "deprecated": false
       }
     },
@@ -5086,6 +5175,35 @@
       }
     },
     {
+      "$value": "transparent",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "A transparent color option"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.transparent}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "A transparent color option"
+        }
+      },
+      "name": "cdr-color-border-transparent",
+      "attributes": {
+        "category": "color",
+        "type": "border",
+        "item": "transparent",
+        "deprecated": false
+      }
+    },
+    {
       "$value": "#dcd6cb",
       "$type": "color",
       "docs": {
@@ -6036,6 +6154,66 @@
         "type": "border",
         "item": "rating-star",
         "subitem": "highlighted",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#dcd6cb",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the primary button"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-400}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the primary button"
+        }
+      },
+      "name": "cdr-color-border-surface-primary",
+      "attributes": {
+        "category": "color",
+        "type": "border",
+        "item": "surface",
+        "subitem": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#928b80",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the secondary button"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the secondary button"
+        }
+      },
+      "name": "cdr-color-border-surface-secondary",
+      "attributes": {
+        "category": "color",
+        "type": "border",
+        "item": "surface",
+        "subitem": "secondary",
         "deprecated": false
       }
     },
@@ -8402,6 +8580,32 @@
       }
     },
     {
+      "$value": "6px",
+      "$type": "dimension",
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "radius"
+      },
+      "filePath": "tokens/global/radius.json5",
+      "isSource": false,
+      "original": {
+        "$value": "6px",
+        "$type": "dimension",
+        "docs": {
+          "type": "radius",
+          "category": "{radius.docCategory}",
+          "example": "{radius.docExample}"
+        }
+      },
+      "name": "cdr-radius-softest",
+      "attributes": {
+        "category": "radius",
+        "type": "softest",
+        "deprecated": false
+      }
+    },
+    {
       "$value": "9999px",
       "$type": "dimension",
       "docs": {
@@ -8429,6 +8633,62 @@
     }
   ],
   "spacing": [
+    {
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.zero-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-zero-x",
+      "attributes": {
+        "category": "space",
+        "type": "zero-x",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "1px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-sixteenth-x",
+      "attributes": {
+        "category": "space",
+        "type": "sixteenth-x",
+        "deprecated": false
+      }
+    },
     {
       "$value": "2px",
       "$type": "dimension",
@@ -8458,6 +8718,34 @@
       }
     },
     {
+      "$value": "3px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-three-sixteenth-x",
+      "attributes": {
+        "category": "space",
+        "type": "three-sixteenth-x",
+        "deprecated": false
+      }
+    },
+    {
       "$value": "4px",
       "$type": "dimension",
       "docs": {
@@ -8482,6 +8770,34 @@
       "attributes": {
         "category": "space",
         "type": "quarter-x",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "6px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-three-eighth-x",
+      "attributes": {
+        "category": "space",
+        "type": "three-eighth-x",
         "deprecated": false
       }
     },
@@ -8682,6 +8998,35 @@
       }
     },
     {
+      "$value": "1px",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-sixteenth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "sixteenth-x",
+        "deprecated": false
+      }
+    },
+    {
       "$value": "2px",
       "$type": "dimension",
       "docs": {
@@ -8815,6 +9160,35 @@
         "category": "space",
         "type": "inset",
         "item": "eighth-x-stretch-left-right",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "3px",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-sixteenth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-sixteenth-x",
         "deprecated": false
       }
     },
@@ -8956,6 +9330,35 @@
         "category": "space",
         "type": "inset",
         "item": "quarter-x-stretch-left-right",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "6px",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-eighth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-eighth-x",
         "deprecated": false
       }
     },

@@ -224,6 +224,16 @@
       }
     },
     "background": {
+      "transparent": {
+        "$value": "{options.color.transparent}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "A transparent color option"
+        }
+      },
       "primary": {
         "$value": "{options.color.white}",
         "$type": "color",
@@ -451,6 +461,16 @@
       }
     },
     "border": {
+      "transparent": {
+        "$value": "{options.color.transparent}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "A transparent color option"
+        }
+      },
       "primary": {
         "$value": "{options.color.warm-grey-400}",
         "$type": "color",

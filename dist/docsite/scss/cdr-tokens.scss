@@ -1437,6 +1437,7 @@ $cdr-color-background-chip-default-selected: #dcd6cb;
 $cdr-color-background-chip-default-selected-hover: #edeae3;
 $cdr-color-background-chip-default-selected-focus: #dcd6cb;
 $cdr-color-background-chip-default-selected-active: #edeae3;
+$cdr-color-background-transparent: rgba(0, 0, 0, 0);
 $cdr-color-background-primary: #f4f2ed;
 $cdr-color-background-secondary: #ffffff;
 $cdr-color-background-brand-spruce: #1f513f;
@@ -1478,6 +1479,8 @@ $cdr-color-background-input-default-selected-focus: #928b80;
 $cdr-color-background-input-default-focus: #f9f8f6;
 $cdr-color-background-rating-star-default: #f9f8f6;
 $cdr-color-background-rating-star-highlighted: #ffd280;
+$cdr-color-background-surface-primary: #ffffff;
+$cdr-color-background-surface-secondary: #f4f2ed;
 $cdr-color-background-switch-default-rest: #f9f8f6;
 $cdr-color-background-switch-default-hover: #f9f8f6;
 $cdr-color-background-switch-default-focus: #f9f8f6;
@@ -1532,6 +1535,7 @@ $cdr-color-border-chip-default-active: #4e4d49;
 $cdr-color-border-chip-default-selected-rest: #4e4d49;
 $cdr-color-border-chip-default-selected-hover: #726d64;
 $cdr-color-border-chip-default-selected-focus: #4e4d49;
+$cdr-color-border-transparent: rgba(0, 0, 0, 0);
 $cdr-color-border-primary: #dcd6cb;
 $cdr-color-border-secondary: #928b80;
 $cdr-color-border-success: #3b8349;
@@ -1564,6 +1568,8 @@ $cdr-color-border-link-disabled: #dcd6cb;
 $cdr-color-border-link-visited: #406eb5;
 $cdr-color-border-rating-star-default: #928b80;
 $cdr-color-border-rating-star-highlighted: #bd7b2d;
+$cdr-color-border-surface-primary: #dcd6cb;
+$cdr-color-border-surface-secondary: #928b80;
 $cdr-color-border-switch-default-hover: #4e4d49;
 $cdr-color-border-switch-handle-default-rest: #dcd6cb;
 $cdr-color-border-switch-handle-default-hover: #4e4d49;
@@ -1656,9 +1662,14 @@ $cdr-prominence-lifted: 0 1.6rem 1.6rem 0 rgba(12, 11, 8, 0.2);
 $cdr-radius-sharp: 0;
 $cdr-radius-soft: 0.2rem;
 $cdr-radius-softer: 0.4rem;
+$cdr-radius-softest: 0.6rem;
 $cdr-radius-round: 999.9rem;
+$cdr-space-zero-x: 0;
+$cdr-space-sixteenth-x: 0.1rem;
 $cdr-space-eighth-x: 0.2rem;
+$cdr-space-three-sixteenth-x: 0.3rem;
 $cdr-space-quarter-x: 0.4rem;
+$cdr-space-three-eighth-x: 0.6rem;
 $cdr-space-half-x: 0.8rem;
 $cdr-space-three-quarter-x: 1.2rem;
 $cdr-space-one-x: 1.6rem;
@@ -1666,16 +1677,19 @@ $cdr-space-one-and-a-half-x: 2.4rem;
 $cdr-space-two-x: 3.2rem;
 $cdr-space-three-x: 4.8rem;
 $cdr-space-four-x: 6.4rem;
+$cdr-space-inset-sixteenth-x: 0.1rem;
 $cdr-space-inset-eighth-x: 0.2rem;
 $cdr-space-inset-eighth-x-squish-top-bottom: 0;
 $cdr-space-inset-eighth-x-squish-left-right: 0.2rem;
 $cdr-space-inset-eighth-x-stretch-top-bottom: 0.4rem;
 $cdr-space-inset-eighth-x-stretch-left-right: 0.2rem;
+$cdr-space-inset-three-sixteenth-x: 0.3rem;
 $cdr-space-inset-quarter-x: 0.4rem;
 $cdr-space-inset-quarter-x-squish-top-bottom: 0.2rem;
 $cdr-space-inset-quarter-x-squish-left-right: 0.4rem;
 $cdr-space-inset-quarter-x-stretch-top-bottom: 0.6rem;
 $cdr-space-inset-quarter-x-stretch-left-right: 0.4rem;
+$cdr-space-inset-three-eighth-x: 0.6rem;
 $cdr-space-inset-half-x: 0.8rem;
 $cdr-space-inset-half-x-squish-top-bottom: 0.4rem;
 $cdr-space-inset-half-x-squish-left-right: 0.8rem;
@@ -2204,6 +2218,75 @@ $cdr-knockout-color-border-note: #c4b03b;
 $cdr-knockout-color-border-table-row: #4e4d49;
 $cdr-knockout-color-icon-inverse-default: #dcd6cb;
 $cdr-knockout-color-icon-background-note: #c4b03b;
+
+// DON'T MOVE THIS FILE
+// It will be copied into `dist`
+
+// Enable/disable warnings
+$cdr-warn: true !default;
+
+// year/release cycle of cedar
+// UPDATE WITH EACH RELEASE
+$current-release-year: 2024;
+$current-release-cycle: "q4";
+
+@function getDeprecationDate($year, $cycle) {
+  @if $cycle == "winter" {
+    @return "#{$year} summer";
+  }
+  @else if $cycle == "spring" {
+    @return "#{$year} fall";
+  }
+  @else if $cycle == "summer" {
+    $nextYear: $year + 1;
+    @return "#{$nextYear} winter";
+  }
+  @else if $cycle == "fall" {
+    $nextYear: $year + 1;
+    @return "#{$nextYear} spring";
+  }
+}
+
+@mixin deprecate($year, $cycle, $message) {
+  // warnings disabled
+  @if ($cdr-warn == false) {
+    @content;
+  }
+
+  @else {
+    @warn "Deprecated code found, remove before the #{getDeprecationDate($year, $cycle)} release: #{$message}";
+    @content;
+  }
+}
+
+@mixin deprecate-variables($year, $cycle, $variables) {
+  // warnings disabled
+  @if ($cdr-warn == false) {
+    @content;
+  }
+
+  @else {
+    @warn "The following variables have been deprecated and will be removed from `cdr-tokens` in the #{getDeprecationDate($year, $cycle)} release: #{$variables}";
+    @content;
+  }
+}
+
+@mixin deprecate-mixin($year, $cycle, $name, $newName: null) {
+  // warnings disabled
+  @if ($cdr-warn == false) {
+    @content;
+  }
+
+  @else if ($newName != null) {
+    @warn "Mixin '#{$name}' is deprecated and will be removed from `cdr-tokens` in the #{getDeprecationDate($year, $cycle)} release. Use '#{$newName}' instead";
+    @content;
+  }
+
+  @else {
+    @warn "Mixin '#{$name}' is deprecated and will be removed from `cdr-tokens` in the #{getDeprecationDate($year, $cycle)} release";
+    @content;
+  }
+}
 
 @mixin cdr-display-sr-only() {
   position: absolute;

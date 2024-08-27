@@ -1,0 +1,52 @@
+{
+  "color": {
+    "background": {
+      "surface": {
+        "primary": {
+          "$value": "{options.color.white}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Background color for the primary surface"
+          }
+        },
+        "secondary": {
+          "$value": "{options.color.warm-grey-200}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Background color for the secondary surface"
+          }
+        },
+      }
+    },
+    "border": {
+      "surface": {
+        "primary": {
+          "$value": "{options.color.warm-grey-400}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the primary button"
+          }
+        },
+        "secondary": {
+          "$value": "{options.color.warm-grey-700}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the secondary button"
+          }
+        }
+      }
+    }
+  }
+}

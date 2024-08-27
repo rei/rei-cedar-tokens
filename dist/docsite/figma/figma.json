@@ -793,6 +793,15 @@
           }
         }
       },
+      "transparent": {
+        "$value": "rgba(0, 0, 0, 0)",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5",
+        "original": {
+          "$value": "{options.color.transparent}",
+          "$type": "color"
+        }
+      },
       "primary": {
         "$value": "#f4f2ed",
         "$type": "color",
@@ -1168,6 +1177,26 @@
         "original": {
           "$value": "{options.color.golden-yellow-500}",
           "$type": "color"
+        }
+      },
+      "surface": {
+        "primary": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.white}",
+            "$type": "color"
+          }
+        },
+        "secondary": {
+          "$value": "#f4f2ed",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.warm-grey-200}",
+            "$type": "color"
+          }
         }
       },
       "switch": {
@@ -1692,6 +1721,15 @@
           }
         }
       },
+      "transparent": {
+        "$value": "rgba(0, 0, 0, 0)",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5",
+        "original": {
+          "$value": "{options.color.transparent}",
+          "$type": "color"
+        }
+      },
       "primary": {
         "$value": "#dcd6cb",
         "$type": "color",
@@ -1986,6 +2024,26 @@
           "filePath": "tokens/global/rating.json5",
           "original": {
             "$value": "{options.color.golden-yellow-800}",
+            "$type": "color"
+          }
+        }
+      },
+      "surface": {
+        "primary": {
+          "$value": "#dcd6cb",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.warm-grey-400}",
+            "$type": "color"
+          }
+        },
+        "secondary": {
+          "$value": "#928b80",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.warm-grey-700}",
             "$type": "color"
           }
         }
@@ -2849,6 +2907,15 @@
         "$type": "dimension"
       }
     },
+    "softest": {
+      "$value": "0.6rem",
+      "$type": "dimension",
+      "filePath": "tokens/global/radius.json5",
+      "original": {
+        "$value": "6px",
+        "$type": "dimension"
+      }
+    },
     "round": {
       "$value": "999.9rem",
       "$type": "dimension",
@@ -2860,6 +2927,28 @@
     }
   },
   "space": {
+    "zero-x": {
+      "$value": "0",
+      "$type": "dimension",
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "original": {
+        "$value": "{options.space.zero-x}",
+        "$type": "dimension",
+        "utility-class": true
+      }
+    },
+    "sixteenth-x": {
+      "$value": "0.1rem",
+      "$type": "dimension",
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "original": {
+        "$value": "{options.space.sixteenth-x}",
+        "$type": "dimension",
+        "utility-class": true
+      }
+    },
     "eighth-x": {
       "$value": "0.2rem",
       "$type": "dimension",
@@ -2871,6 +2960,17 @@
         "utility-class": true
       }
     },
+    "three-sixteenth-x": {
+      "$value": "0.3rem",
+      "$type": "dimension",
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "original": {
+        "$value": "{options.space.three-sixteenth-x}",
+        "$type": "dimension",
+        "utility-class": true
+      }
+    },
     "quarter-x": {
       "$value": "0.4rem",
       "$type": "dimension",
@@ -2878,6 +2978,17 @@
       "filePath": "tokens/global/space.json5",
       "original": {
         "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "utility-class": true
+      }
+    },
+    "three-eighth-x": {
+      "$value": "0.6rem",
+      "$type": "dimension",
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "original": {
+        "$value": "{options.space.three-eighth-x}",
         "$type": "dimension",
         "utility-class": true
       }
@@ -2960,6 +3071,17 @@
       }
     },
     "inset": {
+      "sixteenth-x": {
+        "$value": "0.1rem",
+        "$type": "dimension",
+        "utility-class": true,
+        "filePath": "tokens/global/space.json5",
+        "original": {
+          "$value": "{space.sixteenth-x}",
+          "$type": "dimension",
+          "utility-class": true
+        }
+      },
       "eighth-x": {
         "$value": "0.2rem",
         "$type": "dimension",
@@ -3005,6 +3127,17 @@
         "original": {
           "$value": "2px",
           "$type": "dimension"
+        }
+      },
+      "three-sixteenth-x": {
+        "$value": "0.3rem",
+        "$type": "dimension",
+        "utility-class": true,
+        "filePath": "tokens/global/space.json5",
+        "original": {
+          "$value": "{space.three-sixteenth-x}",
+          "$type": "dimension",
+          "utility-class": true
         }
       },
       "quarter-x": {
@@ -3056,6 +3189,17 @@
         "original": {
           "$value": "{options.space.quarter-x}",
           "$type": "dimension"
+        }
+      },
+      "three-eighth-x": {
+        "$value": "0.6rem",
+        "$type": "dimension",
+        "utility-class": true,
+        "filePath": "tokens/global/space.json5",
+        "original": {
+          "$value": "{space.three-eighth-x}",
+          "$type": "dimension",
+          "utility-class": true
         }
       },
       "half-x": {

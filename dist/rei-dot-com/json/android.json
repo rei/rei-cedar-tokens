@@ -2069,6 +2069,32 @@
       }
     },
     {
+      "$value": "#00000000",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "background",
+        "example": "color",
+        "description": "A transparent color option"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.transparent}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "A transparent color option"
+        }
+      },
+      "name": "cdr_color_background_transparent",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "#ffffffff",
       "$type": "color",
       "docs": {
@@ -3142,6 +3168,58 @@
         }
       },
       "name": "cdr_color_background_rating_star_highlighted",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "surface",
+        "example": "color",
+        "description": "Background color for the primary surface"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "surface",
+          "example": "color",
+          "description": "Background color for the primary surface"
+        }
+      },
+      "name": "cdr_color_background_surface_primary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fff4f2ed",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "surface",
+        "example": "color",
+        "description": "Background color for the secondary surface"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-200}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "surface",
+          "example": "color",
+          "description": "Background color for the secondary surface"
+        }
+      },
+      "name": "cdr_color_background_surface_secondary",
       "attributes": {
         "deprecated": false
       }
@@ -4395,6 +4473,32 @@
       }
     },
     {
+      "$value": "#00000000",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "border",
+        "example": "color",
+        "description": "A transparent color option"
+      },
+      "filePath": "tokens/global/color.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.transparent}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "border",
+          "example": "color",
+          "description": "A transparent color option"
+        }
+      },
+      "name": "cdr_color_border_transparent",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "#ffdcd6cb",
       "$type": "color",
       "docs": {
@@ -5222,6 +5326,58 @@
         }
       },
       "name": "cdr_color_border_rating_star_highlighted",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffdcd6cb",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the primary button"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-400}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the primary button"
+        }
+      },
+      "name": "cdr_color_border_surface_primary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ff928b80",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the secondary button"
+      },
+      "filePath": "tokens/global/surface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the secondary button"
+        }
+      },
+      "name": "cdr_color_border_surface_secondary",
       "attributes": {
         "deprecated": false
       }
@@ -7153,6 +7309,30 @@
       }
     },
     {
+      "$value": "6.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "radius"
+      },
+      "filePath": "tokens/global/radius.json5",
+      "isSource": false,
+      "original": {
+        "$value": "6px",
+        "$type": "dimension",
+        "docs": {
+          "type": "radius",
+          "category": "{radius.docCategory}",
+          "example": "{radius.docExample}"
+        }
+      },
+      "name": "cdr_radius_softest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "9999.00dp",
       "$type": "dimension",
       "docs": {
@@ -7178,6 +7358,58 @@
     }
   ],
   "spacing": [
+    {
+      "$value": "0.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.zero-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_zero_x",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "1.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_sixteenth_x",
+      "attributes": {
+        "deprecated": false
+      }
+    },
     {
       "$value": "2.00dp",
       "$type": "dimension",
@@ -7205,6 +7437,32 @@
       }
     },
     {
+      "$value": "3.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_three_sixteenth_x",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "4.00dp",
       "$type": "dimension",
       "docs": {
@@ -7226,6 +7484,32 @@
         "utility-class": true
       },
       "name": "cdr_space_quarter_x",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "6.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "{space.docCategory}",
+          "example": "{space.docExample}"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_three_eighth_x",
       "attributes": {
         "deprecated": false
       }
@@ -7413,6 +7697,32 @@
       }
     },
     {
+      "$value": "1.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_inset_sixteenth_x",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "2.00dp",
       "$type": "dimension",
       "docs": {
@@ -7530,6 +7840,32 @@
         }
       },
       "name": "cdr_space_inset_eighth_x_stretch_left_right",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "3.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_inset_three_sixteenth_x",
       "attributes": {
         "deprecated": false
       }
@@ -7656,6 +7992,32 @@
         }
       },
       "name": "cdr_space_inset_quarter_x_stretch_left_right",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "6.00dp",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset"
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "name": "cdr_space_inset_three_eighth_x",
       "attributes": {
         "deprecated": false
       }
