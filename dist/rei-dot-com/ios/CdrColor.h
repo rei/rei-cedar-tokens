@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, CdrColorName) {
+typedef NS_ENUM(NSInteger, ) {
 CdrColorTextButtonPrimary,
 CdrColorTextButtonPrimaryHover,
 CdrColorTextButtonPrimaryActive,
@@ -246,7 +246,7 @@ CdrProminenceFloatingColor,
 CdrProminenceLiftedColor
 };
 
-@interface CdrColor : NSObject
+@interface : NSObject
 + (NSArray *)values;
-+ (UIColor *)color:(CdrColorName)color;
++ (UIColor *)color:()color;
 @end

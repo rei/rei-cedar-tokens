@@ -279,3 +279,8 @@ Found in `style-dictionary/transforms`
 
 See API for [creating a transform](https://styledictionary.com/reference/hooks/transforms/)
 
+See [transform docs](https://amzn.github.io/style-dictionary/#/transforms).
+
+### Validation
+
+Because this library has many dependencies, there is a validation script that performs some checks. One of the tests is verifying the file structure has not changed. If a change is intentional, you may execute `npm run validate -- --update` or delete the `validate-structure.json` file and then execute `npm run validate`. The `validate-structure.json` file should be commited.
