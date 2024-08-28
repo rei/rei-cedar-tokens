@@ -2,15 +2,17 @@ const glob = require('glob');
 const requireJSON5 = require('require-json5');
 const _ = require('lodash');
 const process = require('process');
+const dirToJson = require('dir-to-json');
+const fs = require('fs');
 
 const files = glob.sync('./tokens/**/*.json5');
 const results = [];
 
-const addDelimiter = (a, b) => a ? `${a}-${b}` : b;
+const addDelimiter = (a, b) => (a ? `${a}-${b}` : b);
 
-// check if object has a `value` property and if any children also have `value` (style dictionary 
+// check if object has a `value` property and if any children also have `value` (style dictionary
 // will only process the topmost object with `value`)
-const validate = (obj, path='', to_ret=[]) => {
+const validate = (obj, path = '', to_ret = []) => {
   const hasValue = _.has(obj, 'value');
 
   for (const key in obj) {
@@ -33,8 +35,8 @@ files.forEach((file) => {
   const response = validate(requireJSON5(file));
 
   if (response.length > 0) {
-    results.push(`  In ${file}:`)
-    results.push(`    ${response.join('\r\n    ')}`)
+    results.push(`  In ${file}:`);
+    results.push(`    ${response.join('\r\n    ')}`);
   }
 });
 
@@ -43,5 +45,34 @@ if (results.length > 0) {
   console.log(results.join('\r\n'));
   process.exitCode = 1;
 } else {
-  console.log('All files successfully validated');
+  console.log('Files successfully validated');
 }
+
+// Check if file structure is the same
+const validateStructure = async () => {
+  const validationFile = 'validate-structure.json';
+  const newData = await dirToJson('./dist', { sortType: true });
+  let existingData;
+
+  try {
+    const raw = fs.readFileSync(validationFile, 'utf8');
+    existingData = JSON.parse(raw);
+  } catch (err) {
+    existingData = null;
+  }
+
+  // If no existing data found, create it
+  if (!existingData) {
+    fs.writeFileSync(validationFile, JSON.stringify(currentData));
+    console.log('Created new validation data');
+    return;
+  }
+
+  if (!_.isEqual(existingData, newData)) {
+    throw new Error('Structure in dist folder has changed!');
+  }
+
+  console.log('Dist data structure has not changed');
+};
+
+validateStructure();
