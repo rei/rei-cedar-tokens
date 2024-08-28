@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 28 Feb 2024 20:15:50 GMT
+ * Generated on Wed, 28 Aug 2024 21:56:24 GMT
  */
 
 export const CdrColorTextButtonPrimary : string;

@@ -63,7 +63,7 @@ const validateStructure = async () => {
 
   // If no existing data found, create it
   if (!existingData) {
-    fs.writeFileSync(validationFile, JSON.stringify(currentData));
+    fs.writeFileSync(validationFile, JSON.stringify(newData));
     console.log('Created new validation data');
     return;
   }

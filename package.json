@@ -37,7 +37,7 @@
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
     "build:tokens": "npm run clean && node ./style-dictionary/build.js",
     "clean": "rimraf dist/",
-    "build": "npm run clean && npm run validate && npm run build:tokens && npm run site-tokens",
+    "build": "npm run clean && npm run build:tokens && npm run site-tokens && npm run validate",
     "build:grid": "node grid.js",
     "site-tokens": "node ./siteTokens.js",
     "validate": "node ./validate.js"
