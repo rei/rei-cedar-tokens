@@ -5,6 +5,7 @@ const process = require('process');
 const dirToJson = require('dir-to-json');
 const fs = require('fs');
 
+const args = process.argv.slice(2);
 const files = glob.sync('./tokens/**/*.json5');
 const results = [];
 
@@ -50,6 +51,7 @@ if (results.length > 0) {
 
 // Check if file structure is the same
 const validateStructure = async () => {
+  const isUpdating = args.includes('--update');
   const validationFile = 'validate-structure.json';
   const newData = await dirToJson('./dist', { sortType: true });
   let existingData;
@@ -61,8 +63,9 @@ const validateStructure = async () => {
     existingData = null;
   }
 
-  // If no existing data found, create it
-  if (!existingData) {
+
+  // If no existing data found or is updating, create it
+  if (!existingData || isUpdating) {
     fs.writeFileSync(validationFile, JSON.stringify(newData));
     console.log('Created new validation data');
     return;
