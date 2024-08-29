@@ -3719,7 +3719,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Background color for surface selection"
+        "description": "Background color for the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -3730,15 +3730,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Background color for surface selection"
+          "description": "Background color for the default surface selection"
         }
       },
-      "name": "cdr-color-background-surface-selection-rest",
+      "name": "cdr-color-background-surface-selection-default-rest",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "surface-selection",
-        "subitem": "rest",
+        "subitem": "default",
+        "state": "rest",
         "deprecated": false
       }
     },
@@ -3749,7 +3750,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Background color for the active state of surface selection"
+        "description": "Background color for the active state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -3760,15 +3761,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Background color for the active state of surface selection"
+          "description": "Background color for the active state of the default surface selection"
         }
       },
-      "name": "cdr-color-background-surface-selection-active",
+      "name": "cdr-color-background-surface-selection-default-active",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "surface-selection",
-        "subitem": "active",
+        "subitem": "default",
+        "state": "active",
         "deprecated": false
       }
     },
@@ -3779,7 +3781,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Background color for the hover state of surface selection"
+        "description": "Background color for the hover state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -3790,15 +3792,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Background color for the hover state of surface selection"
+          "description": "Background color for the hover state of the default surface selection"
         }
       },
-      "name": "cdr-color-background-surface-selection-hover",
+      "name": "cdr-color-background-surface-selection-default-hover",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "surface-selection",
-        "subitem": "hover",
+        "subitem": "default",
+        "state": "hover",
         "deprecated": false
       }
     },
@@ -3809,7 +3812,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Background color for the checked state of surface selection"
+        "description": "Background color for the checked state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -3820,15 +3823,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Background color for the checked state of surface selection"
+          "description": "Background color for the checked state of the default surface selection"
         }
       },
-      "name": "cdr-color-background-surface-selection-checked",
+      "name": "cdr-color-background-surface-selection-default-checked",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "surface-selection",
-        "subitem": "checked",
+        "subitem": "default",
+        "state": "checked",
         "deprecated": false
       }
     },
@@ -3839,7 +3843,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Background color for the disabled state of surface selection"
+        "description": "Background color for the disabled state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -3850,15 +3854,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Background color for the disabled state of surface selection"
+          "description": "Background color for the disabled state of the default surface selection"
         }
       },
-      "name": "cdr-color-background-surface-selection-disabled",
+      "name": "cdr-color-background-surface-selection-default-disabled",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "surface-selection",
-        "subitem": "disabled",
+        "subitem": "default",
+        "state": "disabled",
         "deprecated": false
       }
     },
@@ -3869,7 +3874,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Background color for the loading state of surface selection"
+        "description": "Background color for the loading state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -3880,15 +3885,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Background color for the loading state of surface selection"
+          "description": "Background color for the loading state of the default surface selection"
         }
       },
-      "name": "cdr-color-background-surface-selection-loading",
+      "name": "cdr-color-background-surface-selection-default-loading",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "surface-selection",
-        "subitem": "loading",
+        "subitem": "default",
+        "state": "loading",
         "deprecated": false
       }
     },
@@ -6410,7 +6416,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Border color for surface selection"
+        "description": "Border color for the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -6421,15 +6427,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Border color for surface selection"
+          "description": "Border color for the default surface selection"
         }
       },
-      "name": "cdr-color-border-surface-selection-rest",
+      "name": "cdr-color-border-surface-selection-default-rest",
       "attributes": {
         "category": "color",
         "type": "border",
         "item": "surface-selection",
-        "subitem": "rest",
+        "subitem": "default",
+        "state": "rest",
         "deprecated": false
       }
     },
@@ -6440,7 +6447,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Border color for the active state of surface selection"
+        "description": "Border color for the active state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -6451,15 +6458,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Border color for the active state of surface selection"
+          "description": "Border color for the active state of the default surface selection"
         }
       },
-      "name": "cdr-color-border-surface-selection-active",
+      "name": "cdr-color-border-surface-selection-default-active",
       "attributes": {
         "category": "color",
         "type": "border",
         "item": "surface-selection",
-        "subitem": "active",
+        "subitem": "default",
+        "state": "active",
         "deprecated": false
       }
     },
@@ -6470,7 +6478,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Border color for the hover state of surface selection"
+        "description": "Border color for the hover state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -6481,15 +6489,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Border color for the hover state of surface selection"
+          "description": "Border color for the hover state of the default surface selection"
         }
       },
-      "name": "cdr-color-border-surface-selection-hover",
+      "name": "cdr-color-border-surface-selection-default-hover",
       "attributes": {
         "category": "color",
         "type": "border",
         "item": "surface-selection",
-        "subitem": "hover",
+        "subitem": "default",
+        "state": "hover",
         "deprecated": false
       }
     },
@@ -6500,7 +6509,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Border color for the checked state of surface selection"
+        "description": "Border color for the checked state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -6511,15 +6520,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Border color for the checked state of surface selection"
+          "description": "Border color for the checked state of the default surface selection"
         }
       },
-      "name": "cdr-color-border-surface-selection-checked",
+      "name": "cdr-color-border-surface-selection-default-checked",
       "attributes": {
         "category": "color",
         "type": "border",
         "item": "surface-selection",
-        "subitem": "checked",
+        "subitem": "default",
+        "state": "checked",
         "deprecated": false
       }
     },
@@ -6530,7 +6540,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Border color for the disabled state of surface selection"
+        "description": "Border color for the disabled state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -6541,15 +6551,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Border color for the disabled state of surface selection"
+          "description": "Border color for the disabled state of the default surface selection"
         }
       },
-      "name": "cdr-color-border-surface-selection-disabled",
+      "name": "cdr-color-border-surface-selection-default-disabled",
       "attributes": {
         "category": "color",
         "type": "border",
         "item": "surface-selection",
-        "subitem": "disabled",
+        "subitem": "default",
+        "state": "disabled",
         "deprecated": false
       }
     },
@@ -6560,7 +6571,7 @@
         "category": "colors",
         "type": "surface selection",
         "example": "color",
-        "description": "Border color for the loading state of surface selection"
+        "description": "Border color for the loading state of the default surface selection"
       },
       "filePath": "tokens/global/surfaceselection.json5",
       "isSource": false,
@@ -6571,15 +6582,16 @@
           "category": "colors",
           "type": "surface selection",
           "example": "color",
-          "description": "Border color for the loading state of surface selection"
+          "description": "Border color for the loading state of the default surface selection"
         }
       },
-      "name": "cdr-color-border-surface-selection-loading",
+      "name": "cdr-color-border-surface-selection-default-loading",
       "attributes": {
         "category": "color",
         "type": "border",
         "item": "surface-selection",
-        "subitem": "loading",
+        "subitem": "default",
+        "state": "loading",
         "deprecated": false
       }
     },
