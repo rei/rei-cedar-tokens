@@ -10,9 +10,11 @@ export const concatFiles = (StyleDictionary) => {
   // concat all files in buildPath to a given filename
   StyleDictionary.registerAction({
     name: 'concat-files',
-    do: async (dictionary, config) => {
-      await fs.readdir(config.buildPath, async (err, files) => {
-        if (err) { throw err }
+    do: (dictionary, config) => {
+      fs.readdir(config.buildPath, async (error, files) => {
+        if (error) {
+          throw error
+        }
 
         const extension = path.extname(files[0])
         const allPaths = files.map(f => path.join(__dirname, '../../', config.buildPath, f))
@@ -22,25 +24,25 @@ export const concatFiles = (StyleDictionary) => {
 
         noConcatPaths.forEach(async (p) => {
           const newPath = p.replace('.no_concat', '')
-          await fs.rename(p, newPath)
+          fs.renameSync(p, newPath)
         })
 
         // output concat paths
         concat(concatPaths)
           .then(async (r) =>
-            await fs.outputFile(outFile, r)
+            fs.outputFileSync(outFile, r)
           ).catch((err) => {
             console.error('Error concatenating files', err)
           })
 
         // remove concatenated files
         concatPaths.forEach(async (p) => {
-          await fs.remove(p)
+          fs.removeSync(p)
         })
       })
     },
     undo: async (dictionary, config) => {
-      await fs.removeSync(path.join(__dirname, '../../', config.buildPath))
+      fs.removeSync(path.join(__dirname, '../../', config.buildPath))
     }
   })
 }

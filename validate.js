@@ -59,6 +59,7 @@ const validateStructure = async () => {
   try {
     const raw = fs.readFileSync(validationFile, 'utf8');
     existingData = JSON.parse(raw);
+    console.log('\n\n\n\n', existingData, '\n\n\n\n')
   } catch (err) {
     existingData = null;
   }
