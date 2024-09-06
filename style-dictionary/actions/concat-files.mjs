@@ -1,7 +1,6 @@
 import fs from 'fs-extra'
 import concat from 'concat'
 import path from 'path'
-import _ from 'lodash'
 import { getDirname } from '../utils.mjs'
 
 const __dirname = getDirname(import.meta.url)

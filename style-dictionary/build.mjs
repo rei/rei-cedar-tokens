@@ -89,21 +89,26 @@ const platforms = [
   'figma'
 ]
 
-themes.forEach((theme) => {
-  platforms.map(async (platform) => {
-    console.log('\n==============================================')
-    console.log(`\nProcessing: [${platform}] [${theme}]`)
+async function buildAllThemesAndPlatforms () {
+  for (const theme of themes) {
+    for (const platform of platforms) {
+      console.log('\n==============================================')
+      console.log(`\nProcessing: [${platform}] [${theme}]`)
 
-    const sd = new StyleDictionary(getConfig(platform, theme))
-    try {
-      await sd.buildAllPlatforms()
-    } catch (error) {
-      console.error(error)
+      const sd = new StyleDictionary(getConfig(platform, theme))
+      try {
+        await sd.buildAllPlatforms()
+      } catch (error) {
+        console.error(error)
+      }
+
+      console.log(`\nEnd processing [${platform}] [${theme}]`)
     }
+  }
 
-    console.log(`\nEnd processing [${platform}] [${theme}]`)
-  })
-})
+  console.log('\n==============================================')
+  console.log('\nBuild completed!')
+}
 
-console.log('\n==============================================')
-console.log('\nBuild completed!')
+// Run the function to process all themes and platforms
+buildAllThemesAndPlatforms()
