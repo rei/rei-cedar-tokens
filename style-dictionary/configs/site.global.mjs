@@ -17,9 +17,6 @@ export const siteGlobal = (theme) => ({
       {
         destination: 'global.json',
         format: 'site',
-        options: {
-          showFileHeader: false
-        },
         filter: 'remove-source-tokens'
       }
     ]

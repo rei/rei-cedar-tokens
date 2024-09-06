@@ -14,18 +14,12 @@ export const js = (theme) => ({
     files: [
       {
         destination: 'cdr-tokens.cjs',
-        format: 'javascript/module-flat',
-        options: {
-          showFileHeader: false
-        }
+        format: 'javascript/module-flat'
       },
       {
         destination: 'cdr-tokens.mjs',
         format: 'javascript/es6',
-        filter: 'remove-source-tokens',
-        options: {
-          showFileHeader: false
-        }
+        filter: 'remove-source-tokens'
       },
       {
         format: 'typescript/es6-declarations',

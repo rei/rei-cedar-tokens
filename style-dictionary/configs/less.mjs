@@ -15,17 +15,11 @@ export const less = (theme) => ({
     files: [
       {
         destination: 'cdr-variable.less',
-        format: 'less/variables',
-        options: {
-          showFileHeader: false
-        }
+        format: 'less/variables'
       },
       {
         destination: 'cdr-mixins.less',
-        format: 'less/mixin',
-        options: {
-          showFileHeader: false
-        }
+        format: 'less/mixin'
       }
     ],
     actions: ['include-media-queries-less', 'include-display-less', 'concat-files']

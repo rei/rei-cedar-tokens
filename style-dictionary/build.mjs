@@ -100,6 +100,7 @@ async function buildAllThemesAndPlatforms () {
         await sd.buildAllPlatforms()
       } catch (error) {
         console.error(error)
+        throw new Error(`Error building platform: ${platform}`)
       }
 
       console.log(`\nEnd processing [${platform}] [${theme}]`)

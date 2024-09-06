@@ -16,10 +16,7 @@ export const siteIos = (theme) => ({
       {
         destination: 'ios.json',
         format: 'site',
-        filter: 'remove-source-tokens',
-        options: {
-          showFileHeader: false
-        }
+        filter: 'remove-source-tokens'
       }
     ]
   }

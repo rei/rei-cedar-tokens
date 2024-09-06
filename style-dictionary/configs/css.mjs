@@ -15,10 +15,7 @@ export const css = (theme) => ({
     files: [
       {
         destination: 'cdr-tokens.css',
-        format: 'css/variables',
-        options: {
-          showFileHeader: false
-        }
+        format: 'css/variables'
       }
     ]
   }

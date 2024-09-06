@@ -72,10 +72,9 @@ const validateStructure = async () => {
   }
 
   if (!_.isEqual(existingData, newData)) {
-    console.log('Dist data structure has changed');
-    // Print out the difference for easier debugging
+    console.log('Existing data:');
     console.log(JSON.stringify(existingData, null, 2));
-    console.log('---');
+    console.log('New data:');
     console.log(JSON.stringify(newData, null, 2));
     throw new Error('Structure in dist folder has changed!');
   }

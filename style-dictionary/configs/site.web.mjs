@@ -18,9 +18,6 @@ export const siteWeb = (theme) => ({
       {
         destination: 'web.json',
         format: 'site',
-        options: {
-          showFileHeader: false
-        },
         filter: 'remove-source-tokens'
       }
     ]

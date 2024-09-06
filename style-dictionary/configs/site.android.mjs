@@ -16,9 +16,6 @@ export const siteAndroid = (theme) => ({
       {
         destination: 'android.json',
         format: 'site',
-        options: {
-          showFileHeader: false
-        },
         filter: 'remove-source-tokens'
       }
     ]
