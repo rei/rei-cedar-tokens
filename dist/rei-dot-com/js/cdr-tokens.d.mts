@@ -1,7 +1,3 @@
-/**
- * Do not edit directly, this file was auto-generated.
- */
-
 export const CdrColorTextButtonPrimary : string;
 export const CdrColorTextButtonPrimaryHover : string;
 export const CdrColorTextButtonPrimaryActive : string;

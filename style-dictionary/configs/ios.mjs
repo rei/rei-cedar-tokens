@@ -37,8 +37,10 @@ export const ios = (theme) => ({
         filter: {
           $type: 'color'
         },
-        type: 'CdrColorName',
-        className: 'CdrColor'
+        options: {
+          type: 'CdrColorName',
+          className: 'CdrColor'
+        }
       },
       {
         destination: 'CdrColor.m',
