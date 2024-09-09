@@ -3177,6 +3177,162 @@
       "$type": "color",
       "docs": {
         "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Background color for the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Background color for the default selectable surface"
+        }
+      },
+      "name": "cdr_color_background_selectable_surface_default_rest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Background color for the active state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Background color for the active state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_background_selectable_surface_default_active",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Background color for the hover state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Background color for the hover state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_background_selectable_surface_default_hover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Background color for the checked state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Background color for the checked state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_background_selectable_surface_default_checked",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fff7f5f3",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Background color for the disabled state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.cold-grey-200}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Background color for the disabled state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_background_selectable_surface_default_disabled",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fffbfaf9",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Background color for the loading state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.cold-grey-100}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Background color for the loading state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_background_selectable_surface_default_loading",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
         "type": "surface",
         "example": "color",
         "description": "Background color for the primary surface"
@@ -3220,162 +3376,6 @@
         }
       },
       "name": "cdr_color_background_surface_secondary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ffffffff",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Background color for the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Background color for the default surface selection"
-        }
-      },
-      "name": "cdr_color_background_surface_selection_default_rest",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ffffffff",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Background color for the active state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Background color for the active state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_background_surface_selection_default_active",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ffffffff",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Background color for the hover state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Background color for the hover state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_background_surface_selection_default_hover",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ffffffff",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Background color for the checked state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Background color for the checked state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_background_surface_selection_default_checked",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#fff7f5f3",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Background color for the disabled state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.cold-grey-200}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Background color for the disabled state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_background_surface_selection_default_disabled",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#fffbfaf9",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Background color for the loading state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.cold-grey-100}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Background color for the loading state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_background_surface_selection_default_loading",
       "attributes": {
         "deprecated": false
       }
@@ -5487,6 +5487,162 @@
       }
     },
     {
+      "$value": "#ff958e83",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Border color for the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.default-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Border color for the default selectable surface"
+        }
+      },
+      "name": "cdr_color_border_selectable_surface_default_rest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ff958e83",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Border color for the active state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.default-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Border color for the active state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_border_selectable_surface_default_active",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ff958e83",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Border color for the hover state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.default-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Border color for the hover state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_border_selectable_surface_default_hover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ff2e2e2b",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Border color for the checked state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-1050}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Border color for the checked state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_border_selectable_surface_default_checked",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ff958e83",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Border color for the disabled state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.default-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Border color for the disabled state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_border_selectable_surface_default_disabled",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ff958e83",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "selectable surface",
+        "example": "color",
+        "description": "Border color for the loading state of the default selectable surface"
+      },
+      "filePath": "tokens/global/selectablesurface.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.default-grey-700}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "selectable surface",
+          "example": "color",
+          "description": "Border color for the loading state of the default selectable surface"
+        }
+      },
+      "name": "cdr_color_border_selectable_surface_default_loading",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "#ffdcd6cb",
       "$type": "color",
       "docs": {
@@ -5534,162 +5690,6 @@
         }
       },
       "name": "cdr_color_border_surface_secondary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ff958e83",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Border color for the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.default-grey-700}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Border color for the default surface selection"
-        }
-      },
-      "name": "cdr_color_border_surface_selection_default_rest",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ff958e83",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Border color for the active state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.default-grey-700}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Border color for the active state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_border_surface_selection_default_active",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ff958e83",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Border color for the hover state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.default-grey-700}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Border color for the hover state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_border_surface_selection_default_hover",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ff2e2e2b",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Border color for the checked state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-1050}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Border color for the checked state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_border_surface_selection_default_checked",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ff958e83",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Border color for the disabled state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.default-grey-700}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Border color for the disabled state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_border_surface_selection_default_disabled",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#ff958e83",
-      "$type": "color",
-      "docs": {
-        "category": "colors",
-        "type": "surface selection",
-        "example": "color",
-        "description": "Border color for the loading state of the default surface selection"
-      },
-      "filePath": "tokens/global/surfaceselection.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.default-grey-700}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "surface selection",
-          "example": "color",
-          "description": "Border color for the loading state of the default surface selection"
-        }
-      },
-      "name": "cdr_color_border_surface_selection_default_loading",
       "attributes": {
         "deprecated": false
       }
