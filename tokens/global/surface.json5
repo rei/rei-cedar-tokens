@@ -22,6 +22,36 @@
             "description": "Background color for the secondary surface"
           }
         },
+        "brand-spruce": {
+          "$value": "{options.color.blue-spruce-green-1000}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Background color for the brand-spruce surface"
+          }
+        },
+        "member": {
+          "$value": "{options.color.bright-yellow-500}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Background color for the member surface"
+          }
+        },
+        "member-alt": {
+          "$value": "{options.color.blue-spruce-green-1200}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Background color for the member-alt surface"
+          }
+        }
       }
     },
     "border": {
@@ -31,9 +61,9 @@
           "$type": "color",
           "docs": {
             "category": "colors",
-            "type": "button",
+            "type": "surface",
             "example": "color",
-            "description": "Border color for the primary button"
+            "description": "Border color for the primary surface"
           }
         },
         "secondary": {
@@ -41,9 +71,49 @@
           "$type": "color",
           "docs": {
             "category": "colors",
-            "type": "button",
+            "type": "surface",
             "example": "color",
-            "description": "Border color for the secondary button"
+            "description": "Border color for the secondary surface"
+          }
+        },
+        "success": {
+          "$value": "{options.color.success-green-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Border color for the success surface"
+          }
+        },
+        "warning": {
+          "$value": "{options.color.warning-yellow-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Border color for the warning surface"
+          }
+        },
+        "error": {
+          "$value": "{options.color.error-red-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Border color for the error surface"
+          }
+        },
+        "info": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Border color for the info surface"
           }
         }
       }

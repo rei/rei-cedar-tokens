@@ -1179,64 +1179,6 @@
           "$type": "color"
         }
       },
-      "selectable-surface": {
-        "default": {
-          "rest": {
-            "$value": "#ffffff",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.white}",
-              "$type": "color"
-            }
-          },
-          "active": {
-            "$value": "#ffffff",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.white}",
-              "$type": "color"
-            }
-          },
-          "hover": {
-            "$value": "#ffffff",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.white}",
-              "$type": "color"
-            }
-          },
-          "checked": {
-            "$value": "#ffffff",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.white}",
-              "$type": "color"
-            }
-          },
-          "disabled": {
-            "$value": "#f7f5f3",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.cold-grey-200}",
-              "$type": "color"
-            }
-          },
-          "loading": {
-            "$value": "#fbfaf9",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.cold-grey-100}",
-              "$type": "color"
-            }
-          }
-        }
-      },
       "surface": {
         "primary": {
           "$value": "#ffffff",
@@ -1254,6 +1196,91 @@
           "original": {
             "$value": "{options.color.warm-grey-200}",
             "$type": "color"
+          }
+        },
+        "brand-spruce": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.blue-spruce-green-1000}",
+            "$type": "color"
+          }
+        },
+        "member": {
+          "$value": "#ffdc52",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.bright-yellow-500}",
+            "$type": "color"
+          }
+        },
+        "member-alt": {
+          "$value": "#00372a",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.blue-spruce-green-1200}",
+            "$type": "color"
+          }
+        }
+      },
+      "surface-selection": {
+        "default": {
+          "rest": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.white}",
+              "$type": "color"
+            }
+          },
+          "active": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.white}",
+              "$type": "color"
+            }
+          },
+          "hover": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.white}",
+              "$type": "color"
+            }
+          },
+          "checked": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.white}",
+              "$type": "color"
+            }
+          },
+          "disabled": {
+            "$value": "#f7f5f3",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.cold-grey-200}",
+              "$type": "color"
+            }
+          },
+          "loading": {
+            "$value": "#fbfaf9",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.cold-grey-100}",
+              "$type": "color"
+            }
           }
         }
       },
@@ -2086,64 +2113,6 @@
           }
         }
       },
-      "selectable-surface": {
-        "default": {
-          "rest": {
-            "$value": "#958e83",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.default-grey-700}",
-              "$type": "color"
-            }
-          },
-          "active": {
-            "$value": "#958e83",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.default-grey-700}",
-              "$type": "color"
-            }
-          },
-          "hover": {
-            "$value": "#958e83",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.default-grey-700}",
-              "$type": "color"
-            }
-          },
-          "checked": {
-            "$value": "#2e2e2b",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.warm-grey-1050}",
-              "$type": "color"
-            }
-          },
-          "disabled": {
-            "$value": "#958e83",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.default-grey-700}",
-              "$type": "color"
-            }
-          },
-          "loading": {
-            "$value": "#958e83",
-            "$type": "color",
-            "filePath": "tokens/global/selectablesurface.json5",
-            "original": {
-              "$value": "{options.color.default-grey-700}",
-              "$type": "color"
-            }
-          }
-        }
-      },
       "surface": {
         "primary": {
           "$value": "#dcd6cb",
@@ -2161,6 +2130,100 @@
           "original": {
             "$value": "{options.color.warm-grey-700}",
             "$type": "color"
+          }
+        },
+        "success": {
+          "$value": "#3b8349",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.success-green-800}",
+            "$type": "color"
+          }
+        },
+        "warning": {
+          "$value": "#b68b37",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.warning-yellow-800}",
+            "$type": "color"
+          }
+        },
+        "error": {
+          "$value": "#bb4045",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.error-red-800}",
+            "$type": "color"
+          }
+        },
+        "info": {
+          "$value": "#406eb5",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5",
+          "original": {
+            "$value": "{options.color.alpine-lake-blue-800}",
+            "$type": "color"
+          }
+        }
+      },
+      "surface-selection": {
+        "default": {
+          "rest": {
+            "$value": "#958e83",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.default-grey-700}",
+              "$type": "color"
+            }
+          },
+          "active": {
+            "$value": "#958e83",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.default-grey-700}",
+              "$type": "color"
+            }
+          },
+          "hover": {
+            "$value": "#958e83",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.default-grey-700}",
+              "$type": "color"
+            }
+          },
+          "checked": {
+            "$value": "#2e2e2b",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.warm-grey-1050}",
+              "$type": "color"
+            }
+          },
+          "disabled": {
+            "$value": "#958e83",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.default-grey-700}",
+              "$type": "color"
+            }
+          },
+          "loading": {
+            "$value": "#958e83",
+            "$type": "color",
+            "filePath": "tokens/global/surfaceselection.json5",
+            "original": {
+              "$value": "{options.color.default-grey-700}",
+              "$type": "color"
+            }
           }
         }
       },
