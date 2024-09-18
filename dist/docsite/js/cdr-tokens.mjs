@@ -129,6 +129,7 @@ export const CdrColorBackgroundRatingStarHighlighted = "#ffd280";
 export const CdrColorBackgroundSurfacePrimary = "#ffffff";
 export const CdrColorBackgroundSurfaceSecondary = "#f4f2ed";
 export const CdrColorBackgroundSurfaceBrandSpruce = "#1f513f";
+export const CdrColorBackgroundSurfaceSale = "#c7370f";
 export const CdrColorBackgroundSurfaceMember = "#ffdc52";
 export const CdrColorBackgroundSurfaceMemberAlt = "#00372a";
 export const CdrColorBackgroundSurfaceSelectionDefaultRest = "#ffffff";

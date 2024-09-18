@@ -124,6 +124,7 @@ export const CdrColorBackgroundRatingStarHighlighted : string;
 export const CdrColorBackgroundSurfacePrimary : string;
 export const CdrColorBackgroundSurfaceSecondary : string;
 export const CdrColorBackgroundSurfaceBrandSpruce : string;
+export const CdrColorBackgroundSurfaceSale : string;
 export const CdrColorBackgroundSurfaceMember : string;
 export const CdrColorBackgroundSurfaceMemberAlt : string;
 export const CdrColorBackgroundSurfaceSelectionDefaultRest : string;

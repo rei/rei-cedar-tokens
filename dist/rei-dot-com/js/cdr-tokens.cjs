@@ -125,6 +125,7 @@ module.exports = {
   "CdrColorBackgroundSurfacePrimary": "#ffffff",
   "CdrColorBackgroundSurfaceSecondary": "#f4f2ed",
   "CdrColorBackgroundSurfaceBrandSpruce": "#1f513f",
+  "CdrColorBackgroundSurfaceSale": "#c7370f",
   "CdrColorBackgroundSurfaceMember": "#ffdc52",
   "CdrColorBackgroundSurfaceMemberAlt": "#00372a",
   "CdrColorBackgroundSurfaceSelectionDefaultRest": "#ffffff",

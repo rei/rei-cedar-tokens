@@ -148,6 +148,7 @@
 [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f],
 [UIColor colorWithRed:0.957f green:0.949f blue:0.929f alpha:1.000f],
 [UIColor colorWithRed:0.122f green:0.318f blue:0.247f alpha:1.000f],
+[UIColor colorWithRed:0.780f green:0.216f blue:0.059f alpha:1.000f],
 [UIColor colorWithRed:1.000f green:0.863f blue:0.322f alpha:1.000f],
 [UIColor colorWithRed:0.000f green:0.216f blue:0.165f alpha:1.000f],
 [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f],

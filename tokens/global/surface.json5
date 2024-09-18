@@ -32,6 +32,16 @@
             "description": "Background color for the brand-spruce surface"
           }
         },
+        "sale": {
+          "$value": "{options.color.sale-red-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "surface",
+            "example": "color",
+            "description": "Background color for the sale surface"
+          }
+        },
         "member": {
           "$value": "{options.color.bright-yellow-500}",
           "$type": "color",
