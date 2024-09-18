@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, ) {
+typedef NS_ENUM(NSInteger, CdrColorName) {
 CdrColorTextButtonPrimary,
 CdrColorTextButtonPrimaryHover,
 CdrColorTextButtonPrimaryActive,
@@ -310,7 +310,7 @@ CdrKnockoutColorIconInverseDefault,
 CdrKnockoutColorIconBackgroundNote
 };
 
-@interface : NSObject
+@interface CdrColor : NSObject
 + (NSArray *)values;
-+ (UIColor *)color:()color;
++ (UIColor *)color:(CdrColorName)color;
 @end

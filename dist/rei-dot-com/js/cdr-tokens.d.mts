@@ -1,7 +1,3 @@
-/**
- * Do not edit directly, this file was auto-generated.
- */
-
 export const CdrColorTextButtonPrimary : string;
 export const CdrColorTextButtonPrimaryHover : string;
 export const CdrColorTextButtonPrimaryActive : string;
@@ -312,7 +308,7 @@ export const CdrRadiusSoft : string;
 export const CdrRadiusSofter : string;
 export const CdrRadiusSoftest : string;
 export const CdrRadiusRound : string;
-export const CdrSpaceZero : number;
+export const CdrSpaceZero : string;
 export const CdrSpaceSixteenthX : string;
 export const CdrSpaceEighthX : string;
 export const CdrSpaceThreeSixteenthX : string;

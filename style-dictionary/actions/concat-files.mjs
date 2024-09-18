@@ -1,46 +1,60 @@
-import fs from 'fs-extra'
-import concat from 'concat'
-import path from 'path'
-import _ from 'lodash'
-import { getDirname } from '../utils.mjs'
+import fs from 'fs-extra';
+import concat from 'concat';
+import path from 'path';
+import { getDirname } from '../utils.mjs';
 
-const __dirname = getDirname(import.meta.url)
+const __dirname = getDirname(import.meta.url);
 
 export const concatFiles = (StyleDictionary) => {
-  // concat all files in buildPath to a given filename
   StyleDictionary.registerAction({
     name: 'concat-files',
-    do: async (dictionary, config) => {
-      await fs.readdir(config.buildPath, async (err, files) => {
-        if (err) { throw err }
+    do: (dictionary, config) => {
+      try {
+        // Read files from the specified build path
+        const buildPath = path.join(__dirname, '../../', config.buildPath);
+        const files = fs.readdirSync(buildPath);
 
-        const extension = path.extname(files[0])
-        const allPaths = files.map(f => path.join(__dirname, '../../', config.buildPath, f))
-        const concatPaths = allPaths.filter(p => !p.includes('no_concat'))
-        const noConcatPaths = allPaths.filter(p => p.includes('no_concat'))
-        const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`)
+        if (files.length === 0) {
+          console.warn('No files found in the build path.');
+          return;
+        }
 
-        noConcatPaths.forEach(async (p) => {
-          const newPath = p.replace('.no_concat', '')
-          await fs.rename(p, newPath)
-        })
+        // Determine the file extension from the first file
+        const extension = path.extname(files[0]);
+        const allPaths = files.map(f => path.join(buildPath, f));
+        const concatPaths = allPaths.filter(p => !path.basename(p).includes('no_concat'));
+        const noConcatPaths = allPaths.filter(p => path.basename(p).includes('no_concat'));
 
-        // output concat paths
-        concat(concatPaths)
-          .then(async (r) =>
-            await fs.outputFile(outFile, r)
-          ).catch((err) => {
-            console.error('Error concatenating files', err)
-          })
+        // Rename files with 'no_concat' in their name
+        noConcatPaths.forEach(p => {
+          const newPath = p.replace('.no_concat', '');
+          fs.renameSync(p, newPath);
+        });
 
-        // remove concatenated files
-        concatPaths.forEach(async (p) => {
-          await fs.remove(p)
-        })
-      })
+        // Concatenate files
+        concat(concatPaths).then((r) => {
+          const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`);
+          fs.outputFileSync(outFile, r);
+        });
+
+        // Remove concatenated files
+        concatPaths.forEach(p => {
+          fs.removeSync(p);
+        });
+
+        console.log('Successfully removed concatenated files');
+      } catch (error) {
+        console.error('Error during file concatenation process:', error);
+      }
     },
-    undo: async (dictionary, config) => {
-      await fs.removeSync(path.join(__dirname, '../../', config.buildPath))
+    undo: (dictionary, config) => {
+      try {
+        const buildPath = path.join(__dirname, '../../', config.buildPath);
+        fs.removeSync(buildPath);
+        console.log(`Successfully removed ${buildPath}`);
+      } catch (error) {
+        console.error('Error removing build path:', error);
+      }
     }
-  })
-}
+  });
+};

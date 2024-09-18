@@ -329,7 +329,7 @@ module.exports = {
   "CdrRadiusSofter": "4",
   "CdrRadiusSoftest": "6",
   "CdrRadiusRound": "9999",
-  "CdrSpaceZero": 0,
+  "CdrSpaceZero": "0",
   "CdrSpaceSixteenthX": "1",
   "CdrSpaceEighthX": "2",
   "CdrSpaceThreeSixteenthX": "3",

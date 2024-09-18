@@ -17,9 +17,6 @@ export const android = (theme) => ({
         filter: {
           $type: 'color'
         },
-        options: {
-          showFileHeader: false
-        },
         format: 'android/resources'
       },
       {
@@ -27,18 +24,12 @@ export const android = (theme) => ({
         filter: {
           $type: 'fontSize'
         },
-        options: {
-          showFileHeader: false
-        },
         format: 'android/fontDimens'
       },
       {
         destination: 'dimens.xml',
         filter: {
           $type: 'dimension'
-        },
-        options: {
-          showFileHeader: false
         },
         format: 'android/dimens'
       }

@@ -16,9 +16,6 @@ export const figma = (theme) => ({
       {
         destination: 'figma.json',
         format: 'figma',
-        options: {
-          showFileHeader: false
-        },
         filter: 'remove-source-tokens'
       }
     ]

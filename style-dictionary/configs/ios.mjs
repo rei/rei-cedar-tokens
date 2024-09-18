@@ -19,8 +19,7 @@ export const ios = (theme) => ({
         filter: 'ios-size',
         options: {
           type: 'float',
-          className: 'CdrSize',
-          showFileHeader: false
+          className: 'CdrSize'
         }
       },
       {
@@ -29,8 +28,7 @@ export const ios = (theme) => ({
         filter: 'ios-size',
         options: {
           type: 'float',
-          className: 'CdrSize',
-          showFileHeader: false
+          className: 'CdrSize'
         }
       },
       {
@@ -39,10 +37,9 @@ export const ios = (theme) => ({
         filter: {
           $type: 'color'
         },
-        type: 'CdrColorName',
-        className: 'CdrColor',
         options: {
-          showFileHeader: false
+          type: 'CdrColorName',
+          className: 'CdrColor'
         }
       },
       {
@@ -53,8 +50,7 @@ export const ios = (theme) => ({
         },
         options: {
           type: 'CdrColorName',
-          className: 'CdrColor',
-          showFileHeader: false
+          className: 'CdrColor'
         }
       }
     ]

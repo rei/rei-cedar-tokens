@@ -5,19 +5,18 @@ export const siteGlobal = (theme) => ({
     ...commonConfig(theme, 'json'),
     transforms: [
       'attribute/deprecated',
-      'name/pascal',
+      'name/kebab',
       'size/strip-all-px-js',
       'size/space-js',
       'color/alpha',
-      'color/css-transitive'
+      'color/css-transitive',
+      'size/px-to-rem-transitive',
+      'time/seconds'
     ],
     files: [
       {
         destination: 'global.json',
         format: 'site',
-        options: {
-          showFileHeader: false
-        },
         filter: 'remove-source-tokens'
       }
     ]

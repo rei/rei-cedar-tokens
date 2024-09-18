@@ -15,24 +15,15 @@ export const scss = (theme) => ({
     files: [
       {
         destination: 'cdr-variable.scss',
-        format: 'scss/variables',
-        options: {
-          showFileHeader: false
-        }
+        format: 'scss/variables'
       },
       {
         destination: 'cdr-mixins.scss',
-        format: 'scss/mixin',
-        options: {
-          showFileHeader: false
-        }
+        format: 'scss/mixin'
       },
       {
         destination: 'utility-map.no_concat.scss',
-        format: 'scss/map',
-        options: {
-          showFileHeader: false
-        }
+        format: 'scss/map'
       }
     ],
     actions: ['include-media-queries-scss', 'include-display-scss', 'concat-files', 'include-deprecate-scss']
