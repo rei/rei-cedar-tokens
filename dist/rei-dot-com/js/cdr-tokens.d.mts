@@ -81,6 +81,8 @@ export const CdrColorBackgroundTransparent : string;
 export const CdrColorBackgroundPrimary : string;
 export const CdrColorBackgroundSecondary : string;
 export const CdrColorBackgroundBrandSpruce : string;
+export const CdrColorBackgroundMember : string;
+export const CdrColorBackgroundMemberAlt : string;
 export const CdrColorBackgroundMessageDefault01 : string;
 export const CdrColorBackgroundMessageDefault02 : string;
 export const CdrColorBackgroundMessageSuccess : string;

@@ -87,6 +87,8 @@ module.exports = {
   "CdrColorBackgroundPrimary": "#f4f2ed",
   "CdrColorBackgroundSecondary": "#ffffff",
   "CdrColorBackgroundBrandSpruce": "#1f513f",
+  "CdrColorBackgroundMember": "#ffdc52",
+  "CdrColorBackgroundMemberAlt": "#00372a",
   "CdrColorBackgroundMessageDefault01": "#f9f8f6",
   "CdrColorBackgroundMessageDefault02": "#e8e0ce",
   "CdrColorBackgroundMessageSuccess": "#ecf9e6",

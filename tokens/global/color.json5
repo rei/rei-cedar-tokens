@@ -266,6 +266,26 @@
           }
         }
       },
+      "member": {
+        "$value": "{options.color.bright-yellow-500}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, member background color used on some pages"
+        }
+      },
+      "member-alt": {
+        "$value": "{options.color.blue-spruce-green-1200}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "background",
+          "example": "color",
+          "description": "An alternate, member-alt background color used on some pages"
+        }
+      },
       "message": {
         "default-01": {
           "$value": "{options.color.default-grey-100}",
