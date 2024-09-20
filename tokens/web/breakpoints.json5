@@ -1,44 +1,42 @@
-// UPDATE style-dictionary/utilities/media-queries.(less|scss) if adding/removing/renaming these tokens
-
 {
-  breakpoint: {
-    docCategory: "breakpoints",
-    docExample: "breakpoint",
-    xs: {
-      value: "0",
-      category: "breakpoint",
-      docs: {
-        type: "breakpoint",
-        category: "{breakpoint.docCategory}",
-        example: "{breakpoint.docExample}",
-      },
+  "breakpoint": {
+    "docCategory": "breakpoints",
+    "docExample": "breakpoint",
+    "xs": {
+      "$value": "0",
+      "$type": "breakpoint",
+      "docs": {
+        "type": "breakpoint",
+        "category": "{breakpoint.docCategory}",
+        "example": "{breakpoint.docExample}"
+      }
     },
-    sm: {
-      value: "768px",
-      category: "breakpoint",
-      docs: {
-        type: "breakpoint",
-        category: "{breakpoint.docCategory}",
-        example: "{breakpoint.docExample}",
-      },
+    "sm": {
+      "$value": "768px",
+      "$type": "breakpoint",
+      "docs": {
+        "type": "breakpoint",
+        "category": "{breakpoint.docCategory}",
+        "example": "{breakpoint.docExample}"
+      }
     },
-    md: {
-      value: "992px",
-      category: "breakpoint",
-      docs: {
-        type: "breakpoint",
-        category: "{breakpoint.docCategory}",
-        example: "{breakpoint.docExample}",
-      },
+    "md": {
+      "$value": "992px",
+      "$type": "breakpoint",
+      "docs": {
+        "type": "breakpoint",
+        "category": "{breakpoint.docCategory}",
+        "example": "{breakpoint.docExample}"
+      }
     },
-    lg: {
-      value: "1232px",
-      category: "breakpoint",
-      docs: {
-        type: "breakpoint",
-        category: "{breakpoint.docCategory}",
-        example: "{breakpoint.docExample}",
-      },
-    },
-  },
+    "lg": {
+      "$value": "1232px",
+      "$type": "breakpoint",
+      "docs": {
+        "type": "breakpoint",
+        "category": "{breakpoint.docCategory}",
+        "example": "{breakpoint.docExample}"
+      }
+    }
+  }
 }

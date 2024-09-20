@@ -1,54 +1,54 @@
 {
-  color: {
-    border: {
-      usage: {
-        affirmative: {
-          value: "{options.color.success-green-800}",
-          category: "color",
-          docs: {
-            type: "border",
-          },
+  "color": {
+    "border": {
+      "usage": {
+        "affirmative": {
+          "$value": "{options.color.success-green-800}",
+          "$type": "color",
+          "docs": {
+            "type": "border"
+          }
         },
-        negative: {
-          value: "{options.color.error-red-800}",
-          category: "color",
-          docs: {
-            type: "border",
-          },
+        "negative": {
+          "$value": "{options.color.error-red-800}",
+          "$type": "color",
+          "docs": {
+            "type": "border"
+          }
         },
-        caution: {
-          value: "{options.color.warning-yellow-800}",
-          category: "color",
-          docs: {
-            type: "border",
-          },
-        },
-      },
+        "caution": {
+          "$value": "{options.color.warning-yellow-800}",
+          "$type": "color",
+          "docs": {
+            "type": "border"
+          }
+        }
+      }
     },
-    text: {
-      usage: {
-        affirmative: {
-          value: "{options.color.success-green-800}",
-          category: "color",
-          docs: {
-            type: "text",
-          },
+    "text": {
+      "usage": {
+        "affirmative": {
+          "$value": "{options.color.success-green-800}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
         },
-        negative: {
-          value: "{options.color.error-red-800}",
-          category: "color",
-          docs: {
-            type: "text",
-          },
+        "negative": {
+          "$value": "{options.color.error-red-800}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
         },
-        caution: {
-          value: "{options.color.warning-yellow-800}",
-          category: "color",
-          docs: {
-            type: "text",
-          },
-        },
-      },
-    },
-  },
+        "caution": {
+          "$value": "{options.color.warning-yellow-800}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
 }

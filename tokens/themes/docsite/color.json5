@@ -1,121 +1,121 @@
 {
-  color: {
-    text: {
-      primary: {
-        value: '{options.color.warm-grey-1200}',
-        alpha: .90,
-        category: 'color',
-        docs: {
-          'type': 'text'
+  "color": {
+    "text": {
+      "primary": {
+        "$value": "{options.color.warm-grey-1200}",
+        "$type": "color",
+        "alpha": 0.9,
+        "docs": {
+          "type": "text"
         }
       },
-      secondary: {
-        value: '{options.color.warm-grey-1150}',
-        alpha: .75,
-        category: 'color',
-        docs: {
-          'type': 'text'
+      "secondary": {
+        "$value": "{options.color.warm-grey-1150}",
+        "$type": "color",
+        "alpha": 0.75,
+        "docs": {
+          "type": "text"
         }
-      },
+      }
     },
-    background: {
-      primary: {
-        value: '{options.color.warm-grey-200}',
-        category: 'color',
-        docs: {
-          'type': 'background'
+    "background": {
+      "primary": {
+        "$value": "{options.color.warm-grey-200}",
+        "$type": "color",
+        "docs": {
+          "type": "background"
         }
       },
-      secondary: {
-        value: '{options.color.white}',
-        category: 'color',
-        docs: {
-          'type': 'background'
+      "secondary": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "type": "background"
         }
-      },
+      }
     },
-    border: {
-      primary: {
-        value: '{options.color.warm-grey-400}',
-        category: 'color',
-        docs: {
-          'type': 'border'
+    "border": {
+      "primary": {
+        "$value": "{options.color.warm-grey-400}",
+        "$type": "color",
+        "docs": {
+          "type": "border"
         }
       },
-      secondary: {
-        value: '{options.color.warm-grey-700}',
-        category: 'color',
-        docs: {
-          'type': 'border'
+      "secondary": {
+        "$value": "{options.color.warm-grey-700}",
+        "$type": "color",
+        "docs": {
+          "type": "border"
         }
-      },
+      }
     },
-    icon: {
-      default: {
-        value: '{options.color.warm-grey-900}',
-        category: 'color',
-        docs: {
-          'type': 'icon'
+    "icon": {
+      "default": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "icon"
         }
-      },
-    },
+      }
+    }
   },
-  knockout: {
-    color: {
-      text: {
-        primary: {
-          value: '{options.color.warm-grey-100}',
-          category: 'color',
-        docs: {
-          'type': 'text'
-        }
+  "knockout": {
+    "color": {
+      "text": {
+        "primary": {
+          "$value": "{options.color.warm-grey-100}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
         },
-        secondary: {
-          value: '{options.color.warm-grey-500}',
-          category: 'color',
-        docs: {
-          'type': 'text'
+        "secondary": {
+          "$value": "{options.color.warm-grey-500}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
         }
-        },
       },
-      background: {
-        primary: {
-          value: '{options.color.warm-grey-1000}',
-          category: 'color',
-        docs: {
-          'type': 'text'
+      "background": {
+        "primary": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
         }
-        },
       },
-      border: {
-        inverse: {
-          primary: {
-            value: '{options.color.warm-grey-900}',
-            category: 'color',
-        docs: {
-          'type': 'text'
-        }
+      "border": {
+        "inverse": {
+          "primary": {
+            "$value": "{options.color.warm-grey-900}",
+            "$type": "color",
+            "docs": {
+              "type": "text"
+            }
           },
-          secondary: {
-            value: '{options.color.warm-grey-400}',
-            category: 'color',
-        docs: {
-          'type': 'text'
+          "secondary": {
+            "$value": "{options.color.warm-grey-400}",
+            "$type": "color",
+            "docs": {
+              "type": "text"
+            }
+          }
         }
-          },
-        },
       },
-      icon: {
-        inverse: {
-          default: {
-            value: '{options.color.warm-grey-400}',
-            category: 'color',
-        docs: {
-          'type': 'text'
+      "icon": {
+        "inverse": {
+          "default": {
+            "$value": "{options.color.warm-grey-400}",
+            "$type": "color",
+            "docs": {
+              "type": "text"
+            }
+          }
         }
-          },
-        },
-      },
-    },
-  },
+      }
+    }
+  }
 }

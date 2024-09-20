@@ -1,113 +1,112 @@
 {
-  color: {
-    text: {
-      link: {
-        rest: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Text color for links',
-          },
+  "color": {
+    "text": {
+      "link": {
+        "rest": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Text color for links"
+          }
         },
-        hover: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Text color for the hover state of links',
-          },
+        "hover": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Text color for the hover state of links"
+          }
         },
-        active: {
-          value: '{options.color.alpine-lake-blue-1000}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Text color for the active and pressed states of links',
-          },
+        "active": {
+          "$value": "{options.color.alpine-lake-blue-1000}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Text color for the active and pressed states of links"
+          }
         },
-        disabled: {
-          value: '{options.color.warm-grey-500}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Disabled text color of links',
-          },
+        "disabled": {
+          "$value": "{options.color.warm-grey-500}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Disabled text color of links"
+          }
         },
-        visited: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Text color of visited links',
-          },
-        },
-      },
+        "visited": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Text color of visited links"
+          }
+        }
+      }
     },
-
-    border: {
-      link: {
-        rest: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Border color for underlined links',
-          },
+    "border": {
+      "link": {
+        "rest": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Border color for underlined links"
+          }
         },
-        hover: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Border color for the hover state of underlined links',
-          },
+        "hover": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Border color for the hover state of underlined links"
+          }
         },
-        active: {
-          value: '{options.color.alpine-lake-blue-1000}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Border color for the active and pressed states of underlined links',
-          },
+        "active": {
+          "$value": "{options.color.alpine-lake-blue-1000}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Border color for the active and pressed states of underlined links"
+          }
         },
-        disabled: {
-          value: '{options.color.warm-grey-400}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Disabled border color of underlined links',
-          },
+        "disabled": {
+          "$value": "{options.color.warm-grey-400}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Disabled border color of underlined links"
+          }
         },
-        visited: {
-          value: '{options.color.alpine-lake-blue-800}',
-          category: 'color',
-          docs: {
-            category: 'colors',
-            type: 'link',
-            example: 'color',
-            description: 'Border color of visited underlined links',
-          },
-        },
-      },
-    },
-  },
+        "visited": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "link",
+            "example": "color",
+            "description": "Border color of visited underlined links"
+          }
+        }
+      }
+    }
+  }
 }

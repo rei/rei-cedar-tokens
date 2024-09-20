@@ -1,43 +1,42 @@
 {
-  radius: {
-    docCategory: "radius",
-    docExample: "radius",
-    sharp: {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "radius",
-        category: "{radius.docCategory}",
-        example: "{radius.docExample}",
-      },
+  "radius": {
+    "docCategory": "radius",
+    "docExample": "radius",
+    "sharp": {
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "radius",
+        "category": "{radius.docCategory}",
+        "example": "{radius.docExample}"
+      }
     },
-    soft: {
-      value: "2px",
-      category: "size",
-      docs: {
-        type: "radius",
-        category: "{radius.docCategory}",
-        example: "{radius.docExample}",
-      },
+    "soft": {
+      "$value": "2px",
+      "$type": "dimension",
+      "docs": {
+        "type": "radius",
+        "category": "{radius.docCategory}",
+        "example": "{radius.docExample}"
+      }
     },
-    softer: {
-      value: "4px",
-      category: "size",
-      docs: {
-        type: "radius",
-        category: "{radius.docCategory}",
-        example: "{radius.docExample}",
-      },
+    "softer": {
+      "$value": "4px",
+      "$type": "dimension",
+      "docs": {
+        "type": "radius",
+        "category": "{radius.docCategory}",
+        "example": "{radius.docExample}"
+      }
     },
-    round: {
-      value: "9999px", // pill
-      // value: '50%', // oval
-      category: "size",
-      docs: {
-        type: "radius",
-        category: "{radius.docCategory}",
-        example: "{radius.docExample}",
-      },
-    },
-  },
+    "round": {
+      "$value": "9999px",
+      "$type": "dimension",
+      "docs": {
+        "type": "radius",
+        "category": "{radius.docCategory}",
+        "example": "{radius.docExample}"
+      }
+    }
+  }
 }
