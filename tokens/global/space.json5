@@ -2,6 +2,26 @@
   "space": {
     "docCategory": "spacing",
     "docExample": "spacing",
+    "zero": {
+      "$value": "{options.space.zero}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "{space.docCategory}",
+        "example": "{space.docExample}"
+      },
+      "utility-class": true
+    },
+    "sixteenth-x": {
+      "$value": "{options.space.sixteenth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "{space.docCategory}",
+        "example": "{space.docExample}"
+      },
+      "utility-class": true
+    },
     "eighth-x": {
       "$value": "{options.space.eighth-x}",
       "$type": "dimension",
@@ -12,8 +32,28 @@
       },
       "utility-class": true
     },
+    "three-sixteenth-x": {
+      "$value": "{options.space.three-sixteenth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "{space.docCategory}",
+        "example": "{space.docExample}"
+      },
+      "utility-class": true
+    },
     "quarter-x": {
       "$value": "{options.space.quarter-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "{space.docCategory}",
+        "example": "{space.docExample}"
+      },
+      "utility-class": true
+    },
+    "three-eighth-x": {
+      "$value": "{options.space.three-eighth-x}",
       "$type": "dimension",
       "docs": {
         "type": "spacing",
@@ -93,6 +133,16 @@
       "utility-class": true
     },
     "inset": {
+      "sixteenth-x": {
+        "$value": "{space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
       "eighth-x": {
         "$value": "{space.eighth-x}",
         "$type": "dimension",
@@ -138,6 +188,16 @@
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
+      },
+      "three-sixteenth-x": {
+        "$value": "{space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
       },
       "quarter-x": {
         "$value": "{space.quarter-x}",
@@ -186,6 +246,16 @@
           "category": "{space.docCategory}",
           "example": "{space.docExample}"
         }
+      },
+      "three-eighth-x": {
+        "$value": "{space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "{space.docCategory}",
+          "example": "inset"
+        },
+        "utility-class": true
       },
       "half-x": {
         "$value": "{options.space.half-x}",
