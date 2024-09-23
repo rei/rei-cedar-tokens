@@ -1,219 +1,210 @@
 {
-  prominence: {
-    docCategory: "prominence",
-    // flat
+  "prominence": {
+    "docCategory": "prominence",
     "flat-x": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "flat-y": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "flat-blur": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "flat-spread": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "flat-color": {
-      value: "{options.color.warm-grey-1150}",
-      alpha: 0.2,
-      category: "color",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "{options.color.warm-grey-1150}",
+      "$type": "color",
+      "alpha": 0.2,
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
-
-    // raised
     "raised-x": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "raised-y": {
-      value: "2px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "2px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "raised-blur": {
-      value: "2px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "2px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "raised-spread": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "raised-color": {
-      value: "{options.color.warm-grey-1150}",
-      alpha: 0.2,
-      category: "color",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "{options.color.warm-grey-1150}",
+      "$type": "color",
+      "alpha": 0.2,
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
-
-    // elevated
     "elevated-x": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "elevated-y": {
-      value: "4px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "4px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "elevated-blur": {
-      value: "4px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "4px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "elevated-spread": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "elevated-color": {
-      value: "{options.color.warm-grey-1150}",
-      alpha: 0.2,
-      category: "color",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "{options.color.warm-grey-1150}",
+      "$type": "color",
+      "alpha": 0.2,
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
-
-    // floating
     "floating-x": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "floating-y": {
-      value: "8px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "8px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "floating-blur": {
-      value: "8px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "8px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "floating-spread": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "floating-color": {
-      value: "{options.color.warm-grey-1150}",
-      alpha: 0.2,
-      category: "color",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "{options.color.warm-grey-1150}",
+      "$type": "color",
+      "alpha": 0.2,
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
-
-    // lifted
     "lifted-x": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "lifted-y": {
-      value: "16px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "16px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "lifted-blur": {
-      value: "16px",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "16px",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "lifted-spread": {
-      value: "0",
-      category: "size",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
     },
     "lifted-color": {
-      value: "{options.color.warm-grey-1150}",
-      alpha: 0.2,
-      category: "color",
-      docs: {
-        type: "prominence",
-        category: "{prominence.docCategory}",
-      },
-    },
-  },
+      "$value": "{options.color.warm-grey-1150}",
+      "$type": "color",
+      "alpha": 0.2,
+      "docs": {
+        "type": "prominence",
+        "category": "{prominence.docCategory}"
+      }
+    }
+  }
 }

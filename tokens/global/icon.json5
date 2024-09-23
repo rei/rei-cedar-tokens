@@ -1,33 +1,33 @@
 {
-  icon: {
-    docCategory: 'sizing',
-    docExample: 'sizing',
-    'size-sm': {
-      value: '{space.one-x.value}',
-      category: 'size',
-      docs: {
-        category: '{icon.docCategory}',
-        type: 'icon',
-        example: '{icon.docExample}',
+  "icon": {
+    "docCategory": "sizing",
+    "docExample": "sizing",
+    "size-sm": {
+      "$value": "{space.one-x.$value}",
+      "$type": "dimension",
+      "docs": {
+        "category": "{icon.docCategory}",
+        "type": "icon",
+        "example": "{icon.docExample}"
       }
     },
-    size: {
-      value: '{space.one-and-a-half-x.value}',
-      category: 'size',
-      docs: {
-        category: '{icon.docCategory}',
-        type: 'icon',
-        example: '{icon.docExample}',
+    "size": {
+      "$value": "{space.one-and-a-half-x.$value}",
+      "$type": "dimension",
+      "docs": {
+        "category": "{icon.docCategory}",
+        "type": "icon",
+        "example": "{icon.docExample}"
       }
     },
-    'size-lg': {
-      value: '{space.two-x.value}',
-      category: 'size',
-      docs: {
-        category: '{icon.docCategory}',
-        type: 'icon',
-        example: '{icon.docExample}',
+    "size-lg": {
+      "$value": "{space.two-x.$value}",
+      "$type": "dimension",
+      "docs": {
+        "category": "{icon.docCategory}",
+        "type": "icon",
+        "example": "{icon.docExample}"
       }
-    },
+    }
   }
 }

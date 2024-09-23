@@ -28,7 +28,7 @@ All other formats should consult the changelog for a migration path.
 2. `npm install`
 3. `npm run build` (output tokens)
 
-Tokens are generated using [Style Dictionary](https://amzn.github.io/style-dictionary/#/).
+Tokens are generated using [Style Dictionary v4](https://styledictionary.com/).
 
 ### Project structure
 The project is made of these files and folders:
@@ -56,8 +56,8 @@ We follow the basic structure of style-dictionary with the exception being that 
 The following properties can be added to tokens to support different options
 
 ```
-value           # *required* The token value (most token values should be referenced from options)
-category        # *required* The tokens category (used to transform values for their specific platform)
+$value           # *required* The token value (most token values should be referenced from options)
+$type            # *required* The tokens type (used to transform values for their specific platform)
 docs            # Object to define meta data for docs
   category      # The category tokens are grouped in on the examples page
   type          # The sub category tokens are grouped in on the examples page
@@ -80,12 +80,12 @@ Options are skipped and do not get exported for consumers. However they can be [
   options: { // <-- anything beneath this will be ignored in output
     color: {
       'easily-excited': {
-        value: '#3278ae',
-        category: 'color',
+        '$value': '#3278ae',
+        '$type': 'color',
       },
       'heart-of-darkness': {
-        value: '#292929',
-        category: 'color',
+        '$value': '#292929',
+        '$type': 'color',
       },
       // ...
     },
@@ -105,12 +105,12 @@ Token names are defined by the hierarchy of the object:
     body: {
       default: {
         size: {
-          value: '23px',
-          category: 'font-size',
+          '$value': '23px',
+          '$type': 'fontSize',
         },
         height: {
-          value: '25px',
-          category: 'size',
+          '$value': '25px',
+          '$type': 'size',
         },
       },
     },
@@ -124,19 +124,19 @@ Token output of above:
 
 `text-body-default-height: 25px;`
 
-#### Categories
+#### Types
 
-> Categories need to be attached to **both** options and tokens (due to limitations of style-dictionary resolve order. [This may change in the future](https://github.com/amzn/style-dictionary/issues/208))
+> Types need to be attached to **both** options and tokens (due to limitations of style-dictionary resolve order. [This may change in the future](https://github.com/amzn/style-dictionary/issues/208))
 
-Categories define how style-dictionary should transform values between platforms.
+Types define how style-dictionary should transform values between platforms.
 
-For example, a category of "size" will transform to 'rem' for SCSS/LESS but 'dp' for Android. A category of "font-size" will still transform values to 'rem' for SCSS/LESS but 'sp' for Android.
+For example, a type of "dimension" will transform to 'rem' for SCSS/LESS but 'dp' for Android. A type of "fontSize" will still transform values to 'rem' for SCSS/LESS but 'sp' for Android.
 
 Categories are one of the following:
 
-- `size`: Anything that would have a value in px. With the exception of font-size
-- `font-size`: Anything that defines a text size
-- `letter-spacing`: exists too?
+- `dimension`: Anything that would have a value in px. With the exception of fontSize
+- `fontSize`: Anything that defines a text size
+- `letterSpacing`: Anything that defined a letter spacing
 - `color`: Anything that defines a color
 - `time`: Anything the defines a timing
 - Values without a category will not be transformed: Anything that is a string like `'normal'` or `'italic'`
@@ -151,8 +151,8 @@ See [attribute referencing](https://amzn.github.io/style-dictionary/#/properties
     text: {
       primary: {
         'on-dark': {
-          value: '{options.color.heart-of-darkness}',
-          category: 'color',
+          '$value': '{options.color.heart-of-darkness}',
+          '$type': 'color',
           docs: {
             category: 'colors',
             type: 'text',
@@ -185,19 +185,19 @@ docs: {
 
 Deprecated tokens should be moved to a seprate file (or into the existing file) which corresponds to the release cycle in which they will be deprecated.
 
-For example, if tokens will be considered deprecated in the "Winter 2019" release they would be moved into a file called `deprecated-2019-winter.json5` in whichever directory they currently reside. Structure for naming the file is : `deprecated-<year>-<release>`
+For example, if tokens will be considered deprecated in the "Winter 2019" release they would be moved into a file called `deprecated-2024-summer.json5` in whichever directory they currently reside. Structure for naming the file is : `deprecated-<year>-<release>`
 
 Additionally, the contents will be wrapped inside an object with a key that corresponds to the release as well (so we can auto generate some deprecation warnings with the correct release). The key matches the naming of the file. See below for an example.
 
 ```js
 {
-  'deprecated-2019-winter`: {  // <-------- `deprecated-<year>-<release>`
-      color: {
-        text: {
-          primary: {
-            'on-dark': {
-              value: '{options.color.heart-of-darkness}',
-            category: 'color',
+  'deprecated-2024-q4': {  // <-------- `deprecated-<year>-<release>`
+    color: {
+      text: {
+        primary: {
+          'on-dark': {
+            '$value': '{options.color.heart-of-darkness}',
+            '$type': 'color',
             docs: {
               category: 'colors',
               type: 'text',
@@ -218,12 +218,12 @@ When tokens are deprecated they can also be provided a new token name or new mix
 
 ```js
 {
-  'deprecated-2019-winter': {
+  'deprecated-2024-q4': {
     text: {
       header: {
         '1': {
           family: {
-            value: '{options.font.family.serif.value}',
+            '$value': '{options.font.family.serif.$value}',
             mixin: 'textHeader1',
             property: 'font-family',
             newMixin: 'new-mixin-name',             //<--- a new mixin name to use instead of the deprecated one
@@ -253,15 +253,13 @@ All actions, configs, formats, etc are imported in this file and it [extends](ht
 
 Found in `style-dictionary/actions`
 
-See API for [creating an action](https://amzn.github.io/style-dictionary/#/api?id=registeraction)
-
-See [actions docs](https://amzn.github.io/style-dictionary/#/actions)
+See API for [creating an action](https://styledictionary.com/reference/hooks/actions/)
 
 #### Configs
 
 Found in `style-dictionary/configs`
 
-See [config docs](https://amzn.github.io/style-dictionary/#/config).
+See [config docs](https://styledictionary.com/reference/config/#configuration-file-formats).
 
 Configs follow standard config options. They are organized separately by platform and are required into the `_index.js` file where they all have a filter for options applied.
 
@@ -269,22 +267,20 @@ Configs follow standard config options. They are organized separately by platfor
 
 Found in `style-dictionary/formats`
 
-See API for [creating a format](https://amzn.github.io/style-dictionary/#/api?id=registerformat)
-
-See [format docs](https://amzn.github.io/style-dictionary/#/formats).
+See API for [creating a format](https://styledictionary.com/reference/hooks/formats/)
 
 #### Transform Groups
 
-Found in `style-dictionary/transformGroups`
-
-See API for [creating a transform group](https://amzn.github.io/style-dictionary/#/api?id=registertransformgroup)
-
-See [transform group docs](https://amzn.github.io/style-dictionary/#/transform_groups).
+See API for [creating a transform group](https://styledictionary.com/reference/hooks/transform-groups/)
 
 #### Transforms
 
 Found in `style-dictionary/transforms`
 
-See API for [creating a transform](https://amzn.github.io/style-dictionary/#/api?id=registertransform)
+See API for [creating a transform](https://styledictionary.com/reference/hooks/transforms/)
 
 See [transform docs](https://amzn.github.io/style-dictionary/#/transforms).
+
+### Validation
+
+Because this library has many dependencies, there is a validation script that performs some checks. One of the tests is verifying the file structure has not changed. If a change is intentional, you may execute `npm run validate -- --update` or delete the `validate-structure.json` file and then execute `npm run validate`. The `validate-structure.json` file should be commited.
