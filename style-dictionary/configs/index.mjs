@@ -62,7 +62,7 @@ export const getConfig = (platform, theme) => {
     preprocessors: ['tokens-studio'],
     expand: {
       typesMap: expandTypesMap,
-      exclude: (token) => filePathsToExcludeFromExpand.includes(token.filePath),
+      exclude: (token) => filePathsToExcludeFromExpand.includes(token.filePath)
     },
     platforms: allPlatforms(platform, theme),
     usesDtcg: true
