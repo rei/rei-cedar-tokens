@@ -38,8 +38,11 @@
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
     "build:tokens": "npm run clean && node ./style-dictionary/build.mjs",
     "clean": "rimraf dist/",
+    "clean:grid": "rimraf grid/",
     "build": "npm run clean && npm run build:tokens && npm run site-tokens && npm run validate",
-    "build:grid": "node grid.mjs",
+    "build:grid": "npm run clean:grid && node grid.mjs",
+    "deploy": "npm run build && npm run build:grid && npm run prerelease",
+    "deploy:grid": "git add grid && git commit -m \"Update grid\" && git subtree push --prefix grid origin gh-pages",
     "site-tokens": "node ./site-tokens.mjs",
     "validate": "node ./validate.mjs",
     "format": "eslint --fix \"style-dictionary/**/*.mjs\"",
@@ -62,7 +65,9 @@
     "rimraf": "^6.0.1",
     "standard": "^17.1.0",
     "style-dictionary": "^4.0.1",
-    "tinycolor2": "^1.6.0"
+    "tinycolor2": "^1.6.0",
+    "website-scraper": "^5.3.1",
+    "website-scraper-puppeteer": "^1.1.0"
   },
   "eslintConfig": {
     "extends": "standard",

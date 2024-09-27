@@ -1,4 +1,6 @@
 import fs from 'fs'
+import scrape from 'website-scraper'
+import PuppeteerPlugin from 'website-scraper-puppeteer'
 import queryString from 'query-string'
 import JSON5 from 'json5'
 
@@ -13,4 +15,18 @@ const urlData = {
   'background-colors': formattedTokens
 }
 
-console.log(`https://contrast-grid.eightshapes.com/?${queryString.stringify(urlData)}`)
+const url = `https://contrast-grid.eightshapes.com/?${queryString.stringify(urlData)}`
+
+console.log(url)
+
+async function main() {
+  await scrape({
+    urls: [url],
+    directory: './grid/',
+    plugins: [new PuppeteerPlugin({
+      launchOptions: { headless: 'new' }
+    })]
+  })
+}
+
+main()
