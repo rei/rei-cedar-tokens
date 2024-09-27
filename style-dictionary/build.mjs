@@ -16,6 +16,7 @@ import { alpha } from './transforms/color/alpha.mjs'
 import { colorCssTransitive } from './transforms/color/color-css-transitive.mjs'
 import { hex8AndroidTransitive } from './transforms/color/hex8-android-transitive.mjs'
 import { uiColorTransitive } from './transforms/color/uicolor-transitive.mjs'
+import { shadow } from './transforms/value/shadow.mjs'
 
 // ==== Include custom formats ====
 import { scssMixin } from './formats/scss-mixin.mjs'
@@ -53,6 +54,7 @@ alpha(StyleDictionary)
 colorCssTransitive(StyleDictionary)
 hex8AndroidTransitive(StyleDictionary)
 uiColorTransitive(StyleDictionary)
+shadow(StyleDictionary)
 
 // ==== Register custom formats ====
 scssMixin(StyleDictionary)
