@@ -78,7 +78,8 @@ const template = `<!DOCTYPE html>
     </table>
   </div>
 </body>
-</html>`
+</html>
+`
 
 fs.mkdirpSync('./grid')
 fs.writeFileSync(file, template)
