@@ -9,7 +9,8 @@ export const js = (theme) => ({
       'size/strip-all-px-js',
       'size/space-js',
       'color/alpha',
-      'color/css-transitive'
+      'color/css-transitive',
+      'value/shadow'
     ],
     files: [
       {
