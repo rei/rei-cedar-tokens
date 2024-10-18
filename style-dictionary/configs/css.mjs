@@ -9,13 +9,13 @@ export const css = (theme) => ({
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',
-      'color/alpha',
       'color/css-transitive'
     ],
     files: [
       {
         destination: 'cdr-tokens.css',
-        format: 'css/variables'
+        format: 'css/variables',
+        filter: 'remove-source-tokens'
       }
     ]
   }

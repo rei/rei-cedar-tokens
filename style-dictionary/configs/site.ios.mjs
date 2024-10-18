@@ -6,8 +6,7 @@ export const siteIos = (theme) => ({
     transforms: [
       'attribute/deprecated',
       'name/pascal',
-      'color/alpha',
-      'color/UIColor-transitive',
+      'color/UIColor',
       'size/strip-px',
       'size/space',
       'size/float'

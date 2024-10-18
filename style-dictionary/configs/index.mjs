@@ -55,6 +55,9 @@ export const getConfig = (platform, theme) => {
     source: themeOverrides,
     preprocessors: ['tokens-studio'],
     platforms: allPlatforms(platform, theme),
-    usesDtcg: true
+    usesDtcg: true,
+    log: {
+      verbosity: 'verbose'
+    }
   }
 }

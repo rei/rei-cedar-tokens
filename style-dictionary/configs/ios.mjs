@@ -1,4 +1,4 @@
-import { commonConfig } from '../utils.mjs'
+import { commonConfig, filterSourceTokensAndType } from '../utils.mjs'
 
 export const ios = (theme) => ({
   ios: {
@@ -6,8 +6,7 @@ export const ios = (theme) => ({
     transforms: [
       'attribute/deprecated',
       'name/pascal',
-      'color/alpha',
-      'color/UIColor-transitive',
+      'color/UIColor',
       'size/strip-px',
       'size/space',
       'size/float'
@@ -16,7 +15,7 @@ export const ios = (theme) => ({
       {
         destination: 'CdrSize.h',
         format: 'ios/static.h',
-        filter: 'ios-size',
+        filter: (token) => filterSourceTokensAndType(token, ['dimension', 'fontSize']),
         options: {
           type: 'float',
           className: 'CdrSize'
@@ -25,7 +24,7 @@ export const ios = (theme) => ({
       {
         destination: 'CdrSize.m',
         format: 'ios/static.m',
-        filter: 'ios-size',
+        filter: (token) => filterSourceTokensAndType(token, ['dimension', 'fontSize']),
         options: {
           type: 'float',
           className: 'CdrSize'
@@ -34,9 +33,7 @@ export const ios = (theme) => ({
       {
         destination: 'CdrColor.h',
         format: 'ios/colors.h',
-        filter: {
-          $type: 'color'
-        },
+        filter: (token) => filterSourceTokensAndType(token, 'color'),
         options: {
           type: 'CdrColorName',
           className: 'CdrColor'
@@ -45,9 +42,7 @@ export const ios = (theme) => ({
       {
         destination: 'CdrColor.m',
         format: 'ios/colors.m',
-        filter: {
-          $type: 'color'
-        },
+        filter: (token) => filterSourceTokensAndType(token, 'color'),
         options: {
           type: 'CdrColorName',
           className: 'CdrColor'

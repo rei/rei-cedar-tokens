@@ -9,13 +9,13 @@ export const scss = (theme) => ({
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',
-      'color/alpha',
       'color/css-transitive'
     ],
     files: [
       {
         destination: 'cdr-variable.scss',
-        format: 'scss/variables'
+        format: 'scss/variables',
+        filter: 'remove-source-tokens'
       },
       {
         destination: 'cdr-mixins.scss',

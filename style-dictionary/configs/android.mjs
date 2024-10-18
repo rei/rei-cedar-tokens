@@ -1,4 +1,4 @@
-import { commonConfig } from '../utils.mjs'
+import { commonConfig, filterSourceTokensAndType } from '../utils.mjs'
 
 export const android = (theme) => ({
   android: {
@@ -8,29 +8,22 @@ export const android = (theme) => ({
       'size/space',
       'size/dp-transitive',
       'size/sp',
-      'color/alpha',
-      'color/hex8android-transitive'
+      'color/hex8android'
     ],
     files: [
       {
         destination: 'colors.xml',
-        filter: {
-          $type: 'color'
-        },
+        filter: (token) => filterSourceTokensAndType(token, 'color'),
         format: 'android/resources'
       },
       {
         destination: 'font_dimens.xml',
-        filter: {
-          $type: 'fontSize'
-        },
+        filter: (token) => filterSourceTokensAndType(token, 'fontSize'),
         format: 'android/fontDimens'
       },
       {
         destination: 'dimens.xml',
-        filter: {
-          $type: 'dimension'
-        },
+        filter: (token) => filterSourceTokensAndType(token, 'dimension'),
         format: 'android/dimens'
       }
     ]
