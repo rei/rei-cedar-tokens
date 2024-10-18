@@ -435,7 +435,6 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "chip",
@@ -445,9 +444,8 @@
       "filePath": "tokens/global/chip.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "chip",
@@ -489,7 +487,6 @@
     {
       "$value": "#e6030301",
       "$type": "color",
-      "alpha": 0.9,
       "docs": {
         "category": "colors",
         "type": "text",
@@ -499,9 +496,8 @@
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
-        "$value": "{options.color.warm-grey-1200}",
+        "$value": "{options.color.warm-grey-1200-90}",
         "$type": "color",
-        "alpha": 0.9,
         "docs": {
           "category": "colors",
           "type": "text",
@@ -517,7 +513,6 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "text",
@@ -527,9 +522,8 @@
       "filePath": "tokens/themes/docsite/color.json5",
       "isSource": true,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "text",
@@ -545,7 +539,6 @@
     {
       "$value": "#e6030301",
       "$type": "color",
-      "alpha": 0.9,
       "docs": {
         "category": "colors",
         "type": "text",
@@ -555,9 +548,8 @@
       "filePath": "tokens/global/color.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1200}",
+        "$value": "{options.color.warm-grey-1200-90}",
         "$type": "color",
-        "alpha": 0.9,
         "docs": {
           "category": "colors",
           "type": "text",
@@ -833,7 +825,6 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -843,9 +834,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -887,7 +877,6 @@
     {
       "$value": "#bf423b2f",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -897,9 +886,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-950}",
+        "$value": "{options.color.warm-grey-950-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -915,7 +903,6 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -925,9 +912,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -943,7 +929,6 @@
     {
       "$value": "#bf423b2f",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -953,9 +938,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-950}",
+        "$value": "{options.color.warm-grey-950-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -1023,7 +1007,6 @@
     {
       "$value": "#bf423b2f",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -1033,9 +1016,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-950}",
+        "$value": "{options.color.warm-grey-950-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -1085,17 +1067,15 @@
       },
       "filePath": "tokens/themes/docsite/link.json5",
       "isSource": true,
-      "alpha": 0.9,
       "original": {
-        "$value": "{options.color.warm-grey-1200}",
+        "$value": "{options.color.warm-grey-1200-90}",
         "$type": "color",
         "docs": {
           "category": "colors",
           "type": "link",
           "example": "color",
           "description": "Text color for links"
-        },
-        "alpha": 0.9
+        }
       },
       "name": "cdr_color_text_link_rest",
       "attributes": {
@@ -1113,17 +1093,15 @@
       },
       "filePath": "tokens/themes/docsite/link.json5",
       "isSource": true,
-      "alpha": 0.9,
       "original": {
-        "$value": "{options.color.warm-grey-1200}",
+        "$value": "{options.color.warm-grey-1200-90}",
         "$type": "color",
         "docs": {
           "category": "colors",
           "type": "link",
           "example": "color",
           "description": "Text color for the hover state of links"
-        },
-        "alpha": 0.9
+        }
       },
       "name": "cdr_color_text_link_hover",
       "attributes": {
@@ -1141,17 +1119,15 @@
       },
       "filePath": "tokens/themes/docsite/link.json5",
       "isSource": true,
-      "alpha": 0.75,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
         "docs": {
           "category": "colors",
           "type": "link",
           "example": "color",
           "description": "Text color for the active and pressed states of links"
-        },
-        "alpha": 0.75
+        }
       },
       "name": "cdr_color_text_link_active",
       "attributes": {
@@ -1213,7 +1189,6 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "rating",
@@ -1223,9 +1198,8 @@
       "filePath": "tokens/global/rating.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "rating",
@@ -1293,7 +1267,6 @@
     {
       "$value": "#bf423b2f",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "tabs",
@@ -1303,9 +1276,8 @@
       "filePath": "tokens/global/tab.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-950}",
+        "$value": "{options.color.warm-grey-950-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "tabs",
@@ -1321,7 +1293,6 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "tabs",
@@ -1331,9 +1302,8 @@
       "filePath": "tokens/global/tab.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "tabs",
@@ -2648,7 +2618,6 @@
     },
     {
       "$value": "#d9f4f2ed",
-      "alpha": 0.85,
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -2659,8 +2628,7 @@
       "filePath": "tokens/global/color.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-200}",
-        "alpha": 0.85,
+        "$value": "{options.color.warm-grey-200-85}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -2755,7 +2723,6 @@
     {
       "$value": "#bfffffff",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -2765,9 +2732,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.white}",
+        "$value": "{options.color.white-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -2809,7 +2775,6 @@
     {
       "$value": "#bfffffff",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -2819,9 +2784,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.white}",
+        "$value": "{options.color.white-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -2837,7 +2801,6 @@
     {
       "$value": "#26f4f2ed",
       "$type": "color",
-      "alpha": 0.15,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -2847,9 +2810,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-200}",
+        "$value": "{options.color.warm-grey-200-15}",
         "$type": "color",
-        "alpha": 0.15,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -2865,7 +2827,6 @@
     {
       "$value": "#d9ffffff",
       "$type": "color",
-      "alpha": 0.85,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -2875,9 +2836,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.white}",
+        "$value": "{options.color.white-85}",
         "$type": "color",
-        "alpha": 0.85,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -2893,7 +2853,6 @@
     {
       "$value": "#bffff2f2",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "category": "colors",
         "type": "input",
@@ -2903,9 +2862,8 @@
       "filePath": "tokens/global/input.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.error-red-50}",
+        "$value": "{options.color.error-red-50-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "category": "colors",
           "type": "input",
@@ -6719,16 +6677,14 @@
     {
       "$value": "#e6030301",
       "$type": "color",
-      "alpha": 0.9,
       "docs": {
         "type": "table"
       },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
-        "$value": "{options.color.warm-grey-1200}",
+        "$value": "{options.color.warm-grey-1200-90}",
         "$type": "color",
-        "alpha": 0.9,
         "docs": {
           "type": "table"
         }
@@ -6741,16 +6697,14 @@
     {
       "$value": "#bf0c0b08",
       "$type": "color",
-      "alpha": 0.75,
       "docs": {
         "type": "table"
       },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-75}",
         "$type": "color",
-        "alpha": 0.75,
         "docs": {
           "type": "table"
         }
@@ -7305,16 +7259,14 @@
     {
       "$value": "#804e4d49",
       "$type": "color",
-      "alpha": 0.5,
       "docs": {
         "type": "note"
       },
       "filePath": "tokens/themes/docsite/note.json5",
       "isSource": true,
       "original": {
-        "$value": "{options.color.warm-grey-900}",
+        "$value": "{options.color.warm-grey-900-50}",
         "$type": "color",
-        "alpha": 0.5,
         "docs": {
           "type": "note"
         }
@@ -7327,16 +7279,14 @@
     {
       "$value": "#804e4d49",
       "$type": "color",
-      "alpha": 0.5,
       "docs": {
         "type": "table"
       },
       "filePath": "tokens/themes/docsite/table.json5",
       "isSource": true,
       "original": {
-        "$value": "{options.color.warm-grey-900}",
+        "$value": "{options.color.warm-grey-900-50}",
         "$type": "color",
-        "alpha": 0.5,
         "docs": {
           "type": "table"
         }
@@ -8027,7 +7977,6 @@
     {
       "$value": "#330c0b08",
       "$type": "color",
-      "alpha": 0.2,
       "docs": {
         "type": "prominence",
         "category": "prominence"
@@ -8035,9 +7984,8 @@
       "filePath": "tokens/global/prominence.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-20}",
         "$type": "color",
-        "alpha": 0.2,
         "docs": {
           "type": "prominence",
           "category": "{prominence.docCategory}"
@@ -8139,7 +8087,6 @@
     {
       "$value": "#330c0b08",
       "$type": "color",
-      "alpha": 0.2,
       "docs": {
         "type": "prominence",
         "category": "prominence"
@@ -8147,9 +8094,8 @@
       "filePath": "tokens/global/prominence.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-20}",
         "$type": "color",
-        "alpha": 0.2,
         "docs": {
           "type": "prominence",
           "category": "{prominence.docCategory}"
@@ -8251,7 +8197,6 @@
     {
       "$value": "#330c0b08",
       "$type": "color",
-      "alpha": 0.2,
       "docs": {
         "type": "prominence",
         "category": "prominence"
@@ -8259,9 +8204,8 @@
       "filePath": "tokens/global/prominence.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-20}",
         "$type": "color",
-        "alpha": 0.2,
         "docs": {
           "type": "prominence",
           "category": "{prominence.docCategory}"
@@ -8363,7 +8307,6 @@
     {
       "$value": "#330c0b08",
       "$type": "color",
-      "alpha": 0.2,
       "docs": {
         "type": "prominence",
         "category": "prominence"
@@ -8371,9 +8314,8 @@
       "filePath": "tokens/global/prominence.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-20}",
         "$type": "color",
-        "alpha": 0.2,
         "docs": {
           "type": "prominence",
           "category": "{prominence.docCategory}"
@@ -8475,7 +8417,6 @@
     {
       "$value": "#330c0b08",
       "$type": "color",
-      "alpha": 0.2,
       "docs": {
         "type": "prominence",
         "category": "prominence"
@@ -8483,9 +8424,8 @@
       "filePath": "tokens/global/prominence.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-1150}",
+        "$value": "{options.color.warm-grey-1150-20}",
         "$type": "color",
-        "alpha": 0.2,
         "docs": {
           "type": "prominence",
           "category": "{prominence.docCategory}"

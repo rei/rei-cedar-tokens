@@ -9,14 +9,12 @@ export const figma = (theme) => ({
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',
-      'color/alpha',
       'color/css-transitive'
     ],
     files: [
       {
         destination: 'figma.json',
-        format: 'figma',
-        filter: 'remove-source-tokens'
+        format: 'figma'
       }
     ]
   }

@@ -9,17 +9,18 @@ export const less = (theme) => ({
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',
-      'color/alpha',
       'color/css-transitive'
     ],
     files: [
       {
         destination: 'cdr-variable.less',
-        format: 'less/variables'
+        format: 'less/variables',
+        filter: 'remove-source-tokens'
       },
       {
         destination: 'cdr-mixins.less',
-        format: 'less/mixin'
+        format: 'less/mixin',
+        filter: 'remove-source-tokens'
       }
     ],
     actions: ['include-media-queries-less', 'include-display-less', 'concat-files']

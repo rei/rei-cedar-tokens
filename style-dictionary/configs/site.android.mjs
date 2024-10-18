@@ -9,8 +9,7 @@ export const siteAndroid = (theme) => ({
       'size/space',
       'size/dp-transitive',
       'size/sp',
-      'color/alpha',
-      'color/hex8android-transitive'
+      'color/hex8android'
     ],
     files: [
       {
