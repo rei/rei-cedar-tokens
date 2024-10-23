@@ -1,3 +1,48 @@
 {
-    //this is an empty file where we'd put overrides from the global defaults should rei-brand diverge from global.
+    "membership": {
+        "vibrant": {
+            "color": {
+                "text": {
+                    "primary": {
+                    "$value": "#13352C",
+                    "$type": "color",
+                    "docs": {
+                        "type": "text"
+                        }
+                    },
+                },
+                "background": {
+                    "primary": {
+                    "$value": "#FFDC52",
+                    "$type": "color",
+                    "docs": {
+                        "type": "text"
+                        }
+                    }
+                }
+            }
+        },
+        "subtle": {
+            "color": {
+                "text": {
+                    "primary": {
+                    "$value": "#13352C",
+                    "$type": "color",
+                    "docs": {
+                        "type": "text"
+                        }
+                    }
+                },
+                "background": {
+                    "primary": {
+                    "$value": "#BFB33E",
+                    "$type": "color",
+                    "docs": {
+                        "type": "text"
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
