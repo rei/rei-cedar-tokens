@@ -4038,264 +4038,2088 @@
     }
   },
   "prominence": {
-    "flat-x": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
+    "flat-shadow": {
+      "color": {
+        "filePath": "tokens/global/prominence.json5",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        },
+        "$value": "#000000",
+        "$type": "color",
+        "original": {
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "#000000",
+          "$type": "color"
+        }
+      },
+      "offsetX": {
+        "filePath": "tokens/global/prominence.json5",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        },
         "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "flat-y": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
+        "$type": "dimension",
+        "original": {
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension"
+        }
+      },
+      "offsetY": {
+        "filePath": "tokens/global/prominence.json5",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        },
         "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "flat-blur": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
+        "$type": "dimension",
+        "original": {
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension"
+        }
+      },
+      "blur": {
+        "filePath": "tokens/global/prominence.json5",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        },
         "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "flat-spread": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
+        "$type": "dimension",
+        "original": {
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension"
+        }
+      },
+      "spread": {
+        "filePath": "tokens/global/prominence.json5",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        },
         "$value": "0",
-        "$type": "dimension"
+        "$type": "dimension",
+        "original": {
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension"
+        }
       }
     },
-    "flat-color": {
-      "$value": "rgba(46, 46, 43, 0.2)",
-      "$type": "color",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "{options.color.warm-grey-1000-20}",
-        "$type": "color"
+    "raised-shadow": {
+      "1": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.07)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.07)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "2": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.02)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.02)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "2px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "3": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.00)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "2px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
       }
     },
-    "raised-x": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
+    "elevated-shadow": {
+      "1": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.14)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.14)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "2": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.12)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.12)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "2px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "2px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "3": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.07)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.07)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "2px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.4rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "4px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "3px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "4": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.02)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.02)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "3px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.8rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "8px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "3px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "5": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.00)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.5rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "5px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "12px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.4rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "4px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
       }
     },
-    "raised-y": {
-      "$value": "0.2rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "2px",
-        "$type": "dimension"
+    "floating-shadow": {
+      "1": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.14)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.14)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "1px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.4rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "4px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "2": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.12)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.12)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.5rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "5px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.6rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "6px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.8rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "8px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "3": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.07)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.07)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "11px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "13px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "10px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "4": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.02)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.02)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.9rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "19px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "2.4rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "24px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "12px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "5": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.00)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "30px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "3.7rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "37px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "13px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
       }
     },
-    "raised-blur": {
-      "$value": "0.2rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "2px",
-        "$type": "dimension"
-      }
-    },
-    "raised-spread": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "raised-color": {
-      "$value": "rgba(46, 46, 43, 0.2)",
-      "$type": "color",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "{options.color.warm-grey-1000-20}",
-        "$type": "color"
-      }
-    },
-    "elevated-x": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "elevated-y": {
-      "$value": "0.4rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "4px",
-        "$type": "dimension"
-      }
-    },
-    "elevated-blur": {
-      "$value": "0.4rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "4px",
-        "$type": "dimension"
-      }
-    },
-    "elevated-spread": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "elevated-color": {
-      "$value": "rgba(46, 46, 43, 0.2)",
-      "$type": "color",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "{options.color.warm-grey-1000-20}",
-        "$type": "color"
-      }
-    },
-    "floating-x": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "floating-y": {
-      "$value": "0.8rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "8px",
-        "$type": "dimension"
-      }
-    },
-    "floating-blur": {
-      "$value": "0.8rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "8px",
-        "$type": "dimension"
-      }
-    },
-    "floating-spread": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "floating-color": {
-      "$value": "rgba(46, 46, 43, 0.2)",
-      "$type": "color",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "{options.color.warm-grey-1000-20}",
-        "$type": "color"
-      }
-    },
-    "lifted-x": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "lifted-y": {
-      "$value": "1.6rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "16px",
-        "$type": "dimension"
-      }
-    },
-    "lifted-blur": {
-      "$value": "1.6rem",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "16px",
-        "$type": "dimension"
-      }
-    },
-    "lifted-spread": {
-      "$value": "0",
-      "$type": "dimension",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "0",
-        "$type": "dimension"
-      }
-    },
-    "lifted-color": {
-      "$value": "rgba(46, 46, 43, 0.2)",
-      "$type": "color",
-      "filePath": "tokens/global/prominence.json5",
-      "original": {
-        "$value": "{options.color.warm-grey-1000-20}",
-        "$type": "color"
+    "lifted-shadow": {
+      "1": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.14)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.14)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.5rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "5px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "2px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.1rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "11px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "2": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.12)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.12)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.9rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "19px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0.7rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "7px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "2rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "20px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "3": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.07)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.07)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "4.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "43px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "1.6rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "16px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "2.8rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "28px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "4": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0.02)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.02)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "7.7rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "77px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "2.8rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "28px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "3.3rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "33px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
+      },
+      "5": {
+        "color": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "rgba(75, 74, 72, 0)",
+          "$type": "color",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "rgba(75, 74, 72, 0.00)",
+            "$type": "color"
+          }
+        },
+        "offsetX": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "12rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "120px",
+            "$type": "dimension"
+          }
+        },
+        "offsetY": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "4.4rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "44px",
+            "$type": "dimension"
+          }
+        },
+        "blur": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "3.6rem",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "36px",
+            "$type": "dimension"
+          }
+        },
+        "spread": {
+          "filePath": "tokens/global/prominence.json5",
+          "$extensions": {
+            "studio.tokens": {
+              "originalType": "boxShadow"
+            }
+          },
+          "$value": "0",
+          "$type": "dimension",
+          "original": {
+            "$extensions": {
+              "studio.tokens": {
+                "originalType": "boxShadow"
+              }
+            },
+            "$value": "0",
+            "$type": "dimension"
+          }
+        }
       }
     },
     "flat": {
-      "$value": "0 0 0 0 rgba(46, 46, 43, 0.2)",
+      "$value": "0 0 0 0 #000000",
       "filePath": "tokens/web/prominence.json5",
+      "$type": "shadow",
+      "$extensions": {
+        "studio.tokens": {
+          "originalType": "boxShadow"
+        }
+      },
       "original": {
-        "$value": "{prominence.flat-x.$value} {prominence.flat-y.$value} {prominence.flat-blur.$value} {prominence.flat-spread.$value} {prominence.flat-color.$value}"
+        "$value": [
+          {
+            "color": "#000000",
+            "offsetX": "0",
+            "offsetY": "0",
+            "blur": "0",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        }
       }
     },
     "raised": {
-      "$value": "0 0.2rem 0.2rem 0 rgba(46, 46, 43, 0.2)",
+      "$value": "0 1px 1px 0 rgba(75, 74, 72, 0.07), 0 2px 1px 0 rgba(75, 74, 72, 0.02), 0 2px 1px 0 rgba(75, 74, 72, 0.00)",
       "filePath": "tokens/web/prominence.json5",
+      "$type": "shadow",
+      "$extensions": {
+        "studio.tokens": {
+          "originalType": "boxShadow"
+        }
+      },
       "original": {
-        "$value": "{prominence.raised-x.$value} {prominence.raised-y.$value} {prominence.raised-blur.$value} {prominence.raised-spread.$value} {prominence.raised-color.$value}"
+        "$value": [
+          {
+            "color": "rgba(75, 74, 72, 0.07)",
+            "offsetX": "0",
+            "offsetY": "1px",
+            "blur": "1px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.02)",
+            "offsetX": "0",
+            "offsetY": "2px",
+            "blur": "1px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.00)",
+            "offsetX": "0",
+            "offsetY": "2px",
+            "blur": "1px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        }
       }
     },
     "elevated": {
-      "$value": "0 0.4rem 0.4rem 0 rgba(46, 46, 43, 0.2)",
+      "$value": "0 0 1px 0 rgba(75, 74, 72, 0.14), 1px 2px 2px 0 rgba(75, 74, 72, 0.12), 2px 4px 3px 0 rgba(75, 74, 72, 0.07), 3px 8px 3px 0 rgba(75, 74, 72, 0.02), 5px 12px 4px 0 rgba(75, 74, 72, 0.00)",
       "filePath": "tokens/web/prominence.json5",
+      "$type": "shadow",
+      "$extensions": {
+        "studio.tokens": {
+          "originalType": "boxShadow"
+        }
+      },
       "original": {
-        "$value": "{prominence.elevated-x.$value} {prominence.elevated-y.$value} {prominence.elevated-blur.$value} {prominence.elevated-spread.$value} {prominence.elevated-color.$value}"
+        "$value": [
+          {
+            "color": "rgba(75, 74, 72, 0.14)",
+            "offsetX": "0",
+            "offsetY": "0",
+            "blur": "1px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.12)",
+            "offsetX": "1px",
+            "offsetY": "2px",
+            "blur": "2px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.07)",
+            "offsetX": "2px",
+            "offsetY": "4px",
+            "blur": "3px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.02)",
+            "offsetX": "3px",
+            "offsetY": "8px",
+            "blur": "3px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.00)",
+            "offsetX": "5px",
+            "offsetY": "12px",
+            "blur": "4px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        }
       }
     },
     "floating": {
-      "$value": "0 0.8rem 0.8rem 0 rgba(46, 46, 43, 0.2)",
+      "$value": "1px 1px 4px 0 rgba(75, 74, 72, 0.14), 5px 6px 8px 0 rgba(75, 74, 72, 0.12), 11px 13px 10px 0 rgba(75, 74, 72, 0.07), 19px 24px 12px 0 rgba(75, 74, 72, 0.02), 30px 37px 13px 0 rgba(75, 74, 72, 0.00)",
       "filePath": "tokens/web/prominence.json5",
+      "$type": "shadow",
+      "$extensions": {
+        "studio.tokens": {
+          "originalType": "boxShadow"
+        }
+      },
       "original": {
-        "$value": "{prominence.floating-x.$value} {prominence.floating-y.$value} {prominence.floating-blur.$value} {prominence.floating-spread.$value} {prominence.floating-color.$value}"
+        "$value": [
+          {
+            "color": "rgba(75, 74, 72, 0.14)",
+            "offsetX": "1px",
+            "offsetY": "1px",
+            "blur": "4px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.12)",
+            "offsetX": "5px",
+            "offsetY": "6px",
+            "blur": "8px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.07)",
+            "offsetX": "11px",
+            "offsetY": "13px",
+            "blur": "10px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.02)",
+            "offsetX": "19px",
+            "offsetY": "24px",
+            "blur": "12px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.00)",
+            "offsetX": "30px",
+            "offsetY": "37px",
+            "blur": "13px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        }
       }
     },
     "lifted": {
-      "$value": "0 1.6rem 1.6rem 0 rgba(46, 46, 43, 0.2)",
+      "$value": "5px 2px 11px 0 rgba(75, 74, 72, 0.14), 19px 7px 20px 0 rgba(75, 74, 72, 0.12), 43px 16px 28px 0 rgba(75, 74, 72, 0.07), 77px 28px 33px 0 rgba(75, 74, 72, 0.02), 120px 44px 36px 0 rgba(75, 74, 72, 0.00)",
       "filePath": "tokens/web/prominence.json5",
+      "$type": "shadow",
+      "$extensions": {
+        "studio.tokens": {
+          "originalType": "boxShadow"
+        }
+      },
       "original": {
-        "$value": "{prominence.lifted-x.$value} {prominence.lifted-y.$value} {prominence.lifted-blur.$value} {prominence.lifted-spread.$value} {prominence.lifted-color.$value}"
+        "$value": [
+          {
+            "color": "rgba(75, 74, 72, 0.14)",
+            "offsetX": "5px",
+            "offsetY": "2px",
+            "blur": "11px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.12)",
+            "offsetX": "19px",
+            "offsetY": "7px",
+            "blur": "20px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.07)",
+            "offsetX": "43px",
+            "offsetY": "16px",
+            "blur": "28px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.02)",
+            "offsetX": "77px",
+            "offsetY": "28px",
+            "blur": "33px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(75, 74, 72, 0.00)",
+            "offsetX": "120px",
+            "offsetY": "44px",
+            "blur": "36px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$extensions": {
+          "studio.tokens": {
+            "originalType": "boxShadow"
+          }
+        }
       }
     }
   },
