@@ -2,20 +2,11 @@
   "options": {
     "color": {
       "transparent": {
-        "$value": "rgba(0, 0, 0, 0)",
+        "$value": "rgba(255, 255, 255, 0)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "transparent",
-          "$type": "color"
-        }
-      },
-      "black": {
-        "$value": "#000000",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "#000000",
+          "$value": "rgba(255, 255, 255, 0)",
           "$type": "color"
         }
       },
@@ -46,16 +37,25 @@
           "$type": "color"
         }
       },
-      "cold-grey-100": {
-        "$value": "#fbfaf9",
+      "black": {
+        "$value": "#000000",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#fbfaf9",
+          "$value": "#000000",
           "$type": "color"
         }
       },
-      "cold-grey-200": {
+      "warm-grey-010": {
+        "$value": "#fafbf9",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#fafbf9",
+          "$type": "color"
+        }
+      },
+      "warm-grey-025": {
         "$value": "#f7f5f3",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
@@ -64,43 +64,25 @@
           "$type": "color"
         }
       },
+      "warm-grey-025-15": {
+        "$value": "rgba(247, 245, 243, 0.15)",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "rgba(247, 245, 243, 0.15)",
+          "$type": "color"
+        }
+      },
+      "warm-grey-025-85": {
+        "$value": "rgba(247, 245, 243, 0.85)",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "rgba(247, 245, 243, 0.85)",
+          "$type": "color"
+        }
+      },
       "warm-grey-100": {
-        "$value": "#f9f8f6",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "#f9f8f6",
-          "$type": "color"
-        }
-      },
-      "warm-grey-200": {
-        "$value": "#f4f2ed",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "#f4f2ed",
-          "$type": "color"
-        }
-      },
-      "warm-grey-200-15": {
-        "$value": "rgba(244, 242, 237, 0.15)",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "rgba(244, 242, 237, 0.15)",
-          "$type": "color"
-        }
-      },
-      "warm-grey-200-85": {
-        "$value": "rgba(244, 242, 237, 0.85)",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "rgba(244, 242, 237, 0.85)",
-          "$type": "color"
-        }
-      },
-      "warm-grey-300": {
         "$value": "#edeae3",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
@@ -109,25 +91,16 @@
           "$type": "color"
         }
       },
-      "warm-grey-400": {
-        "$value": "#dcd6cb",
+      "warm-grey-250": {
+        "$value": "#d5cfc3",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color"
         }
       },
-      "warm-grey-500": {
-        "$value": "#d1cbbd",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "#d1cbbd",
-          "$type": "color"
-        }
-      },
-      "warm-grey-600": {
+      "warm-grey-450": {
         "$value": "#b2ab9f",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
@@ -136,129 +109,84 @@
           "$type": "color"
         }
       },
-      "warm-grey-700": {
-        "$value": "#928b80",
+      "warm-grey-600": {
+        "$value": "#958e83",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color"
         }
       },
-      "warm-grey-800": {
-        "$value": "#726d64",
+      "warm-grey-750": {
+        "$value": "#736e65",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#726d64",
+          "$value": "#736e65",
           "$type": "color"
         }
       },
       "warm-grey-900": {
-        "$value": "#4e4d49",
+        "$value": "#4b4a48",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color"
         }
       },
       "warm-grey-900-50": {
-        "$value": "rgba(78, 77, 73, 0.5)",
+        "$value": "rgba(75, 74, 72, 0.5)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "rgba(78, 77, 73, 0.5)",
+          "$value": "rgba(75, 74, 72, 0.5)",
           "$type": "color"
         }
       },
-      "warm-grey-950": {
-        "$value": "#423b2f",
+      "warm-grey-900-75": {
+        "$value": "rgba(75, 74, 72, 0.75)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#423b2f",
-          "$type": "color"
-        }
-      },
-      "warm-grey-950-75": {
-        "$value": "rgba(66, 59, 47, 0.75)",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "rgba(66, 59, 47, 0.75)",
+          "$value": "rgba(75, 74, 72, 0.75)",
           "$type": "color"
         }
       },
       "warm-grey-1000": {
-        "$value": "#373734",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "#373734",
-          "$type": "color"
-        }
-      },
-      "warm-grey-1050": {
         "$value": "#2e2e2b",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#2E2E2B",
+          "$value": "#2e2e2b",
           "$type": "color"
         }
       },
-      "warm-grey-1100": {
-        "$value": "#20201d",
+      "warm-grey-1000-20": {
+        "$value": "rgba(46, 46, 43, 0.2)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#20201d",
+          "$value": "rgba(46, 46, 43, 0.2)",
           "$type": "color"
         }
       },
-      "warm-grey-1150": {
-        "$value": "#0c0b08",
+      "warm-grey-1000-75": {
+        "$value": "rgba(46, 46, 43, 0.75)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#0c0b08",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color"
         }
       },
-      "warm-grey-1150-20": {
-        "$value": "rgba(12, 11, 8, 0.2)",
+      "warm-grey-1000-90": {
+        "$value": "rgba(46, 46, 43, 0.9)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "rgba(12, 11, 8, 0.2)",
-          "$type": "color"
-        }
-      },
-      "warm-grey-1150-75": {
-        "$value": "rgba(12, 11, 8, 0.75)",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "rgba(12, 11, 8, 0.75)",
-          "$type": "color"
-        }
-      },
-      "warm-grey-1200": {
-        "$value": "#030301",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "#030301",
-          "$type": "color"
-        }
-      },
-      "warm-grey-1200-90": {
-        "$value": "rgba(3, 3, 1, 0.9)",
-        "filePath": "tokens/_options/color.json5",
-        "$type": "color",
-        "original": {
-          "$value": "rgba(3, 3, 1, 0.90)",
+          "$value": "rgba(46, 46, 43, 0.9)",
           "$type": "color"
         }
       },
@@ -578,11 +506,11 @@
         }
       },
       "smoked-salmon-red-200": {
-        "$value": "#feead1",
+        "$value": "#feeae1",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#feead1",
+          "$value": "#feeae1",
           "$type": "color"
         }
       },
@@ -614,11 +542,11 @@
         }
       },
       "smoked-salmon-red-600": {
-        "$value": "#fe5f47",
+        "$value": "#fa6f5a",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#fe5f47",
+          "$value": "#fa6f5a",
           "$type": "color"
         }
       },
@@ -677,11 +605,11 @@
         }
       },
       "sale-red-200": {
-        "$value": "#f4f2ed",
+        "$value": "#fde2e2",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#f4f2ed",
+          "$value": "#fde2e2",
           "$type": "color"
         }
       },
@@ -964,7 +892,7 @@
           "$type": "color"
         }
       },
-      "error-red-50": {
+      "error-red-050": {
         "$value": "#fff2f2",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
@@ -973,7 +901,7 @@
           "$type": "color"
         }
       },
-      "error-red-50-75": {
+      "error-red-050-75": {
         "$value": "rgba(255, 242, 242, 0.75)",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
@@ -992,11 +920,11 @@
         }
       },
       "error-red-200": {
-        "$value": "#fcefe8",
+        "$value": "#fcefe4",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#fcefe8",
+          "$value": "#fcefe4",
           "$type": "color"
         }
       },
@@ -1099,6 +1027,15 @@
           "$type": "color"
         }
       },
+      "info-blue-200": {
+        "$value": "#e4f8fc",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#e4f8fc",
+          "$type": "color"
+        }
+      },
       "info-blue-300": {
         "$value": "#c2d8db",
         "filePath": "tokens/_options/color.json5",
@@ -1108,12 +1045,75 @@
           "$type": "color"
         }
       },
+      "info-blue-400": {
+        "$value": "#bae8f7",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#bae8f7",
+          "$type": "color"
+        }
+      },
+      "info-blue-500": {
+        "$value": "#9fd8ef",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#9fd8ef",
+          "$type": "color"
+        }
+      },
+      "info-blue-600": {
+        "$value": "#7cc2e4",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#7cc2e4",
+          "$type": "color"
+        }
+      },
+      "info-blue-700": {
+        "$value": "#4c98c8",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#4c98c8",
+          "$type": "color"
+        }
+      },
       "info-blue-800": {
         "$value": "#408e86",
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
           "$value": "#408e86",
+          "$type": "color"
+        }
+      },
+      "info-blue-900": {
+        "$value": "#174b80",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#174b80",
+          "$type": "color"
+        }
+      },
+      "info-blue-1000": {
+        "$value": "#0e2e5d",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#0e2e5d",
+          "$type": "color"
+        }
+      },
+      "info-blue-1100": {
+        "$value": "#071736",
+        "filePath": "tokens/_options/color.json5",
+        "$type": "color",
+        "original": {
+          "$value": "#071736",
           "$type": "color"
         }
       },
@@ -1140,7 +1140,7 @@
         "filePath": "tokens/_options/color.json5",
         "$type": "color",
         "original": {
-          "$value": "#958E83",
+          "$value": "#958e83",
           "$type": "color"
         }
       },
@@ -1251,11 +1251,11 @@
     "text": {
       "button": {
         "primary": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
@@ -1269,11 +1269,11 @@
           }
         },
         "primary-active": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
@@ -1287,7 +1287,7 @@
           }
         },
         "secondary": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
@@ -1296,7 +1296,7 @@
           }
         },
         "secondary-hover": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
@@ -1305,34 +1305,34 @@
           }
         },
         "secondary-active": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "secondary-disabled": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "dark": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "dark-hover": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
@@ -1341,11 +1341,11 @@
           }
         },
         "dark-active": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
@@ -1397,48 +1397,48 @@
       },
       "chip": {
         "default": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         },
         "disabled": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         }
       },
       "primary": {
-        "$value": "rgba(3, 3, 1, 0.9)",
+        "$value": "rgba(46, 46, 43, 0.9)",
         "$type": "color",
         "filePath": "tokens/themes/docsite/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-1200-90}",
+          "$value": "{options.color.warm-grey-1000-90}",
           "$type": "color"
         }
       },
       "secondary": {
-        "$value": "rgba(12, 11, 8, 0.75)",
+        "$value": "rgba(46, 46, 43, 0.75)",
         "$type": "color",
         "filePath": "tokens/themes/docsite/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-1150-75}",
+          "$value": "{options.color.warm-grey-1000-75}",
           "$type": "color"
         }
       },
       "emphasis": {
-        "$value": "rgba(3, 3, 1, 0.9)",
+        "$value": "rgba(46, 46, 43, 0.9)",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-1200-90}",
+          "$value": "{options.color.warm-grey-1000-90}",
           "$type": "color"
         }
       },
@@ -1461,20 +1461,20 @@
         }
       },
       "inverse": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
       "disabled": {
-        "$value": "#d1cbbd",
+        "$value": "#d5cfc3",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-500}",
+          "$value": "{options.color.warm-grey-250}",
           "$type": "color"
         }
       },
@@ -1527,20 +1527,20 @@
       },
       "input": {
         "default": {
-          "$value": "#20201d",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1100}",
+            "$value": "{options.color.warm-grey-1000}",
             "$type": "color"
           }
         },
         "label": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         },
@@ -1549,61 +1549,61 @@
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-600}",
+            "$value": "{options.color.warm-grey-450}",
             "$type": "color"
           }
         },
         "placeholder": {
-          "$value": "rgba(66, 59, 47, 0.75)",
+          "$value": "rgba(75, 74, 72, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-950-75}",
+            "$value": "{options.color.warm-grey-900-75}",
             "$type": "color"
           }
         },
         "required": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         },
         "optional": {
-          "$value": "rgba(66, 59, 47, 0.75)",
+          "$value": "rgba(75, 74, 72, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-950-75}",
+            "$value": "{options.color.warm-grey-900-75}",
             "$type": "color"
           }
         },
         "disabled": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "filled": {
-          "$value": "#20201d",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1100}",
+            "$value": "{options.color.warm-grey-1000}",
             "$type": "color"
           }
         },
         "help": {
-          "$value": "rgba(66, 59, 47, 0.75)",
+          "$value": "rgba(75, 74, 72, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-950-75}",
+            "$value": "{options.color.warm-grey-900-75}",
             "$type": "color"
           }
         },
@@ -1619,38 +1619,38 @@
       },
       "link": {
         "rest": {
-          "$value": "rgba(3, 3, 1, 0.9)",
+          "$value": "rgba(46, 46, 43, 0.9)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/link.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1200-90}",
+            "$value": "{options.color.warm-grey-1000-90}",
             "$type": "color"
           }
         },
         "hover": {
-          "$value": "rgba(3, 3, 1, 0.9)",
+          "$value": "rgba(46, 46, 43, 0.9)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/link.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1200-90}",
+            "$value": "{options.color.warm-grey-1000-90}",
             "$type": "color"
           }
         },
         "active": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/link.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         },
         "disabled": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/link.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
@@ -1666,11 +1666,11 @@
       },
       "rating": {
         "default": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/rating.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         },
@@ -1688,27 +1688,27 @@
           "$type": "color",
           "filePath": "tokens/global/rating.json5",
           "original": {
-            "$value": "{options.color.warm-grey-600}",
+            "$value": "{options.color.warm-grey-450}",
             "$type": "color"
           }
         }
       },
       "tab": {
         "rest": {
-          "$value": "rgba(66, 59, 47, 0.75)",
+          "$value": "rgba(75, 74, 72, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/tab.json5",
           "original": {
-            "$value": "{options.color.warm-grey-950-75}",
+            "$value": "{options.color.warm-grey-900-75}",
             "$type": "color"
           }
         },
         "active": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/global/tab.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         },
@@ -1722,18 +1722,18 @@
           }
         },
         "disabled": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/tab.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         }
       },
       "toggle-button": {
         "default-rest": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/togglebutton.json5",
           "original": {
@@ -1744,31 +1744,31 @@
       },
       "tooltip": {
         "default": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/tooltip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         }
       },
       "table": {
         "primary": {
-          "$value": "rgba(3, 3, 1, 0.9)",
+          "$value": "rgba(46, 46, 43, 0.9)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/table.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1200-90}",
+            "$value": "{options.color.warm-grey-1000-90}",
             "$type": "color"
           }
         },
         "secondary": {
-          "$value": "rgba(12, 11, 8, 0.75)",
+          "$value": "rgba(46, 46, 43, 0.75)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/table.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1150-75}",
+            "$value": "{options.color.warm-grey-1000-75}",
             "$type": "color"
           }
         }
@@ -1825,65 +1825,65 @@
             }
           },
           "hover": {
-            "$value": "#f4f2ed",
+            "$value": "#f7f5f3",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-200}",
+              "$value": "{options.color.warm-grey-025}",
               "$type": "color"
             }
           },
           "icon-alt-hover": {
-            "$value": "#f9f8f6",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           }
         },
         "secondary": {
           "rest": {
-            "$value": "#f9f8f6",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           },
           "active": {
-            "$value": "#928b80",
+            "$value": "#958e83",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-700}",
+              "$value": "{options.color.warm-grey-600}",
               "$type": "color"
             }
           },
           "hover": {
-            "$value": "#f4f2ed",
+            "$value": "#f7f5f3",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-200}",
+              "$value": "{options.color.warm-grey-025}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "#f9f8f6",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           }
         },
         "dark": {
           "rest": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -1892,7 +1892,7 @@
             }
           },
           "active": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -1905,7 +1905,7 @@
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-300}",
+              "$value": "{options.color.warm-grey-100}",
               "$type": "color"
             }
           }
@@ -1930,7 +1930,7 @@
             }
           },
           "hover": {
-            "$value": "#f4f2ed",
+            "$value": "#fde2e2",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -1940,20 +1940,20 @@
           }
         },
         "default-disabled": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "icon-only-active": {
-          "$value": "#f4f2ed",
+          "$value": "#f7f5f3",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-200}",
+            "$value": "{options.color.warm-grey-025}",
             "$type": "color"
           }
         }
@@ -1978,11 +1978,11 @@
           }
         },
         "default-hover": {
-          "$value": "#f4f2ed",
+          "$value": "#f7f5f3",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-200}",
+            "$value": "{options.color.warm-grey-025}",
             "$type": "color"
           }
         },
@@ -2000,16 +2000,16 @@
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-300}",
+            "$value": "{options.color.warm-grey-100}",
             "$type": "color"
           }
         },
         "default-selected": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
@@ -2018,16 +2018,16 @@
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-300}",
+            "$value": "{options.color.warm-grey-100}",
             "$type": "color"
           }
         },
         "default-selected-focus": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
@@ -2036,13 +2036,13 @@
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-300}",
+            "$value": "{options.color.warm-grey-100}",
             "$type": "color"
           }
         }
       },
       "transparent": {
-        "$value": "rgba(0, 0, 0, 0)",
+        "$value": "rgba(255, 255, 255, 0)",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
@@ -2051,11 +2051,11 @@
         }
       },
       "primary": {
-        "$value": "#f4f2ed",
+        "$value": "#f7f5f3",
         "$type": "color",
         "filePath": "tokens/themes/docsite/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-200}",
+          "$value": "{options.color.warm-grey-025}",
           "$type": "color"
         }
       },
@@ -2153,7 +2153,7 @@
           }
         },
         "error": {
-          "$value": "#fcefe8",
+          "$value": "#fcefe4",
           "$type": "color",
           "filePath": "tokens/global/color.json5",
           "original": {
@@ -2217,20 +2217,20 @@
         }
       },
       "accordion-hover": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
       "pagination-hover": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
@@ -2244,21 +2244,21 @@
         }
       },
       "modal-overlay": {
-        "$value": "rgba(244, 242, 237, 0.85)",
+        "$value": "rgba(247, 245, 243, 0.85)",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-200-85}",
+          "$value": "{options.color.warm-grey-025-85}",
           "$type": "color"
         }
       },
       "label": {
         "default-hover": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
@@ -2267,16 +2267,16 @@
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-300}",
+            "$value": "{options.color.warm-grey-100}",
             "$type": "color"
           }
         },
         "default-focus": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
@@ -2310,11 +2310,11 @@
       },
       "input": {
         "default": {
-          "$value": "rgba(244, 242, 237, 0.15)",
+          "$value": "rgba(247, 245, 243, 0.15)",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-200-15}",
+            "$value": "{options.color.warm-grey-025-15}",
             "$type": "color"
           }
         },
@@ -2332,30 +2332,30 @@
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.error-red-50-75}",
+            "$value": "{options.color.error-red-050-75}",
             "$type": "color"
           }
         },
         "default-hover": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "default-active": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "default-selected": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
@@ -2373,48 +2373,48 @@
           }
         },
         "default-selected-hover": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
         "default-disabled": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "default-selected-focus": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
         "default-focus": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         }
       },
       "rating-star-default": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/global/rating.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
@@ -2438,11 +2438,11 @@
           }
         },
         "secondary": {
-          "$value": "#f4f2ed",
+          "$value": "#f7f5f3",
           "$type": "color",
           "filePath": "tokens/global/surface.json5",
           "original": {
-            "$value": "{options.color.warm-grey-200}",
+            "$value": "{options.color.warm-grey-025}",
             "$type": "color"
           }
         },
@@ -2508,16 +2508,16 @@
             "$type": "color",
             "filePath": "tokens/global/surfaceselection.json5",
             "original": {
-              "$value": "{options.color.cold-grey-200}",
+              "$value": "{options.color.warm-grey-025}",
               "$type": "color"
             }
           },
           "loading": {
-            "$value": "#fbfaf9",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/global/surfaceselection.json5",
             "original": {
-              "$value": "{options.color.cold-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           }
@@ -2525,35 +2525,35 @@
       },
       "switch": {
         "default-rest": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/switch.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "default-hover": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/switch.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "default-focus": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/switch.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "selected": {
           "default-rest": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
@@ -2562,7 +2562,7 @@
             }
           },
           "default-hover": {
-            "$value": "#373734",
+            "$value": "#2e2e2b",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
@@ -2571,7 +2571,7 @@
             }
           },
           "default-focus": {
-            "$value": "#373734",
+            "$value": "#2e2e2b",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
@@ -2582,11 +2582,11 @@
         },
         "handle": {
           "default-rest": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           },
@@ -2595,44 +2595,44 @@
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-300}",
+              "$value": "{options.color.warm-grey-100}",
               "$type": "color"
             }
           },
           "default-focus": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           },
           "selected": {
             "default-rest": {
-              "$value": "#dcd6cb",
+              "$value": "#d5cfc3",
               "$type": "color",
               "filePath": "tokens/global/switch.json5",
               "original": {
-                "$value": "{options.color.warm-grey-400}",
+                "$value": "{options.color.warm-grey-250}",
                 "$type": "color"
               }
             },
             "default-hover": {
-              "$value": "#dcd6cb",
+              "$value": "#d5cfc3",
               "$type": "color",
               "filePath": "tokens/global/switch.json5",
               "original": {
-                "$value": "{options.color.warm-grey-400}",
+                "$value": "{options.color.warm-grey-250}",
                 "$type": "color"
               }
             },
             "default-focus": {
-              "$value": "#dcd6cb",
+              "$value": "#d5cfc3",
               "$type": "color",
               "filePath": "tokens/global/switch.json5",
               "original": {
-                "$value": "{options.color.warm-grey-400}",
+                "$value": "{options.color.warm-grey-250}",
                 "$type": "color"
               }
             }
@@ -2640,40 +2640,40 @@
         }
       },
       "table-header": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/themes/docsite/table.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
       "table-row": {
-        "$value": "#f4f2ed",
+        "$value": "#f7f5f3",
         "$type": "color",
         "filePath": "tokens/themes/docsite/table.json5",
         "original": {
-          "$value": "{options.color.warm-grey-200}",
+          "$value": "{options.color.warm-grey-025}",
           "$type": "color"
         }
       },
       "table-row-alt": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/global/table.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
       "toggle-group": {
         "default": {
           "rest": {
-            "$value": "#f9f8f6",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/global/togglebutton.json5",
             "original": {
-              "$value": "{options.color.warm-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           }
@@ -2682,11 +2682,11 @@
       "toggle-button": {
         "default": {
           "rest": {
-            "$value": "#f9f8f6",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/global/togglebutton.json5",
             "original": {
-              "$value": "{options.color.warm-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           },
@@ -2695,7 +2695,7 @@
             "$type": "color",
             "filePath": "tokens/global/togglebutton.json5",
             "original": {
-              "$value": "{options.color.warm-grey-300}",
+              "$value": "{options.color.warm-grey-100}",
               "$type": "color"
             }
           },
@@ -2704,7 +2704,7 @@
             "$type": "color",
             "filePath": "tokens/global/togglebutton.json5",
             "original": {
-              "$value": "{options.color.warm-grey-300}",
+              "$value": "{options.color.warm-grey-100}",
               "$type": "color"
             }
           },
@@ -2732,7 +2732,7 @@
       },
       "tooltip": {
         "default": {
-          "$value": "#373734",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/global/tooltip.json5",
           "original": {
@@ -2746,16 +2746,16 @@
         "$type": "color",
         "filePath": "tokens/themes/docsite/code-snippet.json5",
         "original": {
-          "$value": "{options.color.warm-grey-300}",
+          "$value": "{options.color.warm-grey-100}",
           "$type": "color"
         }
       },
       "code": {
-        "$value": "#20201d",
+        "$value": "#2e2e2b",
         "$type": "color",
         "filePath": "tokens/themes/docsite/code.json5",
         "original": {
-          "$value": "{options.color.warm-grey-1100}",
+          "$value": "{options.color.warm-grey-1000}",
           "$type": "color"
         }
       },
@@ -2770,7 +2770,7 @@
           }
         },
         "active": {
-          "$value": "#373734",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/themes/docsite/link-card.json5",
           "original": {
@@ -2780,11 +2780,11 @@
         }
       },
       "note": {
-        "$value": "#f9f8f6",
+        "$value": "#fafbf9",
         "$type": "color",
         "filePath": "tokens/themes/docsite/note.json5",
         "original": {
-          "$value": "{options.color.warm-grey-100}",
+          "$value": "{options.color.warm-grey-010}",
           "$type": "color"
         }
       },
@@ -2820,11 +2820,11 @@
             }
           },
           "active-inset": {
-            "$value": "#f4f2ed",
+            "$value": "#f7f5f3",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-200}",
+              "$value": "{options.color.warm-grey-025}",
               "$type": "color"
             }
           },
@@ -2840,34 +2840,34 @@
         },
         "secondary": {
           "rest": {
-            "$value": "#928b80",
+            "$value": "#958e83",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-700}",
+              "$value": "{options.color.warm-grey-600}",
               "$type": "color"
             }
           },
           "active": {
-            "$value": "#928b80",
+            "$value": "#958e83",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-700}",
+              "$value": "{options.color.warm-grey-600}",
               "$type": "color"
             }
           },
           "active-inset": {
-            "$value": "#f4f2ed",
+            "$value": "#f7f5f3",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-200}",
+              "$value": "{options.color.warm-grey-025}",
               "$type": "color"
             }
           },
           "hover": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -2878,7 +2878,7 @@
         },
         "dark": {
           "rest": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -2887,7 +2887,7 @@
             }
           },
           "active": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -2900,12 +2900,12 @@
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
-              "$value": "{options.color.warm-grey-300}",
+              "$value": "{options.color.warm-grey-100}",
               "$type": "color"
             }
           },
           "hover": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -2934,7 +2934,7 @@
             }
           },
           "active-inset": {
-            "$value": "#f4f2ed",
+            "$value": "#fde2e2",
             "$type": "color",
             "filePath": "tokens/global/button.json5",
             "original": {
@@ -2953,54 +2953,54 @@
           }
         },
         "default-disabled": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "icon-only-active": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/button.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         }
       },
       "chip": {
         "default-rest": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
         "default-disabled": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "default-hover": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
         "default-focus": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
@@ -3009,7 +3009,7 @@
           }
         },
         "default-active": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
@@ -3018,7 +3018,7 @@
           }
         },
         "default-selected-rest": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
@@ -3027,16 +3027,16 @@
           }
         },
         "default-selected-hover": {
-          "$value": "#726d64",
+          "$value": "#736e65",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-800}",
+            "$value": "{options.color.warm-grey-750}",
             "$type": "color"
           }
         },
         "default-selected-focus": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/chip.json5",
           "original": {
@@ -3046,7 +3046,7 @@
         }
       },
       "transparent": {
-        "$value": "rgba(0, 0, 0, 0)",
+        "$value": "rgba(255, 255, 255, 0)",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
@@ -3055,20 +3055,20 @@
         }
       },
       "primary": {
-        "$value": "#dcd6cb",
+        "$value": "#d5cfc3",
         "$type": "color",
         "filePath": "tokens/themes/docsite/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-400}",
+          "$value": "{options.color.warm-grey-250}",
           "$type": "color"
         }
       },
       "secondary": {
-        "$value": "#928b80",
+        "$value": "#958e83",
         "$type": "color",
         "filePath": "tokens/themes/docsite/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-700}",
+          "$value": "{options.color.warm-grey-600}",
           "$type": "color"
         }
       },
@@ -3202,22 +3202,22 @@
       },
       "label": {
         "default-focus": {
-          "$value": "#20201d",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1100}",
+            "$value": "{options.color.warm-grey-1000}",
             "$type": "color"
           }
         }
       },
       "input": {
         "default": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
@@ -3231,7 +3231,7 @@
           }
         },
         "default-active": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
@@ -3240,7 +3240,7 @@
           }
         },
         "default-selected": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
@@ -3249,16 +3249,16 @@
           }
         },
         "default-focus": {
-          "$value": "#20201d",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1100}",
+            "$value": "{options.color.warm-grey-1000}",
             "$type": "color"
           }
         },
         "default-selected-hover": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
@@ -3267,20 +3267,20 @@
           }
         },
         "default-hover": {
-          "$value": "#20201d",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-1100}",
+            "$value": "{options.color.warm-grey-1000}",
             "$type": "color"
           }
         },
         "default-disabled": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/input.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         }
@@ -3314,11 +3314,11 @@
           }
         },
         "disabled": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/link.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
@@ -3334,11 +3334,11 @@
       },
       "rating-star": {
         "default": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/rating.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
@@ -3354,20 +3354,20 @@
       },
       "surface": {
         "primary": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/surface.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "secondary": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/surface.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         },
@@ -3442,7 +3442,7 @@
             "$type": "color",
             "filePath": "tokens/global/surfaceselection.json5",
             "original": {
-              "$value": "{options.color.warm-grey-1050}",
+              "$value": "{options.color.warm-grey-1000}",
               "$type": "color"
             }
           },
@@ -3468,7 +3468,7 @@
       },
       "switch": {
         "default-hover": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/global/switch.json5",
           "original": {
@@ -3478,16 +3478,16 @@
         },
         "handle": {
           "default-rest": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           },
           "default-hover": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
@@ -3496,11 +3496,11 @@
             }
           },
           "default-focus": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           }
@@ -3509,11 +3509,11 @@
       "tab": {
         "keyline": {
           "rest": {
-            "$value": "#928b80",
+            "$value": "#958e83",
             "$type": "color",
             "filePath": "tokens/global/tab.json5",
             "original": {
-              "$value": "{options.color.warm-grey-700}",
+              "$value": "{options.color.warm-grey-600}",
               "$type": "color"
             }
           },
@@ -3554,11 +3554,11 @@
             }
           },
           "disabled": {
-            "$value": "#d1cbbd",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/tab.json5",
             "original": {
-              "$value": "{options.color.warm-grey-500}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           }
@@ -3566,20 +3566,20 @@
       },
       "table": {
         "default": {
-          "$value": "#dcd6cb",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/global/table.json5",
           "original": {
-            "$value": "{options.color.warm-grey-400}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "head": {
-          "$value": "#928b80",
+          "$value": "#958e83",
           "$type": "color",
           "filePath": "tokens/global/table.json5",
           "original": {
-            "$value": "{options.color.warm-grey-700}",
+            "$value": "{options.color.warm-grey-600}",
             "$type": "color"
           }
         }
@@ -3587,7 +3587,7 @@
       "toggle-button": {
         "default": {
           "focus": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/global/togglebutton.json5",
             "original": {
@@ -3597,7 +3597,7 @@
           },
           "selected": {
             "rest": {
-              "$value": "#4e4d49",
+              "$value": "#4b4a48",
               "$type": "color",
               "filePath": "tokens/global/togglebutton.json5",
               "original": {
@@ -3606,7 +3606,7 @@
               }
             },
             "focus": {
-              "$value": "#4e4d49",
+              "$value": "#4b4a48",
               "$type": "color",
               "filePath": "tokens/global/togglebutton.json5",
               "original": {
@@ -3619,27 +3619,27 @@
       },
       "tooltip": {
         "default": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/global/tooltip.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         }
       },
       "code": {
-        "$value": "#928b80",
+        "$value": "#958e83",
         "$type": "color",
         "filePath": "tokens/themes/docsite/code.json5",
         "original": {
-          "$value": "{options.color.warm-grey-700}",
+          "$value": "{options.color.warm-grey-600}",
           "$type": "color"
         }
       },
       "link-card": {
         "hover": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/themes/docsite/link-card.json5",
           "original": {
@@ -3648,7 +3648,7 @@
           }
         },
         "active": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/themes/docsite/link-card.json5",
           "original": {
@@ -3667,11 +3667,11 @@
         }
       },
       "table-row": {
-        "$value": "#dcd6cb",
+        "$value": "#d5cfc3",
         "$type": "color",
         "filePath": "tokens/themes/docsite/table.json5",
         "original": {
-          "$value": "{options.color.warm-grey-400}",
+          "$value": "{options.color.warm-grey-250}",
           "$type": "color"
         }
       },
@@ -3709,7 +3709,7 @@
     "docexample": "color",
     "icon": {
       "default": {
-        "$value": "#4e4d49",
+        "$value": "#4b4a48",
         "$type": "color",
         "filePath": "tokens/themes/docsite/color.json5",
         "original": {
@@ -3718,7 +3718,7 @@
         }
       },
       "emphasis": {
-        "$value": "#4e4d49",
+        "$value": "#4b4a48",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
@@ -3736,11 +3736,11 @@
         }
       },
       "disabled": {
-        "$value": "#dcd6cb",
+        "$value": "#d5cfc3",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-400}",
+          "$value": "{options.color.warm-grey-250}",
           "$type": "color"
         }
       },
@@ -3810,7 +3810,7 @@
         }
       },
       "checkbox-default-selected-active": {
-        "$value": "#4e4d49",
+        "$value": "#4b4a48",
         "$type": "color",
         "filePath": "tokens/global/input.json5",
         "original": {
@@ -3821,29 +3821,29 @@
       "switch": {
         "selected": {
           "default-rest": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           },
           "default-hover": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           },
           "default-focus": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/global/switch.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           }
@@ -3861,11 +3861,11 @@
         }
       },
       "secondary": {
-        "$value": "#f4f2ed",
+        "$value": "#f7f5f3",
         "$type": "color",
         "filePath": "tokens/global/color.json5",
         "original": {
-          "$value": "{options.color.warm-grey-200}",
+          "$value": "{options.color.warm-grey-025}",
           "$type": "color"
         }
       }
@@ -4075,11 +4075,11 @@
       }
     },
     "flat-color": {
-      "$value": "rgba(12, 11, 8, 0.2)",
+      "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "filePath": "tokens/global/prominence.json5",
       "original": {
-        "$value": "{options.color.warm-grey-1150-20}",
+        "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color"
       }
     },
@@ -4120,11 +4120,11 @@
       }
     },
     "raised-color": {
-      "$value": "rgba(12, 11, 8, 0.2)",
+      "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "filePath": "tokens/global/prominence.json5",
       "original": {
-        "$value": "{options.color.warm-grey-1150-20}",
+        "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color"
       }
     },
@@ -4165,11 +4165,11 @@
       }
     },
     "elevated-color": {
-      "$value": "rgba(12, 11, 8, 0.2)",
+      "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "filePath": "tokens/global/prominence.json5",
       "original": {
-        "$value": "{options.color.warm-grey-1150-20}",
+        "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color"
       }
     },
@@ -4210,11 +4210,11 @@
       }
     },
     "floating-color": {
-      "$value": "rgba(12, 11, 8, 0.2)",
+      "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "filePath": "tokens/global/prominence.json5",
       "original": {
-        "$value": "{options.color.warm-grey-1150-20}",
+        "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color"
       }
     },
@@ -4255,44 +4255,44 @@
       }
     },
     "lifted-color": {
-      "$value": "rgba(12, 11, 8, 0.2)",
+      "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "filePath": "tokens/global/prominence.json5",
       "original": {
-        "$value": "{options.color.warm-grey-1150-20}",
+        "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color"
       }
     },
     "flat": {
-      "$value": "0 0 0 0 rgba(12, 11, 8, 0.2)",
+      "$value": "0 0 0 0 rgba(46, 46, 43, 0.2)",
       "filePath": "tokens/web/prominence.json5",
       "original": {
         "$value": "{prominence.flat-x.$value} {prominence.flat-y.$value} {prominence.flat-blur.$value} {prominence.flat-spread.$value} {prominence.flat-color.$value}"
       }
     },
     "raised": {
-      "$value": "0 0.2rem 0.2rem 0 rgba(12, 11, 8, 0.2)",
+      "$value": "0 0.2rem 0.2rem 0 rgba(46, 46, 43, 0.2)",
       "filePath": "tokens/web/prominence.json5",
       "original": {
         "$value": "{prominence.raised-x.$value} {prominence.raised-y.$value} {prominence.raised-blur.$value} {prominence.raised-spread.$value} {prominence.raised-color.$value}"
       }
     },
     "elevated": {
-      "$value": "0 0.4rem 0.4rem 0 rgba(12, 11, 8, 0.2)",
+      "$value": "0 0.4rem 0.4rem 0 rgba(46, 46, 43, 0.2)",
       "filePath": "tokens/web/prominence.json5",
       "original": {
         "$value": "{prominence.elevated-x.$value} {prominence.elevated-y.$value} {prominence.elevated-blur.$value} {prominence.elevated-spread.$value} {prominence.elevated-color.$value}"
       }
     },
     "floating": {
-      "$value": "0 0.8rem 0.8rem 0 rgba(12, 11, 8, 0.2)",
+      "$value": "0 0.8rem 0.8rem 0 rgba(46, 46, 43, 0.2)",
       "filePath": "tokens/web/prominence.json5",
       "original": {
         "$value": "{prominence.floating-x.$value} {prominence.floating-y.$value} {prominence.floating-blur.$value} {prominence.floating-spread.$value} {prominence.floating-color.$value}"
       }
     },
     "lifted": {
-      "$value": "0 1.6rem 1.6rem 0 rgba(12, 11, 8, 0.2)",
+      "$value": "0 1.6rem 1.6rem 0 rgba(46, 46, 43, 0.2)",
       "filePath": "tokens/web/prominence.json5",
       "original": {
         "$value": "{prominence.lifted-x.$value} {prominence.lifted-y.$value} {prominence.lifted-blur.$value} {prominence.lifted-spread.$value} {prominence.lifted-color.$value}"
@@ -11544,11 +11544,11 @@
   "knockout": {
     "background": {
       "code-snippet": {
-        "$value": "#20201d",
+        "$value": "#2e2e2b",
         "$type": "color",
         "filePath": "tokens/themes/docsite/code-snippet.json5",
         "original": {
-          "$value": "{options.color.warm-grey-1100}",
+          "$value": "{options.color.warm-grey-1000}",
           "$type": "color"
         }
       }
@@ -11556,39 +11556,39 @@
     "color": {
       "text": {
         "primary": {
-          "$value": "#f9f8f6",
+          "$value": "#fafbf9",
           "$type": "color",
           "filePath": "tokens/themes/docsite/color.json5",
           "original": {
-            "$value": "{options.color.warm-grey-100}",
+            "$value": "{options.color.warm-grey-010}",
             "$type": "color"
           }
         },
         "secondary": {
-          "$value": "#d1cbbd",
+          "$value": "#d5cfc3",
           "$type": "color",
           "filePath": "tokens/themes/docsite/color.json5",
           "original": {
-            "$value": "{options.color.warm-grey-500}",
+            "$value": "{options.color.warm-grey-250}",
             "$type": "color"
           }
         },
         "table": {
           "primary": {
-            "$value": "#f9f8f6",
+            "$value": "#fafbf9",
             "$type": "color",
             "filePath": "tokens/themes/docsite/table.json5",
             "original": {
-              "$value": "{options.color.warm-grey-100}",
+              "$value": "{options.color.warm-grey-010}",
               "$type": "color"
             }
           },
           "secondary": {
-            "$value": "#d1cbbd",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/themes/docsite/table.json5",
             "original": {
-              "$value": "{options.color.warm-grey-500}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           }
@@ -11596,7 +11596,7 @@
       },
       "background": {
         "primary": {
-          "$value": "#373734",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/themes/docsite/color.json5",
           "original": {
@@ -11606,7 +11606,7 @@
         },
         "link-card": {
           "rest": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/themes/docsite/link-card.json5",
             "original": {
@@ -11615,17 +11615,17 @@
             }
           },
           "active": {
-            "$value": "#20201d",
+            "$value": "#2e2e2b",
             "$type": "color",
             "filePath": "tokens/themes/docsite/link-card.json5",
             "original": {
-              "$value": "{options.color.warm-grey-1100}",
+              "$value": "{options.color.warm-grey-1000}",
               "$type": "color"
             }
           }
         },
         "note": {
-          "$value": "rgba(78, 77, 73, 0.5)",
+          "$value": "rgba(75, 74, 72, 0.5)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/note.json5",
           "original": {
@@ -11634,7 +11634,7 @@
           }
         },
         "table-header": {
-          "$value": "rgba(78, 77, 73, 0.5)",
+          "$value": "rgba(75, 74, 72, 0.5)",
           "$type": "color",
           "filePath": "tokens/themes/docsite/table.json5",
           "original": {
@@ -11643,7 +11643,7 @@
           }
         },
         "table-row": {
-          "$value": "#373734",
+          "$value": "#2e2e2b",
           "$type": "color",
           "filePath": "tokens/themes/docsite/table.json5",
           "original": {
@@ -11655,7 +11655,7 @@
       "border": {
         "inverse": {
           "primary": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/themes/docsite/color.json5",
             "original": {
@@ -11664,27 +11664,27 @@
             }
           },
           "secondary": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/themes/docsite/color.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           }
         },
         "link-card": {
           "hover": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/themes/docsite/link-card.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           },
           "active": {
-            "$value": "#4e4d49",
+            "$value": "#4b4a48",
             "$type": "color",
             "filePath": "tokens/themes/docsite/link-card.json5",
             "original": {
@@ -11703,7 +11703,7 @@
           }
         },
         "table-row": {
-          "$value": "#4e4d49",
+          "$value": "#4b4a48",
           "$type": "color",
           "filePath": "tokens/themes/docsite/table.json5",
           "original": {
@@ -11715,11 +11715,11 @@
       "icon": {
         "inverse": {
           "default": {
-            "$value": "#dcd6cb",
+            "$value": "#d5cfc3",
             "$type": "color",
             "filePath": "tokens/themes/docsite/color.json5",
             "original": {
-              "$value": "{options.color.warm-grey-400}",
+              "$value": "{options.color.warm-grey-250}",
               "$type": "color"
             }
           }
