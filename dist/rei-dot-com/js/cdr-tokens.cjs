@@ -66,7 +66,7 @@ module.exports = {
   "CdrColorBackgroundButtonDarkHover": "#edeae3",
   "CdrColorBackgroundButtonSaleRest": "#c7370f",
   "CdrColorBackgroundButtonSaleActive": "#c7370f",
-  "CdrColorBackgroundButtonSaleHover": "#fde2e2",
+  "CdrColorBackgroundButtonSaleHover": "#f7f5f3",
   "CdrColorBackgroundButtonDefaultDisabled": "#d5cfc3",
   "CdrColorBackgroundButtonIconOnlyActive": "#f7f5f3",
   "CdrColorBackgroundChipDefaultRest": "#ffffff",
