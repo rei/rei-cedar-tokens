@@ -2267,6 +2267,22 @@ $cdr-text-utility-serif-strong-800-height: 4rem;
 $cdr-text-italic-variation: 'ital' 1;
 $cdr-text-italic-style: italic;
 $cdr-text-strong-weight: 700;
+$cdr-membership-vibrant-color-text-button-primary-hover: #13352c;
+$cdr-membership-vibrant-color-text-primary: #13352c;
+$cdr-membership-vibrant-color-background-button-primary-rest: #13352c;
+$cdr-membership-vibrant-color-background-button-primary-active: #13352c;
+$cdr-membership-vibrant-color-background-primary: #ffdc52;
+$cdr-membership-vibrant-color-border-button-primary-rest: #13352c;
+$cdr-membership-vibrant-color-border-button-primary-active: #13352c;
+$cdr-membership-vibrant-color-border-button-primary-hover: #13352c;
+$cdr-membership-subtle-color-text-button-primary-hover: #13352c;
+$cdr-membership-subtle-color-text-primary: #13352c;
+$cdr-membership-subtle-color-background-button-primary-rest: #13352c;
+$cdr-membership-subtle-color-background-button-primary-active: #13352c;
+$cdr-membership-subtle-color-background-primary: #bfb33e;
+$cdr-membership-subtle-color-border-button-primary-rest: #13352c;
+$cdr-membership-subtle-color-border-button-primary-active: #13352c;
+$cdr-membership-subtle-color-border-button-primary-hover: #13352c;
 
 @mixin cdr-display-sr-only() {
   position: absolute;
@@ -2408,35 +2424,6 @@ $cdr-text-strong-weight: 700;
 }
 
 @mixin cdr-lg-mq-only {
-  @media (min-width: #{$cdr-breakpoint-lg}) {
-    @content;
-  }
-}
-
-// DEPRECATED summer 2020
-@mixin cdr-xs-mq {
-  @include deprecate-mixin(2020, 'summer', 'cdr-xs-mq', 'cdr-xs-mq-up');
-  @media (min-width: #{$cdr-breakpoint-xs}) {
-    @content;
-  }
-}
-
-@mixin cdr-sm-mq {
-  @include deprecate-mixin(2020, 'summer', 'cdr-sm-mq', 'cdr-sm-mq-up');
-  @media (min-width: #{$cdr-breakpoint-sm}) {
-    @content;
-  }
-}
-
-@mixin cdr-md-mq {
-  @include deprecate-mixin(2020, 'summer', 'cdr-md-mq', 'cdr-md-mq-up');
-  @media (min-width: #{$cdr-breakpoint-md}) {
-    @content;
-  }
-}
-
-@mixin cdr-lg-mq {
-  @include deprecate-mixin(2020, 'summer', 'cdr-lg-mq', 'cdr-lg-mq-up');
   @media (min-width: #{$cdr-breakpoint-lg}) {
     @content;
   }

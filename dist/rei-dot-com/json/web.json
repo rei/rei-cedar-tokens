@@ -1232,8 +1232,8 @@
         "example": "color",
         "description": "Text color for links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -1262,8 +1262,8 @@
         "example": "color",
         "description": "Text color for the hover state of links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -1292,8 +1292,8 @@
         "example": "color",
         "description": "Text color for the active and pressed states of links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-1000}",
         "$type": "color",
@@ -1322,8 +1322,8 @@
         "example": "color",
         "description": "Disabled text color of links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.warm-grey-500}",
         "$type": "color",
@@ -1352,8 +1352,8 @@
         "example": "color",
         "description": "Text color of visited links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -6202,8 +6202,8 @@
         "example": "color",
         "description": "Border color for underlined links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -6232,8 +6232,8 @@
         "example": "color",
         "description": "Border color for the hover state of underlined links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -6262,8 +6262,8 @@
         "example": "color",
         "description": "Border color for the active and pressed states of underlined links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-1000}",
         "$type": "color",
@@ -6292,8 +6292,8 @@
         "example": "color",
         "description": "Disabled border color of underlined links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.warm-grey-400}",
         "$type": "color",
@@ -6322,8 +6322,8 @@
         "example": "color",
         "description": "Border color of visited underlined links"
       },
-      "filePath": "tokens/global/link.json5",
-      "isSource": false,
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -7762,6 +7762,494 @@
         "category": "color",
         "type": "surface",
         "item": "secondary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Text color for the hover state of primary buttons"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Text color for the hover state of primary buttons"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-text-button-primary-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "text",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "type": "text",
+        "example": "color",
+        "category": "colors"
+      },
+      "filePath": "tokens/themes/rei-dot-com/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "type": "text",
+          "example": "color",
+          "category": "colors"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-text-primary",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "text",
+        "state": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Background color for the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Background color for the primary button"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-background-button-primary-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "background",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the primary button"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-background-button-primary-active",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "background",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#ffdc52",
+      "$type": "color",
+      "docs": {
+        "type": "text",
+        "example": "color",
+        "category": "colors"
+      },
+      "filePath": "tokens/themes/rei-dot-com/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#FFDC52",
+        "$type": "color",
+        "docs": {
+          "type": "text",
+          "example": "color",
+          "category": "colors"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-background-primary",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "background",
+        "state": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the primary button"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-border-button-primary-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "border",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the primary button"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-border-button-primary-active",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "border",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the hover state of the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the hover state of the primary button"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-border-button-primary-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "border",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Text color for the hover state of primary buttons"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Text color for the hover state of primary buttons"
+        }
+      },
+      "name": "cdr-membership-subtle-color-text-button-primary-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "text",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "type": "text",
+        "example": "color",
+        "category": "colors"
+      },
+      "filePath": "tokens/themes/rei-dot-com/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "type": "text",
+          "example": "color",
+          "category": "colors"
+        }
+      },
+      "name": "cdr-membership-subtle-color-text-primary",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "text",
+        "state": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Background color for the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Background color for the primary button"
+        }
+      },
+      "name": "cdr-membership-subtle-color-background-button-primary-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "background",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Background color for the active and pressed states of the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Background color for the active and pressed states of the primary button"
+        }
+      },
+      "name": "cdr-membership-subtle-color-background-button-primary-active",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "background",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#bfb33e",
+      "$type": "color",
+      "docs": {
+        "type": "text",
+        "example": "color",
+        "category": "colors"
+      },
+      "filePath": "tokens/themes/rei-dot-com/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#BFB33E",
+        "$type": "color",
+        "docs": {
+          "type": "text",
+          "example": "color",
+          "category": "colors"
+        }
+      },
+      "name": "cdr-membership-subtle-color-background-primary",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "background",
+        "state": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the primary button"
+        }
+      },
+      "name": "cdr-membership-subtle-color-border-button-primary-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "border",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the active and pressed states of the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the active and pressed states of the primary button"
+        }
+      },
+      "name": "cdr-membership-subtle-color-border-button-primary-active",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "border",
+        "state": "button",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "button",
+        "example": "color",
+        "description": "Border color for the hover state of the primary button"
+      },
+      "filePath": "tokens/themes/rei-dot-com/button.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "button",
+          "example": "color",
+          "description": "Border color for the hover state of the primary button"
+        }
+      },
+      "name": "cdr-membership-subtle-color-border-button-primary-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "border",
+        "state": "button",
         "deprecated": false
       }
     }

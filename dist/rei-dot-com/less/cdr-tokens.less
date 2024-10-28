@@ -1588,6 +1588,22 @@
 @cdr-text-italic-variation: 'ital' 1;
 @cdr-text-italic-style: italic;
 @cdr-text-strong-weight: 700;
+@cdr-membership-vibrant-color-text-button-primary-hover: #13352c;
+@cdr-membership-vibrant-color-text-primary: #13352c;
+@cdr-membership-vibrant-color-background-button-primary-rest: #13352c;
+@cdr-membership-vibrant-color-background-button-primary-active: #13352c;
+@cdr-membership-vibrant-color-background-primary: #ffdc52;
+@cdr-membership-vibrant-color-border-button-primary-rest: #13352c;
+@cdr-membership-vibrant-color-border-button-primary-active: #13352c;
+@cdr-membership-vibrant-color-border-button-primary-hover: #13352c;
+@cdr-membership-subtle-color-text-button-primary-hover: #13352c;
+@cdr-membership-subtle-color-text-primary: #13352c;
+@cdr-membership-subtle-color-background-button-primary-rest: #13352c;
+@cdr-membership-subtle-color-background-button-primary-active: #13352c;
+@cdr-membership-subtle-color-background-primary: #bfb33e;
+@cdr-membership-subtle-color-border-button-primary-rest: #13352c;
+@cdr-membership-subtle-color-border-button-primary-active: #13352c;
+@cdr-membership-subtle-color-border-button-primary-hover: #13352c;
 
 .cdr-display-sr-only() {
   position: absolute;
@@ -1706,32 +1722,6 @@
 }
 
 .cdr-lg-mq-only(@rules) {
-  @media (min-width: @cdr-breakpoint-lg) {
-    @rules();
-  }
-}
-
-
-// DEPRECATED summer 2024
-.cdr-xs-mq(@rules) {
-  @media (min-width: @cdr-breakpoint-xs) {
-    @rules();
-  }
-}
-
-.cdr-sm-mq(@rules) {
-  @media (min-width: @cdr-breakpoint-sm) {
-    @rules();
-  }
-}
-
-.cdr-md-mq(@rules) {
-  @media (min-width: @cdr-breakpoint-md) {
-    @rules();
-  }
-}
-
-.cdr-lg-mq(@rules) {
   @media (min-width: @cdr-breakpoint-lg) {
     @rules();
   }

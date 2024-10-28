@@ -65,6 +65,9 @@ export const getConfig = (platform, theme) => {
       exclude: (token) => filePathsToExcludeFromExpand.includes(token.filePath)
     },
     platforms: allPlatforms(platform, theme),
-    usesDtcg: true
+    usesDtcg: true,
+    log: {
+      verbosity: 'verbose'
+    }
   }
 }

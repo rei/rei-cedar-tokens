@@ -912,5 +912,21 @@ module.exports = {
   "CdrTextUtilitySerifStrong800Height": "40",
   "CdrTextItalicVariation": "'ital' 1",
   "CdrTextItalicStyle": "italic",
-  "CdrTextStrongWeight": "700"
+  "CdrTextStrongWeight": "700",
+  "CdrMembershipVibrantColorTextButtonPrimaryHover": "#13352c",
+  "CdrMembershipVibrantColorTextPrimary": "#13352c",
+  "CdrMembershipVibrantColorBackgroundButtonPrimaryRest": "#13352c",
+  "CdrMembershipVibrantColorBackgroundButtonPrimaryActive": "#13352c",
+  "CdrMembershipVibrantColorBackgroundPrimary": "#ffdc52",
+  "CdrMembershipVibrantColorBorderButtonPrimaryRest": "#13352c",
+  "CdrMembershipVibrantColorBorderButtonPrimaryActive": "#13352c",
+  "CdrMembershipVibrantColorBorderButtonPrimaryHover": "#13352c",
+  "CdrMembershipSubtleColorTextButtonPrimaryHover": "#13352c",
+  "CdrMembershipSubtleColorTextPrimary": "#13352c",
+  "CdrMembershipSubtleColorBackgroundButtonPrimaryRest": "#13352c",
+  "CdrMembershipSubtleColorBackgroundButtonPrimaryActive": "#13352c",
+  "CdrMembershipSubtleColorBackgroundPrimary": "#bfb33e",
+  "CdrMembershipSubtleColorBorderButtonPrimaryRest": "#13352c",
+  "CdrMembershipSubtleColorBorderButtonPrimaryActive": "#13352c",
+  "CdrMembershipSubtleColorBorderButtonPrimaryHover": "#13352c"
 };
