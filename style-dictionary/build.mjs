@@ -12,10 +12,7 @@ import { stripPx } from './transforms/size/strip-px.mjs'
 import { stripAllPx } from './transforms/size/strip-all-px.mjs'
 import { stripAllPxJs } from './transforms/size/strip-all-px-js.mjs'
 import { float } from './transforms/size/float.mjs'
-import { alpha } from './transforms/color/alpha.mjs'
 import { colorCssTransitive } from './transforms/color/color-css-transitive.mjs'
-import { hex8AndroidTransitive } from './transforms/color/hex8-android-transitive.mjs'
-import { uiColorTransitive } from './transforms/color/uicolor-transitive.mjs'
 import { shadow } from './transforms/value/shadow.mjs'
 
 // ==== Include custom formats ====
@@ -35,7 +32,6 @@ import { includeMediaQueriesScss } from './actions/include-media-queries-scss.mj
 
 // ==== Include custom filters ====
 import { removeSourceTokens } from './filters/remove-source-tokens.mjs'
-import { iosSize } from './filters/ios-size.mjs'
 
 // ==== Register style dictionary ====
 register(StyleDictionary)
@@ -50,10 +46,7 @@ stripPx(StyleDictionary)
 stripAllPx(StyleDictionary)
 stripAllPxJs(StyleDictionary)
 float(StyleDictionary)
-alpha(StyleDictionary)
 colorCssTransitive(StyleDictionary)
-hex8AndroidTransitive(StyleDictionary)
-uiColorTransitive(StyleDictionary)
 shadow(StyleDictionary)
 
 // ==== Register custom formats ====
@@ -73,7 +66,6 @@ includeMediaQueriesScss(StyleDictionary)
 
 // ==== Register custom filters ====
 removeSourceTokens(StyleDictionary)
-iosSize(StyleDictionary)
 
 const themes = [
   'rei-dot-com',

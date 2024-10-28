@@ -8,7 +8,6 @@ export const siteGlobal = (theme) => ({
       'name/kebab',
       'size/strip-all-px-js',
       'size/space-js',
-      'color/alpha',
       'color/css-transitive',
       'size/px-to-rem-transitive',
       'time/seconds'
