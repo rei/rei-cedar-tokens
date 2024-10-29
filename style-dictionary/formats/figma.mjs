@@ -9,7 +9,7 @@ export const figma = (StyleDictionary) => {
   StyleDictionary.registerFormat({
     name: 'figma',
     format: ({ dictionary }) => {
-      const propsToRemove = ['isSource', 'attributes', 'path', 'docs', 'newToken', 'name', 'alpha']
+      const propsToRemove = ['isSource', 'attributes', 'path', 'docs', 'newToken', 'name', 'docCategory', 'docExample']
       const transformedTokens = cleanMeta(dictionary.tokens, { cleanMeta: propsToRemove })
 
       return JSON.stringify(transformedTokens, null, 2)

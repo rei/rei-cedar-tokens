@@ -1,3 +1,5 @@
+import { expandTypesMap } from '@tokens-studio/sd-transforms'
+
 // Import platform configs and add them below
 import { css as cssConfig } from './css.mjs'
 import { scss as scssConfig } from './scss.mjs'
@@ -10,6 +12,10 @@ import { siteWeb as siteWebConfig } from './site.web.mjs'
 import { siteAndroid as siteAndroidConfig } from './site.android.mjs'
 import { siteIos as siteIosConfig } from './site.ios.mjs'
 import { figma as figmaConfig } from './figma.mjs'
+
+const filePathsToExcludeFromExpand = [
+  'tokens/web/prominence.json5'
+]
 
 const getSources = (platform) => {
   const sources = {
@@ -54,7 +60,14 @@ export const getConfig = (platform, theme) => {
     include: defaultTokens,
     source: themeOverrides,
     preprocessors: ['tokens-studio'],
+    expand: {
+      typesMap: expandTypesMap,
+      exclude: (token) => filePathsToExcludeFromExpand.includes(token.filePath)
+    },
     platforms: allPlatforms(platform, theme),
-    usesDtcg: true
+    usesDtcg: true,
+    log: {
+      verbosity: 'verbose'
+    }
   }
 }
