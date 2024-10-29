@@ -1519,6 +1519,142 @@
 @cdr-text-italic-style: italic;
 @cdr-text-strong-weight: 700;
 
+// XS
+.cdr-xs-cq-up(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-xs) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-xs) {
+      @rules();
+    }
+  }
+}
+
+.cdr-xs-cq-only(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-xs) and (max-width: calc(@cdr-breakpoint-sm - 1px)) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-xs) and (max-width: calc(@cdr-breakpoint-sm - 1px)) {
+      @rules();
+    }
+  }
+}
+
+// SM
+.cdr-sm-cq-down(@name: '', @rules) {
+  @container @name (max-width: calc(@cdr-breakpoint-sm - 1px)) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(@cdr-breakpoint-sm - 1px)) {
+      @rules();
+    }
+  }
+}
+
+.cdr-sm-cq-up(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-sm) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-sm) {
+      @rules();
+    }
+  }
+}
+
+.cdr-sm-cq-only(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-sm) and (max-width: calc(@cdr-breakpoint-md - 1px)) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-sm) and (max-width: calc(@cdr-breakpoint-md - 1px)) {
+      @rules();
+    }
+  }
+}
+
+// MD
+.cdr-md-cq-down(@name: '', @rules) {
+  @container @name (max-width: calc(@cdr-breakpoint-md - 1px)) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(@cdr-breakpoint-md - 1px)) {
+      @rules();
+    }
+  }
+}
+
+.cdr-md-cq-up(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-md) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-md) {
+      @rules();
+    }
+  }
+}
+
+.cdr-md-cq-only(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-md) and (max-width: calc(@cdr-breakpoint-lg - 1px)) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-md) and (max-width: calc(@cdr-breakpoint-lg - 1px)) {
+      @rules();
+    }
+  }
+}
+
+// LG
+.cdr-lg-cq-down(@name: '', @rules) {
+  @container @name (max-width: calc(@cdr-breakpoint-lg - 1px)) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(@cdr-breakpoint-lg - 1px)) {
+      @rules();
+    }
+  }
+}
+
+.cdr-lg-cq-up(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-lg) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-lg) {
+      @rules();
+    }
+  }
+}
+
+.cdr-lg-cq-only(@name: '', @rules) {
+  @container @name (min-width: @cdr-breakpoint-lg) {
+    @rules();
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: @cdr-breakpoint-lg) {
+      @rules();
+    }
+  }
+}
+
 .cdr-display-sr-only() {
   position: absolute;
   width: 1px;

@@ -22,6 +22,6 @@ export const less = (theme) => ({
         format: 'less/mixin'
       }
     ],
-    actions: ['include-media-queries-less', 'include-display-less', 'concat-files']
+    actions: ['include-media-queries-less', 'include-container-queries-less', 'include-display-less', 'concat-files']
   }
 })
