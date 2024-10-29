@@ -2207,7 +2207,7 @@ $cdr-text-strong-weight: 700;
   }
 
   @supports not (contain: inline-size) {
-    @media #{$name} (min-width: #{$cdr-breakpoint-xs}) {
+    @media (min-width: #{$cdr-breakpoint-xs}) {
       @content;
     }
   }
