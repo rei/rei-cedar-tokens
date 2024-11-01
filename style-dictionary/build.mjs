@@ -29,6 +29,8 @@ import { includeDisplayLess } from './actions/include-display-less.mjs'
 import { includeDisplayScss } from './actions/include-display-scss.mjs'
 import { includeMediaQueriesLess } from './actions/include-media-queries-less.mjs'
 import { includeMediaQueriesScss } from './actions/include-media-queries-scss.mjs'
+import { includeContainerQueriesLess } from './actions/include-container-queries-less.mjs'
+import { includeContainerQueriesScss } from './actions/include-container-queries-scss.mjs'
 
 // ==== Include custom filters ====
 import { removeSourceTokens } from './filters/remove-source-tokens.mjs'
@@ -63,6 +65,8 @@ includeDisplayLess(StyleDictionary)
 includeDisplayScss(StyleDictionary)
 includeMediaQueriesLess(StyleDictionary)
 includeMediaQueriesScss(StyleDictionary)
+includeContainerQueriesLess(StyleDictionary)
+includeContainerQueriesScss(StyleDictionary)
 
 // ==== Register custom filters ====
 removeSourceTokens(StyleDictionary)

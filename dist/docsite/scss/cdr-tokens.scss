@@ -2307,6 +2307,144 @@ $cdr-knockout-color-border-table-row: #4b4a48;
 $cdr-knockout-color-icon-inverse-default: #d5cfc3;
 $cdr-knockout-color-icon-background-note: #c4b03b;
 
+// @supports statements can be removed once Safari 15 is no longer supported
+
+// XS
+@mixin cdr-xs-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-xs}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-xs-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// SM
+@mixin cdr-sm-cq-down($name: '') {
+  @container #{$name} (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-sm-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-sm}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-sm-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// MD
+@mixin cdr-md-cq-down($name: '') {
+  @container #{$name} (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-md-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-md}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-md-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// LG
+@mixin cdr-lg-cq-down($name: '') {
+  @container #{$name} (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-lg-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-lg}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-lg-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-lg}) {
+      @content;
+    }
+  }
+}
+
 @mixin cdr-display-sr-only() {
   position: absolute;
   width: 1px;
@@ -2447,6 +2585,35 @@ $cdr-knockout-color-icon-background-note: #c4b03b;
 }
 
 @mixin cdr-lg-mq-only {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+// DEPRECATED summer 2020
+@mixin cdr-xs-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-xs-mq', 'cdr-xs-mq-up');
+  @media (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin cdr-sm-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-sm-mq', 'cdr-sm-mq-up');
+  @media (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin cdr-md-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-md-mq', 'cdr-md-mq-up');
+  @media (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin cdr-lg-mq {
+  @include deprecate-mixin(2020, 'summer', 'cdr-lg-mq', 'cdr-lg-mq-up');
   @media (min-width: #{$cdr-breakpoint-lg}) {
     @content;
   }

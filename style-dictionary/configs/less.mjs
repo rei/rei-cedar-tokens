@@ -23,6 +23,6 @@ export const less = (theme) => ({
         filter: 'remove-source-tokens'
       }
     ],
-    actions: ['include-media-queries-less', 'include-display-less', 'concat-files']
+    actions: ['include-media-queries-less', 'include-container-queries-less', 'include-display-less', 'concat-files']
   }
 })

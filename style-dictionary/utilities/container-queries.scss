@@ -1,0 +1,137 @@
+// @supports statements can be removed once Safari 15 is no longer supported
+
+// XS
+@mixin cdr-xs-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-xs}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-xs-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// SM
+@mixin cdr-sm-cq-down($name: '') {
+  @container #{$name} (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-sm-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-sm}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-sm-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// MD
+@mixin cdr-md-cq-down($name: '') {
+  @container #{$name} (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-md-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-md}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-md-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// LG
+@mixin cdr-lg-cq-down($name: '') {
+  @container #{$name} (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-lg-cq-up($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-lg}) {
+      @content;
+    }
+  }
+}
+
+@mixin cdr-lg-cq-only($name: '') {
+  @container #{$name} (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+
+  @supports not (contain: inline-size) {
+    @media (min-width: #{$cdr-breakpoint-lg}) {
+      @content;
+    }
+  }
+}
