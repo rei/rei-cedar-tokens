@@ -42,8 +42,9 @@
     "build:grid": "node grid.mjs",
     "site-tokens": "node ./site-tokens.mjs",
     "validate": "node ./validate.mjs",
-    "format": "eslint --fix \"style-dictionary/**/*.mjs\"",
-    "lint": "eslint \"style-dictionary/**/*.mjs\""
+    "format": "eslint --fix \"{style-dictionary,tokens-studio}/**/*.mjs\"",
+    "lint": "eslint \"style-dictionary/**/*.mjs\"",
+    "tokens:update": "node ./tokens-studio/token-updater.mjs"
   },
   "devDependencies": {
     "@divriots/style-dictionary-to-figma": "^0.4.0",
