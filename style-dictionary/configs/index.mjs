@@ -54,6 +54,10 @@ export const getConfig = (platform, theme) => {
     include: defaultTokens,
     source: themeOverrides,
     preprocessors: ['tokens-studio'],
+    expand: {
+      typesMap: expandTypesMap,
+      exclude: (token) => filePathsToExcludeFromExpand.includes(token.filePath),
+    },
     platforms: allPlatforms(platform, theme),
     usesDtcg: true,
     log: {
