@@ -8,8 +8,7 @@ export const js = (theme) => ({
       'name/pascal',
       'size/strip-all-px-js',
       'size/space-js',
-      'color/css-transitive',
-      'value/shadow'
+      'color/css-transitive'
     ],
     files: [
       {
