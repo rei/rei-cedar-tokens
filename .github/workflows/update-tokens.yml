@@ -3,11 +3,13 @@ name: Update Design Tokens
 on:
   pull_request:
     branches:
-      - figma
+      - next # Target branch
     types: [opened, synchronize, reopened]
 
 jobs:
   update-tokens:
+    # Check if the PR is from figma branch to next branch
+    if: github.head_ref == 'figma'
     runs-on: ubuntu-latest
 
     permissions:
