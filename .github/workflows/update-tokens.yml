@@ -20,6 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -54,4 +56,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "chore: update design tokens from Figma [skip ci]"
-          git push origin HEAD:${{ github.ref }}
+          git push
