@@ -54,4 +54,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "chore: update design tokens from Figma [skip ci]"
-          git push
+          git push origin HEAD:${{ github.ref }}
