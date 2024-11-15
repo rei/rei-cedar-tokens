@@ -3,7 +3,7 @@ name: Update Design Tokens
 on:
   pull_request:
     branches:
-      - next # Target branch
+      - figma # Target branch
     types: [opened, synchronize, reopened]
 
 jobs:
