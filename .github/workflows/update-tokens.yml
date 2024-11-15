@@ -8,8 +8,6 @@ on:
 
 jobs:
   update-tokens:
-    # Check if the PR is from figma branch to next branch
-    if: github.event.pull_request.head.ref == 'figma'
     runs-on: ubuntu-latest
 
     permissions:
