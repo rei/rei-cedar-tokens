@@ -8,8 +8,7 @@ export const css = (theme) => ({
       'attribute/deprecated',
       'name/kebab',
       'size/space',
-      'size/px-to-rem-transitive',
-      'color/css-transitive'
+      'size/px-to-rem-transitive'
     ],
     files: [
       {
