@@ -10,9 +10,31 @@ export const figma = (StyleDictionary) => {
     name: 'figma',
     format: ({ dictionary }) => {
       const propsToRemove = ['isSource', 'attributes', 'path', 'docs', 'newToken', 'name', 'docCategory', 'docExample']
-      const transformedTokens = cleanMeta(dictionary.tokens, { cleanMeta: propsToRemove })
+      // Custom transformer that preserves original references
+      const preserveReferences = (tokens) => {
+        return _.deep(tokens, (obj) => {
+          return _.mapValues(obj, (value) => {
+            if (value && value.original && value.original.$value) {
+              // Preserve the original reference value
+              return {
+                $value: value.original.$value,
+                $type: value.$type,
+                ...(value.original.$description && { $description: value.original.$description }),
+                ...(value.filePath && { filePath: value.filePath })
+              };
+            }
+            return value;
+          });
+        });
+      };
 
-      return JSON.stringify(transformedTokens, null, 2)
+      // First preserve references, then clean metadata
+      const transformedTokens = cleanMeta(
+        preserveReferences(dictionary.tokens),
+        { cleanMeta: propsToRemove }
+      );
+
+      return JSON.stringify(transformedTokens, null, 2);
     }
   })
 }
