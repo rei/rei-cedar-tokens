@@ -1,50 +1,52 @@
 {
   "form": {
-    "docCategory": "form",
-    "docExample": "form",
-    "input-height-default": {
-      "$value": "40px",
-      "$type": "dimension",
-      "docs": {
-        "type": "form",
-        "category": "{form.docCategory}",
-        "example": "{form.docExample}"
+    "input": {
+      "height-default": {
+        "$value": "40px",
+        "$type": "dimension",
+        "docs": {
+          "type": "form",
+          "category": "form",
+          "example": "form"
+        }
+      },
+      "height-large": {
+        "$value": "48px",
+        "$type": "dimension",
+        "docs": {
+          "type": "form",
+          "category": "form",
+          "example": "form"
+        }
       }
     },
-    "input-height-large": {
-      "$value": "48px",
-      "$type": "dimension",
-      "docs": {
-        "type": "form",
-        "category": "{form.docCategory}",
-        "example": "{form.docExample}"
-      }
-    },
-    "figure-size-small": {
-      "$value": "16px",
-      "$type": "dimension",
-      "docs": {
-        "type": "form",
-        "category": "{form.docCategory}",
-        "example": "{form.docExample}"
-      }
-    },
-    "figure-size-medium": {
-      "$value": "16px",
-      "$type": "dimension",
-      "docs": {
-        "type": "form",
-        "category": "{form.docCategory}",
-        "example": "{form.docExample}"
-      }
-    },
-    "figure-size-large": {
-      "$value": "20px",
-      "$type": "dimension",
-      "docs": {
-        "type": "form",
-        "category": "{form.docCategory}",
-        "example": "{form.docExample}"
+    "figure": {
+      "size-small": {
+        "$value": "16px",
+        "$type": "dimension",
+        "docs": {
+          "type": "form",
+          "category": "form",
+          "example": "form"
+        }
+      },
+      "size-medium": {
+        "$value": "16px",
+        "$type": "dimension",
+        "docs": {
+          "type": "form",
+          "category": "form",
+          "example": "form"
+        }
+      },
+      "size-large": {
+        "$value": "20px",
+        "$type": "dimension",
+        "docs": {
+          "type": "form",
+          "category": "form",
+          "example": "form"
+        }
       }
     }
   }

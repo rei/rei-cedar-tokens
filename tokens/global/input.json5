@@ -105,34 +105,36 @@
       }
     },
     "icon": {
-      "checkbox-default-selected": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "input",
-          "example": "color",
-          "description": "Rest state of a selected form icon"
-        }
-      },
-      "checkbox-default-selected-hover": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "input",
-          "example": "color",
-          "description": "Hover state of a selected form icon"
-        }
-      },
-      "checkbox-default-selected-active": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "input",
-          "example": "color",
-          "description": "Hover state of a selected form icon"
+      "checkbox": {
+        "default-selected": {
+          "$value": "{options.color.white}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "input",
+            "example": "color",
+            "description": "Rest state of a selected form icon"
+          }
+        },
+        "default-selected-hover": {
+          "$value": "{options.color.white}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "input",
+            "example": "color",
+            "description": "Hover state of a selected form icon"
+          }
+        },
+        "default-selected-active": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "input",
+            "example": "color",
+            "description": "Hover state of a selected form icon"
+          }
         }
       }
     },

@@ -46,66 +46,64 @@
     },
     "border": {
       "tab": {
-        "keyline": {
-          "rest": {
-            "$value": "{options.color.warm-grey-600}",
-            "$type": "color",
-            "docs": {
-              "category": "colors",
-              "type": "tabs",
-              "example": "color",
-              "description": "The border color of tab keyline"
-            }
-          },
-          "active": {
-            "$value": "{options.color.alpine-lake-blue-800}",
-            "$type": "color",
-            "docs": {
-              "category": "colors",
-              "type": "tabs",
-              "example": "color",
-              "description": "Border color for the active tab keyline"
-            }
-          },
-          "active-alt": {
-            "$value": "{options.color.alpine-lake-blue-600}",
-            "$type": "color",
-            "docs": {
-              "category": "colors",
-              "type": "tabs",
-              "example": "color",
-              "description": "Alternative border color for the active tab keyline"
-            }
-          },
-          "hover": {
-            "$value": "{options.color.alpine-lake-blue-800}",
-            "$type": "color",
-            "docs": {
-              "category": "colors",
-              "type": "tabs",
-              "example": "color",
-              "description": "Border color for the tab keyline hover state"
-            }
-          },
-          "hover-alt": {
-            "$value": "{options.color.alpine-lake-blue-600}",
-            "$type": "color",
-            "docs": {
-              "category": "colors",
-              "type": "tabs",
-              "example": "color",
-              "description": "Alternative border color for the tab keyline hover state"
-            }
-          },
-          "disabled": {
-            "$value": "{options.color.warm-grey-250}",
-            "$type": "color",
-            "docs": {
-              "category": "colors",
-              "type": "tabs",
-              "example": "color",
-              "description": "Border color for the disabled tab keyline"
-            }
+        "keyline-rest": {
+          "$value": "{options.color.warm-grey-600}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "The border color of tab keyline"
+          }
+        },
+        "keyline-active": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Border color for the active tab keyline"
+          }
+        },
+        "keyline-active-alt": {
+          "$value": "{options.color.alpine-lake-blue-600}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Alternative border color for the active tab keyline"
+          }
+        },
+        "keyline-hover": {
+          "$value": "{options.color.alpine-lake-blue-800}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Border color for the tab keyline hover state"
+          }
+        },
+        "keyline-hover-alt": {
+          "$value": "{options.color.alpine-lake-blue-600}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Alternative border color for the tab keyline hover state"
+          }
+        },
+        "keyline-disabled": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "tabs",
+            "example": "color",
+            "description": "Border color for the disabled tab keyline"
           }
         }
       }
