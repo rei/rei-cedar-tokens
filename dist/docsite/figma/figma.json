@@ -736,6 +736,575 @@
     }
   },
   "color": {
+    "background": {
+      "accordion": {
+        "hover": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/accordion.json5"
+        }
+      },
+      "button": {
+        "primary-rest": {
+          "$value": "{color.blue-spruce-green-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "primary-active": {
+          "$value": "{color.blue-spruce-green-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "primary-hover": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "primary-icon-alt-hover": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-rest": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-active": {
+          "$value": "{color.warm-grey-600}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-hover": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-disabled": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-rest": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-active": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-hover": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-rest": {
+          "$value": "{color.sale-red-800}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-active": {
+          "$value": "{color.sale-red-800}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-hover": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "default-disabled": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "icon-only-active": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        }
+      },
+      "chip": {
+        "default-rest": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-disabled": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-hover": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-focus": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-active": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-selected": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-selected-hover": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-selected-focus": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        },
+        "default-selected-active": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/chip.json5"
+        }
+      },
+      "transparent": {
+        "$value": "{color.transparent}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "primary": {
+        "$value": "{color.warm-grey-025}",
+        "$type": "color",
+        "filePath": "tokens/themes/docsite/color.json5"
+      },
+      "secondary": {
+        "$value": "{color.white}",
+        "$type": "color",
+        "filePath": "tokens/themes/docsite/color.json5"
+      },
+      "sale": {
+        "$value": "{color.sale-red-800}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "brand-spruce": {
+        "$value": "{color.blue-spruce-green-1000}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "success": {
+        "$value": "{color.success-green-200}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "info": {
+        "$value": "{color.alpine-lake-blue-200}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "warning": {
+        "$value": "{color.warning-yellow-200}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "error": {
+        "$value": "{color.error-red-200}",
+        "$type": "color",
+        "filePath": "tokens/global/color.json5"
+      },
+      "label": {
+        "default-hover": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-active": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-focus": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "secondary-hover": {
+          "$value": "{color.white-75}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "secondary-active": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "secondary-focus": {
+          "$value": "{color.white-75}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        }
+      },
+      "input": {
+        "default": {
+          "$value": "{color.warm-grey-025-15}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "secondary": {
+          "$value": "{color.white-85}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "error": {
+          "$value": "{color.error-red-050-75}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-hover": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-active": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-selected": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "secondary-active": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-selected-hover": {
+          "$value": "{color.warm-grey-600}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-disabled": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-selected-focus": {
+          "$value": "{color.warm-grey-600}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        },
+        "default-focus": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/input.json5"
+        }
+      },
+      "message-default-01": {
+        "$value": "{color.default-grey-100}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-default-02": {
+        "$value": "{color.default-grey-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-success": {
+        "$value": "{color.success-green-200}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-success-01": {
+        "$value": "{color.success-green-100}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-success-02": {
+        "$value": "{color.success-green-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-warning": {
+        "$value": "{color.warning-yellow-200}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-warning-01": {
+        "$value": "{color.warning-yellow-100}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-warning-02": {
+        "$value": "{color.warning-yellow-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-error": {
+        "$value": "{color.error-red-200}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-error-01": {
+        "$value": "{color.error-red-100}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-error-02": {
+        "$value": "{color.error-red-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-info": {
+        "$value": "{color.alpine-lake-blue-200}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-info-01": {
+        "$value": "{color.info-blue-100}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-info-02": {
+        "$value": "{color.info-blue-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-sale": {
+        "$value": "{color.sale-red-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "modal": {
+        "overlay": {
+          "$value": "{color.warm-grey-025-85}",
+          "$type": "color",
+          "filePath": "tokens/global/modal.json5"
+        }
+      },
+      "pagination": {
+        "hover": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/pagination.json5"
+        },
+        "keyline": {
+          "$value": "{color.alpine-lake-blue-800}",
+          "$type": "color",
+          "filePath": "tokens/global/pagination.json5"
+        }
+      },
+      "rating-star": {
+        "default": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/rating.json5"
+        },
+        "highlighted": {
+          "$value": "{color.golden-yellow-500}",
+          "$type": "color",
+          "filePath": "tokens/global/rating.json5"
+        }
+      },
+      "surface-selection": {
+        "default-rest": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-active": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-hover": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-checked": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-disabled": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-loading": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        }
+      },
+      "surface": {
+        "primary": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5"
+        },
+        "secondary": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5"
+        },
+        "brand-spruce": {
+          "$value": "{color.blue-spruce-green-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5"
+        },
+        "sale": {
+          "$value": "{color.sale-red-800}",
+          "$type": "color",
+          "filePath": "tokens/global/surface.json5"
+        }
+      },
+      "switch": {
+        "default-rest": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "default-hover": {
+          "$value": "{color.warm-grey-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "default-focus": {
+          "$value": "{color.warm-grey-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-default-rest": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-default-hover": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-default-focus": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-selected-default-rest": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-selected-default-hover": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-selected-default-focus": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        }
+      },
+      "table": {
+        "header": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/themes/docsite/table.json5"
+        },
+        "row": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/themes/docsite/table.json5"
+        },
+        "row-alt": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/table.json5"
+        }
+      },
+      "toggle-group": {
+        "default-rest": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        }
+      },
+      "toggle-button": {
+        "default-rest": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        },
+        "default-hover": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        },
+        "default-focus": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        },
+        "default-selected-rest": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        },
+        "default-selected-hover": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        }
+      },
+      "tooltip": {
+        "default": {
+          "$value": "{color.warm-grey-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/tooltip.json5"
+        }
+      },
+      "code-snippet": {
+        "$value": "{color.warm-grey-100}",
+        "$type": "color",
+        "filePath": "tokens/themes/docsite/code-snippet.json5"
+      },
+      "code": {
+        "$value": "{color.warm-grey-1000}",
+        "$type": "color",
+        "filePath": "tokens/themes/docsite/code.json5"
+      },
+      "link-card": {
+        "rest": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "filePath": "tokens/themes/docsite/link-card.json5"
+        },
+        "active": {
+          "$value": "{color.warm-grey-1000}",
+          "$type": "color",
+          "filePath": "tokens/themes/docsite/link-card.json5"
+        }
+      },
+      "note": {
+        "$value": "{color.warm-grey-010}",
+        "$type": "color",
+        "filePath": "tokens/themes/docsite/note.json5"
+      },
+      "tag": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "filePath": "tokens/themes/docsite/tag.json5"
+      }
+    },
     "text": {
       "button": {
         "primary": {
@@ -886,13 +1455,6 @@
         "$type": "color",
         "filePath": "tokens/global/color.json5"
       },
-      "message": {
-        "error": {
-          "$value": "{color.error-red-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        }
-      },
       "input": {
         "default": {
           "$value": "{color.warm-grey-1000}",
@@ -972,6 +1534,11 @@
           "filePath": "tokens/global/link.json5"
         }
       },
+      "message-error": {
+        "$value": "{color.error-red-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
       "rating": {
         "default": {
           "$value": "{color.warm-grey-900}",
@@ -1015,7 +1582,7 @@
         "default-rest": {
           "$value": "{color.warm-grey-900}",
           "$type": "color",
-          "filePath": "tokens/global/togglebutton.json5"
+          "filePath": "tokens/global/toggle-button.json5"
         }
       },
       "tooltip": {
@@ -1055,670 +1622,87 @@
         }
       }
     },
-    "background": {
-      "button": {
-        "primary": {
-          "rest": {
-            "$value": "{color.blue-spruce-green-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.blue-spruce-green-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-025}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "icon-alt-hover": {
-            "$value": "{color.warm-grey-010}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
-        },
-        "secondary": {
-          "rest": {
-            "$value": "{color.warm-grey-010}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.warm-grey-600}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-025}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "disabled": {
-            "$value": "{color.warm-grey-010}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
-        },
-        "dark": {
-          "rest": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-100}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
-        },
-        "sale": {
-          "rest": {
-            "$value": "{color.sale-red-800}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.sale-red-800}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-025}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
-        },
-        "default-disabled": {
-          "$value": "{color.warm-grey-250}",
-          "$type": "color",
-          "filePath": "tokens/global/button.json5"
-        },
-        "icon-only-active": {
-          "$value": "{color.warm-grey-025}",
-          "$type": "color",
-          "filePath": "tokens/global/button.json5"
-        }
-      },
-      "chip": {
-        "default-rest": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-disabled": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-hover": {
-          "$value": "{color.warm-grey-025}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-focus": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-active": {
-          "$value": "{color.warm-grey-100}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-selected": {
-          "$value": "{color.warm-grey-250}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-selected-hover": {
-          "$value": "{color.warm-grey-100}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-selected-focus": {
-          "$value": "{color.warm-grey-250}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        },
-        "default-selected-active": {
-          "$value": "{color.warm-grey-100}",
-          "$type": "color",
-          "filePath": "tokens/global/chip.json5"
-        }
-      },
-      "transparent": {
-        "$value": "{color.transparent}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
-      },
-      "primary": {
-        "$value": "{color.warm-grey-025}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/color.json5"
-      },
-      "secondary": {
-        "$value": "{color.white}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/color.json5"
-      },
-      "brand": {
-        "spruce": {
-          "$value": "{color.blue-spruce-green-1000}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        }
-      },
-      "message": {
-        "default-01": {
-          "$value": "{color.default-grey-100}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "default-02": {
-          "$value": "{color.default-grey-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "success": {
-          "$value": "{color.success-green-200}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "success-01": {
-          "$value": "{color.success-green-100}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "success-02": {
-          "$value": "{color.success-green-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "warning": {
-          "$value": "{color.warning-yellow-200}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "warning-01": {
-          "$value": "{color.warning-yellow-100}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "warning-02": {
-          "$value": "{color.warning-yellow-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "error": {
-          "$value": "{color.error-red-200}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "error-01": {
-          "$value": "{color.error-red-100}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "error-02": {
-          "$value": "{color.error-red-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "info": {
-          "$value": "{color.alpine-lake-blue-200}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "info-01": {
-          "$value": "{color.info-blue-100}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "info-02": {
-          "$value": "{color.info-blue-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "sale": {
-          "$value": "{color.sale-red-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        }
-      },
-      "accordion-hover": {
-        "$value": "{color.warm-grey-010}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
-      },
-      "pagination-hover": {
-        "$value": "{color.warm-grey-010}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
-      },
-      "pagination-keyline": {
-        "$value": "{color.alpine-lake-blue-800}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
-      },
-      "modal-overlay": {
-        "$value": "{color.warm-grey-025-85}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
-      },
-      "label": {
-        "default-hover": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-active": {
-          "$value": "{color.warm-grey-100}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-focus": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "secondary-hover": {
-          "$value": "{color.white-75}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "secondary-active": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "secondary-focus": {
-          "$value": "{color.white-75}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        }
-      },
-      "input": {
-        "default": {
-          "$value": "{color.warm-grey-025-15}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "secondary": {
-          "$value": "{color.white-85}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "error": {
-          "$value": "{color.error-red-050-75}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-hover": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-active": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-selected": {
-          "$value": "{color.warm-grey-900}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "secondary-active": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-selected-hover": {
-          "$value": "{color.warm-grey-600}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-disabled": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-selected-focus": {
-          "$value": "{color.warm-grey-600}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        },
-        "default-focus": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/input.json5"
-        }
-      },
-      "rating-star-default": {
-        "$value": "{color.warm-grey-010}",
-        "$type": "color",
-        "filePath": "tokens/global/rating.json5"
-      },
-      "rating-star-highlighted": {
-        "$value": "{color.golden-yellow-500}",
-        "$type": "color",
-        "filePath": "tokens/global/rating.json5"
-      },
-      "surface": {
-        "primary": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/global/surface.json5"
-        },
-        "secondary": {
-          "$value": "{color.warm-grey-025}",
-          "$type": "color",
-          "filePath": "tokens/global/surface.json5"
-        },
-        "brand-spruce": {
-          "$value": "{color.blue-spruce-green-1000}",
-          "$type": "color",
-          "filePath": "tokens/global/surface.json5"
-        },
-        "sale": {
-          "$value": "{color.sale-red-800}",
-          "$type": "color",
-          "filePath": "tokens/global/surface.json5"
-        }
-      },
-      "surface-selection": {
-        "default": {
-          "rest": {
-            "$value": "{color.white}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "active": {
-            "$value": "{color.white}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "hover": {
-            "$value": "{color.white}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "checked": {
-            "$value": "{color.white}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "disabled": {
-            "$value": "{color.warm-grey-025}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "loading": {
-            "$value": "{color.warm-grey-010}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          }
-        }
-      },
-      "switch": {
-        "default-rest": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/switch.json5"
-        },
-        "default-hover": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/switch.json5"
-        },
-        "default-focus": {
-          "$value": "{color.warm-grey-010}",
-          "$type": "color",
-          "filePath": "tokens/global/switch.json5"
-        },
-        "selected": {
-          "default-rest": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-hover": {
-            "$value": "{color.warm-grey-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-focus": {
-            "$value": "{color.warm-grey-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          }
-        },
-        "handle": {
-          "default-rest": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-hover": {
-            "$value": "{color.warm-grey-100}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-focus": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "selected": {
-            "default-rest": {
-              "$value": "{color.warm-grey-250}",
-              "$type": "color",
-              "filePath": "tokens/global/switch.json5"
-            },
-            "default-hover": {
-              "$value": "{color.warm-grey-250}",
-              "$type": "color",
-              "filePath": "tokens/global/switch.json5"
-            },
-            "default-focus": {
-              "$value": "{color.warm-grey-250}",
-              "$type": "color",
-              "filePath": "tokens/global/switch.json5"
-            }
-          }
-        }
-      },
-      "table-header": {
-        "$value": "{color.warm-grey-010}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/table.json5"
-      },
-      "table-row": {
-        "$value": "{color.warm-grey-025}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/table.json5"
-      },
-      "table-row-alt": {
-        "$value": "{color.warm-grey-010}",
-        "$type": "color",
-        "filePath": "tokens/global/table.json5"
-      },
-      "toggle-group": {
-        "default": {
-          "rest": {
-            "$value": "{color.warm-grey-010}",
-            "$type": "color",
-            "filePath": "tokens/global/togglebutton.json5"
-          }
-        }
-      },
-      "toggle-button": {
-        "default": {
-          "rest": {
-            "$value": "{color.warm-grey-010}",
-            "$type": "color",
-            "filePath": "tokens/global/togglebutton.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-100}",
-            "$type": "color",
-            "filePath": "tokens/global/togglebutton.json5"
-          },
-          "focus": {
-            "$value": "{color.warm-grey-100}",
-            "$type": "color",
-            "filePath": "tokens/global/togglebutton.json5"
-          },
-          "selected": {
-            "rest": {
-              "$value": "{color.white}",
-              "$type": "color",
-              "filePath": "tokens/global/togglebutton.json5"
-            },
-            "hover": {
-              "$value": "{color.white}",
-              "$type": "color",
-              "filePath": "tokens/global/togglebutton.json5"
-            }
-          }
-        }
-      },
-      "tooltip": {
-        "default": {
-          "$value": "{color.warm-grey-1000}",
-          "$type": "color",
-          "filePath": "tokens/global/tooltip.json5"
-        }
-      },
-      "code-snippet": {
-        "$value": "{color.warm-grey-100}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/code-snippet.json5"
-      },
-      "code": {
-        "$value": "{color.warm-grey-1000}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/code.json5"
-      },
-      "link-card": {
-        "rest": {
-          "$value": "{color.white}",
-          "$type": "color",
-          "filePath": "tokens/themes/docsite/link-card.json5"
-        },
-        "active": {
-          "$value": "{color.warm-grey-1000}",
-          "$type": "color",
-          "filePath": "tokens/themes/docsite/link-card.json5"
-        }
-      },
-      "note": {
-        "$value": "{color.warm-grey-010}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/note.json5"
-      },
-      "tag": {
-        "$value": "{theme.color.primary-100}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/tag.json5"
-      }
-    },
     "border": {
       "button": {
-        "primary": {
-          "rest": {
-            "$value": "{color.blue-spruce-green-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.blue-spruce-green-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active-inset": {
-            "$value": "{color.warm-grey-025}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.blue-spruce-green-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
+        "primary-rest": {
+          "$value": "{color.blue-spruce-green-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
         },
-        "secondary": {
-          "rest": {
-            "$value": "{color.warm-grey-600}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.warm-grey-600}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active-inset": {
-            "$value": "{color.warm-grey-025}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
+        "primary-active": {
+          "$value": "{color.blue-spruce-green-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
         },
-        "dark": {
-          "rest": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active-inset": {
-            "$value": "{color.warm-grey-100}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
+        "primary-active-inset": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
         },
-        "sale": {
-          "rest": {
-            "$value": "{color.sale-red-800}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active": {
-            "$value": "{color.sale-red-800}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "active-inset": {
-            "$value": "{color.sale-red-200}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          },
-          "hover": {
-            "$value": "{color.sale-red-800}",
-            "$type": "color",
-            "filePath": "tokens/global/button.json5"
-          }
+        "primary-hover": {
+          "$value": "{color.blue-spruce-green-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-rest": {
+          "$value": "{color.warm-grey-600}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-active": {
+          "$value": "{color.warm-grey-600}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-active-inset": {
+          "$value": "{color.warm-grey-025}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "secondary-hover": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-rest": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-active": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-active-inset": {
+          "$value": "{color.warm-grey-100}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "dark-hover": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-rest": {
+          "$value": "{color.sale-red-800}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-active": {
+          "$value": "{color.sale-red-800}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-active-inset": {
+          "$value": "{color.sale-red-200}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
+        },
+        "sale-hover": {
+          "$value": "{color.sale-red-800}",
+          "$type": "color",
+          "filePath": "tokens/global/button.json5"
         },
         "default-disabled": {
           "$value": "{color.warm-grey-250}",
@@ -1808,58 +1792,6 @@
         "$type": "color",
         "filePath": "tokens/global/color.json5"
       },
-      "message": {
-        "default-01": {
-          "$value": "{color.default-grey-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "default-02": {
-          "$value": "{color.default-grey-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "success-01": {
-          "$value": "{color.success-green-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "success-02": {
-          "$value": "{color.success-green-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "warning-01": {
-          "$value": "{color.warning-yellow-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "warning-02": {
-          "$value": "{color.warning-yellow-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "error-01": {
-          "$value": "{color.error-red-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "error-02": {
-          "$value": "{color.error-red-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "info-01": {
-          "$value": "{color.info-blue-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "info-02": {
-          "$value": "{color.info-blue-300}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        }
-      },
       "label": {
         "default-focus": {
           "$value": "{color.warm-grey-1000}",
@@ -1936,6 +1868,56 @@
           "filePath": "tokens/global/link.json5"
         }
       },
+      "message-default-01": {
+        "$value": "{color.default-grey-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-default-02": {
+        "$value": "{color.default-grey-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-success-01": {
+        "$value": "{color.success-green-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-success-02": {
+        "$value": "{color.success-green-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-warning-01": {
+        "$value": "{color.warning-yellow-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-warning-02": {
+        "$value": "{color.warning-yellow-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-error-01": {
+        "$value": "{color.error-red-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-error-02": {
+        "$value": "{color.error-red-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-info-01": {
+        "$value": "{color.info-blue-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-info-02": {
+        "$value": "{color.info-blue-300}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
       "rating-star": {
         "default": {
           "$value": "{color.warm-grey-600}",
@@ -1946,6 +1928,38 @@
           "$value": "{color.golden-yellow-800}",
           "$type": "color",
           "filePath": "tokens/global/rating.json5"
+        }
+      },
+      "surface-selection": {
+        "default-rest": {
+          "$value": "{color.default-grey-700}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-active": {
+          "$value": "{color.default-grey-700}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-hover": {
+          "$value": "{color.default-grey-700}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-checked": {
+          "$value": "{color.warm-grey-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-disabled": {
+          "$value": "{color.default-grey-700}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
+        },
+        "default-loading": {
+          "$value": "{color.default-grey-700}",
+          "$type": "color",
+          "filePath": "tokens/global/surface-selection.json5"
         }
       },
       "surface": {
@@ -1980,96 +1994,58 @@
           "filePath": "tokens/global/surface.json5"
         }
       },
-      "surface-selection": {
-        "default": {
-          "rest": {
-            "$value": "{color.default-grey-700}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "active": {
-            "$value": "{color.default-grey-700}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "hover": {
-            "$value": "{color.default-grey-700}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "checked": {
-            "$value": "{color.warm-grey-1000}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "disabled": {
-            "$value": "{color.default-grey-700}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          },
-          "loading": {
-            "$value": "{color.default-grey-700}",
-            "$type": "color",
-            "filePath": "tokens/global/surfaceselection.json5"
-          }
-        }
-      },
       "switch": {
         "default-hover": {
           "$value": "{color.warm-grey-900}",
           "$type": "color",
           "filePath": "tokens/global/switch.json5"
         },
-        "handle": {
-          "default-rest": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-hover": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-focus": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          }
+        "handle-default-rest": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-default-hover": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "handle-default-focus": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
         }
       },
       "tab": {
-        "keyline": {
-          "rest": {
-            "$value": "{color.warm-grey-600}",
-            "$type": "color",
-            "filePath": "tokens/global/tab.json5"
-          },
-          "active": {
-            "$value": "{color.alpine-lake-blue-800}",
-            "$type": "color",
-            "filePath": "tokens/global/tab.json5"
-          },
-          "active-alt": {
-            "$value": "{color.alpine-lake-blue-600}",
-            "$type": "color",
-            "filePath": "tokens/global/tab.json5"
-          },
-          "hover": {
-            "$value": "{color.alpine-lake-blue-800}",
-            "$type": "color",
-            "filePath": "tokens/global/tab.json5"
-          },
-          "hover-alt": {
-            "$value": "{color.alpine-lake-blue-600}",
-            "$type": "color",
-            "filePath": "tokens/global/tab.json5"
-          },
-          "disabled": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/tab.json5"
-          }
+        "keyline-rest": {
+          "$value": "{color.warm-grey-600}",
+          "$type": "color",
+          "filePath": "tokens/global/tab.json5"
+        },
+        "keyline-active": {
+          "$value": "{color.alpine-lake-blue-800}",
+          "$type": "color",
+          "filePath": "tokens/global/tab.json5"
+        },
+        "keyline-active-alt": {
+          "$value": "{color.alpine-lake-blue-600}",
+          "$type": "color",
+          "filePath": "tokens/global/tab.json5"
+        },
+        "keyline-hover": {
+          "$value": "{color.alpine-lake-blue-800}",
+          "$type": "color",
+          "filePath": "tokens/global/tab.json5"
+        },
+        "keyline-hover-alt": {
+          "$value": "{color.alpine-lake-blue-600}",
+          "$type": "color",
+          "filePath": "tokens/global/tab.json5"
+        },
+        "keyline-disabled": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/tab.json5"
         }
       },
       "table": {
@@ -2082,27 +2058,28 @@
           "$value": "{color.warm-grey-600}",
           "$type": "color",
           "filePath": "tokens/global/table.json5"
+        },
+        "row": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/themes/docsite/table.json5"
         }
       },
       "toggle-button": {
-        "default": {
-          "focus": {
-            "$value": "{color.warm-grey-900}",
-            "$type": "color",
-            "filePath": "tokens/global/togglebutton.json5"
-          },
-          "selected": {
-            "rest": {
-              "$value": "{color.warm-grey-900}",
-              "$type": "color",
-              "filePath": "tokens/global/togglebutton.json5"
-            },
-            "focus": {
-              "$value": "{color.warm-grey-900}",
-              "$type": "color",
-              "filePath": "tokens/global/togglebutton.json5"
-            }
-          }
+        "default-focus": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        },
+        "default-selected-rest": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
+        },
+        "default-selected-focus": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/toggle-button.json5"
         }
       },
       "tooltip": {
@@ -2134,11 +2111,6 @@
         "$type": "color",
         "filePath": "tokens/themes/docsite/note.json5"
       },
-      "table-row": {
-        "$value": "{color.warm-grey-250}",
-        "$type": "color",
-        "filePath": "tokens/themes/docsite/table.json5"
-      },
       "usage": {
         "affirmative": {
           "$value": "{color.success-green-800}",
@@ -2157,8 +2129,6 @@
         }
       }
     },
-    "doccategory": "colors",
-    "docexample": "color",
     "icon": {
       "default": {
         "$value": "{color.warm-grey-900}",
@@ -2180,78 +2150,64 @@
         "$type": "color",
         "filePath": "tokens/global/color.json5"
       },
-      "message": {
-        "default": {
-          "$value": "{color.default-grey-800}",
+      "checkbox": {
+        "default-selected": {
+          "$value": "{color.white}",
           "$type": "color",
-          "filePath": "tokens/global/color.json5"
+          "filePath": "tokens/global/input.json5"
         },
-        "success": {
-          "$value": "{color.success-green-800}",
+        "default-selected-hover": {
+          "$value": "{color.white}",
           "$type": "color",
-          "filePath": "tokens/global/color.json5"
+          "filePath": "tokens/global/input.json5"
         },
-        "warning": {
-          "$value": "{color.warning-yellow-800}",
+        "default-selected-active": {
+          "$value": "{color.warm-grey-900}",
           "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "error": {
-          "$value": "{color.error-red-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
-        },
-        "info": {
-          "$value": "{color.info-blue-800}",
-          "$type": "color",
-          "filePath": "tokens/global/color.json5"
+          "filePath": "tokens/global/input.json5"
         }
       },
-      "checkbox-default-selected": {
-        "$value": "{color.white}",
+      "message-default": {
+        "$value": "{color.default-grey-800}",
         "$type": "color",
-        "filePath": "tokens/global/input.json5"
+        "filePath": "tokens/global/message.json5"
       },
-      "checkbox-default-selected-hover": {
-        "$value": "{color.white}",
+      "message-success": {
+        "$value": "{color.success-green-800}",
         "$type": "color",
-        "filePath": "tokens/global/input.json5"
+        "filePath": "tokens/global/message.json5"
       },
-      "checkbox-default-selected-active": {
-        "$value": "{color.warm-grey-900}",
+      "message-warning": {
+        "$value": "{color.warning-yellow-800}",
         "$type": "color",
-        "filePath": "tokens/global/input.json5"
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-error": {
+        "$value": "{color.error-red-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
+      },
+      "message-info": {
+        "$value": "{color.info-blue-800}",
+        "$type": "color",
+        "filePath": "tokens/global/message.json5"
       },
       "switch": {
-        "selected": {
-          "default-rest": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-hover": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          },
-          "default-focus": {
-            "$value": "{color.warm-grey-250}",
-            "$type": "color",
-            "filePath": "tokens/global/switch.json5"
-          }
+        "selected-default-rest": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "selected-default-hover": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "selected-default-focus": {
+          "$value": "{color.warm-grey-250}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
         }
-      }
-    },
-    "surface": {
-      "primary": {
-        "$value": "{color.white}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
-      },
-      "secondary": {
-        "$value": "{color.warm-grey-025}",
-        "$type": "color",
-        "filePath": "tokens/global/color.json5"
       }
     },
     "icon-background": {
@@ -2263,30 +2219,34 @@
     }
   },
   "form": {
-    "input-height-default": {
-      "$value": "40px",
-      "$type": "dimension",
-      "filePath": "tokens/global/form.json5"
+    "input": {
+      "height-default": {
+        "$value": "40px",
+        "$type": "dimension",
+        "filePath": "tokens/global/form.json5"
+      },
+      "height-large": {
+        "$value": "48px",
+        "$type": "dimension",
+        "filePath": "tokens/global/form.json5"
+      }
     },
-    "input-height-large": {
-      "$value": "48px",
-      "$type": "dimension",
-      "filePath": "tokens/global/form.json5"
-    },
-    "figure-size-small": {
-      "$value": "16px",
-      "$type": "dimension",
-      "filePath": "tokens/global/form.json5"
-    },
-    "figure-size-medium": {
-      "$value": "16px",
-      "$type": "dimension",
-      "filePath": "tokens/global/form.json5"
-    },
-    "figure-size-large": {
-      "$value": "20px",
-      "$type": "dimension",
-      "filePath": "tokens/global/form.json5"
+    "figure": {
+      "size-small": {
+        "$value": "16px",
+        "$type": "dimension",
+        "filePath": "tokens/global/form.json5"
+      },
+      "size-medium": {
+        "$value": "16px",
+        "$type": "dimension",
+        "filePath": "tokens/global/form.json5"
+      },
+      "size-large": {
+        "$value": "20px",
+        "$type": "dimension",
+        "filePath": "tokens/global/form.json5"
+      }
     }
   },
   "icon": {
@@ -5217,15 +5177,17 @@
           "$type": "color",
           "filePath": "tokens/themes/docsite/note.json5"
         },
-        "table-header": {
-          "$value": "{color.warm-grey-900-50}",
-          "$type": "color",
-          "filePath": "tokens/themes/docsite/table.json5"
-        },
-        "table-row": {
-          "$value": "{color.warm-grey-1000}",
-          "$type": "color",
-          "filePath": "tokens/themes/docsite/table.json5"
+        "table": {
+          "header": {
+            "$value": "{color.warm-grey-900-50}",
+            "$type": "color",
+            "filePath": "tokens/themes/docsite/table.json5"
+          },
+          "row": {
+            "$value": "{color.warm-grey-1000}",
+            "$type": "color",
+            "filePath": "tokens/themes/docsite/table.json5"
+          }
         }
       },
       "border": {
@@ -5258,10 +5220,12 @@
           "$type": "color",
           "filePath": "tokens/themes/docsite/note.json5"
         },
-        "table-row": {
-          "$value": "{color.warm-grey-900}",
-          "$type": "color",
-          "filePath": "tokens/themes/docsite/table.json5"
+        "table": {
+          "row": {
+            "$value": "{color.warm-grey-900}",
+            "$type": "color",
+            "filePath": "tokens/themes/docsite/table.json5"
+          }
         }
       },
       "icon": {
