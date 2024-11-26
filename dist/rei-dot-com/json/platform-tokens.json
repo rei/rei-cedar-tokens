@@ -2108,6 +2108,84 @@
         }
       },
       {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on rest"
+        },
+        "filePath": "tokens/global/switch.json5",
+        "isSource": false,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "switch",
+            "example": "color",
+            "description": "The background color of a switch on rest"
+          }
+        },
+        "name": "cdr-color-background-switch-default-rest",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on hover"
+        },
+        "filePath": "tokens/global/switch.json5",
+        "isSource": false,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "switch",
+            "example": "color",
+            "description": "The background color of a switch on hover"
+          }
+        },
+        "name": "cdr-color-background-switch-default-hover",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on focus"
+        },
+        "filePath": "tokens/global/switch.json5",
+        "isSource": false,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "switch",
+            "example": "color",
+            "description": "The background color of a switch on focus"
+          }
+        },
+        "name": "cdr-color-background-switch-default-focus",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
         "$value": "#4b4a48",
         "$type": "color",
         "docs": {
@@ -2128,7 +2206,7 @@
             "description": "The background color of a selected switch on rest"
           }
         },
-        "name": "cdr-color-background-switch-default-rest",
+        "name": "cdr-color-background-switch-selected-default-rest",
         "attributes": {
           "deprecated": false
         }
@@ -2154,7 +2232,7 @@
             "description": "The background color of a selected switch on hover"
           }
         },
-        "name": "cdr-color-background-switch-default-hover",
+        "name": "cdr-color-background-switch-selected-default-hover",
         "attributes": {
           "deprecated": false
         }
@@ -2180,7 +2258,7 @@
             "description": "The background color of a selected switch on focus"
           }
         },
-        "name": "cdr-color-background-switch-default-focus",
+        "name": "cdr-color-background-switch-selected-default-focus",
         "attributes": {
           "deprecated": false
         }

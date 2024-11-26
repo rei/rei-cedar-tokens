@@ -3,6 +3,36 @@
     "background": {
       "switch": {
         "default-rest": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "switch",
+            "example": "color",
+            "description": "The background color of a switch on rest"
+          }
+        },
+        "default-hover": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "switch",
+            "example": "color",
+            "description": "The background color of a switch on hover"
+          }
+        },
+        "default-focus": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "switch",
+            "example": "color",
+            "description": "The background color of a switch on focus"
+          }
+        },
+        "selected-default-rest": {
           "$value": "{options.color.warm-grey-900}",
           "$type": "color",
           "docs": {
@@ -12,7 +42,7 @@
             "description": "The background color of a selected switch on rest"
           }
         },
-        "default-hover": {
+        "selected-default-hover": {
           "$value": "{options.color.warm-grey-1000}",
           "$type": "color",
           "docs": {
@@ -22,7 +52,7 @@
             "description": "The background color of a selected switch on hover"
           }
         },
-        "default-focus": {
+        "selected-default-focus": {
           "$value": "{options.color.warm-grey-1000}",
           "$type": "color",
           "docs": {
