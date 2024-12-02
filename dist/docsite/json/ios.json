@@ -2107,6 +2107,84 @@
       }
     },
     {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on rest"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on rest"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchDefaultRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on hover"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on hover"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchDefaultHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on focus"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on focus"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchDefaultFocus",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
       "$type": "color",
       "docs": {
@@ -2127,7 +2205,7 @@
           "description": "The background color of a selected switch on rest"
         }
       },
-      "name": "CdrColorBackgroundSwitchDefaultRest",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultRest",
       "attributes": {
         "deprecated": false
       }
@@ -2153,7 +2231,7 @@
           "description": "The background color of a selected switch on hover"
         }
       },
-      "name": "CdrColorBackgroundSwitchDefaultHover",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultHover",
       "attributes": {
         "deprecated": false
       }
@@ -2179,7 +2257,7 @@
           "description": "The background color of a selected switch on focus"
         }
       },
-      "name": "CdrColorBackgroundSwitchDefaultFocus",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultFocus",
       "attributes": {
         "deprecated": false
       }
