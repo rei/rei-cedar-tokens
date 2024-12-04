@@ -8,14 +8,13 @@ export const css = (theme) => ({
       'attribute/deprecated',
       'name/kebab',
       'size/space',
-      'size/px-to-rem-transitive',
-      'color/alpha',
-      'color/css-transitive'
+      'size/px-to-rem-transitive'
     ],
     files: [
       {
         destination: 'cdr-tokens.css',
-        format: 'css/variables'
+        format: 'css/variables',
+        filter: 'remove-source-tokens'
       }
     ]
   }

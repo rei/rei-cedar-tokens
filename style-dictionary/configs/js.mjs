@@ -7,15 +7,13 @@ export const js = (theme) => ({
       'attribute/deprecated',
       'name/pascal',
       'size/strip-all-px-js',
-      'size/space-js',
-      'color/alpha',
-      'color/css-transitive',
-      'value/shadow'
+      'size/space-js'
     ],
     files: [
       {
         destination: 'cdr-tokens.cjs',
-        format: 'javascript/module-flat'
+        format: 'javascript/module-flat',
+        filter: 'remove-source-tokens'
       },
       {
         destination: 'cdr-tokens.mjs',
@@ -24,7 +22,8 @@ export const js = (theme) => ({
       },
       {
         format: 'typescript/es6-declarations',
-        destination: 'cdr-tokens.d.mts'
+        destination: 'cdr-tokens.d.mts',
+        filter: 'remove-source-tokens'
       }
     ]
   }

@@ -3,9 +3,8 @@
     "text": {
       "rating": {
         "default": {
-          "$value": "{options.color.warm-grey-1150}",
+          "$value": "{options.color.warm-grey-900}",
           "$type": "color",
-          "alpha": 0.75,
           "docs": {
             "category": "colors",
             "type": "rating",
@@ -24,7 +23,7 @@
           }
         },
         "separator": {
-          "$value": "{options.color.warm-grey-600}",
+          "$value": "{options.color.warm-grey-450}",
           "$type": "color",
           "docs": {
             "category": "colors",
@@ -36,31 +35,33 @@
       }
     },
     "background": {
-      "rating-star-default": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "rating",
-          "example": "color",
-          "description": "The defaul background color of the rating star icon"
-        }
-      },
-      "rating-star-highlighted": {
-        "$value": "{options.color.golden-yellow-500}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "rating",
-          "example": "color",
-          "description": "Background color for the highlighted rating icon"
+      "rating-star": {
+        "default": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "The defaul background color of the rating star icon"
+          }
+        },
+        "highlighted": {
+          "$value": "{options.color.golden-yellow-500}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Background color for the highlighted rating icon"
+          }
         }
       }
     },
     "border": {
       "rating-star": {
         "default": {
-          "$value": "{options.color.warm-grey-700}",
+          "$value": "{options.color.warm-grey-600}",
           "$type": "color",
           "docs": {
             "category": "colors",

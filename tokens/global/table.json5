@@ -1,41 +1,43 @@
 {
   "color": {
     "background": {
-      "table-header": {
-        "$value": "{options.color.warm-grey-200}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "table",
-          "example": "color",
-          "description": "The background color of table headers"
-        }
-      },
-      "table-row": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "table",
-          "example": "color",
-          "description": "The background color of table rows"
-        }
-      },
-      "table-row-alt": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "table",
-          "example": "color",
-          "description": "An alternate row color to aid grouping row data"
+      "table": {
+        "header": {
+          "$value": "{options.color.warm-grey-025}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "The background color of table headers"
+          }
+        },
+        "row": {
+          "$value": "{options.color.white}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "The background color of table rows"
+          }
+        },
+        "row-alt": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "An alternate row color to aid grouping row data"
+          }
         }
       }
     },
     "border": {
       "table": {
         "default": {
-          "$value": "{options.color.warm-grey-400}",
+          "$value": "{options.color.warm-grey-250}",
           "$type": "color",
           "docs": {
             "category": "colors",
@@ -45,7 +47,7 @@
           }
         },
         "head": {
-          "$value": "{options.color.warm-grey-700}",
+          "$value": "{options.color.warm-grey-600}",
           "$type": "color",
           "docs": {
             "category": "colors",

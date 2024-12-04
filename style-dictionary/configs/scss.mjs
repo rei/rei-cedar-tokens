@@ -8,14 +8,13 @@ export const scss = (theme) => ({
       'attribute/deprecated',
       'name/kebab',
       'size/space',
-      'size/px-to-rem-transitive',
-      'color/alpha',
-      'color/css-transitive'
+      'size/px-to-rem-transitive'
     ],
     files: [
       {
         destination: 'cdr-variable.scss',
-        format: 'scss/variables'
+        format: 'scss/variables',
+        filter: 'remove-source-tokens'
       },
       {
         destination: 'cdr-mixins.scss',
@@ -26,6 +25,6 @@ export const scss = (theme) => ({
         format: 'scss/map'
       }
     ],
-    actions: ['include-media-queries-scss', 'include-display-scss', 'concat-files', 'include-deprecate-scss']
+    actions: ['include-media-queries-scss', 'include-container-queries-scss', 'include-display-scss', 'concat-files', 'include-deprecate-scss']
   }
 })
