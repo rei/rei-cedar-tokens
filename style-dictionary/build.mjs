@@ -12,7 +12,6 @@ import { stripPx } from './transforms/size/strip-px.mjs'
 import { stripAllPx } from './transforms/size/strip-all-px.mjs'
 import { stripAllPxJs } from './transforms/size/strip-all-px-js.mjs'
 import { float } from './transforms/size/float.mjs'
-import { colorCssTransitive } from './transforms/color/color-css-transitive.mjs'
 
 // ==== Include custom formats ====
 import { scssMixin } from './formats/scss-mixin.mjs'
@@ -47,7 +46,6 @@ stripPx(StyleDictionary)
 stripAllPx(StyleDictionary)
 stripAllPxJs(StyleDictionary)
 float(StyleDictionary)
-colorCssTransitive(StyleDictionary)
 
 // ==== Register custom formats ====
 scssMixin(StyleDictionary)

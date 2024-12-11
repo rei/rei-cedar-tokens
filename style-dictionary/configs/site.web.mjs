@@ -9,7 +9,6 @@ export const siteWeb = (theme) => ({
       'name/kebab',
       'size/strip-px',
       'size/space-js',
-      'color/css-transitive',
       'size/px-to-rem-transitive',
       'time/seconds'
     ],

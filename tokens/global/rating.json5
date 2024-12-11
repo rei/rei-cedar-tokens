@@ -35,24 +35,26 @@
       }
     },
     "background": {
-      "rating-star-default": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "rating",
-          "example": "color",
-          "description": "The defaul background color of the rating star icon"
-        }
-      },
-      "rating-star-highlighted": {
-        "$value": "{options.color.golden-yellow-500}",
-        "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "rating",
-          "example": "color",
-          "description": "Background color for the highlighted rating icon"
+      "rating-star": {
+        "default": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "The defaul background color of the rating star icon"
+          }
+        },
+        "highlighted": {
+          "$value": "{options.color.golden-yellow-500}",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "rating",
+            "example": "color",
+            "description": "Background color for the highlighted rating icon"
+          }
         }
       }
     },

@@ -1,0 +1,60 @@
+name: Update Design Tokens
+
+on:
+  pull_request:
+    branches:
+      - next
+    types: [opened, synchronize, reopened]
+
+jobs:
+  update-tokens:
+    if: github.head_ref == 'figma'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    strategy:
+      matrix:
+        node-version: [20.10]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm ci
+
+      - name: Run token updater
+        run: npm run tokens:update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run build tokens
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "hasChanges=true" >> $GITHUB_OUTPUT
+          else
+            echo "hasChanges=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit changes
+        if: steps.check-changes.outputs.hasChanges == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "chore: update design tokens from Figma [skip ci]"
+          git push

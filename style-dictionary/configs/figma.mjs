@@ -3,13 +3,11 @@ import { commonConfig } from '../utils.mjs'
 export const figma = (theme) => ({
   figma: {
     ...commonConfig(theme, 'figma'),
-    transformGroup: 'tokens-studio',
     transforms: [
       'attribute/deprecated',
       'name/kebab',
       'size/space',
-      'size/px-to-rem-transitive',
-      'color/css-transitive'
+      'size/px-to-rem-transitive'
     ],
     files: [
       {
