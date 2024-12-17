@@ -70,6 +70,8 @@ export const CdrColorBackgroundPaginationHover : string;
 export const CdrColorBackgroundPaginationKeyline : string;
 export const CdrColorBackgroundRatingStarDefault : string;
 export const CdrColorBackgroundRatingStarHighlighted : string;
+export const CdrColorBackgroundSlideHover : string;
+export const CdrColorBackgroundSlideDefault : string;
 export const CdrColorBackgroundSurfaceSelectionDefaultRest : string;
 export const CdrColorBackgroundSurfaceSelectionDefaultActive : string;
 export const CdrColorBackgroundSurfaceSelectionDefaultHover : string;

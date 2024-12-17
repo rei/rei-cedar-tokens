@@ -71,6 +71,8 @@ module.exports = {
   "CdrColorBackgroundPaginationKeyline": "#406eb5",
   "CdrColorBackgroundRatingStarDefault": "#fafbf9",
   "CdrColorBackgroundRatingStarHighlighted": "#ffd280",
+  "CdrColorBackgroundSlideHover": "#fafbf9",
+  "CdrColorBackgroundSlideDefault": "#fafbf9",
   "CdrColorBackgroundSurfaceSelectionDefaultRest": "#ffffff",
   "CdrColorBackgroundSurfaceSelectionDefaultActive": "#ffffff",
   "CdrColorBackgroundSurfaceSelectionDefaultHover": "#ffffff",
