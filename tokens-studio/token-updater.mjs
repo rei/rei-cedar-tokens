@@ -4,63 +4,138 @@ import { getDirname } from '../style-dictionary/utils.mjs'
 
 const __dirname = getDirname(import.meta.url)
 const FIGMA_TOKENS_PATH = path.resolve(__dirname, '../dist/rei-dot-com/figma/figma.json')
+const OPTIONS_FOLDER = path.resolve(__dirname, '../tokens/_options')
 
-function flattenTokens (obj, parentPath = [], result = {}, filePathMap = {}) {
+let optionsTokens = new Set()
+
+async function loadOptionsTokens() {
+  try {
+    const files = await fs.readdir(OPTIONS_FOLDER)
+    
+    for (const file of files) {
+      if (file.endsWith('.json') || file.endsWith('.json5')) {
+        const content = await fs.readJson(path.join(OPTIONS_FOLDER, file))
+        
+        if (content.options) {
+          traverseAndStoreColorTokens(content.options, [])
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error loading options tokens:', error)
+    throw error
+  }
+}
+
+function traverseAndStoreColorTokens(obj, parentPath) {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key]
+    
+    if (value.$value !== undefined) {
+      optionsTokens.add(currentPath.join('.'))
+    } else if (typeof value === 'object' && value !== null && !key.startsWith('$')) {
+      traverseAndStoreColorTokens(value, currentPath)
+    }
+  }
+}
 
-    if (value.$value !== undefined && value.$type !== undefined) {
-      const tokenPath = currentPath.join('.')
-      result[tokenPath] = {
-        ...value, // Keep all properties
-        filePath: value.filePath
-      }
+function isColorToken(value, parentType = null) {
+  if (value.$type === 'color') return true
+  if (parentType === 'color') return true
+  return false
+}
 
-      if (value.filePath) {
-        const filePath = value.filePath
-        if (!filePathMap[filePath]) {
-          filePathMap[filePath] = {}
+function flattenTokens(obj, parentPath = [], result = {}, filePathMap = {}, parentType = null) {
+  for (const [key, value] of Object.entries(obj)) {
+    const currentPath = [...parentPath, key]
+    const currentType = value.$type || parentType
+
+    if (value.$value !== undefined) {
+      if (isColorToken(value, currentType)) {
+        const tokenPath = currentPath.join('.')
+        result[tokenPath] = {
+          ...value,
+          filePath: value.filePath,
+          parentType: currentType
         }
-        filePathMap[filePath][tokenPath] = result[tokenPath]
+
+        if (value.filePath) {
+          const filePath = value.filePath
+          if (!filePathMap[filePath]) {
+            filePathMap[filePath] = {}
+          }
+          filePathMap[filePath][tokenPath] = result[tokenPath]
+        }
       }
     } else if (typeof value === 'object' && value !== null) {
-      flattenTokens(value, currentPath, result, filePathMap)
+      flattenTokens(value, currentPath, result, filePathMap, currentType)
     }
   }
 
   return { flatTokens: result, filePathMap }
 }
 
-async function updateTokensInPlace (obj, sourceTokens, parentPath = []) {
+function isReference(value) {
+  return typeof value === 'string' && value.startsWith('{') && value.endsWith('}')
+}
+
+function normalizeReference(reference) {
+  // Remove the curly braces and any existing options prefix
+  const cleanPath = reference.replace(/[{}]/g, '').replace(/^options\./, '')
+  
+  // Check if this reference is to an options token
+  const refParts = cleanPath.split('.')
+  let testPath = ''
+  
+  // Try to match increasingly specific paths
+  for (const part of refParts) {
+    testPath = testPath ? `${testPath}.${part}` : part
+    if (optionsTokens.has(testPath)) {
+      return `options.${cleanPath}`
+    }
+  }
+  
+  return cleanPath
+}
+
+async function updateTokensInPlace(obj, sourceTokens, parentPath = [], parentType = null) {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key]
     const tokenPath = currentPath.join('.')
+    const currentType = value.$type || parentType
 
-    if (value.$value !== undefined) {
-      // If this path exists in source tokens, update only the $value
+    if (value.$value !== undefined && isColorToken(value, currentType)) {
       const sourceToken = sourceTokens[tokenPath]
-      if (sourceToken?.$value !== undefined) {
-        value.$value = sourceToken.$value
+      if (sourceToken) {
+        if (isReference(sourceToken.$value)) {
+          const normalizedRef = normalizeReference(sourceToken.$value)
+          const newValue = `{${normalizedRef}}`
+          if (value.$value !== newValue) {
+            console.log(`Updating token ${tokenPath} from ${value.$value} to ${newValue}`)
+            value.$value = newValue
+          }
+        } else if (value.$value !== sourceToken.$value) {
+          console.log(`Updating token ${tokenPath} from ${value.$value} to ${sourceToken.$value}`)
+          value.$value = sourceToken.$value
+        }
       }
     } else if (typeof value === 'object' && value !== null) {
-      await updateTokensInPlace(value, sourceTokens, currentPath)
+      await updateTokensInPlace(value, sourceTokens, currentPath, currentType)
     }
   }
 }
 
-async function updateTokens (targetFilePath) {
+async function updateTokens(targetFilePath) {
   try {
-    // Read both source and target files
+    console.log(`Processing file: ${targetFilePath}`)
+    
     const targetContent = await fs.readJson(targetFilePath)
     const sourceContent = await fs.readJson(FIGMA_TOKENS_PATH)
 
-    // Flatten source tokens
     const { flatTokens: sourceFlatTokens } = flattenTokens(sourceContent)
-
-    // Update the target content in place
+    
     await updateTokensInPlace(targetContent, sourceFlatTokens)
 
-    // Write the updated content back to the file
     await fs.writeJson(targetFilePath, targetContent, { spaces: 2 })
 
     return {
@@ -73,7 +148,7 @@ async function updateTokens (targetFilePath) {
   }
 }
 
-async function getUniqueFilePaths () {
+async function getUniqueFilePaths() {
   try {
     const content = await fs.readJson(FIGMA_TOKENS_PATH)
     const { filePathMap } = flattenTokens(content)
@@ -84,15 +159,16 @@ async function getUniqueFilePaths () {
   }
 }
 
-async function main () {
+async function main() {
   try {
+    await loadOptionsTokens()
+    
     const files = await getUniqueFilePaths()
     const results = []
 
-    for (const file of files.slice(0, 1)) {
+    for (const file of files) {
       const update = await updateTokens(file)
       results.push(update)
-      console.log(`Updated ${file}`)
     }
 
     return results

@@ -91,7 +91,7 @@
       }
     },
     {
-      "$value": "#f7f5f3",
+      "$value": "#c7dfd1",
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -102,7 +102,7 @@
       "filePath": "tokens/global/button.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-025}",
+        "$value": "{options.color.sage-green-400}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -211,7 +211,7 @@
       }
     },
     {
-      "$value": "#f7f5f3",
+      "$value": "#f9f8f6",
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -222,7 +222,7 @@
       "filePath": "tokens/global/button.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-025}",
+        "$value": "{options.color.default-grey-100}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -421,7 +421,7 @@
       }
     },
     {
-      "$value": "#f7f5f3",
+      "$value": "#fde2e2",
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -432,7 +432,7 @@
       "filePath": "tokens/global/button.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-025}",
+        "$value": "{options.color.sale-red-200}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -2422,6 +2422,96 @@
       }
     },
     {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on rest"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on rest"
+        }
+      },
+      "name": "cdr-color-background-switch-default-rest",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "switch",
+        "subitem": "default-rest",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on hover"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on hover"
+        }
+      },
+      "name": "cdr-color-background-switch-default-hover",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "switch",
+        "subitem": "default-hover",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on focus"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on focus"
+        }
+      },
+      "name": "cdr-color-background-switch-default-focus",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "switch",
+        "subitem": "default-focus",
+        "deprecated": false
+      }
+    },
+    {
       "$value": "#4b4a48",
       "$type": "color",
       "docs": {
@@ -2442,12 +2532,12 @@
           "description": "The background color of a selected switch on rest"
         }
       },
-      "name": "cdr-color-background-switch-default-rest",
+      "name": "cdr-color-background-switch-selected-default-rest",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "switch",
-        "subitem": "default-rest",
+        "subitem": "selected-default-rest",
         "deprecated": false
       }
     },
@@ -2472,12 +2562,12 @@
           "description": "The background color of a selected switch on hover"
         }
       },
-      "name": "cdr-color-background-switch-default-hover",
+      "name": "cdr-color-background-switch-selected-default-hover",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "switch",
-        "subitem": "default-hover",
+        "subitem": "selected-default-hover",
         "deprecated": false
       }
     },
@@ -2502,12 +2592,12 @@
           "description": "The background color of a selected switch on focus"
         }
       },
-      "name": "cdr-color-background-switch-default-focus",
+      "name": "cdr-color-background-switch-selected-default-focus",
       "attributes": {
         "category": "color",
         "type": "background",
         "item": "switch",
-        "subitem": "default-focus",
+        "subitem": "selected-default-focus",
         "deprecated": false
       }
     },
@@ -4175,8 +4265,8 @@
         "example": "color",
         "description": "Text color for links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -4205,8 +4295,8 @@
         "example": "color",
         "description": "Text color for the hover state of links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -4235,8 +4325,8 @@
         "example": "color",
         "description": "Text color for the active and pressed states of links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-1000}",
         "$type": "color",
@@ -4265,8 +4355,8 @@
         "example": "color",
         "description": "Disabled text color of links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.warm-grey-250}",
         "$type": "color",
@@ -4295,8 +4385,8 @@
         "example": "color",
         "description": "Text color of visited links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -5878,8 +5968,8 @@
         "example": "color",
         "description": "Border color for underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -5908,8 +5998,8 @@
         "example": "color",
         "description": "Border color for the hover state of underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -5938,8 +6028,8 @@
         "example": "color",
         "description": "Border color for the active and pressed states of underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-1000}",
         "$type": "color",
@@ -5968,8 +6058,8 @@
         "example": "color",
         "description": "Disabled border color of underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.warm-grey-250}",
         "$type": "color",
@@ -5998,8 +6088,8 @@
         "example": "color",
         "description": "Border color of visited underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -7730,6 +7820,99 @@
       "$type": "color",
       "docs": {
         "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for links"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-text-link-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "text",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for the hover state of links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for the hover state of links"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-text-link-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "text",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color of visited links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color of visited links"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-text-link-visited",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "text",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
         "type": "button",
         "example": "color",
         "description": "Background color for the primary button"
@@ -7914,6 +8097,99 @@
       "$type": "color",
       "docs": {
         "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for underlined links"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-border-link-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "border",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for the hover state of underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for the hover state of underlined links"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-border-link-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "border",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color of visited underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color of visited underlined links"
+        }
+      },
+      "name": "cdr-membership-vibrant-color-border-link-visited",
+      "attributes": {
+        "category": "membership",
+        "type": "vibrant",
+        "item": "color",
+        "subitem": "border",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
         "type": "button",
         "example": "color",
         "description": "Text color for the hover state of primary buttons"
@@ -7966,6 +8242,99 @@
         "item": "color",
         "subitem": "text",
         "state": "primary",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for links"
+        }
+      },
+      "name": "cdr-membership-subtle-color-text-link-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "text",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for the hover state of links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for the hover state of links"
+        }
+      },
+      "name": "cdr-membership-subtle-color-text-link-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "text",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color of visited links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color of visited links"
+        }
+      },
+      "name": "cdr-membership-subtle-color-text-link-visited",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "text",
+        "state": "link",
         "deprecated": false
       }
     },
@@ -8152,6 +8521,99 @@
         "state": "button",
         "deprecated": false
       }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for underlined links"
+        }
+      },
+      "name": "cdr-membership-subtle-color-border-link-rest",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "border",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for the hover state of underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for the hover state of underlined links"
+        }
+      },
+      "name": "cdr-membership-subtle-color-border-link-hover",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "border",
+        "state": "link",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#13352c",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color of visited underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color of visited underlined links"
+        }
+      },
+      "name": "cdr-membership-subtle-color-border-link-visited",
+      "attributes": {
+        "category": "membership",
+        "type": "subtle",
+        "item": "color",
+        "subitem": "border",
+        "state": "link",
+        "deprecated": false
+      }
     }
   ],
   "misc": [
@@ -8178,6 +8640,42 @@
         "type": "background",
         "item": "chip",
         "subitem": "default-selected-active",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "cdr-color-background-slide-hover",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "hover",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "cdr-color-background-slide-default",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "default",
         "deprecated": false
       }
     },

@@ -79,7 +79,7 @@
       }
     },
     {
-      "$value": "[UIColor colorWithRed:0.969f green:0.961f blue:0.953f alpha:1.000f]",
+      "$value": "[UIColor colorWithRed:0.780f green:0.875f blue:0.820f alpha:1.000f]",
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -90,7 +90,7 @@
       "filePath": "tokens/global/button.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-025}",
+        "$value": "{options.color.sage-green-400}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -183,7 +183,7 @@
       }
     },
     {
-      "$value": "[UIColor colorWithRed:0.969f green:0.961f blue:0.953f alpha:1.000f]",
+      "$value": "[UIColor colorWithRed:0.976f green:0.973f blue:0.965f alpha:1.000f]",
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -194,7 +194,7 @@
       "filePath": "tokens/global/button.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-025}",
+        "$value": "{options.color.default-grey-100}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -365,7 +365,7 @@
       }
     },
     {
-      "$value": "[UIColor colorWithRed:0.969f green:0.961f blue:0.953f alpha:1.000f]",
+      "$value": "[UIColor colorWithRed:0.992f green:0.886f blue:0.886f alpha:1.000f]",
       "$type": "color",
       "docs": {
         "category": "colors",
@@ -376,7 +376,7 @@
       "filePath": "tokens/global/button.json5",
       "isSource": false,
       "original": {
-        "$value": "{options.color.warm-grey-025}",
+        "$value": "{options.color.sale-red-200}",
         "$type": "color",
         "docs": {
           "category": "colors",
@@ -2107,6 +2107,84 @@
       }
     },
     {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on rest"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on rest"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchDefaultRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on hover"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on hover"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchDefaultHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "switch",
+        "example": "color",
+        "description": "The background color of a switch on focus"
+      },
+      "filePath": "tokens/global/switch.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "switch",
+          "example": "color",
+          "description": "The background color of a switch on focus"
+        }
+      },
+      "name": "CdrColorBackgroundSwitchDefaultFocus",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
       "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
       "$type": "color",
       "docs": {
@@ -2127,7 +2205,7 @@
           "description": "The background color of a selected switch on rest"
         }
       },
-      "name": "CdrColorBackgroundSwitchDefaultRest",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultRest",
       "attributes": {
         "deprecated": false
       }
@@ -2153,7 +2231,7 @@
           "description": "The background color of a selected switch on hover"
         }
       },
-      "name": "CdrColorBackgroundSwitchDefaultHover",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultHover",
       "attributes": {
         "deprecated": false
       }
@@ -2179,7 +2257,7 @@
           "description": "The background color of a selected switch on focus"
         }
       },
-      "name": "CdrColorBackgroundSwitchDefaultFocus",
+      "name": "CdrColorBackgroundSwitchSelectedDefaultFocus",
       "attributes": {
         "deprecated": false
       }
@@ -3639,8 +3717,8 @@
         "example": "color",
         "description": "Text color for links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -3665,8 +3743,8 @@
         "example": "color",
         "description": "Text color for the hover state of links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -3691,8 +3769,8 @@
         "example": "color",
         "description": "Text color for the active and pressed states of links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-1000}",
         "$type": "color",
@@ -3717,8 +3795,8 @@
         "example": "color",
         "description": "Disabled text color of links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.warm-grey-250}",
         "$type": "color",
@@ -3743,8 +3821,8 @@
         "example": "color",
         "description": "Text color of visited links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -5121,8 +5199,8 @@
         "example": "color",
         "description": "Border color for underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -5147,8 +5225,8 @@
         "example": "color",
         "description": "Border color for the hover state of underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -5173,8 +5251,8 @@
         "example": "color",
         "description": "Border color for the active and pressed states of underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-1000}",
         "$type": "color",
@@ -5199,8 +5277,8 @@
         "example": "color",
         "description": "Disabled border color of underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.warm-grey-250}",
         "$type": "color",
@@ -5225,8 +5303,8 @@
         "example": "color",
         "description": "Border color of visited underlined links"
       },
-      "filePath": "tokens/themes/rei-dot-com/link.json5",
-      "isSource": true,
+      "filePath": "tokens/global/link.json5",
+      "isSource": false,
       "original": {
         "$value": "{options.color.alpine-lake-blue-800}",
         "$type": "color",
@@ -6727,6 +6805,84 @@
       "$type": "color",
       "docs": {
         "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for links"
+        }
+      },
+      "name": "CdrMembershipVibrantColorTextLinkRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for the hover state of links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for the hover state of links"
+        }
+      },
+      "name": "CdrMembershipVibrantColorTextLinkHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color of visited links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color of visited links"
+        }
+      },
+      "name": "CdrMembershipVibrantColorTextLinkVisited",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
         "type": "button",
         "example": "color",
         "description": "Background color for the primary button"
@@ -6881,6 +7037,84 @@
       "$type": "color",
       "docs": {
         "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for underlined links"
+        }
+      },
+      "name": "CdrMembershipVibrantColorBorderLinkRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for the hover state of underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for the hover state of underlined links"
+        }
+      },
+      "name": "CdrMembershipVibrantColorBorderLinkHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color of visited underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color of visited underlined links"
+        }
+      },
+      "name": "CdrMembershipVibrantColorBorderLinkVisited",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
         "type": "button",
         "example": "color",
         "description": "Text color for the hover state of primary buttons"
@@ -6922,6 +7156,84 @@
         }
       },
       "name": "CdrMembershipSubtleColorTextPrimary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for links"
+        }
+      },
+      "name": "CdrMembershipSubtleColorTextLinkRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color for the hover state of links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color for the hover state of links"
+        }
+      },
+      "name": "CdrMembershipSubtleColorTextLinkHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Text color of visited links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Text color of visited links"
+        }
+      },
+      "name": "CdrMembershipSubtleColorTextLinkVisited",
       "attributes": {
         "deprecated": false
       }
@@ -7079,6 +7391,84 @@
       "attributes": {
         "deprecated": false
       }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for underlined links"
+        }
+      },
+      "name": "CdrMembershipSubtleColorBorderLinkRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color for the hover state of underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color for the hover state of underlined links"
+        }
+      },
+      "name": "CdrMembershipSubtleColorBorderLinkHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.075f green:0.208f blue:0.173f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "link",
+        "example": "color",
+        "description": "Border color of visited underlined links"
+      },
+      "filePath": "tokens/themes/rei-dot-com/link.json5",
+      "isSource": true,
+      "original": {
+        "$value": "#13352C",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "link",
+          "example": "color",
+          "description": "Border color of visited underlined links"
+        }
+      },
+      "name": "CdrMembershipSubtleColorBorderLinkVisited",
+      "attributes": {
+        "deprecated": false
+      }
     }
   ],
   "misc": [
@@ -7100,6 +7490,34 @@
         }
       },
       "name": "CdrColorBackgroundChipDefaultSelectedActive",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "CdrColorBackgroundSlideHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "CdrColorBackgroundSlideDefault",
       "attributes": {
         "deprecated": false
       }

@@ -756,7 +756,7 @@
           "filePath": "tokens/global/button.json5"
         },
         "primary-hover": {
-          "$value": "{color.warm-grey-025}",
+          "$value": "{color.sage-green-400}",
           "$type": "color",
           "filePath": "tokens/global/button.json5"
         },
@@ -776,7 +776,7 @@
           "filePath": "tokens/global/button.json5"
         },
         "secondary-hover": {
-          "$value": "{color.warm-grey-025}",
+          "$value": "{color.default-grey-100}",
           "$type": "color",
           "filePath": "tokens/global/button.json5"
         },
@@ -811,7 +811,7 @@
           "filePath": "tokens/global/button.json5"
         },
         "sale-hover": {
-          "$value": "{color.warm-grey-025}",
+          "$value": "{color.sale-red-200}",
           "$type": "color",
           "filePath": "tokens/global/button.json5"
         },
@@ -1115,6 +1115,18 @@
           "filePath": "tokens/global/rating.json5"
         }
       },
+      "slide": {
+        "hover": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/slide.json5"
+        },
+        "default": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/slide.json5"
+        }
+      },
       "surface-selection": {
         "default-rest": {
           "$value": "{color.white}",
@@ -1171,16 +1183,31 @@
       },
       "switch": {
         "default-rest": {
-          "$value": "{color.warm-grey-900}",
+          "$value": "{color.warm-grey-010}",
           "$type": "color",
           "filePath": "tokens/global/switch.json5"
         },
         "default-hover": {
-          "$value": "{color.warm-grey-1000}",
+          "$value": "{color.warm-grey-010}",
           "$type": "color",
           "filePath": "tokens/global/switch.json5"
         },
         "default-focus": {
+          "$value": "{color.warm-grey-010}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "selected-default-rest": {
+          "$value": "{color.warm-grey-900}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "selected-default-hover": {
+          "$value": "{color.warm-grey-1000}",
+          "$type": "color",
+          "filePath": "tokens/global/switch.json5"
+        },
+        "selected-default-focus": {
           "$value": "{color.warm-grey-1000}",
           "$type": "color",
           "filePath": "tokens/global/switch.json5"
