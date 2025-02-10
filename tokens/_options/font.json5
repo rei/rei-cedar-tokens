@@ -6,14 +6,12 @@
         "serif-fallback": "\"Stuart fallback\", Georgia, serif",
         "sans-main": "Graphik",
         "sans-fallback": "\"Graphik fallback\", \"Helvetica Neue\", sans-serif",
+        "mono-rounded-main": "Pressura",
+        "mono-rounded-fallback": "\"Avenir Next\", Roboto, sans-serif",
         "serif": "{options.font.family.serif-main}, {options.font.family.serif-fallback}",
         "sans": "{options.font.family.sans-main}, {options.font.family.sans-fallback}",
         "mono": "SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace",
-        "legacy": {
-          "serif": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-          "sans": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-          "sans-condensed": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
-        }
+        "mono-rounded": "{options.font.family.mono-rounded-main},  {options.font.family.mono-rounded-fallback}",
       },
       "style": {
         "normal": "normal",
