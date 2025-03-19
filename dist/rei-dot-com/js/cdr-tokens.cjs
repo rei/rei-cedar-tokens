@@ -400,6 +400,7 @@ module.exports = {
   "CdrFontFamilySerif": "Stuart, \"Stuart fallback\", Georgia, serif",
   "CdrFontFamilySansBrandFont": "Graphik",
   "CdrFontFamilySans": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
+  "CdrFontFamilyMonoBrandFont": "Pressura,  \"Avenir Next\", Roboto, sans-serif",
   "CdrTextBody300Family": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
   "CdrTextBody300Style": "normal",
   "CdrTextBody300Weight": "400",

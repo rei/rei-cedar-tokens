@@ -648,14 +648,12 @@
         "serif-fallback": "\"Stuart fallback\", Georgia, serif",
         "sans-main": "Graphik",
         "sans-fallback": "\"Graphik fallback\", \"Helvetica Neue\", sans-serif",
+        "mono-rounded-main": "Pressura",
+        "mono-rounded-fallback": "\"Avenir Next\", Roboto, sans-serif",
         "serif": "Stuart, \"Stuart fallback\", Georgia, serif",
         "sans": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
         "mono": "SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace",
-        "legacy": {
-          "serif": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-          "sans": "Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
-          "sans-condensed": "\"Roboto Condensed\", Roboto, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
-        }
+        "mono-rounded": "Pressura,  \"Avenir Next\", Roboto, sans-serif"
       },
       "style": {
         "normal": "normal",
@@ -2958,6 +2956,10 @@
       },
       "sans": {
         "$value": "{font.family.sans}",
+        "filePath": "tokens/web/font.json5"
+      },
+      "mono-brand-font": {
+        "$value": "{font.family.mono-rounded}",
         "filePath": "tokens/web/font.json5"
       }
     }
