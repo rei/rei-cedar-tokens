@@ -27,7 +27,7 @@ module.exports = {
   "CdrColorBackgroundChipDefaultSelectedActive": "#edeae3",
   "CdrColorBackgroundTransparent": "rgba(255, 255, 255, 0)",
   "CdrColorBackgroundPrimary": "#ffffff",
-  "CdrColorBackgroundSecondary": "#f7f5f3",
+  "CdrColorBackgroundSecondary": "#F4F2ED",
   "CdrColorBackgroundSale": "#c7370f",
   "CdrColorBackgroundBrandSpruce": "#1f513f",
   "CdrColorBackgroundSuccess": "#ecf9e6",
