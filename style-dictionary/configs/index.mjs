@@ -1,6 +1,7 @@
 // Import platform configs and add them below
 import { css as cssConfig } from './css.mjs'
 import { scss as scssConfig } from './scss.mjs'
+import { scssUse as scssUseConfig } from './scss-use.mjs'
 import { less as lessConfig } from './less.mjs'
 import { js as jsConfig } from './js.mjs'
 import { android as androidConfig } from './android.mjs'
@@ -28,7 +29,7 @@ const getSources = (platform) => {
 
 const allPlatforms = (platform, theme) => {
   const platforms = {
-    web: { ...cssConfig(theme), ...scssConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
+    web: { ...cssConfig(theme), ...scssConfig(theme), ...scssUseConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
     android: { ...androidConfig(theme) },
     'site/global': { ...siteGlobalConfig(theme) },
     'site/web': { ...siteWebConfig(theme) },

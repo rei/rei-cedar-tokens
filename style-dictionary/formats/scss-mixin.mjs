@@ -4,9 +4,10 @@ export const scssMixin = (StyleDictionary) => {
   /* scss mixin */
   StyleDictionary.registerFormat({
     name: 'scss/mixin',
-    format: ({ dictionary, platform }) => {
+    format: ({ dictionary, platform, options }) => {
+      console.log('OPTIONS: ', options)
       const prefix = platform.prefix ? `${platform.prefix}-` : ''
-      const mixins = ['@import \'./deprecate.scss\';\n']
+      const mixins = options.includeDeprecate ? ['@import \'./deprecate.scss\';\n'] : []
       const mixinProperties = _.filter(dictionary.allTokens, o => _.has(o, 'mixin'))
       const mixinNames = _.uniq(mixinProperties.map(o => o.mixin))
 

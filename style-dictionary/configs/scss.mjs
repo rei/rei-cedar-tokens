@@ -1,7 +1,7 @@
 import { commonConfig } from '../utils.mjs'
 
 export const scss = (theme) => ({
-  scss: {
+  scssUse: {
     ...commonConfig(theme, 'scss'),
     transformGroup: 'tokens-studio',
     transforms: [
@@ -18,7 +18,10 @@ export const scss = (theme) => ({
       },
       {
         destination: 'cdr-mixins.scss',
-        format: 'scss/mixin'
+        format: 'scss/mixin',
+        options: {
+          includeDeprecate: true
+        }
       },
       {
         destination: 'utility-map.no_concat.scss',
