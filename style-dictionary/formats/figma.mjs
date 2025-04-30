@@ -21,20 +21,20 @@ export const figma = (StyleDictionary) => {
                 $type: value.$type,
                 ...(value.original.$description && { $description: value.original.$description }),
                 ...(value.filePath && { filePath: value.filePath })
-              };
+              }
             }
-            return value;
-          });
-        });
-      };
+            return value
+          })
+        })
+      }
 
       // First preserve references, then clean metadata
       const transformedTokens = cleanMeta(
         preserveReferences(dictionary.tokens),
         { cleanMeta: propsToRemove }
-      );
+      )
 
-      return JSON.stringify(transformedTokens, null, 2);
+      return JSON.stringify(transformedTokens, null, 2)
     }
   })
 }
