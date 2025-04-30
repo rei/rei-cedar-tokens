@@ -44,9 +44,12 @@
     "validate": "node ./validate.mjs",
     "format": "eslint --fix \"{style-dictionary,tokens-studio}/**/*.mjs\"",
     "lint": "eslint \"style-dictionary/**/*.mjs\"",
-    "tokens:update": "node ./tokens-studio/token-updater.mjs"
+    "tokens:update": "node ./tokens-studio/token-updater.mjs",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@divriots/style-dictionary-to-figma": "^0.4.0",
     "@tokens-studio/sd-transforms": "^1.2.2",
     "concat": "^1.0.3",
@@ -54,8 +57,11 @@
     "dir-to-json": "^1.0.0",
     "eslint": "^8.57.0",
     "fs-extra": "^11.2.0",
+    "git-cz": "^4.9.0",
     "glob": "^7.1.6",
+    "husky": "^9.1.7",
     "json5": "^2.2.3",
+    "lint-staged": "^15.5.1",
     "lodash": "^4.17.21",
     "npm-publish-prerelease": "^1.0.2",
     "query-string": "^9.1.0",
@@ -75,5 +81,10 @@
   "engines": {
     "node": ">= 20.0.0",
     "npm": ">= 10.0.0"
+  },
+  "lint-staged": {
+    "**/*.mjs": [
+      "npm run format"
+    ]
   }
 }
