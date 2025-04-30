@@ -45,15 +45,18 @@
     "format": "eslint --fix \"{style-dictionary,tokens-studio}/**/*.mjs\"",
     "lint": "eslint \"style-dictionary/**/*.mjs\"",
     "tokens:update": "node ./tokens-studio/token-updater.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@divriots/style-dictionary-to-figma": "^0.4.0",
     "@tokens-studio/sd-transforms": "^1.2.2",
+    "commitizen": "^4.3.1",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "dir-to-json": "^1.0.0",
     "eslint": "^8.57.0",
     "fs-extra": "^11.2.0",
@@ -70,6 +73,11 @@
     "standard": "^17.1.0",
     "style-dictionary": "^4.0.1",
     "tinycolor2": "^1.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "eslintConfig": {
     "extends": "standard",
