@@ -22,7 +22,6 @@ import { figma as figmaFormat } from './formats/figma.mjs'
 
 // ==== Include custom formats ====
 import { concatFiles } from './actions/concat-files.mjs'
-import { includeDeprecateScss } from './actions/include-deprecate-scss.mjs'
 import { includeDisplayLess } from './actions/include-display-less.mjs'
 import { includeDisplayScss } from './actions/include-display-scss.mjs'
 import { includeMediaQueriesLess } from './actions/include-media-queries-less.mjs'
@@ -56,7 +55,6 @@ figmaFormat(StyleDictionary)
 
 // ==== Register custom actions ====
 concatFiles(StyleDictionary)
-includeDeprecateScss(StyleDictionary)
 includeDisplayLess(StyleDictionary)
 includeDisplayScss(StyleDictionary)
 includeMediaQueriesLess(StyleDictionary)
