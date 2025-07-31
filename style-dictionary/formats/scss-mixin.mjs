@@ -6,7 +6,7 @@ export const scssMixin = (StyleDictionary) => {
     name: 'scss/mixin',
     format: ({ dictionary, platform }) => {
       const prefix = platform.prefix ? `${platform.prefix}-` : ''
-      const mixins = ['@import \'./deprecate.scss\';\n']
+      const mixins = []
       const mixinProperties = _.filter(dictionary.allTokens, o => _.has(o, 'mixin'))
       const mixinNames = _.uniq(mixinProperties.map(o => o.mixin))
 
