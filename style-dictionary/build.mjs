@@ -19,6 +19,7 @@ import { scssMap } from './formats/scss-map.mjs'
 import { less as lessFormat } from './formats/less.mjs'
 import { site } from './formats/site.mjs'
 import { figma as figmaFormat } from './formats/figma.mjs'
+import { cssClamp as clamp } from './transforms/size/clamp.mjs'
 
 // ==== Include custom formats ====
 import { concatFiles } from './actions/concat-files.mjs'
@@ -45,6 +46,7 @@ stripPx(StyleDictionary)
 stripAllPx(StyleDictionary)
 stripAllPxJs(StyleDictionary)
 float(StyleDictionary)
+clamp(StyleDictionary)
 
 // ==== Register custom formats ====
 scssMixin(StyleDictionary)

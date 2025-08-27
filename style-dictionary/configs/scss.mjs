@@ -8,7 +8,8 @@ export const scss = (theme) => ({
       'attribute/deprecated',
       'name/kebab',
       'size/space',
-      'size/px-to-rem-transitive'
+      'size/px-to-rem-transitive',
+      'value/clamp'
     ],
     files: [
       {
