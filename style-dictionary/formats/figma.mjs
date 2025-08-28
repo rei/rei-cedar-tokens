@@ -14,7 +14,7 @@ export const figma = (StyleDictionary) => {
       const preserveReferences = (tokens) => {
         return _.deep(tokens, (obj) => {
           return _.mapValues(obj, (value) => {
-            if (value && value.original && value.original.$value) {
+            if (value && value.original && value.original.$value && typeof value.original.$value === "string") {
               // Preserve the original reference value and remove the 'options.' prefix
               return {
                 $value: value.original.$value.replace('options.', ''),

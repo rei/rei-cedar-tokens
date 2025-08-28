@@ -7,7 +7,8 @@ export const js = (theme) => ({
       'attribute/deprecated',
       'name/pascal',
       'size/strip-all-px-js',
-      'size/space-js'
+      'size/space-js',
+      'value/clamp'
     ],
     files: [
       {

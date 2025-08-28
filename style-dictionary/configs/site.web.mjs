@@ -10,7 +10,8 @@ export const siteWeb = (theme) => ({
       'size/strip-px',
       'size/space-js',
       'size/px-to-rem-transitive',
-      'time/seconds'
+      'time/seconds',
+      'value/clamp'
     ],
     files: [
       {
