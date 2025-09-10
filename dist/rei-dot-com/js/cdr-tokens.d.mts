@@ -399,6 +399,7 @@ export const CdrFontFamilySerifBrandFont : string;
 export const CdrFontFamilySerif : string;
 export const CdrFontFamilySansBrandFont : string;
 export const CdrFontFamilySans : string;
+export const CdrFontFamilyMonoBrandFont : string;
 export const CdrTextBody300Family : string;
 export const CdrTextBody300Style : string;
 export const CdrTextBody300Weight : string;
