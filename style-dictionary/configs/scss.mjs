@@ -25,6 +25,6 @@ export const scss = (theme) => ({
         format: 'scss/map'
       }
     ],
-    actions: ['include-media-queries-scss', 'include-container-queries-scss', 'include-display-scss', 'concat-files', 'include-deprecate-scss']
+    actions: ['include-media-queries-scss', 'include-container-queries-scss', 'include-display-scss', 'concat-files']
   }
 })
