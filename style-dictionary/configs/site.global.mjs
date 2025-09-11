@@ -9,7 +9,8 @@ export const siteGlobal = (theme) => ({
       'size/strip-all-px-js',
       'size/space-js',
       'size/px-to-rem-transitive',
-      'time/seconds'
+      'time/seconds',
+      'value/clamp'
     ],
     files: [
       {
