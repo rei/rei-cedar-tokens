@@ -6,16 +6,16 @@ const __dirname = getDirname(import.meta.url)
 const FIGMA_TOKENS_PATH = path.resolve(__dirname, '../dist/rei-dot-com/figma/figma.json')
 const OPTIONS_FOLDER = path.resolve(__dirname, '../tokens/_options')
 
-let optionsTokens = new Set()
+const optionsTokens = new Set()
 
-async function loadOptionsTokens() {
+async function loadOptionsTokens () {
   try {
     const files = await fs.readdir(OPTIONS_FOLDER)
-    
+
     for (const file of files) {
       if (file.endsWith('.json') || file.endsWith('.json5')) {
         const content = await fs.readJson(path.join(OPTIONS_FOLDER, file))
-        
+
         if (content.options) {
           traverseAndStoreColorTokens(content.options, [])
         }
@@ -27,10 +27,10 @@ async function loadOptionsTokens() {
   }
 }
 
-function traverseAndStoreColorTokens(obj, parentPath) {
+function traverseAndStoreColorTokens (obj, parentPath) {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key]
-    
+
     if (value.$value !== undefined) {
       optionsTokens.add(currentPath.join('.'))
     } else if (typeof value === 'object' && value !== null && !key.startsWith('$')) {
@@ -39,13 +39,13 @@ function traverseAndStoreColorTokens(obj, parentPath) {
   }
 }
 
-function isColorToken(value, parentType = null) {
+function isColorToken (value, parentType = null) {
   if (value.$type === 'color') return true
   if (parentType === 'color') return true
   return false
 }
 
-function flattenTokens(obj, parentPath = [], result = {}, filePathMap = {}, parentType = null) {
+function flattenTokens (obj, parentPath = [], result = {}, filePathMap = {}, parentType = null) {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key]
     const currentType = value.$type || parentType
@@ -75,18 +75,18 @@ function flattenTokens(obj, parentPath = [], result = {}, filePathMap = {}, pare
   return { flatTokens: result, filePathMap }
 }
 
-function isReference(value) {
+function isReference (value) {
   return typeof value === 'string' && value.startsWith('{') && value.endsWith('}')
 }
 
-function normalizeReference(reference) {
+function normalizeReference (reference) {
   // Remove the curly braces and any existing options prefix
   const cleanPath = reference.replace(/[{}]/g, '').replace(/^options\./, '')
-  
+
   // Check if this reference is to an options token
   const refParts = cleanPath.split('.')
   let testPath = ''
-  
+
   // Try to match increasingly specific paths
   for (const part of refParts) {
     testPath = testPath ? `${testPath}.${part}` : part
@@ -94,11 +94,11 @@ function normalizeReference(reference) {
       return `options.${cleanPath}`
     }
   }
-  
+
   return cleanPath
 }
 
-async function updateTokensInPlace(obj, sourceTokens, parentPath = [], parentType = null) {
+async function updateTokensInPlace (obj, sourceTokens, parentPath = [], parentType = null) {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key]
     const tokenPath = currentPath.join('.')
@@ -125,15 +125,15 @@ async function updateTokensInPlace(obj, sourceTokens, parentPath = [], parentTyp
   }
 }
 
-async function updateTokens(targetFilePath) {
+async function updateTokens (targetFilePath) {
   try {
     console.log(`Processing file: ${targetFilePath}`)
-    
+
     const targetContent = await fs.readJson(targetFilePath)
     const sourceContent = await fs.readJson(FIGMA_TOKENS_PATH)
 
     const { flatTokens: sourceFlatTokens } = flattenTokens(sourceContent)
-    
+
     await updateTokensInPlace(targetContent, sourceFlatTokens)
 
     await fs.writeJson(targetFilePath, targetContent, { spaces: 2 })
@@ -148,7 +148,7 @@ async function updateTokens(targetFilePath) {
   }
 }
 
-async function getUniqueFilePaths() {
+async function getUniqueFilePaths () {
   try {
     const content = await fs.readJson(FIGMA_TOKENS_PATH)
     const { filePathMap } = flattenTokens(content)
@@ -159,10 +159,10 @@ async function getUniqueFilePaths() {
   }
 }
 
-async function main() {
+async function main () {
   try {
     await loadOptionsTokens()
-    
+
     const files = await getUniqueFilePaths()
     const results = []
 
