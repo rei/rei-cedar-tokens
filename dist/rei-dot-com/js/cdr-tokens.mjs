@@ -1,3 +1,4 @@
+export const CdrTextSizeRoot = "10";
 export const CdrColorBackgroundAccordionHover = "#fafbf9";
 export const CdrColorBackgroundButtonPrimaryRest = "#1f513f";
 export const CdrColorBackgroundButtonPrimaryActive = "#1f513f";

@@ -1,4 +1,5 @@
 module.exports = {
+  "CdrTextSizeRoot": "10",
   "CdrColorBackgroundAccordionHover": "#fafbf9",
   "CdrColorBackgroundButtonPrimaryRest": "#1f513f",
   "CdrColorBackgroundButtonPrimaryActive": "#1f513f",
