@@ -1,5 +1,851 @@
 {
   "global": {
+    "misc": [
+      {
+        "$type": "string",
+        "$value": "10",
+        "filePath": "tokens/_options/base.json5",
+        "isSource": false,
+        "original": {
+          "$type": "string",
+          "$value": "10px"
+        },
+        "name": "cdr-text-size-root",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#edeae3",
+        "$type": "color",
+        "docs": {
+          "type": "chip",
+          "description": "Background color for active selected chips"
+        },
+        "filePath": "tokens/global/chip.json5",
+        "isSource": false,
+        "original": {
+          "$value": "{options.color.warm-grey-100}",
+          "$type": "color",
+          "docs": {
+            "type": "chip",
+            "description": "Background color for active selected chips"
+          }
+        },
+        "name": "cdr-color-background-chip-default-selected-active",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "filePath": "tokens/global/slide.json5",
+        "isSource": false,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color"
+        },
+        "name": "cdr-color-background-slide-hover",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "filePath": "tokens/global/slide.json5",
+        "isSource": false,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color"
+        },
+        "name": "cdr-color-background-slide-default",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#edeae3",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        },
+        "filePath": "tokens/themes/docsite/code-snippet.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-100}",
+          "$type": "color",
+          "docs": {
+            "type": "code-snippet"
+          }
+        },
+        "name": "cdr-color-background-code-snippet",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#2e2e2b",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        },
+        "filePath": "tokens/themes/docsite/code.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "code-snippet"
+          }
+        },
+        "name": "cdr-color-background-code",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#ffffff",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.white}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-color-background-link-card-rest",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#2e2e2b",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-color-background-link-card-active",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        },
+        "filePath": "tokens/themes/docsite/note.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
+          }
+        },
+        "name": "cdr-color-background-note",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#c4b03b",
+        "$type": "color",
+        "docs": {
+          "type": "background"
+        },
+        "filePath": "tokens/themes/docsite/tag.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "background"
+          }
+        },
+        "name": "cdr-color-background-tag",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "rgba(46, 46, 43, 0.9)",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000-90}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-color-text-table-primary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-color-text-table-secondary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#3b8349",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/usage.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.success-green-800}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-color-text-usage-affirmative",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#bb4045",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/usage.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.error-red-800}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-color-text-usage-negative",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#b68b37",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/usage.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warning-yellow-800}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-color-text-usage-caution",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#d5cfc3",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-color-border-table-row",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#958e83",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        },
+        "filePath": "tokens/themes/docsite/code.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-600}",
+          "$type": "color",
+          "docs": {
+            "type": "code-snippet"
+          }
+        },
+        "name": "cdr-color-border-code",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-color-border-link-card-hover",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-color-border-link-card-active",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#c4b03b",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        },
+        "filePath": "tokens/themes/docsite/note.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
+          }
+        },
+        "name": "cdr-color-border-note",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#3b8349",
+        "$type": "color",
+        "docs": {
+          "type": "border"
+        },
+        "filePath": "tokens/themes/docsite/usage.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.success-green-800}",
+          "$type": "color",
+          "docs": {
+            "type": "border"
+          }
+        },
+        "name": "cdr-color-border-usage-affirmative",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#bb4045",
+        "$type": "color",
+        "docs": {
+          "type": "border"
+        },
+        "filePath": "tokens/themes/docsite/usage.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.error-red-800}",
+          "$type": "color",
+          "docs": {
+            "type": "border"
+          }
+        },
+        "name": "cdr-color-border-usage-negative",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#b68b37",
+        "$type": "color",
+        "docs": {
+          "type": "border"
+        },
+        "filePath": "tokens/themes/docsite/usage.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warning-yellow-800}",
+          "$type": "color",
+          "docs": {
+            "type": "border"
+          }
+        },
+        "name": "cdr-color-border-usage-caution",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#c4b03b",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        },
+        "filePath": "tokens/themes/docsite/note.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
+          }
+        },
+        "name": "cdr-color-icon-background-note",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#2e2e2b",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        },
+        "filePath": "tokens/themes/docsite/code-snippet.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "code-snippet"
+          }
+        },
+        "name": "cdr-knockout-background-code-snippet",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/color.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-knockout-color-text-primary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#d5cfc3",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/color.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-knockout-color-text-secondary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#fafbf9",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-010}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-knockout-color-text-table-primary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#d5cfc3",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-knockout-color-text-table-secondary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#2e2e2b",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/color.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-knockout-color-background-primary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-knockout-color-background-link-card-rest",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#2e2e2b",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-knockout-color-background-link-card-active",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "rgba(75, 74, 72, 0.5)",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        },
+        "filePath": "tokens/themes/docsite/note.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900-50}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
+          }
+        },
+        "name": "cdr-knockout-color-background-note",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "rgba(75, 74, 72, 0.5)",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900-50}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-knockout-color-background-table-header",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#2e2e2b",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-1000}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-knockout-color-background-table-row",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/color.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-knockout-color-border-inverse-primary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#d5cfc3",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/color.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-knockout-color-border-inverse-secondary",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#d5cfc3",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-knockout-color-border-link-card-hover",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        },
+        "filePath": "tokens/themes/docsite/link-card.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "link-card"
+          }
+        },
+        "name": "cdr-knockout-color-border-link-card-active",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#c4b03b",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        },
+        "filePath": "tokens/themes/docsite/note.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
+          }
+        },
+        "name": "cdr-knockout-color-border-note",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#4b4a48",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        },
+        "filePath": "tokens/themes/docsite/table.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-900}",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          }
+        },
+        "name": "cdr-knockout-color-border-table-row",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#d5cfc3",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        },
+        "filePath": "tokens/themes/docsite/color.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{options.color.warm-grey-250}",
+          "$type": "color",
+          "docs": {
+            "type": "text"
+          }
+        },
+        "name": "cdr-knockout-color-icon-inverse-default",
+        "attributes": {
+          "deprecated": false
+        }
+      },
+      {
+        "$value": "#c4b03b",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        },
+        "filePath": "tokens/themes/docsite/note.json5",
+        "isSource": true,
+        "original": {
+          "$value": "{theme.color.primary-100}",
+          "$type": "color",
+          "docs": {
+            "type": "note"
+          }
+        },
+        "name": "cdr-knockout-color-icon-background-note",
+        "attributes": {
+          "deprecated": false
+        }
+      }
+    ],
     "colors": [
       {
         "$value": "#fafbf9",
@@ -6752,838 +7598,6 @@
         }
       }
     ],
-    "misc": [
-      {
-        "$value": "#edeae3",
-        "$type": "color",
-        "docs": {
-          "type": "chip",
-          "description": "Background color for active selected chips"
-        },
-        "filePath": "tokens/global/chip.json5",
-        "isSource": false,
-        "original": {
-          "$value": "{options.color.warm-grey-100}",
-          "$type": "color",
-          "docs": {
-            "type": "chip",
-            "description": "Background color for active selected chips"
-          }
-        },
-        "name": "cdr-color-background-chip-default-selected-active",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#fafbf9",
-        "$type": "color",
-        "filePath": "tokens/global/slide.json5",
-        "isSource": false,
-        "original": {
-          "$value": "{options.color.warm-grey-010}",
-          "$type": "color"
-        },
-        "name": "cdr-color-background-slide-hover",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#fafbf9",
-        "$type": "color",
-        "filePath": "tokens/global/slide.json5",
-        "isSource": false,
-        "original": {
-          "$value": "{options.color.warm-grey-010}",
-          "$type": "color"
-        },
-        "name": "cdr-color-background-slide-default",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#edeae3",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        },
-        "filePath": "tokens/themes/docsite/code-snippet.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-100}",
-          "$type": "color",
-          "docs": {
-            "type": "code-snippet"
-          }
-        },
-        "name": "cdr-color-background-code-snippet",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#2e2e2b",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        },
-        "filePath": "tokens/themes/docsite/code.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000}",
-          "$type": "color",
-          "docs": {
-            "type": "code-snippet"
-          }
-        },
-        "name": "cdr-color-background-code",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#ffffff",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.white}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-color-background-link-card-rest",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#2e2e2b",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-color-background-link-card-active",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#fafbf9",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        },
-        "filePath": "tokens/themes/docsite/note.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-010}",
-          "$type": "color",
-          "docs": {
-            "type": "note"
-          }
-        },
-        "name": "cdr-color-background-note",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#c4b03b",
-        "$type": "color",
-        "docs": {
-          "type": "background"
-        },
-        "filePath": "tokens/themes/docsite/tag.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{theme.color.primary-100}",
-          "$type": "color",
-          "docs": {
-            "type": "background"
-          }
-        },
-        "name": "cdr-color-background-tag",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "rgba(46, 46, 43, 0.9)",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000-90}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-color-text-table-primary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-color-text-table-secondary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#3b8349",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/usage.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.success-green-800}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-color-text-usage-affirmative",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#bb4045",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/usage.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.error-red-800}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-color-text-usage-negative",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#b68b37",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/usage.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warning-yellow-800}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-color-text-usage-caution",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#d5cfc3",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-250}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-color-border-table-row",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#958e83",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        },
-        "filePath": "tokens/themes/docsite/code.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-600}",
-          "$type": "color",
-          "docs": {
-            "type": "code-snippet"
-          }
-        },
-        "name": "cdr-color-border-code",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-color-border-link-card-hover",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-color-border-link-card-active",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#c4b03b",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        },
-        "filePath": "tokens/themes/docsite/note.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{theme.color.primary-100}",
-          "$type": "color",
-          "docs": {
-            "type": "note"
-          }
-        },
-        "name": "cdr-color-border-note",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#3b8349",
-        "$type": "color",
-        "docs": {
-          "type": "border"
-        },
-        "filePath": "tokens/themes/docsite/usage.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.success-green-800}",
-          "$type": "color",
-          "docs": {
-            "type": "border"
-          }
-        },
-        "name": "cdr-color-border-usage-affirmative",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#bb4045",
-        "$type": "color",
-        "docs": {
-          "type": "border"
-        },
-        "filePath": "tokens/themes/docsite/usage.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.error-red-800}",
-          "$type": "color",
-          "docs": {
-            "type": "border"
-          }
-        },
-        "name": "cdr-color-border-usage-negative",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#b68b37",
-        "$type": "color",
-        "docs": {
-          "type": "border"
-        },
-        "filePath": "tokens/themes/docsite/usage.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warning-yellow-800}",
-          "$type": "color",
-          "docs": {
-            "type": "border"
-          }
-        },
-        "name": "cdr-color-border-usage-caution",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#c4b03b",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        },
-        "filePath": "tokens/themes/docsite/note.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{theme.color.primary-100}",
-          "$type": "color",
-          "docs": {
-            "type": "note"
-          }
-        },
-        "name": "cdr-color-icon-background-note",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#2e2e2b",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        },
-        "filePath": "tokens/themes/docsite/code-snippet.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000}",
-          "$type": "color",
-          "docs": {
-            "type": "code-snippet"
-          }
-        },
-        "name": "cdr-knockout-background-code-snippet",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#fafbf9",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/color.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-010}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-knockout-color-text-primary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#d5cfc3",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/color.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-250}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-knockout-color-text-secondary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#fafbf9",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-010}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-knockout-color-text-table-primary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#d5cfc3",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-250}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-knockout-color-text-table-secondary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#2e2e2b",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/color.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-knockout-color-background-primary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-knockout-color-background-link-card-rest",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#2e2e2b",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-knockout-color-background-link-card-active",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "rgba(75, 74, 72, 0.5)",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        },
-        "filePath": "tokens/themes/docsite/note.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900-50}",
-          "$type": "color",
-          "docs": {
-            "type": "note"
-          }
-        },
-        "name": "cdr-knockout-color-background-note",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "rgba(75, 74, 72, 0.5)",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900-50}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-knockout-color-background-table-header",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#2e2e2b",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-1000}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-knockout-color-background-table-row",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/color.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-knockout-color-border-inverse-primary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#d5cfc3",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/color.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-250}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-knockout-color-border-inverse-secondary",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#d5cfc3",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-250}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-knockout-color-border-link-card-hover",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        },
-        "filePath": "tokens/themes/docsite/link-card.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "link-card"
-          }
-        },
-        "name": "cdr-knockout-color-border-link-card-active",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#c4b03b",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        },
-        "filePath": "tokens/themes/docsite/note.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{theme.color.primary-100}",
-          "$type": "color",
-          "docs": {
-            "type": "note"
-          }
-        },
-        "name": "cdr-knockout-color-border-note",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#4b4a48",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        },
-        "filePath": "tokens/themes/docsite/table.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-900}",
-          "$type": "color",
-          "docs": {
-            "type": "table"
-          }
-        },
-        "name": "cdr-knockout-color-border-table-row",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#d5cfc3",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        },
-        "filePath": "tokens/themes/docsite/color.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{options.color.warm-grey-250}",
-          "$type": "color",
-          "docs": {
-            "type": "text"
-          }
-        },
-        "name": "cdr-knockout-color-icon-inverse-default",
-        "attributes": {
-          "deprecated": false
-        }
-      },
-      {
-        "$value": "#c4b03b",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        },
-        "filePath": "tokens/themes/docsite/note.json5",
-        "isSource": true,
-        "original": {
-          "$value": "{theme.color.primary-100}",
-          "$type": "color",
-          "docs": {
-            "type": "note"
-          }
-        },
-        "name": "cdr-knockout-color-icon-background-note",
-        "attributes": {
-          "deprecated": false
-        }
-      }
-    ],
     "form": [
       {
         "$value": "4rem",
@@ -10820,7 +10834,6 @@
         }
       }
     ],
-    "colors": [],
     "misc": [
       {
         "$value": "Stuart",
@@ -10928,6 +10941,7 @@
         }
       }
     ],
+    "colors": [],
     "form": [],
     "sizing": [],
     "motion": [],
@@ -26980,8 +26994,8 @@
     ]
   },
   "android": {
-    "colors": [],
     "misc": [],
+    "colors": [],
     "form": [],
     "sizing": [],
     "motion": [],
@@ -27765,8 +27779,8 @@
     ]
   },
   "ios": {
-    "colors": [],
     "misc": [],
+    "colors": [],
     "form": [],
     "sizing": [],
     "motion": [],

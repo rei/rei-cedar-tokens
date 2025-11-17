@@ -1,4 +1,188 @@
 {
+  "misc": [
+    {
+      "$type": "string",
+      "$value": "10",
+      "filePath": "tokens/_options/base.json5",
+      "isSource": false,
+      "original": {
+        "$type": "string",
+        "$value": "10px"
+      },
+      "name": "cdr-text-size-root",
+      "attributes": {
+        "category": "text-size-root",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#edeae3",
+      "$type": "color",
+      "docs": {
+        "type": "chip",
+        "description": "Background color for active selected chips"
+      },
+      "filePath": "tokens/global/chip.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "chip",
+          "description": "Background color for active selected chips"
+        }
+      },
+      "name": "cdr-color-background-chip-default-selected-active",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "chip",
+        "subitem": "default-selected-active",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "cdr-color-background-slide-hover",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "hover",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "cdr-color-background-slide-default",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "default",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "Stuart",
+      "docs": {
+        "type": "font-family"
+      },
+      "filePath": "tokens/web/font.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.font.family.serif-main}",
+        "docs": {
+          "type": "font-family"
+        }
+      },
+      "name": "cdr-font-family-serif-brand-font",
+      "attributes": {
+        "category": "font",
+        "type": "family",
+        "item": "serif-brand-font",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "Stuart, \"Stuart fallback\", Georgia, serif",
+      "docs": {
+        "type": "font-family"
+      },
+      "filePath": "tokens/web/font.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.font.family.serif}",
+        "docs": {
+          "type": "font-family"
+        }
+      },
+      "name": "cdr-font-family-serif",
+      "attributes": {
+        "category": "font",
+        "type": "family",
+        "item": "serif",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "Graphik",
+      "docs": {
+        "type": "font-family"
+      },
+      "filePath": "tokens/web/font.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.font.family.sans-main}",
+        "docs": {
+          "type": "font-family"
+        }
+      },
+      "name": "cdr-font-family-sans-brand-font",
+      "attributes": {
+        "category": "font",
+        "type": "family",
+        "item": "sans-brand-font",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
+      "docs": {
+        "type": "font-family"
+      },
+      "filePath": "tokens/web/font.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.font.family.sans}",
+        "docs": {
+          "type": "font-family"
+        }
+      },
+      "name": "cdr-font-family-sans",
+      "attributes": {
+        "category": "font",
+        "type": "family",
+        "item": "sans",
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "Pressura,  \"Avenir Next\", Roboto, sans-serif",
+      "docs": {
+        "type": "font-family"
+      },
+      "filePath": "tokens/web/font.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.font.family.mono-rounded}",
+        "docs": {
+          "type": "font-family"
+        }
+      },
+      "name": "cdr-font-family-mono-brand-font",
+      "attributes": {
+        "category": "font",
+        "type": "family",
+        "item": "mono-brand-font",
+        "deprecated": false
+      }
+    }
+  ],
   "colors": [
     {
       "$value": "#fafbf9",
@@ -8612,175 +8796,6 @@
         "item": "color",
         "subitem": "border",
         "state": "link",
-        "deprecated": false
-      }
-    }
-  ],
-  "misc": [
-    {
-      "$value": "#edeae3",
-      "$type": "color",
-      "docs": {
-        "type": "chip",
-        "description": "Background color for active selected chips"
-      },
-      "filePath": "tokens/global/chip.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "type": "chip",
-          "description": "Background color for active selected chips"
-        }
-      },
-      "name": "cdr-color-background-chip-default-selected-active",
-      "attributes": {
-        "category": "color",
-        "type": "background",
-        "item": "chip",
-        "subitem": "default-selected-active",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#fafbf9",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "cdr-color-background-slide-hover",
-      "attributes": {
-        "category": "color",
-        "type": "background",
-        "item": "slide",
-        "subitem": "hover",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#fafbf9",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "cdr-color-background-slide-default",
-      "attributes": {
-        "category": "color",
-        "type": "background",
-        "item": "slide",
-        "subitem": "default",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "Stuart",
-      "docs": {
-        "type": "font-family"
-      },
-      "filePath": "tokens/web/font.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.font.family.serif-main}",
-        "docs": {
-          "type": "font-family"
-        }
-      },
-      "name": "cdr-font-family-serif-brand-font",
-      "attributes": {
-        "category": "font",
-        "type": "family",
-        "item": "serif-brand-font",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "Stuart, \"Stuart fallback\", Georgia, serif",
-      "docs": {
-        "type": "font-family"
-      },
-      "filePath": "tokens/web/font.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.font.family.serif}",
-        "docs": {
-          "type": "font-family"
-        }
-      },
-      "name": "cdr-font-family-serif",
-      "attributes": {
-        "category": "font",
-        "type": "family",
-        "item": "serif",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "Graphik",
-      "docs": {
-        "type": "font-family"
-      },
-      "filePath": "tokens/web/font.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.font.family.sans-main}",
-        "docs": {
-          "type": "font-family"
-        }
-      },
-      "name": "cdr-font-family-sans-brand-font",
-      "attributes": {
-        "category": "font",
-        "type": "family",
-        "item": "sans-brand-font",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
-      "docs": {
-        "type": "font-family"
-      },
-      "filePath": "tokens/web/font.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.font.family.sans}",
-        "docs": {
-          "type": "font-family"
-        }
-      },
-      "name": "cdr-font-family-sans",
-      "attributes": {
-        "category": "font",
-        "type": "family",
-        "item": "sans",
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "Pressura,  \"Avenir Next\", Roboto, sans-serif",
-      "docs": {
-        "type": "font-family"
-      },
-      "filePath": "tokens/web/font.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.font.family.mono-rounded}",
-        "docs": {
-          "type": "font-family"
-        }
-      },
-      "name": "cdr-font-family-mono-brand-font",
-      "attributes": {
-        "category": "font",
-        "type": "family",
-        "item": "mono-brand-font",
         "deprecated": false
       }
     }
