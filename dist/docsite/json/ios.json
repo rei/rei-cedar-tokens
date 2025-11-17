@@ -1,4 +1,850 @@
 {
+  "misc": [
+    {
+      "$type": "string",
+      "$value": "10",
+      "filePath": "tokens/_options/base.json5",
+      "isSource": false,
+      "original": {
+        "$type": "string",
+        "$value": "10px"
+      },
+      "name": "CdrTextSizeRoot",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "chip",
+        "description": "Background color for active selected chips"
+      },
+      "filePath": "tokens/global/chip.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "chip",
+          "description": "Background color for active selected chips"
+        }
+      },
+      "name": "CdrColorBackgroundChipDefaultSelectedActive",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "CdrColorBackgroundSlideHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "CdrColorBackgroundSlideDefault",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
+      "filePath": "tokens/themes/docsite/code-snippet.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
+      },
+      "name": "CdrColorBackgroundCodeSnippet",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
+      "filePath": "tokens/themes/docsite/code.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
+      },
+      "name": "CdrColorBackgroundCode",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrColorBackgroundLinkCardRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrColorBackgroundLinkCardActive",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "note"
+      },
+      "filePath": "tokens/themes/docsite/note.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        }
+      },
+      "name": "CdrColorBackgroundNote",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "background"
+      },
+      "filePath": "tokens/themes/docsite/tag.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "background"
+        }
+      },
+      "name": "CdrColorBackgroundTag",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:0.900f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000-90}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrColorTextTablePrimary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrColorTextTableSecondary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.231f green:0.514f blue:0.286f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/usage.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.success-green-800}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrColorTextUsageAffirmative",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.733f green:0.251f blue:0.271f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/usage.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.error-red-800}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrColorTextUsageNegative",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.714f green:0.545f blue:0.216f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/usage.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warning-yellow-800}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrColorTextUsageCaution",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrColorBorderTableRow",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.584f green:0.557f blue:0.514f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
+      "filePath": "tokens/themes/docsite/code.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-600}",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
+      },
+      "name": "CdrColorBorderCode",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrColorBorderLinkCardHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrColorBorderLinkCardActive",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "note"
+      },
+      "filePath": "tokens/themes/docsite/note.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        }
+      },
+      "name": "CdrColorBorderNote",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.231f green:0.514f blue:0.286f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "border"
+      },
+      "filePath": "tokens/themes/docsite/usage.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.success-green-800}",
+        "$type": "color",
+        "docs": {
+          "type": "border"
+        }
+      },
+      "name": "CdrColorBorderUsageAffirmative",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.733f green:0.251f blue:0.271f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "border"
+      },
+      "filePath": "tokens/themes/docsite/usage.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.error-red-800}",
+        "$type": "color",
+        "docs": {
+          "type": "border"
+        }
+      },
+      "name": "CdrColorBorderUsageNegative",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.714f green:0.545f blue:0.216f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "border"
+      },
+      "filePath": "tokens/themes/docsite/usage.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warning-yellow-800}",
+        "$type": "color",
+        "docs": {
+          "type": "border"
+        }
+      },
+      "name": "CdrColorBorderUsageCaution",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "note"
+      },
+      "filePath": "tokens/themes/docsite/note.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        }
+      },
+      "name": "CdrColorIconBackgroundNote",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "code-snippet"
+      },
+      "filePath": "tokens/themes/docsite/code-snippet.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "code-snippet"
+        }
+      },
+      "name": "CdrKnockoutBackgroundCodeSnippet",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrKnockoutColorTextPrimary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrKnockoutColorTextSecondary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrKnockoutColorTextTablePrimary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrKnockoutColorTextTableSecondary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrKnockoutColorBackgroundPrimary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrKnockoutColorBackgroundLinkCardRest",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrKnockoutColorBackgroundLinkCardActive",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:0.500f]",
+      "$type": "color",
+      "docs": {
+        "type": "note"
+      },
+      "filePath": "tokens/themes/docsite/note.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900-50}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        }
+      },
+      "name": "CdrKnockoutColorBackgroundNote",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:0.500f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900-50}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrKnockoutColorBackgroundTableHeader",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrKnockoutColorBackgroundTableRow",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrKnockoutColorBorderInversePrimary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrKnockoutColorBorderInverseSecondary",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrKnockoutColorBorderLinkCardHover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "link-card"
+      },
+      "filePath": "tokens/themes/docsite/link-card.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "link-card"
+        }
+      },
+      "name": "CdrKnockoutColorBorderLinkCardActive",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "note"
+      },
+      "filePath": "tokens/themes/docsite/note.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        }
+      },
+      "name": "CdrKnockoutColorBorderNote",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "CdrKnockoutColorBorderTableRow",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "text"
+      },
+      "filePath": "tokens/themes/docsite/color.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "text"
+        }
+      },
+      "name": "CdrKnockoutColorIconInverseDefault",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
+      "$type": "color",
+      "docs": {
+        "type": "note"
+      },
+      "filePath": "tokens/themes/docsite/note.json5",
+      "isSource": true,
+      "original": {
+        "$value": "{theme.color.primary-100}",
+        "$type": "color",
+        "docs": {
+          "type": "note"
+        }
+      },
+      "name": "CdrKnockoutColorIconBackgroundNote",
+      "attributes": {
+        "deprecated": false
+      }
+    }
+  ],
   "colors": [
     {
       "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
@@ -6746,838 +7592,6 @@
         }
       },
       "name": "CdrColorIconSwitchSelectedDefaultFocus",
-      "attributes": {
-        "deprecated": false
-      }
-    }
-  ],
-  "misc": [
-    {
-      "$value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "chip",
-        "description": "Background color for active selected chips"
-      },
-      "filePath": "tokens/global/chip.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "type": "chip",
-          "description": "Background color for active selected chips"
-        }
-      },
-      "name": "CdrColorBackgroundChipDefaultSelectedActive",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "CdrColorBackgroundSlideHover",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "CdrColorBackgroundSlideDefault",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.929f green:0.918f blue:0.890f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "code-snippet"
-      },
-      "filePath": "tokens/themes/docsite/code-snippet.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        }
-      },
-      "name": "CdrColorBackgroundCodeSnippet",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "code-snippet"
-      },
-      "filePath": "tokens/themes/docsite/code.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000}",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        }
-      },
-      "name": "CdrColorBackgroundCode",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.white}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrColorBackgroundLinkCardRest",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrColorBackgroundLinkCardActive",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "note"
-      },
-      "filePath": "tokens/themes/docsite/note.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        }
-      },
-      "name": "CdrColorBackgroundNote",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "background"
-      },
-      "filePath": "tokens/themes/docsite/tag.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{theme.color.primary-100}",
-        "$type": "color",
-        "docs": {
-          "type": "background"
-        }
-      },
-      "name": "CdrColorBackgroundTag",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:0.900f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000-90}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrColorTextTablePrimary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrColorTextTableSecondary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.231f green:0.514f blue:0.286f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/usage.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.success-green-800}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrColorTextUsageAffirmative",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.733f green:0.251f blue:0.271f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/usage.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.error-red-800}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrColorTextUsageNegative",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.714f green:0.545f blue:0.216f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/usage.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warning-yellow-800}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrColorTextUsageCaution",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-250}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrColorBorderTableRow",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.584f green:0.557f blue:0.514f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "code-snippet"
-      },
-      "filePath": "tokens/themes/docsite/code.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-600}",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        }
-      },
-      "name": "CdrColorBorderCode",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrColorBorderLinkCardHover",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrColorBorderLinkCardActive",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "note"
-      },
-      "filePath": "tokens/themes/docsite/note.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{theme.color.primary-100}",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        }
-      },
-      "name": "CdrColorBorderNote",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.231f green:0.514f blue:0.286f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "border"
-      },
-      "filePath": "tokens/themes/docsite/usage.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.success-green-800}",
-        "$type": "color",
-        "docs": {
-          "type": "border"
-        }
-      },
-      "name": "CdrColorBorderUsageAffirmative",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.733f green:0.251f blue:0.271f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "border"
-      },
-      "filePath": "tokens/themes/docsite/usage.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.error-red-800}",
-        "$type": "color",
-        "docs": {
-          "type": "border"
-        }
-      },
-      "name": "CdrColorBorderUsageNegative",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.714f green:0.545f blue:0.216f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "border"
-      },
-      "filePath": "tokens/themes/docsite/usage.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warning-yellow-800}",
-        "$type": "color",
-        "docs": {
-          "type": "border"
-        }
-      },
-      "name": "CdrColorBorderUsageCaution",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "note"
-      },
-      "filePath": "tokens/themes/docsite/note.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{theme.color.primary-100}",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        }
-      },
-      "name": "CdrColorIconBackgroundNote",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "code-snippet"
-      },
-      "filePath": "tokens/themes/docsite/code-snippet.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000}",
-        "$type": "color",
-        "docs": {
-          "type": "code-snippet"
-        }
-      },
-      "name": "CdrKnockoutBackgroundCodeSnippet",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/color.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrKnockoutColorTextPrimary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/color.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-250}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrKnockoutColorTextSecondary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.980f green:0.984f blue:0.976f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrKnockoutColorTextTablePrimary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-250}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrKnockoutColorTextTableSecondary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/color.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrKnockoutColorBackgroundPrimary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrKnockoutColorBackgroundLinkCardRest",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrKnockoutColorBackgroundLinkCardActive",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:0.500f]",
-      "$type": "color",
-      "docs": {
-        "type": "note"
-      },
-      "filePath": "tokens/themes/docsite/note.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900-50}",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        }
-      },
-      "name": "CdrKnockoutColorBackgroundNote",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:0.500f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900-50}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrKnockoutColorBackgroundTableHeader",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.180f green:0.180f blue:0.169f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-1000}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrKnockoutColorBackgroundTableRow",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/color.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrKnockoutColorBorderInversePrimary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/color.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-250}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrKnockoutColorBorderInverseSecondary",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-250}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrKnockoutColorBorderLinkCardHover",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "link-card"
-      },
-      "filePath": "tokens/themes/docsite/link-card.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "link-card"
-        }
-      },
-      "name": "CdrKnockoutColorBorderLinkCardActive",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "note"
-      },
-      "filePath": "tokens/themes/docsite/note.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{theme.color.primary-100}",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        }
-      },
-      "name": "CdrKnockoutColorBorderNote",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.294f green:0.290f blue:0.282f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "table"
-      },
-      "filePath": "tokens/themes/docsite/table.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-900}",
-        "$type": "color",
-        "docs": {
-          "type": "table"
-        }
-      },
-      "name": "CdrKnockoutColorBorderTableRow",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.835f green:0.812f blue:0.765f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "text"
-      },
-      "filePath": "tokens/themes/docsite/color.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{options.color.warm-grey-250}",
-        "$type": "color",
-        "docs": {
-          "type": "text"
-        }
-      },
-      "name": "CdrKnockoutColorIconInverseDefault",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "[UIColor colorWithRed:0.769f green:0.690f blue:0.231f alpha:1.000f]",
-      "$type": "color",
-      "docs": {
-        "type": "note"
-      },
-      "filePath": "tokens/themes/docsite/note.json5",
-      "isSource": true,
-      "original": {
-        "$value": "{theme.color.primary-100}",
-        "$type": "color",
-        "docs": {
-          "type": "note"
-        }
-      },
-      "name": "CdrKnockoutColorIconBackgroundNote",
       "attributes": {
         "deprecated": false
       }

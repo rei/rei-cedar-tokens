@@ -1,4 +1,70 @@
 {
+  "misc": [
+    {
+      "$type": "string",
+      "$value": "10",
+      "filePath": "tokens/_options/base.json5",
+      "isSource": false,
+      "original": {
+        "$type": "string",
+        "$value": "10px"
+      },
+      "name": "cdr-text-size-root",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#edeae3",
+      "$type": "color",
+      "docs": {
+        "type": "chip",
+        "description": "Background color for active selected chips"
+      },
+      "filePath": "tokens/global/chip.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "chip",
+          "description": "Background color for active selected chips"
+        }
+      },
+      "name": "cdr-color-background-chip-default-selected-active",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "cdr-color-background-slide-hover",
+      "attributes": {
+        "deprecated": false
+      }
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "filePath": "tokens/global/slide.json5",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color"
+      },
+      "name": "cdr-color-background-slide-default",
+      "attributes": {
+        "deprecated": false
+      }
+    }
+  ],
   "colors": [
     {
       "$value": "#fafbf9",
@@ -7466,58 +7532,6 @@
         }
       },
       "name": "cdr-membership-subtle-color-border-link-visited",
-      "attributes": {
-        "deprecated": false
-      }
-    }
-  ],
-  "misc": [
-    {
-      "$value": "#edeae3",
-      "$type": "color",
-      "docs": {
-        "type": "chip",
-        "description": "Background color for active selected chips"
-      },
-      "filePath": "tokens/global/chip.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "type": "chip",
-          "description": "Background color for active selected chips"
-        }
-      },
-      "name": "cdr-color-background-chip-default-selected-active",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#fafbf9",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "cdr-color-background-slide-hover",
-      "attributes": {
-        "deprecated": false
-      }
-    },
-    {
-      "$value": "#fafbf9",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json5",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "cdr-color-background-slide-default",
       "attributes": {
         "deprecated": false
       }
