@@ -14,6 +14,8 @@ export const concatFiles = (StyleDictionary) => {
         const buildPath = path.join(__dirname, '../../', config.buildPath);
         const files = fs.readdirSync(buildPath);
 
+        console.log('Files: ', files);
+
         if (files.length === 0) {
           console.warn('No files found in the build path.');
           return;
@@ -21,24 +23,29 @@ export const concatFiles = (StyleDictionary) => {
 
         // Determine the file extension from the first file
         const extension = path.extname(files[0]);
-        const allPaths = files.map(f => path.join(buildPath, f));
-        const concatPaths = allPaths.filter(p => !path.basename(p).includes('no_concat'));
-        const noConcatPaths = allPaths.filter(p => path.basename(p).includes('no_concat'));
+        const allPaths = files.map((f) => path.join(buildPath, f));
+        const concatPaths = allPaths.filter((p) => !path.basename(p).includes('no_concat'));
+        const noConcatPaths = allPaths.filter((p) => path.basename(p).includes('no_concat'));
 
         // Rename files with 'no_concat' in their name
-        noConcatPaths.forEach(p => {
+        noConcatPaths.forEach((p) => {
           const newPath = p.replace('.no_concat', '');
           fs.renameSync(p, newPath);
         });
 
         // Concatenate files
         concat(concatPaths).then((r) => {
-          const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`);
+          const outFile = path.join(
+            __dirname,
+            '../../',
+            config.buildPath,
+            `cdr-tokens${extension}`,
+          );
           fs.outputFileSync(outFile, r);
         });
 
         // Remove concatenated files
-        concatPaths.forEach(p => {
+        concatPaths.forEach((p) => {
           fs.removeSync(p);
         });
 
@@ -55,6 +62,6 @@ export const concatFiles = (StyleDictionary) => {
       } catch (error) {
         console.error('Error removing build path:', error);
       }
-    }
+    },
   });
 };
