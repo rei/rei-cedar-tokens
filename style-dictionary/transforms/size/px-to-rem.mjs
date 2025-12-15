@@ -30,6 +30,12 @@ export const pxToRemTransitive = (StyleDictionary) => {
     type: 'value',
     transitive: true,
     filter: (token) => {
+      // Exclude text-size-root and breakpoint tokens
+      const tokenName = token.path.join('-')
+      if (tokenName.includes('text-size-root') || tokenName.includes('breakpoint')) {
+        return false
+      }
+      
       // Include dimension, fontSize, and check if value contains 'px' for expanded typography tokens
       return token.$type === 'dimension' ||
              token.$type === 'fontSize' ||

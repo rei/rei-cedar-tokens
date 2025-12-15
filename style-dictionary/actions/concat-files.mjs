@@ -35,14 +35,16 @@ export const concatFiles = (StyleDictionary) => {
         concat(concatPaths).then((r) => {
           const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`)
           fs.outputFileSync(outFile, r)
-        })
 
-        // Remove concatenated files
-        concatPaths.forEach(p => {
-          fs.removeSync(p)
-        })
+          // Remove concatenated files after successful concatenation
+          concatPaths.forEach(p => {
+            fs.removeSync(p)
+          })
 
-        console.log('Successfully removed concatenated files')
+          console.log('Successfully removed concatenated files')
+        }).catch((error) => {
+          console.error('Error during file concatenation:', error)
+        })
       } catch (error) {
         console.error('Error during file concatenation process:', error)
       }
