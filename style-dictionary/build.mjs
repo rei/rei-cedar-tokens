@@ -14,7 +14,7 @@ import { stripAllPxJs } from './transforms/size/strip-all-px-js.mjs'
 import { float } from './transforms/size/float.mjs'
 
 // ==== Include custom formats ====
-import { scssMixin } from './formats/scss-mixin.mjs'
+import { scssTypography } from './formats/scss-typography.mjs'
 import { scssMap } from './formats/scss-map.mjs'
 import { less as lessFormat } from './formats/less.mjs'
 import { site } from './formats/site.mjs'
@@ -49,7 +49,7 @@ float(StyleDictionary)
 clamp(StyleDictionary)
 
 // ==== Register custom formats ====
-scssMixin(StyleDictionary)
+scssTypography(StyleDictionary)
 scssMap(StyleDictionary)
 lessFormat(StyleDictionary)
 site(StyleDictionary)
