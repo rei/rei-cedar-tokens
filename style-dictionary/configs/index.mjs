@@ -35,7 +35,7 @@ const allPlatforms = (platform, theme) => {
     'site/global': { ...siteGlobalConfig(theme) },
     'site/web': { ...siteWebConfig(theme) },
     'site/android': { ...siteAndroidConfig(theme) },
-    'site/ios': { ...siteIosConfig(theme) },
+    'site/ios': { ...siteIosConfig(theme) }
   }
 
   return platforms[platform]

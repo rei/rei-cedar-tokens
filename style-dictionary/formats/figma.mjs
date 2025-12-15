@@ -14,27 +14,27 @@ export const figma = (StyleDictionary) => {
       const preserveReferences = (tokens) => {
         return _.deep(tokens, (obj) => {
           return _.mapValues(obj, (value) => {
-            if (value && value.original && value.original.$value && typeof value.original.$value === "string") {
+            if (value && value.original && value.original.$value && typeof value.original.$value === 'string') {
               // Preserve the original reference value and remove the 'options.' prefix
               return {
                 $value: value.original.$value.replace('options.', ''),
                 $type: value.$type,
                 ...(value.original.$description && { $description: value.original.$description }),
                 ...(value.filePath && { filePath: value.filePath })
-              };
+              }
             }
-            return value;
-          });
-        });
-      };
+            return value
+          })
+        })
+      }
 
       // First preserve references, then clean metadata
       const transformedTokens = cleanMeta(
         preserveReferences(dictionary.tokens),
         { cleanMeta: propsToRemove }
-      );
+      )
 
-      return JSON.stringify(transformedTokens, null, 2);
+      return JSON.stringify(transformedTokens, null, 2)
     }
   })
 }

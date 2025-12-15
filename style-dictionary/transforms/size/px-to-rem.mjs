@@ -2,7 +2,7 @@ import { BASE_FONT_SIZE } from '../../utils.mjs'
 
 export const pxToRem = (value, baseFontSize = BASE_FONT_SIZE) => {
   if (typeof value !== 'string') return value
-  
+
   const tokens = value.split(' ')
   const result = tokens.map((token) => {
     const parsedValue = parseFloat(token, 10)
@@ -31,8 +31,8 @@ export const pxToRemTransitive = (StyleDictionary) => {
     transitive: true,
     filter: (token) => {
       // Include dimension, fontSize, and check if value contains 'px' for expanded typography tokens
-      return token.$type === 'dimension' || 
-             token.$type === 'fontSize' || 
+      return token.$type === 'dimension' ||
+             token.$type === 'fontSize' ||
              (typeof token.$value === 'string' && token.$value.includes('px'))
     },
     transform: (token, config) => {

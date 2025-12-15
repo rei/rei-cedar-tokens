@@ -12,14 +12,14 @@ export const scssTypography = (StyleDictionary) => {
       // tokens-studio expands typography tokens into individual tokens
       // Group them by their parent path to recreate the mixin
       const allTokens = dictionary.allTokens
-      
+
       // Find all tokens that came from typography expansion
       // They have paths like ['text-body', '300', 'fontFamily']
       const typographyProps = ['fontFamily', 'fontSize', 'fontWeight', 'fontStyle', 'lineHeight', 'letterSpacing', 'textTransform', 'textDecoration']
-      
+
       // Group tokens by their parent typography token path
       const typographyGroups = {}
-      
+
       allTokens.forEach((token) => {
         const lastPathPart = token.path[token.path.length - 1]
         if (typographyProps.includes(lastPathPart)) {
