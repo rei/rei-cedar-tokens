@@ -38,7 +38,37 @@ export const scss = (theme) => ({
         filter: 'color-icon-tokens',
       },
       {
-        destination: 'cdr-mixins.scss',
+        destination: 'cdr-motion.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'motion-tokens',
+      },
+      {
+        destination: 'cdr-prominence.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'prominence-tokens',
+      },
+      {
+        destination: 'cdr-form.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'form-tokens',
+      },
+      {
+        destination: 'cdr-icon.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'icon-tokens',
+      },
+      {
+        destination: 'cdr-radius.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'radius-tokens',
+      },
+      {
+        destination: 'cdr-space.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'space-tokens',
+      },
+      {
+        destination: 'cdr-type-mixins.no_concat.scss',
         format: 'scss/mixin',
       },
       {

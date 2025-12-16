@@ -1,0 +1,11 @@
+module.exports = {
+  "CdrDuration1X": "100ms",
+  "CdrDuration2X": "200ms",
+  "CdrDuration3X": "300ms",
+  "CdrDuration4X": "400ms",
+  "CdrDuration5X": "500ms",
+  "CdrDuration6X": "600ms",
+  "CdrTimingFunctionEaseOut": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+  "CdrTimingFunctionEase": "cubic-bezier(0.15, 0, 0.15, 0)",
+  "CdrTimingFunctionLinear": "cubic-bezier(0, 0, 1, 1)"
+};

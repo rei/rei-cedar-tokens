@@ -1,0 +1,15 @@
+export const CdrColorIconDefault = "#958e83";
+export const CdrColorIconEmphasis = "#4b4a48";
+export const CdrColorIconLink = "#406eb5";
+export const CdrColorIconDisabled = "#d5cfc3";
+export const CdrColorIconCheckboxDefaultSelected = "#ffffff";
+export const CdrColorIconCheckboxDefaultSelectedHover = "#ffffff";
+export const CdrColorIconCheckboxDefaultSelectedActive = "#4b4a48";
+export const CdrColorIconMessageDefault = "#726d64";
+export const CdrColorIconMessageSuccess = "#3b8349";
+export const CdrColorIconMessageWarning = "#b68b37";
+export const CdrColorIconMessageError = "#bb4045";
+export const CdrColorIconMessageInfo = "#408e86";
+export const CdrColorIconSwitchSelectedDefaultRest = "#d5cfc3";
+export const CdrColorIconSwitchSelectedDefaultHover = "#d5cfc3";
+export const CdrColorIconSwitchSelectedDefaultFocus = "#d5cfc3";

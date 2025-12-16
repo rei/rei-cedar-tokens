@@ -36,6 +36,12 @@ import { colorBackgroundTokens } from './filters/color-background-tokens.mjs';
 import { colorTextTokens } from './filters/color-text-tokens.mjs';
 import { colorBorderTokens } from './filters/color-border-tokens.mjs';
 import { colorIconTokens } from './filters/color-icon-tokens.mjs';
+import { prominenceTokens } from './filters/prominence-tokens.mjs';
+import { formTokens } from './filters/form-tokens.mjs';
+import { iconTokens } from './filters/icon-tokens.mjs';
+import { radiusTokens } from './filters/radius-tokens.mjs';
+import { motionTokens } from './filters/motion-tokens.mjs';
+import { spaceTokens } from './filters/space-tokens.mjs';
 
 // ==== Register style dictionary ====
 register(StyleDictionary);
@@ -74,6 +80,12 @@ colorBackgroundTokens(StyleDictionary);
 colorTextTokens(StyleDictionary);
 colorBorderTokens(StyleDictionary);
 colorIconTokens(StyleDictionary);
+motionTokens(StyleDictionary);
+prominenceTokens(StyleDictionary);
+formTokens(StyleDictionary);
+iconTokens(StyleDictionary);
+radiusTokens(StyleDictionary);
+spaceTokens(StyleDictionary);
 
 const themes = ['rei-dot-com', 'docsite'];
 
