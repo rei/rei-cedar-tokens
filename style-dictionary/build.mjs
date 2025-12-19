@@ -26,12 +26,12 @@ import { concatFiles } from './actions/concat-files.mjs';
 import { includeDisplayLess } from './actions/include-display-less.mjs';
 import { includeDisplayScss } from './actions/include-display-scss.mjs';
 import { includeMediaQueriesLess } from './actions/include-media-queries-less.mjs';
-import { includeMediaQueriesScss } from './actions/include-media-queries-scss.mjs';
 import { includeContainerQueriesLess } from './actions/include-container-queries-less.mjs';
-import { includeContainerQueriesScss } from './actions/include-container-queries-scss.mjs';
+import { includeQueriesFileScss } from './actions/include-queries-file-scss.mjs';
 
 // ==== Include custom filters ====
 import { removeSourceTokens } from './filters/remove-source-tokens.mjs';
+import { removeCategoriesTokens } from './filters/remove-categories-tokens.mjs';
 import { colorBackgroundTokens } from './filters/color-background-tokens.mjs';
 import { colorTextTokens } from './filters/color-text-tokens.mjs';
 import { colorBorderTokens } from './filters/color-border-tokens.mjs';
@@ -70,12 +70,12 @@ concatFiles(StyleDictionary);
 includeDisplayLess(StyleDictionary);
 includeDisplayScss(StyleDictionary);
 includeMediaQueriesLess(StyleDictionary);
-includeMediaQueriesScss(StyleDictionary);
 includeContainerQueriesLess(StyleDictionary);
-includeContainerQueriesScss(StyleDictionary);
+includeQueriesFileScss(StyleDictionary);
 
 // ==== Register custom filters ====
 removeSourceTokens(StyleDictionary);
+removeCategoriesTokens(StyleDictionary);
 colorBackgroundTokens(StyleDictionary);
 colorTextTokens(StyleDictionary);
 colorBorderTokens(StyleDictionary);

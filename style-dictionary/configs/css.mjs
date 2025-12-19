@@ -13,60 +13,61 @@ export const css = (theme) => ({
     ],
     files: [
       {
-        destination: 'cdr-tokens.css',
+        destination: 'cdr-variables.css',
         format: 'css/variables',
-        filter: 'remove-source-tokens',
+        filter: 'remove-categories-tokens',
       },
       {
-        destination: 'cdr-color-background.css',
+        destination: 'cdr-color-background.no_concat.css',
         format: 'css/variables',
         filter: 'color-background-tokens',
       },
       {
-        destination: 'cdr-color-text.css',
+        destination: 'cdr-color-text.no_concat.css',
         format: 'css/variables',
         filter: 'color-text-tokens',
       },
       {
-        destination: 'cdr-color-border.css',
+        destination: 'cdr-color-border.no_concat.css',
         format: 'css/variables',
         filter: 'color-border-tokens',
       },
       {
-        destination: 'cdr-color-icon.css',
+        destination: 'cdr-color-icon.no_concat.css',
         format: 'css/variables',
         filter: 'color-icon-tokens',
       },
       {
-        destination: 'cdr-motion.css',
+        destination: 'cdr-motion.no_concat.css',
         format: 'css/variables',
         filter: 'motion-tokens',
       },
       {
-        destination: 'cdr-prominence.css',
+        destination: 'cdr-prominence.no_concat.css',
         format: 'css/variables',
         filter: 'prominence-tokens',
       },
       {
-        destination: 'cdr-form.css',
+        destination: 'cdr-form.no_concat.css',
         format: 'css/variables',
         filter: 'form-tokens',
       },
       {
-        destination: 'cdr-icon.css',
+        destination: 'cdr-icon.no_concat.css',
         format: 'css/variables',
         filter: 'icon-tokens',
       },
       {
-        destination: 'cdr-radius.css',
+        destination: 'cdr-radius.no_concat.css',
         format: 'css/variables',
         filter: 'radius-tokens',
       },
       {
-        destination: 'cdr-space.css',
+        destination: 'cdr-space.no_concat.css',
         format: 'css/variables',
         filter: 'space-tokens',
       },
     ],
+    actions: ['concat-files'],
   },
 });

@@ -11,7 +11,7 @@ export const includeDisplayScss = (StyleDictionary) => {
       try {
         const scssFile = path.join(__dirname, '../utilities/display.scss');
         const outputDir = path.join(__dirname, '../../', config.buildPath);
-        const outputFile = path.join(outputDir, 'display.scss');
+        const outputFile = path.join(outputDir, 'cdr-display-mixins.no_concat.scss');
 
         // Ensure the output directory exists
         fs.ensureDirSync(outputDir);
@@ -33,6 +33,6 @@ export const includeDisplayScss = (StyleDictionary) => {
       } catch (error) {
         console.error('Error removing display SCSS file directory:', error);
       }
-    }
+    },
   });
 };

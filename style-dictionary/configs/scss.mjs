@@ -15,7 +15,7 @@ export const scss = (theme) => ({
       {
         destination: 'cdr-variable.scss',
         format: 'scss/variables',
-        filter: 'remove-source-tokens',
+        filter: 'remove-categories-tokens',
       },
       {
         destination: 'cdr-color-background.no_concat.scss',
@@ -76,11 +76,6 @@ export const scss = (theme) => ({
         format: 'scss/map',
       },
     ],
-    actions: [
-      'include-media-queries-scss',
-      'include-container-queries-scss',
-      'include-display-scss',
-      'concat-files',
-    ],
+    actions: ['include-queries-file-scss', 'include-display-scss', 'concat-files'],
   },
 });

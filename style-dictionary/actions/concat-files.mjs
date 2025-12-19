@@ -5,6 +5,34 @@ import { getDirname } from '../utils.mjs';
 
 const __dirname = getDirname(import.meta.url);
 
+const createImportLine = (fileExtension) => {
+  const imports = [
+    './cdr-color-background',
+    './cdr-color-border',
+    './cdr-color-icon',
+    './cdr-color-text',
+    './cdr-form',
+    './cdr-icon',
+    './cdr-motion',
+    './cdr-prominence',
+    './cdr-radius',
+    './cdr-space',
+  ].map((importLine) => {
+    return importLine + fileExtension;
+  });
+  const extensionImports = [];
+  const isScss = fileExtension.includes('scss');
+
+  if (isScss) imports.push('./cdr-breakpoint-mixins', './cdr-display-mixins', './cdr-type-mixins');
+
+  imports.forEach((importFile) => {
+    const importStatement = isScss ? '@use' : ' @import';
+    extensionImports.push(`${importStatement} "${importFile}"${isScss ? ' as *' : ''};`);
+  });
+
+  return extensionImports.join('\n');
+};
+
 export const concatFiles = (StyleDictionary) => {
   StyleDictionary.registerAction({
     name: 'concat-files',
@@ -14,10 +42,12 @@ export const concatFiles = (StyleDictionary) => {
         const buildPath = path.join(__dirname, '../../', config.buildPath);
         const files = fs.readdirSync(buildPath);
 
-        console.log('Files: ', files);
+        const sampleFile = files.find(
+          (f) => f.endsWith('.scss') || f.endsWith('.css') || f.endsWith('.less'),
+        );
 
-        if (files.length === 0) {
-          console.warn('No files found in the build path.');
+        if (!sampleFile) {
+          console.log('No .scss/.css/.less files found in the build path.');
           return;
         }
 
@@ -41,7 +71,10 @@ export const concatFiles = (StyleDictionary) => {
             config.buildPath,
             `cdr-tokens${extension}`,
           );
-          fs.outputFileSync(outFile, r);
+          const importLines = createImportLine(extension);
+          const finalOuput = extension.includes('less') ? r : `${importLines}\n\n${r}`;
+
+          fs.outputFileSync(outFile, finalOuput);
         });
 
         // Remove concatenated files

@@ -4,21 +4,27 @@ import { getDirname } from '../utils.mjs';
 
 const __dirname = getDirname(import.meta.url);
 
-export const includeMediaQueriesScss = (StyleDictionary) => {
+export const includeQueriesFileScss = (StyleDictionary) => {
   StyleDictionary.registerAction({
-    name: 'include-media-queries-scss',
+    name: 'include-queries-file-scss',
     do: (dictionary, config) => {
       try {
-        const scssFile = path.join(__dirname, '../utilities/media-queries.scss');
+        const mediaQueriesFile = path.join(__dirname, '../utilities/media-queries.scss');
+        const containerQueriesFile = path.join(__dirname, '../utilities/container-queries.scss');
         const outputDir = path.join(__dirname, '../../', config.buildPath);
-        const outputFile = path.join(outputDir, 'media-queries.scss');
+        const outputFile = path.join(outputDir, 'cdr-breakpoint-mixins.no_concat.scss');
 
         // Ensure the output directory exists
         fs.ensureDirSync(outputDir);
 
         // Copy the SCSS file to the output directory
-        fs.copyFileSync(scssFile, outputFile);
-        console.log(`Successfully copied ${scssFile} to ${outputFile}`);
+        fs.copyFileSync(mediaQueriesFile, outputFile);
+        console.log(`Successfully copied MQ: ${mediaQueriesFile} to ${outputFile}`);
+
+        // Read file content to append Container queries
+        const content = fs.readFileSync(containerQueriesFile, 'utf8');
+        fs.appendFileSync(outputFile, content);
+        console.log(`Successfully copied CQ: ${containerQueriesFile} to ${outputFile}`);
       } catch (error) {
         console.error('Error including media queries SCSS file:', error);
       }
@@ -33,6 +39,6 @@ export const includeMediaQueriesScss = (StyleDictionary) => {
       } catch (error) {
         console.error('Error removing media queries SCSS file directory:', error);
       }
-    }
+    },
   });
 };
