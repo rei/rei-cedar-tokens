@@ -3,6 +3,6 @@ export const motionTokens = (StyleDictionary) => {
     name: 'motion-tokens',
     filter: (token) =>
       token.path[0] !== 'options' &&
-      (token.path.includes('timing') || token.path.includes('duration')),
-  });
-};
+      (token.path.includes('timing') || token.path.includes('duration'))
+  })
+}

@@ -2,7 +2,7 @@ export const removeCategoriesTokens = (StyleDictionary) => {
   StyleDictionary.registerFilter({
     name: 'remove-categories-tokens',
     filter: (token) => {
-      const colorSubcategoriesToFilter = ['background', 'radius', 'icon', 'text', 'border'];
+      const colorSubcategoriesToFilter = ['background', 'radius', 'icon', 'text', 'border']
       const categoriesToFilter = [
         'space',
         'radius',
@@ -12,16 +12,15 @@ export const removeCategoriesTokens = (StyleDictionary) => {
         'prominence',
         'duration',
         'timing',
-        'form',
-      ];
+        'form'
+      ]
 
       if (
         (token.path[0] === 'color' && colorSubcategoriesToFilter.includes(token.path[1])) ||
         categoriesToFilter.includes(token.path[0])
-      )
-        return false;
+      ) { return false }
 
-      return token.path[0] !== 'options' && token.path[0] !== 'theme';
-    },
-  });
-};
+      return token.path[0] !== 'options' && token.path[0] !== 'theme'
+    }
+  })
+}
