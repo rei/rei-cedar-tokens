@@ -69,7 +69,7 @@ export const scss = (theme) => ({
       },
       {
         destination: "utilities/cdr-type-mixins.scss",
-        format: "scss/mixin",
+        format: "scss/typography",
       },
       {
         destination: "palettes/cdr-palette-membership-subtle.scss",
@@ -81,10 +81,6 @@ export const scss = (theme) => ({
         format: "scss/variables",
         filter: "membership-vibrant-tokens",
       },
-      {
-        destination: 'cdr-typography.scss',
-        format: 'scss/typography'
-      }
       {
         destination: "utility-map.no_concat.scss",
         format: "scss/map",

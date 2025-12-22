@@ -85,6 +85,7 @@ export const concatFiles = (StyleDictionary) => {
           fs.renameSync(p, newPath);
         });
 
+        console.log("concatPaths: ", concatPaths);
         // Concatenate files
         concat(concatPaths).then((r) => {
           const outFile = path.join(
