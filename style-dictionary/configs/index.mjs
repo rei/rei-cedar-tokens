@@ -29,13 +29,13 @@ const getSources = (platform) => {
 const allPlatforms = (platform, theme) => {
   const platforms = {
     web: { ...cssConfig(theme), ...scssConfig(theme), ...lessConfig(theme), ...jsConfig(theme) },
+    figma: { ...figmaConfig(theme) },
     android: { ...androidConfig(theme) },
+    ios: { ...iosConfig(theme) },
     'site/global': { ...siteGlobalConfig(theme) },
     'site/web': { ...siteWebConfig(theme) },
     'site/android': { ...siteAndroidConfig(theme) },
-    'site/ios': { ...siteIosConfig(theme) },
-    ios: { ...iosConfig(theme) },
-    figma: { ...figmaConfig(theme) }
+    'site/ios': { ...siteIosConfig(theme) }
   }
 
   return platforms[platform]
@@ -53,6 +53,9 @@ export const getConfig = (platform, theme) => {
   return {
     include: defaultTokens,
     source: themeOverrides,
+    expand: {
+      include: ['typography']
+    },
     preprocessors: ['tokens-studio'],
     platforms: allPlatforms(platform, theme),
     usesDtcg: true,
