@@ -1,4 +1,4 @@
-import { commonConfig } from '../utils.mjs'
+import { commonConfig } from '../utils.mjs';
 
 export const scss = (theme) => ({
   scss: {
@@ -9,73 +9,83 @@ export const scss = (theme) => ({
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',
-      'value/clamp'
+      'value/clamp',
     ],
     files: [
       {
         destination: 'cdr-variable.scss',
         format: 'scss/variables',
-        filter: 'remove-categories-tokens'
+        filter: 'remove-categories-tokens',
       },
       {
-        destination: 'cdr-color-background.no_concat.scss',
+        destination: 'foundations/cdr-color-background.scss',
         format: 'scss/variables',
-        filter: 'color-background-tokens'
+        filter: 'color-background-tokens',
       },
       {
-        destination: 'cdr-color-text.no_concat.scss',
+        destination: 'foundations/cdr-color-text.scss',
         format: 'scss/variables',
-        filter: 'color-text-tokens'
+        filter: 'color-text-tokens',
       },
       {
-        destination: 'cdr-color-border.no_concat.scss',
+        destination: 'foundations/cdr-color-border.scss',
         format: 'scss/variables',
-        filter: 'color-border-tokens'
+        filter: 'color-border-tokens',
       },
       {
-        destination: 'cdr-color-icon.no_concat.scss',
+        destination: 'foundations/cdr-color-icon.scss',
         format: 'scss/variables',
-        filter: 'color-icon-tokens'
+        filter: 'color-icon-tokens',
       },
       {
-        destination: 'cdr-motion.no_concat.scss',
+        destination: 'foundations/cdr-motion.scss',
         format: 'scss/variables',
-        filter: 'motion-tokens'
+        filter: 'motion-tokens',
       },
       {
-        destination: 'cdr-prominence.no_concat.scss',
+        destination: 'foundations/cdr-prominence.scss',
         format: 'scss/variables',
-        filter: 'prominence-tokens'
+        filter: 'prominence-tokens',
       },
       {
-        destination: 'cdr-form.no_concat.scss',
+        destination: 'foundations/cdr-form.scss',
         format: 'scss/variables',
-        filter: 'form-tokens'
+        filter: 'form-tokens',
       },
       {
-        destination: 'cdr-icon.no_concat.scss',
+        destination: 'foundations/cdr-icon.scss',
         format: 'scss/variables',
-        filter: 'icon-tokens'
+        filter: 'icon-tokens',
       },
       {
-        destination: 'cdr-radius.no_concat.scss',
+        destination: 'foundations/cdr-radius.scss',
         format: 'scss/variables',
-        filter: 'radius-tokens'
+        filter: 'radius-tokens',
       },
       {
-        destination: 'cdr-space.no_concat.scss',
+        destination: 'foundations/cdr-space.scss',
         format: 'scss/variables',
-        filter: 'space-tokens'
+        filter: 'space-tokens',
       },
       {
-        destination: 'cdr-type-mixins.no_concat.scss',
-        format: 'scss/mixin'
+        destination: 'utilities/cdr-type-mixins.scss',
+        format: 'scss/mixin',
+      },
+      {
+        destination: 'palettes/cdr-palette-membership-subtle.scss',
+        format: 'scss/variables',
+        filter: 'membership-subtle-tokens',
+      },
+      {
+        destination: 'palettes/cdr-palette-membership-vibrant.scss',
+        format: 'scss/variables',
+        filter: 'membership-vibrant-tokens',
       },
       {
         destination: 'utility-map.no_concat.scss',
-        format: 'scss/map'
-      }
+        format: 'scss/map',
+      },
     ],
-    actions: ['include-queries-file-scss', 'include-display-scss', 'concat-files']
-  }
-})
+    actions: ['include-queries-file-scss', 'include-display-scss', 'concat-files'],
+  },
+});
