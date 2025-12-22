@@ -18,8 +18,8 @@ export const scss = (theme) => ({
         filter: 'remove-source-tokens'
       },
       {
-        destination: 'cdr-mixins.scss',
-        format: 'scss/mixin'
+        destination: 'cdr-typography.scss',
+        format: 'scss/typography'
       },
       {
         destination: 'utility-map.no_concat.scss',
