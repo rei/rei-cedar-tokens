@@ -1,0 +1,754 @@
+{
+  "space": {
+    "zero": {
+      "$value": "{options.space.zero}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "sixteenth-x": {
+      "$value": "{options.space.sixteenth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "eighth-x": {
+      "$value": "{options.space.eighth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "three-sixteenth-x": {
+      "$value": "{options.space.three-sixteenth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "quarter-x": {
+      "$value": "{options.space.quarter-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "three-eighth-x": {
+      "$value": "{options.space.three-eighth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "half-x": {
+      "$value": "{options.space.half-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "three-quarter-x": {
+      "$value": "{options.space.three-quarter-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "one-x": {
+      "$value": "{options.space.one-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "one-and-a-half-x": {
+      "$value": "24px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "two-x": {
+      "$value": "32px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "three-x": {
+      "$value": "48px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "four-x": {
+      "$value": "64px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true
+    },
+    "scale": {
+      "0": {
+        "$value": {
+          "min": "0.2rem",
+          "ideal": "0.2rem + 0.11cqi",
+          "max": "0.3rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "1": {
+        "$value": {
+          "min": "0.3rem",
+          "ideal": "0.3rem + 0.11cqi",
+          "max": "0.4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "2": {
+        "$value": {
+          "min": "0.4rem",
+          "ideal": "0.4rem + 0.11cqi",
+          "max": "0.5rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "3": {
+        "$value": {
+          "min": "0.8rem",
+          "ideal": "0.7rem + 0.22cqi",
+          "max": "1rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "4": {
+        "$value": {
+          "min": "1.2rem",
+          "ideal": "1.1rem + 0.33cqi",
+          "max": "1.5rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "5": {
+        "$value": {
+          "min": "1.6rem",
+          "ideal": "1.5rem + 0.44cqi",
+          "max": "2rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "6": {
+        "$value": {
+          "min": "2.4rem",
+          "ideal": "2.2rem + 0.66cqi",
+          "max": "3rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "7": {
+        "$value": {
+          "min": "3.2rem",
+          "ideal": "2.9rem + 0.88cqi",
+          "max": "4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "8": {
+        "$value": {
+          "min": "4.8rem",
+          "ideal": "4.4rem + 1.31cqi",
+          "max": "6rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "0--1": {
+        "$value": {
+          "min": "0.2rem",
+          "ideal": "0.1rem + 0.223cqi",
+          "max": "0.4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "3--4": {
+        "$value": {
+          "min": "0.4rem",
+          "ideal": "0.2rem + 0.66cqi",
+          "max": "1rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      },
+      "3--5": {
+        "$value": {
+          "min": "0.8rem",
+          "ideal": "0.1404px + 1.21cqi",
+          "max": "1.6rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp"
+        }
+      }
+    },
+    "inset": {
+      "sixteenth-x": {
+        "$value": "{space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "eighth-x": {
+        "$value": "{space.eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "eighth-x-squish-top-bottom": {
+        "$value": "0",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "eighth-x-squish-left-right": {
+        "$value": "2px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "eighth-x-stretch-top-bottom": {
+        "$value": "4px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "eighth-x-stretch-left-right": {
+        "$value": "2px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-sixteenth-x": {
+        "$value": "{space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "quarter-x": {
+        "$value": "{space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "quarter-x-squish-top-bottom": {
+        "$value": "{options.space.quarter-x}",
+        "spacingModifier": "{options.space.squish}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "quarter-x-squish-left-right": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "quarter-x-stretch-top-bottom": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "quarter-x-stretch-left-right": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-eighth-x": {
+        "$value": "{space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "half-x": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "half-x-squish-top-bottom": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "half-x-squish-left-right": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "half-x-stretch-top-bottom": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "half-x-stretch-left-right": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-quarter-x": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "three-quarter-x-squish-top-bottom": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-quarter-x-squish-left-right": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-quarter-x-stretch-top-bottom": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-quarter-x-stretch-left-right": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-x": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "one-x-squish-top-bottom": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-x-squish-left-right": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-x-stretch-top-bottom": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-x-stretch-left-right": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-and-a-half-x": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "one-and-a-half-x-squish-top-bottom": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-and-a-half-x-squish-left-right": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-and-a-half-x-stretch-top-bottom": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "one-and-a-half-x-stretch-left-right": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "two-x": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "two-x-squish-top-bottom": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "two-x-squish-left-right": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "two-x-stretch-top-bottom": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "two-x-stretch-left-right": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-x": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "three-x-squish-top-bottom": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-x-squish-left-right": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-x-stretch-top-bottom": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "three-x-stretch-left-right": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "four-x": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset"
+        },
+        "utility-class": true
+      },
+      "four-x-squish-top-bottom": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "four-x-squish-left-right": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "four-x-stretch-top-bottom": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      },
+      "four-x-stretch-left-right": {
+        "$value": "64px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing"
+        }
+      }
+    }
+  }
+}

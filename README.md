@@ -7,10 +7,10 @@
 1. Install the package `npm i -D @rei/cdr-tokens` (may need to remove the '-D' depending on your use case).
 2. Import/require the tokens in your needed format. Platforms specific formats are available in each directory with the same name -- i.e. `dist/scss/cdr-tokens.scss`.
     - JS: commonjs (default) and es module
-    - SCSS: variable and mixins
-    - LESS: variable and mixins
+    - SCSS: variables, maps, and mixins
+    - CSS: custom properties (CSS variables)
     - Android: XML style sheets for Colors and Dimensions
-    - iOS: Objective C classes for Color and Size
+    - iOS: Swift classes for Color and Size
 
     ** REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
 
@@ -30,20 +30,37 @@ All other formats should consult the changelog for a migration path.
 
 Tokens are generated using [Style Dictionary v4](https://styledictionary.com/).
 
+**Documentation**:
+- [Architecture Guide](./docs/ARCHITECTURE.md) - System architecture and design decisions
+- [Transform Guide](./docs/TRANSFORMS.md) - Transform ordering, usage, and creation
+
+### Testing
+
+This project uses [Vitest](https://vitest.dev/) for unit testing.
+
+```bash
+npm test              # Run tests once
+npm run test:watch    # Watch mode for development
+npm run test:ui       # Visual test UI
+npm run test:coverage # Generate coverage report
+```
+
 ### Project structure
 The project is made of these files and folders:
 
-* `tokens/` contains the design tokens input files (in JSON5 format)
+* `tokens/` contains the design tokens input files (in JSON format)
     * `tokens/_options/` contains "option" tokens [see below](#options)
     * `tokens/global/` contains design tokens that are output for all platforms
-    * `tokens/<platform>/` contains design tokens specific to a platform (like mixins for scss/less that others can't use)
-* `style-dictionary/` contains the build script, configs, transforms,actions, and formats used to generate the output files
+    * `tokens/<platform>/` contains design tokens specific to a platform (web or mobile)
+    * `tokens/themes/` contains theme-specific token overrides
+* `style-dictionary/` contains the build script, configs, transforms, actions, and formats used to generate the output files
+    * See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for detailed documentation
 * `dist/` contains the generated output files (in different formats)
 * `docs/` contains app that is generated for [gh-pages examples](https://rei.github.io/rei-cedar-tokens/)
 
 ### Tokens
 
-> In the `tokens/` directory. Files are in [JSON5](https://json5.org/).
+> In the `tokens/` directory. Files are in JSON format.
 
 #### Token Structure
 
@@ -185,7 +202,7 @@ docs: {
 
 Deprecated tokens should be moved to a seprate file (or into the existing file) which corresponds to the release cycle in which they will be deprecated.
 
-For example, if tokens will be considered deprecated in the "Winter 2019" release they would be moved into a file called `deprecated-2024-summer.json5` in whichever directory they currently reside. Structure for naming the file is : `deprecated-<year>-<release>`
+For example, if tokens will be considered deprecated in the "Winter 2019" release they would be moved into a file called `deprecated-2024-summer.json` in whichever directory they currently reside. Structure for naming the file is : `deprecated-<year>-<release>`
 
 Additionally, the contents will be wrapped inside an object with a key that corresponds to the release as well (so we can auto generate some deprecation warnings with the correct release). The key matches the naming of the file. See below for an example.
 
@@ -245,29 +262,52 @@ When tokens are deprecated they can also be provided a new token name or new mix
 
 #### Build
 
-Main build script that is executed with `npm run build` is at `style-dictionary/build.js`. Logic to only build certain platforms or extending brands/themes will likely be done here.
+Main build script that is executed with `npm run build` is at `style-dictionary/build.ts`. The build process generates all theme × platform combinations. See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for details on the build flow.
 
-All actions, configs, formats, etc are imported in this file and it [extends](https://amzn.github.io/style-dictionary/#/extending) the base style-dictionary functionality.
+All actions, configs, formats, transforms, and filters are imported in this file and registered with Style Dictionary.
+
+#### Transforms
+
+Found in `style-dictionary/transforms`
+
+Transforms modify token values or attributes. See [TRANSFORMS.md](./docs/TRANSFORMS.md) for comprehensive documentation on:
+- Transform ordering and dependencies
+- Custom transform usage and creation
+- Platform-specific transform patterns
+
+See Style Dictionary API for [creating transforms](https://styledictionary.com/reference/hooks/transforms/)
 
 #### Actions
 
 Found in `style-dictionary/actions`
 
-See API for [creating an action](https://styledictionary.com/reference/hooks/actions/)
+Actions perform post-build file operations (e.g., copying utility files to output). The `include-utility-file.ts` provides a reusable factory for creating file-copy actions.
+
+See Style Dictionary API for [creating actions](https://styledictionary.com/reference/hooks/actions/)
 
 #### Configs
 
 Found in `style-dictionary/configs`
 
-See [config docs](https://styledictionary.com/reference/config/#configuration-file-formats).
+Platform-specific configurations that define transforms, formats, and build paths. All configs use the `remove-source-tokens` filter to exclude internal `options` and `theme` tokens from output.
 
-Configs follow standard config options. They are organized separately by platform and are required into the `_index.js` file where they all have a filter for options applied.
+See [config docs](https://styledictionary.com/reference/config/)
 
 #### Formats
 
 Found in `style-dictionary/formats`
 
-See API for [creating a format](https://styledictionary.com/reference/hooks/formats/)
+Formats define how tokens are output to files (SCSS variables, CSS custom properties, JSON, etc.).
+
+See Style Dictionary API for [creating formats](https://styledictionary.com/reference/hooks/formats/)
+
+#### Filters
+
+Found in `style-dictionary/filters`
+
+Filters determine which tokens are included in outputs. The `remove-source-tokens` filter excludes internal configuration tokens.
+
+See Style Dictionary API for [creating filters](https://styledictionary.com/reference/hooks/filters/)
 
 #### Transform Groups
 
