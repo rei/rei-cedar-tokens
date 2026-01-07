@@ -26,12 +26,24 @@ import { concatFiles } from './actions/concat-files.mjs'
 import { includeDisplayLess } from './actions/include-display-less.mjs'
 import { includeDisplayScss } from './actions/include-display-scss.mjs'
 import { includeMediaQueriesLess } from './actions/include-media-queries-less.mjs'
-import { includeMediaQueriesScss } from './actions/include-media-queries-scss.mjs'
 import { includeContainerQueriesLess } from './actions/include-container-queries-less.mjs'
-import { includeContainerQueriesScss } from './actions/include-container-queries-scss.mjs'
+import { includeQueriesFileScss } from './actions/include-queries-file-scss.mjs'
 
 // ==== Include custom filters ====
 import { removeSourceTokens } from './filters/remove-source-tokens.mjs'
+import { removeCategoriesTokens } from './filters/remove-categories-tokens.mjs'
+import { colorBackgroundTokens } from './filters/color-background-tokens.mjs'
+import { colorTextTokens } from './filters/color-text-tokens.mjs'
+import { colorBorderTokens } from './filters/color-border-tokens.mjs'
+import { colorIconTokens } from './filters/color-icon-tokens.mjs'
+import { prominenceTokens } from './filters/prominence-tokens.mjs'
+import { formTokens } from './filters/form-tokens.mjs'
+import { iconTokens } from './filters/icon-tokens.mjs'
+import { radiusTokens } from './filters/radius-tokens.mjs'
+import { motionTokens } from './filters/motion-tokens.mjs'
+import { spaceTokens } from './filters/space-tokens.mjs'
+import { membershipSubtleTokens } from './filters/membership-subtle-tokens.mjs'
+import { membershipVibrantTokens } from './filters/membership-vibrant-tokens.mjs'
 
 // ==== Register style dictionary ====
 register(StyleDictionary)
@@ -60,17 +72,26 @@ concatFiles(StyleDictionary)
 includeDisplayLess(StyleDictionary)
 includeDisplayScss(StyleDictionary)
 includeMediaQueriesLess(StyleDictionary)
-includeMediaQueriesScss(StyleDictionary)
 includeContainerQueriesLess(StyleDictionary)
-includeContainerQueriesScss(StyleDictionary)
+includeQueriesFileScss(StyleDictionary)
 
 // ==== Register custom filters ====
 removeSourceTokens(StyleDictionary)
+removeCategoriesTokens(StyleDictionary)
+colorBackgroundTokens(StyleDictionary)
+colorTextTokens(StyleDictionary)
+colorBorderTokens(StyleDictionary)
+colorIconTokens(StyleDictionary)
+motionTokens(StyleDictionary)
+prominenceTokens(StyleDictionary)
+formTokens(StyleDictionary)
+iconTokens(StyleDictionary)
+radiusTokens(StyleDictionary)
+spaceTokens(StyleDictionary)
+membershipSubtleTokens(StyleDictionary)
+membershipVibrantTokens(StyleDictionary)
 
-const themes = [
-  'rei-dot-com',
-  'docsite'
-]
+const themes = ['rei-dot-com', 'docsite']
 
 const platforms = [
   'site/global',

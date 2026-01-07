@@ -10,8 +10,12 @@ export const includeDisplayScss = (StyleDictionary) => {
     do: (dictionary, config) => {
       try {
         const scssFile = path.join(__dirname, '../utilities/display.scss')
-        const outputDir = path.join(__dirname, '../../', config.buildPath)
-        const outputFile = path.join(outputDir, 'display.scss')
+        const outputDir = path.join(
+          __dirname,
+          '../../',
+          config.buildPath + '/utilities'
+        )
+        const outputFile = path.join(outputDir, 'cdr-display-mixins.scss')
 
         // Ensure the output directory exists
         fs.ensureDirSync(outputDir)
