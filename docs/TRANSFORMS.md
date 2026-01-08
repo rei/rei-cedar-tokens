@@ -28,12 +28,12 @@ Modify the token **value** itself. Can be transitive (apply through references).
 
 ```typescript
 transforms: [
-  'attribute/deprecated',           // 1. MUST be first (mutates paths)
-  'name/kebab',                     // 2. Name formatting
-  'size/space',                     // 3. Apply spacing modifiers
-  'size/px-to-rem-transitive',      // 4. Unit conversion
-  'value/clamp'                     // 5. Value transformation
-]
+  'attribute/deprecated', // 1. MUST be first (mutates paths)
+  'name/kebab', // 2. Name formatting
+  'size/space', // 3. Apply spacing modifiers
+  'size/px-to-rem-transitive', // 4. Unit conversion
+  'value/clamp' // 5. Value transformation
+];
 ```
 
 ## Custom Transforms
@@ -46,11 +46,13 @@ transforms: [
 Extracts deprecation metadata from token paths and removes the deprecation prefix.
 
 **Input Token Path**:
+
 ```
 ['deprecated-2024-R1', 'color', 'old-primary']
 ```
 
 **Output**:
+
 - Path becomes: `['color', 'old-primary']`
 - Attributes added:
   ```typescript
@@ -75,10 +77,12 @@ Extracts deprecation metadata from token paths and removes the deprecation prefi
 Converts pixel values to rem units for accessible, scalable typography and spacing.
 
 **Filter**:
+
 - Includes: `dimension`, `fontSize`, or values containing 'px'
 - Excludes: `text-size-root`, `breakpoint` tokens
 
 **Transformation**:
+
 ```typescript
 // Input
 { $type: 'dimension', $value: '16px' }
@@ -88,14 +92,16 @@ Converts pixel values to rem units for accessible, scalable typography and spaci
 ```
 
 **Multi-value support**:
+
 ```typescript
 '16px 32px 8px' → '1.6rem 3.2rem 0.8rem'
 ```
 
 **Configuration**:
+
 ```typescript
 {
-  basePxFontSize: 10  // Override BASE_FONT_SIZE
+  basePxFontSize: 10; // Override BASE_FONT_SIZE
 }
 ```
 
@@ -113,6 +119,7 @@ Applies spacing modifiers to dimension tokens for consistent spacing scales.
 **Filter**: Tokens with `spacingModifier` attribute
 
 **Transformation**:
+
 ```typescript
 // Input
 {
@@ -136,6 +143,7 @@ Applies spacing modifiers to dimension tokens for consistent spacing scales.
 JavaScript variant of `size/space` - returns integers instead of decimal strings.
 
 **Transformation**:
+
 ```typescript
 // Input
 {
@@ -158,11 +166,13 @@ JavaScript variant of `size/space` - returns integers instead of decimal strings
 
 Removes 'px' suffix from dimension values, with filtering.
 
-**Filter**: 
+**Filter**:
+
 - `dimension` or `fontSize` tokens
 - NOT in 'Prominence' category
 
 **Transformation**:
+
 ```typescript
 '16px' → '16'
 '1.5rem' → '1.5rem'  // Non-px values unchanged
@@ -180,6 +190,7 @@ Removes 'px' suffix from dimension values, with filtering.
 Removes 'px' suffix from ALL tokens (no filtering).
 
 **Transformation**:
+
 ```typescript
 '24px' → '24'
 ```
@@ -207,10 +218,12 @@ JavaScript variant - strips 'px' and ensures numeric output.
 Converts dimension values to Android density-independent pixels (dp).
 
 **Filter**:
+
 - `dimension` or `fontSize` tokens
 - NOT `text-size-root` or `breakpoint`
 
 **Transformation**:
+
 ```typescript
 '16px' → '16.00dp'
 '24' → '24.00dp'
@@ -228,10 +241,12 @@ Converts dimension values to Android density-independent pixels (dp).
 Converts dimension values to floating-point numbers.
 
 **Filter**:
+
 - `dimension` or `fontSize` tokens
 - NOT `text-size-root` or `breakpoint`
 
 **Transformation**:
+
 ```typescript
 '16px' → '16.00'
 '24' → '24.00'
@@ -251,6 +266,7 @@ Generates CSS `clamp()` functions for fluid, responsive values.
 **Filter**: Tokens with `$type: 'clamp'`
 
 **Input Format**:
+
 ```json
 {
   "$type": "clamp",
@@ -263,6 +279,7 @@ Generates CSS `clamp()` functions for fluid, responsive values.
 ```
 
 **Output**:
+
 ```css
 clamp(0.875rem, calc(0.875rem + 0.5vw), 1.25rem)
 ```
@@ -311,7 +328,7 @@ transforms: [
   'size/space',
   'size/px-to-rem-transitive',
   'value/clamp'
-]
+];
 ```
 
 ### Android
@@ -326,7 +343,7 @@ transforms: [
   'size/strip-px',
   'size/space',
   'size/dp-transitive'
-]
+];
 ```
 
 ### iOS
@@ -341,7 +358,7 @@ transforms: [
   'size/strip-px',
   'size/space',
   'size/float'
-]
+];
 ```
 
 ### JavaScript
@@ -354,7 +371,7 @@ transforms: [
   'ts/size/px',
   'size/space-js',
   'size/strip-all-px-js'
-]
+];
 ```
 
 ## Transitive Transforms
@@ -422,7 +439,7 @@ export const myTransform = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
     name: 'value/my-transform',
     type: 'value',
-    transitive: true,  // Optional
+    transitive: true, // Optional
     filter: (token: Token): boolean => {
       return token.$type === 'dimension';
     },
@@ -450,9 +467,9 @@ myTransform(StyleDictionary);
 transforms: [
   'attribute/deprecated',
   'name/kebab',
-  'value/my-transform',  // Add here
+  'value/my-transform' // Add here
   // ... other transforms
-]
+];
 ```
 
 ### 4. Write Tests
@@ -476,14 +493,14 @@ describe('my-transform', () => {
 // BAD - deprecated not first
 transforms: [
   'name/kebab',
-  'attribute/deprecated',  // Too late! Paths already used
-]
+  'attribute/deprecated' // Too late! Paths already used
+];
 
 // GOOD
 transforms: [
-  'attribute/deprecated',  // First!
-  'name/kebab',
-]
+  'attribute/deprecated', // First!
+  'name/kebab'
+];
 ```
 
 ### ❌ Forgetting Transitive Flag
@@ -506,10 +523,10 @@ transforms: [
 
 ```typescript
 // BAD - Transforms ALL tokens
-filter: () => true
+filter: () => true;
 
 // GOOD - Specific filter
-filter: (token) => token.$type === 'dimension'
+filter: (token) => token.$type === 'dimension';
 ```
 
 ## Debugging Transforms
@@ -520,7 +537,7 @@ filter: (token) => token.$type === 'dimension'
 // configs/index.ts
 {
   log: {
-    verbosity: 'verbose'  // Shows transform application
+    verbosity: 'verbose'; // Shows transform application
   }
 }
 ```

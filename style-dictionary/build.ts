@@ -41,14 +41,23 @@ import { figma as figmaFormat } from './formats/figma';
 
 // ==== Include custom actions ====
 import { concatFiles } from './actions/concat-files';
-import {
-  includeDisplayScss,
-  includeMediaQueriesScss,
-  includeContainerQueriesScss
-} from './actions/include-utility-file';
+import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
 
 // ==== Include custom filters ====
+import { colorBackgroundTokens } from './filters/color-background-tokens';
+import { colorBorderTokens } from './filters/color-border-tokens';
+import { colorIconTokens } from './filters/color-icon-tokens';
+import { colorTextTokens } from './filters/color-text-tokens';
+import { formTokens } from './filters/form-tokens';
+import { iconTokens } from './filters/icon-tokens';
+import { membershipSubtleTokens } from './filters/membership-subtle-tokens';
+import { membershipVibrantTokens } from './filters/membership-vibrant-tokens';
+import { motionTokens } from './filters/motion-tokens';
+import { prominenceTokens } from './filters/prominence-tokens';
+import { radiusTokens } from './filters/radius-tokens';
+import { removeCategoriesTokens } from './filters/remove-categories-tokens';
 import { removeSourceTokens } from './filters/remove-source-tokens';
+import { spaceTokens } from './filters/space-tokens';
 
 // ==== Register style dictionary ====
 // Tokens Studio provides preprocessors and additional transforms for composite tokens
@@ -77,11 +86,23 @@ figmaFormat(StyleDictionary);
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);
 includeDisplayScss(StyleDictionary);
-includeMediaQueriesScss(StyleDictionary);
-includeContainerQueriesScss(StyleDictionary);
+includeQueriesFileScss(StyleDictionary);
 
 // ==== Register custom filters ====
+colorBackgroundTokens(StyleDictionary);
+colorBorderTokens(StyleDictionary);
+colorIconTokens(StyleDictionary);
+colorTextTokens(StyleDictionary);
+formTokens(StyleDictionary);
+iconTokens(StyleDictionary);
+membershipSubtleTokens(StyleDictionary);
+membershipVibrantTokens(StyleDictionary);
+motionTokens(StyleDictionary);
+prominenceTokens(StyleDictionary);
+radiusTokens(StyleDictionary);
+removeCategoriesTokens(StyleDictionary);
 removeSourceTokens(StyleDictionary);
+spaceTokens(StyleDictionary);
 
 /**
  * Build all theme × platform combinations

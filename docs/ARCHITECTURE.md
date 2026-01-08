@@ -65,16 +65,16 @@ Themes are defined in `tokens/themes/[theme-name]/` and use the `source` field i
 
 Each platform represents a different output target:
 
-| Platform | Output Formats | Use Case |
-|----------|---------------|----------|
-| `web` | CSS, SCSS, JS | Web applications |
-| `android` | XML | Android native apps |
-| `ios` | Swift | iOS native apps |
-| `figma` | JSON | Figma design tool |
-| `site/global` | JSON | Documentation (all platforms) |
-| `site/web` | JSON | Documentation (web-specific) |
-| `site/android` | JSON | Documentation (Android-specific) |
-| `site/ios` | JSON | Documentation (iOS-specific) |
+| Platform       | Output Formats | Use Case                         |
+| -------------- | -------------- | -------------------------------- |
+| `web`          | CSS, SCSS, JS  | Web applications                 |
+| `android`      | XML            | Android native apps              |
+| `ios`          | Swift          | iOS native apps                  |
+| `figma`        | JSON           | Figma design tool                |
+| `site/global`  | JSON           | Documentation (all platforms)    |
+| `site/web`     | JSON           | Documentation (web-specific)     |
+| `site/android` | JSON           | Documentation (Android-specific) |
+| `site/ios`     | JSON           | Documentation (iOS-specific)     |
 
 ### 4. DTCG Specification
 
@@ -92,8 +92,10 @@ Tokens follow the [Design Tokens Community Group (DTCG)](https://tr.designtokens
 ```typescript
 // style-dictionary/build.ts
 
-for (const theme of THEMES) {           // ['rei-dot-com', 'docsite']
-  for (const platform of PLATFORMS) {   // ['web', 'android', 'ios', ...]
+for (const theme of THEMES) {
+  // ['rei-dot-com', 'docsite']
+  for (const platform of PLATFORMS) {
+    // ['web', 'android', 'ios', ...]
     const config = getConfig(platform, theme);
     const sd = new StyleDictionary(config);
     await sd.buildAllPlatforms();
@@ -133,9 +135,11 @@ The `getConfig()` function (in `configs/index.ts`) assembles configuration:
 Located in `style-dictionary/transforms/`, transforms modify token values or attributes:
 
 #### Attribute Transforms
+
 - **`attribute/deprecated`**: Extracts deprecation metadata from token paths
 
 #### Value Transforms (Size)
+
 - **`size/px-to-rem-transitive`**: Converts px → rem (respects basePxFontSize)
 - **`size/space`**: Applies spacing modifiers
 - **`size/space-js`**: Space transform for JavaScript (integer output)

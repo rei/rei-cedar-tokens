@@ -17,22 +17,77 @@ export const scss = (theme: Theme): PlatformConfig => ({
       {
         destination: 'cdr-variable.scss',
         format: 'scss/variables',
-        filter: 'remove-source-tokens'
+        filter: 'remove-categories-tokens'
       },
       {
-        destination: 'cdr-typography.scss',
+        destination: 'foundations/cdr-color-background.scss',
+        format: 'scss/variables',
+        filter: 'color-background-tokens'
+      },
+      {
+        destination: 'foundations/cdr-color-text.scss',
+        format: 'scss/variables',
+        filter: 'color-text-tokens'
+      },
+      {
+        destination: 'foundations/cdr-color-border.scss',
+        format: 'scss/variables',
+        filter: 'color-border-tokens'
+      },
+      {
+        destination: 'foundations/cdr-color-icon.scss',
+        format: 'scss/variables',
+        filter: 'color-icon-tokens'
+      },
+      {
+        destination: 'foundations/cdr-motion.scss',
+        format: 'scss/variables',
+        filter: 'motion-tokens'
+      },
+      {
+        destination: 'foundations/cdr-prominence.scss',
+        format: 'scss/variables',
+        filter: 'prominence-tokens'
+      },
+      {
+        destination: 'foundations/cdr-form.scss',
+        format: 'scss/variables',
+        filter: 'form-tokens'
+      },
+      {
+        destination: 'foundations/cdr-icon.scss',
+        format: 'scss/variables',
+        filter: 'icon-tokens'
+      },
+      {
+        destination: 'foundations/cdr-radius.scss',
+        format: 'scss/variables',
+        filter: 'radius-tokens'
+      },
+      {
+        destination: 'foundations/cdr-space.scss',
+        format: 'scss/variables',
+        filter: 'space-tokens'
+      },
+      {
+        destination: 'utilities/cdr-type-mixins.scss',
         format: 'scss/typography'
+      },
+      {
+        destination: 'palettes/cdr-palette-membership-subtle.scss',
+        format: 'scss/variables',
+        filter: 'membership-subtle-tokens'
+      },
+      {
+        destination: 'palettes/cdr-palette-membership-vibrant.scss',
+        format: 'scss/variables',
+        filter: 'membership-vibrant-tokens'
       },
       {
         destination: 'utility-map.no_concat.scss',
         format: 'scss/map'
       }
     ],
-    actions: [
-      'include-media-queries-scss',
-      'include-container-queries-scss',
-      'include-display-scss',
-      'concat-files'
-    ]
+    actions: ['include-queries-file-scss', 'include-display-scss', 'concat-files']
   }
 });

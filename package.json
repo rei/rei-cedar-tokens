@@ -42,6 +42,7 @@
     "build:grid": "tsx grid.ts",
     "site-tokens": "tsx ./site-tokens.ts",
     "lint-staged": "lint-staged",
+    "format": "prettier --write .",
     "validate": "tsx ./validate.ts",
     "tokens:update": "tsx ./tokens-studio/token-updater.ts",
     "test": "vitest run",

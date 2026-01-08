@@ -6,13 +6,13 @@
 
 1. Install the package `npm i -D @rei/cdr-tokens` (may need to remove the '-D' depending on your use case).
 2. Import/require the tokens in your needed format. Platforms specific formats are available in each directory with the same name -- i.e. `dist/scss/cdr-tokens.scss`.
-    - JS: commonjs (default) and es module
-    - SCSS: variables, maps, and mixins
-    - CSS: custom properties (CSS variables)
-    - Android: XML style sheets for Colors and Dimensions
-    - iOS: Swift classes for Color and Size
+   - JS: commonjs (default) and es module
+   - SCSS: variables, maps, and mixins
+   - CSS: custom properties (CSS variables)
+   - Android: XML style sheets for Colors and Dimensions
+   - iOS: Swift classes for Color and Size
 
-    ** REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
+   \*\* REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
 
 ## Updating
 
@@ -31,6 +31,7 @@ All other formats should consult the changelog for a migration path.
 Tokens are generated using [Style Dictionary v4](https://styledictionary.com/).
 
 **Documentation**:
+
 - [Architecture Guide](./docs/ARCHITECTURE.md) - System architecture and design decisions
 - [Transform Guide](./docs/TRANSFORMS.md) - Transform ordering, usage, and creation
 
@@ -46,17 +47,18 @@ npm run test:coverage # Generate coverage report
 ```
 
 ### Project structure
+
 The project is made of these files and folders:
 
-* `tokens/` contains the design tokens input files (in JSON format)
-    * `tokens/_options/` contains "option" tokens [see below](#options)
-    * `tokens/global/` contains design tokens that are output for all platforms
-    * `tokens/<platform>/` contains design tokens specific to a platform (web or mobile)
-    * `tokens/themes/` contains theme-specific token overrides
-* `style-dictionary/` contains the build script, configs, transforms, actions, and formats used to generate the output files
-    * See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for detailed documentation
-* `dist/` contains the generated output files (in different formats)
-* `docs/` contains app that is generated for [gh-pages examples](https://rei.github.io/rei-cedar-tokens/)
+- `tokens/` contains the design tokens input files (in JSON format)
+  - `tokens/_options/` contains "option" tokens [see below](#options)
+  - `tokens/global/` contains design tokens that are output for all platforms
+  - `tokens/<platform>/` contains design tokens specific to a platform (web or mobile)
+  - `tokens/themes/` contains theme-specific token overrides
+- `style-dictionary/` contains the build script, configs, transforms, actions, and formats used to generate the output files
+  - See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for detailed documentation
+- `dist/` contains the generated output files (in different formats)
+- `docs/` contains app that is generated for [gh-pages examples](https://rei.github.io/rei-cedar-tokens/)
 
 ### Tokens
 
@@ -271,6 +273,7 @@ All actions, configs, formats, transforms, and filters are imported in this file
 Found in `style-dictionary/transforms`
 
 Transforms modify token values or attributes. See [TRANSFORMS.md](./docs/TRANSFORMS.md) for comprehensive documentation on:
+
 - Transform ordering and dependencies
 - Custom transform usage and creation
 - Platform-specific transform patterns
