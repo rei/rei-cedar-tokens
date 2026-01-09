@@ -49,23 +49,24 @@ dist/
 ### Folder Overview
 
 - `<theme>/`
-    * Theme-specific output (e.g. `rei-dot-com`, `docsite`).
+  - Theme-specific output (e.g. `rei-dot-com`, `docsite`).
 - `foundations/`
-    * Core semantic token layers used across the design system:
-      * Color for background, border, icon and text.
-      * Spacing and dimension scales.
-      * Motion related tokens.
+  - Core semantic token layers used across the design system:
+    - Color for background, border, icon and text.
+    - Spacing and dimension scales.
+    - Motion related tokens.
 - `palettes/`
-    * Context specific color palettes intended for composition on top of our fondations.
+  - Context specific color palettes intended for composition on top of our fondations.
 - `utilities/`
-    * Reusable SCSS mixins:
-      * Typography.
-      * Breakpoints.
-      * Display behavior.
+  - Reusable SCSS mixins:
+    - Typography.
+    - Breakpoints.
+    - Display behavior.
 - `cdr-tokens.<extension>/`
-    * Entry point that imports and exposes all tokens.
+  - Entry point that imports and exposes all tokens.
 
 ---
 
 ## Related Resources
+
 - [Jira: CDR-3504](https://rei-coop.atlassian.net/browse/CDR-3504)
