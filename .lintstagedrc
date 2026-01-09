@@ -1,3 +1,3 @@
 {
-  "**/*.{js,ts}": ["eslint --max-warnings=0", "prettier --write"]
+  "**/*.{js,ts}": ["eslint --max-warnings=0 --no-warn-ignored", "prettier --write"]
 }

@@ -44,6 +44,7 @@
     "lint-staged": "lint-staged",
     "format": "prettier --write .",
     "validate": "tsx ./validate.ts",
+    "validate:update": "tsx ./validate.ts --update",
     "tokens:update": "tsx ./tokens-studio/token-updater.ts",
     "test": "vitest run",
     "test:watch": "vitest",
