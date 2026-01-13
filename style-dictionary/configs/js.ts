@@ -24,7 +24,7 @@ export const js = (theme: Theme): PlatformConfig => ({
         filter: 'remove-source-tokens'
       },
       {
-        destination: 'cdr-tokens.d.ts',
+        destination: 'cdr-tokens.d.mts',
         format: 'typescript/es6-declarations',
         filter: 'remove-source-tokens'
       },
