@@ -73,16 +73,21 @@ export const scss = (theme: Theme): PlatformConfig => ({
         destination: 'utilities/cdr-type-mixins.scss',
         format: 'scss/typography'
       },
-      {
-        destination: 'palettes/cdr-palette-membership-subtle.scss',
-        format: 'scss/variables',
-        filter: 'membership-subtle-tokens'
-      },
-      {
-        destination: 'palettes/cdr-palette-membership-vibrant.scss',
-        format: 'scss/variables',
-        filter: 'membership-vibrant-tokens'
-      },
+      // REI Dot Com Specific Palettes
+      ...(theme == 'rei-dot-com'
+        ? [
+            {
+              destination: 'palettes/cdr-palette-membership-subtle.scss',
+              format: 'scss/variables',
+              filter: 'membership-subtle-tokens'
+            },
+            {
+              destination: 'palettes/cdr-palette-membership-vibrant.scss',
+              format: 'scss/variables',
+              filter: 'membership-vibrant-tokens'
+            }
+          ]
+        : []),
       {
         destination: 'utility-map.no_concat.scss',
         format: 'scss/map'

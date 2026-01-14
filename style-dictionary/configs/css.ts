@@ -69,16 +69,21 @@ export const css = (theme: Theme): PlatformConfig => ({
         format: 'css/variables',
         filter: 'space-tokens'
       },
-      {
-        destination: 'palettes/cdr-palette-membership-subtle.css',
-        format: 'css/variables',
-        filter: 'membership-subtle-tokens'
-      },
-      {
-        destination: 'palettes/cdr-palette-membership-vibrant.css',
-        format: 'css/variables',
-        filter: 'membership-vibrant-tokens'
-      }
+      // REI Dot Com Specific Palettes
+      ...(theme == 'rei-dot-com'
+        ? [
+            {
+              destination: 'palettes/cdr-palette-membership-subtle.css',
+              format: 'css/variables',
+              filter: 'membership-subtle-tokens'
+            },
+            {
+              destination: 'palettes/cdr-palette-membership-vibrant.css',
+              format: 'css/variables',
+              filter: 'membership-vibrant-tokens'
+            }
+          ]
+        : [])
     ],
     actions: ['concat-files']
   }
