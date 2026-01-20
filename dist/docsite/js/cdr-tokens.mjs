@@ -37,9 +37,11 @@ export const CdrColorBackgroundError = "#fcefe4";
 export const CdrColorBackgroundLabelDefaultHover = "#fafbf9";
 export const CdrColorBackgroundLabelDefaultActive = "#edeae3";
 export const CdrColorBackgroundLabelDefaultFocus = "#fafbf9";
-export const CdrColorBackgroundLabelSecondaryHover = "rgba(255, 255, 255, 0.75)";
+export const CdrColorBackgroundLabelSecondaryHover =
+  "rgba(255, 255, 255, 0.75)";
 export const CdrColorBackgroundLabelSecondaryActive = "#ffffff";
-export const CdrColorBackgroundLabelSecondaryFocus = "rgba(255, 255, 255, 0.75)";
+export const CdrColorBackgroundLabelSecondaryFocus =
+  "rgba(255, 255, 255, 0.75)";
 export const CdrColorBackgroundInputDefault = "rgba(247, 245, 243, 0.15)";
 export const CdrColorBackgroundInputSecondary = "rgba(255, 255, 255, 0.85)";
 export const CdrColorBackgroundInputError = "rgba(255, 242, 242, 0.75)";
@@ -429,31 +431,53 @@ export const CdrBreakpointSm = "768";
 export const CdrBreakpointMd = "992";
 export const CdrBreakpointLg = "1232";
 export const CdrFontFamilySerifBrandFont = "Stuart";
-export const CdrFontFamilySerif = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrFontFamilySerif = 'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrFontFamilySansBrandFont = "Graphik";
-export const CdrFontFamilySans = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
-export const CdrFontFamilyMonoBrandFont = "Pressura,  \"Avenir Next\", Roboto, sans-serif";
-export const CdrLineHeightRatioHeading1 = "clamp(2.8rem, 0.55vw + 2.62rem, 3.3rem)";
-export const CdrLineHeightRatioHeading2 = "clamp(3.15rem, 0.89vw + 2.87rem, 3.96rem)";
-export const CdrLineHeightRatioHeading3 = "clamp(3.54rem, 1.32vw + 3.12rem, 4.75rem)";
-export const CdrLineHeightRatioHeading4 = "clamp(3.99rem, 1.88vw + 3.38rem, 5.7rem)";
-export const CdrLineHeightRatioHeading5 = "clamp(4.49rem, 2.59vw + 3.66rem, 6.84rem)";
-export const CdrLineHeightRatioHeadingDisplay2 = "clamp(2.8rem, 0.77vw + 2.55rem, 3.5rem)";
-export const CdrLineHeightRatioHeadingDisplay3 = "clamp(3.3rem, 1.1vw + 2.95rem, 4.3rem)";
-export const CdrLineHeightRatioHeadingDisplay4 = "clamp(3.9rem, 1.53vw + 3.41rem, 5.3rem)";
-export const CdrLineHeightRatioHeadingDisplay5 = "clamp(4.6rem, 2.1vw + 3.93rem, 6.51rem)";
-export const CdrLineHeightRatioHeadingDisplay6 = "clamp(5.43rem, 2.83vw + 4.52rem, 8.01rem)";
-export const CdrLineHeightRatioHeadingDisplay7 = "clamp(6.41rem, 3.78vw + 5.2rem, 9.85rem)";
-export const CdrLineHeightRatioSubheadingSans0 = "clamp(2.2rem, 0.44vw + 2.06rem, 2.6rem)";
-export const CdrLineHeightRatioSubheadingSans1 = "clamp(2.57rem, 0.6vw + 2.38rem, 3.12rem)";
-export const CdrLineHeightRatioSubheadingSans2 = "clamp(3.01rem, 0.8vw + 2.75rem, 3.74rem)";
+export const CdrFontFamilySans =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
+export const CdrFontFamilyMonoBrandFont =
+  'Pressura,  "Avenir Next", Roboto, sans-serif';
+export const CdrLineHeightRatioHeading1 =
+  "clamp(2.8rem, 0.55vw + 2.62rem, 3.3rem)";
+export const CdrLineHeightRatioHeading2 =
+  "clamp(3.15rem, 0.89vw + 2.87rem, 3.96rem)";
+export const CdrLineHeightRatioHeading3 =
+  "clamp(3.54rem, 1.32vw + 3.12rem, 4.75rem)";
+export const CdrLineHeightRatioHeading4 =
+  "clamp(3.99rem, 1.88vw + 3.38rem, 5.7rem)";
+export const CdrLineHeightRatioHeading5 =
+  "clamp(4.49rem, 2.59vw + 3.66rem, 6.84rem)";
+export const CdrLineHeightRatioHeadingDisplay2 =
+  "clamp(2.8rem, 0.77vw + 2.55rem, 3.5rem)";
+export const CdrLineHeightRatioHeadingDisplay3 =
+  "clamp(3.3rem, 1.1vw + 2.95rem, 4.3rem)";
+export const CdrLineHeightRatioHeadingDisplay4 =
+  "clamp(3.9rem, 1.53vw + 3.41rem, 5.3rem)";
+export const CdrLineHeightRatioHeadingDisplay5 =
+  "clamp(4.6rem, 2.1vw + 3.93rem, 6.51rem)";
+export const CdrLineHeightRatioHeadingDisplay6 =
+  "clamp(5.43rem, 2.83vw + 4.52rem, 8.01rem)";
+export const CdrLineHeightRatioHeadingDisplay7 =
+  "clamp(6.41rem, 3.78vw + 5.2rem, 9.85rem)";
+export const CdrLineHeightRatioSubheadingSans0 =
+  "clamp(2.2rem, 0.44vw + 2.06rem, 2.6rem)";
+export const CdrLineHeightRatioSubheadingSans1 =
+  "clamp(2.57rem, 0.6vw + 2.38rem, 3.12rem)";
+export const CdrLineHeightRatioSubheadingSans2 =
+  "clamp(3.01rem, 0.8vw + 2.75rem, 3.74rem)";
 export const CdrLineHeightRatioBody0 = "clamp(3rem, 0.44vw + 2.86rem, 3.4rem)";
-export const CdrLineHeightRatioBody1 = "clamp(3.4rem, 0.55vw + 3.23rem, 3.91rem)";
-export const CdrLineHeightRatioUtility0 = "clamp(2.2rem, 0.4386vw + 2.05965rem, 2.6rem)";
-export const CdrLineHeightRatioUtility1 = "clamp(2.552rem, 0.62281vw + 2.3527rem, 3.12rem)";
-export const CdrLineHeightRatioUtility2 = "clamp(2.96032rem, 0.8593vw + 2.68534rem, 3.744rem)";
-export const CdrLineHeightRatioUtility3 = "clamp(3.43397rem, 1.161vw + 3.06245rem, 4.4928rem)";
-export const CdrLineHeightRatioUtilityMinus1 = "clamp(1.89655rem, 0.29618vw + 1.80177rem, 2.16667rem)";
+export const CdrLineHeightRatioBody1 =
+  "clamp(3.4rem, 0.55vw + 3.23rem, 3.91rem)";
+export const CdrLineHeightRatioUtility0 =
+  "clamp(2.2rem, 0.4386vw + 2.05965rem, 2.6rem)";
+export const CdrLineHeightRatioUtility1 =
+  "clamp(2.552rem, 0.62281vw + 2.3527rem, 3.12rem)";
+export const CdrLineHeightRatioUtility2 =
+  "clamp(2.96032rem, 0.8593vw + 2.68534rem, 3.744rem)";
+export const CdrLineHeightRatioUtility3 =
+  "clamp(3.43397rem, 1.161vw + 3.06245rem, 4.4928rem)";
+export const CdrLineHeightRatioUtilityMinus1 =
+  "clamp(1.89655rem, 0.29618vw + 1.80177rem, 2.16667rem)";
 export const CdrTypeScale0 = "clamp(1.6rem, 0.44cqw + 1.46rem, 2rem)";
 export const CdrTypeScale1 = "clamp(1.92rem, 0.64cqw + 1.72rem, 2.5rem)";
 export const CdrTypeScale2 = "clamp(2.3rem, 0.9cqw + 2.02rem, 3.13rem)";
@@ -464,446 +488,520 @@ export const CdrTypeScale6 = "clamp(4.78rem, 3.13cqw + 3.78rem, 7.63rem)";
 export const CdrTypeScale7 = "clamp(5.73rem, 4.17cqw + 4.4rem, 9.54rem)";
 export const CdrTypeScaleMinus1 = "clamp(1.33rem, 0.29cqw + 1.24rem, 1.6rem)";
 export const CdrTypeScaleMinus2 = "clamp(1.3rem, 0.29cqw + 1.24rem, 1.4rem)";
-export const CdrTextDefaultFontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextDefaultFontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextDefaultFontStyle = "normal";
 export const CdrTextDefaultFontWeight = "400";
 export const CdrTextDefaultLetterSpacing = "-0.16";
 export const CdrTextDefaultFontSize = "16";
 export const CdrTextDefaultLineHeight = "22";
-export const CdrTextEyebrow100FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextEyebrow100FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextEyebrow100FontStyle = "normal";
 export const CdrTextEyebrow100FontWeight = "500";
 export const CdrTextEyebrow100LetterSpacing = "0.32";
 export const CdrTextEyebrow100FontSize = "12";
 export const CdrTextEyebrow100LineHeight = "18";
 export const CdrTextEyebrow100TextTransform = "uppercase";
-export const CdrTextBody300FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextBody300FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextBody300FontStyle = "normal";
 export const CdrTextBody300FontWeight = "400";
 export const CdrTextBody300LetterSpacing = "0.08";
 export const CdrTextBody300FontSize = "16";
 export const CdrTextBody300LineHeight = "26";
-export const CdrTextBody400FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextBody400FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextBody400FontStyle = "normal";
 export const CdrTextBody400FontWeight = "400";
 export const CdrTextBody400LetterSpacing = "0";
 export const CdrTextBody400FontSize = "18";
 export const CdrTextBody400LineHeight = "30";
-export const CdrTextBody500FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextBody500FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextBody500FontStyle = "normal";
 export const CdrTextBody500FontWeight = "400";
 export const CdrTextBody500LetterSpacing = "-0.16";
 export const CdrTextBody500FontSize = "20";
 export const CdrTextBody500LineHeight = "36";
-export const CdrTextBodyStrong300FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextBodyStrong300FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextBodyStrong300FontStyle = "normal";
 export const CdrTextBodyStrong300FontWeight = "600";
 export const CdrTextBodyStrong300LetterSpacing = "0.08";
 export const CdrTextBodyStrong300FontSize = "16";
 export const CdrTextBodyStrong300LineHeight = "26";
-export const CdrTextBodyStrong400FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextBodyStrong400FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextBodyStrong400FontStyle = "normal";
 export const CdrTextBodyStrong400FontWeight = "600";
 export const CdrTextBodyStrong400LetterSpacing = "0";
 export const CdrTextBodyStrong400FontSize = "18";
 export const CdrTextBodyStrong400LineHeight = "30";
-export const CdrTextBodyStrong500FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextBodyStrong500FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextBodyStrong500FontStyle = "normal";
 export const CdrTextBodyStrong500FontWeight = "600";
 export const CdrTextBodyStrong500LetterSpacing = "-0.08";
 export const CdrTextBodyStrong500FontSize = "20";
 export const CdrTextBodyStrong500LineHeight = "36";
-export const CdrTextHeadingSans200FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextHeadingSans200FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextHeadingSans200FontStyle = "normal";
 export const CdrTextHeadingSans200FontWeight = "500";
 export const CdrTextHeadingSans200LetterSpacing = "0";
 export const CdrTextHeadingSans200FontSize = "14";
 export const CdrTextHeadingSans200LineHeight = "18";
-export const CdrTextHeadingSans300FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextHeadingSans300FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextHeadingSans300FontStyle = "normal";
 export const CdrTextHeadingSans300FontWeight = "500";
 export const CdrTextHeadingSans300LetterSpacing = "0";
 export const CdrTextHeadingSans300FontSize = "16";
 export const CdrTextHeadingSans300LineHeight = "20";
-export const CdrTextHeadingSans400FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextHeadingSans400FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextHeadingSans400FontStyle = "normal";
 export const CdrTextHeadingSans400FontWeight = "500";
 export const CdrTextHeadingSans400LetterSpacing = "0";
 export const CdrTextHeadingSans400FontSize = "18";
 export const CdrTextHeadingSans400LineHeight = "24";
-export const CdrTextHeadingSans500FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextHeadingSans500FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextHeadingSans500FontStyle = "normal";
 export const CdrTextHeadingSans500FontWeight = "500";
 export const CdrTextHeadingSans500LetterSpacing = "0";
 export const CdrTextHeadingSans500FontSize = "20";
 export const CdrTextHeadingSans500LineHeight = "26";
-export const CdrTextHeadingSans600FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextHeadingSans600FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextHeadingSans600FontStyle = "normal";
 export const CdrTextHeadingSans600FontWeight = "500";
 export const CdrTextHeadingSans600LetterSpacing = "0";
 export const CdrTextHeadingSans600FontSize = "24";
 export const CdrTextHeadingSans600LineHeight = "30";
-export const CdrTextHeadingSerif200FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif200FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif200FontStyle = "normal";
 export const CdrTextHeadingSerif200FontWeight = "500";
 export const CdrTextHeadingSerif200LetterSpacing = "0";
 export const CdrTextHeadingSerif200FontSize = "14";
 export const CdrTextHeadingSerif200LineHeight = "18";
-export const CdrTextHeadingSerif300FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif300FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif300FontStyle = "normal";
 export const CdrTextHeadingSerif300FontWeight = "500";
 export const CdrTextHeadingSerif300LetterSpacing = "0";
 export const CdrTextHeadingSerif300FontSize = "16";
 export const CdrTextHeadingSerif300LineHeight = "20";
-export const CdrTextHeadingSerif400FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif400FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif400FontStyle = "normal";
 export const CdrTextHeadingSerif400FontWeight = "500";
 export const CdrTextHeadingSerif400LetterSpacing = "0";
 export const CdrTextHeadingSerif400FontSize = "18";
 export const CdrTextHeadingSerif400LineHeight = "24";
-export const CdrTextHeadingSerif500FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif500FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif500FontStyle = "normal";
 export const CdrTextHeadingSerif500FontWeight = "500";
 export const CdrTextHeadingSerif500LetterSpacing = "0";
 export const CdrTextHeadingSerif500FontSize = "20";
 export const CdrTextHeadingSerif500LineHeight = "26";
-export const CdrTextHeadingSerif600FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif600FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif600FontStyle = "normal";
 export const CdrTextHeadingSerif600FontWeight = "500";
 export const CdrTextHeadingSerif600LetterSpacing = "0";
 export const CdrTextHeadingSerif600FontSize = "24";
 export const CdrTextHeadingSerif600LineHeight = "30";
-export const CdrTextHeadingSerif700FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif700FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif700FontStyle = "normal";
 export const CdrTextHeadingSerif700FontWeight = "500";
 export const CdrTextHeadingSerif700LetterSpacing = "0";
 export const CdrTextHeadingSerif700FontSize = "28";
 export const CdrTextHeadingSerif700LineHeight = "32";
-export const CdrTextHeadingSerif800FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif800FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif800FontStyle = "normal";
 export const CdrTextHeadingSerif800FontWeight = "500";
 export const CdrTextHeadingSerif800LetterSpacing = "0";
 export const CdrTextHeadingSerif800FontSize = "32";
 export const CdrTextHeadingSerif800LineHeight = "36";
-export const CdrTextHeadingSerif900FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif900FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif900FontStyle = "normal";
 export const CdrTextHeadingSerif900FontWeight = "500";
 export const CdrTextHeadingSerif900LetterSpacing = "0";
 export const CdrTextHeadingSerif900FontSize = "36";
 export const CdrTextHeadingSerif900LineHeight = "44";
-export const CdrTextHeadingSerif1000FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif1000FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif1000FontStyle = "normal";
 export const CdrTextHeadingSerif1000FontWeight = "500";
 export const CdrTextHeadingSerif1000LetterSpacing = "0";
 export const CdrTextHeadingSerif1000FontSize = "42";
 export const CdrTextHeadingSerif1000LineHeight = "50";
-export const CdrTextHeadingSerif1100FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif1100FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif1100FontStyle = "normal";
 export const CdrTextHeadingSerif1100FontWeight = "500";
 export const CdrTextHeadingSerif1100LetterSpacing = "0";
 export const CdrTextHeadingSerif1100FontSize = "48";
 export const CdrTextHeadingSerif1100LineHeight = "56";
-export const CdrTextHeadingSerif1200FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerif1200FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerif1200FontStyle = "normal";
 export const CdrTextHeadingSerif1200FontWeight = "500";
 export const CdrTextHeadingSerif1200LetterSpacing = "0";
 export const CdrTextHeadingSerif1200FontSize = "54";
 export const CdrTextHeadingSerif1200LineHeight = "64";
-export const CdrTextHeadingSerifStrong600FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong600FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong600FontStyle = "normal";
 export const CdrTextHeadingSerifStrong600FontWeight = "600";
 export const CdrTextHeadingSerifStrong600LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong600FontSize = "24";
 export const CdrTextHeadingSerifStrong600LineHeight = "30";
-export const CdrTextHeadingSerifStrong700FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong700FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong700FontStyle = "normal";
 export const CdrTextHeadingSerifStrong700FontWeight = "600";
 export const CdrTextHeadingSerifStrong700LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong700FontSize = "28";
 export const CdrTextHeadingSerifStrong700LineHeight = "32";
-export const CdrTextHeadingSerifStrong800FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong800FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong800FontStyle = "normal";
 export const CdrTextHeadingSerifStrong800FontWeight = "600";
 export const CdrTextHeadingSerifStrong800LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong800FontSize = "32";
 export const CdrTextHeadingSerifStrong800LineHeight = "36";
-export const CdrTextHeadingSerifStrong900FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong900FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong900FontStyle = "normal";
 export const CdrTextHeadingSerifStrong900FontWeight = "600";
 export const CdrTextHeadingSerifStrong900LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong900FontSize = "36";
 export const CdrTextHeadingSerifStrong900LineHeight = "44";
-export const CdrTextHeadingSerifStrong1000FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong1000FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong1000FontStyle = "normal";
 export const CdrTextHeadingSerifStrong1000FontWeight = "600";
 export const CdrTextHeadingSerifStrong1000LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong1000FontSize = "42";
 export const CdrTextHeadingSerifStrong1000LineHeight = "50";
-export const CdrTextHeadingSerifStrong1100FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong1100FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong1100FontStyle = "normal";
 export const CdrTextHeadingSerifStrong1100FontWeight = "600";
 export const CdrTextHeadingSerifStrong1100LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong1100FontSize = "48";
 export const CdrTextHeadingSerifStrong1100LineHeight = "56";
-export const CdrTextHeadingSerifStrong1200FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingSerifStrong1200FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingSerifStrong1200FontStyle = "normal";
 export const CdrTextHeadingSerifStrong1200FontWeight = "600";
 export const CdrTextHeadingSerifStrong1200LetterSpacing = "0";
 export const CdrTextHeadingSerifStrong1200FontSize = "54";
 export const CdrTextHeadingSerifStrong1200LineHeight = "64";
-export const CdrTextHeadingDisplay800FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay800FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay800FontStyle = "normal";
 export const CdrTextHeadingDisplay800FontWeight = "400";
 export const CdrTextHeadingDisplay800LetterSpacing = "0";
 export const CdrTextHeadingDisplay800FontSize = "32";
 export const CdrTextHeadingDisplay800LineHeight = "36";
-export const CdrTextHeadingDisplay900FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay900FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay900FontStyle = "normal";
 export const CdrTextHeadingDisplay900FontWeight = "400";
 export const CdrTextHeadingDisplay900LetterSpacing = "0";
 export const CdrTextHeadingDisplay900FontSize = "36";
 export const CdrTextHeadingDisplay900LineHeight = "40";
-export const CdrTextHeadingDisplay1000FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1000FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1000FontStyle = "normal";
 export const CdrTextHeadingDisplay1000FontWeight = "400";
 export const CdrTextHeadingDisplay1000LetterSpacing = "0";
 export const CdrTextHeadingDisplay1000FontSize = "42";
 export const CdrTextHeadingDisplay1000LineHeight = "48";
-export const CdrTextHeadingDisplay1100FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1100FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1100FontStyle = "normal";
 export const CdrTextHeadingDisplay1100FontWeight = "400";
 export const CdrTextHeadingDisplay1100LetterSpacing = "0";
 export const CdrTextHeadingDisplay1100FontSize = "48";
 export const CdrTextHeadingDisplay1100LineHeight = "52";
-export const CdrTextHeadingDisplay1200FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1200FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1200FontStyle = "normal";
 export const CdrTextHeadingDisplay1200FontWeight = "400";
 export const CdrTextHeadingDisplay1200LetterSpacing = "0";
 export const CdrTextHeadingDisplay1200FontSize = "54";
 export const CdrTextHeadingDisplay1200LineHeight = "60";
-export const CdrTextHeadingDisplay1300FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1300FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1300FontStyle = "normal";
 export const CdrTextHeadingDisplay1300FontWeight = "400";
 export const CdrTextHeadingDisplay1300LetterSpacing = "0";
 export const CdrTextHeadingDisplay1300FontSize = "60";
 export const CdrTextHeadingDisplay1300LineHeight = "64";
-export const CdrTextHeadingDisplay1400FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1400FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1400FontStyle = "normal";
 export const CdrTextHeadingDisplay1400FontWeight = "400";
 export const CdrTextHeadingDisplay1400LetterSpacing = "0";
 export const CdrTextHeadingDisplay1400FontSize = "68";
 export const CdrTextHeadingDisplay1400LineHeight = "72";
-export const CdrTextHeadingDisplay1500FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1500FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1500FontStyle = "normal";
 export const CdrTextHeadingDisplay1500FontWeight = "400";
 export const CdrTextHeadingDisplay1500LetterSpacing = "0";
 export const CdrTextHeadingDisplay1500FontSize = "76";
 export const CdrTextHeadingDisplay1500LineHeight = "80";
-export const CdrTextHeadingDisplay1600FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextHeadingDisplay1600FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextHeadingDisplay1600FontStyle = "normal";
 export const CdrTextHeadingDisplay1600FontWeight = "400";
 export const CdrTextHeadingDisplay1600LetterSpacing = "0";
 export const CdrTextHeadingDisplay1600FontSize = "86";
 export const CdrTextHeadingDisplay1600LineHeight = "92";
-export const CdrTextSubheadingSans300FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextSubheadingSans300FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextSubheadingSans300FontStyle = "normal";
 export const CdrTextSubheadingSans300FontWeight = "500";
 export const CdrTextSubheadingSans300LetterSpacing = "0";
 export const CdrTextSubheadingSans300FontSize = "16";
 export const CdrTextSubheadingSans300LineHeight = "20";
-export const CdrTextSubheadingSans400FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextSubheadingSans400FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextSubheadingSans400FontStyle = "normal";
 export const CdrTextSubheadingSans400FontWeight = "500";
 export const CdrTextSubheadingSans400LetterSpacing = "0";
 export const CdrTextSubheadingSans400FontSize = "18";
 export const CdrTextSubheadingSans400LineHeight = "24";
-export const CdrTextSubheadingSans500FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextSubheadingSans500FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextSubheadingSans500FontStyle = "normal";
 export const CdrTextSubheadingSans500FontWeight = "500";
 export const CdrTextSubheadingSans500LetterSpacing = "0";
 export const CdrTextSubheadingSans500FontSize = "20";
 export const CdrTextSubheadingSans500LineHeight = "26";
-export const CdrTextSubheadingSans600FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextSubheadingSans600FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextSubheadingSans600FontStyle = "normal";
 export const CdrTextSubheadingSans600FontWeight = "500";
 export const CdrTextSubheadingSans600LetterSpacing = "0";
 export const CdrTextSubheadingSans600FontSize = "24";
 export const CdrTextSubheadingSans600LineHeight = "30";
-export const CdrTextUtilitySans100FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans100FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans100FontStyle = "normal";
 export const CdrTextUtilitySans100FontWeight = "400";
 export const CdrTextUtilitySans100LetterSpacing = "-0.08";
 export const CdrTextUtilitySans100FontSize = "12";
 export const CdrTextUtilitySans100LineHeight = "16";
-export const CdrTextUtilitySans200FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans200FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans200FontStyle = "normal";
 export const CdrTextUtilitySans200FontWeight = "400";
 export const CdrTextUtilitySans200LetterSpacing = "-0.16";
 export const CdrTextUtilitySans200FontSize = "14";
 export const CdrTextUtilitySans200LineHeight = "18";
-export const CdrTextUtilitySans300FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans300FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans300FontStyle = "normal";
 export const CdrTextUtilitySans300FontWeight = "400";
 export const CdrTextUtilitySans300LetterSpacing = "-0.16";
 export const CdrTextUtilitySans300FontSize = "16";
 export const CdrTextUtilitySans300LineHeight = "22";
-export const CdrTextUtilitySans400FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans400FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans400FontStyle = "normal";
 export const CdrTextUtilitySans400FontWeight = "400";
 export const CdrTextUtilitySans400LetterSpacing = "-0.16";
 export const CdrTextUtilitySans400FontSize = "18";
 export const CdrTextUtilitySans400LineHeight = "24";
-export const CdrTextUtilitySans500FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans500FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans500FontStyle = "normal";
 export const CdrTextUtilitySans500FontWeight = "400";
 export const CdrTextUtilitySans500LetterSpacing = "-0.32";
 export const CdrTextUtilitySans500FontSize = "20";
 export const CdrTextUtilitySans500LineHeight = "26";
-export const CdrTextUtilitySans600FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans600FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans600FontStyle = "normal";
 export const CdrTextUtilitySans600FontWeight = "400";
 export const CdrTextUtilitySans600LetterSpacing = "-0.32";
 export const CdrTextUtilitySans600FontSize = "24";
 export const CdrTextUtilitySans600LineHeight = "30";
-export const CdrTextUtilitySans700FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans700FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans700FontStyle = "normal";
 export const CdrTextUtilitySans700FontWeight = "400";
 export const CdrTextUtilitySans700LetterSpacing = "-0.32";
 export const CdrTextUtilitySans700FontSize = "28";
 export const CdrTextUtilitySans700LineHeight = "36";
-export const CdrTextUtilitySans800FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySans800FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySans800FontStyle = "normal";
 export const CdrTextUtilitySans800FontWeight = "400";
 export const CdrTextUtilitySans800LetterSpacing = "-0.64";
 export const CdrTextUtilitySans800FontSize = "32";
 export const CdrTextUtilitySans800LineHeight = "40";
-export const CdrTextUtilitySansStrong100FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong100FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong100FontStyle = "normal";
 export const CdrTextUtilitySansStrong100FontWeight = "600";
 export const CdrTextUtilitySansStrong100LetterSpacing = "-0.08";
 export const CdrTextUtilitySansStrong100FontSize = "12";
 export const CdrTextUtilitySansStrong100LineHeight = "16";
-export const CdrTextUtilitySansStrong200FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong200FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong200FontStyle = "normal";
 export const CdrTextUtilitySansStrong200FontWeight = "600";
 export const CdrTextUtilitySansStrong200LetterSpacing = "-0.08";
 export const CdrTextUtilitySansStrong200FontSize = "14";
 export const CdrTextUtilitySansStrong200LineHeight = "18";
-export const CdrTextUtilitySansStrong300FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong300FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong300FontStyle = "normal";
 export const CdrTextUtilitySansStrong300FontWeight = "600";
 export const CdrTextUtilitySansStrong300LetterSpacing = "-0.08";
 export const CdrTextUtilitySansStrong300FontSize = "16";
 export const CdrTextUtilitySansStrong300LineHeight = "22";
-export const CdrTextUtilitySansStrong400FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong400FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong400FontStyle = "normal";
 export const CdrTextUtilitySansStrong400FontWeight = "600";
 export const CdrTextUtilitySansStrong400LetterSpacing = "-0.08";
 export const CdrTextUtilitySansStrong400FontSize = "18";
 export const CdrTextUtilitySansStrong400LineHeight = "24";
-export const CdrTextUtilitySansStrong500FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong500FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong500FontStyle = "normal";
 export const CdrTextUtilitySansStrong500FontWeight = "600";
 export const CdrTextUtilitySansStrong500LetterSpacing = "-0.16";
 export const CdrTextUtilitySansStrong500FontSize = "20";
 export const CdrTextUtilitySansStrong500LineHeight = "26";
-export const CdrTextUtilitySansStrong600FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong600FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong600FontStyle = "normal";
 export const CdrTextUtilitySansStrong600FontWeight = "600";
 export const CdrTextUtilitySansStrong600LetterSpacing = "-0.16";
 export const CdrTextUtilitySansStrong600FontSize = "24";
 export const CdrTextUtilitySansStrong600LineHeight = "30";
-export const CdrTextUtilitySansStrong700FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong700FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong700FontStyle = "normal";
 export const CdrTextUtilitySansStrong700FontWeight = "600";
 export const CdrTextUtilitySansStrong700LetterSpacing = "-0.16";
 export const CdrTextUtilitySansStrong700FontSize = "28";
 export const CdrTextUtilitySansStrong700LineHeight = "36";
-export const CdrTextUtilitySansStrong800FontFamily = "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif";
+export const CdrTextUtilitySansStrong800FontFamily =
+  'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif';
 export const CdrTextUtilitySansStrong800FontStyle = "normal";
 export const CdrTextUtilitySansStrong800FontWeight = "600";
 export const CdrTextUtilitySansStrong800LetterSpacing = "-0.32";
 export const CdrTextUtilitySansStrong800FontSize = "32";
 export const CdrTextUtilitySansStrong800LineHeight = "40";
-export const CdrTextUtilitySerif200FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif200FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif200FontStyle = "normal";
 export const CdrTextUtilitySerif200FontWeight = "400";
 export const CdrTextUtilitySerif200LetterSpacing = "-0.08";
 export const CdrTextUtilitySerif200FontSize = "14";
 export const CdrTextUtilitySerif200LineHeight = "18";
-export const CdrTextUtilitySerif300FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif300FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif300FontStyle = "normal";
 export const CdrTextUtilitySerif300FontWeight = "400";
 export const CdrTextUtilitySerif300LetterSpacing = "-0.08";
 export const CdrTextUtilitySerif300FontSize = "16";
 export const CdrTextUtilitySerif300LineHeight = "22";
-export const CdrTextUtilitySerif400FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif400FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif400FontStyle = "normal";
 export const CdrTextUtilitySerif400FontWeight = "400";
 export const CdrTextUtilitySerif400LetterSpacing = "-0.16";
 export const CdrTextUtilitySerif400FontSize = "18";
 export const CdrTextUtilitySerif400LineHeight = "24";
-export const CdrTextUtilitySerif500FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif500FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif500FontStyle = "normal";
 export const CdrTextUtilitySerif500FontWeight = "400";
 export const CdrTextUtilitySerif500LetterSpacing = "-0.32";
 export const CdrTextUtilitySerif500FontSize = "20";
 export const CdrTextUtilitySerif500LineHeight = "26";
-export const CdrTextUtilitySerif600FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif600FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif600FontStyle = "normal";
 export const CdrTextUtilitySerif600FontWeight = "400";
 export const CdrTextUtilitySerif600LetterSpacing = "-0.32";
 export const CdrTextUtilitySerif600FontSize = "24";
 export const CdrTextUtilitySerif600LineHeight = "30";
-export const CdrTextUtilitySerif700FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif700FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif700FontStyle = "normal";
 export const CdrTextUtilitySerif700FontWeight = "400";
 export const CdrTextUtilitySerif700LetterSpacing = "-0.32";
 export const CdrTextUtilitySerif700FontSize = "28";
 export const CdrTextUtilitySerif700LineHeight = "36";
-export const CdrTextUtilitySerif800FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerif800FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerif800FontStyle = "normal";
 export const CdrTextUtilitySerif800FontWeight = "400";
 export const CdrTextUtilitySerif800LetterSpacing = "-0.32";
 export const CdrTextUtilitySerif800FontSize = "32";
 export const CdrTextUtilitySerif800LineHeight = "40";
-export const CdrTextUtilitySerifStrong200FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong200FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong200FontStyle = "normal";
 export const CdrTextUtilitySerifStrong200FontWeight = "600";
 export const CdrTextUtilitySerifStrong200LetterSpacing = "-0.08";
 export const CdrTextUtilitySerifStrong200FontSize = "14";
 export const CdrTextUtilitySerifStrong200LineHeight = "18";
-export const CdrTextUtilitySerifStrong300FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong300FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong300FontStyle = "normal";
 export const CdrTextUtilitySerifStrong300FontWeight = "600";
 export const CdrTextUtilitySerifStrong300LetterSpacing = "-0.08";
 export const CdrTextUtilitySerifStrong300FontSize = "16";
 export const CdrTextUtilitySerifStrong300LineHeight = "22";
-export const CdrTextUtilitySerifStrong400FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong400FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong400FontStyle = "normal";
 export const CdrTextUtilitySerifStrong400FontWeight = "600";
 export const CdrTextUtilitySerifStrong400LetterSpacing = "-0.08";
 export const CdrTextUtilitySerifStrong400FontSize = "18";
 export const CdrTextUtilitySerifStrong400LineHeight = "24";
-export const CdrTextUtilitySerifStrong500FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong500FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong500FontStyle = "normal";
 export const CdrTextUtilitySerifStrong500FontWeight = "600";
 export const CdrTextUtilitySerifStrong500LetterSpacing = "-0.08";
 export const CdrTextUtilitySerifStrong500FontSize = "20";
 export const CdrTextUtilitySerifStrong500LineHeight = "26";
-export const CdrTextUtilitySerifStrong600FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong600FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong600FontStyle = "normal";
 export const CdrTextUtilitySerifStrong600FontWeight = "600";
 export const CdrTextUtilitySerifStrong600LetterSpacing = "-0.16";
 export const CdrTextUtilitySerifStrong600FontSize = "24";
 export const CdrTextUtilitySerifStrong600LineHeight = "30";
-export const CdrTextUtilitySerifStrong700FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong700FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong700FontStyle = "normal";
 export const CdrTextUtilitySerifStrong700FontWeight = "600";
 export const CdrTextUtilitySerifStrong700LetterSpacing = "-0.16";
 export const CdrTextUtilitySerifStrong700FontSize = "28";
 export const CdrTextUtilitySerifStrong700LineHeight = "36";
-export const CdrTextUtilitySerifStrong800FontFamily = "Stuart, \"Stuart fallback\", Georgia, serif";
+export const CdrTextUtilitySerifStrong800FontFamily =
+  'Stuart, "Stuart fallback", Georgia, serif';
 export const CdrTextUtilitySerifStrong800FontStyle = "normal";
 export const CdrTextUtilitySerifStrong800FontWeight = "600";
 export const CdrTextUtilitySerifStrong800LetterSpacing = "-0.16";

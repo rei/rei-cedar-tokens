@@ -36,9 +36,11 @@ export const CdrColorBackgroundError = "#fcefe4";
 export const CdrColorBackgroundLabelDefaultHover = "#fafbf9";
 export const CdrColorBackgroundLabelDefaultActive = "#edeae3";
 export const CdrColorBackgroundLabelDefaultFocus = "#fafbf9";
-export const CdrColorBackgroundLabelSecondaryHover = "rgba(255, 255, 255, 0.75)";
+export const CdrColorBackgroundLabelSecondaryHover =
+  "rgba(255, 255, 255, 0.75)";
 export const CdrColorBackgroundLabelSecondaryActive = "#ffffff";
-export const CdrColorBackgroundLabelSecondaryFocus = "rgba(255, 255, 255, 0.75)";
+export const CdrColorBackgroundLabelSecondaryFocus =
+  "rgba(255, 255, 255, 0.75)";
 export const CdrColorBackgroundInputDefault = "rgba(247, 245, 243, 0.15)";
 export const CdrColorBackgroundInputSecondary = "rgba(255, 255, 255, 0.85)";
 export const CdrColorBackgroundInputError = "rgba(255, 242, 242, 0.75)";

@@ -20,7 +20,7 @@
   border: 0;
 }
 
-@mixin cdr-display-sr-focusable () {
+@mixin cdr-display-sr-focusable() {
   @include cdr-display-sr-only;
   &:hover,
   &:focus {
