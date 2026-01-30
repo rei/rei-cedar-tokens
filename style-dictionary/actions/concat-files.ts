@@ -42,8 +42,8 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   });
 
   importsExtension.forEach((importFile) => {
-    const importStatement = isScss ? '@use' : ' @import';
-    extensionImports.push(`${importStatement} "${importFile}"${isScss ? ' as *' : ''};`);
+    const importStatement = isScss ? '@forward' : ' @import';
+    extensionImports.push(`${importStatement} "${importFile}";`);
   });
 
   return extensionImports.join('\n');
