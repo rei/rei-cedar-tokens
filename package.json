@@ -42,7 +42,7 @@
     "build:grid": "tsx grid.ts",
     "site-tokens": "tsx ./site-tokens.ts",
     "lint-staged": "lint-staged",
-    "format": "prettier --write .",
+    "format": "oxlint --fix && oxfmt",
     "validate": "tsx ./validate.ts",
     "validate:update": "tsx ./validate.ts --update",
     "tokens:update": "tsx ./tokens-studio/token-updater.ts",
@@ -56,32 +56,37 @@
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@divriots/style-dictionary-to-figma": "^0.4.0",
-    "@eslint/js": "^9.39.2",
     "@tokens-studio/sd-transforms": "^1.2.2",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.21",
-    "@typescript-eslint/eslint-plugin": "^8.50.1",
-    "@typescript-eslint/parser": "^8.50.1",
     "@vitest/ui": "^4.0.16",
+    "commitizen": "^4.3.1",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "dir-to-json": "^1.0.0",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
     "fs-extra": "^11.2.0",
     "glob": "^13.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "lodash": "^4.17.21",
     "npm-publish-prerelease": "^1.0.2",
-    "prettier": "^3.7.4",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
     "query-string": "^9.1.0",
     "rimraf": "^6.0.1",
     "style-dictionary": "^4.0.1",
     "tinycolor2": "^1.6.0",
     "tsx": "^4.19.2",
     "vitest": "^4.0.16"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.mjs": "npm run format"
   },
   "engines": {
     "node": ">= 22.0.0",
