@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "arrowParens": "always",
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "dist/",
+    "node_modules/",
+    "*.log",
+    "coverage/",
+    ".DS_Store"
+  ]
+}
