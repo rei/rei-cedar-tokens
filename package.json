@@ -31,6 +31,14 @@
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
+    "./rei-dot-com/types/*": {
+      "types": "./dist/rei-dot-com/types/*.d.ts",
+      "default": "./dist/rei-dot-com/types/*.ts"
+    },
+    "./docsite/types/*": {
+      "types": "./dist/docsite/types/*.d.ts",
+      "default": "./dist/docsite/types/*.ts"
+    },
     "./dist/": "./dist/"
   },
   "scripts": {
