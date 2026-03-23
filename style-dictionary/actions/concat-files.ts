@@ -63,7 +63,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
 export const concatFiles = (sd: typeof StyleDictionary): void => {
   sd.registerAction({
     name: "concat-files",
-    do: (_, config): void => {
+    do: async (_, config): Promise<void> => {
       try {
         if (!config.buildPath) {
           console.warn("No buildPath specified in the configuration.");
@@ -86,7 +86,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         }
 
         // Determine the file extension from the first file
-        const extension = path.extname(files[0]);
+        const extension = path.extname(sampleFile);
         const allPaths = files.map((f) => path.join(buildPath, f));
         const concatPaths = allPaths.filter(
           (p) => !path.basename(p).includes("no_concat"),
@@ -101,22 +101,21 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
           fs.renameSync(p, newPath);
         });
 
-        // Concatenate files
-        concat(concatPaths).then((r: unknown) => {
-          const outFile = path.join(
-            __dirname,
-            "../../",
-            config.buildPath!,
-            `cdr-tokens${extension}`,
-          );
+        // Concatenate files before removing source files
+        const concatenatedOutput = (await concat(concatPaths)) as string;
+        const outFile = path.join(
+          __dirname,
+          "../../",
+          config.buildPath,
+          `cdr-tokens${extension}`,
+        );
 
-          const importLines = createImportLine(extension, outFile);
-          const finalOuput = extension.includes("less")
-            ? (r as string)
-            : `${importLines}\n\n${r as string}`;
+        const importLines = createImportLine(extension, outFile);
+        const finalOuput = extension.includes("less")
+          ? concatenatedOutput
+          : `${importLines}\n\n${concatenatedOutput}`;
 
-          fs.outputFileSync(outFile, finalOuput);
-        });
+        fs.outputFileSync(outFile, finalOuput);
 
         // Remove concatenated files
         concatPaths.forEach((p) => {
