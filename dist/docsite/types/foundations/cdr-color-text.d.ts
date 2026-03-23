@@ -1,4 +1,4 @@
-export declare const CdrColorText: {
+export interface CdrColorTextTokens {
   readonly CdrColorTextBrand: string;
   readonly CdrColorTextButtonDark: string;
   readonly CdrColorTextButtonDarkActive: string;
@@ -58,8 +58,8 @@ export declare const CdrColorText: {
   readonly CdrColorTextUsageCaution: string;
   readonly CdrColorTextUsageNegative: string;
   readonly CdrColorTextWarning: string;
-};
+}
 
-export type CdrColorTextTokens = typeof CdrColorText;
+export declare const CdrColorText: CdrColorTextTokens;
 
 export default CdrColorText;

@@ -1,4 +1,4 @@
-export declare const CdrColorIcon: {
+export interface CdrColorIconTokens {
   readonly CdrColorIconCheckboxDefaultSelected: string;
   readonly CdrColorIconCheckboxDefaultSelectedActive: string;
   readonly CdrColorIconCheckboxDefaultSelectedHover: string;
@@ -14,8 +14,8 @@ export declare const CdrColorIcon: {
   readonly CdrColorIconSwitchSelectedDefaultFocus: string;
   readonly CdrColorIconSwitchSelectedDefaultHover: string;
   readonly CdrColorIconSwitchSelectedDefaultRest: string;
-};
+}
 
-export type CdrColorIconTokens = typeof CdrColorIcon;
+export declare const CdrColorIcon: CdrColorIconTokens;
 
 export default CdrColorIcon;

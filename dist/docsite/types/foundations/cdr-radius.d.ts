@@ -1,11 +1,11 @@
-export declare const CdrRadius: {
+export interface CdrRadiusTokens {
   readonly CdrRadiusRound: string;
   readonly CdrRadiusSharp: string;
   readonly CdrRadiusSoft: string;
   readonly CdrRadiusSofter: string;
   readonly CdrRadiusSoftest: string;
-};
+}
 
-export type CdrRadiusTokens = typeof CdrRadius;
+export declare const CdrRadius: CdrRadiusTokens;
 
 export default CdrRadius;

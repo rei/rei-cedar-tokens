@@ -1,4 +1,4 @@
-export declare const CdrPaletteMembershipSubtle: {
+export interface CdrPaletteMembershipSubtleTokens {
   readonly CdrMembershipSubtleColorBackgroundButtonPrimaryActive: string;
   readonly CdrMembershipSubtleColorBackgroundButtonPrimaryRest: string;
   readonly CdrMembershipSubtleColorBackgroundPrimary: string;
@@ -13,9 +13,8 @@ export declare const CdrPaletteMembershipSubtle: {
   readonly CdrMembershipSubtleColorTextLinkRest: string;
   readonly CdrMembershipSubtleColorTextLinkVisited: string;
   readonly CdrMembershipSubtleColorTextPrimary: string;
-};
+}
 
-export type CdrPaletteMembershipSubtleTokens =
-  typeof CdrPaletteMembershipSubtle;
+export declare const CdrPaletteMembershipSubtle: CdrPaletteMembershipSubtleTokens;
 
 export default CdrPaletteMembershipSubtle;

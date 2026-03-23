@@ -1,4 +1,4 @@
-export declare const CdrColorBackground: {
+export interface CdrColorBackgroundTokens {
   readonly CdrColorBackgroundAccordionHover: string;
   readonly CdrColorBackgroundBrandSpruce: string;
   readonly CdrColorBackgroundButtonDarkActive: string;
@@ -105,8 +105,8 @@ export declare const CdrColorBackground: {
   readonly CdrColorBackgroundTooltipDefault: string;
   readonly CdrColorBackgroundTransparent: string;
   readonly CdrColorBackgroundWarning: string;
-};
+}
 
-export type CdrColorBackgroundTokens = typeof CdrColorBackground;
+export declare const CdrColorBackground: CdrColorBackgroundTokens;
 
 export default CdrColorBackground;

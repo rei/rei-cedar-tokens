@@ -1,26 +1,28 @@
-import type StyleDictionary from 'style-dictionary';
-import type { FormatFnArguments } from 'style-dictionary/types';
-import { getModuleTypeName, getValueName } from './typescript-module-utils';
+import type StyleDictionary from "style-dictionary";
+import type { FormatFnArguments } from "style-dictionary/types";
+import { getModuleTypeName, getValueName } from "./typescript-module-utils";
 
-export const typescriptModuleDeclarations = (sd: typeof StyleDictionary): void => {
+export const typescriptModuleDeclarations = (
+  sd: typeof StyleDictionary,
+): void => {
   sd.registerFormat({
-    name: 'typescript/cdr-module-declarations',
+    name: "typescript/module-interface",
     format: ({ dictionary, file }: FormatFnArguments): string => {
-      const moduleTypeName = getModuleTypeName(file?.destination);
+      const moduleInterfaceName = getModuleTypeName(file?.destination);
       const valueName = getValueName(file?.destination);
+      const tokenNames = dictionary.allTokens
+        .map((token) => token.name)
+        .sort((left, right) => left.localeCompare(right));
 
       return [
-        `export declare const ${valueName}: {`,
-        ...dictionary.allTokens
-          .map((token) => token.name)
-          .sort((left, right) => left.localeCompare(right))
-          .map((tokenName) => `  readonly ${tokenName}: string;`),
-        '};',
-        '',
-        `export type ${moduleTypeName} = typeof ${valueName};`,
-        '',
-        `export default ${valueName};`
-      ].join('\n');
-    }
+        `export interface ${moduleInterfaceName} {`,
+        ...tokenNames.map((tokenName) => `  readonly ${tokenName}: string;`),
+        "}",
+        "",
+        `export declare const ${valueName}: ${moduleInterfaceName};`,
+        "",
+        `export default ${valueName};`,
+      ].join("\n");
+    },
   });
 };

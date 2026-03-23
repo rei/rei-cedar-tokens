@@ -1,4 +1,4 @@
-export declare const CdrMotion: {
+export interface CdrMotionTokens {
   readonly CdrDuration1X: string;
   readonly CdrDuration2X: string;
   readonly CdrDuration3X: string;
@@ -8,8 +8,8 @@ export declare const CdrMotion: {
   readonly CdrTimingFunctionEase: string;
   readonly CdrTimingFunctionEaseOut: string;
   readonly CdrTimingFunctionLinear: string;
-};
+}
 
-export type CdrMotionTokens = typeof CdrMotion;
+export declare const CdrMotion: CdrMotionTokens;
 
 export default CdrMotion;

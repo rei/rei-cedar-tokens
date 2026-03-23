@@ -40,6 +40,7 @@ import { site } from "./formats/site";
 import { figma as figmaFormat } from "./formats/figma";
 import { typescriptModuleValues } from "./formats/typescript-module-values";
 import { typescriptModuleDeclarations } from "./formats/typescript-module-declarations";
+import { typescriptTokenNameUnion } from "./formats/typescript-token-name-union";
 
 // ==== Include custom actions ====
 import { concatFiles } from "./actions/concat-files";
@@ -89,6 +90,7 @@ site(StyleDictionary);
 figmaFormat(StyleDictionary);
 typescriptModuleValues(StyleDictionary);
 typescriptModuleDeclarations(StyleDictionary);
+typescriptTokenNameUnion(StyleDictionary);
 
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);

@@ -1,9 +1,9 @@
-export declare const CdrIcon: {
+export interface CdrIconTokens {
   readonly CdrIconSize: string;
   readonly CdrIconSizeLg: string;
   readonly CdrIconSizeSm: string;
-};
+}
 
-export type CdrIconTokens = typeof CdrIcon;
+export declare const CdrIcon: CdrIconTokens;
 
 export default CdrIcon;

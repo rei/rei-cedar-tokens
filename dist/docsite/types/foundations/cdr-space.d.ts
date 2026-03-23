@@ -1,4 +1,4 @@
-export declare const CdrSpace: {
+export interface CdrSpaceTokens {
   readonly CdrSpaceEighthX: string;
   readonly CdrSpaceFourX: string;
   readonly CdrSpaceHalfX: string;
@@ -90,8 +90,8 @@ export declare const CdrSpace: {
   readonly CdrSpaceThreeX: string;
   readonly CdrSpaceTwoX: string;
   readonly CdrSpaceZero: string;
-};
+}
 
-export type CdrSpaceTokens = typeof CdrSpace;
+export declare const CdrSpace: CdrSpaceTokens;
 
 export default CdrSpace;

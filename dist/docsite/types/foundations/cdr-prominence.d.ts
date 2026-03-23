@@ -1,4 +1,4 @@
-export declare const CdrProminence: {
+export interface CdrProminenceTokens {
   readonly CdrProminenceElevated: string;
   readonly CdrProminenceElevatedBlur: string;
   readonly CdrProminenceElevatedColor: string;
@@ -29,8 +29,8 @@ export declare const CdrProminence: {
   readonly CdrProminenceRaisedSpread: string;
   readonly CdrProminenceRaisedX: string;
   readonly CdrProminenceRaisedY: string;
-};
+}
 
-export type CdrProminenceTokens = typeof CdrProminence;
+export declare const CdrProminence: CdrProminenceTokens;
 
 export default CdrProminence;

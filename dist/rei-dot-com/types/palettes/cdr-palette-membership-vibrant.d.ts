@@ -1,4 +1,4 @@
-export declare const CdrPaletteMembershipVibrant: {
+export interface CdrPaletteMembershipVibrantTokens {
   readonly CdrMembershipVibrantColorBackgroundButtonPrimaryActive: string;
   readonly CdrMembershipVibrantColorBackgroundButtonPrimaryRest: string;
   readonly CdrMembershipVibrantColorBackgroundPrimary: string;
@@ -13,9 +13,8 @@ export declare const CdrPaletteMembershipVibrant: {
   readonly CdrMembershipVibrantColorTextLinkRest: string;
   readonly CdrMembershipVibrantColorTextLinkVisited: string;
   readonly CdrMembershipVibrantColorTextPrimary: string;
-};
+}
 
-export type CdrPaletteMembershipVibrantTokens =
-  typeof CdrPaletteMembershipVibrant;
+export declare const CdrPaletteMembershipVibrant: CdrPaletteMembershipVibrantTokens;
 
 export default CdrPaletteMembershipVibrant;

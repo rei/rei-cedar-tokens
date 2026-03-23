@@ -1,11 +1,11 @@
-export declare const CdrForm: {
+export interface CdrFormTokens {
   readonly CdrFormFigureSizeLarge: string;
   readonly CdrFormFigureSizeMedium: string;
   readonly CdrFormFigureSizeSmall: string;
   readonly CdrFormInputHeightDefault: string;
   readonly CdrFormInputHeightLarge: string;
-};
+}
 
-export type CdrFormTokens = typeof CdrForm;
+export declare const CdrForm: CdrFormTokens;
 
 export default CdrForm;
