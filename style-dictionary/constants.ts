@@ -31,6 +31,7 @@ export const PLATFORMS = [
   "android", // Android native
   "ios", // iOS native
   "figma", // Figma design tool
+  "types", // TypeScript modules
 ];
 
 export type Platform = (typeof PLATFORMS)[number];

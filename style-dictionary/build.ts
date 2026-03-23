@@ -38,6 +38,8 @@ import { scssTypography } from "./formats/scss-typography";
 import { scssMap } from "./formats/scss-map";
 import { site } from "./formats/site";
 import { figma as figmaFormat } from "./formats/figma";
+import { typescriptModuleValues } from "./formats/typescript-module-values";
+import { typescriptModuleDeclarations } from "./formats/typescript-module-declarations";
 
 // ==== Include custom actions ====
 import { concatFiles } from "./actions/concat-files";
@@ -85,6 +87,8 @@ scssTypography(StyleDictionary);
 scssMap(StyleDictionary);
 site(StyleDictionary);
 figmaFormat(StyleDictionary);
+typescriptModuleValues(StyleDictionary);
+typescriptModuleDeclarations(StyleDictionary);
 
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);
