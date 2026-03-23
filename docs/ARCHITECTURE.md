@@ -2,7 +2,7 @@
 
 ## Overview
 
-REI Cedar Tokens is a design token management system built on [Style Dictionary](https://amzn.github.io/style-dictionary/). It transforms design tokens from JSON source files into multiple platform-specific formats (CSS, SCSS, JavaScript, TypeScript modules, iOS, Android, Figma).
+REI Cedar Tokens is a design token management system built on [Style Dictionary](https://amzn.github.io/style-dictionary/). It transforms design tokens from JSON source files into multiple platform-specific formats (CSS, SCSS, JavaScript, iOS, Android, Figma).
 
 ## System Architecture
 
@@ -33,11 +33,10 @@ REI Cedar Tokens is a design token management system built on [Style Dictionary]
 │                    Build Output                              │
 │  dist/                                                       │
 │  └── [theme]/        (e.g., rei-dot-com, docsite)          │
-│      └── [platform]/ (e.g., js, scss, css, types)          │
+│      └── [platform]/ (e.g., web, android, ios)             │
 │          ├── CSS files                                      │
 │          ├── SCSS files (variables, maps, mixins)           │
 │          ├── JavaScript (ES & CommonJS)                     │
-│          ├── TypeScript module values and declarations      │
 │          ├── XML (Android)                                  │
 │          ├── Swift (iOS)                                    │
 │          └── JSON (Figma, site docs)                        │
@@ -68,7 +67,7 @@ Each platform represents a different output target:
 
 | Platform       | Output Formats | Use Case                         |
 | -------------- | -------------- | -------------------------------- |
-| `web`          | CSS, SCSS, JS, TS modules | Web applications        |
+| `web`          | CSS, SCSS, JS  | Web applications                 |
 | `android`      | XML            | Android native apps              |
 | `ios`          | Swift          | iOS native apps                  |
 | `figma`        | JSON           | Figma design tool                |
@@ -161,28 +160,6 @@ Located in `style-dictionary/formats/`, formats generate output files:
 - **`scss/map`**: SCSS maps from utility tokens
 - **`site/*`**: JSON for documentation site
 - **`figma`**: JSON for Figma integration
-- **`typescript/module-values`**: Runtime TypeScript token objects per module
-- **`typescript/cdr-module-declarations`**: Declared runtime exports and named `typeof` aliases
-
-### TypeScript module output
-
-The web build includes a dedicated `types` platform that emits modular TypeScript artifacts under `dist/<theme>/types/`.
-
-Each token module generates:
-
-- `<module>.ts`
-- `<module>.d.ts`
-
-Shared module metadata lives in `style-dictionary/token-modules.ts`, which keeps JS, SCSS, and TypeScript module outputs aligned by responsibility, filename, and filter.
-
-Runtime exports are PascalCase, and each module also exports a named `typeof` alias for the runtime object. Example:
-
-```ts
-import CdrIcon from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-icon';
-import type { CdrIconTokens } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-icon';
-
-type CdrIconName = keyof typeof CdrIcon;
-```
 
 ### Filters
 
@@ -219,7 +196,6 @@ rei-cedar-tokens/
 │   ├── configs/              # Platform configs
 │   ├── filters/              # Token filters
 │   ├── formats/              # Output formats
-│   ├── token-modules.ts      # Shared JS/SCSS/TS module definitions
 │   ├── transforms/           # Token transforms
 │   │   ├── attribute/        # Attribute transforms
 │   │   └── size/             # Value transforms
@@ -235,7 +211,7 @@ rei-cedar-tokens/
 │       └── docsite/
 │
 └── dist/                    # Generated outputs
-    └── [theme]/[platform]/  # e.g., dist/rei-dot-com/types/
+    └── [theme]/[platform]/  # e.g., dist/rei-dot-com/web/
 ```
 
 ## Key Design Decisions
