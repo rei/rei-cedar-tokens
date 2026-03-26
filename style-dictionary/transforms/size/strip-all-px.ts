@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a transform that strips 'px' units from all token values.
@@ -15,15 +15,15 @@ import type { Token } from "style-dictionary";
  */
 export const stripAllPx = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
-    name: "size/strip-all-px",
-    type: "value",
+    name: 'size/strip-all-px',
+    type: 'value',
     transitive: true,
     transform: (token: Token): string => {
       let cleanVal = token.$value;
-      if (typeof token.$value === "string" && token.$value.endsWith("px")) {
+      if (typeof token.$value === 'string' && token.$value.endsWith('px')) {
         cleanVal = token.$value.slice(0, -2);
       }
       return cleanVal;
-    },
+    }
   });
 };

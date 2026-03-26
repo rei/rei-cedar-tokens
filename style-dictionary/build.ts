@@ -1,7 +1,7 @@
-import StyleDictionary from "style-dictionary";
-import { register } from "@tokens-studio/sd-transforms";
-import { PLATFORMS, THEMES } from "./constants";
-import { getConfig } from "./configs";
+import StyleDictionary from 'style-dictionary';
+import { register } from '@tokens-studio/sd-transforms';
+import { PLATFORMS, THEMES } from './constants';
+import { getConfig } from './configs';
 
 /**
  * REI Cedar Tokens Build Script
@@ -22,48 +22,45 @@ import { getConfig } from "./configs";
  */
 
 // ==== Include custom transforms ====
-import { deprecated } from "./transforms/attribute/deprecated";
-import { dpTransitive } from "./transforms/size/dp-transitive";
-import { space } from "./transforms/size/space";
-import { spaceJs } from "./transforms/size/space-js";
-import { pxToRemTransitive } from "./transforms/size/px-to-rem";
-import { stripPx } from "./transforms/size/strip-px";
-import { stripAllPx } from "./transforms/size/strip-all-px";
-import { stripAllPxJs } from "./transforms/size/strip-all-px-js";
-import { float } from "./transforms/size/float";
-import { cssClamp as clamp } from "./transforms/size/clamp";
+import { deprecated } from './transforms/attribute/deprecated';
+import { dpTransitive } from './transforms/size/dp-transitive';
+import { space } from './transforms/size/space';
+import { spaceJs } from './transforms/size/space-js';
+import { pxToRemTransitive } from './transforms/size/px-to-rem';
+import { stripPx } from './transforms/size/strip-px';
+import { stripAllPx } from './transforms/size/strip-all-px';
+import { stripAllPxJs } from './transforms/size/strip-all-px-js';
+import { float } from './transforms/size/float';
+import { cssClamp as clamp } from './transforms/size/clamp';
 
 // ==== Include custom formats ====
-import { scssTypography } from "./formats/scss-typography";
-import { scssMap } from "./formats/scss-map";
-import { site } from "./formats/site";
-import { figma as figmaFormat } from "./formats/figma";
-import { typescriptModuleValues } from "./formats/typescript-module-values";
-import { typescriptModuleDeclarations } from "./formats/typescript-module-declarations";
-import { typescriptTokenNameUnion } from "./formats/typescript-token-name-union";
+import { scssTypography } from './formats/scss-typography';
+import { scssMap } from './formats/scss-map';
+import { site } from './formats/site';
+import { figma as figmaFormat } from './formats/figma';
+import { typescriptModuleValues } from './formats/typescript-module-values';
+import { typescriptModuleDeclarations } from './formats/typescript-module-declarations';
+import { typescriptTokenNameUnion } from './formats/typescript-token-name-union';
 
 // ==== Include custom actions ====
-import { concatFiles } from "./actions/concat-files";
-import {
-  includeDisplayScss,
-  includeQueriesFileScss,
-} from "./actions/include-utility-file";
+import { concatFiles } from './actions/concat-files';
+import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
 
 // ==== Include custom filters ====
-import { colorBackgroundTokens } from "./filters/color-background-tokens";
-import { colorBorderTokens } from "./filters/color-border-tokens";
-import { colorIconTokens } from "./filters/color-icon-tokens";
-import { colorTextTokens } from "./filters/color-text-tokens";
-import { formTokens } from "./filters/form-tokens";
-import { iconTokens } from "./filters/icon-tokens";
-import { membershipSubtleTokens } from "./filters/membership-subtle-tokens";
-import { membershipVibrantTokens } from "./filters/membership-vibrant-tokens";
-import { motionTokens } from "./filters/motion-tokens";
-import { prominenceTokens } from "./filters/prominence-tokens";
-import { radiusTokens } from "./filters/radius-tokens";
-import { removeCategoriesTokens } from "./filters/remove-categories-tokens";
-import { removeSourceTokens } from "./filters/remove-source-tokens";
-import { spaceTokens } from "./filters/space-tokens";
+import { colorBackgroundTokens } from './filters/color-background-tokens';
+import { colorBorderTokens } from './filters/color-border-tokens';
+import { colorIconTokens } from './filters/color-icon-tokens';
+import { colorTextTokens } from './filters/color-text-tokens';
+import { formTokens } from './filters/form-tokens';
+import { iconTokens } from './filters/icon-tokens';
+import { membershipSubtleTokens } from './filters/membership-subtle-tokens';
+import { membershipVibrantTokens } from './filters/membership-vibrant-tokens';
+import { motionTokens } from './filters/motion-tokens';
+import { prominenceTokens } from './filters/prominence-tokens';
+import { radiusTokens } from './filters/radius-tokens';
+import { removeCategoriesTokens } from './filters/remove-categories-tokens';
+import { removeSourceTokens } from './filters/remove-source-tokens';
+import { spaceTokens } from './filters/space-tokens';
 
 // ==== Register style dictionary ====
 // Tokens Studio provides preprocessors and additional transforms for composite tokens
@@ -129,7 +126,7 @@ spaceTokens(StyleDictionary);
 async function buildAllThemesAndPlatforms() {
   for (const theme of THEMES) {
     for (const platform of PLATFORMS) {
-      console.log("\n==============================================");
+      console.log('\n==============================================');
       console.log(`\nProcessing: [${platform}] [${theme}]`);
 
       const sd = new StyleDictionary(getConfig(platform, theme));
@@ -144,8 +141,8 @@ async function buildAllThemesAndPlatforms() {
     }
   }
 
-  console.log("\n==============================================");
-  console.log("\nBuild completed!");
+  console.log('\n==============================================');
+  console.log('\nBuild completed!');
 }
 
 // Run the function to process all themes and platforms

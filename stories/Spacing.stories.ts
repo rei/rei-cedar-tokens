@@ -1,12 +1,12 @@
-import type { StoryObj, Meta } from "@storybook/html";
-import * as tokens from "../dist/rei-dot-com/js/cdr-tokens.mjs";
+import type { StoryObj, Meta } from '@storybook/html';
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 
 const meta: Meta = {
-  title: "Tokens/Spacing",
+  title: 'Tokens/Spacing',
   parameters: {
-    layout: "fullscreen",
-    controls: { disable: true },
-  },
+    layout: 'fullscreen',
+    controls: { disable: true }
+  }
 };
 
 export default meta;
@@ -23,8 +23,8 @@ interface ClampParts {
 }
 
 function remToPx(val: string): number {
-  if (val.endsWith("rem")) return parseFloat(val) * 16;
-  if (val.endsWith("px")) return parseFloat(val);
+  if (val.endsWith('rem')) return parseFloat(val) * 16;
+  if (val.endsWith('px')) return parseFloat(val);
   return parseFloat(val);
 }
 
@@ -32,20 +32,20 @@ function parseClamp(value: string): ClampParts | null {
   const m = value.match(/^clamp\(\s*([^,]+),\s*([^,]+),\s*([^)]+)\)\s*$/);
   if (!m) return null;
   const [, rawMin, rawIdeal, rawMax] = m;
-  const slope = rawIdeal.trim().match(/([\d.]+c[qw][iwh])/)?.[1] ?? "";
+  const slope = rawIdeal.trim().match(/([\d.]+c[qw][iwh])/)?.[1] ?? '';
   return {
     min: remToPx(rawMin.trim()),
     max: remToPx(rawMax.trim()),
     ideal: rawIdeal.trim(),
     slope,
-    raw: value,
+    raw: value
   };
 }
 
 function valueToPx(value: string): number {
-  if (value.includes("clamp")) return parseClamp(value)?.max ?? 0;
-  if (value.endsWith("rem")) return parseFloat(value) * 16;
-  if (value.endsWith("px")) return parseFloat(value);
+  if (value.includes('clamp')) return parseClamp(value)?.max ?? 0;
+  if (value.endsWith('rem')) return parseFloat(value) * 16;
+  if (value.endsWith('px')) return parseFloat(value);
   return parseFloat(value);
 }
 
@@ -322,7 +322,7 @@ const chrome = `
 function staticRow(name: string, value: string, maxPx: number): string {
   const px = valueToPx(value);
   const pct = maxPx > 0 ? Math.max((px / maxPx) * 100, 0.5) : 0;
-  const display = value.endsWith("px") || value === "0" ? value : `${px}px`;
+  const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
   return `
     <div class="srow">
       <span class="srow-name">${name}</span>
@@ -335,7 +335,7 @@ function insetRow(name: string, value: string, maxPx: number): string {
   const px = valueToPx(value);
   const pad = Math.max(Math.round((px / maxPx) * 18), 2);
   const boxSize = 8 + pad * 2;
-  const display = value.endsWith("px") || value === "0" ? value : `${px}px`;
+  const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
   return `
     <div class="irow">
       <span class="irow-name">${name}</span>
@@ -350,7 +350,7 @@ function insetRow(name: string, value: string, maxPx: number): string {
 
 function fluidCard(name: string, value: string, absMax: number): string {
   const cp = parseClamp(value);
-  if (!cp) return "";
+  if (!cp) return '';
 
   const { min, max, slope, raw } = cp;
   const range = max - min;
@@ -366,7 +366,7 @@ function fluidCard(name: string, value: string, absMax: number): string {
     <div class="fcard">
       <div class="fcard-header">
         <span class="fcard-name">${name}</span>
-        ${slope ? `<span class="fcard-slope">${slope}</span>` : ""}
+        ${slope ? `<span class="fcard-slope">${slope}</span>` : ''}
       </div>
 
       <div class="fcard-range-wrap">
@@ -399,19 +399,14 @@ function fluidCard(name: string, value: string, absMax: number): string {
     </div>`;
 }
 
-function section(
-  title: string,
-  desc: string,
-  content: string,
-  count: number,
-): string {
+function section(title: string, desc: string, content: string, count: number): string {
   return `
     <div class="sb-section">
       <div class="sb-section-header">
         <h2 class="sb-section-title">${title}</h2>
         <span class="sb-section-count">${count}</span>
       </div>
-      ${desc ? `<p class="sb-section-desc">${desc}</p>` : ""}
+      ${desc ? `<p class="sb-section-desc">${desc}</p>` : ''}
       ${content}
     </div>`;
 }
@@ -425,70 +420,68 @@ function getTokens(prefix: string): [string, string][] {
 // ─── Stories ─────────────────────────────────────────────────────────────────
 
 export const BaseSpacing: Story = {
-  name: "Base Scale",
+  name: 'Base Scale',
   render: () => {
-    const base = getTokens("CdrSpace").filter(
-      ([k]) => !k.startsWith("CdrSpaceScale") && !k.startsWith("CdrSpaceInset"),
+    const base = getTokens('CdrSpace').filter(
+      ([k]) => !k.startsWith('CdrSpaceScale') && !k.startsWith('CdrSpaceInset')
     );
     const maxPx = Math.max(...base.map(([, v]) => valueToPx(v)));
-    const rows = base.map(([n, v]) => staticRow(n, v, maxPx)).join("");
-    return `${chrome}<div class="sb-page">${section("Base Spacing", "Fixed pixel values. Bar width is proportional to the token value.", rows, base.length)}</div>`;
-  },
+    const rows = base.map(([n, v]) => staticRow(n, v, maxPx)).join('');
+    return `${chrome}<div class="sb-page">${section('Base Spacing', 'Fixed pixel values. Bar width is proportional to the token value.', rows, base.length)}</div>`;
+  }
 };
 
 export const FluidSpacing: Story = {
-  name: "Fluid Scale",
+  name: 'Fluid Scale',
   render: () => {
-    const fluid = getTokens("CdrSpaceScale");
+    const fluid = getTokens('CdrSpaceScale');
     const absMax = Math.max(...fluid.map(([, v]) => parseClamp(v)?.max ?? 0));
-    const cards = fluid.map(([n, v]) => fluidCard(n, v, absMax)).join("");
+    const cards = fluid.map(([n, v]) => fluidCard(n, v, absMax)).join('');
     return `${chrome}<div class="sb-page">${section(
-      "Fluid Space Scale",
+      'Fluid Space Scale',
       'Values use <code style="font-family:Pressura,monospace;font-size:11px;">clamp(min, ideal, max)</code> — they grow from <strong>min</strong> to <strong>max</strong> as the container widens. The bar shows where each token\'s range sits relative to the largest token.',
       `<div class="fluid-grid">${cards}</div>`,
-      fluid.length,
+      fluid.length
     )}</div>`;
-  },
+  }
 };
 
 export const InsetSpacing: Story = {
-  name: "Inset",
+  name: 'Inset',
   render: () => {
-    const inset = getTokens("CdrSpaceInset");
+    const inset = getTokens('CdrSpaceInset');
     const maxPx = Math.max(...inset.map(([, v]) => valueToPx(v)));
-    const rows = inset.map(([n, v]) => insetRow(n, v, maxPx)).join("");
-    return `${chrome}<div class="sb-page">${section("Inset Spacing", "Padding tokens. The box preview scales proportionally to the token value.", rows, inset.length)}</div>`;
-  },
+    const rows = inset.map(([n, v]) => insetRow(n, v, maxPx)).join('');
+    return `${chrome}<div class="sb-page">${section('Inset Spacing', 'Padding tokens. The box preview scales proportionally to the token value.', rows, inset.length)}</div>`;
+  }
 };
 
 export const AllSpacing: Story = {
-  name: "All Spacing",
+  name: 'All Spacing',
   render: () => {
-    const base = getTokens("CdrSpace").filter(
-      ([k]) => !k.startsWith("CdrSpaceScale") && !k.startsWith("CdrSpaceInset"),
+    const base = getTokens('CdrSpace').filter(
+      ([k]) => !k.startsWith('CdrSpaceScale') && !k.startsWith('CdrSpaceInset')
     );
-    const fluid = getTokens("CdrSpaceScale");
-    const inset = getTokens("CdrSpaceInset");
+    const fluid = getTokens('CdrSpaceScale');
+    const inset = getTokens('CdrSpaceInset');
 
     const baseMax = Math.max(...base.map(([, v]) => valueToPx(v)));
     const fluidMax = Math.max(...fluid.map(([, v]) => parseClamp(v)?.max ?? 0));
     const insetMax = Math.max(...inset.map(([, v]) => valueToPx(v)));
 
-    const baseRows = base.map(([n, v]) => staticRow(n, v, baseMax)).join("");
-    const fluidCards = fluid
-      .map(([n, v]) => fluidCard(n, v, fluidMax))
-      .join("");
-    const insetRows = inset.map(([n, v]) => insetRow(n, v, insetMax)).join("");
+    const baseRows = base.map(([n, v]) => staticRow(n, v, baseMax)).join('');
+    const fluidCards = fluid.map(([n, v]) => fluidCard(n, v, fluidMax)).join('');
+    const insetRows = inset.map(([n, v]) => insetRow(n, v, insetMax)).join('');
 
     return `${chrome}<div class="sb-page">
-      ${section("Base Spacing", "Fixed pixel values.", baseRows, base.length)}
+      ${section('Base Spacing', 'Fixed pixel values.', baseRows, base.length)}
       ${section(
-        "Fluid Space Scale",
+        'Fluid Space Scale',
         'Values use <code style="font-family:Pressura,monospace;font-size:11px;">clamp(min, ideal, max)</code> — they grow with the container.',
         `<div class="fluid-grid">${fluidCards}</div>`,
-        fluid.length,
+        fluid.length
       )}
-      ${section("Inset Spacing", "Padding tokens — box preview scales proportionally.", insetRows, inset.length)}
+      ${section('Inset Spacing', 'Padding tokens — box preview scales proportionally.', insetRows, inset.length)}
     </div>`;
-  },
+  }
 };

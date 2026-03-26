@@ -1,12 +1,12 @@
-import type StyleDictionary from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
 import type {
   FormatFnArguments,
   TransformedToken,
-  TransformedTokens,
-} from "style-dictionary/types";
-import _ from "lodash";
-import { cleanMeta } from "@divriots/style-dictionary-to-figma";
-import { registerDeepMixin } from "./utils";
+  TransformedTokens
+} from 'style-dictionary/types';
+import _ from 'lodash';
+import { cleanMeta } from '@divriots/style-dictionary-to-figma';
+import { registerDeepMixin } from './utils';
 
 // Register the custom lodash mixin
 registerDeepMixin();
@@ -24,17 +24,17 @@ registerDeepMixin();
  */
 export const figma = (sd: typeof StyleDictionary): void => {
   sd.registerFormat({
-    name: "figma",
+    name: 'figma',
     format: ({ dictionary }: FormatFnArguments): string => {
       const propsToRemove = [
-        "isSource",
-        "attributes",
-        "path",
-        "docs",
-        "newToken",
-        "name",
-        "docCategory",
-        "docExample",
+        'isSource',
+        'attributes',
+        'path',
+        'docs',
+        'newToken',
+        'name',
+        'docCategory',
+        'docExample'
       ];
 
       /**
@@ -44,46 +44,38 @@ export const figma = (sd: typeof StyleDictionary): void => {
        * @param tokens - The token dictionary to transform
        * @returns Transformed tokens with preserved references
        */
-      const preserveReferences = (
-        tokens: TransformedTokens,
-      ): Record<string, unknown> => {
+      const preserveReferences = (tokens: TransformedTokens): Record<string, unknown> => {
         return _.deep(tokens, (obj) => {
-          return _.mapValues(
-            obj,
-            (value: TransformedToken | TransformedTokens) => {
-              // Check if this is a TransformedToken (has 'original' property)
-              if (
-                typeof value === "object" &&
-                value !== null &&
-                "original" in value &&
-                value.original?.$value &&
-                typeof value.original.$value === "string"
-              ) {
-                // Preserve the original reference value and remove the 'options.' prefix
-                return {
-                  $value: value.original.$value.replace("options.", ""),
-                  $type: value.$type,
-                  ...(value.original.$description && {
-                    $description: value.original.$description,
-                  }),
-                  ...(value.filePath && { filePath: value.filePath }),
-                };
-              }
-              return value;
-            },
-          );
+          return _.mapValues(obj, (value: TransformedToken | TransformedTokens) => {
+            // Check if this is a TransformedToken (has 'original' property)
+            if (
+              typeof value === 'object' &&
+              value !== null &&
+              'original' in value &&
+              value.original?.$value &&
+              typeof value.original.$value === 'string'
+            ) {
+              // Preserve the original reference value and remove the 'options.' prefix
+              return {
+                $value: value.original.$value.replace('options.', ''),
+                $type: value.$type,
+                ...(value.original.$description && {
+                  $description: value.original.$description
+                }),
+                ...(value.filePath && { filePath: value.filePath })
+              };
+            }
+            return value;
+          });
         });
       };
 
       // First preserve references, then clean metadata
-      const transformedTokens = cleanMeta(
-        preserveReferences(dictionary.tokens),
-        {
-          cleanMeta: propsToRemove,
-        },
-      );
+      const transformedTokens = cleanMeta(preserveReferences(dictionary.tokens), {
+        cleanMeta: propsToRemove
+      });
 
       return JSON.stringify(transformedTokens, null, 2);
-    },
+    }
   });
 };

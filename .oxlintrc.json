@@ -65,16 +65,10 @@
     "use-isnan": "error",
     "valid-typeof": "error"
   },
-  "ignorePatterns": [
-    "dist/",
-    "node_modules/",
-    "storybook-static/"
-  ],
+  "ignorePatterns": ["dist/", "node_modules/", "storybook-static/"],
   "overrides": [
     {
-      "files": [
-        "**/*.ts"
-      ],
+      "files": ["**/*.ts"],
       "rules": {
         "@typescript-eslint/ban-ts-comment": "error",
         "no-array-constructor": "error",
@@ -109,10 +103,7 @@
         "Promise": "readonly",
         "URL": "readonly"
       },
-      "plugins": [
-        "typescript",
-        "unicorn"
-      ]
+      "plugins": ["typescript", "unicorn"]
     }
   ]
 }

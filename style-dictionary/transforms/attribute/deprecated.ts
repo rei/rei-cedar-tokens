@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom attribute transform for handling deprecated tokens.
@@ -17,21 +17,21 @@ import type { Token } from "style-dictionary";
  */
 export const deprecated = (sd: typeof StyleDictionary) => {
   sd.registerTransform({
-    name: "attribute/deprecated",
-    type: "attribute",
+    name: 'attribute/deprecated',
+    type: 'attribute',
     transform: (token: Token): Record<string, unknown> => {
-      if (token.path[0].includes("deprecated")) {
-        const [, year, release] = token.path[0].split("-");
+      if (token.path[0].includes('deprecated')) {
+        const [, year, release] = token.path[0].split('-');
         token.path.shift();
 
         return {
           deprecated: true,
-          "deprecated-year": year,
-          "deprecated-release": release,
+          'deprecated-year': year,
+          'deprecated-release': release
         };
       }
 
       return { deprecated: false };
-    },
+    }
   });
 };

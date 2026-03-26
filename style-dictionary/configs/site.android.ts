@@ -1,24 +1,24 @@
-import type { PlatformConfig } from "style-dictionary/types";
-import type { Theme } from "../constants";
-import { commonConfig } from "../utils";
+import type { PlatformConfig } from 'style-dictionary/types';
+import type { Theme } from '../constants';
+import { commonConfig } from '../utils';
 
 export const siteAndroid = (theme: Theme): PlatformConfig => ({
   siteAndroid: {
-    ...commonConfig(theme, "json"),
+    ...commonConfig(theme, 'json'),
     transforms: [
-      "attribute/deprecated",
-      "name/snake",
-      "size/space",
-      "size/dp-transitive",
-      "size/sp",
-      "color/hex8android",
+      'attribute/deprecated',
+      'name/snake',
+      'size/space',
+      'size/dp-transitive',
+      'size/sp',
+      'color/hex8android'
     ],
     files: [
       {
-        destination: "android.json",
-        format: "site",
-        filter: "remove-source-tokens",
-      },
-    ],
-  },
+        destination: 'android.json',
+        format: 'site',
+        filter: 'remove-source-tokens'
+      }
+    ]
+  }
 });

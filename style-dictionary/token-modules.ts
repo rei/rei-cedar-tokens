@@ -87,10 +87,7 @@ const TOKEN_MODULES: TokenModuleDefinition[] = [
   }
 ];
 
-export const getTokenModules = (
-  theme: Theme,
-  target: ModuleTarget
-): TokenModuleDefinition[] => {
+export const getTokenModules = (theme: Theme, target: ModuleTarget): TokenModuleDefinition[] => {
   return TOKEN_MODULES.filter(
     (tokenModule) =>
       tokenModule.targets.includes(target) &&

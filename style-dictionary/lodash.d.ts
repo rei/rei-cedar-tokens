@@ -3,7 +3,7 @@
  * This extends the LoDashStatic interface with the custom `deep` method
  * that was added via _.mixin() in formats/utils.ts
  */
-declare module "lodash" {
+declare module 'lodash' {
   interface LoDashStatic {
     /**
      * Recursively maps over an object's values using a mapper function.
@@ -15,7 +15,7 @@ declare module "lodash" {
      */
     deep<T extends Record<string, unknown>>(
       obj: T,
-      mapper: (obj: Record<string, unknown>) => Record<string, unknown>,
+      mapper: (obj: Record<string, unknown>) => Record<string, unknown>
     ): Record<string, unknown>;
   }
 }

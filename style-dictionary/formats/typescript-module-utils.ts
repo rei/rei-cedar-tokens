@@ -1,19 +1,19 @@
-import { basename } from "node:path";
+import { basename } from 'node:path';
 
 export const toPascalCase = (value: string): string => {
   return value
-    .split("-")
+    .split('-')
     .filter(Boolean)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join("");
+    .join('');
 };
 
 export const getModuleBaseName = (destination?: string): string => {
   if (!destination) {
-    throw new Error("TypeScript module formats require a file destination");
+    throw new Error('TypeScript module formats require a file destination');
   }
 
-  return basename(destination).replace(/(\.names)?\.(d\.)?ts$/, "");
+  return basename(destination).replace(/(\.names)?\.(d\.)?ts$/, '');
 };
 
 export const getModuleName = (destination?: string): string => {

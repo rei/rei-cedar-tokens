@@ -1,11 +1,11 @@
-import _ from "lodash";
-import fs from "fs-extra";
-import { createRequire } from "node:module";
-import type { TransformedToken } from "style-dictionary/types";
+import _ from 'lodash';
+import fs from 'fs-extra';
+import { createRequire } from 'node:module';
+import type { TransformedToken } from 'style-dictionary/types';
 
 const require = createRequire(import.meta.url);
 
-const themes = ["docsite", "rei-dot-com"];
+const themes = ['docsite', 'rei-dot-com'];
 
 interface TokensByCategory {
   [category: string]: TransformedToken[];
@@ -19,15 +19,11 @@ interface DataByPlatform {
 }
 
 themes.forEach((theme) => {
-  const rawGlobal: TokensByCategory = require(
-    `./dist/${theme}/json/global.json`,
-  );
+  const rawGlobal: TokensByCategory = require(`./dist/${theme}/json/global.json`);
   const rawWeb: TokensByCategory = require(`./dist/${theme}/json/web.json`);
-  const rawAndroid: TokensByCategory = require(
-    `./dist/${theme}/json/android.json`,
-  );
+  const rawAndroid: TokensByCategory = require(`./dist/${theme}/json/android.json`);
   const rawIos: TokensByCategory = require(`./dist/${theme}/json/ios.json`);
-  const utilities: TokensByCategory = require("./style-dictionary/utilities/utilities.json");
+  const utilities: TokensByCategory = require('./style-dictionary/utilities/utilities.json');
 
   // get keys for each category per platform
   const globalKeyArr = Object.keys(rawGlobal);
@@ -36,10 +32,7 @@ themes.forEach((theme) => {
   const iosKeyArr = Object.keys(rawIos);
 
   // diffing function
-  function hasSameName(
-    arrVal: TransformedToken,
-    otherVal: TransformedToken,
-  ): boolean {
+  function hasSameName(arrVal: TransformedToken, otherVal: TransformedToken): boolean {
     const kebab1 = _.kebabCase(arrVal.name);
     const kebab2 = _.kebabCase(otherVal.name);
 
@@ -53,7 +46,7 @@ themes.forEach((theme) => {
     global: {},
     web: utilities,
     android: {},
-    ios: {},
+    ios: {}
   };
 
   allKeys.forEach((key) => {
@@ -61,25 +54,13 @@ themes.forEach((theme) => {
     dataByPlatform.global[key] = rawGlobal[key];
 
     // find unique tokens by platform
-    dataByPlatform.web[key] = _.differenceWith(
-      rawWeb[key],
-      rawGlobal[key],
-      hasSameName,
-    );
-    dataByPlatform.android[key] = _.differenceWith(
-      rawAndroid[key],
-      rawGlobal[key],
-      hasSameName,
-    );
-    dataByPlatform.ios[key] = _.differenceWith(
-      rawIos[key],
-      rawGlobal[key],
-      hasSameName,
-    );
+    dataByPlatform.web[key] = _.differenceWith(rawWeb[key], rawGlobal[key], hasSameName);
+    dataByPlatform.android[key] = _.differenceWith(rawAndroid[key], rawGlobal[key], hasSameName);
+    dataByPlatform.ios[key] = _.differenceWith(rawIos[key], rawGlobal[key], hasSameName);
   });
 
   fs.outputFileSync(
     `./dist/${theme}/json/platform-tokens.json`,
-    JSON.stringify(dataByPlatform, null, 2),
+    JSON.stringify(dataByPlatform, null, 2)
   );
 });

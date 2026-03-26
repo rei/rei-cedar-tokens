@@ -1,9 +1,6 @@
-import type StyleDictionary from "style-dictionary";
-import type {
-  FormatFnArguments,
-  TransformedToken,
-} from "style-dictionary/types";
-import _ from "lodash";
+import type StyleDictionary from 'style-dictionary';
+import type { FormatFnArguments, TransformedToken } from 'style-dictionary/types';
+import _ from 'lodash';
 
 /**
  * Registers a SCSS map format for Style Dictionary.
@@ -15,44 +12,44 @@ import _ from "lodash";
  */
 export const scssMap = (sd: typeof StyleDictionary): void => {
   sd.registerFormat({
-    name: "scss/map",
+    name: 'scss/map',
     format: ({ dictionary }: FormatFnArguments): string => {
-      let scss = "";
+      let scss = '';
       const utilityTokens = _.filter(
         dictionary.allTokens,
-        (token: TransformedToken) => token["utility-class"] === true,
+        (token: TransformedToken) => token['utility-class'] === true
       );
-      const categories = _.groupBy(utilityTokens, "docs.category");
+      const categories = _.groupBy(utilityTokens, 'docs.category');
 
       // Loop through categories
       const catKeys = Object.keys(categories);
       catKeys.forEach((cat) => {
         // Loop through types
-        const types = _.groupBy(categories[cat], "docs.type");
+        const types = _.groupBy(categories[cat], 'docs.type');
         const typeKeys = Object.keys(types);
         typeKeys.forEach((type) => {
-          let formattedType = type === "undefined" ? "" : `-${type}`;
+          let formattedType = type === 'undefined' ? '' : `-${type}`;
           if (type === cat) {
-            formattedType = "";
+            formattedType = '';
           }
           scss += `$${cat}${formattedType}: (\n  `;
 
           types[type].forEach((token: TransformedToken, i: number) => {
             if (i !== 0) {
-              scss += ",\n  ";
+              scss += ',\n  ';
             }
-            if (token.name.includes("-family")) {
+            if (token.name.includes('-family')) {
               scss += `${token.name}: '${token.$value}'`;
             } else {
               scss += `${token.name}: ${token.$value}`;
             }
           });
 
-          scss += "\n);\n";
+          scss += '\n);\n';
         });
       });
 
       return scss;
-    },
+    }
   });
 };

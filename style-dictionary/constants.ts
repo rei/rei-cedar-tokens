@@ -10,7 +10,7 @@
  * Themes provide overrides for base tokens and are located in tokens/themes/[theme-name]/
  * Each theme is built for all platforms.
  */
-export const THEMES = ["rei-dot-com", "docsite"];
+export const THEMES = ['rei-dot-com', 'docsite'];
 
 /**
  * Available platforms
@@ -23,15 +23,15 @@ export const THEMES = ["rei-dot-com", "docsite"];
  * - site/*: JSON for documentation site
  */
 export const PLATFORMS = [
-  "site/global", // Documentation - all platforms
-  "site/web", // Documentation - web tokens
-  "site/android", // Documentation - Android tokens
-  "site/ios", // Documentation - iOS tokens
-  "web", // Web applications
-  "android", // Android native
-  "ios", // iOS native
-  "figma", // Figma design tool
-  "types", // TypeScript modules
+  'site/global', // Documentation - all platforms
+  'site/web', // Documentation - web tokens
+  'site/android', // Documentation - Android tokens
+  'site/ios', // Documentation - iOS tokens
+  'web', // Web applications
+  'android', // Android native
+  'ios', // iOS native
+  'figma', // Figma design tool
+  'types' // TypeScript modules
 ];
 
 export type Platform = (typeof PLATFORMS)[number];
@@ -46,14 +46,14 @@ export type Theme = (typeof THEMES)[number];
  * @see https://tr.designtokens.org/format/#types
  */
 export const TOKEN_TYPES = [
-  "color", // Color values (#hex, rgb, etc.)
-  "dimension", // Size values with units (px, rem, etc.)
-  "fontFamily", // Font family names
-  "fontSize", // Font size values
-  "fontWeight", // Font weight values
-  "duration", // Time duration (for animations)
-  "cubicBezier", // Easing functions
-  "number", // Unitless numbers
+  'color', // Color values (#hex, rgb, etc.)
+  'dimension', // Size values with units (px, rem, etc.)
+  'fontFamily', // Font family names
+  'fontSize', // Font size values
+  'fontWeight', // Font weight values
+  'duration', // Time duration (for animations)
+  'cubicBezier', // Easing functions
+  'number' // Unitless numbers
 ];
 
 export type TokenTypes = (typeof TOKEN_TYPES)[number];

@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a transform for converting dimension tokens to Android density-independent pixels (dp).
@@ -16,13 +16,13 @@ import type { Token } from "style-dictionary";
  */
 export const dpTransitive = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
-    name: "size/dp-transitive",
-    type: "value",
+    name: 'size/dp-transitive',
+    type: 'value',
     transitive: true,
-    filter: (token: Token): boolean => token.$type === "dimension",
+    filter: (token: Token): boolean => token.$type === 'dimension',
     transform: (token: Token): string => {
       const val = parseFloat(token.$value);
-      return val.toFixed(2) + "dp";
-    },
+      return val.toFixed(2) + 'dp';
+    }
   });
 };

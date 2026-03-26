@@ -1,7 +1,7 @@
-import type StyleDictionary from "style-dictionary";
-import fs from "fs-extra";
-import path from "path";
-import { getDirname } from "../utils";
+import type StyleDictionary from 'style-dictionary';
+import fs from 'fs-extra';
+import path from 'path';
+import { getDirname } from '../utils';
 
 const __dirname = getDirname(import.meta.url);
 
@@ -32,15 +32,15 @@ interface UtilityActionOptions {
 export const createIncludeUtilityAction = (
   options: UtilityActionOptions | string,
   sourceFileName?: string,
-  description = "utility file",
+  description = 'utility file'
 ) => {
   // Support both new options object and legacy positional arguments
   const config: UtilityActionOptions =
-    typeof options === "string"
+    typeof options === 'string'
       ? {
           actionName: options,
           sourceFiles: sourceFileName!,
-          description,
+          description
         }
       : options;
 
@@ -48,8 +48,8 @@ export const createIncludeUtilityAction = (
     actionName,
     sourceFiles,
     outputFileName,
-    outputSubDir = "",
-    description: desc = "utility file",
+    outputSubDir = '',
+    description: desc = 'utility file'
   } = config;
 
   const files = Array.isArray(sourceFiles) ? sourceFiles : [sourceFiles];
@@ -61,16 +61,11 @@ export const createIncludeUtilityAction = (
       do: (_, sdConfig): void => {
         try {
           if (!sdConfig.buildPath) {
-            console.warn("No buildPath specified in the configuration.");
+            console.warn('No buildPath specified in the configuration.');
             return;
           }
 
-          const outputDir = path.join(
-            __dirname,
-            "../../",
-            sdConfig.buildPath,
-            outputSubDir,
-          );
+          const outputDir = path.join(__dirname, '../../', sdConfig.buildPath, outputSubDir);
           const outputFile = path.join(outputDir, finalOutputFileName);
 
           // Ensure the output directory exists
@@ -78,19 +73,15 @@ export const createIncludeUtilityAction = (
 
           // Process files - copy first, then append rest if multiple
           files.forEach((file, index) => {
-            const sourceFile = path.join(__dirname, "../utilities", file);
+            const sourceFile = path.join(__dirname, '../utilities', file);
 
             if (index === 0) {
               fs.copyFileSync(sourceFile, outputFile);
-              console.log(
-                `Successfully copied ${desc}: ${sourceFile} to ${outputFile}`,
-              );
+              console.log(`Successfully copied ${desc}: ${sourceFile} to ${outputFile}`);
             } else {
-              const content = fs.readFileSync(sourceFile, "utf8");
+              const content = fs.readFileSync(sourceFile, 'utf8');
               fs.appendFileSync(outputFile, content);
-              console.log(
-                `Successfully appended ${desc}: ${sourceFile} to ${outputFile}`,
-              );
+              console.log(`Successfully appended ${desc}: ${sourceFile} to ${outputFile}`);
             }
           });
         } catch (error) {
@@ -101,18 +92,18 @@ export const createIncludeUtilityAction = (
       undo: (_, sdConfig): void => {
         try {
           if (!sdConfig.buildPath) {
-            console.warn("No buildPath specified in the configuration.");
+            console.warn('No buildPath specified in the configuration.');
             return;
           }
 
-          const outputDir = path.join(__dirname, "../../", sdConfig.buildPath);
+          const outputDir = path.join(__dirname, '../../', sdConfig.buildPath);
           fs.removeSync(outputDir);
           console.log(`Successfully removed ${outputDir}`);
         } catch (error) {
           console.error(`Error removing ${desc} directory:`, error);
           throw error;
         }
-      },
+      }
     });
   };
 };
@@ -121,20 +112,20 @@ export const createIncludeUtilityAction = (
  * Pre-configured action for including display.scss utilities
  */
 export const includeDisplayScss = createIncludeUtilityAction({
-  actionName: "include-display-scss",
-  sourceFiles: "display.scss",
-  outputFileName: "cdr-display-mixins.scss",
-  outputSubDir: "utilities",
-  description: "display utilities SCSS",
+  actionName: 'include-display-scss',
+  sourceFiles: 'display.scss',
+  outputFileName: 'cdr-display-mixins.scss',
+  outputSubDir: 'utilities',
+  description: 'display utilities SCSS'
 });
 
 /**
  * Pre-configured action for including deprecate.scss utilities
  */
 export const includeDeprecateScss = createIncludeUtilityAction(
-  "include-deprecate-scss",
-  "deprecate.scss",
-  "deprecation utilities SCSS",
+  'include-deprecate-scss',
+  'deprecate.scss',
+  'deprecation utilities SCSS'
 );
 
 /**
@@ -142,9 +133,9 @@ export const includeDeprecateScss = createIncludeUtilityAction(
  * concatenated into a single cdr-breakpoint-mixins.scss file
  */
 export const includeQueriesFileScss = createIncludeUtilityAction({
-  actionName: "include-queries-file-scss",
-  sourceFiles: ["media-queries.scss", "container-queries.scss"],
-  outputFileName: "cdr-breakpoint-mixins.scss",
-  outputSubDir: "utilities",
-  description: "breakpoint mixins SCSS",
+  actionName: 'include-queries-file-scss',
+  sourceFiles: ['media-queries.scss', 'container-queries.scss'],
+  outputFileName: 'cdr-breakpoint-mixins.scss',
+  outputSubDir: 'utilities',
+  description: 'breakpoint mixins SCSS'
 });

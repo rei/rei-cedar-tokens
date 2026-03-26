@@ -1,5 +1,5 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
 
 type JsonSchema = {
   $id?: string;
@@ -15,18 +15,16 @@ type JsonSchema = {
   $defs?: Record<string, JsonSchema>;
 };
 
-const SCHEMA_PATH = resolve(process.cwd(), "schema/token.schema.json");
-const OUTPUT_PATH = resolve(process.cwd(), "dist/types/base/token-schema.d.ts");
+const SCHEMA_PATH = resolve(process.cwd(), 'schema/token.schema.json');
+const OUTPUT_PATH = resolve(process.cwd(), 'dist/types/base/token-schema.d.ts');
 
 const quoteProperty = (propertyName: string): string => {
-  return /^[$A-Z_a-z][$\w]*$/.test(propertyName)
-    ? propertyName
-    : JSON.stringify(propertyName);
+  return /^[$A-Z_a-z][$\w]*$/.test(propertyName) ? propertyName : JSON.stringify(propertyName);
 };
 
 const getObjectType = (
   schema: JsonSchema | undefined,
-  fallback = "Record<string, unknown>",
+  fallback = 'Record<string, unknown>'
 ): string => {
   if (!schema) {
     return fallback;
@@ -36,25 +34,19 @@ const getObjectType = (
   if (Array.isArray(valueTypes)) {
     return valueTypes
       .map((valueType) =>
-        valueType === "string" ||
-        valueType === "number" ||
-        valueType === "boolean"
+        valueType === 'string' || valueType === 'number' || valueType === 'boolean'
           ? valueType
-          : "unknown",
+          : 'unknown'
       )
-      .join(" | ");
+      .join(' | ');
   }
 
-  if (
-    valueTypes === "string" ||
-    valueTypes === "number" ||
-    valueTypes === "boolean"
-  ) {
+  if (valueTypes === 'string' || valueTypes === 'number' || valueTypes === 'boolean') {
     return valueTypes;
   }
 
-  if (valueTypes === "array") {
-    return `${getObjectType(schema.items, "unknown")}[]`;
+  if (valueTypes === 'array') {
+    return `${getObjectType(schema.items, 'unknown')}[]`;
   }
 
   return fallback;
@@ -69,75 +61,75 @@ const renderTokenSchemaTypes = (schema: JsonSchema): string => {
   const tokenValueObject = tokenValue.oneOf?.[1];
 
   const attributeEntries = Object.entries(tokenLeaf.properties ?? {}).filter(
-    ([propertyName]) => !["$value", "$type", "docs"].includes(propertyName),
+    ([propertyName]) => !['$value', '$type', 'docs'].includes(propertyName)
   );
   const descriptionEntries = Object.entries(docsDescription?.properties ?? {});
   const descriptionRequired = new Set(docsDescription?.required ?? []);
   const propertyNames = tokenLeaf.propertyNames?.enum ?? [];
 
   return [
-    "/* eslint-disable */",
-    "// This file is auto-generated from schema/token.schema.json. Do not edit manually.",
-    schema.$id ? `// Schema: ${schema.$id}` : "",
-    schema.title ? `// Title: ${schema.title}` : "",
-    "",
-    "export type TokenValuePrimitive = string | number | boolean;",
-    `export type TokenValueComposite = Record<string, ${getObjectType(tokenValueObject?.additionalProperties, "string | number")}>;`,
-    "export type TokenValue = TokenValuePrimitive | TokenValueComposite;",
-    "",
+    '/* eslint-disable */',
+    '// This file is auto-generated from schema/token.schema.json. Do not edit manually.',
+    schema.$id ? `// Schema: ${schema.$id}` : '',
+    schema.title ? `// Title: ${schema.title}` : '',
+    '',
+    'export type TokenValuePrimitive = string | number | boolean;',
+    `export type TokenValueComposite = Record<string, ${getObjectType(tokenValueObject?.additionalProperties, 'string | number')}>;`,
+    'export type TokenValue = TokenValuePrimitive | TokenValueComposite;',
+    '',
     propertyNames.length > 0
       ? `export type TokenPropertyName = ${propertyNames
           .map((propertyName: string) => JSON.stringify(propertyName))
-          .join(" | ")};`
-      : "export type TokenPropertyName = string;",
-    "",
-    "export interface TokenDescriptionDetails {",
+          .join(' | ')};`
+      : 'export type TokenPropertyName = string;',
+    '',
+    'export interface TokenDescriptionDetails {',
     ...descriptionEntries.map(([propertyName, propertySchema]) => {
-      const optionalToken = descriptionRequired.has(propertyName) ? "" : "?";
+      const optionalToken = descriptionRequired.has(propertyName) ? '' : '?';
       return `  readonly ${quoteProperty(propertyName)}${optionalToken}: ${getObjectType(propertySchema)};`;
     }),
-    "}",
-    "",
-    "export type TokenDescription = string | TokenDescriptionDetails;",
-    "",
-    "export interface TokenDocs {",
-    "  readonly category: string;",
-    "  readonly type: string;",
-    "  readonly example: string;",
-    "  readonly description: TokenDescription;",
-    "}",
-    "",
-    "export interface TokenAttributes {",
+    '}',
+    '',
+    'export type TokenDescription = string | TokenDescriptionDetails;',
+    '',
+    'export interface TokenDocs {',
+    '  readonly category: string;',
+    '  readonly type: string;',
+    '  readonly example: string;',
+    '  readonly description: TokenDescription;',
+    '}',
+    '',
+    'export interface TokenAttributes {',
     ...attributeEntries.map(([propertyName, propertySchema]) => {
       return `  readonly ${quoteProperty(propertyName)}?: ${getObjectType(propertySchema)};`;
     }),
-    "}",
-    "",
-    "export interface Token extends TokenAttributes {",
-    "  readonly $value: TokenValue;",
-    "  readonly $type: string;",
-    "  readonly docs: TokenDocs;",
-    "}",
-    "",
-    "export type TokenLeaf = Token;",
-    "",
-    "export interface TokenGroup {",
-    "  readonly [key: string]: TokenNodeOrGroup;",
-    "}",
-    "",
-    "export type TokenNodeOrGroup = TokenLeaf | TokenGroup;",
-    "",
-    "export interface TokenSchema {",
-    "  readonly [key: string]: TokenNodeOrGroup;",
-    "}",
-    "",
+    '}',
+    '',
+    'export interface Token extends TokenAttributes {',
+    '  readonly $value: TokenValue;',
+    '  readonly $type: string;',
+    '  readonly docs: TokenDocs;',
+    '}',
+    '',
+    'export type TokenLeaf = Token;',
+    '',
+    'export interface TokenGroup {',
+    '  readonly [key: string]: TokenNodeOrGroup;',
+    '}',
+    '',
+    'export type TokenNodeOrGroup = TokenLeaf | TokenGroup;',
+    '',
+    'export interface TokenSchema {',
+    '  readonly [key: string]: TokenNodeOrGroup;',
+    '}',
+    ''
   ]
     .filter(Boolean)
-    .join("\n");
+    .join('\n');
 };
 
 const generateBaseTypes = async (): Promise<void> => {
-  const schema = JSON.parse(await readFile(SCHEMA_PATH, "utf8")) as JsonSchema;
+  const schema = JSON.parse(await readFile(SCHEMA_PATH, 'utf8')) as JsonSchema;
   const contents = renderTokenSchemaTypes(schema);
 
   await mkdir(dirname(OUTPUT_PATH), { recursive: true });

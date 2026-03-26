@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only form tokens.
@@ -12,8 +12,7 @@ import type { Token } from "style-dictionary";
  */
 export const formTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "form-tokens",
-    filter: (token: Token) =>
-      token.path[0] !== "options" && token.path[0] === "form",
+    name: 'form-tokens',
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'form'
   });
 };

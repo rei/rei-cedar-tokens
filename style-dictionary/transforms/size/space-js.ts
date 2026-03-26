@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Extended Token interface that includes spacingModifier for space calculations.
@@ -21,15 +21,15 @@ interface SpaceToken extends Token {
  */
 export const spaceJs = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
-    name: "size/space-js",
-    type: "value",
+    name: 'size/space-js',
+    type: 'value',
     transitive: true,
     filter: (token: Token): boolean =>
-      token.$type === "dimension" && !!(token as SpaceToken).spacingModifier,
+      token.$type === 'dimension' && !!(token as SpaceToken).spacingModifier,
     transform: (token: Token): string => {
       const { $value, spacingModifier } = token as SpaceToken;
       const num = parseInt($value) * (spacingModifier || 1);
       return num.toString();
-    },
+    }
   });
 };

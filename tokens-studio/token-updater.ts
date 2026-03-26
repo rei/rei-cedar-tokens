@@ -1,14 +1,11 @@
-import fs from "fs-extra";
-import path from "path";
-import type { DesignToken, DesignTokens } from "style-dictionary/types";
-import { getDirname } from "../style-dictionary/utils";
+import fs from 'fs-extra';
+import path from 'path';
+import type { DesignToken, DesignTokens } from 'style-dictionary/types';
+import { getDirname } from '../style-dictionary/utils';
 
 const __dirname = getDirname(import.meta.url);
-const FIGMA_TOKENS_PATH = path.resolve(
-  __dirname,
-  "../dist/rei-dot-com/figma/figma.json",
-);
-const OPTIONS_FOLDER = path.resolve(__dirname, "../tokens/_options");
+const FIGMA_TOKENS_PATH = path.resolve(__dirname, '../dist/rei-dot-com/figma/figma.json');
+const OPTIONS_FOLDER = path.resolve(__dirname, '../tokens/_options');
 
 const optionsTokens = new Set<string>();
 
@@ -25,7 +22,7 @@ async function loadOptionsTokens(): Promise<void> {
     const files = await fs.readdir(OPTIONS_FOLDER);
 
     for (const file of files) {
-      if (file.endsWith(".json")) {
+      if (file.endsWith('.json')) {
         const content = await fs.readJson(path.join(OPTIONS_FOLDER, file));
 
         if (content.options) {
@@ -34,34 +31,28 @@ async function loadOptionsTokens(): Promise<void> {
       }
     }
   } catch (error) {
-    console.error("Error loading options tokens:", error);
+    console.error('Error loading options tokens:', error);
     throw error;
   }
 }
 
-function traverseAndStoreColorTokens(
-  obj: DesignTokens,
-  parentPath: string[],
-): void {
+function traverseAndStoreColorTokens(obj: DesignTokens, parentPath: string[]): void {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key];
 
-    if (typeof value === "object" && value !== null) {
+    if (typeof value === 'object' && value !== null) {
       if ((value as DesignToken).$value !== undefined) {
-        optionsTokens.add(currentPath.join("."));
-      } else if (!key.startsWith("$")) {
+        optionsTokens.add(currentPath.join('.'));
+      } else if (!key.startsWith('$')) {
         traverseAndStoreColorTokens(value as DesignTokens, currentPath);
       }
     }
   }
 }
 
-function isColorToken(
-  value: DesignToken,
-  parentType: string | null = null,
-): boolean {
-  if (value.$type === "color") return true;
-  if (parentType === "color") return true;
+function isColorToken(value: DesignToken, parentType: string | null = null): boolean {
+  if (value.$type === 'color') return true;
+  if (parentType === 'color') return true;
   return false;
 }
 
@@ -70,20 +61,20 @@ function flattenTokens(
   parentPath: string[] = [],
   result: FlatTokens = {},
   filePathMap: FilePathMap = {},
-  parentType: string | null = null,
+  parentType: string | null = null
 ): { flatTokens: FlatTokens; filePathMap: FilePathMap } {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key];
     const currentType = (value as DesignToken).$type || parentType;
 
-    if (typeof value === "object" && value !== null) {
+    if (typeof value === 'object' && value !== null) {
       if ((value as DesignToken).$value !== undefined) {
         if (isColorToken(value as DesignToken, currentType)) {
-          const tokenPath = currentPath.join(".");
+          const tokenPath = currentPath.join('.');
           result[tokenPath] = {
             ...value,
             filePath: (value as DesignToken).filePath,
-            parentType: currentType,
+            parentType: currentType
           } as DesignToken;
 
           if ((value as DesignToken).filePath) {
@@ -95,13 +86,7 @@ function flattenTokens(
           }
         }
       } else {
-        flattenTokens(
-          value as DesignTokens,
-          currentPath,
-          result,
-          filePathMap,
-          currentType,
-        );
+        flattenTokens(value as DesignTokens, currentPath, result, filePathMap, currentType);
       }
     }
   }
@@ -110,18 +95,16 @@ function flattenTokens(
 }
 
 function isReference(value: string): boolean {
-  return (
-    typeof value === "string" && value.startsWith("{") && value.endsWith("}")
-  );
+  return typeof value === 'string' && value.startsWith('{') && value.endsWith('}');
 }
 
 function normalizeReference(reference: string): string {
   // Remove the curly braces and any existing options prefix
-  const cleanPath = reference.replace(/[{}]/g, "").replace(/^options\./, "");
+  const cleanPath = reference.replace(/[{}]/g, '').replace(/^options\./, '');
 
   // Check if this reference is to an options token
-  const refParts = cleanPath.split(".");
-  let testPath = "";
+  const refParts = cleanPath.split('.');
+  let testPath = '';
 
   // Try to match increasingly specific paths
   for (const part of refParts) {
@@ -138,51 +121,44 @@ async function updateTokensInPlace(
   obj: DesignTokens,
   sourceTokens: FlatTokens,
   parentPath: string[] = [],
-  parentType: string | null = null,
+  parentType: string | null = null
 ): Promise<void> {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key];
-    const tokenPath = currentPath.join(".");
+    const tokenPath = currentPath.join('.');
     const currentType = (value as DesignToken).$type || parentType;
 
-    if (typeof value === "object" && value !== null) {
+    if (typeof value === 'object' && value !== null) {
       if (
         (value as DesignToken).$value !== undefined &&
         isColorToken(value as DesignToken, currentType)
       ) {
         const sourceToken = sourceTokens[tokenPath];
-        if (sourceToken && typeof sourceToken.$value === "string") {
+        if (sourceToken && typeof sourceToken.$value === 'string') {
           if (isReference(sourceToken.$value)) {
             const normalizedRef = normalizeReference(sourceToken.$value);
             const newValue = `{${normalizedRef}}`;
             if ((value as DesignToken).$value !== newValue) {
               console.log(
-                `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${newValue}`,
+                `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${newValue}`
               );
               (value as DesignToken).$value = newValue;
             }
           } else if ((value as DesignToken).$value !== sourceToken.$value) {
             console.log(
-              `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${sourceToken.$value}`,
+              `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${sourceToken.$value}`
             );
             (value as DesignToken).$value = sourceToken.$value;
           }
         }
       } else {
-        await updateTokensInPlace(
-          value as DesignTokens,
-          sourceTokens,
-          currentPath,
-          currentType,
-        );
+        await updateTokensInPlace(value as DesignTokens, sourceTokens, currentPath, currentType);
       }
     }
   }
 }
 
-async function updateTokens(
-  targetFilePath: string,
-): Promise<{ file: string; updated: boolean }> {
+async function updateTokens(targetFilePath: string): Promise<{ file: string; updated: boolean }> {
   try {
     console.log(`Processing file: ${targetFilePath}`);
 
@@ -197,7 +173,7 @@ async function updateTokens(
 
     return {
       file: targetFilePath,
-      updated: true,
+      updated: true
     };
   } catch (error) {
     console.error(`Error updating tokens in ${targetFilePath}:`, error);
@@ -211,7 +187,7 @@ async function getUniqueFilePaths(): Promise<string[]> {
     const { filePathMap } = flattenTokens(content);
     return Object.keys(filePathMap);
   } catch (error) {
-    console.error("Error getting unique files:", error);
+    console.error('Error getting unique files:', error);
     throw error;
   }
 }
@@ -230,7 +206,7 @@ async function main(): Promise<Array<{ file: string; updated: boolean }>> {
 
     return results;
   } catch (error) {
-    console.error("Error in main:", error);
+    console.error('Error in main:', error);
     throw error;
   }
 }

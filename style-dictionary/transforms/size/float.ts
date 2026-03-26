@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a transform for converting dimension and font size tokens to float values.
@@ -24,15 +24,14 @@ import type { Token } from "style-dictionary";
  */
 export const float = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
-    name: "size/float",
-    type: "value",
+    name: 'size/float',
+    type: 'value',
     transitive: true,
-    filter: (token: Token): boolean =>
-      token.$type === "dimension" || token.$type === "fontSize",
+    filter: (token: Token): boolean => token.$type === 'dimension' || token.$type === 'fontSize',
     transform: (token: Token): string => {
       const num = parseFloat(token.$value).toFixed(1);
-      const unit = "f";
+      const unit = 'f';
       return `${num}${unit}`;
-    },
+    }
   });
 };

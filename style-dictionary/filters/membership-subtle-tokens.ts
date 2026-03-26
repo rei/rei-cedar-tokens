@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only membership subtle tokens.
@@ -11,8 +11,7 @@ import type { Token } from "style-dictionary";
  */
 export const membershipSubtleTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "membership-subtle-tokens",
-    filter: (token: Token) =>
-      token.path[0] === "membership" && token.path[1] === "subtle",
+    name: 'membership-subtle-tokens',
+    filter: (token: Token) => token.path[0] === 'membership' && token.path[1] === 'subtle'
   });
 };

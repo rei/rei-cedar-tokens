@@ -1,9 +1,6 @@
-import type StyleDictionary from "style-dictionary";
-import type {
-  FormatFnArguments,
-  TransformedToken,
-} from "style-dictionary/types";
-import _ from "lodash";
+import type StyleDictionary from 'style-dictionary';
+import type { FormatFnArguments, TransformedToken } from 'style-dictionary/types';
+import _ from 'lodash';
 
 /**
  * Registers a site/documentation format for Style Dictionary.
@@ -15,15 +12,15 @@ import _ from "lodash";
  */
 export const site = (sd: typeof StyleDictionary): void => {
   sd.registerFormat({
-    name: "site",
+    name: 'site',
     format: ({ dictionary, platform }: FormatFnArguments): string => {
-      const prefix = platform.prefix ? `${platform.prefix}-` : "";
+      const prefix = platform.prefix ? `${platform.prefix}-` : '';
       const toRet: Record<string, Partial<TransformedToken>[]> = {};
-      const grouped = _.groupBy(dictionary.allTokens, "docs.category");
+      const grouped = _.groupBy(dictionary.allTokens, 'docs.category');
       const keys = Object.keys(grouped);
 
       for (const key of keys) {
-        const newKey = key === "undefined" ? "misc" : key;
+        const newKey = key === 'undefined' ? 'misc' : key;
         const catArr = grouped[key];
         toRet[newKey] = [];
 
@@ -32,7 +29,7 @@ export const site = (sd: typeof StyleDictionary): void => {
           // Intentionally removing 'path' property via destructuring
           void _removedPath;
 
-          if (_.has(current, "mixin")) {
+          if (_.has(current, 'mixin')) {
             current.mixin = `${prefix}${current.mixin}`;
           }
 
@@ -41,6 +38,6 @@ export const site = (sd: typeof StyleDictionary): void => {
       }
 
       return JSON.stringify(toRet, null, 2);
-    },
+    }
   });
 };

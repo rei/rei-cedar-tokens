@@ -1,10 +1,9 @@
-import { fileURLToPath } from "node:url";
-import { dirname } from "node:path";
-import type { Token } from "style-dictionary";
-import type { Platform, Theme, TokenTypes } from "./constants";
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+import type { Token } from 'style-dictionary';
+import type { Platform, Theme, TokenTypes } from './constants';
 
-export const getDirname = (filename: string | URL) =>
-  dirname(fileURLToPath(filename));
+export const getDirname = (filename: string | URL) => dirname(fileURLToPath(filename));
 
 export const BASE_FONT_SIZE = 10;
 
@@ -26,23 +25,20 @@ export const BASE_FONT_SIZE = 10;
  * pxToRem('0', 10) // Returns '0'
  * ```
  */
-export const pxToRem = (
-  value: string | number,
-  baseFontSize: number = BASE_FONT_SIZE,
-): string => {
-  if (typeof value !== "string") return String(value);
+export const pxToRem = (value: string | number, baseFontSize: number = BASE_FONT_SIZE): string => {
+  if (typeof value !== 'string') return String(value);
 
-  const tokens = value.split(" ");
+  const tokens = value.split(' ');
   const result = tokens.map((token) => {
     const parsedValue = parseFloat(token);
 
     if (parsedValue === 0 || !token) {
-      return "0";
+      return '0';
     }
 
-    if (!token.includes("rem")) {
+    if (!token.includes('rem')) {
       const num = parseFloat(token) / baseFontSize;
-      const unit = num !== 0 ? "rem" : "";
+      const unit = num !== 0 ? 'rem' : '';
 
       return `${num}${unit}`;
     }
@@ -50,26 +46,23 @@ export const pxToRem = (
     return token;
   });
 
-  return result.join(" ");
+  return result.join(' ');
 };
 
 export const commonConfig = (theme: Theme, platform: Platform) => ({
-  prefix: "cdr",
+  prefix: 'cdr',
   buildPath: `dist/${theme}/${platform}/`,
   options: {
-    showFileHeader: false,
-  },
+    showFileHeader: false
+  }
 });
 
-export const filterSourceTokensAndType = (
-  token: Token,
-  type: TokenTypes | TokenTypes[],
-) => {
+export const filterSourceTokensAndType = (token: Token, type: TokenTypes | TokenTypes[]) => {
   const types = Array.isArray(type) ? type : [type];
 
   return (
-    token.path[0] !== "options" &&
-    token.path[0] !== "theme" &&
+    token.path[0] !== 'options' &&
+    token.path[0] !== 'theme' &&
     token.$type !== undefined &&
     types.includes(token.$type)
   );

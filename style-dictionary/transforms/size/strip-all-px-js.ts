@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a transform that strips 'px' units from token values for JavaScript output.
@@ -15,16 +15,16 @@ import type { Token } from "style-dictionary";
  */
 export const stripAllPxJs = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
-    name: "size/strip-all-px-js",
-    type: "value",
+    name: 'size/strip-all-px-js',
+    type: 'value',
     transitive: true,
-    filter: (token: Token): boolean => !token.name?.match("Prominence"),
+    filter: (token: Token): boolean => !token.name?.match('Prominence'),
     transform: (token: Token): string => {
       let cleanVal = token.$value;
-      if (typeof token.$value === "string" && token.$value.endsWith("px")) {
+      if (typeof token.$value === 'string' && token.$value.endsWith('px')) {
         cleanVal = token.$value.slice(0, -2);
       }
       return cleanVal;
-    },
+    }
   });
 };
