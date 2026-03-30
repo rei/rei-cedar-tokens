@@ -20,71 +20,6 @@
       "$value": "#edeae3",
       "$type": "color",
       "docs": {
-        "type": "chip",
-        "description": "Background color for active selected chips"
-      },
-      "filePath": "tokens/global/chip.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-100}",
-        "$type": "color",
-        "docs": {
-          "type": "chip",
-          "description": "Background color for active selected chips"
-        }
-      },
-      "name": "cdr-color-background-chip-default-selected-active",
-      "attributes": {
-        "category": "color",
-        "type": "background",
-        "item": "chip",
-        "subitem": "default-selected-active",
-        "deprecated": false
-      },
-      "key": "{color.background.chip.default-selected-active}"
-    },
-    {
-      "$value": "#fafbf9",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "cdr-color-background-slide-hover",
-      "attributes": {
-        "category": "color",
-        "type": "background",
-        "item": "slide",
-        "subitem": "hover",
-        "deprecated": false
-      },
-      "key": "{color.background.slide.hover}"
-    },
-    {
-      "$value": "#fafbf9",
-      "$type": "color",
-      "filePath": "tokens/global/slide.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.color.warm-grey-010}",
-        "$type": "color"
-      },
-      "name": "cdr-color-background-slide-default",
-      "attributes": {
-        "category": "color",
-        "type": "background",
-        "item": "slide",
-        "subitem": "default",
-        "deprecated": false
-      },
-      "key": "{color.background.slide.default}"
-    },
-    {
-      "$value": "#edeae3",
-      "$type": "color",
-      "docs": {
         "type": "code-snippet"
       },
       "filePath": "tokens/themes/docsite/code-snippet.json",
@@ -17191,14 +17126,140 @@
       "key": "{color.icon.switch.selected-default-focus}"
     }
   ],
+  "color": [
+    {
+      "$value": "#edeae3",
+      "$type": "color",
+      "docs": {
+        "type": "background",
+        "category": "color",
+        "example": "chip-default-selected-active",
+        "description": {
+          "what": "Active background for selected chips",
+          "when": "Use when a chip is selected and active"
+        }
+      },
+      "filePath": "tokens/global/chip.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-100}",
+        "$type": "color",
+        "docs": {
+          "type": "background",
+          "category": "color",
+          "example": "chip-default-selected-active",
+          "description": {
+            "what": "Active background for selected chips",
+            "when": "Use when a chip is selected and active"
+          }
+        }
+      },
+      "name": "cdr-color-background-chip-default-selected-active",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "chip",
+        "subitem": "default-selected-active",
+        "deprecated": false
+      },
+      "key": "{color.background.chip.default-selected-active}"
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "type": "background",
+        "category": "color",
+        "example": "slide-default",
+        "description": {
+          "what": "Default slide background color",
+          "when": "Use for the resting state of slide surfaces."
+        }
+      },
+      "filePath": "tokens/global/slide.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "background",
+          "category": "color",
+          "example": "slide-default",
+          "description": {
+            "what": "Default slide background color",
+            "when": "Use for the resting state of slide surfaces."
+          }
+        }
+      },
+      "name": "cdr-color-background-slide-hover",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "hover",
+        "deprecated": false
+      },
+      "key": "{color.background.slide.hover}"
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "type": "background",
+        "category": "color",
+        "example": "slide-hover",
+        "description": {
+          "what": "Hover background color for slide surfaces",
+          "when": "Use when a slide component is hovered",
+          "alternatives": [
+            "#fafbf9"
+          ]
+        }
+      },
+      "filePath": "tokens/global/slide.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "background",
+          "category": "color",
+          "example": "slide-hover",
+          "description": {
+            "what": "Hover background color for slide surfaces",
+            "when": "Use when a slide component is hovered",
+            "alternatives": [
+              "{color.background.slide.default}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-color-background-slide-default",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "default",
+        "deprecated": false
+      },
+      "key": "{color.background.slide.default}"
+    }
+  ],
   "form": [
     {
       "$value": "4rem",
       "$type": "dimension",
       "docs": {
-        "type": "form",
+        "type": "height",
         "category": "form",
-        "example": "form"
+        "example": "height-default",
+        "description": {
+          "what": "Default input height",
+          "when": "Use for standard form fields",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/form.json",
       "isSource": false,
@@ -17206,9 +17267,16 @@
         "$value": "40px",
         "$type": "dimension",
         "docs": {
-          "type": "form",
+          "type": "height",
           "category": "form",
-          "example": "form"
+          "example": "height-default",
+          "description": {
+            "what": "Default input height",
+            "when": "Use for standard form fields",
+            "alternatives": [
+              "{form.input.height-large}"
+            ]
+          }
         }
       },
       "name": "cdr-form-input-height-default",
@@ -17224,9 +17292,13 @@
       "$value": "4.8rem",
       "$type": "dimension",
       "docs": {
-        "type": "form",
+        "type": "height",
         "category": "form",
-        "example": "form"
+        "example": "height-large",
+        "description": {
+          "what": "Large input height",
+          "when": "Use for spacious layouts"
+        }
       },
       "filePath": "tokens/global/form.json",
       "isSource": false,
@@ -17234,9 +17306,13 @@
         "$value": "48px",
         "$type": "dimension",
         "docs": {
-          "type": "form",
+          "type": "height",
           "category": "form",
-          "example": "form"
+          "example": "height-large",
+          "description": {
+            "what": "Large input height",
+            "when": "Use for spacious layouts"
+          }
         }
       },
       "name": "cdr-form-input-height-large",
@@ -17252,9 +17328,16 @@
       "$value": "1.6rem",
       "$type": "dimension",
       "docs": {
-        "type": "form",
+        "type": "size",
         "category": "form",
-        "example": "form"
+        "example": "size-small",
+        "description": {
+          "what": "Small figure size",
+          "when": "Use for compact forms",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/form.json",
       "isSource": false,
@@ -17262,9 +17345,16 @@
         "$value": "16px",
         "$type": "dimension",
         "docs": {
-          "type": "form",
+          "type": "size",
           "category": "form",
-          "example": "form"
+          "example": "size-small",
+          "description": {
+            "what": "Small figure size",
+            "when": "Use for compact forms",
+            "alternatives": [
+              "{form.figure.size-medium}"
+            ]
+          }
         }
       },
       "name": "cdr-form-figure-size-small",
@@ -17280,9 +17370,16 @@
       "$value": "1.6rem",
       "$type": "dimension",
       "docs": {
-        "type": "form",
+        "type": "size",
         "category": "form",
-        "example": "form"
+        "example": "size-medium",
+        "description": {
+          "what": "Medium figure size",
+          "when": "Use for standard forms",
+          "alternatives": [
+            "2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/form.json",
       "isSource": false,
@@ -17290,9 +17387,16 @@
         "$value": "16px",
         "$type": "dimension",
         "docs": {
-          "type": "form",
+          "type": "size",
           "category": "form",
-          "example": "form"
+          "example": "size-medium",
+          "description": {
+            "what": "Medium figure size",
+            "when": "Use for standard forms",
+            "alternatives": [
+              "{form.figure.size-large}"
+            ]
+          }
         }
       },
       "name": "cdr-form-figure-size-medium",
@@ -17308,9 +17412,13 @@
       "$value": "2rem",
       "$type": "dimension",
       "docs": {
-        "type": "form",
+        "type": "size",
         "category": "form",
-        "example": "form"
+        "example": "size-large",
+        "description": {
+          "what": "Large figure size",
+          "when": "Use for large or expressive forms"
+        }
       },
       "filePath": "tokens/global/form.json",
       "isSource": false,
@@ -17318,9 +17426,13 @@
         "$value": "20px",
         "$type": "dimension",
         "docs": {
-          "type": "form",
+          "type": "size",
           "category": "form",
-          "example": "form"
+          "example": "size-large",
+          "description": {
+            "what": "Large figure size",
+            "when": "Use for large or expressive forms"
+          }
         }
       },
       "name": "cdr-form-figure-size-large",
@@ -17333,14 +17445,21 @@
       "key": "{form.figure.size-large}"
     }
   ],
-  "sizing": [
+  "icon": [
     {
       "$value": "1.6rem",
       "$type": "dimension",
       "docs": {
-        "category": "sizing",
-        "type": "icon",
-        "example": "sizing"
+        "type": "size",
+        "category": "icon",
+        "example": "size-sm",
+        "description": {
+          "what": "Small icon size",
+          "when": "Use for dense UI",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/icon.json",
       "isSource": false,
@@ -17348,9 +17467,16 @@
         "$value": "{space.one-x.$value}",
         "$type": "dimension",
         "docs": {
-          "category": "sizing",
-          "type": "icon",
-          "example": "sizing"
+          "type": "size",
+          "category": "icon",
+          "example": "size-sm",
+          "description": {
+            "what": "Small icon size",
+            "when": "Use for dense UI",
+            "alternatives": [
+              "{icon.size}"
+            ]
+          }
         }
       },
       "name": "cdr-icon-size-sm",
@@ -17365,9 +17491,16 @@
       "$value": "2.4rem",
       "$type": "dimension",
       "docs": {
-        "category": "sizing",
-        "type": "icon",
-        "example": "sizing"
+        "type": "size",
+        "category": "icon",
+        "example": "size",
+        "description": {
+          "what": "Default icon size",
+          "when": "Use for standard UI",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/icon.json",
       "isSource": false,
@@ -17375,9 +17508,16 @@
         "$value": "{space.one-and-a-half-x.$value}",
         "$type": "dimension",
         "docs": {
-          "category": "sizing",
-          "type": "icon",
-          "example": "sizing"
+          "type": "size",
+          "category": "icon",
+          "example": "size",
+          "description": {
+            "what": "Default icon size",
+            "when": "Use for standard UI",
+            "alternatives": [
+              "{icon.size-lg}"
+            ]
+          }
         }
       },
       "name": "cdr-icon-size",
@@ -17392,9 +17532,13 @@
       "$value": "3.2rem",
       "$type": "dimension",
       "docs": {
-        "category": "sizing",
-        "type": "icon",
-        "example": "sizing"
+        "type": "size",
+        "category": "icon",
+        "example": "size-lg",
+        "description": {
+          "what": "Large icon size",
+          "when": "Use for prominent UI elements"
+        }
       },
       "filePath": "tokens/global/icon.json",
       "isSource": false,
@@ -17402,9 +17546,13 @@
         "$value": "{space.two-x.$value}",
         "$type": "dimension",
         "docs": {
-          "category": "sizing",
-          "type": "icon",
-          "example": "sizing"
+          "type": "size",
+          "category": "icon",
+          "example": "size-lg",
+          "description": {
+            "what": "Large icon size",
+            "when": "Use for prominent UI elements"
+          }
         }
       },
       "name": "cdr-icon-size-lg",
@@ -17421,9 +17569,16 @@
       "$value": "0.00s",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-1-x",
+        "description": {
+          "what": "Very short animation duration",
+          "when": "Use for micro-interactions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
@@ -17431,9 +17586,16 @@
         "$value": "100ms",
         "$type": "time",
         "docs": {
-          "category": "motion",
           "type": "duration",
-          "example": "duration"
+          "category": "motion",
+          "example": "duration-1-x",
+          "description": {
+            "what": "Very short animation duration",
+            "when": "Use for micro-interactions",
+            "alternatives": [
+              "{duration.2-x}"
+            ]
+          }
         }
       },
       "name": "cdr-duration-1-x",
@@ -17448,9 +17610,16 @@
       "$value": "0.00s",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-2-x",
+        "description": {
+          "what": "Short animation duration",
+          "when": "Use for quick UI transitions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
@@ -17458,9 +17627,16 @@
         "$value": "200ms",
         "$type": "time",
         "docs": {
-          "category": "motion",
           "type": "duration",
-          "example": "duration"
+          "category": "motion",
+          "example": "duration-2-x",
+          "description": {
+            "what": "Short animation duration",
+            "when": "Use for quick UI transitions",
+            "alternatives": [
+              "{duration.3-x}"
+            ]
+          }
         }
       },
       "name": "cdr-duration-2-x",
@@ -17475,9 +17651,16 @@
       "$value": "0.00s",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-3-x",
+        "description": {
+          "what": "Medium duration",
+          "when": "Use for standard UI animations",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
@@ -17485,9 +17668,16 @@
         "$value": "300ms",
         "$type": "time",
         "docs": {
-          "category": "motion",
           "type": "duration",
-          "example": "duration"
+          "category": "motion",
+          "example": "duration-3-x",
+          "description": {
+            "what": "Medium duration",
+            "when": "Use for standard UI animations",
+            "alternatives": [
+              "{duration.4-x}"
+            ]
+          }
         }
       },
       "name": "cdr-duration-3-x",
@@ -17502,9 +17692,16 @@
       "$value": "0.00s",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-4-x",
+        "description": {
+          "what": "Long duration",
+          "when": "Use for slower transitions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
@@ -17512,9 +17709,16 @@
         "$value": "400ms",
         "$type": "time",
         "docs": {
-          "category": "motion",
           "type": "duration",
-          "example": "duration"
+          "category": "motion",
+          "example": "duration-4-x",
+          "description": {
+            "what": "Long duration",
+            "when": "Use for slower transitions",
+            "alternatives": [
+              "{duration.5-x}"
+            ]
+          }
         }
       },
       "name": "cdr-duration-4-x",
@@ -17529,9 +17733,16 @@
       "$value": "0.00s",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-5-x",
+        "description": {
+          "what": "Very long duration",
+          "when": "Use for dramatic or modal transitions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
@@ -17539,9 +17750,16 @@
         "$value": "500ms",
         "$type": "time",
         "docs": {
-          "category": "motion",
           "type": "duration",
-          "example": "duration"
+          "category": "motion",
+          "example": "duration-5-x",
+          "description": {
+            "what": "Very long duration",
+            "when": "Use for dramatic or modal transitions",
+            "alternatives": [
+              "{duration.6-x}"
+            ]
+          }
         }
       },
       "name": "cdr-duration-5-x",
@@ -17556,9 +17774,13 @@
       "$value": "0.00s",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-6-x",
+        "description": {
+          "what": "Extra long duration",
+          "when": "Use sparingly for large UI shifts"
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
@@ -17566,9 +17788,13 @@
         "$value": "600ms",
         "$type": "time",
         "docs": {
-          "category": "motion",
           "type": "duration",
-          "example": "duration"
+          "category": "motion",
+          "example": "duration-6-x",
+          "description": {
+            "what": "Extra long duration",
+            "when": "Use sparingly for large UI shifts"
+          }
         }
       },
       "name": "cdr-duration-6-x",
@@ -17581,78 +17807,123 @@
     },
     {
       "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+      "$type": "function",
       "docs": {
+        "type": "timing-function",
         "category": "motion",
-        "type": "timing",
-        "example": "timing"
+        "example": "ease-out",
+        "description": {
+          "what": "Ease-out timing curve",
+          "when": "Use when animations should decelerate smoothly",
+          "alternatives": [
+            "cubic-bezier(0.15, 0, 0.15, 0)"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
       "original": {
         "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+        "$type": "function",
         "docs": {
+          "type": "timing-function",
           "category": "motion",
-          "type": "timing",
-          "example": "timing"
+          "example": "ease-out",
+          "description": {
+            "what": "Ease-out timing curve",
+            "when": "Use when animations should decelerate smoothly",
+            "alternatives": [
+              "{duration.timing.function-ease}"
+            ]
+          }
         }
       },
-      "name": "cdr-timing-function-ease-out",
+      "name": "cdr-duration-timing-function-ease-out",
       "attributes": {
-        "category": "timing",
-        "type": "function-ease-out",
+        "category": "duration",
+        "type": "timing",
+        "item": "function-ease-out",
         "deprecated": false
       },
-      "key": "{timing.function-ease-out}"
+      "key": "{duration.timing.function-ease-out}"
     },
     {
       "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
+      "$type": "function",
       "docs": {
+        "type": "timing-function",
         "category": "motion",
-        "type": "timing",
-        "example": "timing"
+        "example": "ease",
+        "description": {
+          "what": "Ease timing curve",
+          "when": "Use for general-purpose animations",
+          "alternatives": [
+            "cubic-bezier(0, 0, 1, 1)"
+          ]
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
       "original": {
         "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
+        "$type": "function",
         "docs": {
+          "type": "timing-function",
           "category": "motion",
-          "type": "timing",
-          "example": "timing"
+          "example": "ease",
+          "description": {
+            "what": "Ease timing curve",
+            "when": "Use for general-purpose animations",
+            "alternatives": [
+              "{duration.timing.function-linear}"
+            ]
+          }
         }
       },
-      "name": "cdr-timing-function-ease",
+      "name": "cdr-duration-timing-function-ease",
       "attributes": {
-        "category": "timing",
-        "type": "function-ease",
+        "category": "duration",
+        "type": "timing",
+        "item": "function-ease",
         "deprecated": false
       },
-      "key": "{timing.function-ease}"
+      "key": "{duration.timing.function-ease}"
     },
     {
       "$value": "cubic-bezier(0, 0, 1, 1)",
+      "$type": "function",
       "docs": {
+        "type": "timing-function",
         "category": "motion",
-        "type": "timing",
-        "example": "timing"
+        "example": "linear",
+        "description": {
+          "what": "Linear timing curve",
+          "when": "Use for constant-speed animations"
+        }
       },
       "filePath": "tokens/global/motion.json",
       "isSource": false,
       "original": {
         "$value": "cubic-bezier(0, 0, 1, 1)",
+        "$type": "function",
         "docs": {
+          "type": "timing-function",
           "category": "motion",
-          "type": "timing",
-          "example": "timing"
+          "example": "linear",
+          "description": {
+            "what": "Linear timing curve",
+            "when": "Use for constant-speed animations"
+          }
         }
       },
-      "name": "cdr-timing-function-linear",
+      "name": "cdr-duration-timing-function-linear",
       "attributes": {
-        "category": "timing",
-        "type": "function-linear",
+        "category": "duration",
+        "type": "timing",
+        "item": "function-linear",
         "deprecated": false
       },
-      "key": "{timing.function-linear}"
+      "key": "{duration.timing.function-linear}"
     }
   ],
   "prominence": [
@@ -17660,8 +17931,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "flat-x",
+        "description": {
+          "what": "X for flat level",
+          "when": "Use for flat surfaces needing minimal depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17669,8 +17945,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "flat-x",
+          "description": {
+            "what": "X for flat level",
+            "when": "Use for flat surfaces needing minimal depth"
+          }
         }
       },
       "name": "cdr-prominence-flat-x",
@@ -17685,8 +17966,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "flat-y",
+        "description": {
+          "what": "Y for flat level",
+          "when": "Use for flat surfaces needing minimal depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17694,8 +17980,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "flat-y",
+          "description": {
+            "what": "Y for flat level",
+            "when": "Use for flat surfaces needing minimal depth"
+          }
         }
       },
       "name": "cdr-prominence-flat-y",
@@ -17710,8 +18001,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "flat-blur",
+        "description": {
+          "what": "Blur for flat level",
+          "when": "Use for flat surfaces needing minimal depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17719,8 +18015,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "flat-blur",
+          "description": {
+            "what": "Blur for flat level",
+            "when": "Use for flat surfaces needing minimal depth"
+          }
         }
       },
       "name": "cdr-prominence-flat-blur",
@@ -17735,8 +18036,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "flat-spread",
+        "description": {
+          "what": "Spread for flat level",
+          "when": "Use for flat surfaces needing minimal depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17744,8 +18050,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "flat-spread",
+          "description": {
+            "what": "Spread for flat level",
+            "when": "Use for flat surfaces needing minimal depth"
+          }
         }
       },
       "name": "cdr-prominence-flat-spread",
@@ -17760,8 +18071,13 @@
       "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "flat-color",
+        "description": {
+          "what": "Color for flat level",
+          "when": "Use for flat surfaces needing minimal depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17769,8 +18085,13 @@
         "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "flat-color",
+          "description": {
+            "what": "Color for flat level",
+            "when": "Use for flat surfaces needing minimal depth"
+          }
         }
       },
       "name": "cdr-prominence-flat-color",
@@ -17785,8 +18106,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "raised-x",
+        "description": {
+          "what": "X for raised level",
+          "when": "Use for raised surfaces needing subtle elevation"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17794,8 +18120,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "raised-x",
+          "description": {
+            "what": "X for raised level",
+            "when": "Use for raised surfaces needing subtle elevation"
+          }
         }
       },
       "name": "cdr-prominence-raised-x",
@@ -17810,8 +18141,13 @@
       "$value": "0.2rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "raised-y",
+        "description": {
+          "what": "Y for raised level",
+          "when": "Use for raised surfaces needing subtle elevation"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17819,8 +18155,13 @@
         "$value": "2px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "raised-y",
+          "description": {
+            "what": "Y for raised level",
+            "when": "Use for raised surfaces needing subtle elevation"
+          }
         }
       },
       "name": "cdr-prominence-raised-y",
@@ -17835,8 +18176,13 @@
       "$value": "0.2rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "raised-blur",
+        "description": {
+          "what": "Blur for raised level",
+          "when": "Use for raised surfaces needing subtle elevation"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17844,8 +18190,13 @@
         "$value": "2px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "raised-blur",
+          "description": {
+            "what": "Blur for raised level",
+            "when": "Use for raised surfaces needing subtle elevation"
+          }
         }
       },
       "name": "cdr-prominence-raised-blur",
@@ -17860,8 +18211,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "raised-spread",
+        "description": {
+          "what": "Spread for raised level",
+          "when": "Use for raised surfaces needing subtle elevation"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17869,8 +18225,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "raised-spread",
+          "description": {
+            "what": "Spread for raised level",
+            "when": "Use for raised surfaces needing subtle elevation"
+          }
         }
       },
       "name": "cdr-prominence-raised-spread",
@@ -17885,8 +18246,13 @@
       "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "raised-color",
+        "description": {
+          "what": "Color for raised level",
+          "when": "Use for raised surfaces needing subtle elevation"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17894,8 +18260,13 @@
         "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "raised-color",
+          "description": {
+            "what": "Color for raised level",
+            "when": "Use for raised surfaces needing subtle elevation"
+          }
         }
       },
       "name": "cdr-prominence-raised-color",
@@ -17910,8 +18281,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "elevated-x",
+        "description": {
+          "what": "X for elevated level",
+          "when": "Use for elevated surfaces needing medium depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17919,8 +18295,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "elevated-x",
+          "description": {
+            "what": "X for elevated level",
+            "when": "Use for elevated surfaces needing medium depth"
+          }
         }
       },
       "name": "cdr-prominence-elevated-x",
@@ -17935,8 +18316,13 @@
       "$value": "0.4rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "elevated-y",
+        "description": {
+          "what": "Y for elevated level",
+          "when": "Use for elevated surfaces needing medium depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17944,8 +18330,13 @@
         "$value": "4px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "elevated-y",
+          "description": {
+            "what": "Y for elevated level",
+            "when": "Use for elevated surfaces needing medium depth"
+          }
         }
       },
       "name": "cdr-prominence-elevated-y",
@@ -17960,8 +18351,13 @@
       "$value": "0.4rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "elevated-blur",
+        "description": {
+          "what": "Blur for elevated level",
+          "when": "Use for elevated surfaces needing medium depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17969,8 +18365,13 @@
         "$value": "4px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "elevated-blur",
+          "description": {
+            "what": "Blur for elevated level",
+            "when": "Use for elevated surfaces needing medium depth"
+          }
         }
       },
       "name": "cdr-prominence-elevated-blur",
@@ -17985,8 +18386,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "elevated-spread",
+        "description": {
+          "what": "Spread for elevated level",
+          "when": "Use for elevated surfaces needing medium depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -17994,8 +18400,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "elevated-spread",
+          "description": {
+            "what": "Spread for elevated level",
+            "when": "Use for elevated surfaces needing medium depth"
+          }
         }
       },
       "name": "cdr-prominence-elevated-spread",
@@ -18010,8 +18421,13 @@
       "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "elevated-color",
+        "description": {
+          "what": "Color for elevated level",
+          "when": "Use for elevated surfaces needing medium depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18019,8 +18435,13 @@
         "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "elevated-color",
+          "description": {
+            "what": "Color for elevated level",
+            "when": "Use for elevated surfaces needing medium depth"
+          }
         }
       },
       "name": "cdr-prominence-elevated-color",
@@ -18035,8 +18456,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "floating-x",
+        "description": {
+          "what": "X for floating level",
+          "when": "Use for floating surfaces needing strong depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18044,8 +18470,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "floating-x",
+          "description": {
+            "what": "X for floating level",
+            "when": "Use for floating surfaces needing strong depth"
+          }
         }
       },
       "name": "cdr-prominence-floating-x",
@@ -18060,8 +18491,13 @@
       "$value": "0.8rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "floating-y",
+        "description": {
+          "what": "Y for floating level",
+          "when": "Use for floating surfaces needing strong depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18069,8 +18505,13 @@
         "$value": "8px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "floating-y",
+          "description": {
+            "what": "Y for floating level",
+            "when": "Use for floating surfaces needing strong depth"
+          }
         }
       },
       "name": "cdr-prominence-floating-y",
@@ -18085,8 +18526,13 @@
       "$value": "0.8rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "floating-blur",
+        "description": {
+          "what": "Blur for floating level",
+          "when": "Use for floating surfaces needing strong depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18094,8 +18540,13 @@
         "$value": "8px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "floating-blur",
+          "description": {
+            "what": "Blur for floating level",
+            "when": "Use for floating surfaces needing strong depth"
+          }
         }
       },
       "name": "cdr-prominence-floating-blur",
@@ -18110,8 +18561,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "floating-spread",
+        "description": {
+          "what": "Spread for floating level",
+          "when": "Use for floating surfaces needing strong depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18119,8 +18575,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "floating-spread",
+          "description": {
+            "what": "Spread for floating level",
+            "when": "Use for floating surfaces needing strong depth"
+          }
         }
       },
       "name": "cdr-prominence-floating-spread",
@@ -18135,8 +18596,13 @@
       "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "floating-color",
+        "description": {
+          "what": "Color for floating level",
+          "when": "Use for floating surfaces needing strong depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18144,8 +18610,13 @@
         "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "floating-color",
+          "description": {
+            "what": "Color for floating level",
+            "when": "Use for floating surfaces needing strong depth"
+          }
         }
       },
       "name": "cdr-prominence-floating-color",
@@ -18160,8 +18631,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "lifted-x",
+        "description": {
+          "what": "X for lifted level",
+          "when": "Use for lifted surfaces needing dramatic depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18169,8 +18645,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "lifted-x",
+          "description": {
+            "what": "X for lifted level",
+            "when": "Use for lifted surfaces needing dramatic depth"
+          }
         }
       },
       "name": "cdr-prominence-lifted-x",
@@ -18185,8 +18666,13 @@
       "$value": "1.6rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "lifted-y",
+        "description": {
+          "what": "Y for lifted level",
+          "when": "Use for lifted surfaces needing dramatic depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18194,8 +18680,13 @@
         "$value": "16px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "lifted-y",
+          "description": {
+            "what": "Y for lifted level",
+            "when": "Use for lifted surfaces needing dramatic depth"
+          }
         }
       },
       "name": "cdr-prominence-lifted-y",
@@ -18210,8 +18701,13 @@
       "$value": "1.6rem",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "lifted-blur",
+        "description": {
+          "what": "Blur for lifted level",
+          "when": "Use for lifted surfaces needing dramatic depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18219,8 +18715,13 @@
         "$value": "16px",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "lifted-blur",
+          "description": {
+            "what": "Blur for lifted level",
+            "when": "Use for lifted surfaces needing dramatic depth"
+          }
         }
       },
       "name": "cdr-prominence-lifted-blur",
@@ -18235,8 +18736,13 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "lifted-spread",
+        "description": {
+          "what": "Spread for lifted level",
+          "when": "Use for lifted surfaces needing dramatic depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18244,8 +18750,13 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "lifted-spread",
+          "description": {
+            "what": "Spread for lifted level",
+            "when": "Use for lifted surfaces needing dramatic depth"
+          }
         }
       },
       "name": "cdr-prominence-lifted-spread",
@@ -18260,8 +18771,13 @@
       "$value": "rgba(46, 46, 43, 0.2)",
       "$type": "color",
       "docs": {
-        "type": "prominence",
-        "category": "prominence"
+        "type": "shadow",
+        "category": "prominence",
+        "example": "lifted-color",
+        "description": {
+          "what": "Color for lifted level",
+          "when": "Use for lifted surfaces needing dramatic depth"
+        }
       },
       "filePath": "tokens/global/prominence.json",
       "isSource": false,
@@ -18269,8 +18785,13 @@
         "$value": "{options.color.warm-grey-1000-20}",
         "$type": "color",
         "docs": {
-          "type": "prominence",
-          "category": "prominence"
+          "type": "shadow",
+          "category": "prominence",
+          "example": "lifted-color",
+          "description": {
+            "what": "Color for lifted level",
+            "when": "Use for lifted surfaces needing dramatic depth"
+          }
         }
       },
       "name": "cdr-prominence-lifted-color",
@@ -18412,9 +18933,16 @@
       "$value": "0",
       "$type": "dimension",
       "docs": {
-        "type": "radius",
+        "type": "corner",
         "category": "radius",
-        "example": "radius"
+        "example": "sharp",
+        "description": {
+          "what": "Zero-radius corner",
+          "when": "Use for crisp, squared edges",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/radius.json",
       "isSource": false,
@@ -18422,9 +18950,16 @@
         "$value": "0",
         "$type": "dimension",
         "docs": {
-          "type": "radius",
+          "type": "corner",
           "category": "radius",
-          "example": "radius"
+          "example": "sharp",
+          "description": {
+            "what": "Zero-radius corner",
+            "when": "Use for crisp, squared edges",
+            "alternatives": [
+              "{radius.soft}"
+            ]
+          }
         }
       },
       "name": "cdr-radius-sharp",
@@ -18439,9 +18974,16 @@
       "$value": "0.2rem",
       "$type": "dimension",
       "docs": {
-        "type": "radius",
+        "type": "corner",
         "category": "radius",
-        "example": "radius"
+        "example": "soft",
+        "description": {
+          "what": "Small, subtle corner radius",
+          "when": "Use for gentle rounding",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/radius.json",
       "isSource": false,
@@ -18449,9 +18991,16 @@
         "$value": "2px",
         "$type": "dimension",
         "docs": {
-          "type": "radius",
+          "type": "corner",
           "category": "radius",
-          "example": "radius"
+          "example": "soft",
+          "description": {
+            "what": "Small, subtle corner radius",
+            "when": "Use for gentle rounding",
+            "alternatives": [
+              "{radius.softer}"
+            ]
+          }
         }
       },
       "name": "cdr-radius-soft",
@@ -18466,9 +19015,16 @@
       "$value": "0.4rem",
       "$type": "dimension",
       "docs": {
-        "type": "radius",
+        "type": "corner",
         "category": "radius",
-        "example": "radius"
+        "example": "softer",
+        "description": {
+          "what": "Medium corner radius",
+          "when": "Use for more noticeable rounding",
+          "alternatives": [
+            "0.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/radius.json",
       "isSource": false,
@@ -18476,9 +19032,16 @@
         "$value": "4px",
         "$type": "dimension",
         "docs": {
-          "type": "radius",
+          "type": "corner",
           "category": "radius",
-          "example": "radius"
+          "example": "softer",
+          "description": {
+            "what": "Medium corner radius",
+            "when": "Use for more noticeable rounding",
+            "alternatives": [
+              "{radius.softest}"
+            ]
+          }
         }
       },
       "name": "cdr-radius-softer",
@@ -18493,9 +19056,16 @@
       "$value": "0.6rem",
       "$type": "dimension",
       "docs": {
-        "type": "radius",
+        "type": "corner",
         "category": "radius",
-        "example": "radius"
+        "example": "softest",
+        "description": {
+          "what": "Large rounded corner",
+          "when": "Use for pill-like shapes",
+          "alternatives": [
+            "0.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/radius.json",
       "isSource": false,
@@ -18503,9 +19073,16 @@
         "$value": "6px",
         "$type": "dimension",
         "docs": {
-          "type": "radius",
+          "type": "corner",
           "category": "radius",
-          "example": "radius"
+          "example": "softest",
+          "description": {
+            "what": "Large rounded corner",
+            "when": "Use for pill-like shapes",
+            "alternatives": [
+              "{radius.softest}"
+            ]
+          }
         }
       },
       "name": "cdr-radius-softest",
@@ -18520,9 +19097,13 @@
       "$value": "999.9rem",
       "$type": "dimension",
       "docs": {
-        "type": "radius",
+        "type": "corner",
         "category": "radius",
-        "example": "radius"
+        "example": "round",
+        "description": {
+          "what": "Fully circular radius",
+          "when": "Use for circular elements"
+        }
       },
       "filePath": "tokens/global/radius.json",
       "isSource": false,
@@ -18530,9 +19111,13 @@
         "$value": "9999px",
         "$type": "dimension",
         "docs": {
-          "type": "radius",
+          "type": "corner",
           "category": "radius",
-          "example": "radius"
+          "example": "round",
+          "description": {
+            "what": "Fully circular radius",
+            "when": "Use for circular elements"
+          }
         }
       },
       "name": "cdr-radius-round",
@@ -18551,7 +19136,11 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Zero spacing, removes all space between elements.",
+          "when": "Use when elements must be flush against each other with no gap."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18562,7 +19151,11 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Zero spacing, removes all space between elements.",
+            "when": "Use when elements must be flush against each other with no gap."
+          }
         },
         "utility-class": true
       },
@@ -18580,7 +19173,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "The smallest static spacing unit, one-sixteenth of the base.",
+          "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
+          "alternatives": [
+            "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18591,7 +19191,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "The smallest static spacing unit, one-sixteenth of the base.",
+            "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
+            "alternatives": [
+              "{space.scale.0}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18609,7 +19216,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one-eighth of the base unit.",
+          "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
+          "alternatives": [
+            "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18620,7 +19234,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at one-eighth of the base unit.",
+            "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
+            "alternatives": [
+              "{space.scale.0}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18638,7 +19259,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three-sixteenths of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18649,7 +19277,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at three-sixteenths of the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.0}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18667,7 +19302,15 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one-quarter of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)",
+            "clamp(0.3rem, 0.3rem + 0.11cqi, 0.4rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18678,7 +19321,15 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at one-quarter of the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.0}",
+              "{space.scale.1}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18696,7 +19347,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three-eighths of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(0.3rem, 0.3rem + 0.11cqi, 0.4rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18707,7 +19365,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at three-eighths of the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.1}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18725,7 +19390,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one-half of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(0.4rem, 0.4rem + 0.11cqi, 0.5rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18736,7 +19408,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at one-half of the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.2}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18754,7 +19433,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three-quarters of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18765,7 +19451,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at three-quarters of the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.3}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18783,7 +19476,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "The base static spacing unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18794,7 +19494,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "The base static spacing unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.3}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18812,7 +19519,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one and a half times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(1.2rem, 1.1rem + 0.33cqi, 1.5rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18823,7 +19537,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at one and a half times the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.4}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18841,7 +19562,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at two times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(1.6rem, 1.5rem + 0.44cqi, 2rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18852,7 +19580,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at two times the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.5}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18870,7 +19605,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(2.4rem, 2.2rem + 0.66cqi, 3rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18881,7 +19623,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at three times the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.6}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18899,7 +19648,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at four times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": [
+            "clamp(3.2rem, 2.9rem + 0.88cqi, 4rem)"
+          ]
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -18910,7 +19666,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Static spacing at four times the base unit.",
+            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+            "alternatives": [
+              "{space.scale.7}"
+            ]
+          }
         },
         "utility-class": true
       },
@@ -18928,7 +19691,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "The smallest fluid spacing step, scaling from 3.2px to 4.8px.",
+          "when": "Use for the tightest gaps between inline elements such as an icon and a label."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -18942,7 +19709,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "The smallest fluid spacing step, scaling from 3.2px to 4.8px.",
+            "when": "Use for the tightest gaps between inline elements such as an icon and a label."
+          }
         }
       },
       "name": "cdr-space-scale-0",
@@ -18960,7 +19731,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 1, scaling from 4.8px to 6.4px.",
+          "when": "Use for minimal separation between closely related elements."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -18974,7 +19749,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 1, scaling from 4.8px to 6.4px.",
+            "when": "Use for minimal separation between closely related elements."
+          }
         }
       },
       "name": "cdr-space-scale-1",
@@ -18992,7 +19771,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 2, scaling from 6.4px to 8px.",
+          "when": "Use for small gaps such as between stacked text elements or tight component internals."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19006,7 +19789,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 2, scaling from 6.4px to 8px.",
+            "when": "Use for small gaps such as between stacked text elements or tight component internals."
+          }
         }
       },
       "name": "cdr-space-scale-2",
@@ -19024,7 +19811,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 3, scaling from 12.8px to 16px. Equivalent to the static base unit.",
+          "when": "Use for spacing between related components such as form fields or list items."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19038,7 +19829,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 3, scaling from 12.8px to 16px. Equivalent to the static base unit.",
+            "when": "Use for spacing between related components such as form fields or list items."
+          }
         }
       },
       "name": "cdr-space-scale-3",
@@ -19056,7 +19851,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 4, scaling from 19.2px to 24px.",
+          "when": "Use for spacing between distinct components or content groups."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19070,7 +19869,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 4, scaling from 19.2px to 24px.",
+            "when": "Use for spacing between distinct components or content groups."
+          }
         }
       },
       "name": "cdr-space-scale-4",
@@ -19088,7 +19891,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 5, scaling from 25.6px to 32px.",
+          "when": "Use for separation between major content sections."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19102,7 +19909,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 5, scaling from 25.6px to 32px.",
+            "when": "Use for separation between major content sections."
+          }
         }
       },
       "name": "cdr-space-scale-5",
@@ -19120,7 +19931,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 6, scaling from 38.4px to 48px.",
+          "when": "Use for generous separation between page-level sections."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19134,7 +19949,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 6, scaling from 38.4px to 48px.",
+            "when": "Use for generous separation between page-level sections."
+          }
         }
       },
       "name": "cdr-space-scale-6",
@@ -19152,7 +19971,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 7, scaling from 51.2px to 64px.",
+          "when": "Use for large layout gaps such as between hero sections and page content."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19166,7 +19989,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 7, scaling from 51.2px to 64px.",
+            "when": "Use for large layout gaps such as between hero sections and page content."
+          }
         }
       },
       "name": "cdr-space-scale-7",
@@ -19184,7 +20011,11 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "The largest fluid spacing step, scaling from 76.8px to 96px.",
+          "when": "Use for major page-level separation such as between full-width content blocks."
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19198,7 +20029,11 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "The largest fluid spacing step, scaling from 76.8px to 96px.",
+            "when": "Use for major page-level separation such as between full-width content blocks."
+          }
         }
       },
       "name": "cdr-space-scale-8",
@@ -19216,7 +20051,15 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing spanning steps 0 to 1, scaling from 3.2px to 6.4px.",
+          "when": "Use when spacing needs to adapt across the range of the two smallest steps.",
+          "alternatives": [
+            "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)",
+            "clamp(0.3rem, 0.3rem + 0.11cqi, 0.4rem)"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19230,7 +20073,15 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 0 to 1, scaling from 3.2px to 6.4px.",
+            "when": "Use when spacing needs to adapt across the range of the two smallest steps.",
+            "alternatives": [
+              "{space.scale.0}",
+              "{space.scale.1}"
+            ]
+          }
         }
       },
       "name": "cdr-space-scale-0-1",
@@ -19248,7 +20099,15 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing spanning steps 3 to 4, scaling from 6.4px to 16px.",
+          "when": "Use when spacing needs to adapt broadly between component and section spacing.",
+          "alternatives": [
+            "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)",
+            "clamp(1.2rem, 1.1rem + 0.33cqi, 1.5rem)"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19262,7 +20121,15 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 3 to 4, scaling from 6.4px to 16px.",
+            "when": "Use when spacing needs to adapt broadly between component and section spacing.",
+            "alternatives": [
+              "{space.scale.3}",
+              "{space.scale.4}"
+            ]
+          }
         }
       },
       "name": "cdr-space-scale-3-4",
@@ -19280,7 +20147,16 @@
       "docs": {
         "type": "fluid space",
         "category": "spacing",
-        "example": "clamp"
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing spanning steps 3 to 5, scaling from 12.8px to 25.6px.",
+          "when": "Use when spacing needs to adapt across a wide range of container sizes.",
+          "alternatives": [
+            "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)",
+            "clamp(1.2rem, 1.1rem + 0.33cqi, 1.5rem)",
+            "clamp(1.6rem, 1.5rem + 0.44cqi, 2rem)"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19294,7 +20170,16 @@
         "docs": {
           "type": "fluid space",
           "category": "spacing",
-          "example": "clamp"
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 3 to 5, scaling from 12.8px to 25.6px.",
+            "when": "Use when spacing needs to adapt across a wide range of container sizes.",
+            "alternatives": [
+              "{space.scale.3}",
+              "{space.scale.4}",
+              "{space.scale.5}"
+            ]
+          }
         }
       },
       "name": "cdr-space-scale-3-5",
@@ -19312,7 +20197,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-sixteenth of the base unit.",
+          "when": "Use for the tightest padding on very small components such as micro badges."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19323,7 +20212,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-sixteenth of the base unit.",
+            "when": "Use for the tightest padding on very small components such as micro badges."
+          }
         },
         "utility-class": true
       },
@@ -19342,7 +20235,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-eighth of the base unit.",
+          "when": "Use for compact components such as badges or tags."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19353,7 +20250,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-eighth of the base unit.",
+            "when": "Use for compact components such as badges or tags."
+          }
         },
         "utility-class": true
       },
@@ -19372,7 +20273,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished eighth-x inset, compressed to zero.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19382,7 +20290,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished eighth-x inset, compressed to zero.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-eighth-x-squish-top-bottom",
@@ -19400,7 +20315,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished eighth-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19410,7 +20332,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished eighth-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-eighth-x-squish-left-right",
@@ -19428,7 +20357,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched eighth-x inset, expanded beyond the base.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19438,7 +20374,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched eighth-x inset, expanded beyond the base.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-eighth-x-stretch-top-bottom",
@@ -19456,7 +20399,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched eighth-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19466,7 +20416,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched eighth-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-eighth-x-stretch-left-right",
@@ -19484,7 +20441,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three-sixteenths of the base unit.",
+          "when": "Use for compact components needing slightly more padding than eighth-x."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19495,7 +20456,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-sixteenths of the base unit.",
+            "when": "Use for compact components needing slightly more padding than eighth-x."
+          }
         },
         "utility-class": true
       },
@@ -19514,7 +20479,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-quarter of the base unit.",
+          "when": "Use for small components such as chips or compact buttons."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19525,7 +20494,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-quarter of the base unit.",
+            "when": "Use for small components such as chips or compact buttons."
+          }
         },
         "utility-class": true
       },
@@ -19545,7 +20518,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished quarter-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19556,7 +20536,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished quarter-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-quarter-x-squish-top-bottom",
@@ -19574,7 +20561,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19584,7 +20578,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-quarter-x-squish-left-right",
@@ -19603,7 +20604,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched quarter-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19614,7 +20622,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched quarter-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-quarter-x-stretch-top-bottom",
@@ -19632,7 +20647,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19642,7 +20664,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-quarter-x-stretch-left-right",
@@ -19660,7 +20689,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three-eighths of the base unit.",
+          "when": "Use for components needing slightly more padding than quarter-x."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19671,7 +20704,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-eighths of the base unit.",
+            "when": "Use for components needing slightly more padding than quarter-x."
+          }
         },
         "utility-class": true
       },
@@ -19690,7 +20727,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-half of the base unit.",
+          "when": "Use for medium-density components such as form inputs or standard buttons."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19701,7 +20742,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-half of the base unit.",
+            "when": "Use for medium-density components such as form inputs or standard buttons."
+          }
         },
         "utility-class": true
       },
@@ -19721,7 +20766,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished half-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19732,7 +20784,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished half-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-half-x-squish-top-bottom",
@@ -19750,7 +20809,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19760,7 +20826,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-half-x-squish-left-right",
@@ -19779,7 +20852,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched half-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19790,7 +20870,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched half-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-half-x-stretch-top-bottom",
@@ -19808,7 +20895,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19818,7 +20912,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-half-x-stretch-left-right",
@@ -19836,7 +20937,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three-quarters of the base unit.",
+          "when": "Use for components needing slightly more padding than half-x."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19847,7 +20952,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-quarters of the base unit.",
+            "when": "Use for components needing slightly more padding than half-x."
+          }
         },
         "utility-class": true
       },
@@ -19867,7 +20976,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished three-quarter-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19878,7 +20994,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished three-quarter-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-quarter-x-squish-top-bottom",
@@ -19896,7 +21019,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished three-quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19906,7 +21036,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished three-quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-quarter-x-squish-left-right",
@@ -19925,7 +21062,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched three-quarter-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19936,7 +21080,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched three-quarter-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-quarter-x-stretch-top-bottom",
@@ -19954,7 +21105,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched three-quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -19964,7 +21122,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched three-quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-quarter-x-stretch-left-right",
@@ -19982,7 +21147,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at the base unit.",
+          "when": "Use for standard component padding such as cards or panels."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -19993,7 +21162,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at the base unit.",
+            "when": "Use for standard component padding such as cards or panels."
+          }
         },
         "utility-class": true
       },
@@ -20013,7 +21186,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished one-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20024,7 +21204,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished one-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-x-squish-top-bottom",
@@ -20042,7 +21229,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished one-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20052,7 +21246,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished one-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-x-squish-left-right",
@@ -20071,7 +21272,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched one-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20082,7 +21290,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched one-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-x-stretch-top-bottom",
@@ -20100,7 +21315,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched one-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20110,7 +21332,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched one-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-x-stretch-left-right",
@@ -20128,7 +21357,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one and a half times the base unit.",
+          "when": "Use for components needing generous padding such as modals or large cards."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -20139,7 +21372,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one and a half times the base unit.",
+            "when": "Use for components needing generous padding such as modals or large cards."
+          }
         },
         "utility-class": true
       },
@@ -20159,7 +21396,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished one-and-a-half-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20170,7 +21414,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished one-and-a-half-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-and-a-half-x-squish-top-bottom",
@@ -20188,7 +21439,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished one-and-a-half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20198,7 +21456,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished one-and-a-half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-and-a-half-x-squish-left-right",
@@ -20217,7 +21482,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched one-and-a-half-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20228,7 +21500,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched one-and-a-half-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-and-a-half-x-stretch-top-bottom",
@@ -20246,7 +21525,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched one-and-a-half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20256,7 +21542,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched one-and-a-half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-one-and-a-half-x-stretch-left-right",
@@ -20274,7 +21567,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at two times the base unit.",
+          "when": "Use for spacious layouts such as page sections or large containers."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -20285,7 +21582,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at two times the base unit.",
+            "when": "Use for spacious layouts such as page sections or large containers."
+          }
         },
         "utility-class": true
       },
@@ -20305,7 +21606,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished two-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20316,7 +21624,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished two-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-two-x-squish-top-bottom",
@@ -20334,7 +21649,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished two-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20344,7 +21666,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished two-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-two-x-squish-left-right",
@@ -20363,7 +21692,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched two-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20374,7 +21710,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched two-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-two-x-stretch-top-bottom",
@@ -20392,7 +21735,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched two-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20402,7 +21752,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched two-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-two-x-stretch-left-right",
@@ -20420,7 +21777,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three times the base unit.",
+          "when": "Use for very spacious layouts or full-width content areas."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -20431,7 +21792,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three times the base unit.",
+            "when": "Use for very spacious layouts or full-width content areas."
+          }
         },
         "utility-class": true
       },
@@ -20451,7 +21816,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished three-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20462,7 +21834,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished three-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-x-squish-top-bottom",
@@ -20480,7 +21859,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished three-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20490,7 +21876,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished three-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-x-squish-left-right",
@@ -20509,7 +21902,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched three-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20520,7 +21920,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched three-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-x-stretch-top-bottom",
@@ -20538,7 +21945,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched three-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20548,7 +21962,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched three-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-three-x-stretch-left-right",
@@ -20566,7 +21987,11 @@
       "docs": {
         "type": "inset",
         "category": "spacing",
-        "example": "inset"
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at four times the base unit.",
+          "when": "Use for the most spacious layouts such as hero sections."
+        }
       },
       "utility-class": true,
       "filePath": "tokens/global/space.json",
@@ -20577,7 +22002,11 @@
         "docs": {
           "type": "inset",
           "category": "spacing",
-          "example": "inset"
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at four times the base unit.",
+            "when": "Use for the most spacious layouts such as hero sections."
+          }
         },
         "utility-class": true
       },
@@ -20597,7 +22026,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished four-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20608,7 +22044,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished four-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-four-x-squish-top-bottom",
@@ -20626,7 +22069,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished four-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20636,7 +22086,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished four-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-four-x-squish-left-right",
@@ -20655,7 +22112,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched four-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20666,7 +22130,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched four-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-four-x-stretch-top-bottom",
@@ -20684,7 +22155,14 @@
       "docs": {
         "type": "spacing",
         "category": "spacing",
-        "example": "spacing"
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched four-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
       },
       "filePath": "tokens/global/space.json",
       "isSource": false,
@@ -20694,7 +22172,14 @@
         "docs": {
           "type": "spacing",
           "category": "spacing",
-          "example": "spacing"
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched four-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
         }
       },
       "name": "cdr-space-inset-four-x-stretch-left-right",

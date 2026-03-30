@@ -2222,20 +2222,23 @@
       "$value": "600ms",
       "$type": "time",
       "filePath": "tokens/global/motion.json"
-    }
-  },
-  "timing": {
-    "function-ease-out": {
-      "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
-      "filePath": "tokens/global/motion.json"
     },
-    "function-ease": {
-      "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
-      "filePath": "tokens/global/motion.json"
-    },
-    "function-linear": {
-      "$value": "cubic-bezier(0, 0, 1, 1)",
-      "filePath": "tokens/global/motion.json"
+    "timing": {
+      "function-ease-out": {
+        "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+        "$type": "function",
+        "filePath": "tokens/global/motion.json"
+      },
+      "function-ease": {
+        "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
+        "$type": "function",
+        "filePath": "tokens/global/motion.json"
+      },
+      "function-linear": {
+        "$value": "cubic-bezier(0, 0, 1, 1)",
+        "$type": "function",
+        "filePath": "tokens/global/motion.json"
+      }
     }
   },
   "prominence": {

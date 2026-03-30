@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      ajv:
-        specifier: ^8.18.0
-        version: 8.18.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.2.0
@@ -42,6 +38,9 @@ importers:
       '@vitest/ui':
         specifier: ^4.0.16
         version: 4.0.16(vitest@4.0.16)
+      ajv:
+        specifier: ^8.18.0
+        version: 8.18.0
       commitizen:
         specifier: ^4.3.1
         version: 4.3.1(@types/node@25.0.3)(typescript@5.9.3)

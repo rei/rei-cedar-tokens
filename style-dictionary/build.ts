@@ -2,7 +2,7 @@ import StyleDictionary from "style-dictionary";
 import { register } from "@tokens-studio/sd-transforms";
 import { PLATFORMS, THEMES } from "./constants";
 import { getConfig } from "./configs";
-import { validateTokenSchema } from "./validate-schema.js";
+import { validateTokenSchema } from "./validate-schema";
 
 /**
  * REI Cedar Tokens Build Script

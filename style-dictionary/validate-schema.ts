@@ -19,9 +19,15 @@ export function validateTokenSchema(tokenGlob = "tokens/global/*.json"): void {
   // Exclude _options files — they use an 'options' root wrapper
   // and deprecated files — they use a 'deprecated-*' root wrapper.
   // Both are intentionally sparse and do not require docs on every token.
-  const targetFiles = files.filter(
-    (f) => !path.basename(f).startsWith("deprecated-"),
-  );
+  const targetFiles = files.filter((f) => {
+    const base = path.basename(f);
+    if (base.startsWith("deprecated-")) return false;
+
+    const segments = path.normalize(f).split(path.sep);
+
+    if (segments.includes("_options")) return false;
+    return true;
+  });
 
   const errors: string[] = [];
 

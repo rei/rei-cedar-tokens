@@ -38,7 +38,6 @@
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
     "build:tokens": "pnpm run clean && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",
-    "prebuild": "tsx style-dictionary/validate-schema.ts",
     "build": "pnpm run clean && pnpm run build:tokens && pnpm run site-tokens && pnpm run validate",
     "build:grid": "tsx grid.ts",
     "site-tokens": "tsx ./site-tokens.ts",
@@ -85,7 +84,8 @@
     "style-dictionary": "^4.0.1",
     "tinycolor2": "^1.6.0",
     "tsx": "^4.19.2",
-    "vitest": "^4.0.16"
+    "vitest": "^4.0.16",
+    "ajv": "^8.18.0"
   },
   "config": {
     "commitizen": {
@@ -98,8 +98,5 @@
   "engines": {
     "node": ">= 22.0.0",
     "pnpm": ">= 10.0.0"
-  },
-  "dependencies": {
-    "ajv": "^8.18.0"
   }
 }

@@ -4,80 +4,126 @@
       "$value": "100ms",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-1-x",
+        "description": {
+          "what": "Very short animation duration",
+          "when": "Use for micro-interactions",
+          "alternatives": ["{duration.2-x}"]
+        }
       }
     },
     "2-x": {
       "$value": "200ms",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-2-x",
+        "description": {
+          "what": "Short animation duration",
+          "when": "Use for quick UI transitions",
+          "alternatives": ["{duration.3-x}"]
+        }
       }
     },
     "3-x": {
       "$value": "300ms",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-3-x",
+        "description": {
+          "what": "Medium duration",
+          "when": "Use for standard UI animations",
+          "alternatives": ["{duration.4-x}"]
+        }
       }
     },
     "4-x": {
       "$value": "400ms",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-4-x",
+        "description": {
+          "what": "Long duration",
+          "when": "Use for slower transitions",
+          "alternatives": ["{duration.5-x}"]
+        }
       }
     },
     "5-x": {
       "$value": "500ms",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
+        "category": "motion",
+        "example": "duration-5-x",
+        "description": {
+          "what": "Very long duration",
+          "when": "Use for dramatic or modal transitions",
+          "alternatives": ["{duration.6-x}"]
+        }
       }
     },
     "6-x": {
       "$value": "600ms",
       "$type": "time",
       "docs": {
-        "category": "motion",
         "type": "duration",
-        "example": "duration"
-      }
-    }
-  },
-  "timing": {
-    "function-ease-out": {
-      "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
-      "docs": {
         "category": "motion",
-        "type": "timing",
-        "example": "timing"
+        "example": "duration-6-x",
+        "description": {
+          "what": "Extra long duration",
+          "when": "Use sparingly for large UI shifts"
+        }
       }
     },
-    "function-ease": {
-      "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
-      "docs": {
-        "category": "motion",
-        "type": "timing",
-        "example": "timing"
-      }
-    },
-    "function-linear": {
-      "$value": "cubic-bezier(0, 0, 1, 1)",
-      "docs": {
-        "category": "motion",
-        "type": "timing",
-        "example": "timing"
+    "timing": {
+      "function-ease-out": {
+        "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+        "$type": "function",
+        "docs": {
+          "type": "timing-function",
+          "category": "motion",
+          "example": "ease-out",
+          "description": {
+            "what": "Ease-out timing curve",
+            "when": "Use when animations should decelerate smoothly",
+            "alternatives": ["{duration.timing.function-ease}"]
+          }
+        }
+      },
+      "function-ease": {
+        "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
+        "$type": "function",
+        "docs": {
+          "type": "timing-function",
+          "category": "motion",
+          "example": "ease",
+          "description": {
+            "what": "Ease timing curve",
+            "when": "Use for general-purpose animations",
+            "alternatives": ["{duration.timing.function-linear}"]
+          }
+        }
+      },
+      "function-linear": {
+        "$value": "cubic-bezier(0, 0, 1, 1)",
+        "$type": "function",
+        "docs": {
+          "type": "timing-function",
+          "category": "motion",
+          "example": "linear",
+          "description": {
+            "what": "Linear timing curve",
+            "when": "Use for constant-speed animations"
+          }
+        }
       }
     }
   }
