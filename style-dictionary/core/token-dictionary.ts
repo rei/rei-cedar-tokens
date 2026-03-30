@@ -7,13 +7,13 @@ export type TTheme = "rei-dot-com" | "docsite";
 /**
  * Defines the technical output target
  */
-export type TPlatform = "android" | "ios";
+export type TPlatform = "android" | "ios" | "figma";
 
 /**
  * Defines the file format for token delivery.
  * Each format may have specific naming conventions (e.g., camelCase for JS, kebab-case for CSS).
  */
-export type TFormat = "css" | "figma" | "ios" | "js" | "json" | "scss";
+export type TFormat = "json" | "xml" | "css" | "js" | "scss" | "objc";
 
 /**
  * Categorizes the specific design intent or "domain" of the tokens.
