@@ -8268,7 +8268,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-duration.json",
         "isSource": false,
         "original": {
           "$value": "100ms",
@@ -8307,7 +8307,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-duration.json",
         "isSource": false,
         "original": {
           "$value": "200ms",
@@ -8346,7 +8346,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-duration.json",
         "isSource": false,
         "original": {
           "$value": "300ms",
@@ -8385,7 +8385,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-duration.json",
         "isSource": false,
         "original": {
           "$value": "400ms",
@@ -8424,7 +8424,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-duration.json",
         "isSource": false,
         "original": {
           "$value": "500ms",
@@ -8460,7 +8460,7 @@
             "when": "Use sparingly for large UI shifts"
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-duration.json",
         "isSource": false,
         "original": {
           "$value": "600ms",
@@ -8496,7 +8496,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-timing.json",
         "isSource": false,
         "original": {
           "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
@@ -8509,16 +8509,16 @@
               "what": "Ease-out timing curve",
               "when": "Use when animations should decelerate smoothly",
               "alternatives": [
-                "{duration.timing.function-ease}"
+                "{timing.function-ease}"
               ]
             }
           }
         },
-        "name": "cdr-duration-timing-function-ease-out",
+        "name": "cdr-timing-function-ease-out",
         "attributes": {
           "deprecated": false
         },
-        "key": "{duration.timing.function-ease-out}"
+        "key": "{timing.function-ease-out}"
       },
       {
         "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
@@ -8535,7 +8535,7 @@
             ]
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-timing.json",
         "isSource": false,
         "original": {
           "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
@@ -8548,16 +8548,16 @@
               "what": "Ease timing curve",
               "when": "Use for general-purpose animations",
               "alternatives": [
-                "{duration.timing.function-linear}"
+                "{timing.function-linear}"
               ]
             }
           }
         },
-        "name": "cdr-duration-timing-function-ease",
+        "name": "cdr-timing-function-ease",
         "attributes": {
           "deprecated": false
         },
-        "key": "{duration.timing.function-ease}"
+        "key": "{timing.function-ease}"
       },
       {
         "$value": "cubic-bezier(0, 0, 1, 1)",
@@ -8571,7 +8571,7 @@
             "when": "Use for constant-speed animations"
           }
         },
-        "filePath": "tokens/global/motion.json",
+        "filePath": "tokens/global/motion-timing.json",
         "isSource": false,
         "original": {
           "$value": "cubic-bezier(0, 0, 1, 1)",
@@ -8586,11 +8586,11 @@
             }
           }
         },
-        "name": "cdr-duration-timing-function-linear",
+        "name": "cdr-timing-function-linear",
         "attributes": {
           "deprecated": false
         },
-        "key": "{duration.timing.function-linear}"
+        "key": "{timing.function-linear}"
       }
     ],
     "prominence": [
