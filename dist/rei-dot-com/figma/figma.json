@@ -2196,46 +2196,49 @@
     "1-x": {
       "$value": "100ms",
       "$type": "time",
-      "filePath": "tokens/global/motion.json"
+      "filePath": "tokens/global/motion-duration.json"
     },
     "2-x": {
       "$value": "200ms",
       "$type": "time",
-      "filePath": "tokens/global/motion.json"
+      "filePath": "tokens/global/motion-duration.json"
     },
     "3-x": {
       "$value": "300ms",
       "$type": "time",
-      "filePath": "tokens/global/motion.json"
+      "filePath": "tokens/global/motion-duration.json"
     },
     "4-x": {
       "$value": "400ms",
       "$type": "time",
-      "filePath": "tokens/global/motion.json"
+      "filePath": "tokens/global/motion-duration.json"
     },
     "5-x": {
       "$value": "500ms",
       "$type": "time",
-      "filePath": "tokens/global/motion.json"
+      "filePath": "tokens/global/motion-duration.json"
     },
     "6-x": {
       "$value": "600ms",
       "$type": "time",
-      "filePath": "tokens/global/motion.json"
+      "filePath": "tokens/global/motion-duration.json"
     }
   },
   "timing": {
     "function-ease-out": {
       "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
-      "filePath": "tokens/global/motion.json"
+      "$type": "function",
+      "filePath": "tokens/global/motion-timing.json"
     },
     "function-ease": {
       "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
-      "filePath": "tokens/global/motion.json"
+      "$type": "function",
+      "filePath": "tokens/global/motion-timing.json"
     },
     "function-linear": {
       "$value": "cubic-bezier(0, 0, 1, 1)",
-      "filePath": "tokens/global/motion.json"
+      "$type": "function",
+      "filePath": "tokens/global/motion-timing.json"
     }
   },
   "prominence": {

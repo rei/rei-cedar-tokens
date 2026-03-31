@@ -4,11 +4,30 @@
       "slide": {
         "hover": {
           "$value": "{options.color.warm-grey-010}",
-          "$type": "color"
+          "$type": "color",
+          "docs": {
+            "type": "background",
+            "category": "color",
+            "example": "slide-default",
+            "description": {
+              "what": "Default slide background color",
+              "when": "Use for the resting state of slide surfaces."
+            }
+          }
         },
         "default": {
           "$value": "{options.color.warm-grey-010}",
-          "$type": "color"
+          "$type": "color",
+          "docs": {
+            "type": "background",
+            "category": "color",
+            "example": "slide-hover",
+            "description": {
+              "what": "Hover background color for slide surfaces",
+              "when": "Use when a slide component is hovered",
+              "alternatives": ["{color.background.slide.default}"]
+            }
+          }
         }
       }
     }
