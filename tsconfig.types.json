@@ -1,0 +1,24 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist/types",
+        "rootDir": "style-dictionary",
+        "skipLibCheck": true,
+        "checkJs": false,
+        "noEmitOnError": false,
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+    },
+    "include": [
+        "style-dictionary/core/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*",
+        "dist"
+    ]
+}

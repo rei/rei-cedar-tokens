@@ -4,17 +4,14 @@
  */
 export type TTheme = "rei-dot-com" | "docsite";
 /**
- * Defines the technical output target or file format for token delivery.
- * Each platform may have specific naming conventions (e.g., camelCase for JS, kebab-case for CSS).
+ * Defines the technical output target
  */
-export type TPlatform =
-  | "android"
-  | "css"
-  | "figma"
-  | "ios"
-  | "js"
-  | "json"
-  | "scss";
+export type TPlatform = "android" | "ios" | "figma";
+/**
+ * Defines the file format for token delivery.
+ * Each format may have specific naming conventions (e.g., camelCase for JS, kebab-case for CSS).
+ */
+export type TFormat = "json" | "xml" | "css" | "js" | "scss" | "objc";
 /**
  * Categorizes the specific design intent or "domain" of the tokens.
  * This helps organize tokens into manageable logical chunks.
@@ -25,11 +22,15 @@ export type TResponsibility =
   | "prominence"
   | "radius"
   | "space";
+/** * Enforces the 'cdr-' prefix naming convention.
+ * This catches typos like "color-text" vs "cdr-color-text".
+ */
+export type TokenName = `cdr-${string}`;
 /**
  * The raw data structure of the tokens.
  * Must be a flat object of key-value pairs where all values are strings.
  */
-export type TModule = Record<string, string>;
+export type TModule = Record<TokenName, string>;
 /**
  * A generic, immutable container for design tokens.
  * It links metadata (Theme, Platform, Responsibility) to a specific set of token values.

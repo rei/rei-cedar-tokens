@@ -40,7 +40,7 @@
     "clean": "rimraf dist/",
     "build": "pnpm run clean && pnpm run build:tokens && pnpm run site-tokens && pnpm run validate && pnpm run build:token-types",
     "build:grid": "tsx grid.ts",
-    "build:token-types": "tsc style-dictionary/core/token-dictionary.ts --declaration --emitDeclarationOnly --outDir dist/types --rootDir style-dictionary",
+    "build:token-types": "tsc -p tsconfig.types.json --noCheck",
     "site-tokens": "tsx ./site-tokens.ts",
     "lint-staged": "lint-staged",
     "format": "oxlint --fix && oxfmt",

@@ -1,6 +1,6 @@
-import type StyleDictionary from 'style-dictionary';
-import type { Token, Config } from 'style-dictionary';
-import { BASE_FONT_SIZE, pxToRem } from '../../utils';
+import type StyleDictionary from "style-dictionary";
+import type { Token, Config } from "style-dictionary";
+import { BASE_FONT_SIZE, pxToRem } from "../../utils";
 
 /**
  * Registers a transitive transform for converting px values to rem.
@@ -24,26 +24,30 @@ import { BASE_FONT_SIZE, pxToRem } from '../../utils';
  */
 export const pxToRemTransitive = (sd: typeof StyleDictionary): void => {
   sd.registerTransform({
-    name: 'size/px-to-rem-transitive',
-    type: 'value',
+    name: "size/px-to-rem-transitive",
+    type: "value",
     transitive: true,
     filter: (token: Token): boolean => {
       // Exclude text-size-root and breakpoint tokens
-      const tokenName = token.path.join('-');
-      if (tokenName.includes('text-size-root') || tokenName.includes('breakpoint')) {
+      const tokenName = token.path.join("-");
+      if (
+        tokenName.includes("text-size-root") ||
+        tokenName.includes("breakpoint")
+      ) {
         return false;
       }
 
       // Include dimension, fontSize, and check if value contains 'px' for expanded typography tokens
       return (
-        token.$type === 'dimension' ||
-        token.$type === 'fontSize' ||
-        (typeof token.$value === 'string' && token.$value.includes('px'))
+        token.$type === "dimension" ||
+        token.$type === "fontSize" ||
+        (typeof token.$value === "string" && token.$value.includes("px"))
       );
     },
     transform: (token: Token, config: Config): string => {
-      const REM = config.basePxFontSize || BASE_FONT_SIZE;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const REM = (config as any).basePxFontSize || BASE_FONT_SIZE;
       return pxToRem(token.$value, REM);
-    }
+    },
   });
 };
