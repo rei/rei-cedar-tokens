@@ -37,11 +37,13 @@
     },
     "./rei-dot-com/types/*": {
       "types": "./dist/rei-dot-com/types/*.d.ts",
-      "default": "./dist/rei-dot-com/types/*.ts"
+      "import": "./dist/rei-dot-com/types/*.mjs",
+      "default": "./dist/rei-dot-com/types/*.mjs"
     },
     "./docsite/types/*": {
       "types": "./dist/docsite/types/*.d.ts",
-      "default": "./dist/docsite/types/*.ts"
+      "import": "./dist/docsite/types/*.mjs",
+      "default": "./dist/docsite/types/*.mjs"
     },
     "./dist/": "./dist/"
   },
