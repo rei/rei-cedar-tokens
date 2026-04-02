@@ -63,7 +63,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
 export const concatFiles = (sd: typeof StyleDictionary): void => {
   sd.registerAction({
     name: 'concat-files',
-    do: (_, config): void => {
+    do: async (_, config): Promise<void> => {
       try {
         if (!config.buildPath) {
           console.warn('No buildPath specified in the configuration.');
@@ -96,24 +96,24 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
           fs.renameSync(p, newPath);
         });
 
-        // Concatenate files
-        concat(concatPaths).then((r: unknown) => {
-          const outFile = path.join(
-            __dirname,
-            '../../',
-            config.buildPath!,
-            `cdr-tokens${extension}`
-          );
+        // Concatenate files before removing the source files.
+        const r = await concat(concatPaths);
 
-          const importLines = createImportLine(extension, outFile);
-          const finalOuput = extension.includes('less')
-            ? (r as string)
-            : `${importLines}\n\n${r as string}`;
+        const outFile = path.join(
+          __dirname,
+          '../../',
+          config.buildPath!,
+          `cdr-tokens${extension}`
+        );
 
-          fs.outputFileSync(outFile, finalOuput);
-        });
+        const importLines = createImportLine(extension, outFile);
+        const finalOuput = extension.includes('less')
+          ? (r as string)
+          : `${importLines}\n\n${r as string}`;
 
-        // Remove concatenated files
+        fs.outputFileSync(outFile, finalOuput);
+
+        // Remove concatenated files after writing the output file.
         concatPaths.forEach((p) => {
           fs.removeSync(p);
         });
