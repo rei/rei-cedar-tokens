@@ -1,0 +1,15 @@
+export type CdrPaletteMembershipSubtleTokenName =
+  | "CdrMembershipSubtleColorBackgroundButtonPrimaryActive"
+  | "CdrMembershipSubtleColorBackgroundButtonPrimaryRest"
+  | "CdrMembershipSubtleColorBackgroundPrimary"
+  | "CdrMembershipSubtleColorBorderButtonPrimaryActive"
+  | "CdrMembershipSubtleColorBorderButtonPrimaryHover"
+  | "CdrMembershipSubtleColorBorderButtonPrimaryRest"
+  | "CdrMembershipSubtleColorBorderLinkHover"
+  | "CdrMembershipSubtleColorBorderLinkRest"
+  | "CdrMembershipSubtleColorBorderLinkVisited"
+  | "CdrMembershipSubtleColorTextButtonPrimaryHover"
+  | "CdrMembershipSubtleColorTextLinkHover"
+  | "CdrMembershipSubtleColorTextLinkRest"
+  | "CdrMembershipSubtleColorTextLinkVisited"
+  | "CdrMembershipSubtleColorTextPrimary";

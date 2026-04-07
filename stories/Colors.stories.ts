@@ -1,12 +1,12 @@
-import type { StoryObj, Meta } from "@storybook/html";
-import * as tokens from "../dist/rei-dot-com/js/cdr-tokens.mjs";
+import type { StoryObj, Meta } from '@storybook/html';
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 
 const meta: Meta = {
-  title: "Tokens/Colors",
+  title: 'Tokens/Colors',
   parameters: {
-    layout: "fullscreen",
-    controls: { disable: true },
-  },
+    layout: 'fullscreen',
+    controls: { disable: true }
+  }
 };
 
 export default meta;
@@ -268,40 +268,34 @@ function semanticCard(label: string, tokenName: string, value: string): string {
 
 function roleBadge(role: string): string {
   const cls =
-    role === "Background"
-      ? "role-bg"
-      : role === "Text"
-        ? "role-text"
-        : role === "Border"
-          ? "role-border"
-          : "role-icon";
+    role === 'Background'
+      ? 'role-bg'
+      : role === 'Text'
+        ? 'role-text'
+        : role === 'Border'
+          ? 'role-border'
+          : 'role-icon';
   const short =
-    role === "Background"
-      ? "bg"
-      : role === "Text"
-        ? "text"
-        : role === "Border"
-          ? "border"
-          : "icon";
+    role === 'Background' ? 'bg' : role === 'Text' ? 'text' : role === 'Border' ? 'border' : 'icon';
   return `<span class="role-badge ${cls}">${short}</span>`;
 }
 
 function allTokens(): TokenEntry[] {
   return Object.entries(tokens)
-    .filter(([key]) => key.startsWith("CdrColor"))
+    .filter(([key]) => key.startsWith('CdrColor'))
     .map(([key, value]) => [key, String(value)]);
 }
 
 function getRole(key: string): string {
   const m = key.match(/^CdrColor(Background|Text|Border|Icon)/);
-  return m ? m[1] : "Other";
+  return m ? m[1] : 'Other';
 }
 
 function getComponent(key: string): string {
   const role = getRole(key);
-  const rest = key.replace(`CdrColor${role}`, "");
+  const rest = key.replace(`CdrColor${role}`, '');
   const m = rest.match(/^([A-Z][a-z]+(?:[A-Z][a-z]+)?)/);
-  return m ? m[1] : "Other";
+  return m ? m[1] : 'Other';
 }
 
 function sectionHeader(title: string, count: number): string {
@@ -316,7 +310,7 @@ function sectionHeader(title: string, count: number): string {
 
 /** Full palette of unique color values */
 export const Palette: Story = {
-  name: "Palette",
+  name: 'Palette',
   render: () => {
     const entries = allTokens();
     const unique = [...new Set(entries.map(([, v]) => v))].sort();
@@ -326,14 +320,14 @@ export const Palette: Story = {
         (v) => `
         <div class="palette-chip" title="${v}">
           <div class="palette-chip-inner" style="background:${v};"></div>
-        </div>`,
+        </div>`
       )
-      .join("");
+      .join('');
 
     // Deduplicate for display: group by hue family manually
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("Unique Colors", unique.length)}
+        ${sectionHeader('Unique Colors', unique.length)}
         <p style="font-size:13px;color:var(--cedar-warm-750);margin:0 0 20px;line-height:1.6;">
           ${entries.length} total tokens resolve to ${unique.length} unique color values across the Cedar design system.
           Hover a chip to see the raw value.
@@ -341,130 +335,90 @@ export const Palette: Story = {
         <div class="palette-strip">${chips}</div>
       </div>
     </div>`;
-  },
+  }
 };
 
 /** Semantic surface / text / border / icon tokens — the small set designers use most */
 export const Semantic: Story = {
-  name: "Semantic",
+  name: 'Semantic',
   render: () => {
     const t = tokens as Record<string, string>;
 
     const surfaces: [string, string, string][] = [
-      [
-        "Primary surface",
-        "CdrColorBackgroundPrimary",
-        t.CdrColorBackgroundPrimary,
-      ],
-      [
-        "Secondary surface",
-        "CdrColorBackgroundSecondary",
-        t.CdrColorBackgroundSecondary,
-      ],
-      [
-        "Brand (Spruce)",
-        "CdrColorBackgroundBrandSpruce",
-        t.CdrColorBackgroundBrandSpruce,
-      ],
-      ["Error surface", "CdrColorBackgroundError", t.CdrColorBackgroundError],
-      [
-        "Warning surface",
-        "CdrColorBackgroundWarning",
-        t.CdrColorBackgroundWarning,
-      ],
-      [
-        "Success surface",
-        "CdrColorBackgroundSuccess",
-        t.CdrColorBackgroundSuccess,
-      ],
-      ["Info surface", "CdrColorBackgroundInfo", t.CdrColorBackgroundInfo],
-      ["Sale surface", "CdrColorBackgroundSale", t.CdrColorBackgroundSale],
-      [
-        "Transparent",
-        "CdrColorBackgroundTransparent",
-        t.CdrColorBackgroundTransparent,
-      ],
-      [
-        "Tooltip bg",
-        "CdrColorBackgroundTooltipDefault",
-        t.CdrColorBackgroundTooltipDefault,
-      ],
+      ['Primary surface', 'CdrColorBackgroundPrimary', t.CdrColorBackgroundPrimary],
+      ['Secondary surface', 'CdrColorBackgroundSecondary', t.CdrColorBackgroundSecondary],
+      ['Brand (Spruce)', 'CdrColorBackgroundBrandSpruce', t.CdrColorBackgroundBrandSpruce],
+      ['Error surface', 'CdrColorBackgroundError', t.CdrColorBackgroundError],
+      ['Warning surface', 'CdrColorBackgroundWarning', t.CdrColorBackgroundWarning],
+      ['Success surface', 'CdrColorBackgroundSuccess', t.CdrColorBackgroundSuccess],
+      ['Info surface', 'CdrColorBackgroundInfo', t.CdrColorBackgroundInfo],
+      ['Sale surface', 'CdrColorBackgroundSale', t.CdrColorBackgroundSale],
+      ['Transparent', 'CdrColorBackgroundTransparent', t.CdrColorBackgroundTransparent],
+      ['Tooltip bg', 'CdrColorBackgroundTooltipDefault', t.CdrColorBackgroundTooltipDefault]
     ];
 
     const textTokens: [string, string, string][] = [
-      ["Primary text", "CdrColorTextPrimary", t.CdrColorTextPrimary],
-      ["Secondary text", "CdrColorTextSecondary", t.CdrColorTextSecondary],
-      ["Emphasis text", "CdrColorTextEmphasis", t.CdrColorTextEmphasis],
-      ["Inverse text", "CdrColorTextInverse", t.CdrColorTextInverse],
-      ["Disabled text", "CdrColorTextDisabled", t.CdrColorTextDisabled],
-      ["Brand text", "CdrColorTextBrand", t.CdrColorTextBrand],
-      ["Error text", "CdrColorTextError", t.CdrColorTextError],
-      ["Warning text", "CdrColorTextWarning", t.CdrColorTextWarning],
-      ["Success text", "CdrColorTextSuccess", t.CdrColorTextSuccess],
-      ["Info text", "CdrColorTextInfo", t.CdrColorTextInfo],
-      ["Sale text", "CdrColorTextSale", t.CdrColorTextSale],
+      ['Primary text', 'CdrColorTextPrimary', t.CdrColorTextPrimary],
+      ['Secondary text', 'CdrColorTextSecondary', t.CdrColorTextSecondary],
+      ['Emphasis text', 'CdrColorTextEmphasis', t.CdrColorTextEmphasis],
+      ['Inverse text', 'CdrColorTextInverse', t.CdrColorTextInverse],
+      ['Disabled text', 'CdrColorTextDisabled', t.CdrColorTextDisabled],
+      ['Brand text', 'CdrColorTextBrand', t.CdrColorTextBrand],
+      ['Error text', 'CdrColorTextError', t.CdrColorTextError],
+      ['Warning text', 'CdrColorTextWarning', t.CdrColorTextWarning],
+      ['Success text', 'CdrColorTextSuccess', t.CdrColorTextSuccess],
+      ['Info text', 'CdrColorTextInfo', t.CdrColorTextInfo],
+      ['Sale text', 'CdrColorTextSale', t.CdrColorTextSale]
     ];
 
     const borderTokens: [string, string, string][] = [
-      ["Primary border", "CdrColorBorderPrimary", t.CdrColorBorderPrimary],
-      [
-        "Secondary border",
-        "CdrColorBorderSecondary",
-        t.CdrColorBorderSecondary,
-      ],
-      ["Error border", "CdrColorBorderError", t.CdrColorBorderError],
-      ["Warning border", "CdrColorBorderWarning", t.CdrColorBorderWarning],
-      ["Success border", "CdrColorBorderSuccess", t.CdrColorBorderSuccess],
-      ["Info border", "CdrColorBorderInfo", t.CdrColorBorderInfo],
-      ["Transparent", "CdrColorBorderTransparent", t.CdrColorBorderTransparent],
+      ['Primary border', 'CdrColorBorderPrimary', t.CdrColorBorderPrimary],
+      ['Secondary border', 'CdrColorBorderSecondary', t.CdrColorBorderSecondary],
+      ['Error border', 'CdrColorBorderError', t.CdrColorBorderError],
+      ['Warning border', 'CdrColorBorderWarning', t.CdrColorBorderWarning],
+      ['Success border', 'CdrColorBorderSuccess', t.CdrColorBorderSuccess],
+      ['Info border', 'CdrColorBorderInfo', t.CdrColorBorderInfo],
+      ['Transparent', 'CdrColorBorderTransparent', t.CdrColorBorderTransparent]
     ];
 
     const iconTokens: [string, string, string][] = [
-      ["Default icon", "CdrColorIconDefault", t.CdrColorIconDefault],
-      ["Emphasis icon", "CdrColorIconEmphasis", t.CdrColorIconEmphasis],
-      ["Disabled icon", "CdrColorIconDisabled", t.CdrColorIconDisabled],
-      ["Link icon", "CdrColorIconLink", t.CdrColorIconLink],
-      ["Error icon", "CdrColorIconMessageError", t.CdrColorIconMessageError],
-      [
-        "Warning icon",
-        "CdrColorIconMessageWarning",
-        t.CdrColorIconMessageWarning,
-      ],
-      [
-        "Success icon",
-        "CdrColorIconMessageSuccess",
-        t.CdrColorIconMessageSuccess,
-      ],
-      ["Info icon", "CdrColorIconMessageInfo", t.CdrColorIconMessageInfo],
+      ['Default icon', 'CdrColorIconDefault', t.CdrColorIconDefault],
+      ['Emphasis icon', 'CdrColorIconEmphasis', t.CdrColorIconEmphasis],
+      ['Disabled icon', 'CdrColorIconDisabled', t.CdrColorIconDisabled],
+      ['Link icon', 'CdrColorIconLink', t.CdrColorIconLink],
+      ['Error icon', 'CdrColorIconMessageError', t.CdrColorIconMessageError],
+      ['Warning icon', 'CdrColorIconMessageWarning', t.CdrColorIconMessageWarning],
+      ['Success icon', 'CdrColorIconMessageSuccess', t.CdrColorIconMessageSuccess],
+      ['Info icon', 'CdrColorIconMessageInfo', t.CdrColorIconMessageInfo]
     ];
 
     const grid = (items: [string, string, string][]) =>
-      `<div class="semantic-grid">${items.map(([l, k, v]) => semanticCard(l, k, v)).join("")}</div>`;
+      `<div class="semantic-grid">${items.map(([l, k, v]) => semanticCard(l, k, v)).join('')}</div>`;
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("Background", surfaces.length)}
+        ${sectionHeader('Background', surfaces.length)}
         ${grid(surfaces)}
       </div>
       <div class="sb-section">
-        ${sectionHeader("Text", textTokens.length)}
+        ${sectionHeader('Text', textTokens.length)}
         ${grid(textTokens)}
       </div>
       <div class="sb-section">
-        ${sectionHeader("Border", borderTokens.length)}
+        ${sectionHeader('Border', borderTokens.length)}
         ${grid(borderTokens)}
       </div>
       <div class="sb-section">
-        ${sectionHeader("Icon", iconTokens.length)}
+        ${sectionHeader('Icon', iconTokens.length)}
         ${grid(iconTokens)}
       </div>
     </div>`;
-  },
+  }
 };
 
 /** All tokens organized by component group, showing role (bg/text/border/icon) per row */
 export const ByComponent: Story = {
-  name: "By Component",
+  name: 'By Component',
   render: () => {
     const entries = allTokens();
 
@@ -476,9 +430,7 @@ export const ByComponent: Story = {
       groups[comp].push([k, v]);
     });
 
-    const sorted = Object.entries(groups).sort(([a], [b]) =>
-      a.localeCompare(b),
-    );
+    const sorted = Object.entries(groups).sort(([a], [b]) => a.localeCompare(b));
 
     const sections = sorted
       .map(([comp, rows]) => {
@@ -497,7 +449,7 @@ export const ByComponent: Story = {
                 <td class="comp-value">${val}</td>
               </tr>`;
           })
-          .join("");
+          .join('');
 
         return `
           <div class="comp-section">
@@ -514,24 +466,22 @@ export const ByComponent: Story = {
             </table>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("All Color Tokens by Component", entries.length)}
+        ${sectionHeader('All Color Tokens by Component', entries.length)}
         ${sections}
       </div>
     </div>`;
-  },
+  }
 };
 
 /** Background tokens only, flat grid */
 export const BackgroundColors: Story = {
-  name: "Background",
+  name: 'Background',
   render: () => {
-    const entries = allTokens().filter(([k]) =>
-      k.startsWith("CdrColorBackground"),
-    );
+    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorBackground'));
 
     const tableRows = entries
       .map(
@@ -544,27 +494,27 @@ export const BackgroundColors: Story = {
             </div>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`,
+        </tr>`
       )
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("Background Colors", entries.length)}
+        ${sectionHeader('Background Colors', entries.length)}
         <table class="comp-table">
           <thead><tr><th>Token</th><th>Value</th></tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
       </div>
     </div>`;
-  },
+  }
 };
 
 /** Text tokens only */
 export const TextColors: Story = {
-  name: "Text",
+  name: 'Text',
   render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith("CdrColorText"));
+    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorText'));
 
     const tableRows = entries
       .map(
@@ -583,27 +533,27 @@ export const TextColors: Story = {
             </span>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`,
+        </tr>`
       )
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("Text Colors", entries.length)}
+        ${sectionHeader('Text Colors', entries.length)}
         <table class="comp-table">
           <thead><tr><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
       </div>
     </div>`;
-  },
+  }
 };
 
 /** Border tokens only */
 export const BorderColors: Story = {
-  name: "Border",
+  name: 'Border',
   render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith("CdrColorBorder"));
+    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorBorder'));
 
     const tableRows = entries
       .map(
@@ -619,27 +569,27 @@ export const BorderColors: Story = {
             <div style="width:48px;height:24px;border-radius:4px;border:2px solid ${val};"></div>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`,
+        </tr>`
       )
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("Border Colors", entries.length)}
+        ${sectionHeader('Border Colors', entries.length)}
         <table class="comp-table">
           <thead><tr><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
       </div>
     </div>`;
-  },
+  }
 };
 
 /** Icon tokens only */
 export const IconColors: Story = {
-  name: "Icon",
+  name: 'Icon',
   render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith("CdrColorIcon"));
+    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorIcon'));
 
     const tableRows = entries
       .map(
@@ -657,18 +607,18 @@ export const IconColors: Story = {
             </svg>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`,
+        </tr>`
       )
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader("Icon Colors", entries.length)}
+        ${sectionHeader('Icon Colors', entries.length)}
         <table class="comp-table">
           <thead><tr><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
       </div>
     </div>`;
-  },
+  }
 };

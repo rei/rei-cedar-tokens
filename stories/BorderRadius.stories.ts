@@ -1,12 +1,12 @@
-import type { StoryObj, Meta } from "@storybook/html";
-import * as tokens from "../dist/rei-dot-com/js/cdr-tokens.mjs";
+import type { StoryObj, Meta } from '@storybook/html';
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 
 const meta: Meta = {
-  title: "Tokens/Border Radius",
+  title: 'Tokens/Border Radius',
   parameters: {
-    layout: "fullscreen",
-    controls: { disable: true },
-  },
+    layout: 'fullscreen',
+    controls: { disable: true }
+  }
 };
 
 export default meta;
@@ -86,21 +86,21 @@ const chrome = `
 `;
 
 export const BorderRadius: Story = {
-  name: "All Radius",
+  name: 'All Radius',
   render: () => {
     const t = tokens as Record<string, string>;
     const radii: [string, string][] = [
-      ["CdrRadiusSharp", "sharp"],
-      ["CdrRadiusSoft", "soft"],
-      ["CdrRadiusSofter", "softer"],
-      ["CdrRadiusSoftest", "softest"],
-      ["CdrRadiusRound", "round"],
+      ['CdrRadiusSharp', 'sharp'],
+      ['CdrRadiusSoft', 'soft'],
+      ['CdrRadiusSofter', 'softer'],
+      ['CdrRadiusSoftest', 'softest'],
+      ['CdrRadiusRound', 'round']
     ];
 
     const cards = radii
       .map(([key, label]) => {
-        const val = t[key] ?? "0";
-        const px = val === "9999" ? "9999px" : `${val}px`;
+        const val = t[key] ?? '0';
+        const px = val === '9999' ? '9999px' : `${val}px`;
         return `
           <div class="radius-card">
             <div class="radius-box-wrap">
@@ -111,7 +111,7 @@ export const BorderRadius: Story = {
             <span class="radius-value">${px}</span>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
@@ -122,5 +122,5 @@ export const BorderRadius: Story = {
         <div class="radius-grid">${cards}</div>
       </div>
     </div>`;
-  },
+  }
 };
