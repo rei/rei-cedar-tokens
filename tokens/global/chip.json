@@ -110,8 +110,13 @@
           "$value": "{options.color.warm-grey-100}",
           "$type": "color",
           "docs": {
-            "type": "chip",
-            "description": "Background color for active selected chips"
+            "type": "background",
+            "category": "color",
+            "example": "chip-default-selected-active",
+            "description": {
+              "what": "Active background for selected chips",
+              "when": "Use when a chip is selected and active"
+            }
           }
         }
       }

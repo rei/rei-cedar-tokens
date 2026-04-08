@@ -1,0 +1,15 @@
+export type CdrPaletteMembershipVibrantTokenName =
+  | "CdrMembershipVibrantColorBackgroundButtonPrimaryActive"
+  | "CdrMembershipVibrantColorBackgroundButtonPrimaryRest"
+  | "CdrMembershipVibrantColorBackgroundPrimary"
+  | "CdrMembershipVibrantColorBorderButtonPrimaryActive"
+  | "CdrMembershipVibrantColorBorderButtonPrimaryHover"
+  | "CdrMembershipVibrantColorBorderButtonPrimaryRest"
+  | "CdrMembershipVibrantColorBorderLinkHover"
+  | "CdrMembershipVibrantColorBorderLinkRest"
+  | "CdrMembershipVibrantColorBorderLinkVisited"
+  | "CdrMembershipVibrantColorTextButtonPrimaryHover"
+  | "CdrMembershipVibrantColorTextLinkHover"
+  | "CdrMembershipVibrantColorTextLinkRest"
+  | "CdrMembershipVibrantColorTextLinkVisited"
+  | "CdrMembershipVibrantColorTextPrimary";
