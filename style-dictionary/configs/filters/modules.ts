@@ -1,0 +1,31 @@
+export const foundatiosMoudulesName = [
+  "color-background",
+  "color-border",
+  "color-text",
+  "motion",
+  "prominence",
+  "radius",
+  "space",
+];
+
+export const componentModulesName = [
+  "accordion",
+  "button",
+  "chip",
+  "form",
+  "icon",
+  "input",
+  "link",
+  "message",
+  "modal",
+  "pagination",
+  "rating",
+  "slide",
+  "surface-selection",
+  "surface",
+  "switch",
+  "tab",
+  "table",
+  "toggle-button",
+  "tooltip",
+];

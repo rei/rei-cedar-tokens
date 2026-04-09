@@ -1,36 +1,7 @@
-export const typesFilters = (rootFolder: string) => {
-  const foundationsModulesName = [
-    "color-background",
-    "color-border",
-    "color-text",
-    "motion",
-    "prominence",
-    "radius",
-    "space",
-  ];
-  const componentModulesName = [
-    "accordion",
-    "button",
-    "chip",
-    "form",
-    "icon",
-    "input",
-    "link",
-    "message",
-    "modal",
-    "pagination",
-    "rating",
-    "slide",
-    "surface-selection",
-    "surface",
-    "switch",
-    "tab",
-    "table",
-    "toggle-button",
-    "tooltip",
-  ];
+import { foundatiosMoudulesName, componentModulesName } from "./modules";
 
-  const filtersFoundations = foundationsModulesName.flatMap((moduleName) => [
+export const typesFilters = (rootFolder: string) => {
+  const filtersFoundations = foundatiosMoudulesName.flatMap((moduleName) => [
     {
       destination: `../../web/default/${rootFolder}/foundations/${moduleName}.mjs`,
       format: "typescript/module-values",

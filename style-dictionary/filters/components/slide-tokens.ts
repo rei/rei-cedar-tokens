@@ -2,11 +2,11 @@ import type StyleDictionary from "style-dictionary";
 import type { Token } from "style-dictionary";
 
 /**
- * Registers a custom Style Dictionary filter that includes only Accordion tokens.
+ * Registers a custom Style Dictionary filter that includes only slide tokens.
  *
- * This filter includes tokens that are that include slide namespace while
- * excluding tokens from the 'options' and 'theme' namespaces, which are typically
- * used internally for configuration and theming.
+ * This filter includes tokens in the slide namespace while excluding tokens
+ * from the 'options' and 'theme' namespaces, which are typically used
+ * internally for configuration and theming.
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */

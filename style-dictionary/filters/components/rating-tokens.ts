@@ -2,9 +2,9 @@ import type StyleDictionary from "style-dictionary";
 import type { Token } from "style-dictionary";
 
 /**
- * Registers a custom Style Dictionary filter that includes only Accordion tokens.
+ * Registers a custom Style Dictionary filter that includes only Rating tokens.
  *
- * This filter includes tokens that are that include rating or rating-star namespace while
+ * This filter includes tokens in the rating or rating-star namespace
  * excluding tokens from the 'options' and 'theme' namespaces, which are typically
  * used internally for configuration and theming.
  *
