@@ -1,0 +1,87 @@
+{
+  "duration": {
+    "1-x": {
+      "$value": "100ms",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-1-x",
+        "description": {
+          "what": "Very short animation duration",
+          "when": "Use for micro-interactions",
+          "alternatives": ["{duration.2-x}"]
+        }
+      }
+    },
+    "2-x": {
+      "$value": "200ms",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-2-x",
+        "description": {
+          "what": "Short animation duration",
+          "when": "Use for quick UI transitions",
+          "alternatives": ["{duration.3-x}"]
+        }
+      }
+    },
+    "3-x": {
+      "$value": "300ms",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-3-x",
+        "description": {
+          "what": "Medium duration",
+          "when": "Use for standard UI animations",
+          "alternatives": ["{duration.4-x}"]
+        }
+      }
+    },
+    "4-x": {
+      "$value": "400ms",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-4-x",
+        "description": {
+          "what": "Long duration",
+          "when": "Use for slower transitions",
+          "alternatives": ["{duration.5-x}"]
+        }
+      }
+    },
+    "5-x": {
+      "$value": "500ms",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-5-x",
+        "description": {
+          "what": "Very long duration",
+          "when": "Use for dramatic or modal transitions",
+          "alternatives": ["{duration.6-x}"]
+        }
+      }
+    },
+    "6-x": {
+      "$value": "600ms",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-6-x",
+        "description": {
+          "what": "Extra long duration",
+          "when": "Use sparingly for large UI shifts"
+        }
+      }
+    }
+  }
+}
