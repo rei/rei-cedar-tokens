@@ -23,10 +23,14 @@ export const siteWeb = (theme: Theme): PlatformConfig => ({
         format: "site",
         filter: "remove-source-tokens",
       },
-      // Foundations filters
-      ...foundationsFilters("json", "site"),
-      // Component filters
-      ...componentsFilters("json", "site"),
+      ...(theme == "rei-dot-com"
+        ? [
+            // Foundations filters
+            ...foundationsFilters("json", "site"),
+            // Component filters
+            ...componentsFilters("json", "site"),
+          ]
+        : []),
     ],
   },
 });

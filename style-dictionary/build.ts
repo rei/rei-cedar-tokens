@@ -73,6 +73,11 @@ import { foundationsMotionTokens } from "./filters/foundations/motion-tokens";
 import { foundationsProminenceTokens } from "./filters/foundations/prominence-tokens";
 import { foundationsRadiusTokens } from "./filters/foundations/radius-tokens";
 import { foundationsSpaceTokens } from "./filters/foundations/space-tokens";
+import { foundationsBreakpointTokens } from "./filters/foundations/breakpoint-tokens";
+import { foundationsTextTokens } from "./filters/foundations/text-tokens";
+import { foundationsLineHeightTokens } from "./filters/foundations/line-height-tokens";
+import { foundationsTypeTokens } from "./filters/foundations/type-tokens";
+import { foundationsFontTokens } from "./filters/foundations/font-tokens";
 
 // ==== Include custom component filters ====
 import { componentAccordionTokens } from "./filters/components/accordion-tokens";
@@ -151,6 +156,11 @@ foundationsMotionTokens(StyleDictionary);
 foundationsProminenceTokens(StyleDictionary);
 foundationsRadiusTokens(StyleDictionary);
 foundationsSpaceTokens(StyleDictionary);
+foundationsBreakpointTokens(StyleDictionary);
+foundationsTextTokens(StyleDictionary);
+foundationsLineHeightTokens(StyleDictionary);
+foundationsTypeTokens(StyleDictionary);
+foundationsFontTokens(StyleDictionary);
 
 // ==== Register custom component filters ====
 componentAccordionTokens(StyleDictionary);
