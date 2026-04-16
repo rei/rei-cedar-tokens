@@ -49,18 +49,6 @@ export const CdrButton = {
   CdrColorTextButtonSecondaryActive: "#fafbf9",
   CdrColorTextButtonSecondaryDisabled: "#d5cfc3",
   CdrColorTextButtonSecondaryHover: "#4b4a48",
-  CdrMembershipSubtleColorBackgroundButtonPrimaryActive: "#13352c",
-  CdrMembershipSubtleColorBackgroundButtonPrimaryRest: "#13352c",
-  CdrMembershipSubtleColorBorderButtonPrimaryActive: "#13352c",
-  CdrMembershipSubtleColorBorderButtonPrimaryHover: "#13352c",
-  CdrMembershipSubtleColorBorderButtonPrimaryRest: "#13352c",
-  CdrMembershipSubtleColorTextButtonPrimaryHover: "#13352c",
-  CdrMembershipVibrantColorBackgroundButtonPrimaryActive: "#13352c",
-  CdrMembershipVibrantColorBackgroundButtonPrimaryRest: "#13352c",
-  CdrMembershipVibrantColorBorderButtonPrimaryActive: "#13352c",
-  CdrMembershipVibrantColorBorderButtonPrimaryHover: "#13352c",
-  CdrMembershipVibrantColorBorderButtonPrimaryRest: "#13352c",
-  CdrMembershipVibrantColorTextButtonPrimaryHover: "#13352c",
 };
 
 export default CdrButton;

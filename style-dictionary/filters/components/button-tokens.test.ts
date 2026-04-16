@@ -1,7 +1,8 @@
 import { describe, it, expect } from "vitest";
 import type { Token } from "style-dictionary";
 
-describe("button tokens filter", () => {
+describe("component-button-tokens filter", () => {
+  // Helper to create a token structure similar to Style Dictionary's internal format
   const createToken = (path: string[]): Token => ({
     name: "test-token",
     path,
@@ -12,44 +13,45 @@ describe("button tokens filter", () => {
     isSource: true,
   });
 
-  // Matches the logic in your provided Definition File
-  const buttonTokensFilter = (token: Token): boolean =>
+  // Matches the logic defined in your componentButtonTokens registration
+  const filterLogic = (token: Token): boolean =>
     token.path[0] !== "options" &&
-    token.path[0] !== "theme" &&
+    token.path[0] === "color" &&
     token.path.includes("button");
 
-  it('should include tokens where "button" is the root namespace', () => {
-    const token = createToken(["button", "size", "large"]);
-    expect(buttonTokensFilter(token)).toBe(true);
+  it('should include tokens where "color" is the root and "button" is present', () => {
+    const token = createToken(["color", "button", "primary", "background"]);
+    expect(filterLogic(token)).toBe(true);
   });
 
-  it('should include tokens where "button" appears later in the path', () => {
-    const token = createToken(["color", "background", "button", "primary"]);
-    expect(buttonTokensFilter(token)).toBe(true);
+  it('should include tokens where "button" appears later in a color path', () => {
+    const token = createToken(["color", "brand", "button", "border"]);
+    expect(filterLogic(token)).toBe(true);
   });
 
-  it("should include tokens for specific button states", () => {
-    const token = createToken(["button", "border", "hover", "color"]);
-    expect(buttonTokensFilter(token)).toBe(true);
+  it('should exclude tokens that include "button" but do not start with "color"', () => {
+    // Fails because path[0] is 'button', not 'color'
+    const token = createToken(["button", "color", "primary"]);
+    expect(filterLogic(token)).toBe(false);
   });
 
-  it('should filter out "button" tokens if they are in the options namespace', () => {
-    const token = createToken(["options", "button", "padding"]);
-    expect(buttonTokensFilter(token)).toBe(false);
+  it('should exclude tokens that start with "options" even if they contain "button"', () => {
+    const token = createToken(["options", "color", "button"]);
+    expect(filterLogic(token)).toBe(false);
   });
 
-  it('should filter out "button" tokens if they are in the theme namespace', () => {
-    const token = createToken(["theme", "button", "border-radius"]);
-    expect(buttonTokensFilter(token)).toBe(false);
+  it('should exclude color tokens that do not contain the word "button"', () => {
+    const token = createToken(["color", "background", "base"]);
+    expect(filterLogic(token)).toBe(false);
   });
 
-  it('should filter out tokens that do not contain the word "button"', () => {
-    const token = createToken(["accordion", "item", "header"]);
-    expect(buttonTokensFilter(token)).toBe(false);
+  it("should exclude tokens from the theme namespace", () => {
+    const token = createToken(["theme", "color", "button"]);
+    expect(filterLogic(token)).toBe(false);
   });
 
-  it('should filter out general color tokens without "button" in the path', () => {
-    const token = createToken(["color", "background", "primary"]);
-    expect(buttonTokensFilter(token)).toBe(false);
+  it("should handle an empty path gracefully", () => {
+    const token = createToken([]);
+    expect(filterLogic(token)).toBe(false);
   });
 });

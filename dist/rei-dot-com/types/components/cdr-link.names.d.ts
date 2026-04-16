@@ -9,16 +9,4 @@ export type CdrLinkTokenName =
   | "CdrColorTextLinkDisabled"
   | "CdrColorTextLinkHover"
   | "CdrColorTextLinkRest"
-  | "CdrColorTextLinkVisited"
-  | "CdrMembershipSubtleColorBorderLinkHover"
-  | "CdrMembershipSubtleColorBorderLinkRest"
-  | "CdrMembershipSubtleColorBorderLinkVisited"
-  | "CdrMembershipSubtleColorTextLinkHover"
-  | "CdrMembershipSubtleColorTextLinkRest"
-  | "CdrMembershipSubtleColorTextLinkVisited"
-  | "CdrMembershipVibrantColorBorderLinkHover"
-  | "CdrMembershipVibrantColorBorderLinkRest"
-  | "CdrMembershipVibrantColorBorderLinkVisited"
-  | "CdrMembershipVibrantColorTextLinkHover"
-  | "CdrMembershipVibrantColorTextLinkRest"
-  | "CdrMembershipVibrantColorTextLinkVisited";
+  | "CdrColorTextLinkVisited";

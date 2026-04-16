@@ -10,18 +10,6 @@ export const CdrLink = {
   CdrColorTextLinkHover: "#406eb5",
   CdrColorTextLinkRest: "#406eb5",
   CdrColorTextLinkVisited: "#406eb5",
-  CdrMembershipSubtleColorBorderLinkHover: "#13352C",
-  CdrMembershipSubtleColorBorderLinkRest: "#13352C",
-  CdrMembershipSubtleColorBorderLinkVisited: "#13352C",
-  CdrMembershipSubtleColorTextLinkHover: "#13352C",
-  CdrMembershipSubtleColorTextLinkRest: "#13352C",
-  CdrMembershipSubtleColorTextLinkVisited: "#13352C",
-  CdrMembershipVibrantColorBorderLinkHover: "#13352C",
-  CdrMembershipVibrantColorBorderLinkRest: "#13352C",
-  CdrMembershipVibrantColorBorderLinkVisited: "#13352C",
-  CdrMembershipVibrantColorTextLinkHover: "#13352C",
-  CdrMembershipVibrantColorTextLinkRest: "#13352C",
-  CdrMembershipVibrantColorTextLinkVisited: "#13352C",
 };
 
 export default CdrLink;

@@ -199,54 +199,6 @@ export interface CdrButtonTokens {
    * Text color for the hover state of secondary buttons
    */
   readonly CdrColorTextButtonSecondaryHover: string;
-  /**
-   * Background color for the active and pressed states of the primary button
-   */
-  readonly CdrMembershipSubtleColorBackgroundButtonPrimaryActive: string;
-  /**
-   * Background color for the primary button
-   */
-  readonly CdrMembershipSubtleColorBackgroundButtonPrimaryRest: string;
-  /**
-   * Border color for the active and pressed states of the primary button
-   */
-  readonly CdrMembershipSubtleColorBorderButtonPrimaryActive: string;
-  /**
-   * Border color for the hover state of the primary button
-   */
-  readonly CdrMembershipSubtleColorBorderButtonPrimaryHover: string;
-  /**
-   * Border color for the primary button
-   */
-  readonly CdrMembershipSubtleColorBorderButtonPrimaryRest: string;
-  /**
-   * Text color for the hover state of primary buttons
-   */
-  readonly CdrMembershipSubtleColorTextButtonPrimaryHover: string;
-  /**
-   * Background color for the active and pressed states of the primary button
-   */
-  readonly CdrMembershipVibrantColorBackgroundButtonPrimaryActive: string;
-  /**
-   * Background color for the primary button
-   */
-  readonly CdrMembershipVibrantColorBackgroundButtonPrimaryRest: string;
-  /**
-   * Border color for the active and pressed states of the primary button
-   */
-  readonly CdrMembershipVibrantColorBorderButtonPrimaryActive: string;
-  /**
-   * Border color for the hover state of the primary button
-   */
-  readonly CdrMembershipVibrantColorBorderButtonPrimaryHover: string;
-  /**
-   * Border color for the primary button
-   */
-  readonly CdrMembershipVibrantColorBorderButtonPrimaryRest: string;
-  /**
-   * Text color for the hover state of primary buttons
-   */
-  readonly CdrMembershipVibrantColorTextButtonPrimaryHover: string;
 }
 
 export declare const CdrButton: CdrButtonTokens;

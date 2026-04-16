@@ -48,16 +48,4 @@ export type CdrButtonTokenName =
   | "CdrColorTextButtonSecondary"
   | "CdrColorTextButtonSecondaryActive"
   | "CdrColorTextButtonSecondaryDisabled"
-  | "CdrColorTextButtonSecondaryHover"
-  | "CdrMembershipSubtleColorBackgroundButtonPrimaryActive"
-  | "CdrMembershipSubtleColorBackgroundButtonPrimaryRest"
-  | "CdrMembershipSubtleColorBorderButtonPrimaryActive"
-  | "CdrMembershipSubtleColorBorderButtonPrimaryHover"
-  | "CdrMembershipSubtleColorBorderButtonPrimaryRest"
-  | "CdrMembershipSubtleColorTextButtonPrimaryHover"
-  | "CdrMembershipVibrantColorBackgroundButtonPrimaryActive"
-  | "CdrMembershipVibrantColorBackgroundButtonPrimaryRest"
-  | "CdrMembershipVibrantColorBorderButtonPrimaryActive"
-  | "CdrMembershipVibrantColorBorderButtonPrimaryHover"
-  | "CdrMembershipVibrantColorBorderButtonPrimaryRest"
-  | "CdrMembershipVibrantColorTextButtonPrimaryHover";
+  | "CdrColorTextButtonSecondaryHover";

@@ -2,7 +2,7 @@ import type StyleDictionary from "style-dictionary";
 import type { Token } from "style-dictionary";
 
 /**
- * Registers a custom Style Dictionary filter that includes only Accordion tokens.
+ * Registers a custom Style Dictionary filter that includes only link tokens.
  *
  * This filter includes tokens that are that include link namespace while
  * excluding tokens from the 'options' and 'theme' namespaces, which are typically
@@ -15,7 +15,7 @@ export const componentLinkTokens = (sd: typeof StyleDictionary): void => {
     name: "component-link-tokens",
     filter: (token: Token) =>
       token.path[0] !== "options" &&
-      token.path[0] !== "theme" &&
+      token.path[0] === "color" &&
       token.path.includes("link"),
   });
 };

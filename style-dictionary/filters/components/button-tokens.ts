@@ -15,7 +15,7 @@ export const componentButtonTokens = (sd: typeof StyleDictionary): void => {
     name: "component-button-tokens",
     filter: (token: Token) =>
       token.path[0] !== "options" &&
-      token.path[0] !== "theme" &&
+      token.path[0] === "color" &&
       token.path.includes("button"),
   });
 };
