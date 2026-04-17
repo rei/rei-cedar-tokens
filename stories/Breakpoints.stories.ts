@@ -1,10 +1,10 @@
-import type { StoryObj, Meta } from "@storybook/html";
-import * as tokens from "../dist/rei-dot-com/js/cdr-tokens.mjs";
+import type { StoryObj, Meta } from '@storybook/html';
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 
 const meta: Meta = {
-  title: "Tokens/Breakpoints",
+  title: 'Tokens/Breakpoints',
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
     controls: { disable: true },
   },
 };
@@ -136,14 +136,14 @@ const chrome = `
 `;
 
 export const Breakpoints: Story = {
-  name: "All Breakpoints",
+  name: 'All Breakpoints',
   render: () => {
     const t = tokens as Record<string, string>;
     const breakpoints: [string, string, string, string][] = [
-      ["CdrBreakpointXs", "xs", "Extra Small", "0–767px"],
-      ["CdrBreakpointSm", "sm", "Small", "768–991px"],
-      ["CdrBreakpointMd", "md", "Medium", "992–1231px"],
-      ["CdrBreakpointLg", "lg", "Large", "1232px+"],
+      ['CdrBreakpointXs', 'xs', 'Extra Small', '0–767px'],
+      ['CdrBreakpointSm', 'sm', 'Small', '768–991px'],
+      ['CdrBreakpointMd', 'md', 'Medium', '992–1231px'],
+      ['CdrBreakpointLg', 'lg', 'Large', '1232px+'],
     ];
 
     // Use 1232 as the reference max (xs shows 0 but we give it a 4% minimum)
@@ -151,7 +151,7 @@ export const Breakpoints: Story = {
 
     const rows = breakpoints
       .map(([key, abbrev, name, range]) => {
-        const val = t[key] ?? "0";
+        const val = t[key] ?? '0';
         const px = parseInt(val) || 0;
         const pct = px === 0 ? 4 : Math.max((px / maxPx) * 100, 4);
         return `
@@ -164,18 +164,18 @@ export const Breakpoints: Story = {
               <div class="bp-bar-fill" style="width: ${pct}%;"></div>
             </div>
             <div class="bp-value-wrap">
-              <span class="bp-px">${px === 0 ? "0px" : px + "px"}</span>
+              <span class="bp-px">${px === 0 ? '0px' : px + 'px'}</span>
               <span class="bp-token">${key}</span>
               <span class="bp-range">${range}</span>
             </div>
           </div>`;
       })
-      .join("");
+      .join('');
 
     // Device mockups: heights proportional to breakpoint representation
     const devices = breakpoints
       .map(([key, abbrev, , _range], i) => {
-        const val = t[key] ?? "0";
+        const val = t[key] ?? '0';
         const _px = parseInt(val) || 0;
         // Heights: xs=40, sm=60, md=80, lg=100 (just illustrative)
         const heights = [40, 60, 80, 100];
@@ -185,7 +185,7 @@ export const Breakpoints: Story = {
             <span class="bp-device-label">${abbrev}</span>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">

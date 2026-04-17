@@ -9,7 +9,7 @@ describe('prominence-tokens filter', () => {
     $value: '4px',
     original: { $value: '4px' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the filter logic directly

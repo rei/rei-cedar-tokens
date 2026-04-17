@@ -9,7 +9,7 @@ describe('deprecated transform', () => {
     $value: '#000000',
     original: { $value: '#000000' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the transform logic directly
@@ -21,7 +21,7 @@ describe('deprecated transform', () => {
       return {
         deprecated: true,
         'deprecated-year': year,
-        'deprecated-release': release
+        'deprecated-release': release,
       };
     }
 
@@ -43,7 +43,7 @@ describe('deprecated transform', () => {
     expect(result).toEqual({
       deprecated: true,
       'deprecated-year': '2024',
-      'deprecated-release': 'R1'
+      'deprecated-release': 'R1',
     });
   });
 
@@ -61,7 +61,7 @@ describe('deprecated transform', () => {
     expect(result).toEqual({
       deprecated: true,
       'deprecated-year': '2023',
-      'deprecated-release': 'R2'
+      'deprecated-release': 'R2',
     });
   });
 
@@ -72,7 +72,7 @@ describe('deprecated transform', () => {
     expect(result).toEqual({
       deprecated: true,
       'deprecated-year': '2025',
-      'deprecated-release': 'R3'
+      'deprecated-release': 'R3',
     });
   });
 

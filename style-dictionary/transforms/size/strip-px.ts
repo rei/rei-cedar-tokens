@@ -39,6 +39,6 @@ export const stripPx = (sd: typeof StyleDictionary): void => {
         cleanVal = token.$value.slice(0, -2);
       }
       return cleanVal;
-    }
+    },
   });
 };

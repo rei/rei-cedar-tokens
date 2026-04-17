@@ -12,7 +12,7 @@ export const ios = (theme: Theme): PlatformConfig => ({
       'color/UIColor',
       'size/strip-px',
       'size/space',
-      'size/float'
+      'size/float',
     ],
     files: [
       {
@@ -21,8 +21,8 @@ export const ios = (theme: Theme): PlatformConfig => ({
         filter: (token: Token) => filterSourceTokensAndType(token, ['dimension', 'fontSize']),
         options: {
           type: 'float',
-          className: 'CdrSize'
-        }
+          className: 'CdrSize',
+        },
       },
       {
         destination: 'CdrSize.m',
@@ -30,8 +30,8 @@ export const ios = (theme: Theme): PlatformConfig => ({
         filter: (token: Token) => filterSourceTokensAndType(token, ['dimension', 'fontSize']),
         options: {
           type: 'float',
-          className: 'CdrSize'
-        }
+          className: 'CdrSize',
+        },
       },
       {
         destination: 'CdrColor.h',
@@ -39,8 +39,8 @@ export const ios = (theme: Theme): PlatformConfig => ({
         filter: (token: Token) => filterSourceTokensAndType(token, 'color'),
         options: {
           type: 'CdrColorName',
-          className: 'CdrColor'
-        }
+          className: 'CdrColor',
+        },
       },
       {
         destination: 'CdrColor.m',
@@ -48,9 +48,9 @@ export const ios = (theme: Theme): PlatformConfig => ({
         filter: (token: Token) => filterSourceTokensAndType(token, 'color'),
         options: {
           type: 'CdrColorName',
-          className: 'CdrColor'
-        }
-      }
-    ]
-  }
+          className: 'CdrColor',
+        },
+      },
+    ],
+  },
 });

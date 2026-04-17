@@ -23,6 +23,6 @@ export const dpTransitive = (sd: typeof StyleDictionary): void => {
     transform: (token: Token): string => {
       const val = parseFloat(token.$value);
       return val.toFixed(2) + 'dp';
-    }
+    },
   });
 };

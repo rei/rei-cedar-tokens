@@ -11,63 +11,63 @@ export const css = (theme: Theme): PlatformConfig => ({
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',
-      'value/clamp'
+      'value/clamp',
     ],
     files: [
       {
         destination: 'cdr-variables.css',
         format: 'css/variables',
-        filter: 'remove-categories-tokens'
+        filter: 'remove-categories-tokens',
       },
       {
         destination: 'foundations/cdr-color-background.css',
         format: 'css/variables',
-        filter: 'color-background-tokens'
+        filter: 'color-background-tokens',
       },
       {
         destination: 'foundations/cdr-color-text.css',
         format: 'css/variables',
-        filter: 'color-text-tokens'
+        filter: 'color-text-tokens',
       },
       {
         destination: 'foundations/cdr-color-border.css',
         format: 'css/variables',
-        filter: 'color-border-tokens'
+        filter: 'color-border-tokens',
       },
       {
         destination: 'foundations/cdr-color-icon.css',
         format: 'css/variables',
-        filter: 'color-icon-tokens'
+        filter: 'color-icon-tokens',
       },
       {
         destination: 'foundations/cdr-motion.css',
         format: 'css/variables',
-        filter: 'motion-tokens'
+        filter: 'motion-tokens',
       },
       {
         destination: 'foundations/cdr-prominence.css',
         format: 'css/variables',
-        filter: 'prominence-tokens'
+        filter: 'prominence-tokens',
       },
       {
         destination: 'foundations/cdr-form.css',
         format: 'css/variables',
-        filter: 'form-tokens'
+        filter: 'form-tokens',
       },
       {
         destination: 'foundations/cdr-icon.css',
         format: 'css/variables',
-        filter: 'icon-tokens'
+        filter: 'icon-tokens',
       },
       {
         destination: 'foundations/cdr-radius.css',
         format: 'css/variables',
-        filter: 'radius-tokens'
+        filter: 'radius-tokens',
       },
       {
         destination: 'foundations/cdr-space.css',
         format: 'css/variables',
-        filter: 'space-tokens'
+        filter: 'space-tokens',
       },
       // REI Dot Com Specific Palettes
       ...(theme == 'rei-dot-com'
@@ -75,16 +75,16 @@ export const css = (theme: Theme): PlatformConfig => ({
             {
               destination: 'palettes/cdr-palette-membership-subtle.css',
               format: 'css/variables',
-              filter: 'membership-subtle-tokens'
+              filter: 'membership-subtle-tokens',
             },
             {
               destination: 'palettes/cdr-palette-membership-vibrant.css',
               format: 'css/variables',
-              filter: 'membership-vibrant-tokens'
-            }
+              filter: 'membership-vibrant-tokens',
+            },
           ]
-        : [])
+        : []),
     ],
-    actions: ['concat-files']
-  }
+    actions: ['concat-files'],
+  },
 });

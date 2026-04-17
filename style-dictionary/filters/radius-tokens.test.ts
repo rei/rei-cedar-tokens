@@ -9,7 +9,7 @@ describe('radius-tokens filter', () => {
     $value: '8px',
     original: { $value: '8px' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the filter logic directly

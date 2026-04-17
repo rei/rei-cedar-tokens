@@ -17,6 +17,6 @@ export const colorBorderTokens = (sd: typeof StyleDictionary): void => {
       token.path[0] !== 'options' &&
       token.path[0] !== 'theme' &&
       token.path[0] === 'color' &&
-      token.path[1] === 'border'
+      token.path[1] === 'border',
   });
 };

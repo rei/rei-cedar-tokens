@@ -1,10 +1,10 @@
-import type { StoryObj, Meta } from "@storybook/html";
-import * as tokens from "../dist/rei-dot-com/js/cdr-tokens.mjs";
+import type { StoryObj, Meta } from '@storybook/html';
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 
 const meta: Meta = {
-  title: "Tokens/Prominence (Shadow)",
+  title: 'Tokens/Prominence (Shadow)',
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
     controls: { disable: true },
   },
 };
@@ -142,20 +142,20 @@ const chrome = `
 `;
 
 export const Prominence: Story = {
-  name: "Showcase",
+  name: 'Showcase',
   render: () => {
     const t = tokens as Record<string, string>;
     const shadows: [string, string][] = [
-      ["CdrProminenceFlat", "flat"],
-      ["CdrProminenceRaised", "raised"],
-      ["CdrProminenceElevated", "elevated"],
-      ["CdrProminenceFloating", "floating"],
-      ["CdrProminenceLifted", "lifted"],
+      ['CdrProminenceFlat', 'flat'],
+      ['CdrProminenceRaised', 'raised'],
+      ['CdrProminenceElevated', 'elevated'],
+      ['CdrProminenceFloating', 'floating'],
+      ['CdrProminenceLifted', 'lifted'],
     ];
 
     const cards = shadows
       .map(([key, label]) => {
-        const val = t[key] ?? "none";
+        const val = t[key] ?? 'none';
         return `
           <div class="shadow-card">
             <div class="shadow-stage">
@@ -168,7 +168,7 @@ export const Prominence: Story = {
             </div>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
@@ -183,10 +183,10 @@ export const Prominence: Story = {
 };
 
 export const AllProminence: Story = {
-  name: "All Prominence Tokens",
+  name: 'All Prominence Tokens',
   render: () => {
     const allProminence = Object.entries(tokens)
-      .filter(([key]) => key.startsWith("CdrProminence"))
+      .filter(([key]) => key.startsWith('CdrProminence'))
       .map(([key, value]) => [key, String(value)]) as [string, string][];
 
     const rows = allProminence
@@ -200,7 +200,7 @@ export const AllProminence: Story = {
             </div>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">

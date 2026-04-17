@@ -28,7 +28,7 @@ export const removeCategoriesTokens = (sd: typeof StyleDictionary): void => {
         'prominence',
         'duration',
         'timing',
-        'form'
+        'form',
       ];
 
       if (
@@ -39,6 +39,6 @@ export const removeCategoriesTokens = (sd: typeof StyleDictionary): void => {
       }
 
       return token.path[0] !== 'options' && token.path[0] !== 'theme';
-    }
+    },
   });
 };

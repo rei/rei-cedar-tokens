@@ -9,7 +9,7 @@ describe('color-border-tokens filter', () => {
     $value: '#000000',
     original: { $value: '#000000' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the filter logic directly

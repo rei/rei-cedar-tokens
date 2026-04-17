@@ -53,8 +53,8 @@ export const commonConfig = (theme: Theme, platform: Platform) => ({
   prefix: 'cdr',
   buildPath: `dist/${theme}/${platform}/`,
   options: {
-    showFileHeader: false
-  }
+    showFileHeader: false,
+  },
 });
 
 export const filterSourceTokensAndType = (token: Token, type: TokenTypes | TokenTypes[]) => {

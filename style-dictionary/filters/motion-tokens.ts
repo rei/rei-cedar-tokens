@@ -15,6 +15,6 @@ export const motionTokens = (sd: typeof StyleDictionary): void => {
     name: 'motion-tokens',
     filter: (token: Token) =>
       token.path[0] !== 'options' &&
-      (token.path.includes('timing') || token.path.includes('duration'))
+      (token.path.includes('timing') || token.path.includes('duration')),
   });
 };

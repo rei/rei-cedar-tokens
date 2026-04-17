@@ -2,7 +2,7 @@ import type StyleDictionary from 'style-dictionary';
 import type {
   FormatFnArguments,
   TransformedToken,
-  TransformedTokens
+  TransformedTokens,
 } from 'style-dictionary/types';
 import _ from 'lodash';
 import { cleanMeta } from '@divriots/style-dictionary-to-figma';
@@ -34,7 +34,7 @@ export const figma = (sd: typeof StyleDictionary): void => {
         'newToken',
         'name',
         'docCategory',
-        'docExample'
+        'docExample',
       ];
 
       /**
@@ -60,7 +60,7 @@ export const figma = (sd: typeof StyleDictionary): void => {
                 $value: value.original.$value.replace('options.', ''),
                 $type: value.$type,
                 ...(value.original.$description && { $description: value.original.$description }),
-                ...(value.filePath && { filePath: value.filePath })
+                ...(value.filePath && { filePath: value.filePath }),
               };
             }
             return value;
@@ -70,10 +70,10 @@ export const figma = (sd: typeof StyleDictionary): void => {
 
       // First preserve references, then clean metadata
       const transformedTokens = cleanMeta(preserveReferences(dictionary.tokens), {
-        cleanMeta: propsToRemove
+        cleanMeta: propsToRemove,
       });
 
       return JSON.stringify(transformedTokens, null, 2);
-    }
+    },
   });
 };

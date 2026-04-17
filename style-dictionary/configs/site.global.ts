@@ -12,14 +12,14 @@ export const siteGlobal = (theme: Theme): PlatformConfig => ({
       'size/space-js',
       'size/px-to-rem-transitive',
       'time/seconds',
-      'value/clamp'
+      'value/clamp',
     ],
     files: [
       {
         destination: 'global.json',
         format: 'site',
-        filter: 'remove-source-tokens'
-      }
-    ]
-  }
+        filter: 'remove-source-tokens',
+      },
+    ],
+  },
 });

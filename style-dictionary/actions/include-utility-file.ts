@@ -32,7 +32,7 @@ interface UtilityActionOptions {
 export const createIncludeUtilityAction = (
   options: UtilityActionOptions | string,
   sourceFileName?: string,
-  description = 'utility file'
+  description = 'utility file',
 ) => {
   // Support both new options object and legacy positional arguments
   const config: UtilityActionOptions =
@@ -40,7 +40,7 @@ export const createIncludeUtilityAction = (
       ? {
           actionName: options,
           sourceFiles: sourceFileName!,
-          description
+          description,
         }
       : options;
 
@@ -49,7 +49,7 @@ export const createIncludeUtilityAction = (
     sourceFiles,
     outputFileName,
     outputSubDir = '',
-    description: desc = 'utility file'
+    description: desc = 'utility file',
   } = config;
 
   const files = Array.isArray(sourceFiles) ? sourceFiles : [sourceFiles];
@@ -103,7 +103,7 @@ export const createIncludeUtilityAction = (
           console.error(`Error removing ${desc} directory:`, error);
           throw error;
         }
-      }
+      },
     });
   };
 };
@@ -116,7 +116,7 @@ export const includeDisplayScss = createIncludeUtilityAction({
   sourceFiles: 'display.scss',
   outputFileName: 'cdr-display-mixins.scss',
   outputSubDir: 'utilities',
-  description: 'display utilities SCSS'
+  description: 'display utilities SCSS',
 });
 
 /**
@@ -125,7 +125,7 @@ export const includeDisplayScss = createIncludeUtilityAction({
 export const includeDeprecateScss = createIncludeUtilityAction(
   'include-deprecate-scss',
   'deprecate.scss',
-  'deprecation utilities SCSS'
+  'deprecation utilities SCSS',
 );
 
 /**
@@ -137,5 +137,5 @@ export const includeQueriesFileScss = createIncludeUtilityAction({
   sourceFiles: ['media-queries.scss', 'container-queries.scss'],
   outputFileName: 'cdr-breakpoint-mixins.scss',
   outputSubDir: 'utilities',
-  description: 'breakpoint mixins SCSS'
+  description: 'breakpoint mixins SCSS',
 });

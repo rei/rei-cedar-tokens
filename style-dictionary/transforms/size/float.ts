@@ -32,6 +32,6 @@ export const float = (sd: typeof StyleDictionary): void => {
       const num = parseFloat(token.$value).toFixed(1);
       const unit = 'f';
       return `${num}${unit}`;
-    }
+    },
   });
 };

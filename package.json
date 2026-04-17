@@ -1,22 +1,19 @@
 {
   "name": "@rei/cdr-tokens",
   "version": "14.0.0",
-  "type": "module",
+  "private": false,
   "description": "Tokens for REI cedar design system",
-  "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
+  "license": "ISC",
+  "author": "REI Software Engineering",
   "repository": {
     "type": "git",
     "url": "https://github.com/rei/rei-cedar-tokens.git"
   },
-  "license": "ISC",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "dist"
   ],
+  "type": "module",
   "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
   "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
   "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
@@ -33,6 +30,9 @@
     },
     "./dist/": "./dist/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepublishOnly": "pnpm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
@@ -42,7 +42,10 @@
     "build:grid": "tsx grid.ts",
     "site-tokens": "tsx ./site-tokens.ts",
     "lint-staged": "lint-staged",
-    "format": "oxlint --fix && oxfmt",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "prepush": "pnpm run lint && pnpm test",
     "validate": "tsx ./validate.ts",
     "validate:update": "tsx ./validate.ts --update",
     "tokens:update": "tsx ./tokens-studio/token-updater.ts",
@@ -76,8 +79,8 @@
     "lint-staged": "^16.2.7",
     "lodash": "^4.17.21",
     "npm-publish-prerelease": "^1.0.2",
-    "oxfmt": "^0.36.0",
-    "oxlint": "^1.51.0",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
     "query-string": "^9.1.0",
     "rimraf": "^6.0.1",
     "storybook": "^8.6.17",
@@ -86,13 +89,17 @@
     "tsx": "^4.19.2",
     "vitest": "^4.0.16"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}": [
+      "oxlint --fix",
+      "oxfmt --no-error-on-unmatched-pattern"
+    ],
+    "**/*.{css,scss,html,json,jsonc,json5,md,mdx,toml,yml,yaml}": "oxfmt --no-error-on-unmatched-pattern"
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "*.mjs": "npm run format"
   },
   "engines": {
     "node": ">= 22.0.0",

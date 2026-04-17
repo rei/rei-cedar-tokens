@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const radiusTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'radius-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'radius'
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'radius',
   });
 };

@@ -1,10 +1,10 @@
-import type { StoryObj, Meta } from "@storybook/html";
-import * as tokens from "../dist/rei-dot-com/js/cdr-tokens.mjs";
+import type { StoryObj, Meta } from '@storybook/html';
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 
 const meta: Meta = {
-  title: "Tokens/Motion",
+  title: 'Tokens/Motion',
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
     controls: { disable: true },
   },
 };
@@ -164,25 +164,23 @@ function section(title: string, content: string, count: number): string {
 // ─── Stories ─────────────────────────────────────────────────────────────────
 
 export const Duration: Story = {
-  name: "Duration",
+  name: 'Duration',
   render: () => {
     const t = tokens as Record<string, string>;
     const durations: [string, string][] = [
-      ["CdrDuration1X", "1x"],
-      ["CdrDuration2X", "2x"],
-      ["CdrDuration3X", "3x"],
-      ["CdrDuration4X", "4x"],
-      ["CdrDuration5X", "5x"],
-      ["CdrDuration6X", "6x"],
+      ['CdrDuration1X', '1x'],
+      ['CdrDuration2X', '2x'],
+      ['CdrDuration3X', '3x'],
+      ['CdrDuration4X', '4x'],
+      ['CdrDuration5X', '5x'],
+      ['CdrDuration6X', '6x'],
     ];
 
-    const maxMs = Math.max(
-      ...durations.map(([k]) => parseInt(t[k] ?? "0") || 0),
-    );
+    const maxMs = Math.max(...durations.map(([k]) => parseInt(t[k] ?? '0') || 0));
 
     const rows = durations
       .map(([key, label]) => {
-        const val = t[key] ?? "0";
+        const val = t[key] ?? '0';
         const ms = parseInt(val) || 0;
         const pct = maxMs > 0 ? Math.max((ms / maxMs) * 100, 1) : 0;
         return `
@@ -194,25 +192,25 @@ export const Duration: Story = {
             <span class="dur-value">${val}ms</span>
           </div>`;
       })
-      .join("");
+      .join('');
 
-    return `${chrome}<div class="sb-page">${section("Duration", rows, durations.length)}</div>`;
+    return `${chrome}<div class="sb-page">${section('Duration', rows, durations.length)}</div>`;
   },
 };
 
 export const TimingFunctions: Story = {
-  name: "Timing Functions",
+  name: 'Timing Functions',
   render: () => {
     const t = tokens as Record<string, string>;
     const timings: [string, string][] = [
-      ["CdrTimingFunctionEaseOut", "ease-out"],
-      ["CdrTimingFunctionEase", "ease"],
-      ["CdrTimingFunctionLinear", "linear"],
+      ['CdrTimingFunctionEaseOut', 'ease-out'],
+      ['CdrTimingFunctionEase', 'ease'],
+      ['CdrTimingFunctionLinear', 'linear'],
     ];
 
     const cards = timings
       .map(([key, label]) => {
-        const val = t[key] ?? "ease";
+        const val = t[key] ?? 'ease';
         return `
           <div class="timing-card">
             <div class="timing-track">
@@ -223,10 +221,10 @@ export const TimingFunctions: Story = {
             <div class="timing-value">${val}</div>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">${section(
-      "Timing Functions",
+      'Timing Functions',
       `<div class="timing-grid">${cards}</div>`,
       timings.length,
     )}</div>`;
@@ -234,30 +232,28 @@ export const TimingFunctions: Story = {
 };
 
 export const AllMotion: Story = {
-  name: "All Motion",
+  name: 'All Motion',
   render: () => {
     const t = tokens as Record<string, string>;
     const durations: [string, string][] = [
-      ["CdrDuration1X", "1x"],
-      ["CdrDuration2X", "2x"],
-      ["CdrDuration3X", "3x"],
-      ["CdrDuration4X", "4x"],
-      ["CdrDuration5X", "5x"],
-      ["CdrDuration6X", "6x"],
+      ['CdrDuration1X', '1x'],
+      ['CdrDuration2X', '2x'],
+      ['CdrDuration3X', '3x'],
+      ['CdrDuration4X', '4x'],
+      ['CdrDuration5X', '5x'],
+      ['CdrDuration6X', '6x'],
     ];
     const timings: [string, string][] = [
-      ["CdrTimingFunctionEaseOut", "ease-out"],
-      ["CdrTimingFunctionEase", "ease"],
-      ["CdrTimingFunctionLinear", "linear"],
+      ['CdrTimingFunctionEaseOut', 'ease-out'],
+      ['CdrTimingFunctionEase', 'ease'],
+      ['CdrTimingFunctionLinear', 'linear'],
     ];
 
-    const maxMs = Math.max(
-      ...durations.map(([k]) => parseInt(t[k] ?? "0") || 0),
-    );
+    const maxMs = Math.max(...durations.map(([k]) => parseInt(t[k] ?? '0') || 0));
 
     const durationRows = durations
       .map(([key, label]) => {
-        const val = t[key] ?? "0";
+        const val = t[key] ?? '0';
         const ms = parseInt(val) || 0;
         const pct = maxMs > 0 ? Math.max((ms / maxMs) * 100, 1) : 0;
         return `
@@ -269,11 +265,11 @@ export const AllMotion: Story = {
             <span class="dur-value">${val}ms</span>
           </div>`;
       })
-      .join("");
+      .join('');
 
     const timingCards = timings
       .map(([key, label]) => {
-        const val = t[key] ?? "ease";
+        const val = t[key] ?? 'ease';
         return `
           <div class="timing-card">
             <div class="timing-track">
@@ -284,11 +280,11 @@ export const AllMotion: Story = {
             <div class="timing-value">${val}</div>
           </div>`;
       })
-      .join("");
+      .join('');
 
     return `${chrome}<div class="sb-page">
-      ${section("Duration", durationRows, durations.length)}
-      ${section("Timing Functions", `<div class="timing-grid">${timingCards}</div>`, timings.length)}
+      ${section('Duration', durationRows, durations.length)}
+      ${section('Timing Functions', `<div class="timing-grid">${timingCards}</div>`, timings.length)}
     </div>`;
   },
 };

@@ -32,7 +32,7 @@ transforms: [
   'name/kebab', // 2. Name formatting
   'size/space', // 3. Apply spacing modifiers
   'size/px-to-rem-transitive', // 4. Unit conversion
-  'value/clamp' // 5. Value transformation
+  'value/clamp', // 5. Value transformation
 ];
 ```
 
@@ -327,7 +327,7 @@ transforms: [
   'ts/shadow/css/shorthand',
   'size/space',
   'size/px-to-rem-transitive',
-  'value/clamp'
+  'value/clamp',
 ];
 ```
 
@@ -342,7 +342,7 @@ transforms: [
   'ts/color/css/hexrgba',
   'size/strip-px',
   'size/space',
-  'size/dp-transitive'
+  'size/dp-transitive',
 ];
 ```
 
@@ -357,7 +357,7 @@ transforms: [
   'ts/color/css/hexrgba',
   'size/strip-px',
   'size/space',
-  'size/float'
+  'size/float',
 ];
 ```
 
@@ -370,7 +370,7 @@ transforms: [
   'ts/resolveMath',
   'ts/size/px',
   'size/space-js',
-  'size/strip-all-px-js'
+  'size/strip-all-px-js',
 ];
 ```
 
@@ -446,7 +446,7 @@ export const myTransform = (sd: typeof StyleDictionary): void => {
     transform: (token: Token): string => {
       // Your transformation logic
       return transformedValue;
-    }
+    },
   });
 };
 ```
@@ -467,7 +467,7 @@ myTransform(StyleDictionary);
 transforms: [
   'attribute/deprecated',
   'name/kebab',
-  'value/my-transform' // Add here
+  'value/my-transform', // Add here
   // ... other transforms
 ];
 ```
@@ -493,13 +493,13 @@ describe('my-transform', () => {
 // BAD - deprecated not first
 transforms: [
   'name/kebab',
-  'attribute/deprecated' // Too late! Paths already used
+  'attribute/deprecated', // Too late! Paths already used
 ];
 
 // GOOD
 transforms: [
   'attribute/deprecated', // First!
-  'name/kebab'
+  'name/kebab',
 ];
 ```
 

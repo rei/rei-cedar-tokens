@@ -9,7 +9,7 @@ describe('form-tokens filter', () => {
     $value: '16px',
     original: { $value: '16px' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the filter logic directly

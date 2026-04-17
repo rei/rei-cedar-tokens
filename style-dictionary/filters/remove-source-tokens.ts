@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const removeSourceTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'remove-source-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] !== 'theme'
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] !== 'theme',
   });
 };

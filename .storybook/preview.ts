@@ -1,5 +1,5 @@
-import type { Preview } from "@storybook/html";
-import "./cedar.css";
+import type { Preview } from '@storybook/html';
+import './cedar.css';
 
 const preview: Preview = {
   parameters: {
@@ -10,12 +10,12 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: "cedar-light",
+      default: 'cedar-light',
       values: [
-        { name: "cedar-light", value: "#fafbf9" },
-        { name: "cedar-secondary", value: "#f7f5f3" },
-        { name: "cedar-dark", value: "#2e2e2b" },
-        { name: "white", value: "#ffffff" },
+        { name: 'cedar-light', value: '#fafbf9' },
+        { name: 'cedar-secondary', value: '#f7f5f3' },
+        { name: 'cedar-dark', value: '#2e2e2b' },
+        { name: 'white', value: '#ffffff' },
       ],
     },
   },

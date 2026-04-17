@@ -61,7 +61,7 @@ function flattenTokens(
   parentPath: string[] = [],
   result: FlatTokens = {},
   filePathMap: FilePathMap = {},
-  parentType: string | null = null
+  parentType: string | null = null,
 ): { flatTokens: FlatTokens; filePathMap: FilePathMap } {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key];
@@ -74,7 +74,7 @@ function flattenTokens(
           result[tokenPath] = {
             ...value,
             filePath: (value as DesignToken).filePath,
-            parentType: currentType
+            parentType: currentType,
           } as DesignToken;
 
           if ((value as DesignToken).filePath) {
@@ -121,7 +121,7 @@ async function updateTokensInPlace(
   obj: DesignTokens,
   sourceTokens: FlatTokens,
   parentPath: string[] = [],
-  parentType: string | null = null
+  parentType: string | null = null,
 ): Promise<void> {
   for (const [key, value] of Object.entries(obj)) {
     const currentPath = [...parentPath, key];
@@ -140,13 +140,13 @@ async function updateTokensInPlace(
             const newValue = `{${normalizedRef}}`;
             if ((value as DesignToken).$value !== newValue) {
               console.log(
-                `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${newValue}`
+                `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${newValue}`,
               );
               (value as DesignToken).$value = newValue;
             }
           } else if ((value as DesignToken).$value !== sourceToken.$value) {
             console.log(
-              `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${sourceToken.$value}`
+              `Updating token ${tokenPath} from ${(value as DesignToken).$value} to ${sourceToken.$value}`,
             );
             (value as DesignToken).$value = sourceToken.$value;
           }
@@ -173,7 +173,7 @@ async function updateTokens(targetFilePath: string): Promise<{ file: string; upd
 
     return {
       file: targetFilePath,
-      updated: true
+      updated: true,
     };
   } catch (error) {
     console.error(`Error updating tokens in ${targetFilePath}:`, error);

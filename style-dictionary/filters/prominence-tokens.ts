@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const prominenceTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'prominence-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'prominence'
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'prominence',
   });
 };

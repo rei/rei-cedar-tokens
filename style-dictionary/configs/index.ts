@@ -21,7 +21,7 @@ const getSources = (platform: Platform) => {
     web: ['tokens/web/**/*.json'],
     android: ['tokens/mobile/**/*.json'],
     ios: ['tokens/mobile/**/*.json'],
-    figma: ['tokens/web/**/*.json']
+    figma: ['tokens/web/**/*.json'],
   };
 
   return sources[platform];
@@ -36,7 +36,7 @@ const allPlatforms = (platform: Platform, theme: Theme) => {
     'site/global': { ...siteGlobalConfig(theme) },
     'site/web': { ...siteWebConfig(theme) },
     'site/android': { ...siteAndroidConfig(theme) },
-    'site/ios': { ...siteIosConfig(theme) }
+    'site/ios': { ...siteIosConfig(theme) },
   };
 
   return platforms[platform];
@@ -46,7 +46,7 @@ export const getConfig = (platform: Platform, theme: Theme): PlatformConfig => {
   const defaultTokens = [
     'tokens/_options/**/*.json',
     'tokens/global/**/*.json',
-    ...getSources(platform)
+    ...getSources(platform),
   ];
 
   const themeOverrides = [`tokens/themes/${theme}/**/*.json`];
@@ -55,13 +55,13 @@ export const getConfig = (platform: Platform, theme: Theme): PlatformConfig => {
     include: defaultTokens,
     source: themeOverrides,
     expand: {
-      include: ['typography']
+      include: ['typography'],
     },
     preprocessors: ['tokens-studio'],
     platforms: allPlatforms(platform, theme),
     usesDtcg: true,
     log: {
-      verbosity: 'verbose'
-    }
+      verbosity: 'verbose',
+    },
   };
 };

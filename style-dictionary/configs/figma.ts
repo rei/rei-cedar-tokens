@@ -9,8 +9,8 @@ export const figma = (theme: Theme): PlatformConfig => ({
     files: [
       {
         destination: 'figma.json',
-        format: 'figma'
-      }
-    ]
-  }
+        format: 'figma',
+      },
+    ],
+  },
 });

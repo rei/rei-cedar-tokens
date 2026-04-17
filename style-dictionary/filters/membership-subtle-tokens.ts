@@ -12,6 +12,6 @@ import type { Token } from 'style-dictionary';
 export const membershipSubtleTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'membership-subtle-tokens',
-    filter: (token: Token) => token.path[0] === 'membership' && token.path[1] === 'subtle'
+    filter: (token: Token) => token.path[0] === 'membership' && token.path[1] === 'subtle',
   });
 };

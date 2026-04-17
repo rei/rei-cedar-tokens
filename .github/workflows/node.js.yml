@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUSKY: 0
 
     strategy:
       matrix:
@@ -25,5 +27,9 @@ jobs:
         with:
           version: 10
       - run: pnpm install --frozen-lockfile
+      - name: Check formatting
+        run: pnpm run format:check
+      - name: Lint
+        run: pnpm run lint
       - run: pnpm test
       - run: pnpm build

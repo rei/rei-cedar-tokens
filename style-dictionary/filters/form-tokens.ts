@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const formTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'form-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'form'
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'form',
   });
 };

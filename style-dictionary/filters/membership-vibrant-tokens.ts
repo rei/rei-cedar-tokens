@@ -12,6 +12,6 @@ import type { Token } from 'style-dictionary';
 export const membershipVibrantTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'membership-vibrant-tokens',
-    filter: (token: Token) => token.path[0] === 'membership' && token.path[1] === 'vibrant'
+    filter: (token: Token) => token.path[0] === 'membership' && token.path[1] === 'vibrant',
   });
 };

@@ -30,6 +30,6 @@ export const space = (sd: typeof StyleDictionary): void => {
       const { $value, spacingModifier } = token as SpaceToken;
       const num = (parseFloat($value) * (spacingModifier || 1)).toFixed(1);
       return num;
-    }
+    },
   });
 };

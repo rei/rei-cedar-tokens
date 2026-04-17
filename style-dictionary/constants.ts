@@ -30,7 +30,7 @@ export const PLATFORMS = [
   'web', // Web applications
   'android', // Android native
   'ios', // iOS native
-  'figma' // Figma design tool
+  'figma', // Figma design tool
 ];
 
 export type Platform = (typeof PLATFORMS)[number];
@@ -52,7 +52,7 @@ export const TOKEN_TYPES = [
   'fontWeight', // Font weight values
   'duration', // Time duration (for animations)
   'cubicBezier', // Easing functions
-  'number' // Unitless numbers
+  'number', // Unitless numbers
 ];
 
 export type TokenTypes = (typeof TOKEN_TYPES)[number];

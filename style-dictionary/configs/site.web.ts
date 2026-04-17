@@ -13,14 +13,14 @@ export const siteWeb = (theme: Theme): PlatformConfig => ({
       'size/space-js',
       'size/px-to-rem-transitive',
       'time/seconds',
-      'value/clamp'
+      'value/clamp',
     ],
     files: [
       {
         destination: 'web.json',
         format: 'site',
-        filter: 'remove-source-tokens'
-      }
-    ]
-  }
+        filter: 'remove-source-tokens',
+      },
+    ],
+  },
 });

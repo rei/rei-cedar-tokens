@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const spaceTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'space-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'space'
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'space',
   });
 };

@@ -17,7 +17,7 @@ export const scssMap = (sd: typeof StyleDictionary): void => {
       let scss = '';
       const utilityTokens = _.filter(
         dictionary.allTokens,
-        (token: TransformedToken) => token['utility-class'] === true
+        (token: TransformedToken) => token['utility-class'] === true,
       );
       const categories = _.groupBy(utilityTokens, 'docs.category');
 
@@ -50,6 +50,6 @@ export const scssMap = (sd: typeof StyleDictionary): void => {
       });
 
       return scss;
-    }
+    },
   });
 };

@@ -15,7 +15,7 @@ declare module 'lodash' {
      */
     deep<T extends Record<string, unknown>>(
       obj: T,
-      mapper: (obj: Record<string, unknown>) => Record<string, unknown>
+      mapper: (obj: Record<string, unknown>) => Record<string, unknown>,
     ): Record<string, unknown>;
   }
 }

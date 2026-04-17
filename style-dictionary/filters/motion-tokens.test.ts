@@ -9,7 +9,7 @@ describe('motion-tokens filter', () => {
     $value: '200ms',
     original: { $value: '200ms' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the filter logic directly

@@ -46,7 +46,7 @@ themes.forEach((theme) => {
     global: {},
     web: utilities,
     android: {},
-    ios: {}
+    ios: {},
   };
 
   allKeys.forEach((key) => {
@@ -61,6 +61,6 @@ themes.forEach((theme) => {
 
   fs.outputFileSync(
     `./dist/${theme}/json/platform-tokens.json`,
-    JSON.stringify(dataByPlatform, null, 2)
+    JSON.stringify(dataByPlatform, null, 2),
   );
 });

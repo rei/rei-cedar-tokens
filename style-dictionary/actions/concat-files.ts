@@ -17,7 +17,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     './foundations/cdr-motion',
     './foundations/cdr-prominence',
     './foundations/cdr-radius',
-    './foundations/cdr-space'
+    './foundations/cdr-space',
   ];
   const extensionImports: string[] = [];
   const isScss = fileExtension.includes('scss');
@@ -26,14 +26,14 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     imports.push(
       './utilities/cdr-breakpoint-mixins',
       './utilities/cdr-display-mixins',
-      './utilities/cdr-type-mixins'
+      './utilities/cdr-type-mixins',
     );
   }
 
   if (filePath.includes('rei-dot-com')) {
     imports.push(
       './palettes/cdr-palette-membership-subtle',
-      './palettes/cdr-palette-membership-vibrant'
+      './palettes/cdr-palette-membership-vibrant',
     );
   }
 
@@ -76,7 +76,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         const files = entries.filter((e) => e.isFile()).map((e) => e.name);
 
         const sampleFile = files.find(
-          (f) => f.endsWith('.scss') || f.endsWith('.css') || f.endsWith('.less')
+          (f) => f.endsWith('.scss') || f.endsWith('.css') || f.endsWith('.less'),
         );
 
         if (!sampleFile) {
@@ -102,7 +102,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
             __dirname,
             '../../',
             config.buildPath!,
-            `cdr-tokens${extension}`
+            `cdr-tokens${extension}`,
           );
 
           const importLines = createImportLine(extension, outFile);
@@ -135,6 +135,6 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
       } catch (error) {
         console.error('Error removing build path:', error);
       }
-    }
+    },
   });
 };

@@ -9,7 +9,7 @@ describe('icon-tokens filter', () => {
     $value: '24px',
     original: { $value: '24px' },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // Test the filter logic directly

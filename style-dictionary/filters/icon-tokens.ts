@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const iconTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'icon-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'icon'
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'icon',
   });
 };
