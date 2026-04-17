@@ -9,6 +9,7 @@ import { siteWeb as siteWebConfig } from './site.web';
 import { siteAndroid as siteAndroidConfig } from './site.android';
 import { siteIos as siteIosConfig } from './site.ios';
 import { figma as figmaConfig } from './figma';
+import { types as typesConfig } from './types';
 import type { Platform, Theme } from '../constants';
 import type { Config, PlatformConfig } from 'style-dictionary/types';
 
@@ -22,6 +23,7 @@ const getSources = (platform: Platform) => {
     android: ['tokens/mobile/**/*.json'],
     ios: ['tokens/mobile/**/*.json'],
     figma: ['tokens/web/**/*.json'],
+    types: ['tokens/web/**/*.json'],
   };
 
   return sources[platform];
@@ -37,6 +39,7 @@ const allPlatforms = (platform: Platform, theme: Theme) => {
     'site/web': { ...siteWebConfig(theme) },
     'site/android': { ...siteAndroidConfig(theme) },
     'site/ios': { ...siteIosConfig(theme) },
+    types: { ...typesConfig(theme) },
   };
 
   return platforms[platform];

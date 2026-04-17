@@ -1,6 +1,8 @@
 import type { PlatformConfig } from 'style-dictionary/types';
 import type { Theme } from '../constants';
 import { commonConfig } from '../utils';
+import { foundationsFilters } from './filters/foundationsFilters';
+import { componentsFilters } from './filters/componentsFilters';
 
 export const scss = (theme: Theme): PlatformConfig => ({
   scss: {
@@ -73,6 +75,10 @@ export const scss = (theme: Theme): PlatformConfig => ({
         destination: 'utilities/cdr-type-mixins.scss',
         format: 'scss/typography',
       },
+      // Foundations filters
+      ...foundationsFilters('scss', 'scss/variables'),
+      // Component filters
+      ...componentsFilters('scss', 'scss/variables'),
       // REI Dot Com Specific Palettes
       ...(theme == 'rei-dot-com'
         ? [

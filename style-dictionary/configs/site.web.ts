@@ -1,6 +1,8 @@
 import type { PlatformConfig } from 'style-dictionary/types';
 import type { Theme } from '../constants';
 import { commonConfig } from '../utils';
+import { foundationsFilters } from './filters/foundationsFilters';
+import { componentsFilters } from './filters/componentsFilters';
 
 export const siteWeb = (theme: Theme): PlatformConfig => ({
   siteWeb: {
@@ -21,6 +23,10 @@ export const siteWeb = (theme: Theme): PlatformConfig => ({
         format: 'site',
         filter: 'remove-source-tokens',
       },
+      // Foundations filters
+      ...foundationsFilters('json', 'site'),
+      // Component filters
+      ...componentsFilters('json', 'site'),
     ],
   },
 });

@@ -59,7 +59,9 @@ export const figma = (sd: typeof StyleDictionary): void => {
               return {
                 $value: value.original.$value.replace('options.', ''),
                 $type: value.$type,
-                ...(value.original.$description && { $description: value.original.$description }),
+                ...(value.original.$description && {
+                  $description: value.original.$description,
+                }),
                 ...(value.filePath && { filePath: value.filePath }),
               };
             }

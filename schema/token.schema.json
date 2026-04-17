@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/rei/rei-cedar-tokens/schema/token.schema.json",
+  "title": "Cedar token file",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/$defs/tokenNodeOrGroup"
+  },
+  "$defs": {
+    "tokenNodeOrGroup": {
+      "if": {
+        "type": "object",
+        "required": ["$value"]
+      },
+      "then": {
+        "$ref": "#/$defs/tokenLeaf"
+      },
+      "else": {
+        "$ref": "#/$defs/tokenGroup"
+      }
+    },
+    "tokenGroup": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/tokenNodeOrGroup"
+      }
+    },
+    "tokenLeaf": {
+      "type": "object",
+      "required": ["$value", "$type", "docs"],
+      "properties": {
+        "$value": {
+          "$ref": "#/$defs/tokenValue"
+        },
+        "$type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "docs": {
+          "$ref": "#/$defs/docsObject"
+        },
+        "mixin": {
+          "type": "string"
+        },
+        "property": {
+          "type": "string"
+        },
+        "utility-class": {
+          "type": "boolean"
+        },
+        "newToken": {
+          "type": "string"
+        },
+        "newMixin": {
+          "type": "string"
+        },
+        "spacingModifier": {
+          "type": "string"
+        }
+      },
+      "propertyNames": {
+        "enum": [
+          "$value",
+          "$type",
+          "docs",
+          "mixin",
+          "property",
+          "utility-class",
+          "newToken",
+          "newMixin",
+          "spacingModifier"
+        ]
+      },
+      "dependencies": {
+        "mixin": ["property"],
+        "property": ["mixin"]
+      }
+    },
+    "tokenValue": {
+      "oneOf": [
+        {
+          "type": ["string", "number", "boolean"]
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "number"]
+          }
+        }
+      ]
+    },
+    "docsObject": {
+      "type": "object",
+      "required": ["category", "type", "example", "description"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example": {
+          "type": "string"
+        },
+        "description": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "required": ["what", "when"],
+              "properties": {
+                "what": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "when": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "alternatives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

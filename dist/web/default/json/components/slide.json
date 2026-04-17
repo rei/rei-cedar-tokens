@@ -1,0 +1,84 @@
+{
+  "color": [
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "type": "background",
+        "category": "color",
+        "example": "slide-default",
+        "description": {
+          "what": "Default slide background color",
+          "when": "Use for the resting state of slide surfaces."
+        }
+      },
+      "filePath": "tokens/global/slide.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "background",
+          "category": "color",
+          "example": "slide-default",
+          "description": {
+            "what": "Default slide background color",
+            "when": "Use for the resting state of slide surfaces."
+          }
+        }
+      },
+      "name": "cdr-color-background-slide-hover",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "hover",
+        "deprecated": false
+      },
+      "key": "{color.background.slide.hover}"
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "type": "background",
+        "category": "color",
+        "example": "slide-hover",
+        "description": {
+          "what": "Hover background color for slide surfaces",
+          "when": "Use when a slide component is hovered",
+          "alternatives": [
+            "#fafbf9"
+          ]
+        }
+      },
+      "filePath": "tokens/global/slide.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "background",
+          "category": "color",
+          "example": "slide-hover",
+          "description": {
+            "what": "Hover background color for slide surfaces",
+            "when": "Use when a slide component is hovered",
+            "alternatives": [
+              "{color.background.slide.default}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-color-background-slide-default",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "slide",
+        "subitem": "default",
+        "deprecated": false
+      },
+      "key": "{color.background.slide.default}"
+    }
+  ]
+}

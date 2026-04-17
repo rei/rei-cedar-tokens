@@ -1,0 +1,366 @@
+{
+  "colors": [
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "table",
+        "example": "color",
+        "description": "The background color of table headers"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "The background color of table headers"
+        }
+      },
+      "name": "cdr-color-background-table-header",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "table",
+        "subitem": "header",
+        "deprecated": false
+      },
+      "key": "{color.background.table.header}"
+    },
+    {
+      "$value": "#f7f5f3",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "table",
+        "example": "color",
+        "description": "The background color of table rows"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-025}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "The background color of table rows"
+        }
+      },
+      "name": "cdr-color-background-table-row",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "table",
+        "subitem": "row",
+        "deprecated": false
+      },
+      "key": "{color.background.table.row}"
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "table",
+        "example": "color",
+        "description": "An alternate row color to aid grouping row data"
+      },
+      "filePath": "tokens/global/table.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "An alternate row color to aid grouping row data"
+        }
+      },
+      "name": "cdr-color-background-table-row-alt",
+      "attributes": {
+        "category": "color",
+        "type": "background",
+        "item": "table",
+        "subitem": "row-alt",
+        "deprecated": false
+      },
+      "key": "{color.background.table.row-alt}"
+    },
+    {
+      "$value": "#d5cfc3",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "table",
+        "example": "color",
+        "description": "The border color of table rows and their corresponding data cells"
+      },
+      "filePath": "tokens/global/table.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "The border color of table rows and their corresponding data cells"
+        }
+      },
+      "name": "cdr-color-border-table-default",
+      "attributes": {
+        "category": "color",
+        "type": "border",
+        "item": "table",
+        "subitem": "default",
+        "deprecated": false
+      },
+      "key": "{color.border.table.default}"
+    },
+    {
+      "$value": "#958e83",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "table",
+        "example": "color",
+        "description": "Border color separating complex table heads"
+      },
+      "filePath": "tokens/global/table.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-600}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "table",
+          "example": "color",
+          "description": "Border color separating complex table heads"
+        }
+      },
+      "name": "cdr-color-border-table-head",
+      "attributes": {
+        "category": "color",
+        "type": "border",
+        "item": "table",
+        "subitem": "head",
+        "deprecated": false
+      },
+      "key": "{color.border.table.head}"
+    }
+  ],
+  "misc": [
+    {
+      "$value": "rgba(46, 46, 43, 0.9)",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000-90}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-color-text-table-primary",
+      "attributes": {
+        "category": "color",
+        "type": "text",
+        "item": "table",
+        "subitem": "primary",
+        "deprecated": false
+      },
+      "key": "{color.text.table.primary}"
+    },
+    {
+      "$value": "#4b4a48",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-color-text-table-secondary",
+      "attributes": {
+        "category": "color",
+        "type": "text",
+        "item": "table",
+        "subitem": "secondary",
+        "deprecated": false
+      },
+      "key": "{color.text.table.secondary}"
+    },
+    {
+      "$value": "#d5cfc3",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-color-border-table-row",
+      "attributes": {
+        "category": "color",
+        "type": "border",
+        "item": "table",
+        "subitem": "row",
+        "deprecated": false
+      },
+      "key": "{color.border.table.row}"
+    },
+    {
+      "$value": "#fafbf9",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-010}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-knockout-color-text-table-primary",
+      "attributes": {
+        "category": "knockout",
+        "type": "color",
+        "item": "text",
+        "subitem": "table",
+        "state": "primary",
+        "deprecated": false
+      },
+      "key": "{knockout.color.text.table.primary}"
+    },
+    {
+      "$value": "#d5cfc3",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-250}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-knockout-color-text-table-secondary",
+      "attributes": {
+        "category": "knockout",
+        "type": "color",
+        "item": "text",
+        "subitem": "table",
+        "state": "secondary",
+        "deprecated": false
+      },
+      "key": "{knockout.color.text.table.secondary}"
+    },
+    {
+      "$value": "rgba(75, 74, 72, 0.5)",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900-50}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-knockout-color-background-table-header",
+      "attributes": {
+        "category": "knockout",
+        "type": "color",
+        "item": "background",
+        "subitem": "table",
+        "state": "header",
+        "deprecated": false
+      },
+      "key": "{knockout.color.background.table.header}"
+    },
+    {
+      "$value": "#2e2e2b",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-1000}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-knockout-color-background-table-row",
+      "attributes": {
+        "category": "knockout",
+        "type": "color",
+        "item": "background",
+        "subitem": "table",
+        "state": "row",
+        "deprecated": false
+      },
+      "key": "{knockout.color.background.table.row}"
+    },
+    {
+      "$value": "#4b4a48",
+      "$type": "color",
+      "docs": {
+        "type": "table"
+      },
+      "filePath": "tokens/themes/docsite/table.json",
+      "isSource": true,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "type": "table"
+        }
+      },
+      "name": "cdr-knockout-color-border-table-row",
+      "attributes": {
+        "category": "knockout",
+        "type": "color",
+        "item": "border",
+        "subitem": "table",
+        "state": "row",
+        "deprecated": false
+      },
+      "key": "{knockout.color.border.table.row}"
+    }
+  ]
+}

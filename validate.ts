@@ -7,6 +7,45 @@ import type { DesignToken, DesignTokens } from 'style-dictionary/types';
 
 const args = process.argv.slice(2);
 
+// Recursively collect paths where two objects differ
+const diffPaths = (
+  oldObj: Record<string, unknown>,
+  newObj: Record<string, unknown>,
+  path = '',
+): string[] => {
+  const changes: string[] = [];
+  const allKeys = _.union(Object.keys(oldObj), Object.keys(newObj));
+
+  for (const key of allKeys) {
+    const fullPath = addDelimiter(path, key);
+    const oldVal = oldObj[key];
+    const newVal = newObj[key];
+
+    // Replace your existing if/else logic inside the loop with this:
+    if (!(key in oldObj)) {
+      changes.push(`ADDED:   ${fullPath}`);
+    } else if (!(key in newObj)) {
+      changes.push(`REMOVED: ${fullPath}`);
+    } else if (_.isPlainObject(oldVal) && _.isPlainObject(newVal)) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      changes.push(...diffPaths(oldVal as any, newVal as any, fullPath));
+    } else if (Array.isArray(oldVal) && Array.isArray(newVal)) {
+      // Optional: Recurse into arrays to find exactly which index changed
+      const maxLen = Math.max(oldVal.length, newVal.length);
+      for (let i = 0; i < maxLen; i++) {
+        changes.push(...diffPaths({ [i]: oldVal[i] }, { [i]: newVal[i] }, fullPath));
+      }
+    } else if (!_.isEqual(oldVal, newVal)) {
+      // Use JSON.stringify for a readable output of the final values
+      const oldStr = typeof oldVal === 'object' ? JSON.stringify(oldVal) : oldVal;
+      const newStr = typeof newVal === 'object' ? JSON.stringify(newVal) : newVal;
+      changes.push(`CHANGED: ${fullPath} ("${oldStr}" → "${newStr}")\n`);
+    }
+  }
+
+  return changes;
+};
+
 // Utility function to add delimiters
 const addDelimiter = (a: string, b: string): string => (a ? `${a}-${b}` : b);
 
@@ -52,7 +91,15 @@ const validateStructure = async (): Promise<void> => {
   }
 
   if (!_.isEqual(existingData, newData)) {
-    throw new Error('Structure in dist folder has changed!');
+    const changes = diffPaths(
+      existingData as Record<string, unknown>,
+      newData as Record<string, unknown>,
+    );
+
+    console.error('Structure in dist folder has changed:');
+    changes.forEach((line) => console.error(`  ${line}`));
+
+    throw new Error(`Structure in dist folder has changed (${changes.length} difference(s) found)`);
   }
 
   console.log('Dist data structure has not changed');

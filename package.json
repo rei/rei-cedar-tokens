@@ -28,6 +28,20 @@
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
+    "./types/base": {
+      "types": "./dist/types/base/token-schema.d.ts",
+      "default": "./dist/types/base/token-schema.d.ts"
+    },
+    "./rei-dot-com/types/*": {
+      "types": "./dist/rei-dot-com/types/*.d.ts",
+      "import": "./dist/rei-dot-com/types/*.mjs",
+      "default": "./dist/rei-dot-com/types/*.mjs"
+    },
+    "./docsite/types/*": {
+      "types": "./dist/docsite/types/*.d.ts",
+      "import": "./dist/docsite/types/*.mjs",
+      "default": "./dist/docsite/types/*.mjs"
+    },
     "./dist/": "./dist/"
   },
   "publishConfig": {
@@ -36,7 +50,8 @@
   "scripts": {
     "prepublishOnly": "pnpm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
-    "build:tokens": "pnpm run clean && tsx ./style-dictionary/build.ts",
+    "build:base-types": "tsx ./style-dictionary/generate-base-types.ts",
+    "build:tokens": "pnpm run clean && pnpm run build:base-types && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",
     "build": "pnpm run clean && pnpm run build:tokens && pnpm run site-tokens && pnpm run validate",
     "build:grid": "tsx grid.ts",
