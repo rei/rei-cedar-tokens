@@ -1,9 +1,6 @@
 @forward "./foundations/cdr-color-background.scss";
 @forward "./foundations/cdr-color-border.scss";
-@forward "./foundations/cdr-color-icon.scss";
 @forward "./foundations/cdr-color-text.scss";
-@forward "./foundations/cdr-form.scss";
-@forward "./foundations/cdr-icon.scss";
 @forward "./foundations/cdr-motion.scss";
 @forward "./foundations/cdr-prominence.scss";
 @forward "./foundations/cdr-radius.scss";
@@ -11,6 +8,9 @@
 @forward "./utilities/cdr-breakpoint-mixins.scss";
 @forward "./utilities/cdr-display-mixins.scss";
 @forward "./utilities/cdr-type-mixins.scss";
+@forward "./foundations/cdr-form.scss";
+@forward "./foundations/cdr-icon.scss";
+@forward "./foundations/cdr-color-icon.scss";
 
 $cdr-text-size-root: 10px;
 $cdr-color-icon-background-note: #c4b03b;
