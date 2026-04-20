@@ -11,14 +11,14 @@ export const siteIos = (theme: Theme): PlatformConfig => ({
       'color/UIColor',
       'size/strip-px',
       'size/space',
-      'size/float'
+      'size/float',
     ],
     files: [
       {
         destination: 'ios.json',
         format: 'site',
-        filter: 'remove-source-tokens'
-      }
-    ]
-  }
+        filter: 'remove-source-tokens',
+      },
+    ],
+  },
 });

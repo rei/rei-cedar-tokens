@@ -38,6 +38,6 @@ export const site = (sd: typeof StyleDictionary): void => {
       }
 
       return JSON.stringify(toRet, null, 2);
-    }
+    },
   });
 };

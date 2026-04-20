@@ -15,8 +15,8 @@ export default {
         'test',
         'revert',
         'perf',
-        'vercel'
-      ]
-    ]
-  }
+        'vercel',
+      ],
+    ],
+  },
 };

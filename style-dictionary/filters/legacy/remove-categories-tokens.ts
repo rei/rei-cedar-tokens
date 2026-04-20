@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that removes specific token categories.
@@ -16,36 +16,29 @@ import type { Token } from "style-dictionary";
  */
 export const removeCategoriesTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "remove-categories-tokens",
+    name: 'remove-categories-tokens',
     filter: (token: Token) => {
-      const colorSubcategoriesToFilter = [
-        "background",
-        "radius",
-        "icon",
-        "text",
-        "border",
-      ];
+      const colorSubcategoriesToFilter = ['background', 'radius', 'icon', 'text', 'border'];
       const categoriesToFilter = [
-        "space",
-        "radius",
-        "icon",
-        "text",
-        "border",
-        "prominence",
-        "duration",
-        "timing",
-        "form",
+        'space',
+        'radius',
+        'icon',
+        'text',
+        'border',
+        'prominence',
+        'duration',
+        'timing',
+        'form',
       ];
 
       if (
-        (token.path[0] === "color" &&
-          colorSubcategoriesToFilter.includes(token.path[1])) ||
+        (token.path[0] === 'color' && colorSubcategoriesToFilter.includes(token.path[1])) ||
         categoriesToFilter.includes(token.path[0])
       ) {
         return false;
       }
 
-      return token.path[0] !== "options" && token.path[0] !== "theme";
+      return token.path[0] !== 'options' && token.path[0] !== 'theme';
     },
   });
 };

@@ -1,4 +1,4 @@
-import { componentModulesName } from "./modules";
+import { componentModulesName } from './modules';
 
 export const componentsFilters = (extension: string, format: string) => {
   const filtersObject = componentModulesName.map((moduleName) => ({

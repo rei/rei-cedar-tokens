@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Border Radius',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -94,7 +94,7 @@ export const BorderRadius: Story = {
       ['CdrRadiusSoft', 'soft'],
       ['CdrRadiusSofter', 'softer'],
       ['CdrRadiusSoftest', 'softest'],
-      ['CdrRadiusRound', 'round']
+      ['CdrRadiusRound', 'round'],
     ];
 
     const cards = radii
@@ -122,5 +122,5 @@ export const BorderRadius: Story = {
         <div class="radius-grid">${cards}</div>
       </div>
     </div>`;
-  }
+  },
 };

@@ -1,7 +1,7 @@
-import StyleDictionary from "style-dictionary";
-import { register } from "@tokens-studio/sd-transforms";
-import { PLATFORMS, THEMES } from "./constants";
-import { getConfig } from "./configs";
+import StyleDictionary from 'style-dictionary';
+import { register } from '@tokens-studio/sd-transforms';
+import { PLATFORMS, THEMES } from './constants';
+import { getConfig } from './configs';
 
 /**
  * REI Cedar Tokens Build Script
@@ -22,83 +22,75 @@ import { getConfig } from "./configs";
  */
 
 // ==== Include custom transforms ====
-import { deprecated } from "./transforms/attribute/deprecated";
-import { dpTransitive } from "./transforms/size/dp-transitive";
-import { space } from "./transforms/size/space";
-import { spaceJs } from "./transforms/size/space-js";
-import { pxToRemTransitive } from "./transforms/size/px-to-rem";
-import { stripPx } from "./transforms/size/strip-px";
-import { stripAllPx } from "./transforms/size/strip-all-px";
-import { stripAllPxJs } from "./transforms/size/strip-all-px-js";
-import { float } from "./transforms/size/float";
-import { cssClamp as clamp } from "./transforms/size/clamp";
+import { deprecated } from './transforms/attribute/deprecated';
+import { dpTransitive } from './transforms/size/dp-transitive';
+import { space } from './transforms/size/space';
+import { spaceJs } from './transforms/size/space-js';
+import { pxToRemTransitive } from './transforms/size/px-to-rem';
+import { stripPx } from './transforms/size/strip-px';
+import { stripAllPx } from './transforms/size/strip-all-px';
+import { stripAllPxJs } from './transforms/size/strip-all-px-js';
+import { float } from './transforms/size/float';
+import { cssClamp as clamp } from './transforms/size/clamp';
 
 // ==== Include custom formats ====
-import { scssTypography } from "./formats/scss-typography";
-import { scssMap } from "./formats/scss-map";
-import { site } from "./formats/site";
-import { figma as figmaFormat } from "./formats/figma";
-import { typescriptModuleValues } from "./formats/typescript-module-values";
-import { typescriptModuleDeclarations } from "./formats/typescript-module-declarations";
-import { typescriptTokenNameUnion } from "./formats/typescript-token-name-union";
+import { scssTypography } from './formats/scss-typography';
+import { scssMap } from './formats/scss-map';
+import { site } from './formats/site';
+import { figma as figmaFormat } from './formats/figma';
+import { typescriptModuleValues } from './formats/typescript-module-values';
+import { typescriptModuleDeclarations } from './formats/typescript-module-declarations';
+import { typescriptTokenNameUnion } from './formats/typescript-token-name-union';
 
 // ==== Include custom actions ====
-import { concatFiles } from "./actions/concat-files";
-import {
-  includeDisplayScss,
-  includeQueriesFileScss,
-} from "./actions/include-utility-file";
+import { concatFiles } from './actions/concat-files';
+import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
 
 // ==== Include custom legacy filters ====
-import { colorBackgroundTokens } from "./filters/legacy/color-background-tokens";
-import { colorBorderTokens } from "./filters/legacy/color-border-tokens";
-import { colorIconTokens } from "./filters/legacy/color-icon-tokens";
-import { colorTextTokens } from "./filters/legacy/color-text-tokens";
-import { formTokens } from "./filters/legacy/form-tokens";
-import { iconTokens } from "./filters/legacy/icon-tokens";
-import { membershipSubtleTokens } from "./filters/legacy/membership-subtle-tokens";
-import { membershipVibrantTokens } from "./filters/legacy/membership-vibrant-tokens";
-import { motionTokens } from "./filters/legacy/motion-tokens";
-import { prominenceTokens } from "./filters/legacy/prominence-tokens";
-import { radiusTokens } from "./filters/legacy/radius-tokens";
-import { removeCategoriesTokens } from "./filters/legacy/remove-categories-tokens";
-import { removeSourceTokens } from "./filters/legacy/remove-source-tokens";
-import { spaceTokens } from "./filters/legacy/space-tokens";
+import { colorBackgroundTokens } from './filters/legacy/color-background-tokens';
+import { colorBorderTokens } from './filters/legacy/color-border-tokens';
+import { colorIconTokens } from './filters/legacy/color-icon-tokens';
+import { colorTextTokens } from './filters/legacy/color-text-tokens';
+import { formTokens } from './filters/legacy/form-tokens';
+import { iconTokens } from './filters/legacy/icon-tokens';
+import { membershipSubtleTokens } from './filters/legacy/membership-subtle-tokens';
+import { membershipVibrantTokens } from './filters/legacy/membership-vibrant-tokens';
+import { motionTokens } from './filters/legacy/motion-tokens';
+import { prominenceTokens } from './filters/legacy/prominence-tokens';
+import { radiusTokens } from './filters/legacy/radius-tokens';
+import { removeCategoriesTokens } from './filters/legacy/remove-categories-tokens';
+import { removeSourceTokens } from './filters/legacy/remove-source-tokens';
+import { spaceTokens } from './filters/legacy/space-tokens';
 
 // ==== Include custom foundations filters ====
-import { foundationsColorBackgroundTokens } from "./filters/foundations/color-background-tokens";
-import { foundationsColorBorderTokens } from "./filters/foundations/color-border-tokens";
-import { foundationsColorTextTokens } from "./filters/foundations/color-text-tokens";
-import { foundationsMotionTokens } from "./filters/foundations/motion-tokens";
-import { foundationsProminenceTokens } from "./filters/foundations/prominence-tokens";
-import { foundationsRadiusTokens } from "./filters/foundations/radius-tokens";
-import { foundationsSpaceTokens } from "./filters/foundations/space-tokens";
-import { foundationsBreakpointTokens } from "./filters/foundations/breakpoint-tokens";
-import { foundationsTextTokens } from "./filters/foundations/text-tokens";
-import { foundationsLineHeightTokens } from "./filters/foundations/line-height-tokens";
-import { foundationsTypeTokens } from "./filters/foundations/type-tokens";
-import { foundationsFontTokens } from "./filters/foundations/font-tokens";
+import { foundationsColorBackgroundTokens } from './filters/foundations/color-background-tokens';
+import { foundationsColorBorderTokens } from './filters/foundations/color-border-tokens';
+import { foundationsColorTextTokens } from './filters/foundations/color-text-tokens';
+import { foundationsMotionTokens } from './filters/foundations/motion-tokens';
+import { foundationsProminenceTokens } from './filters/foundations/prominence-tokens';
+import { foundationsRadiusTokens } from './filters/foundations/radius-tokens';
+import { foundationsSpaceTokens } from './filters/foundations/space-tokens';
 
 // ==== Include custom component filters ====
-import { componentAccordionTokens } from "./filters/components/accordion-tokens";
-import { componentButtonTokens } from "./filters/components/button-tokens";
-import { componentChipTokens } from "./filters/components/chip-tokens";
-import { componentFormTokens } from "./filters/components/form-tokens";
-import { componentIconTokens } from "./filters/components/icon-tokens";
-import { componentInputTokens } from "./filters/components/input-tokens";
-import { componentLinkTokens } from "./filters/components/link-tokens";
-import { componentMessageTokens } from "./filters/components/message-tokens";
-import { componentModalTokens } from "./filters/components/modal-tokens";
-import { componentPaginationTokens } from "./filters/components/pagination-tokens";
-import { componentRatingTokens } from "./filters/components/rating-tokens";
-import { componentSlideTokens } from "./filters/components/slide-tokens";
-import { componentSurfaceSelectionTokens } from "./filters/components/surface-selection-tokens";
-import { componentSurfaceTokens } from "./filters/components/surface-tokens";
-import { componentSwitchTokens } from "./filters/components/switch-tokens";
-import { componentTabTokens } from "./filters/components/tab-tokens";
-import { componentTableTokens } from "./filters/components/table-tokens";
-import { componentToggleButtonTokens } from "./filters/components/toggle-button-tokens";
-import { componentTooltipTokens } from "./filters/components/tooltip-tokens";
+import { componentAccordionTokens } from './filters/components/accordion-tokens';
+import { componentButtonTokens } from './filters/components/button-tokens';
+import { componentChipTokens } from './filters/components/chip-tokens';
+import { componentFormTokens } from './filters/components/form-tokens';
+import { componentIconTokens } from './filters/components/icon-tokens';
+import { componentInputTokens } from './filters/components/input-tokens';
+import { componentLinkTokens } from './filters/components/link-tokens';
+import { componentMessageTokens } from './filters/components/message-tokens';
+import { componentModalTokens } from './filters/components/modal-tokens';
+import { componentPaginationTokens } from './filters/components/pagination-tokens';
+import { componentRatingTokens } from './filters/components/rating-tokens';
+import { componentSlideTokens } from './filters/components/slide-tokens';
+import { componentSurfaceSelectionTokens } from './filters/components/surface-selection-tokens';
+import { componentSurfaceTokens } from './filters/components/surface-tokens';
+import { componentSwitchTokens } from './filters/components/switch-tokens';
+import { componentTabTokens } from './filters/components/tab-tokens';
+import { componentTableTokens } from './filters/components/table-tokens';
+import { componentToggleButtonTokens } from './filters/components/toggle-button-tokens';
+import { componentTooltipTokens } from './filters/components/tooltip-tokens';
 
 // ==== Register style dictionary ====
 // Tokens Studio provides preprocessors and additional transforms for composite tokens
@@ -156,11 +148,6 @@ foundationsMotionTokens(StyleDictionary);
 foundationsProminenceTokens(StyleDictionary);
 foundationsRadiusTokens(StyleDictionary);
 foundationsSpaceTokens(StyleDictionary);
-foundationsBreakpointTokens(StyleDictionary);
-foundationsTextTokens(StyleDictionary);
-foundationsLineHeightTokens(StyleDictionary);
-foundationsTypeTokens(StyleDictionary);
-foundationsFontTokens(StyleDictionary);
 
 // ==== Register custom component filters ====
 componentAccordionTokens(StyleDictionary);
@@ -199,7 +186,7 @@ componentTooltipTokens(StyleDictionary);
 async function buildAllThemesAndPlatforms() {
   for (const theme of THEMES) {
     for (const platform of PLATFORMS) {
-      console.log("\n==============================================");
+      console.log('\n==============================================');
       console.log(`\nProcessing: [${platform}] [${theme}]`);
 
       const sd = new StyleDictionary(getConfig(platform, theme));
@@ -214,8 +201,8 @@ async function buildAllThemesAndPlatforms() {
     }
   }
 
-  console.log("\n==============================================");
-  console.log("\nBuild completed!");
+  console.log('\n==============================================');
+  console.log('\nBuild completed!');
 }
 
 // Run the function to process all themes and platforms

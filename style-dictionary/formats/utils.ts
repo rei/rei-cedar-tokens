@@ -12,13 +12,13 @@ import _ from 'lodash';
 export const deepMap = <T extends Record<string, any>>(
   obj: T,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  mapper: (obj: Record<string, any>) => Record<string, any>
+  mapper: (obj: Record<string, any>) => Record<string, any>,
 ): T => {
   return mapper(
     _.mapValues(obj, (v) =>
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      _.isPlainObject(v) ? deepMap(v as Record<string, any>, mapper) : v
-    )
+      _.isPlainObject(v) ? deepMap(v as Record<string, any>, mapper) : v,
+    ),
   ) as T;
 };
 
@@ -28,6 +28,6 @@ export const deepMap = <T extends Record<string, any>>(
  */
 export const registerDeepMixin = (): void => {
   _.mixin({
-    deep: deepMap
+    deep: deepMap,
   });
 };

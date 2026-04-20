@@ -75,7 +75,7 @@ export const scssTypography = (sd: typeof StyleDictionary): void => {
         'lineHeight',
         'letterSpacing',
         'textTransform',
-        'textDecoration'
+        'textDecoration',
       ];
 
       // Group tokens by their parent typography token path
@@ -97,7 +97,7 @@ export const scssTypography = (sd: typeof StyleDictionary): void => {
               path: token.path.slice(0, -1),
               props: {},
               attributes: token.attributes,
-              newMixin: token.newMixin
+              newMixin: token.newMixin,
             };
           }
           typographyGroups[parentPath].props[lastPathPart] = token.$value;
@@ -152,6 +152,6 @@ export const scssTypography = (sd: typeof StyleDictionary): void => {
       });
 
       return `${mixins.join('\n\n')}\n`;
-    }
+    },
   });
 };

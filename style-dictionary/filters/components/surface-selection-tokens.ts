@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only Accordion tokens.
@@ -10,14 +10,12 @@ import type { Token } from "style-dictionary";
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
-export const componentSurfaceSelectionTokens = (
-  sd: typeof StyleDictionary,
-): void => {
+export const componentSurfaceSelectionTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "component-surface-selection-tokens",
+    name: 'component-surface-selection-tokens',
     filter: (token: Token) =>
-      token.path[0] !== "options" &&
-      token.path[0] !== "theme" &&
-      token.path.includes("surface-selection"),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path.includes('surface-selection'),
   });
 };

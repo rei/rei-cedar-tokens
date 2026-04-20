@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only motion tokens.
@@ -12,9 +12,9 @@ import type { Token } from "style-dictionary";
  */
 export const foundationsMotionTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "foundations-motion-tokens",
+    name: 'foundations-motion-tokens',
     filter: (token: Token) =>
-      token.path[0] !== "options" &&
-      (token.path.includes("timing") || token.path.includes("duration")),
+      token.path[0] !== 'options' &&
+      (token.path.includes('timing') || token.path.includes('duration')),
   });
 };

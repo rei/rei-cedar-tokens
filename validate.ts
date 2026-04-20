@@ -1,9 +1,9 @@
-import { glob } from "glob";
-import _ from "lodash";
-import process from "process";
-import dirToJson from "dir-to-json";
-import fs from "fs";
-import type { DesignToken, DesignTokens } from "style-dictionary/types";
+import { glob } from 'glob';
+import _ from 'lodash';
+import process from 'process';
+import dirToJson from 'dir-to-json';
+import fs from 'fs';
+import type { DesignToken, DesignTokens } from 'style-dictionary/types';
 
 const args = process.argv.slice(2);
 
@@ -11,7 +11,7 @@ const args = process.argv.slice(2);
 const diffPaths = (
   oldObj: Record<string, unknown>,
   newObj: Record<string, unknown>,
-  path = "",
+  path = '',
 ): string[] => {
   const changes: string[] = [];
   const allKeys = _.union(Object.keys(oldObj), Object.keys(newObj));
@@ -33,16 +33,12 @@ const diffPaths = (
       // Optional: Recurse into arrays to find exactly which index changed
       const maxLen = Math.max(oldVal.length, newVal.length);
       for (let i = 0; i < maxLen; i++) {
-        changes.push(
-          ...diffPaths({ [i]: oldVal[i] }, { [i]: newVal[i] }, fullPath),
-        );
+        changes.push(...diffPaths({ [i]: oldVal[i] }, { [i]: newVal[i] }, fullPath));
       }
     } else if (!_.isEqual(oldVal, newVal)) {
       // Use JSON.stringify for a readable output of the final values
-      const oldStr =
-        typeof oldVal === "object" ? JSON.stringify(oldVal) : oldVal;
-      const newStr =
-        typeof newVal === "object" ? JSON.stringify(newVal) : newVal;
+      const oldStr = typeof oldVal === 'object' ? JSON.stringify(oldVal) : oldVal;
+      const newStr = typeof newVal === 'object' ? JSON.stringify(newVal) : newVal;
       changes.push(`CHANGED: ${fullPath} ("${oldStr}" → "${newStr}")\n`);
     }
   }
@@ -55,18 +51,14 @@ const addDelimiter = (a: string, b: string): string => (a ? `${a}-${b}` : b);
 
 // Check if object has a `value` property and if any children also have `value` (style dictionary
 // will only process the topmost object with `value`)
-const validate = (
-  obj: DesignToken | DesignTokens,
-  path = "",
-  toRet: string[] = [],
-): string[] => {
-  const hasValue = _.has(obj, "value");
+const validate = (obj: DesignToken | DesignTokens, path = '', toRet: string[] = []): string[] => {
+  const hasValue = _.has(obj, 'value');
 
   for (const key in obj) {
     const value = obj[key];
     const fullPath = addDelimiter(path, key);
 
-    if (hasValue && _.has(value, "value")) {
+    if (hasValue && _.has(value, 'value')) {
       toRet.push(fullPath);
       validate(value as DesignToken, fullPath, toRet);
     } else if (_.isPlainObject(value)) {
@@ -79,13 +71,13 @@ const validate = (
 
 // Validate function for file structure
 const validateStructure = async (): Promise<void> => {
-  const isUpdating = args.includes("--update");
-  const validationFile = "validate-structure.json";
-  const newData = await dirToJson("./dist", { sortType: true });
+  const isUpdating = args.includes('--update');
+  const validationFile = 'validate-structure.json';
+  const newData = await dirToJson('./dist', { sortType: true });
   let existingData: unknown;
 
   try {
-    const raw = fs.readFileSync(validationFile, "utf8");
+    const raw = fs.readFileSync(validationFile, 'utf8');
     existingData = JSON.parse(raw);
   } catch {
     existingData = null;
@@ -94,7 +86,7 @@ const validateStructure = async (): Promise<void> => {
   // If no existing data found or is updating, create it
   if (!existingData || isUpdating) {
     fs.writeFileSync(validationFile, JSON.stringify(newData));
-    console.log("Created new validation data");
+    console.log('Created new validation data');
     return;
   }
 
@@ -104,39 +96,37 @@ const validateStructure = async (): Promise<void> => {
       newData as Record<string, unknown>,
     );
 
-    console.error("Structure in dist folder has changed:");
+    console.error('Structure in dist folder has changed:');
     changes.forEach((line) => console.error(`  ${line}`));
 
-    throw new Error(
-      `Structure in dist folder has changed (${changes.length} difference(s) found)`,
-    );
+    throw new Error(`Structure in dist folder has changed (${changes.length} difference(s) found)`);
   }
 
-  console.log("Dist data structure has not changed");
+  console.log('Dist data structure has not changed');
 };
 
 // Main execution flow
 const main = async (): Promise<void> => {
-  const files = glob.sync("./tokens/**/*.json");
+  const files = glob.sync('./tokens/**/*.json');
   const results: string[] = [];
 
   // Process each file
   for (const file of files) {
-    const fileContent = fs.readFileSync(file, "utf8");
+    const fileContent = fs.readFileSync(file, 'utf8');
     const response = validate(JSON.parse(fileContent));
 
     if (response.length > 0) {
       results.push(`  In ${file}:`);
-      results.push(`    ${response.join("\r\n    ")}`);
+      results.push(`    ${response.join('\r\n    ')}`);
     }
   }
 
   if (results.length > 0) {
-    console.log("The following tokens are being skipped:");
-    console.log(results.join("\r\n"));
+    console.log('The following tokens are being skipped:');
+    console.log(results.join('\r\n'));
     process.exitCode = 1;
   } else {
-    console.log("All files successfully validated");
+    console.log('All files successfully validated');
   }
 
   // Validate structure

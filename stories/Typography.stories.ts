@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Typography',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -208,8 +208,8 @@ export const BodyText: Story = {
       typeRow('text-body / 500', 'CdrTextBody500'),
       typeRow('text-body-strong / 300', 'CdrTextBodyStrong300'),
       typeRow('text-body-strong / 400', 'CdrTextBodyStrong400'),
-      typeRow('text-body-strong / 500', 'CdrTextBodyStrong500')
-    ])}</div>`
+      typeRow('text-body-strong / 500', 'CdrTextBodyStrong500'),
+    ])}</div>`,
 };
 
 export const HeadingsSans: Story = {
@@ -220,8 +220,8 @@ export const HeadingsSans: Story = {
       typeRow('text-heading-sans / 300', 'CdrTextHeadingSans300', 'Heading Sans 300'),
       typeRow('text-heading-sans / 400', 'CdrTextHeadingSans400', 'Heading Sans 400'),
       typeRow('text-heading-sans / 500', 'CdrTextHeadingSans500', 'Heading Sans 500'),
-      typeRow('text-heading-sans / 600', 'CdrTextHeadingSans600', 'Heading Sans 600')
-    ])}</div>`
+      typeRow('text-heading-sans / 600', 'CdrTextHeadingSans600', 'Heading Sans 600'),
+    ])}</div>`,
 };
 
 export const HeadingsSerif: Story = {
@@ -238,8 +238,8 @@ export const HeadingsSerif: Story = {
       typeRow('text-heading-serif / 900', 'CdrTextHeadingSerif900', 'Heading Serif 900'),
       typeRow('text-heading-serif / 1000', 'CdrTextHeadingSerif1000', 'Heading Serif 1000'),
       typeRow('text-heading-serif / 1100', 'CdrTextHeadingSerif1100', 'Heading Serif 1100'),
-      typeRow('text-heading-serif / 1200', 'CdrTextHeadingSerif1200', 'Heading Serif 1200')
-    ])}</div>`
+      typeRow('text-heading-serif / 1200', 'CdrTextHeadingSerif1200', 'Heading Serif 1200'),
+    ])}</div>`,
 };
 
 export const HeadingsSerifStrong: Story = {
@@ -249,39 +249,39 @@ export const HeadingsSerifStrong: Story = {
       typeRow(
         'text-heading-serif-strong / 600',
         'CdrTextHeadingSerifStrong600',
-        'Heading Serif Strong 600'
+        'Heading Serif Strong 600',
       ),
       typeRow(
         'text-heading-serif-strong / 700',
         'CdrTextHeadingSerifStrong700',
-        'Heading Serif Strong 700'
+        'Heading Serif Strong 700',
       ),
       typeRow(
         'text-heading-serif-strong / 800',
         'CdrTextHeadingSerifStrong800',
-        'Heading Serif Strong 800'
+        'Heading Serif Strong 800',
       ),
       typeRow(
         'text-heading-serif-strong / 900',
         'CdrTextHeadingSerifStrong900',
-        'Heading Serif Strong 900'
+        'Heading Serif Strong 900',
       ),
       typeRow(
         'text-heading-serif-strong / 1000',
         'CdrTextHeadingSerifStrong1000',
-        'Heading Serif Strong 1000'
+        'Heading Serif Strong 1000',
       ),
       typeRow(
         'text-heading-serif-strong / 1100',
         'CdrTextHeadingSerifStrong1100',
-        'Heading Serif Strong 1100'
+        'Heading Serif Strong 1100',
       ),
       typeRow(
         'text-heading-serif-strong / 1200',
         'CdrTextHeadingSerifStrong1200',
-        'Heading Serif Strong 1200'
-      )
-    ])}</div>`
+        'Heading Serif Strong 1200',
+      ),
+    ])}</div>`,
 };
 
 export const HeadingsDisplay: Story = {
@@ -296,8 +296,8 @@ export const HeadingsDisplay: Story = {
       typeRow('text-heading-display / 1300', 'CdrTextHeadingDisplay1300', 'Display 1300'),
       typeRow('text-heading-display / 1400', 'CdrTextHeadingDisplay1400', 'Display 1400'),
       typeRow('text-heading-display / 1500', 'CdrTextHeadingDisplay1500', 'Display 1500'),
-      typeRow('text-heading-display / 1600', 'CdrTextHeadingDisplay1600', 'Display 1600')
-    ])}</div>`
+      typeRow('text-heading-display / 1600', 'CdrTextHeadingDisplay1600', 'Display 1600'),
+    ])}</div>`,
 };
 
 export const SubheadingsSans: Story = {
@@ -307,8 +307,8 @@ export const SubheadingsSans: Story = {
       typeRow('text-subheading-sans / 300', 'CdrTextSubheadingSans300', 'Subheading 300'),
       typeRow('text-subheading-sans / 400', 'CdrTextSubheadingSans400', 'Subheading 400'),
       typeRow('text-subheading-sans / 500', 'CdrTextSubheadingSans500', 'Subheading 500'),
-      typeRow('text-subheading-sans / 600', 'CdrTextSubheadingSans600', 'Subheading 600')
-    ])}</div>`
+      typeRow('text-subheading-sans / 600', 'CdrTextSubheadingSans600', 'Subheading 600'),
+    ])}</div>`,
 };
 
 export const UtilitySans: Story = {
@@ -323,7 +323,7 @@ export const UtilitySans: Story = {
         typeRow('text-utility-sans / 500', 'CdrTextUtilitySans500'),
         typeRow('text-utility-sans / 600', 'CdrTextUtilitySans600'),
         typeRow('text-utility-sans / 700', 'CdrTextUtilitySans700'),
-        typeRow('text-utility-sans / 800', 'CdrTextUtilitySans800')
+        typeRow('text-utility-sans / 800', 'CdrTextUtilitySans800'),
       ])}
       ${section('Utility Sans Strong', [
         typeRow('text-utility-sans-strong / 100', 'CdrTextUtilitySansStrong100'),
@@ -333,9 +333,9 @@ export const UtilitySans: Story = {
         typeRow('text-utility-sans-strong / 500', 'CdrTextUtilitySansStrong500'),
         typeRow('text-utility-sans-strong / 600', 'CdrTextUtilitySansStrong600'),
         typeRow('text-utility-sans-strong / 700', 'CdrTextUtilitySansStrong700'),
-        typeRow('text-utility-sans-strong / 800', 'CdrTextUtilitySansStrong800')
+        typeRow('text-utility-sans-strong / 800', 'CdrTextUtilitySansStrong800'),
       ])}
-    </div>`
+    </div>`,
 };
 
 export const UtilitySerif: Story = {
@@ -349,7 +349,7 @@ export const UtilitySerif: Story = {
         typeRow('text-utility-serif / 500', 'CdrTextUtilitySerif500'),
         typeRow('text-utility-serif / 600', 'CdrTextUtilitySerif600'),
         typeRow('text-utility-serif / 700', 'CdrTextUtilitySerif700'),
-        typeRow('text-utility-serif / 800', 'CdrTextUtilitySerif800')
+        typeRow('text-utility-serif / 800', 'CdrTextUtilitySerif800'),
       ])}
       ${section('Utility Serif Strong', [
         typeRow('text-utility-serif-strong / 200', 'CdrTextUtilitySerifStrong200'),
@@ -358,17 +358,17 @@ export const UtilitySerif: Story = {
         typeRow('text-utility-serif-strong / 500', 'CdrTextUtilitySerifStrong500'),
         typeRow('text-utility-serif-strong / 600', 'CdrTextUtilitySerifStrong600'),
         typeRow('text-utility-serif-strong / 700', 'CdrTextUtilitySerifStrong700'),
-        typeRow('text-utility-serif-strong / 800', 'CdrTextUtilitySerifStrong800')
+        typeRow('text-utility-serif-strong / 800', 'CdrTextUtilitySerifStrong800'),
       ])}
-    </div>`
+    </div>`,
 };
 
 export const EyebrowText: Story = {
   name: 'Eyebrow',
   render: () =>
     `${chrome}<div class="sb-page">${section('Eyebrow', [
-      typeRow('text-eyebrow / 100', 'CdrTextEyebrow100', 'Eyebrow Label')
-    ])}</div>`
+      typeRow('text-eyebrow / 100', 'CdrTextEyebrow100', 'Eyebrow Label'),
+    ])}</div>`,
 };
 
 export const FontFamilies: Story = {
@@ -380,7 +380,7 @@ export const FontFamilies: Story = {
       ['CdrFontFamilySerif', 'Serif'],
       ['CdrFontFamilySansBrandFont', 'Sans Brand Font'],
       ['CdrFontFamilySans', 'Sans'],
-      ['CdrFontFamilyMonoBrandFont', 'Mono Brand Font']
+      ['CdrFontFamilyMonoBrandFont', 'Mono Brand Font'],
     ];
 
     const rows = families
@@ -407,7 +407,7 @@ export const FontFamilies: Story = {
         <div>${rows}</div>
       </div>
     </div>`;
-  }
+  },
 };
 
 export const FluidTypeScale: Story = {
@@ -440,5 +440,5 @@ export const FluidTypeScale: Story = {
         <div>${scaleRows}</div>
       </div>
     </div>`;
-  }
+  },
 };

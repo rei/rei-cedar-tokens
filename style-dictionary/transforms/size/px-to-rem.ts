@@ -44,6 +44,6 @@ export const pxToRemTransitive = (sd: typeof StyleDictionary): void => {
     transform: (token: Token, config: Config): string => {
       const REM = config.basePxFontSize || BASE_FONT_SIZE;
       return pxToRem(token.$value, REM);
-    }
+    },
   });
 };

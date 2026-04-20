@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Prominence (Shadow)',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -150,7 +150,7 @@ export const Prominence: Story = {
       ['CdrProminenceRaised', 'raised'],
       ['CdrProminenceElevated', 'elevated'],
       ['CdrProminenceFloating', 'floating'],
-      ['CdrProminenceLifted', 'lifted']
+      ['CdrProminenceLifted', 'lifted'],
     ];
 
     const cards = shadows
@@ -179,7 +179,7 @@ export const Prominence: Story = {
         <div class="shadow-grid">${cards}</div>
       </div>
     </div>`;
-  }
+  },
 };
 
 export const AllProminence: Story = {
@@ -211,5 +211,5 @@ export const AllProminence: Story = {
         <div>${rows}</div>
       </div>
     </div>`;
-  }
+  },
 };

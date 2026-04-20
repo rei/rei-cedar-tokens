@@ -11,14 +11,14 @@ export const siteAndroid = (theme: Theme): PlatformConfig => ({
       'size/space',
       'size/dp-transitive',
       'size/sp',
-      'color/hex8android'
+      'color/hex8android',
     ],
     files: [
       {
         destination: 'android.json',
         format: 'site',
-        filter: 'remove-source-tokens'
-      }
-    ]
-  }
+        filter: 'remove-source-tokens',
+      },
+    ],
+  },
 });

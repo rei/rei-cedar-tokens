@@ -11,18 +11,18 @@ export const android = (theme: Theme): PlatformConfig => ({
       {
         destination: 'colors.xml',
         filter: (token: Token) => filterSourceTokensAndType(token, 'color'),
-        format: 'android/resources'
+        format: 'android/resources',
       },
       {
         destination: 'font_dimens.xml',
         filter: (token: Token) => filterSourceTokensAndType(token, 'fontSize'),
-        format: 'android/fontDimens'
+        format: 'android/fontDimens',
       },
       {
         destination: 'dimens.xml',
         filter: (token: Token) => filterSourceTokensAndType(token, 'dimension'),
-        format: 'android/dimens'
-      }
-    ]
-  }
+        format: 'android/dimens',
+      },
+    ],
+  },
 });

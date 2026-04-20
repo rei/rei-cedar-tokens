@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Spacing',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -38,7 +38,7 @@ function parseClamp(value: string): ClampParts | null {
     max: remToPx(rawMax.trim()),
     ideal: rawIdeal.trim(),
     slope,
-    raw: value
+    raw: value,
   };
 }
 
@@ -423,12 +423,12 @@ export const BaseSpacing: Story = {
   name: 'Base Scale',
   render: () => {
     const base = getTokens('CdrSpace').filter(
-      ([k]) => !k.startsWith('CdrSpaceScale') && !k.startsWith('CdrSpaceInset')
+      ([k]) => !k.startsWith('CdrSpaceScale') && !k.startsWith('CdrSpaceInset'),
     );
     const maxPx = Math.max(...base.map(([, v]) => valueToPx(v)));
     const rows = base.map(([n, v]) => staticRow(n, v, maxPx)).join('');
     return `${chrome}<div class="sb-page">${section('Base Spacing', 'Fixed pixel values. Bar width is proportional to the token value.', rows, base.length)}</div>`;
-  }
+  },
 };
 
 export const FluidSpacing: Story = {
@@ -441,9 +441,9 @@ export const FluidSpacing: Story = {
       'Fluid Space Scale',
       'Values use <code style="font-family:Pressura,monospace;font-size:11px;">clamp(min, ideal, max)</code> — they grow from <strong>min</strong> to <strong>max</strong> as the container widens. The bar shows where each token\'s range sits relative to the largest token.',
       `<div class="fluid-grid">${cards}</div>`,
-      fluid.length
+      fluid.length,
     )}</div>`;
-  }
+  },
 };
 
 export const InsetSpacing: Story = {
@@ -453,14 +453,14 @@ export const InsetSpacing: Story = {
     const maxPx = Math.max(...inset.map(([, v]) => valueToPx(v)));
     const rows = inset.map(([n, v]) => insetRow(n, v, maxPx)).join('');
     return `${chrome}<div class="sb-page">${section('Inset Spacing', 'Padding tokens. The box preview scales proportionally to the token value.', rows, inset.length)}</div>`;
-  }
+  },
 };
 
 export const AllSpacing: Story = {
   name: 'All Spacing',
   render: () => {
     const base = getTokens('CdrSpace').filter(
-      ([k]) => !k.startsWith('CdrSpaceScale') && !k.startsWith('CdrSpaceInset')
+      ([k]) => !k.startsWith('CdrSpaceScale') && !k.startsWith('CdrSpaceInset'),
     );
     const fluid = getTokens('CdrSpaceScale');
     const inset = getTokens('CdrSpaceInset');
@@ -479,9 +479,9 @@ export const AllSpacing: Story = {
         'Fluid Space Scale',
         'Values use <code style="font-family:Pressura,monospace;font-size:11px;">clamp(min, ideal, max)</code> — they grow with the container.',
         `<div class="fluid-grid">${fluidCards}</div>`,
-        fluid.length
+        fluid.length,
       )}
       ${section('Inset Spacing', 'Padding tokens — box preview scales proportionally.', insetRows, inset.length)}
     </div>`;
-  }
+  },
 };

@@ -6,8 +6,8 @@ const preview: Preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i
-      }
+        date: /Date$/i,
+      },
     },
     backgrounds: {
       default: 'cedar-light',
@@ -15,10 +15,10 @@ const preview: Preview = {
         { name: 'cedar-light', value: '#fafbf9' },
         { name: 'cedar-secondary', value: '#f7f5f3' },
         { name: 'cedar-dark', value: '#2e2e2b' },
-        { name: 'white', value: '#ffffff' }
-      ]
-    }
-  }
+        { name: 'white', value: '#ffffff' },
+      ],
+    },
+  },
 };
 
 export default preview;

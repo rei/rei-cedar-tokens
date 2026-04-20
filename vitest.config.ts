@@ -12,8 +12,8 @@ export default defineConfig({
       exclude: [
         'style-dictionary/**/*.test.ts',
         'style-dictionary/**/*.d.ts',
-        'style-dictionary/build.ts'
-      ]
-    }
-  }
+        'style-dictionary/build.ts',
+      ],
+    },
+  },
 });

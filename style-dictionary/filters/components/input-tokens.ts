@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only Accordion tokens.
@@ -12,10 +12,10 @@ import type { Token } from "style-dictionary";
  */
 export const componentInputTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "component-input-tokens",
+    name: 'component-input-tokens',
     filter: (token: Token) =>
-      token.path[0] !== "options" &&
-      token.path[0] !== "theme" &&
-      (token.path.includes("input") || token.path.includes("label")),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      (token.path.includes('input') || token.path.includes('label')),
   });
 };

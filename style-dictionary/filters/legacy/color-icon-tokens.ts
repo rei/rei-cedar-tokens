@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only color icon tokens.
@@ -12,11 +12,11 @@ import type { Token } from "style-dictionary";
  */
 export const colorIconTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "color-icon-tokens",
+    name: 'color-icon-tokens',
     filter: (token: Token) =>
-      token.path[0] !== "options" &&
-      token.path[0] !== "theme" &&
-      token.path[0] === "color" &&
-      token.path[1] === "icon",
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] === 'color' &&
+      token.path[1] === 'icon',
   });
 };

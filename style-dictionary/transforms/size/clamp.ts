@@ -32,6 +32,6 @@ export const cssClamp = (sd: typeof StyleDictionary): void => {
       }
 
       return `clamp(${min}, ${ideal}, ${max})`;
-    }
+    },
   });
 };

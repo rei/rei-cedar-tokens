@@ -4,7 +4,7 @@ import {
   BASE_FONT_SIZE,
   commonConfig,
   filterSourceTokensAndType,
-  pxToRem
+  pxToRem,
 } from './utils';
 import type { Token } from 'style-dictionary';
 
@@ -47,7 +47,7 @@ describe('utils', () => {
       $value: 'test-value',
       original: { $value: 'test-value' },
       filePath: 'test.json',
-      isSource: true
+      isSource: true,
     });
 
     it('should filter out options tokens', () => {

@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Breakpoints',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -143,7 +143,7 @@ export const Breakpoints: Story = {
       ['CdrBreakpointXs', 'xs', 'Extra Small', '0–767px'],
       ['CdrBreakpointSm', 'sm', 'Small', '768–991px'],
       ['CdrBreakpointMd', 'md', 'Medium', '992–1231px'],
-      ['CdrBreakpointLg', 'lg', 'Large', '1232px+']
+      ['CdrBreakpointLg', 'lg', 'Large', '1232px+'],
     ];
 
     // Use 1232 as the reference max (xs shows 0 but we give it a 4% minimum)
@@ -197,5 +197,5 @@ export const Breakpoints: Story = {
         <div class="bp-devices">${devices}</div>
       </div>
     </div>`;
-  }
+  },
 };

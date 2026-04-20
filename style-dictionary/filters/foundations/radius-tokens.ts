@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only radius tokens.
@@ -12,8 +12,7 @@ import type { Token } from "style-dictionary";
  */
 export const foundationsRadiusTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "foundations-radius-tokens",
-    filter: (token: Token) =>
-      token.path[0] !== "options" && token.path[0] === "radius",
+    name: 'foundations-radius-tokens',
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'radius',
   });
 };

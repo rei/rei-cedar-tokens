@@ -1,4 +1,4 @@
-import { foundatiosMoudulesName } from "./modules";
+import { foundatiosMoudulesName } from './modules';
 
 export const foundationsFilters = (extension: string, format: string) => {
   const filtersObject = foundatiosMoudulesName.map((moduleName) => ({

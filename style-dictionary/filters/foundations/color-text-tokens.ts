@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only color text tokens.
@@ -10,31 +10,29 @@ import type { Token } from "style-dictionary";
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
-export const foundationsColorTextTokens = (
-  sd: typeof StyleDictionary,
-): void => {
+export const foundationsColorTextTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "foundations-color-text-tokens",
+    name: 'foundations-color-text-tokens',
     filter: (token: Token) => {
       const textTokens = [
-        "primary",
-        "secondary",
-        "emphasis",
-        "brand",
-        "sale",
-        "inverse",
-        "disabled",
-        "success",
-        "warning",
-        "error",
-        "info",
+        'primary',
+        'secondary',
+        'emphasis',
+        'brand',
+        'sale',
+        'inverse',
+        'disabled',
+        'success',
+        'warning',
+        'error',
+        'info',
       ];
 
       return (
-        token.path[0] !== "options" &&
-        token.path[0] !== "theme" &&
-        token.path[0] === "color" &&
-        token.path[1] === "text" &&
+        token.path[0] !== 'options' &&
+        token.path[0] !== 'theme' &&
+        token.path[0] === 'color' &&
+        token.path[1] === 'text' &&
         textTokens.includes(token.path[2])
       );
     },

@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Colors',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -320,7 +320,7 @@ export const Palette: Story = {
         (v) => `
         <div class="palette-chip" title="${v}">
           <div class="palette-chip-inner" style="background:${v};"></div>
-        </div>`
+        </div>`,
       )
       .join('');
 
@@ -335,7 +335,7 @@ export const Palette: Story = {
         <div class="palette-strip">${chips}</div>
       </div>
     </div>`;
-  }
+  },
 };
 
 /** Semantic surface / text / border / icon tokens — the small set designers use most */
@@ -354,7 +354,7 @@ export const Semantic: Story = {
       ['Info surface', 'CdrColorBackgroundInfo', t.CdrColorBackgroundInfo],
       ['Sale surface', 'CdrColorBackgroundSale', t.CdrColorBackgroundSale],
       ['Transparent', 'CdrColorBackgroundTransparent', t.CdrColorBackgroundTransparent],
-      ['Tooltip bg', 'CdrColorBackgroundTooltipDefault', t.CdrColorBackgroundTooltipDefault]
+      ['Tooltip bg', 'CdrColorBackgroundTooltipDefault', t.CdrColorBackgroundTooltipDefault],
     ];
 
     const textTokens: [string, string, string][] = [
@@ -368,7 +368,7 @@ export const Semantic: Story = {
       ['Warning text', 'CdrColorTextWarning', t.CdrColorTextWarning],
       ['Success text', 'CdrColorTextSuccess', t.CdrColorTextSuccess],
       ['Info text', 'CdrColorTextInfo', t.CdrColorTextInfo],
-      ['Sale text', 'CdrColorTextSale', t.CdrColorTextSale]
+      ['Sale text', 'CdrColorTextSale', t.CdrColorTextSale],
     ];
 
     const borderTokens: [string, string, string][] = [
@@ -378,7 +378,7 @@ export const Semantic: Story = {
       ['Warning border', 'CdrColorBorderWarning', t.CdrColorBorderWarning],
       ['Success border', 'CdrColorBorderSuccess', t.CdrColorBorderSuccess],
       ['Info border', 'CdrColorBorderInfo', t.CdrColorBorderInfo],
-      ['Transparent', 'CdrColorBorderTransparent', t.CdrColorBorderTransparent]
+      ['Transparent', 'CdrColorBorderTransparent', t.CdrColorBorderTransparent],
     ];
 
     const iconTokens: [string, string, string][] = [
@@ -389,7 +389,7 @@ export const Semantic: Story = {
       ['Error icon', 'CdrColorIconMessageError', t.CdrColorIconMessageError],
       ['Warning icon', 'CdrColorIconMessageWarning', t.CdrColorIconMessageWarning],
       ['Success icon', 'CdrColorIconMessageSuccess', t.CdrColorIconMessageSuccess],
-      ['Info icon', 'CdrColorIconMessageInfo', t.CdrColorIconMessageInfo]
+      ['Info icon', 'CdrColorIconMessageInfo', t.CdrColorIconMessageInfo],
     ];
 
     const grid = (items: [string, string, string][]) =>
@@ -413,7 +413,7 @@ export const Semantic: Story = {
         ${grid(iconTokens)}
       </div>
     </div>`;
-  }
+  },
 };
 
 /** All tokens organized by component group, showing role (bg/text/border/icon) per row */
@@ -474,7 +474,7 @@ export const ByComponent: Story = {
         ${sections}
       </div>
     </div>`;
-  }
+  },
 };
 
 /** Background tokens only, flat grid */
@@ -494,7 +494,7 @@ export const BackgroundColors: Story = {
             </div>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`
+        </tr>`,
       )
       .join('');
 
@@ -507,7 +507,7 @@ export const BackgroundColors: Story = {
         </table>
       </div>
     </div>`;
-  }
+  },
 };
 
 /** Text tokens only */
@@ -533,7 +533,7 @@ export const TextColors: Story = {
             </span>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`
+        </tr>`,
       )
       .join('');
 
@@ -546,7 +546,7 @@ export const TextColors: Story = {
         </table>
       </div>
     </div>`;
-  }
+  },
 };
 
 /** Border tokens only */
@@ -569,7 +569,7 @@ export const BorderColors: Story = {
             <div style="width:48px;height:24px;border-radius:4px;border:2px solid ${val};"></div>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`
+        </tr>`,
       )
       .join('');
 
@@ -582,7 +582,7 @@ export const BorderColors: Story = {
         </table>
       </div>
     </div>`;
-  }
+  },
 };
 
 /** Icon tokens only */
@@ -607,7 +607,7 @@ export const IconColors: Story = {
             </svg>
           </td>
           <td class="comp-value">${val}</td>
-        </tr>`
+        </tr>`,
       )
       .join('');
 
@@ -620,5 +620,5 @@ export const IconColors: Story = {
         </table>
       </div>
     </div>`;
-  }
+  },
 };

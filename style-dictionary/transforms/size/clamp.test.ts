@@ -10,7 +10,7 @@ describe('cssClamp transform', () => {
     $value: value,
     original: { $value: value },
     filePath: 'test.json',
-    isSource: true
+    isSource: true,
   });
 
   // We'll test the transform logic directly
@@ -42,7 +42,7 @@ describe('cssClamp transform', () => {
     const token = createMockToken({
       min: '0.875rem',
       ideal: 'calc(0.875rem + 0.5vw)',
-      max: '1.25rem'
+      max: '1.25rem',
     });
     expect(clampTransform(token)).toBe('clamp(0.875rem, calc(0.875rem + 0.5vw), 1.25rem)');
   });
@@ -50,21 +50,21 @@ describe('cssClamp transform', () => {
   it('should throw error when min is missing', () => {
     const token = createMockToken({ ideal: '2vw', max: '3rem' });
     expect(() => clampTransform(token)).toThrow(
-      'Clamp token test-token must have min, ideal, and max values'
+      'Clamp token test-token must have min, ideal, and max values',
     );
   });
 
   it('should throw error when ideal is missing', () => {
     const token = createMockToken({ min: '1rem', max: '3rem' });
     expect(() => clampTransform(token)).toThrow(
-      'Clamp token test-token must have min, ideal, and max values'
+      'Clamp token test-token must have min, ideal, and max values',
     );
   });
 
   it('should throw error when max is missing', () => {
     const token = createMockToken({ min: '1rem', ideal: '2vw' });
     expect(() => clampTransform(token)).toThrow(
-      'Clamp token test-token must have min, ideal, and max values'
+      'Clamp token test-token must have min, ideal, and max values',
     );
   });
 

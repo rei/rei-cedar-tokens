@@ -5,8 +5,8 @@ const config: StorybookConfig = {
   addons: ['@storybook/addon-essentials'],
   framework: {
     name: '@storybook/html-vite',
-    options: {}
-  }
+    options: {},
+  },
 };
 
 export default config;

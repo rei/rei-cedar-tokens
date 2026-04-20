@@ -27,11 +27,11 @@ export const deprecated = (sd: typeof StyleDictionary) => {
         return {
           deprecated: true,
           'deprecated-year': year,
-          'deprecated-release': release
+          'deprecated-release': release,
         };
       }
 
       return { deprecated: false };
-    }
+    },
   });
 };

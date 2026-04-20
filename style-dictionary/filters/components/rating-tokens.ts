@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only Rating tokens.
@@ -12,10 +12,10 @@ import type { Token } from "style-dictionary";
  */
 export const componentRatingTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "component-rating-tokens",
+    name: 'component-rating-tokens',
     filter: (token: Token) =>
-      token.path[0] !== "options" &&
-      token.path[0] !== "theme" &&
-      (token.path.includes("rating") || token.path.includes("rating-star")),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      (token.path.includes('rating') || token.path.includes('rating-star')),
   });
 };

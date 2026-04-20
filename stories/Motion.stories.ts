@@ -5,8 +5,8 @@ const meta: Meta = {
   title: 'Tokens/Motion',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true }
-  }
+    controls: { disable: true },
+  },
 };
 
 export default meta;
@@ -173,7 +173,7 @@ export const Duration: Story = {
       ['CdrDuration3X', '3x'],
       ['CdrDuration4X', '4x'],
       ['CdrDuration5X', '5x'],
-      ['CdrDuration6X', '6x']
+      ['CdrDuration6X', '6x'],
     ];
 
     const maxMs = Math.max(...durations.map(([k]) => parseInt(t[k] ?? '0') || 0));
@@ -195,7 +195,7 @@ export const Duration: Story = {
       .join('');
 
     return `${chrome}<div class="sb-page">${section('Duration', rows, durations.length)}</div>`;
-  }
+  },
 };
 
 export const TimingFunctions: Story = {
@@ -205,7 +205,7 @@ export const TimingFunctions: Story = {
     const timings: [string, string][] = [
       ['CdrTimingFunctionEaseOut', 'ease-out'],
       ['CdrTimingFunctionEase', 'ease'],
-      ['CdrTimingFunctionLinear', 'linear']
+      ['CdrTimingFunctionLinear', 'linear'],
     ];
 
     const cards = timings
@@ -226,9 +226,9 @@ export const TimingFunctions: Story = {
     return `${chrome}<div class="sb-page">${section(
       'Timing Functions',
       `<div class="timing-grid">${cards}</div>`,
-      timings.length
+      timings.length,
     )}</div>`;
-  }
+  },
 };
 
 export const AllMotion: Story = {
@@ -241,12 +241,12 @@ export const AllMotion: Story = {
       ['CdrDuration3X', '3x'],
       ['CdrDuration4X', '4x'],
       ['CdrDuration5X', '5x'],
-      ['CdrDuration6X', '6x']
+      ['CdrDuration6X', '6x'],
     ];
     const timings: [string, string][] = [
       ['CdrTimingFunctionEaseOut', 'ease-out'],
       ['CdrTimingFunctionEase', 'ease'],
-      ['CdrTimingFunctionLinear', 'linear']
+      ['CdrTimingFunctionLinear', 'linear'],
     ];
 
     const maxMs = Math.max(...durations.map(([k]) => parseInt(t[k] ?? '0') || 0));
@@ -286,5 +286,5 @@ export const AllMotion: Story = {
       ${section('Duration', durationRows, durations.length)}
       ${section('Timing Functions', `<div class="timing-grid">${timingCards}</div>`, timings.length)}
     </div>`;
-  }
+  },
 };

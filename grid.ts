@@ -18,7 +18,7 @@ const formattedTokens = Object.keys(tokens)
 
 const urlData = {
   'foreground-colors': formattedTokens,
-  'background-colors': formattedTokens
+  'background-colors': formattedTokens,
 };
 
 console.log(`https://contrast-grid.eightshapes.com/?${queryString.stringify(urlData)}`);

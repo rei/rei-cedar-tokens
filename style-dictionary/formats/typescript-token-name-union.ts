@@ -17,8 +17,8 @@ export const typescriptTokenNameUnion = (sd: typeof StyleDictionary): void => {
           const suffix = index === tokenNames.length - 1 ? ';' : '';
           return `  | ${JSON.stringify(tokenName)}${suffix}`;
         }),
-        ''
+        '',
       ].join('\n');
-    }
+    },
   });
 };
