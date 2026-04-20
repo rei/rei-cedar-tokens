@@ -1,0 +1,16 @@
+export type CdrColorIconTokenName =
+  | "CdrColorIconCheckboxDefaultSelected"
+  | "CdrColorIconCheckboxDefaultSelectedActive"
+  | "CdrColorIconCheckboxDefaultSelectedHover"
+  | "CdrColorIconDefault"
+  | "CdrColorIconDisabled"
+  | "CdrColorIconEmphasis"
+  | "CdrColorIconLink"
+  | "CdrColorIconMessageDefault"
+  | "CdrColorIconMessageError"
+  | "CdrColorIconMessageInfo"
+  | "CdrColorIconMessageSuccess"
+  | "CdrColorIconMessageWarning"
+  | "CdrColorIconSwitchSelectedDefaultFocus"
+  | "CdrColorIconSwitchSelectedDefaultHover"
+  | "CdrColorIconSwitchSelectedDefaultRest";
