@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only text tokens.
@@ -12,13 +12,13 @@ import type { Token } from "style-dictionary";
  */
 export const foundationsTextTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "foundations-text-tokens",
+    name: 'foundations-text-tokens',
     filter: (token: Token) =>
-      (token.path[0] !== "options" && token.path[0].includes("text-default")) ||
-      token.path[0].includes("text-eyebrow") ||
-      token.path[0].includes("text-heading") ||
-      token.path[0].includes("text-body") ||
-      token.path[0].includes("text-subheading") ||
-      token.path[0].includes("text-utility"),
+      (token.path[0] !== 'options' && token.path[0].includes('text-default')) ||
+      token.path[0].includes('text-eyebrow') ||
+      token.path[0].includes('text-heading') ||
+      token.path[0].includes('text-body') ||
+      token.path[0].includes('text-subheading') ||
+      token.path[0].includes('text-utility'),
   });
 };

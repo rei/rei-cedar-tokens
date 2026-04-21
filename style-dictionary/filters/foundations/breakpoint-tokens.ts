@@ -1,5 +1,5 @@
-import type StyleDictionary from "style-dictionary";
-import type { Token } from "style-dictionary";
+import type StyleDictionary from 'style-dictionary';
+import type { Token } from 'style-dictionary';
 
 /**
  * Registers a custom Style Dictionary filter that includes only breakpoint tokens.
@@ -10,12 +10,9 @@ import type { Token } from "style-dictionary";
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
-export const foundationsBreakpointTokens = (
-  sd: typeof StyleDictionary,
-): void => {
+export const foundationsBreakpointTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: "foundations-breakpoint-tokens",
-    filter: (token: Token) =>
-      token.path[0] !== "options" && token.path[0] === "radius",
+    name: 'foundations-breakpoint-tokens',
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'radius',
   });
 };
