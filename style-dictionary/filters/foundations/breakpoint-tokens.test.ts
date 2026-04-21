@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import type { Token } from 'style-dictionary';
+import { foundationsBreakpointTokens } from './breakpoint-tokens';
 
 describe('foundations-breakpoint-tokens filter', () => {
   // Helper to mock the exact structure from your JSON
@@ -13,9 +14,14 @@ describe('foundations-breakpoint-tokens filter', () => {
     isSource: true,
   });
 
-  // The intended logic based on your JSDoc and JSON structure
-  const foundationsBreakpointTokensFilter = (token: Token): boolean =>
-    token.path[0] !== 'options' && token.path[0] === 'breakpoint';
+  // Get the actual registered filter
+  let foundationsBreakpointTokensFilter: (token: Token) => boolean;
+  const mockSd = {
+    registerFilter: (config: { name: string; filter: (token: Token) => boolean }) => {
+      foundationsBreakpointTokensFilter = config.filter;
+    },
+  };
+  foundationsBreakpointTokens(mockSd as any);
 
   it('should include the "xs" breakpoint token from the JSON', () => {
     // Maps to: "breakpoint": { "xs": { ... } }
