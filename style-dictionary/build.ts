@@ -45,6 +45,7 @@ import { typescriptTokenNameUnion } from './formats/typescript-token-name-union'
 // ==== Include custom actions ====
 import { concatFiles } from './actions/concat-files';
 import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
+import { generateTypesBarrel } from './actions/generate-types-barrel';
 
 // ==== Include custom legacy filters ====
 import { colorBackgroundTokens } from './filters/legacy/color-background-tokens';
@@ -123,6 +124,7 @@ typescriptTokenNameUnion(StyleDictionary);
 concatFiles(StyleDictionary);
 includeDisplayScss(StyleDictionary);
 includeQueriesFileScss(StyleDictionary);
+generateTypesBarrel(StyleDictionary);
 
 // ==== Register custom legacy filters ====
 colorBackgroundTokens(StyleDictionary);

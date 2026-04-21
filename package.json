@@ -28,6 +28,16 @@
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
+    "./types": {
+      "types": "./dist/rei-dot-com/types/index.d.ts",
+      "import": "./dist/rei-dot-com/types/index.mjs",
+      "default": "./dist/rei-dot-com/types/index.mjs"
+    },
+    "./docsite/types": {
+      "types": "./dist/docsite/types/index.d.ts",
+      "import": "./dist/docsite/types/index.mjs",
+      "default": "./dist/docsite/types/index.mjs"
+    },
     "./types/base": {
       "types": "./dist/types/base/token-schema.d.ts",
       "default": "./dist/types/base/token-schema.d.ts"

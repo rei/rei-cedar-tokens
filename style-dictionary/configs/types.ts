@@ -7,6 +7,7 @@ import { typesFilters } from './filters/typesFilters';
 export const types = (theme: Theme): PlatformConfig => ({
   types: {
     ...commonConfig(theme, 'types'),
+    actions: ['generate-types-barrel'],
     transforms: [
       'attribute/deprecated',
       'name/pascal',
