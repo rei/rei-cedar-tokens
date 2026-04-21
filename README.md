@@ -34,6 +34,8 @@ Tokens are generated using [Style Dictionary v4](https://styledictionary.com/).
 
 - [Architecture Guide](./docs/ARCHITECTURE.md) - System architecture and design decisions
 - [Transform Guide](./docs/TRANSFORMS.md) - Transform ordering, usage, and creation
+- [Consumer TypeScript Contract](./docs/CONSUMER_TYPESCRIPT_CONTRACT.md) - Current and target TypeScript consumer API contract
+- [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md) - TypeScript pipeline architecture and migration plan
 
 ### Testing
 
