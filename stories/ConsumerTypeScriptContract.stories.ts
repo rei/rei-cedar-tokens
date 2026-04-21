@@ -25,11 +25,11 @@ function codeBlock(code: string): string {
 }
 
 const modularImport = `
-import type { CdrSpaceTokens } from "@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space";
+import type { CdrSpaceTokens } from "@rei/cdr-tokens/types";
 `;
 
 const unionExample = `
-import type { CdrColorBackgroundTokenName } from "@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-color-background.names";
+import type { CdrColorBackgroundTokenName } from "@rei/cdr-tokens/types";
 
 type BackgroundTokenMap = Record<CdrColorBackgroundTokenName, string>;
 declare const tokens: BackgroundTokenMap;
@@ -40,7 +40,7 @@ function getToken(name: CdrColorBackgroundTokenName) {
 `;
 
 const moduleInterfaceExample = `
-import type { CdrColorBackgroundTokens } from "@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-color-background";
+import type { CdrColorBackgroundTokens } from "@rei/cdr-tokens/types";
 
 const bg: Partial<CdrColorBackgroundTokens> = {
   CdrColorBackgroundPrimary: "#fff",
@@ -49,8 +49,18 @@ const bg: Partial<CdrColorBackgroundTokens> = {
 `;
 
 const currentMainlineExample = `
-import type { CdrSpaceTokens } from "@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space";
-import type { CdrSpaceTokenName } from "@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space.names";
+import type { CdrSpaceTokens } from "@rei/cdr-tokens/types";
+import type { CdrSpaceTokenName } from "@rei/cdr-tokens/types";
+`;
+
+const docsiteImportExample = `
+import type { CdrSpaceTokens } from "@rei/cdr-tokens/docsite/types";
+import type { CdrSpaceTokenName } from "@rei/cdr-tokens/docsite/types";
+`;
+
+const runtimeImportExample = `
+import { CdrSpaceScale2 } from "@rei/cdr-tokens";
+import { CdrSpaceScale2 as DocsiteCdrSpaceScale2 } from "@rei/cdr-tokens/docsite";
 `;
 
 const page = `
@@ -176,7 +186,7 @@ const page = `
       validate, and type token usage in application code.
     </p>
     <div class="note">
-      Current supported usage in mainline is through theme-scoped type module paths.
+      Use theme-specific barrel entrypoints for types: <code>@rei/cdr-tokens/types</code> (rei-dot-com) and <code>@rei/cdr-tokens/docsite/types</code> (docsite).
     </div>
   </section>
 
@@ -185,10 +195,14 @@ const page = `
       <header class="card-head"><h2 class="card-title">Import Pattern</h2></header>
       <div class="card-body">
         <p>
-          Theme-scoped generated type paths are currently available and working.
+          Import TypeScript token contracts from the barrel that matches your theme. The barrels provide a stable API surface, not one merged cross-theme value output.
         </p>
-        <p class="row-title">Example</p>
+        <p class="row-title">rei-dot-com</p>
         ${codeBlock(currentMainlineExample)}
+        <p class="row-title">docsite</p>
+        ${codeBlock(docsiteImportExample)}
+        <p class="row-title">Runtime values (not type-only barrels)</p>
+        ${codeBlock(runtimeImportExample)}
       </div>
     </article>
 
@@ -196,7 +210,7 @@ const page = `
       <header class="card-head"><h2 class="card-title">1) Modular Types</h2></header>
       <div class="card-body">
         <p class="row-title">What this is</p>
-        <p>Responsibility-oriented module types exposed through theme-scoped paths.</p>
+        <p>Responsibility-oriented module types exposed through the public barrel export.</p>
         <p class="row-title">Why it exists</p>
         <p>To avoid monolithic type files and give consumers focused, ergonomic imports.</p>
         <p class="row-title">How to import</p>

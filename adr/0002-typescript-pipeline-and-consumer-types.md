@@ -2,15 +2,15 @@
 
 ## Status
 
-Planned
+Accepted
 
 ## Problem Statement
 
-Mainline already has meaningful TypeScript output progress: modular generated `.d.ts` files, per-module token-name unions, and module interfaces under theme-scoped output paths.
+Mainline now has modular generated `.d.ts` files, per-module token-name unions, module interfaces, and a stable barrel export at `@rei/cdr-tokens/types`.
 
-The remaining gap is consumer contract stability and ergonomics. Consumers still depend on theme/deep-path knowledge and the package-level `cdr-tokens.d.mts` entrypoint, instead of a single stable public API for modular imports, token-name validation, and typed runtime dictionary usage.
+The remaining gap is completing the runtime dictionary contract (`TokenDictionary`) and finalizing deprecation rollout messaging for legacy typing workflows.
 
-This ADR addresses that gap by defining a stable `/types` contract and migration path that builds on existing mainline outputs without overstating current maturity.
+This ADR defines and records the `/types` contract and ongoing migration path from legacy patterns.
 
 ## Goals
 
@@ -60,29 +60,31 @@ This ADR addresses that gap by defining a stable `/types` contract and migration
 
 ### 7. Package exports integration
 
-- `@rei/cdr-tokens/types` is the only supported public API for TypeScript consumer types.
+- `@rei/cdr-tokens/types` (rei-dot-com) and `@rei/cdr-tokens/docsite/types` (docsite) are supported public APIs for TypeScript consumer types.
 - Internal generated files remain implementation details and are not part of the public contract.
 
-### Planned Barrel API Details (Theme-Aware)
+### Barrel API Details (Theme-Aware)
 
-The target barrel must account for both supported themes (`rei-dot-com` and `docsite`) while still exposing a single stable public entrypoint.
+The barrel contract accounts for both supported themes (`rei-dot-com` and `docsite`) through stable theme-specific entrypoints.
 
-Target requirements:
+Current requirements:
 
-- One stable import surface for consumers: `@rei/cdr-tokens/types`.
+- Stable import surfaces for consumers: `@rei/cdr-tokens/types` (rei-dot-com) and `@rei/cdr-tokens/docsite/types` (docsite).
 - Theme-aware typing in the public contract (for example via exported `Theme` union and theme-constrained module types).
 - No requirement for consumers to know internal generated file layout to select theme-specific types.
 - Backward-compatible naming strategy for type exports as themes evolve.
+- Theme values remain theme-specific; barrels do not merge values across themes.
 
 Practical implication:
 
-- The barrel should make it possible to write theme-safe code without deep imports, while preserving clear typing for `rei-dot-com` and `docsite` token modules.
+- The barrel makes it possible to write theme-safe code without deep imports, while preserving clear typing for `rei-dot-com` and `docsite` token modules.
 
 ## Public API vs Internal Implementation
 
 Public API:
 
-- `@rei/cdr-tokens/types`
+- `@rei/cdr-tokens/types` (stable barrel)
+- `@rei/cdr-tokens/docsite/types` (docsite-specific barrel)
 
 Internal implementation (non-contract):
 
@@ -91,13 +93,19 @@ Internal implementation (non-contract):
 
 ## Deprecation Plan
 
-- Legacy `cdr-tokens.d.mts` is deprecated for consumer typing workflows once `/types` API is available.
-- Consumers should migrate to modular types via `@rei/cdr-tokens/types`.
-- Deprecation messaging should include timeline, migration examples, and compatibility guidance.
+The legacy `cdr-tokens.d.mts` path has been removed from build output and package exports before broad consumer rollout.
 
-Legacy monolithic typing patterns to migrate from:
+Current contract:
 
-- Relying only on package-level `cdr-tokens.d.mts` for all type needs.
+- Type-only entrypoints:
+  - `@rei/cdr-tokens/types` (rei-dot-com)
+  - `@rei/cdr-tokens/docsite/types` (docsite)
+- Runtime value entrypoints:
+  - `@rei/cdr-tokens` (rei-dot-com)
+  - `@rei/cdr-tokens/docsite` (docsite)
+
+Legacy patterns to avoid:
+
 - Deep imports into generated internals or dist-like paths tied to output layout.
 - Token-name usage as unconstrained `string` values (no literal union validation).
 - Ad-hoc object typing (`Record<string, string>`) instead of module interfaces.
@@ -105,28 +113,34 @@ Legacy monolithic typing patterns to migrate from:
 
 Migration direction:
 
-- Move to barrel imports from `@rei/cdr-tokens/types`.
+- Import types only from theme-specific `/types` barrels.
+- Import runtime token values only from root/docsite runtime entrypoints.
 - Use module interfaces for grouped token shapes.
 - Use literal union token names for token lookup safety.
-- Use `TokenDictionary` for runtime dictionary typing across `Theme`, `Platform`, and `Responsibility`.
+- Adopt `TokenDictionary` when the public runtime dictionary contract is finalized.
 
 Migration examples:
 
 ```ts
-// old style (legacy)
-// import type { SomeType } from "@rei/cdr-tokens/dist/.../cdr-tokens.d.mts";
+// old style (legacy deep import)
+// import type { SomeType } from "@rei/cdr-tokens/dist/.../types/foundations/...";
 
 // new style (public API)
 import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/types';
 ```
 
 ```ts
-import type { CdrColorBackground } from '@rei/cdr-tokens/types';
+import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/types';
 
-const bg: CdrColorBackground = {
+const bg: CdrColorBackgroundTokens = {
   CdrColorBackgroundPrimary: '#fff',
   CdrColorBackgroundSecondary: '#f5f5f5',
 };
+```
+
+```ts
+// Runtime values are imported from runtime entrypoints, not /types.
+import { CdrSpaceScale2 } from '@rei/cdr-tokens';
 ```
 
 ## Future Direction
@@ -138,11 +152,12 @@ const bg: CdrColorBackground = {
 
 ## Current Mainline Maturity Note
 
-This ADR defines the target architecture and consumer contract for mainline adoption.
+This ADR defines the adopted architecture and consumer contract for mainline usage.
 
 Current state is partial implementation:
 
 - Implemented: modular generated `.d.ts` module files, literal token-name unions, and module interfaces in generated type outputs.
-- Implemented: theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`).
-- Still current: `cdr-tokens.d.mts` remains the package-level `types` entrypoint.
-- Planned: stable `@rei/cdr-tokens/types` barrel, `TokenDictionary` public export contract, and complete deprecation rollout from legacy monolithic typing workflows.
+- Implemented: stable barrel exports (`./types` and `./docsite/types`) mapped in package exports.
+- Implemented: existing theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) remain available.
+- Implemented: legacy `cdr-tokens.d.mts` generation and exports removed.
+- Planned: `TokenDictionary` public export contract and complete deprecation rollout from legacy monolithic typing workflows.

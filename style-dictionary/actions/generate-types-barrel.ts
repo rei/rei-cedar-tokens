@@ -8,15 +8,7 @@ const __dirname = getDirname(import.meta.url);
 
 const toPosixPath = (value: string): string => value.split(path.sep).join('/');
 
-const toExportPath = (relativePath: string, extension: '.mjs' | '.d.ts'): string => {
-  const normalized = toPosixPath(relativePath);
-
-  if (extension === '.d.ts') {
-    return `./${normalized.replace(/\.d\.ts$/, '')}`;
-  }
-
-  return `./${normalized}`;
-};
+const toExportPath = (relativePath: string): string => `./${toPosixPath(relativePath)}`;
 
 /**
  * Generates index barrel files for TypeScript token module outputs.
@@ -48,9 +40,9 @@ export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
         ignore: ['index.d.ts'],
       }).sort();
 
-      const mjsExports = mjsFiles.map((file) => `export * from '${toExportPath(file, '.mjs')}';`);
+      const mjsExports = mjsFiles.map((file) => `export * from '${toExportPath(file)}';`);
       const declarationExports = declarationFiles.map(
-        (file) => `export * from '${toExportPath(file, '.d.ts')}';`,
+        (file) => `export type * from '${toExportPath(file)}';`,
       );
 
       const indexMjsContent = `${mjsExports.join('\n')}\n`;

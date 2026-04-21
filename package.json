@@ -16,27 +16,20 @@
   "type": "module",
   "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
   "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
-  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
   "exports": {
     ".": {
-      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
     },
     "./docsite": {
-      "types": "./dist/docsite/js/cdr-tokens.d.mts",
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
     "./types": {
-      "types": "./dist/rei-dot-com/types/index.d.ts",
-      "import": "./dist/rei-dot-com/types/index.mjs",
-      "default": "./dist/rei-dot-com/types/index.mjs"
+      "types": "./dist/rei-dot-com/types/index.d.ts"
     },
     "./docsite/types": {
-      "types": "./dist/docsite/types/index.d.ts",
-      "import": "./dist/docsite/types/index.mjs",
-      "default": "./dist/docsite/types/index.mjs"
+      "types": "./dist/docsite/types/index.d.ts"
     },
     "./types/base": {
       "types": "./dist/types/base/token-schema.d.ts",

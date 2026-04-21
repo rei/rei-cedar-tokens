@@ -6,7 +6,7 @@ This document is the canonical consumer contract for TypeScript token usage in t
 
 This document describes the supported TypeScript consumer usage patterns currently available.
 
-- Modular per-module types available under theme-specific paths.
+- Type-only barrel entrypoints available for both themes.
 - Literal token-name union files (`*.names.d.ts`) exported for modules.
 - Module interfaces available for strongly-typed usage.
 
@@ -14,27 +14,41 @@ These patterns work today and are ready for production use.
 
 ## Import Pattern
 
-Theme-scoped module imports are available and working.
+Use theme-specific type barrels for type imports.
 
-Use one of these theme roots:
+Type-only entrypoints:
 
-- `@rei/cdr-tokens/rei-dot-com/types/...`
-- `@rei/cdr-tokens/docsite/types/...`
+- `@rei/cdr-tokens/types` (rei-dot-com)
+- `@rei/cdr-tokens/docsite/types` (docsite)
 
-Example:
+Runtime value entrypoints:
+
+- `@rei/cdr-tokens` (rei-dot-com)
+- `@rei/cdr-tokens/docsite` (docsite)
+
+Type example:
 
 ```ts
-import type { CdrSpaceTokens } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space';
-import type { CdrSpaceTokenName } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space.names';
+import type { CdrSpaceTokens } from '@rei/cdr-tokens/types';
+import type { CdrSpaceTokenName } from '@rei/cdr-tokens/types';
+```
+
+Runtime example:
+
+```ts
+import { CdrSpaceScale2 } from '@rei/cdr-tokens';
 ```
 
 ## Public API Boundary
 
 Public API:
 
-- Theme-scoped types exports from package `exports`, such as:
-  - `@rei/cdr-tokens/rei-dot-com/types/*`
-  - `@rei/cdr-tokens/docsite/types/*`
+- Type-only barrels:
+  - `@rei/cdr-tokens/types`
+  - `@rei/cdr-tokens/docsite/types`
+- Runtime values:
+  - `@rei/cdr-tokens`
+  - `@rei/cdr-tokens/docsite`
 
 Not public API:
 
@@ -45,9 +59,7 @@ Not public API:
 
 ### What it is
 
-Module-specific types (for example spacing, color background) exported from one public barrel.
-
-Module-specific types (for example spacing, color background) exported under theme-scoped type paths.
+Module-specific types (for example spacing, color background) exported from theme-specific type barrels.
 
 ### Why it exists
 
@@ -56,13 +68,13 @@ To give consumers focused, responsibility-based typing instead of one monolithic
 ### How to import it
 
 ```ts
-import type { CdrSpaceTokens } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space';
+import type { CdrSpaceTokens } from '@rei/cdr-tokens/types';
 ```
 
 ### How to use it
 
 ```ts
-import type { CdrSpaceTokens } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-space';
+import type { CdrSpaceTokens } from '@rei/cdr-tokens/types';
 
 const spacing: Partial<CdrSpaceTokens> = {
   CdrSpaceScale2: '0.25rem',
@@ -88,13 +100,13 @@ To prevent invalid token-name string usage and improve editor autocomplete.
 ### How to import it
 
 ```ts
-import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-color-background.names';
+import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/types';
 ```
 
 ### How to use it
 
 ```ts
-import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-color-background.names';
+import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/types';
 
 type BackgroundTokenMap = Record<CdrColorBackgroundTokenName, string>;
 
@@ -107,8 +119,7 @@ function getToken(name: CdrColorBackgroundTokenName) {
 
 ### Public vs internal
 
-- Public: union types re-exported by the barrel
-- Public: union types exported by theme-scoped module name files
+- Public: union types re-exported by theme-specific type barrels
 - Internal: generated literal-type source files
 
 ## 3) Module Interfaces
@@ -124,13 +135,13 @@ To support strongly-typed module-level token usage and test fixtures.
 ### How to import it
 
 ```ts
-import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-color-background';
+import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/types';
 ```
 
 ### How to use it
 
 ```ts
-import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/rei-dot-com/types/foundations/cdr-color-background';
+import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/types';
 
 const bg: Partial<CdrColorBackgroundTokens> = {
   CdrColorBackgroundPrimary: '#fff',
@@ -140,7 +151,7 @@ const bg: Partial<CdrColorBackgroundTokens> = {
 
 ### Public vs internal
 
-- Public: module interfaces from theme-scoped type modules
+- Public: module interfaces from theme-specific type barrels
 - Internal: generated interface fragments
 
 ## Theme, Platform, Responsibility Model

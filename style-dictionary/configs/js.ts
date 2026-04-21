@@ -24,11 +24,6 @@ export const js = (theme: Theme): PlatformConfig => ({
         filter: 'remove-source-tokens',
       },
       {
-        destination: 'cdr-tokens.d.mts',
-        format: 'typescript/es6-declarations',
-        filter: 'remove-source-tokens',
-      },
-      {
         destination: 'foundations/cdr-color-background.mjs',
         format: 'javascript/es6',
         filter: 'color-background-tokens',
