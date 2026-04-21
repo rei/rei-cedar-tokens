@@ -244,7 +244,8 @@ const page = `
   </section>
 
   <p class="foot">
-    ADR reference: <a href="https://github.com/rei/rei-cedar-tokens/blob/next/adr/0002-typescript-pipeline-and-consumer-types.md" target="_blank" rel="noreferrer">ADR 0002: TypeScript Pipeline and Consumer Types API</a>
+    ADR reference: <a href="https://github.com/rei/rei-cedar-tokens/blob/next/adr/0002-typescript-pipeline-and-consumer-types.md" target="_blank" rel="noreferrer">ADR 0002: TypeScript Pipeline and Consumer Types API</a><br />
+    Follow-up ticket draft: <a href="https://github.com/rei/rei-cedar-tokens/blob/next/docs/tickets/ts-declaration-migration-ticket.md" target="_blank" rel="noreferrer">Migrate generated declarations to .d.mts</a>
   </p>
 </div>
 `;

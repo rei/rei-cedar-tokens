@@ -149,6 +149,7 @@ import { CdrSpaceScale2 } from '@rei/cdr-tokens';
 - Add new generated module surfaces without breaking existing barrel imports.
 - Use semver to signal API-level type changes.
 - Preserve backward compatibility at the public barrel boundary where feasible.
+- Track declaration format migration work in [docs/tickets/ts-declaration-migration-ticket.md](../docs/tickets/ts-declaration-migration-ticket.md).
 
 ## Current Mainline Maturity Note
 
