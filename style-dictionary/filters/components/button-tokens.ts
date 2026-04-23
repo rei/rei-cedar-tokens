@@ -14,6 +14,9 @@ export const componentButtonTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'component-button-tokens',
     filter: (token: Token) =>
-      token.path[0] !== 'options' && token.path[0] !== 'theme' && token.path.includes('button'),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] !== 'membership' &&
+      token.path.includes('button'),
   });
 };

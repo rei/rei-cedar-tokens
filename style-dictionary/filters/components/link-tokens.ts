@@ -14,6 +14,9 @@ export const componentLinkTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'component-link-tokens',
     filter: (token: Token) =>
-      token.path[0] !== 'options' && token.path[0] !== 'theme' && token.path.includes('link'),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] !== 'membership' &&
+      token.path.includes('link'),
   });
 };
