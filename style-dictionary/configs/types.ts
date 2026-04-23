@@ -2,7 +2,6 @@ import type { PlatformConfig } from 'style-dictionary/types';
 import type { Theme } from '../constants';
 import { getTokenModules } from '../token-modules';
 import { commonConfig } from '../utils';
-import { typesFilters } from './filters/typesFilters';
 
 export const types = (theme: Theme): PlatformConfig => ({
   types: {
@@ -33,8 +32,6 @@ export const types = (theme: Theme): PlatformConfig => ({
           filter: tokenModule.filter,
         },
       ]),
-      // Custom Foundations and Components filters
-      ...typesFilters('types'),
     ],
   },
 });

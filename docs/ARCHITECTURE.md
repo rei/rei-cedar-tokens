@@ -1,324 +1,309 @@
 # REI Cedar Tokens - Architecture
 
-## Overview
+## Purpose
 
-REI Cedar Tokens is a design token management system built on [Style Dictionary](https://amzn.github.io/style-dictionary/). It transforms design tokens from JSON source files into multiple platform-specific formats (CSS, SCSS, JavaScript, iOS, Android, Figma).
+This document explains the TypeScript token tooling end-to-end:
 
-## System Architecture
+- what each tooling component is
+- why it exists
+- how it works
+- how components fit together into a single build and distribution pipeline
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Token Source Files                        │
-│  tokens/                                                      │
-│  ├── _options/       (Internal config, not exported)        │
-│  ├── global/         (Cross-platform tokens)                │
-│  ├── web/            (Web-specific tokens)                  │
-│  ├── mobile/         (Mobile-specific tokens)               │
-│  └── themes/         (Theme overrides)                      │
-│      ├── rei-dot-com/                                       │
-│      └── docsite/                                           │
-└─────────────────────────────────────────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    Style Dictionary                          │
-│  Processes tokens through:                                   │
-│  1. Preprocessors (tokens-studio)                           │
-│  2. Transforms (value & attribute modifications)            │
-│  3. Filters (inclusion/exclusion)                           │
-│  4. Formats (output generation)                             │
-│  5. Actions (post-build file operations)                    │
-└─────────────────────────────────────────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    Build Output                              │
-│  dist/                                                       │
-│  └── [theme]/        (e.g., rei-dot-com, docsite)          │
-│      └── [platform]/ (e.g., web, android, ios)             │
-│          ├── CSS files                                      │
-│          ├── SCSS files (variables, maps, mixins)           │
-│          ├── JavaScript (ES & CommonJS)                     │
-│          ├── XML (Android)                                  │
-│          ├── Swift (iOS)                                    │
-│          └── JSON (Figma, site docs)                        │
-└─────────────────────────────────────────────────────────────┘
+Decision-level contract details (consumer API boundaries and TokenDictionary acceptance) are defined in [ADR 0002](../adr/0002-typescript-pipeline-and-consumer-types.md).
+
+## System At A Glance
+
+REI Cedar Tokens transforms source token JSON into platform-specific assets and TypeScript consumer surfaces.
+
+```text
+Token JSON -> Preprocess -> Transforms -> Filters -> Formats -> Actions -> dist/
+                                   |
+                                   +-> Validation + Tests + Package Exports
 ```
 
-## Core Concepts
+Primary outputs:
 
-### 1. Tokens vs Options
+- runtime values: JS (ESM + CJS), CSS, SCSS, Android, iOS, Figma, site JSON
+- type surfaces: module interfaces, token-name unions, type barrels
 
-- **Tokens** (`tokens/global/`, `tokens/web/`, etc.): Exported design values (colors, spacing, typography)
-- **Options** (`tokens/_options/`): Internal configuration values used to generate other tokens (not exported)
+## Source Of Truth
 
-The `remove-source-tokens` filter excludes `options` and `theme` namespaces from outputs.
+### Token Inputs
 
-### 2. Themes
+- `tokens/_options/**` internal option values (not exported as consumer tokens)
+- `tokens/global/**` global token definitions
+- `tokens/web/**` and `tokens/mobile/**` platform-oriented sources
+- `tokens/themes/rei-dot-com/**` and `tokens/themes/docsite/**` theme overrides
 
-Themes provide overrides for base tokens. The system builds **every theme × platform combination**:
+### Build Dimensions
 
-- `rei-dot-com` - REI's primary e-commerce theme
-- `docsite` - Documentation site theme
+Defined in [style-dictionary/constants.ts](../style-dictionary/constants.ts):
 
-Themes are defined in `tokens/themes/[theme-name]/` and use the `source` field in Style Dictionary to override `include` tokens.
+- themes: `rei-dot-com`, `docsite`
+- platforms: `site/global`, `site/web`, `site/android`, `site/ios`, `web`, `android`, `ios`, `figma`
 
-### 3. Platforms
+The build executes every `theme x platform` combination.
 
-Each platform represents a different output target:
+## Build Orchestration
 
-| Platform       | Output Formats | Use Case                         |
-| -------------- | -------------- | -------------------------------- |
-| `web`          | CSS, SCSS, JS  | Web applications                 |
-| `android`      | XML            | Android native apps              |
-| `ios`          | Swift          | iOS native apps                  |
-| `figma`        | JSON           | Figma design tool                |
-| `site/global`  | JSON           | Documentation (all platforms)    |
-| `site/web`     | JSON           | Documentation (web-specific)     |
-| `site/android` | JSON           | Documentation (Android-specific) |
-| `site/ios`     | JSON           | Documentation (iOS-specific)     |
+Main orchestrator: [style-dictionary/build.ts](../style-dictionary/build.ts)
 
-### 4. DTCG Specification
+Responsibilities:
 
-Tokens follow the [Design Tokens Community Group (DTCG)](https://tr.designtokens.org/format/) specification:
+1. register Tokens Studio preprocessor
+2. register custom transforms
+3. register custom formats
+4. register custom actions
+5. register custom filters
+6. iterate themes and platforms
+7. build each configuration via `StyleDictionary(...).buildAllPlatforms()`
 
-- Use `$type` for token type
-- Use `$value` for token value
-- Use `$description` for documentation
-- Enable with `usesDtcg: true` in config
+Why this matters:
 
-## Build Process
+- central registration guarantees deterministic build behavior
+- explicit registration order enforces transform dependencies
 
-### Build Flow
+## Configuration Assembly
 
-```typescript
-// style-dictionary/build.ts
+Configuration entrypoint: [style-dictionary/configs/index.ts](../style-dictionary/configs/index.ts)
 
-for (const theme of THEMES) {
-  // ['rei-dot-com', 'docsite']
-  for (const platform of PLATFORMS) {
-    // ['web', 'android', 'ios', ...]
-    const config = getConfig(platform, theme);
-    const sd = new StyleDictionary(config);
-    await sd.buildAllPlatforms();
-  }
-}
-```
+Platform configs:
 
-### Configuration Assembly
+- [style-dictionary/configs/js.ts](../style-dictionary/configs/js.ts)
+- [style-dictionary/configs/css.ts](../style-dictionary/configs/css.ts)
+- [style-dictionary/configs/scss.ts](../style-dictionary/configs/scss.ts)
+- [style-dictionary/configs/android.ts](../style-dictionary/configs/android.ts)
+- [style-dictionary/configs/ios.ts](../style-dictionary/configs/ios.ts)
+- [style-dictionary/configs/figma.ts](../style-dictionary/configs/figma.ts)
+- [style-dictionary/configs/site.global.ts](../style-dictionary/configs/site.global.ts)
+- [style-dictionary/configs/site.web.ts](../style-dictionary/configs/site.web.ts)
+- [style-dictionary/configs/site.android.ts](../style-dictionary/configs/site.android.ts)
+- [style-dictionary/configs/site.ios.ts](../style-dictionary/configs/site.ios.ts)
+- [style-dictionary/configs/types.ts](../style-dictionary/configs/types.ts)
 
-The `getConfig()` function (in `configs/index.ts`) assembles configuration:
+Why config layering is needed:
 
-```typescript
-{
-  include: [
-    'tokens/_options/**/*.json',     // Base configuration
-    'tokens/global/**/*.json',       // Global tokens
-    ...platformSpecificSources       // e.g., 'tokens/web/**/*.json'
-  ],
-  source: [
-    `tokens/themes/${theme}/**/*.json` // Theme overrides
-  ],
-  expand: {
-    include: ['typography']            // Expand composite tokens
-  },
-  preprocessors: ['tokens-studio'],    // Tokens Studio integration
-  platforms: { /* platform-specific configs */ },
-  usesDtcg: true
-}
-```
+- keeps source loading, transforms, and output formats platform-specific
+- avoids one monolithic build config with conflicting behavior
 
-**Key distinction**: `include` provides base tokens, `source` provides overrides. Tokens Studio preprocessor runs first.
+## Transform Layer
 
-## Component Architecture
+Transform files are under [style-dictionary/transforms](../style-dictionary/transforms).
 
-### Transforms
+Core rule:
 
-Located in `style-dictionary/transforms/`, transforms modify token values or attributes:
+- `attribute/deprecated` must run first because it mutates token metadata and path context used by downstream transforms and filters
 
-#### Attribute Transforms
+Value transforms cover:
 
-- **`attribute/deprecated`**: Extracts deprecation metadata from token paths
+- px/rem conversion
+- spacing normalization
+- unit stripping for JS/SCSS targets
+- platform-specific sizing (dp for Android)
+- clamp value generation
 
-#### Value Transforms (Size)
+Detailed transform ordering guidance lives in [docs/TRANSFORMS.md](./TRANSFORMS.md).
 
-- **`size/px-to-rem-transitive`**: Converts px → rem (respects basePxFontSize)
-- **`size/space`**: Applies spacing modifiers
-- **`size/space-js`**: Space transform for JavaScript (integer output)
-- **`size/strip-px`**: Removes px suffix (conditional)
-- **`size/strip-all-px`**: Removes px suffix (all tokens)
-- **`size/strip-all-px-js`**: Strip px for JavaScript
-- **`size/float`**: Converts to floating point
-- **`size/dp-transitive`**: Converts to Android dp units
-- **`value/clamp`**: Generates CSS clamp() functions
+Why transforms are needed:
 
-**Transform Order Matters**: `attribute/deprecated` must run first (it mutates token paths). See [TRANSFORMS.md](./TRANSFORMS.md) for details.
+- source tokens are authored semantically, not in final platform units
+- each output target has different unit and formatting expectations
 
-### Formats
+## Filter Layer
 
-Located in `style-dictionary/formats/`, formats generate output files:
+Filter files are under [style-dictionary/filters](../style-dictionary/filters).
 
-- **`scss/typography`**: SCSS mixins and placeholders for typography tokens
-- **`scss/map`**: SCSS maps from utility tokens
-- **`site/*`**: JSON for documentation site
-- **`figma`**: JSON for Figma integration
+Filter categories:
 
-### Filters
+- foundational responsibilities: color, space, radius, motion, prominence, form, icon
+- palette responsibilities
+- utility filters: remove source-only namespaces and categories
 
-Located in `style-dictionary/filters/`:
+Why filters are needed:
 
-- **`remove-source-tokens`**: Excludes `options` and `theme` tokens from output
+- isolate responsibility-specific token modules
+- prevent internal-only options/theme scaffolding from leaking into consumer outputs
 
-### Actions
+Every filter has tests (`*.test.ts`) to guard contract drift.
 
-Located in `style-dictionary/actions/`, actions perform post-build file operations:
+## Format Layer
 
-- **`include-utility-file`**: Factory for copying utility files (SCSS mixins, etc.) to build output
-  - `includeDisplayScss`
-  - `includeMediaQueriesScss`
-  - `includeContainerQueriesScss`
+Format files are under [style-dictionary/formats](../style-dictionary/formats).
 
-### Utilities
+Types of custom formats:
 
-Located in `style-dictionary/utilities/`, these are static files copied by actions:
+- SCSS mixin/map outputs
+- site JSON outputs
+- Figma JSON output
+- TypeScript module values, interfaces, and token-name unions
 
-- `display.scss` - Display utility mixins
-- `media-queries.scss` - Responsive breakpoint mixins
-- `container-queries.scss` - Container query mixins
+Type generation formats:
 
-## Directory Structure
+- [style-dictionary/formats/typescript-module-values.ts](../style-dictionary/formats/typescript-module-values.ts)
+- [style-dictionary/formats/typescript-module-declarations.ts](../style-dictionary/formats/typescript-module-declarations.ts)
+- [style-dictionary/formats/typescript-token-name-union.ts](../style-dictionary/formats/typescript-token-name-union.ts)
 
-```
-rei-cedar-tokens/
-├── style-dictionary/          # Build system
-│   ├── build.ts              # Main build script
-│   ├── constants.ts          # Platform/theme definitions
-│   ├── utils.ts              # Shared utilities
-│   ├── actions/              # Post-build file operations
-│   ├── configs/              # Platform configs
-│   ├── filters/              # Token filters
-│   ├── formats/              # Output formats
-│   ├── transforms/           # Token transforms
-│   │   ├── attribute/        # Attribute transforms
-│   │   └── size/             # Value transforms
-│   └── utilities/            # Static utility files
-│
-├── tokens/                   # Source design tokens
-│   ├── _options/            # Internal config (not exported)
-│   ├── global/              # Cross-platform tokens
-│   ├── web/                 # Web-specific
-│   ├── mobile/              # Mobile-specific
-│   └── themes/              # Theme overrides
-│       ├── rei-dot-com/
-│       └── docsite/
-│
-└── dist/                    # Generated outputs
-    └── [theme]/[platform]/  # e.g., dist/rei-dot-com/web/
-```
+Why formats are needed:
 
-## Key Design Decisions
+- each consumer environment needs a different output shape
+- TypeScript consumers need compile-time interfaces and unions in addition to runtime values
 
-### 1. Why Themes × Platforms Build Loop?
+## Action Layer
 
-Each theme may override different tokens, and each platform needs different transforms. Building all combinations ensures complete coverage.
+Action files are under [style-dictionary/actions](../style-dictionary/actions).
 
-### 2. Why Remove LESS Support?
+Responsibilities:
 
-LESS was removed to reduce maintenance burden. SCSS provides equivalent functionality with better TypeScript tooling and broader adoption.
+- concatenate generated utility assets where needed
+- include static SCSS utility files in output
+- generate types barrels via [style-dictionary/actions/generate-types-barrel.ts](../style-dictionary/actions/generate-types-barrel.ts)
 
-### 3. Why Generic Utility Action?
+Why actions are needed:
 
-Originally, 6+ nearly-identical action files existed for copying utility files. The `createIncludeUtilityAction` factory consolidates this into one reusable function.
+- not all output operations are pure token formatting
+- some outputs require post-format assembly and file composition
 
-### 4. Why Extract `pxToRem`?
+## Type Generation Pipeline
 
-The function was duplicated in transforms and formats. Extracting to `utils.ts` ensures consistency and reduces maintenance.
+Type modules are defined via [style-dictionary/token-modules.ts](../style-dictionary/token-modules.ts) and wired by [style-dictionary/configs/types.ts](../style-dictionary/configs/types.ts).
 
-## Configuration Patterns
+Per module, the build emits:
 
-### Common Config
+- `*.mjs` typed value module
+- `*.d.ts` module interface/value declaration
+- `*.names.d.ts` token-name union declaration
 
-All platforms use `commonConfig()` for shared settings:
+Then `generate-types-barrel` creates:
 
-```typescript
-{
-  prefix: 'cdr',
-  buildPath: `dist/${theme}/${platform}/`,
-  options: { showFileHeader: false }
-}
-```
+- `index.mjs`
+- `index.d.ts`
 
-### Transform Groups
+for each theme type output root.
 
-While Style Dictionary supports `transformGroup`, Cedar Tokens uses explicit `transforms` arrays for clarity and control.
+Base schema types are generated by [style-dictionary/generate-base-types.ts](../style-dictionary/generate-base-types.ts).
 
-### Platform-Specific Sources
+Why this pipeline is needed:
 
-The `getSources()` function maps platforms to their source token directories:
+- avoids one monolithic declaration file
+- preserves module boundaries for type-safe imports
+- gives consumers stable barrel entrypoints while keeping internals evolvable
 
-- Web platforms → `tokens/web/**/*.json`
-- Mobile platforms → `tokens/mobile/**/*.json`
-- Figma → `tokens/web/**/*.json` (uses web tokens)
+## Runtime + Type Contract Surfaces
 
-## Testing
+Public package entrypoints are defined in [package.json](../package.json).
 
-Tests are written in Vitest (configured in `vitest.config.ts`):
+Current consumer contract includes:
 
-```bash
-npm test              # Run tests once
-npm run test:watch    # Watch mode
-npm run test:ui       # Visual UI
-npm run test:coverage # Coverage report
-```
+- runtime: `@rei/cdr-tokens`, `@rei/cdr-tokens/docsite`
+- type barrels: `@rei/cdr-tokens/types`, `@rei/cdr-tokens/docsite/types`
+- base schema types: `@rei/cdr-tokens/types/base`
 
-Test files are colocated with source: `*.test.ts`
+Theme-scoped deep type patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) exist as compatibility surfaces but are less preferred than barrels.
 
-## Extension Points
+Why this split exists:
 
-### Adding a New Transform
+- runtime imports and type-only imports have different lifecycle and stability requirements
+- barrels reduce coupling to generated folder internals
 
-1. Create file in `transforms/[category]/[name].ts`
-2. Export a registration function
-3. Import and register in `build.ts`
-4. Add to appropriate platform configs
-5. Write tests in `[name].test.ts`
+## Validation And Safety Nets
 
-### Adding a New Platform
+Validation stack:
 
-1. Create config in `configs/[platform].ts`
-2. Add platform to `PLATFORMS` in `constants.ts`
-3. Import and use in `configs/index.ts`
-4. Update `getSources()` if platform-specific sources needed
+- [validate.ts](../validate.ts): token structure and rules validation
+- [validate-structure.json](../validate-structure.json): dist shape snapshot validation
+- unit tests via Vitest (`style-dictionary/**/*.test.ts`)
 
-### Adding a New Theme
+Why validation is needed:
 
-1. Create directory: `tokens/themes/[theme-name]/`
-2. Add theme to `THEMES` in `constants.ts`
-3. Provide token overrides in theme directory
+- catches accidental output drift
+- prevents malformed token trees from entering dist
+- enforces contract continuity across refactors
 
-## Common Workflows
+## Tokens Studio Integration
 
-### Building Tokens
+Token Studio sync tooling is in [tokens-studio/token-updater.ts](../tokens-studio/token-updater.ts).
 
-```bash
-npm run build:tokens  # Build all themes × platforms
-npm run build         # Build + validate + site-tokens
-```
+Role in the architecture:
 
-### Development
+- keeps source token JSON aligned with upstream design-tool workflows
+- sits before build generation; it does not replace Style Dictionary output logic
 
-```bash
-npm run lint          # Check code style
-npm run format        # Fix code style
-npm test              # Run tests
-```
+## Script Topology
 
-### Validation
+Build and validation scripts are defined in [package.json](../package.json):
 
-```bash
-npm run validate      # Validate generated token structure
-```
+- `build:base-types`
+- `build:tokens`
+- `site-tokens`
+- `validate`
+- `build`
 
-## Further Reading
+Supporting scripts:
 
-- [TRANSFORMS.md](./TRANSFORMS.md) - Transform ordering and dependencies
-- [README.md](../README.md) - User guide and token authoring
-- [Style Dictionary Docs](https://amzn.github.io/style-dictionary/) - Framework documentation
+- testing (`test`, `test:watch`, `test:coverage`)
+- formatting and linting (`format`, `lint`, `format:check`)
+
+Why script separation is needed:
+
+- supports targeted local workflows
+- allows CI to enforce distinct guarantees (build, validate, test)
+
+## How Everything Fits Together
+
+### Phase 1: Source Preparation
+
+- token JSON files loaded from include/source paths
+- theme overrides layered on top of base tokens
+
+### Phase 2: Semantic Transformation
+
+- transforms normalize values and attributes for target platforms
+
+### Phase 3: Responsibility Partitioning
+
+- filters isolate output scopes by responsibility and platform
+
+### Phase 4: Artifact Emission
+
+- formats emit runtime and type artifacts
+- actions perform post-processing and barrel generation
+
+### Phase 5: Contract Verification
+
+- validate output structure and content assumptions
+- execute tests and smoke checks
+
+### Phase 6: Distribution
+
+- package exports expose only supported public entrypoints
+
+## Extension Playbook
+
+When adding a new responsibility/platform/theme:
+
+1. update source token definitions
+2. add or update filters
+3. update token module mapping (if TypeScript surface is required)
+4. update platform configs/formats/actions as needed
+5. add tests and validation expectations
+6. confirm package exports impact
+7. update ADR/docs if consumer contract changes
+
+## Assessing TokenDictionary Work
+
+Use [ADR 0002](../adr/0002-typescript-pipeline-and-consumer-types.md) as the decision and acceptance source.
+
+A TokenDictionary PR should be assessed against:
+
+1. no public export regressions
+2. generated union/interface outputs remain source-of-truth-driven
+3. generic constraints match generated module key/value shapes
+4. runtime/type surfaces remain compatible with existing entrypoints
+5. build, validation, and tests remain green
+
+## Related Documentation
+
+- [ADR 0001](../adr/0001-modularize-tokens-output.md)
+- [ADR 0002](../adr/0002-typescript-pipeline-and-consumer-types.md)
+- [docs/TRANSFORMS.md](./TRANSFORMS.md)
+- [README.md](../README.md)

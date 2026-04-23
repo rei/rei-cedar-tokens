@@ -85,16 +85,6 @@ export const css = (theme: Theme): PlatformConfig => ({
               format: 'css/variables',
               filter: 'membership-vibrant-tokens',
             },
-            {
-              destination: '../../web/default/css/palettes/cdr-palette-membership-subtle.css',
-              format: 'css/variables',
-              filter: 'membership-subtle-tokens',
-            },
-            {
-              destination: '../../web/default/css/palettes/cdr-palette-membership-vibrant.css',
-              format: 'css/variables',
-              filter: 'membership-vibrant-tokens',
-            },
           ]
         : []),
     ],

@@ -6,11 +6,9 @@ Accepted
 
 ## Problem Statement
 
-Mainline now has modular generated `.d.ts` files, per-module token-name unions, module interfaces, and a stable barrel export at `@rei/cdr-tokens/types`.
+The cedar-tokens build produced a single monolithic declaration file shared across all token categories. As the token surface grew, this created friction for consumers needing type safety and autocomplete for specific token groups.
 
-The remaining gap is completing the runtime dictionary contract (`TokenDictionary`) and finalizing deprecation rollout messaging for legacy typing workflows.
-
-This ADR defines and records the `/types` contract and ongoing migration path from legacy patterns.
+This ADR defines the modular TypeScript output architecture, the `/types` public barrel contract, and the typed runtime dictionary shape.
 
 ## Goals
 
@@ -37,6 +35,23 @@ This ADR defines and records the `/types` contract and ongoing migration path fr
 - Each module output represents a consumer-facing token responsibility group.
 - A module map controls output naming and responsibility partitioning.
 
+### Module Responsibility Mapping
+
+Token responsibilities follow the same folder taxonomy established in ADR 0001.
+
+| Responsibility | Example generated `.d.ts`                                             |
+| -------------- | --------------------------------------------------------------------- |
+| `foundations`  | `foundations/cdr-color-background.d.ts`, `foundations/cdr-space.d.ts` |
+| `palettes`     | `palettes/cdr-palette-membership-subtle.d.ts`                         |
+| `utilities`    | SCSS-only mixins; no value `.d.ts` module surface                     |
+
+Each generated module emits:
+
+- one token-name union file (`*.names.d.ts`)
+- one module interface/value file (`*.d.ts`)
+
+> Note on utilities: the `utilities/` responsibility (for example breakpoint/display/container query mixins) is SCSS-only and excluded from TypeScript module generation.
+
 ### 3. Literal union generation
 
 - For each module, token names are emitted as literal union types.
@@ -47,11 +62,54 @@ This ADR defines and records the `/types` contract and ongoing migration path fr
 - For each module, an interface is generated with typed keys/values.
 - Interfaces provide a strongly-typed shape for grouped token usage.
 
+### Generated Output Example
+
+For `rei-dot-com/types/foundations/cdr-color-background`:
+
+```ts
+// generated: dist/rei-dot-com/types/foundations/cdr-color-background.names.d.ts
+export type CdrColorBackgroundTokenName =
+  | 'CdrColorBackgroundPrimary'
+  | 'CdrColorBackgroundSecondary';
+```
+
+```ts
+// generated: dist/rei-dot-com/types/foundations/cdr-color-background.d.ts
+export interface CdrColorBackgroundTokens {
+  readonly CdrColorBackgroundPrimary: string;
+  readonly CdrColorBackgroundSecondary: string;
+}
+
+export declare const cdrColorBackground: CdrColorBackgroundTokens;
+export default cdrColorBackground;
+```
+
+The type barrel re-exports both files via `@rei/cdr-tokens/types`.
+
 ### 5. TokenDictionary generic
 
 - `TokenDictionary<Theme, Platform, Responsibility, Module>` provides a typed runtime contract.
 - Theme/platform/responsibility dimensions are explicit type parameters.
 - The generic makes runtime loading patterns statically verifiable.
+
+Planned public signature:
+
+```ts
+export type TokenDictionary<
+  Theme extends string = string,
+  Platform extends string = string,
+  Responsibility extends string = string,
+  Module extends Record<string, string> = Record<string, string>,
+> = {
+  readonly theme: Theme;
+  readonly platform: Platform;
+  readonly responsibility: Responsibility;
+  readonly module: string;
+  readonly tokens: Readonly<Module>;
+};
+```
+
+Until the public export is finalized, consumers should not depend on this type directly from deep internal paths.
 
 ### 6. Barrel generation
 
@@ -79,6 +137,16 @@ Practical implication:
 
 - The barrel makes it possible to write theme-safe code without deep imports, while preserving clear typing for `rei-dot-com` and `docsite` token modules.
 
+#### Theme Union
+
+The public contract treats theme as a constrained union:
+
+```ts
+export type Theme = 'rei-dot-com' | 'docsite';
+```
+
+Theme values are not interchangeable across theme-specific type entrypoints. `@rei/cdr-tokens/types` is the rei-dot-com barrel, while `@rei/cdr-tokens/docsite/types` is the docsite barrel.
+
 ## Public API vs Internal Implementation
 
 Public API:
@@ -91,57 +159,147 @@ Internal implementation (non-contract):
 - Generation internals, intermediate mapping artifacts, and deep generated file paths.
 - Any deep import path below the barrel surface.
 
+#### Package Exports Map (Relevant Entries)
+
+```json
+{
+  "exports": {
+    ".": {
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
+      "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
+    },
+    "./docsite": {
+      "types": "./dist/docsite/js/cdr-tokens.d.ts",
+      "import": "./dist/docsite/js/cdr-tokens.mjs",
+      "require": "./dist/docsite/js/cdr-tokens.cjs"
+    },
+    "./types": {
+      "types": "./dist/rei-dot-com/types/index.d.ts"
+    },
+    "./docsite/types": {
+      "types": "./dist/docsite/types/index.d.ts"
+    }
+  }
+}
+```
+
+Deep paths below these entrypoints are implementation details and may change.
+
 ## Deprecation Plan
 
 The legacy `cdr-tokens.d.mts` path has been removed from build output and package exports before broad consumer rollout.
 
-Current contract:
+### Asset Entrypoint Evolution
 
-- Type-only entrypoints:
-  - `@rei/cdr-tokens/types` (rei-dot-com)
-  - `@rei/cdr-tokens/docsite/types` (docsite)
-- Runtime value entrypoints:
-  - `@rei/cdr-tokens` (rei-dot-com)
-  - `@rei/cdr-tokens/docsite` (docsite)
+To provide a unified, consistent import experience across all asset types (types, runtime, CSS, SCSS), we are introducing simplified entrypoints. This is an **optional, non-breaking migration**.
 
-Legacy patterns to avoid:
+#### Current Public Contract
+
+**Type entrypoints:**
+
+- `@rei/cdr-tokens/types` (rei-dot-com)
+- `@rei/cdr-tokens/docsite/types` (docsite)
+
+**Runtime value entrypoints:**
+
+- `@rei/cdr-tokens` (rei-dot-com)
+- `@rei/cdr-tokens/docsite` (docsite)
+
+**New unified asset entrypoints (preferred):**
+
+- `@rei/cdr-tokens/css` (rei-dot-com CSS)
+- `@rei/cdr-tokens/scss` (rei-dot-com SCSS)
+- `@rei/cdr-tokens/docsite/css` (docsite CSS)
+- `@rei/cdr-tokens/docsite/scss` (docsite SCSS)
+
+**Backwards-compatible deep paths (still work, non-contractual):**
+
+- `@rei/cdr-tokens/dist/...` - all internal dist paths remain accessible via wildcard export
+
+### Migration Guidance
+
+Migration to new entrypoints is **optional and gradual**. No breaking changes are planned. Choose to migrate at your own pace.
+
+**Old pattern (still works):**
+
+```scss
+// Deep import - still functional, not recommended for new code
+@import '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss';
+```
+
+**New pattern (preferred):**
+
+```scss
+// Unified entrypoint - recommended for new code
+@import '@rei/cdr-tokens/scss';
+```
+
+**Mixed approach (coexistence):**
+
+```ts
+// Types: use new barrel
+import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/types';
+
+// CSS/SCSS: can stay on old paths or migrate to new
+// Old way: @import '@rei/cdr-tokens/dist/rei-dot-com/css/cdr-tokens.css';
+// New way: @import '@rei/cdr-tokens/css';
+```
+
+### Legacy Patterns to Avoid in New Code
 
 - Deep imports into generated internals or dist-like paths tied to output layout.
 - Token-name usage as unconstrained `string` values (no literal union validation).
 - Ad-hoc object typing (`Record<string, string>`) instead of module interfaces.
 - Untyped dictionary loaders that do not encode theme/platform/responsibility dimensions.
 
-Migration direction:
+### Recommended Migration Path (Optional)
 
-- Import types only from theme-specific `/types` barrels.
-- Import runtime token values only from root/docsite runtime entrypoints.
-- Use module interfaces for grouped token shapes.
-- Use literal union token names for token lookup safety.
-- Adopt `TokenDictionary` when the public runtime dictionary contract is finalized.
+For new projects or when updating existing code:
 
-Migration examples:
+1. **Import types only from theme-specific `/types` barrels.**
 
-```ts
-// old style (legacy deep import)
-// import type { SomeType } from "@rei/cdr-tokens/dist/.../types/foundations/...";
+   ```ts
+   import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/types';
+   ```
 
-// new style (public API)
-import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/types';
-```
+2. **Import CSS/SCSS from unified entrypoints.**
 
-```ts
-import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/types';
+   ```scss
+   @import '@rei/cdr-tokens/scss';
+   @import '@rei/cdr-tokens/css';
+   ```
 
-const bg: CdrColorBackgroundTokens = {
-  CdrColorBackgroundPrimary: '#fff',
-  CdrColorBackgroundSecondary: '#f5f5f5',
-};
-```
+3. **Import runtime token values only from root/docsite entrypoints.**
 
-```ts
-// Runtime values are imported from runtime entrypoints, not /types.
-import { CdrSpaceScale2 } from '@rei/cdr-tokens';
-```
+   ```ts
+   import { CdrSpaceScale2 } from '@rei/cdr-tokens';
+   ```
+
+4. **Use module interfaces for grouped token shapes.**
+
+   ```ts
+   const bg: CdrColorBackgroundTokens = {
+     CdrColorBackgroundPrimary: '#fff',
+     CdrColorBackgroundSecondary: '#f5f5f5',
+   };
+   ```
+
+5. **Use literal union token names for token lookup safety.**
+
+   ```ts
+   const tokenName: CdrColorBackgroundTokenName = 'CdrColorBackgroundPrimary';
+   ```
+
+6. **Adopt `TokenDictionary` when the public runtime dictionary contract is finalized.**
+
+### Coexistence Strategy
+
+Old and new entrypoints coexist without conflict. Existing code using deep imports continues to work. Teams can migrate on their own schedule:
+
+- **Immediate migration not required.** Your code is not broken.
+- **Migrate when convenient.** Update entrypoints incrementally as you touch files.
+- **No special tooling needed.** Simple search-and-replace for most migrations.
 
 ## Future Direction
 
@@ -149,7 +307,7 @@ import { CdrSpaceScale2 } from '@rei/cdr-tokens';
 - Add new generated module surfaces without breaking existing barrel imports.
 - Use semver to signal API-level type changes.
 - Preserve backward compatibility at the public barrel boundary where feasible.
-- Track declaration format migration work in [docs/tickets/ts-declaration-migration-ticket.md](../docs/tickets/ts-declaration-migration-ticket.md).
+- Complete `TokenDictionary` public export contract — tracked in [docs/tickets/token-dictionary-implementation.md](../docs/tickets/token-dictionary-implementation.md).
 
 ## Current Mainline Maturity Note
 

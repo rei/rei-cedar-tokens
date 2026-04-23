@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
-import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import * as tokens from '@rei/cdr-tokens';
+import { getTokenDescription } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Spacing',
@@ -105,10 +106,16 @@ const chrome = `
       font-family: Pressura, monospace;
       font-size: 11px;
       color: var(--cedar-warm-1000);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       min-width: 0;
+    }
+    .token-doc {
+      display: block;
+      margin-top: 2px;
+      font-family: Graphik, 'Graphik fallback', sans-serif;
+      font-size: 10px;
+      color: var(--cedar-warm-750);
+      line-height: 1.35;
+      max-width: 480px;
     }
     .srow-track {
       height: 8px;
@@ -148,9 +155,6 @@ const chrome = `
       font-family: Pressura, monospace;
       font-size: 11px;
       color: var(--cedar-warm-1000);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       min-width: 0;
     }
     .irow-box-wrap {
@@ -323,9 +327,10 @@ function staticRow(name: string, value: string, maxPx: number): string {
   const px = valueToPx(value);
   const pct = maxPx > 0 ? Math.max((px / maxPx) * 100, 0.5) : 0;
   const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
+  const doc = getTokenDescription(name);
   return `
     <div class="srow">
-      <span class="srow-name">${name}</span>
+      <span class="srow-name">${name}${doc ? `<span class="token-doc">${doc}</span>` : ''}</span>
       <div class="srow-track"><div class="srow-fill" style="width:${pct}%"></div></div>
       <span class="srow-value">${display}</span>
     </div>`;
@@ -336,9 +341,10 @@ function insetRow(name: string, value: string, maxPx: number): string {
   const pad = Math.max(Math.round((px / maxPx) * 18), 2);
   const boxSize = 8 + pad * 2;
   const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
+  const doc = getTokenDescription(name);
   return `
     <div class="irow">
-      <span class="irow-name">${name}</span>
+      <span class="irow-name">${name}${doc ? `<span class="token-doc">${doc}</span>` : ''}</span>
       <div class="irow-box-wrap">
         <div class="irow-box" style="width:${boxSize}px;height:${boxSize}px;padding:${pad}px;">
           <div class="irow-box-inner"></div>
@@ -353,6 +359,7 @@ function fluidCard(name: string, value: string, absMax: number): string {
   if (!cp) return '';
 
   const { min, max, slope, raw } = cp;
+  const doc = getTokenDescription(name);
   const range = max - min;
   const rangePx = Math.round(range);
 
@@ -368,6 +375,7 @@ function fluidCard(name: string, value: string, absMax: number): string {
         <span class="fcard-name">${name}</span>
         ${slope ? `<span class="fcard-slope">${slope}</span>` : ''}
       </div>
+      ${doc ? `<span class="token-doc">${doc}</span>` : ''}
 
       <div class="fcard-range-wrap">
         <div class="fcard-track">
