@@ -6,6 +6,11 @@ export const foundatiosMoudulesName = [
   'prominence',
   'radius',
   'space',
+  'breakpoint',
+  'font',
+  'line-height',
+  'text',
+  'type',
 ];
 
 export const componentModulesName = [

@@ -16,77 +16,18 @@ export const css = (theme: Theme): PlatformConfig => ({
       'value/clamp',
     ],
     files: [
-      ...(theme === 'docsite'
-        ? [
-            {
-              destination: 'cdr-variables.css',
-              format: 'css/variables',
-              filter: 'remove-categories-tokens',
-            },
-            {
-              destination: 'foundations/cdr-color-background.css',
-              format: 'css/variables',
-              filter: 'color-background-tokens',
-            },
-            {
-              destination: 'foundations/cdr-color-text.css',
-              format: 'css/variables',
-              filter: 'color-text-tokens',
-            },
-            {
-              destination: 'foundations/cdr-color-border.css',
-              format: 'css/variables',
-              filter: 'color-border-tokens',
-            },
-            {
-              destination: 'foundations/cdr-color-icon.css',
-              format: 'css/variables',
-              filter: 'color-icon-tokens',
-            },
-            {
-              destination: 'foundations/cdr-motion.css',
-              format: 'css/variables',
-              filter: 'motion-tokens',
-            },
-            {
-              destination: 'foundations/cdr-prominence.css',
-              format: 'css/variables',
-              filter: 'prominence-tokens',
-            },
-            {
-              destination: 'foundations/cdr-form.css',
-              format: 'css/variables',
-              filter: 'form-tokens',
-            },
-            {
-              destination: 'foundations/cdr-icon.css',
-              format: 'css/variables',
-              filter: 'icon-tokens',
-            },
-            {
-              destination: 'foundations/cdr-radius.css',
-              format: 'css/variables',
-              filter: 'radius-tokens',
-            },
-            {
-              destination: 'foundations/cdr-space.css',
-              format: 'css/variables',
-              filter: 'space-tokens',
-            },
-          ]
-        : []),
+      {
+        destination: 'cdr-variables.css',
+        format: 'css/variables',
+        filter: 'remove-categories-tokens',
+      },
+      // Foundations filters
+      ...foundationsFilters('css', 'css/variables'),
+      // Component filters
+      ...componentsFilters('css', 'css/variables'),
+      // REI Dot Com Specific Palettes
       ...(theme === 'rei-dot-com'
         ? [
-            {
-              destination: 'cdr-variables.css',
-              format: 'css/variables',
-              filter: 'remove-categories-tokens',
-            },
-            // Foundations filters
-            ...foundationsFilters('css', 'css/variables'),
-            // Component filters
-            ...componentsFilters('css', 'css/variables'),
-            // REI Dot Com Specific Palettes
             {
               destination: 'palettes/cdr-palette-membership-subtle.css',
               format: 'css/variables',
