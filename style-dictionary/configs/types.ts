@@ -33,7 +33,7 @@ export const types = (theme: Theme): PlatformConfig => ({
         },
       ]),
       // Custom Foundations and Components filters
-      ...typesFilters('types'),
+      ...typesFilters(),
     ],
   },
 });

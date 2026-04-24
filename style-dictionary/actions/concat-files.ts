@@ -77,6 +77,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         }
 
         // Determine the file extension from the first file
+        console.log('Sample file: ', sampleFile);
         const extension = path.extname(sampleFile);
         const allPaths = files.map((f) => path.join(buildPath, f));
         const rootTokenFile =

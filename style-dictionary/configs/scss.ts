@@ -26,8 +26,8 @@ export const scss = (theme: Theme): PlatformConfig => ({
         format: 'scss/typography',
       },
       {
-        destination: 'cdr-variables.css',
-        format: 'css/variables',
+        destination: 'cdr-variables.scss',
+        format: 'scss/variables',
         filter: 'remove-categories-tokens',
       },
       ...(theme === 'rei-dot-com'
