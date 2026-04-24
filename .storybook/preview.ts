@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/html';
 import './cedar.css';
+import '../stories/guide-display.css';
 
 const preview: Preview = {
   parameters: {
