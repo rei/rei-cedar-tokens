@@ -11,7 +11,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
   const importStatement = isScss ? '@forward' : '@import';
   const imports = foundatiosMoudulesName.map((name) => `./foundations/cdr-${name}`);
-  imports.unshift(isScss ? './cdr-variable' : './cdr-variables');
+  imports.unshift(isScss ? './cdr-variables' : './cdr-variables');
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
   const extensionImports: string[] = [];
 
@@ -82,7 +82,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         const allPaths = files.map((f) => path.join(buildPath, f));
         const rootTokenFile =
           extension === '.scss'
-            ? 'cdr-variable.scss'
+            ? 'cdr-variables.scss'
             : extension === '.css'
               ? 'cdr-variables.css'
               : undefined;
@@ -106,10 +106,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`);
 
         const importLines = createImportLine(extension, outFile);
-        const compatibilityLines =
-          extension === '.scss'
-            ? '\n\n@use "./cdr-variable" as *;\n\n$cdr-text-utility-sans-400-height: $cdr-text-utility-sans-400-line-height;'
-            : '';
+        const compatibilityLines = extension === '.scss' ? '\n\n@use "./cdr-variables" as *;' : '';
         const finalOuput = extension.includes('less')
           ? concatenatedOutput
           : `${importLines}${compatibilityLines}${

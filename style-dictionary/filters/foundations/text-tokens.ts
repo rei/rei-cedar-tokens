@@ -14,11 +14,18 @@ export const foundationsTextTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-text-tokens',
     filter: (token: Token) =>
-      (token.path[0] !== 'options' && token.path[0].includes('text-default')) ||
-      token.path[0].includes('text-eyebrow') ||
-      token.path[0].includes('text-heading') ||
-      token.path[0].includes('text-body') ||
-      token.path[0].includes('text-subheading') ||
-      token.path[0].includes('text-utility'),
+      token.path[0] !== 'options' &&
+      (token.path[0].includes('text-default') ||
+        token.path[0].includes('text-eyebrow') ||
+        token.path[0].includes('text-heading') ||
+        token.path[0].includes('text-body') ||
+        token.path[0].includes('text-subheading') ||
+        token.path[0].includes('text-utility')) &&
+      !token.path.includes('fontSize') &&
+      !token.path.includes('fontFamily') &&
+      !token.path.includes('lineHeight') &&
+      !token.path.includes('fontStyle') &&
+      !token.path.includes('letterSpacing') &&
+      !token.path.includes('fontWeight'),
   });
 };

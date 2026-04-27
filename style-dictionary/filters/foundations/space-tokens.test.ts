@@ -1,53 +1,62 @@
 import { describe, it, expect } from 'vitest';
 import type { Token } from 'style-dictionary';
 
-describe('space-tokens filter', () => {
+describe('foundations-space-tokens filter', () => {
   const createToken = (path: string[]): Token => ({
     name: 'test-token',
     path,
     $type: 'dimension',
-    $value: '16px',
-    original: { $value: '16px' },
+    $value: '12px',
+    original: { $value: '12px' },
     filePath: 'test.json',
     isSource: true,
   });
 
-  // Test the filter logic directly
-  const spaceTokensFilter = (token: Token): boolean =>
-    token.path[0] !== 'options' && token.path[0] === 'space';
+  // The logic extracted from foundationsSpaceTokens
+  const foundationsSpaceTokensFilter = (token: Token): boolean =>
+    token.path[0] !== 'options' &&
+    token.path[0] === 'space' &&
+    token.path[1] !== 'inset' &&
+    token.path[1] !== 'scale';
 
-  it('should include tokens in space namespace', () => {
-    const token = createToken(['space', 'small']);
-    expect(spaceTokensFilter(token)).toBe(true);
+  it('should include generic space tokens', () => {
+    const token = createToken(['space', 'gap', 'large']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(true);
   });
 
-  it('should include deeply nested space tokens', () => {
+  it('should include space tokens with no sub-category', () => {
+    const token = createToken(['space', 'padding-base']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(true);
+  });
+
+  it('should filter out space.inset tokens', () => {
     const token = createToken(['space', 'inset', 'medium']);
-    expect(spaceTokensFilter(token)).toBe(true);
+    expect(foundationsSpaceTokensFilter(token)).toBe(false);
   });
 
-  it('should filter out tokens in options namespace', () => {
-    const token = createToken(['options', 'space', 'base']);
-    expect(spaceTokensFilter(token)).toBe(false);
+  it('should filter out space.scale tokens', () => {
+    const token = createToken(['space', 'scale', '100']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(false);
   });
 
-  it('should filter out non-space tokens', () => {
-    const token = createToken(['color', 'primary']);
-    expect(spaceTokensFilter(token)).toBe(false);
+  it('should filter out tokens in the options namespace', () => {
+    const token = createToken(['options', 'space', 'margin']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(false);
   });
 
-  it('should filter out radius tokens', () => {
-    const token = createToken(['radius', 'medium']);
-    expect(spaceTokensFilter(token)).toBe(false);
+  it('should filter out tokens from non-space namespaces', () => {
+    const token = createToken(['color', 'space', 'primary']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(false);
   });
 
-  it('should filter out icon tokens', () => {
-    const token = createToken(['icon', 'size', 'medium']);
-    expect(spaceTokensFilter(token)).toBe(false);
+  it('should include deeply nested space tokens that are not inset or scale', () => {
+    const token = createToken(['space', 'layout', 'stack', 'small']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(true);
   });
 
-  it('should filter out form tokens', () => {
-    const token = createToken(['form', 'input', 'height']);
-    expect(spaceTokensFilter(token)).toBe(false);
+  it('should handle single-segment paths correctly', () => {
+    // path[1] is undefined, which is !== "inset" and !== "scale"
+    const token = createToken(['space']);
+    expect(foundationsSpaceTokensFilter(token)).toBe(true);
   });
 });

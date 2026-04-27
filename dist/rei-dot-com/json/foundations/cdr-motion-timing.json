@@ -1,0 +1,121 @@
+{
+  "motion": [
+    {
+      "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+      "$type": "function",
+      "docs": {
+        "type": "timing-function",
+        "category": "motion",
+        "example": "ease-out",
+        "description": {
+          "what": "Ease-out timing curve",
+          "when": "Use when animations should decelerate smoothly",
+          "alternatives": [
+            "cubic-bezier(0.15, 0, 0.15, 0)"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-timing.json",
+      "isSource": false,
+      "original": {
+        "$value": "cubic-bezier(0.32, 0.94, 0.60, 1)",
+        "$type": "function",
+        "docs": {
+          "type": "timing-function",
+          "category": "motion",
+          "example": "ease-out",
+          "description": {
+            "what": "Ease-out timing curve",
+            "when": "Use when animations should decelerate smoothly",
+            "alternatives": [
+              "{timing.function-ease}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-timing-function-ease-out",
+      "attributes": {
+        "category": "timing",
+        "type": "function-ease-out",
+        "deprecated": false
+      },
+      "key": "{timing.function-ease-out}"
+    },
+    {
+      "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
+      "$type": "function",
+      "docs": {
+        "type": "timing-function",
+        "category": "motion",
+        "example": "ease",
+        "description": {
+          "what": "Ease timing curve",
+          "when": "Use for general-purpose animations",
+          "alternatives": [
+            "cubic-bezier(0, 0, 1, 1)"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-timing.json",
+      "isSource": false,
+      "original": {
+        "$value": "cubic-bezier(0.15, 0, 0.15, 0)",
+        "$type": "function",
+        "docs": {
+          "type": "timing-function",
+          "category": "motion",
+          "example": "ease",
+          "description": {
+            "what": "Ease timing curve",
+            "when": "Use for general-purpose animations",
+            "alternatives": [
+              "{timing.function-linear}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-timing-function-ease",
+      "attributes": {
+        "category": "timing",
+        "type": "function-ease",
+        "deprecated": false
+      },
+      "key": "{timing.function-ease}"
+    },
+    {
+      "$value": "cubic-bezier(0, 0, 1, 1)",
+      "$type": "function",
+      "docs": {
+        "type": "timing-function",
+        "category": "motion",
+        "example": "linear",
+        "description": {
+          "what": "Linear timing curve",
+          "when": "Use for constant-speed animations"
+        }
+      },
+      "filePath": "tokens/global/motion-timing.json",
+      "isSource": false,
+      "original": {
+        "$value": "cubic-bezier(0, 0, 1, 1)",
+        "$type": "function",
+        "docs": {
+          "type": "timing-function",
+          "category": "motion",
+          "example": "linear",
+          "description": {
+            "what": "Linear timing curve",
+            "when": "Use for constant-speed animations"
+          }
+        }
+      },
+      "name": "cdr-timing-function-linear",
+      "attributes": {
+        "category": "timing",
+        "type": "function-linear",
+        "deprecated": false
+      },
+      "key": "{timing.function-linear}"
+    }
+  ]
+}

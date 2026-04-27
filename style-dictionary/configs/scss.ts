@@ -21,15 +21,6 @@ export const scss = (theme: Theme): PlatformConfig => ({
       // Component filters
       ...componentsFilters('scss', 'scss/variables'),
       // REI Dot Com Specific Palettes
-      {
-        destination: 'utilities/cdr-type-mixins.scss',
-        format: 'scss/typography',
-      },
-      {
-        destination: 'cdr-variables.scss',
-        format: 'scss/variables',
-        filter: 'remove-categories-tokens',
-      },
       ...(theme === 'rei-dot-com'
         ? [
             {
@@ -44,6 +35,15 @@ export const scss = (theme: Theme): PlatformConfig => ({
             },
           ]
         : []),
+      {
+        destination: 'utilities/cdr-type-mixins.scss',
+        format: 'scss/typography',
+      },
+      {
+        destination: 'cdr-variables.no_concat.scss',
+        format: 'scss/variables',
+        filter: 'remove-categories-tokens',
+      },
       {
         destination: 'utility-map.no_concat.scss',
         format: 'scss/map',

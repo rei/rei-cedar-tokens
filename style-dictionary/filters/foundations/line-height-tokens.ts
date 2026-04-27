@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const foundationsLineHeightTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-line-height-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'line-height',
+    filter: (token: Token) => token.path[0] !== 'options' && token.path.includes('line-height'),
   });
 };
