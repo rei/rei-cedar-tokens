@@ -6,9 +6,4 @@ export type CdrTableTokenName =
   | "CdrColorBorderTableHead"
   | "CdrColorBorderTableRow"
   | "CdrColorTextTablePrimary"
-  | "CdrColorTextTableSecondary"
-  | "CdrKnockoutColorBackgroundTableHeader"
-  | "CdrKnockoutColorBackgroundTableRow"
-  | "CdrKnockoutColorBorderTableRow"
-  | "CdrKnockoutColorTextTablePrimary"
-  | "CdrKnockoutColorTextTableSecondary";
+  | "CdrColorTextTableSecondary";

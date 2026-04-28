@@ -22,11 +22,6 @@ export interface CdrTableTokens {
   readonly CdrColorBorderTableRow: string;
   readonly CdrColorTextTablePrimary: string;
   readonly CdrColorTextTableSecondary: string;
-  readonly CdrKnockoutColorBackgroundTableHeader: string;
-  readonly CdrKnockoutColorBackgroundTableRow: string;
-  readonly CdrKnockoutColorBorderTableRow: string;
-  readonly CdrKnockoutColorTextTablePrimary: string;
-  readonly CdrKnockoutColorTextTableSecondary: string;
 }
 
 export declare const CdrTable: CdrTableTokens;
