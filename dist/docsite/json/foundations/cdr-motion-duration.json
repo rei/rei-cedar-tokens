@@ -1,0 +1,244 @@
+{
+  "motion": [
+    {
+      "$value": "0.00s",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-1-x",
+        "description": {
+          "what": "Very short animation duration",
+          "when": "Use for micro-interactions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-duration.json",
+      "isSource": false,
+      "original": {
+        "$value": "100ms",
+        "$type": "time",
+        "docs": {
+          "type": "duration",
+          "category": "motion",
+          "example": "duration-1-x",
+          "description": {
+            "what": "Very short animation duration",
+            "when": "Use for micro-interactions",
+            "alternatives": [
+              "{duration.2-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-duration-1-x",
+      "attributes": {
+        "category": "duration",
+        "type": "1-x",
+        "deprecated": false
+      },
+      "key": "{duration.1-x}"
+    },
+    {
+      "$value": "0.00s",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-2-x",
+        "description": {
+          "what": "Short animation duration",
+          "when": "Use for quick UI transitions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-duration.json",
+      "isSource": false,
+      "original": {
+        "$value": "200ms",
+        "$type": "time",
+        "docs": {
+          "type": "duration",
+          "category": "motion",
+          "example": "duration-2-x",
+          "description": {
+            "what": "Short animation duration",
+            "when": "Use for quick UI transitions",
+            "alternatives": [
+              "{duration.3-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-duration-2-x",
+      "attributes": {
+        "category": "duration",
+        "type": "2-x",
+        "deprecated": false
+      },
+      "key": "{duration.2-x}"
+    },
+    {
+      "$value": "0.00s",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-3-x",
+        "description": {
+          "what": "Medium duration",
+          "when": "Use for standard UI animations",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-duration.json",
+      "isSource": false,
+      "original": {
+        "$value": "300ms",
+        "$type": "time",
+        "docs": {
+          "type": "duration",
+          "category": "motion",
+          "example": "duration-3-x",
+          "description": {
+            "what": "Medium duration",
+            "when": "Use for standard UI animations",
+            "alternatives": [
+              "{duration.4-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-duration-3-x",
+      "attributes": {
+        "category": "duration",
+        "type": "3-x",
+        "deprecated": false
+      },
+      "key": "{duration.3-x}"
+    },
+    {
+      "$value": "0.00s",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-4-x",
+        "description": {
+          "what": "Long duration",
+          "when": "Use for slower transitions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-duration.json",
+      "isSource": false,
+      "original": {
+        "$value": "400ms",
+        "$type": "time",
+        "docs": {
+          "type": "duration",
+          "category": "motion",
+          "example": "duration-4-x",
+          "description": {
+            "what": "Long duration",
+            "when": "Use for slower transitions",
+            "alternatives": [
+              "{duration.5-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-duration-4-x",
+      "attributes": {
+        "category": "duration",
+        "type": "4-x",
+        "deprecated": false
+      },
+      "key": "{duration.4-x}"
+    },
+    {
+      "$value": "0.00s",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-5-x",
+        "description": {
+          "what": "Very long duration",
+          "when": "Use for dramatic or modal transitions",
+          "alternatives": [
+            "0.00s"
+          ]
+        }
+      },
+      "filePath": "tokens/global/motion-duration.json",
+      "isSource": false,
+      "original": {
+        "$value": "500ms",
+        "$type": "time",
+        "docs": {
+          "type": "duration",
+          "category": "motion",
+          "example": "duration-5-x",
+          "description": {
+            "what": "Very long duration",
+            "when": "Use for dramatic or modal transitions",
+            "alternatives": [
+              "{duration.6-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-duration-5-x",
+      "attributes": {
+        "category": "duration",
+        "type": "5-x",
+        "deprecated": false
+      },
+      "key": "{duration.5-x}"
+    },
+    {
+      "$value": "0.00s",
+      "$type": "time",
+      "docs": {
+        "type": "duration",
+        "category": "motion",
+        "example": "duration-6-x",
+        "description": {
+          "what": "Extra long duration",
+          "when": "Use sparingly for large UI shifts"
+        }
+      },
+      "filePath": "tokens/global/motion-duration.json",
+      "isSource": false,
+      "original": {
+        "$value": "600ms",
+        "$type": "time",
+        "docs": {
+          "type": "duration",
+          "category": "motion",
+          "example": "duration-6-x",
+          "description": {
+            "what": "Extra long duration",
+            "when": "Use sparingly for large UI shifts"
+          }
+        }
+      },
+      "name": "cdr-duration-6-x",
+      "attributes": {
+        "category": "duration",
+        "type": "6-x",
+        "deprecated": false
+      },
+      "key": "{duration.6-x}"
+    }
+  ]
+}

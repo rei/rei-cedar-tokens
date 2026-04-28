@@ -16,7 +16,11 @@ type JsonSchema = {
 };
 
 const SCHEMA_PATH = resolve(process.cwd(), 'schema/token.schema.json');
-const OUTPUT_PATH = resolve(process.cwd(), 'dist/types/base/token-schema.d.ts');
+const OUTPUT_PATH_DOCSITE = resolve(process.cwd(), 'dist/docsite/types/base/token-schema.d.ts');
+const OUTPUT_PATH_REI_DOT_COM = resolve(
+  process.cwd(),
+  'dist/rei-dot-com/types/base/token-schema.d.ts',
+);
 
 const quoteProperty = (propertyName: string): string => {
   return /^[$A-Z_a-z][$\w]*$/.test(propertyName) ? propertyName : JSON.stringify(propertyName);
@@ -74,7 +78,10 @@ const renderTokenSchemaTypes = (schema: JsonSchema): string => {
     schema.title ? `// Title: ${schema.title}` : '',
     '',
     'export type TokenValuePrimitive = string | number | boolean;',
-    `export type TokenValueComposite = Record<string, ${getObjectType(tokenValueObject?.additionalProperties, 'string | number')}>;`,
+    `export type TokenValueComposite = Record<string, ${getObjectType(
+      tokenValueObject?.additionalProperties,
+      'string | number',
+    )}>;`,
     'export type TokenValue = TokenValuePrimitive | TokenValueComposite;',
     '',
     propertyNames.length > 0
@@ -86,7 +93,9 @@ const renderTokenSchemaTypes = (schema: JsonSchema): string => {
     'export interface TokenDescriptionDetails {',
     ...descriptionEntries.map(([propertyName, propertySchema]) => {
       const optionalToken = descriptionRequired.has(propertyName) ? '' : '?';
-      return `  readonly ${quoteProperty(propertyName)}${optionalToken}: ${getObjectType(propertySchema)};`;
+      return `  readonly ${quoteProperty(propertyName)}${optionalToken}: ${getObjectType(
+        propertySchema,
+      )};`;
     }),
     '}',
     '',
@@ -132,10 +141,14 @@ const generateBaseTypes = async (): Promise<void> => {
   const schema = JSON.parse(await readFile(SCHEMA_PATH, 'utf8')) as JsonSchema;
   const contents = renderTokenSchemaTypes(schema);
 
-  await mkdir(dirname(OUTPUT_PATH), { recursive: true });
-  await writeFile(OUTPUT_PATH, contents);
+  await mkdir(dirname(OUTPUT_PATH_DOCSITE), { recursive: true });
+  await writeFile(OUTPUT_PATH_DOCSITE, contents);
 
-  console.log(`[Cedar] Generated base token types: ${OUTPUT_PATH}`);
+  await mkdir(dirname(OUTPUT_PATH_REI_DOT_COM), { recursive: true });
+  await writeFile(OUTPUT_PATH_REI_DOT_COM, contents);
+
+  console.log(`[Cedar] Generated base token types: ${OUTPUT_PATH_DOCSITE}`);
+  console.log(`[Cedar] Generated base token types: ${OUTPUT_PATH_REI_DOT_COM}`);
 };
 
 void generateBaseTypes();

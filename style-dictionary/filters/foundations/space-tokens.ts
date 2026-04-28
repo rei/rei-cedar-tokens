@@ -13,6 +13,10 @@ import type { Token } from 'style-dictionary';
 export const foundationsSpaceTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-space-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'space',
+    filter: (token: Token) =>
+      token.path[0] !== 'options' &&
+      token.path[0] === 'space' &&
+      token.path[1] !== 'inset' &&
+      token.path[1] !== 'scale',
   });
 };

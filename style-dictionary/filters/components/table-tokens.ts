@@ -14,6 +14,9 @@ export const componentTableTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'component-table-tokens',
     filter: (token: Token) =>
-      token.path[0] !== 'options' && token.path[0] !== 'theme' && token.path.includes('table'),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] !== 'knockout' &&
+      token.path.includes('table'),
   });
 };

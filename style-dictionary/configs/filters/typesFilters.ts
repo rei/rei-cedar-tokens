@@ -1,19 +1,19 @@
-import { foundatiosMoudulesName, componentModulesName } from './modules';
+import { foundationsMoudulesName, componentModulesName } from './modules';
 
-export const typesFilters = (rootFolder: string) => {
-  const filtersFoundations = foundatiosMoudulesName.flatMap((moduleName) => [
+export const typesFilters = () => {
+  const filtersFoundations = foundationsMoudulesName.flatMap((moduleName) => [
     {
-      destination: `../../web/default/${rootFolder}/foundations/${moduleName}.mjs`,
+      destination: `./foundations/cdr-${moduleName}.mjs`,
       format: 'typescript/module-values',
       filter: `foundations-${moduleName}-tokens`,
     },
     {
-      destination: `../../web/default/${rootFolder}/foundations/${moduleName}.d.ts`,
+      destination: `./foundations/cdr-${moduleName}.d.ts`,
       format: 'typescript/module-interface',
       filter: `foundations-${moduleName}-tokens`,
     },
     {
-      destination: `../../web/default/${rootFolder}/foundations/${moduleName}.names.d.ts`,
+      destination: `./foundations/cdr-${moduleName}.names.d.ts`,
       format: 'typescript/token-name-union',
       filter: `foundations-${moduleName}-tokens`,
     },
@@ -21,17 +21,17 @@ export const typesFilters = (rootFolder: string) => {
 
   const filtersComponent = componentModulesName.flatMap((moduleName) => [
     {
-      destination: `../../web/default/${rootFolder}/components/${moduleName}.mjs`,
+      destination: `./components/cdr-${moduleName}.mjs`,
       format: 'typescript/module-values',
       filter: `component-${moduleName}-tokens`,
     },
     {
-      destination: `../../web/default/${rootFolder}/components/${moduleName}.d.ts`,
+      destination: `./components/cdr-${moduleName}.d.ts`,
       format: 'typescript/module-interface',
       filter: `component-${moduleName}-tokens`,
     },
     {
-      destination: `../../web/default/${rootFolder}/components/${moduleName}.names.d.ts`,
+      destination: `./components/cdr-${moduleName}.names.d.ts`,
       format: 'typescript/token-name-union',
       filter: `component-${moduleName}-tokens`,
     },
