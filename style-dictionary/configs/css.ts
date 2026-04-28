@@ -16,11 +16,6 @@ export const css = (theme: Theme): PlatformConfig => ({
       'value/clamp',
     ],
     files: [
-      {
-        destination: 'cdr-variables.css',
-        format: 'css/variables',
-        filter: 'remove-categories-tokens',
-      },
       // Foundations filters
       ...foundationsFilters('css', 'css/variables'),
       // Component filters

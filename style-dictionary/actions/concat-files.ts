@@ -11,7 +11,6 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
   const importStatement = isScss ? '@forward' : '@import';
   const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
-  imports.unshift(isScss ? './cdr-variables' : './cdr-variables');
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
   const extensionImports: string[] = [];
 
@@ -71,27 +70,11 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
           (f) => f.endsWith('.scss') || f.endsWith('.css') || f.endsWith('.less'),
         );
 
-        if (!sampleFile) {
-          console.log('No .scss/.css/.less files found in the build path.');
-          return;
-        }
-
         // Determine the file extension from the first file
-        console.log('Sample file: ', sampleFile);
-        const extension = path.extname(sampleFile);
+        const extension = !sampleFile ? '.css' : path.extname(sampleFile);
         const allPaths = files.map((f) => path.join(buildPath, f));
-        const rootTokenFile =
-          extension === '.scss'
-            ? 'cdr-variables.scss'
-            : extension === '.css'
-              ? 'cdr-variables.css'
-              : undefined;
-        const preservedFiles = new Set(
-          [`cdr-tokens${extension}`, rootTokenFile].filter((file): file is string => Boolean(file)),
-        );
-        const concatPaths = allPaths.filter(
-          (p) => !path.basename(p).includes('no_concat') && !preservedFiles.has(path.basename(p)),
-        );
+
+        const concatPaths = allPaths.filter((p) => !path.basename(p).includes('no_concat'));
         const noConcatPaths = allPaths.filter((p) => path.basename(p).includes('no_concat'));
 
         // Rename files with 'no_concat' in their name
@@ -106,12 +89,9 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`);
 
         const importLines = createImportLine(extension, outFile);
-        const compatibilityLines = extension === '.scss' ? '\n\n@use "./cdr-variables" as *;' : '';
         const finalOuput = extension.includes('less')
           ? concatenatedOutput
-          : `${importLines}${compatibilityLines}${
-              concatenatedOutput ? `\n\n${concatenatedOutput}` : ''
-            }`;
+          : `${importLines}${concatenatedOutput ? `\n\n${concatenatedOutput}` : ''}`;
 
         fs.outputFileSync(outFile, finalOuput);
 

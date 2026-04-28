@@ -40,11 +40,6 @@ export const scss = (theme: Theme): PlatformConfig => ({
         format: 'scss/typography',
       },
       {
-        destination: 'cdr-variables.no_concat.scss',
-        format: 'scss/variables',
-        filter: 'remove-categories-tokens',
-      },
-      {
         destination: 'utility-map.no_concat.scss',
         format: 'scss/map',
       },
