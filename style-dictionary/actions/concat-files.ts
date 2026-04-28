@@ -22,7 +22,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     );
   }
 
-  if (!isScss && filePath.includes('rei-dot-com')) {
+  if (filePath.includes('rei-dot-com')) {
     imports.push(
       './palettes/cdr-palette-membership-subtle',
       './palettes/cdr-palette-membership-vibrant',
