@@ -3,17 +3,17 @@ import { foundatiosMoudulesName, componentModulesName } from './modules';
 export const typesFilters = () => {
   const filtersFoundations = foundatiosMoudulesName.flatMap((moduleName) => [
     {
-      destination: `./foundations/${moduleName}.mjs`,
+      destination: `./foundations/cdr-${moduleName}.mjs`,
       format: 'typescript/module-values',
       filter: `foundations-${moduleName}-tokens`,
     },
     {
-      destination: `./foundations/${moduleName}.d.ts`,
+      destination: `./foundations/cdr-${moduleName}.d.ts`,
       format: 'typescript/module-interface',
       filter: `foundations-${moduleName}-tokens`,
     },
     {
-      destination: `./foundations/${moduleName}.names.d.ts`,
+      destination: `./foundations/cdr-${moduleName}.names.d.ts`,
       format: 'typescript/token-name-union',
       filter: `foundations-${moduleName}-tokens`,
     },
@@ -21,17 +21,17 @@ export const typesFilters = () => {
 
   const filtersComponent = componentModulesName.flatMap((moduleName) => [
     {
-      destination: `./components/${moduleName}.mjs`,
+      destination: `./components/cdr-${moduleName}.mjs`,
       format: 'typescript/module-values',
       filter: `component-${moduleName}-tokens`,
     },
     {
-      destination: `./components/${moduleName}.d.ts`,
+      destination: `./components/cdr-${moduleName}.d.ts`,
       format: 'typescript/module-interface',
       filter: `component-${moduleName}-tokens`,
     },
     {
-      destination: `./components/${moduleName}.names.d.ts`,
+      destination: `./components/cdr-${moduleName}.names.d.ts`,
       format: 'typescript/token-name-union',
       filter: `component-${moduleName}-tokens`,
     },
