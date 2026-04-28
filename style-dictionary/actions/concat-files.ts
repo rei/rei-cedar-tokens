@@ -3,14 +3,14 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
-import { foundatiosMoudulesName, componentModulesName } from '../configs/filters/modules';
+import { foundationsMoudulesName, componentModulesName } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
   const importStatement = isScss ? '@forward' : '@import';
-  const imports = foundatiosMoudulesName.map((name) => `./foundations/cdr-${name}`);
+  const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
   imports.unshift(isScss ? './cdr-variables' : './cdr-variables');
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
   const extensionImports: string[] = [];

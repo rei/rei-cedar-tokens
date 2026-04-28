@@ -1,4 +1,4 @@
-export const foundatiosMoudulesName = [
+export const foundationsMoudulesName = [
   'color-background',
   'color-border',
   'color-text',
