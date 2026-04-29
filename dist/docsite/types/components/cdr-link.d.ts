@@ -20,10 +20,6 @@ export interface CdrLinkTokens {
    */
   readonly CdrColorBorderLinkVisited: string;
   /**
-   * The icon link color
-   */
-  readonly CdrColorIconLink: string;
-  /**
    * Text color for the active and pressed states of links
    */
   readonly CdrColorTextLinkActive: string;

@@ -71,8 +71,7 @@ $cdr-breakpoint-lg: 1232px;
   @media (min-width: #{$cdr-breakpoint-lg}) {
     @content;
   }
-}
-// @supports statements can be removed once Safari 15 is no longer supported
+}// @supports statements can be removed once Safari 15 is no longer supported
 
 // XS
 @mixin cdr-xs-cq-up($name: '') {

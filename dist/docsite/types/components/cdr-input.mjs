@@ -25,6 +25,9 @@ export const CdrInput = {
   CdrColorBorderInputDefaultSelectedHover: "#4b4a48",
   CdrColorBorderInputError: "#b33322",
   CdrColorBorderLabelDefaultFocus: "#2e2e2b",
+  CdrColorIconCheckboxDefaultSelected: "#ffffff",
+  CdrColorIconCheckboxDefaultSelectedActive: "#4b4a48",
+  CdrColorIconCheckboxDefaultSelectedHover: "#ffffff",
   CdrColorTextInputDefault: "#2e2e2b",
   CdrColorTextInputDisabled: "#d5cfc3",
   CdrColorTextInputError: "#b33322",
@@ -35,8 +38,6 @@ export const CdrInput = {
   CdrColorTextInputOptional: "#736e65",
   CdrColorTextInputPlaceholder: "#736e65",
   CdrColorTextInputRequired: "#4b4a48",
-  CdrFormInputHeightDefault: "40",
-  CdrFormInputHeightLarge: "48",
 };
 
 export default CdrInput;

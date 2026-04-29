@@ -25,6 +25,9 @@ export type CdrInputTokenName =
   | "CdrColorBorderInputDefaultSelectedHover"
   | "CdrColorBorderInputError"
   | "CdrColorBorderLabelDefaultFocus"
+  | "CdrColorIconCheckboxDefaultSelected"
+  | "CdrColorIconCheckboxDefaultSelectedActive"
+  | "CdrColorIconCheckboxDefaultSelectedHover"
   | "CdrColorTextInputDefault"
   | "CdrColorTextInputDisabled"
   | "CdrColorTextInputError"
@@ -34,6 +37,4 @@ export type CdrInputTokenName =
   | "CdrColorTextInputLabelDisabled"
   | "CdrColorTextInputOptional"
   | "CdrColorTextInputPlaceholder"
-  | "CdrColorTextInputRequired"
-  | "CdrFormInputHeightDefault"
-  | "CdrFormInputHeightLarge";
+  | "CdrColorTextInputRequired";

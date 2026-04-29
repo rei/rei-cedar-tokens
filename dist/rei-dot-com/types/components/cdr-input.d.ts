@@ -104,6 +104,18 @@ export interface CdrInputTokens {
    */
   readonly CdrColorBorderLabelDefaultFocus: string;
   /**
+   * Rest state of a selected form icon
+   */
+  readonly CdrColorIconCheckboxDefaultSelected: string;
+  /**
+   * Hover state of a selected form icon
+   */
+  readonly CdrColorIconCheckboxDefaultSelectedActive: string;
+  /**
+   * Hover state of a selected form icon
+   */
+  readonly CdrColorIconCheckboxDefaultSelectedHover: string;
+  /**
    * Default text color used in form elements
    */
   readonly CdrColorTextInputDefault: string;
@@ -143,17 +155,6 @@ export interface CdrInputTokens {
    * Text color of required label within forms
    */
   readonly CdrColorTextInputRequired: string;
-  /**
-   * @usage Default input height
-   * @design Use for standard form fields
-   * @alternatives {form.input.height-large}
-   */
-  readonly CdrFormInputHeightDefault: string;
-  /**
-   * @usage Large input height
-   * @design Use for spacious layouts
-   */
-  readonly CdrFormInputHeightLarge: string;
 }
 
 export declare const CdrInput: CdrInputTokens;

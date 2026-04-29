@@ -1,3 +1,8 @@
+@use '../foundations/cdr-space' as space;
+@use '../foundations/cdr-breakpoint' as bp;
+@use './cdr-breakpoint-mixins' as mq;
+@use './cdr-type-mixins' as type;
+
 @mixin cdr-display-sr-only() {
   position: absolute;
   width: 1px;
@@ -47,28 +52,28 @@
 }
 
 @mixin cdr-container-base {
-  padding-left: $cdr-space-one-x;
-  padding-right: $cdr-space-one-x;
+  padding-left: space.$cdr-space-one-x;
+  padding-right: space.$cdr-space-one-x;
   width: 100%;
-  @include cdr-md-mq-up {
-    padding-left: $cdr-space-two-x;
-    padding-right: $cdr-space-two-x;
+  @include mq.cdr-md-mq-up {
+    padding-left: space.$cdr-space-two-x;
+    padding-right: space.$cdr-space-two-x;
   }
 }
 
 @mixin cdr-container-static {
   margin-left: auto;
   margin-right: auto;
-  max-width: $cdr-breakpoint-lg;
+  max-width: bp.$cdr-breakpoint-lg;
 }
 
 @mixin cdr-container {
-  @include cdr-text-default;
+  @include type.cdr-text-default;
   @include cdr-container-base;
   @include cdr-container-static;
 }
 
 @mixin cdr-container-fluid {
-  @include cdr-text-default;
+  @include type.cdr-text-default;
   @include cdr-container-base;
 }

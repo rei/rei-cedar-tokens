@@ -4,7 +4,6 @@ export const CdrLink = {
   CdrColorBorderLinkHover: "#406eb5",
   CdrColorBorderLinkRest: "#406eb5",
   CdrColorBorderLinkVisited: "#406eb5",
-  CdrColorIconLink: "#406eb5",
   CdrColorTextLinkActive: "#0b2d60",
   CdrColorTextLinkDisabled: "#d5cfc3",
   CdrColorTextLinkHover: "#406eb5",
