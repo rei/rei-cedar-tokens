@@ -172,6 +172,12 @@
               "children": [
                 {
                   "parent": "docsite/css/foundations",
+                  "path": "docsite/css/foundations/cdr-breakpoint.css",
+                  "name": "cdr-breakpoint.css",
+                  "type": "file"
+                },
+                {
+                  "parent": "docsite/css/foundations",
                   "path": "docsite/css/foundations/cdr-color-background.css",
                   "name": "cdr-color-background.css",
                   "type": "file"
@@ -698,12 +704,6 @@
             },
             {
               "parent": "docsite/json",
-              "path": "docsite/json/platform-tokens.json",
-              "name": "platform-tokens.json",
-              "type": "file"
-            },
-            {
-              "parent": "docsite/json",
               "path": "docsite/json/web.json",
               "name": "web.json",
               "type": "file"
@@ -844,6 +844,12 @@
               "name": "foundations",
               "type": "directory",
               "children": [
+                {
+                  "parent": "docsite/scss/foundations",
+                  "path": "docsite/scss/foundations/cdr-breakpoint.scss",
+                  "name": "cdr-breakpoint.scss",
+                  "type": "file"
+                },
                 {
                   "parent": "docsite/scss/foundations",
                   "path": "docsite/scss/foundations/cdr-color-background.scss",
@@ -1322,6 +1328,12 @@
               "name": "foundations",
               "type": "directory",
               "children": [
+                {
+                  "parent": "rei-dot-com/css/foundations",
+                  "path": "rei-dot-com/css/foundations/cdr-breakpoint.css",
+                  "name": "cdr-breakpoint.css",
+                  "type": "file"
+                },
                 {
                   "parent": "rei-dot-com/css/foundations",
                   "path": "rei-dot-com/css/foundations/cdr-color-background.css",
@@ -1870,12 +1882,6 @@
             },
             {
               "parent": "rei-dot-com/json",
-              "path": "rei-dot-com/json/platform-tokens.json",
-              "name": "platform-tokens.json",
-              "type": "file"
-            },
-            {
-              "parent": "rei-dot-com/json",
               "path": "rei-dot-com/json/web.json",
               "name": "web.json",
               "type": "file"
@@ -2016,6 +2022,12 @@
               "name": "foundations",
               "type": "directory",
               "children": [
+                {
+                  "parent": "rei-dot-com/scss/foundations",
+                  "path": "rei-dot-com/scss/foundations/cdr-breakpoint.scss",
+                  "name": "cdr-breakpoint.scss",
+                  "type": "file"
+                },
                 {
                   "parent": "rei-dot-com/scss/foundations",
                   "path": "rei-dot-com/scss/foundations/cdr-color-background.scss",
@@ -2409,542 +2421,6 @@
               "path": "types/base/token-schema.d.ts",
               "name": "token-schema.d.ts",
               "type": "file"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "parent": "",
-      "path": "web",
-      "name": "web",
-      "type": "directory",
-      "children": [
-        {
-          "parent": "web",
-          "path": "web/default",
-          "name": "default",
-          "type": "directory",
-          "children": [
-            {
-              "parent": "web/default",
-              "path": "web/default/css",
-              "name": "css",
-              "type": "directory",
-              "children": [
-                {
-                  "parent": "web/default/css",
-                  "path": "web/default/css/palettes",
-                  "name": "palettes",
-                  "type": "directory",
-                  "children": [
-                    {
-                      "parent": "web/default/css/palettes",
-                      "path": "web/default/css/palettes/cdr-palette-membership-subtle.css",
-                      "name": "cdr-palette-membership-subtle.css",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/css/palettes",
-                      "path": "web/default/css/palettes/cdr-palette-membership-vibrant.css",
-                      "name": "cdr-palette-membership-vibrant.css",
-                      "type": "file"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "parent": "web/default",
-              "path": "web/default/types",
-              "name": "types",
-              "type": "directory",
-              "children": [
-                {
-                  "parent": "web/default/types",
-                  "path": "web/default/types/components",
-                  "name": "components",
-                  "type": "directory",
-                  "children": [
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/accordion.d.ts",
-                      "name": "accordion.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/accordion.mjs",
-                      "name": "accordion.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/accordion.names.d.ts",
-                      "name": "accordion.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/button.d.ts",
-                      "name": "button.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/button.mjs",
-                      "name": "button.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/button.names.d.ts",
-                      "name": "button.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/chip.d.ts",
-                      "name": "chip.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/chip.mjs",
-                      "name": "chip.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/chip.names.d.ts",
-                      "name": "chip.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/form.d.ts",
-                      "name": "form.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/form.mjs",
-                      "name": "form.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/form.names.d.ts",
-                      "name": "form.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/icon.d.ts",
-                      "name": "icon.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/icon.mjs",
-                      "name": "icon.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/icon.names.d.ts",
-                      "name": "icon.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/input.d.ts",
-                      "name": "input.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/input.mjs",
-                      "name": "input.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/input.names.d.ts",
-                      "name": "input.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/link.d.ts",
-                      "name": "link.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/link.mjs",
-                      "name": "link.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/link.names.d.ts",
-                      "name": "link.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/message.d.ts",
-                      "name": "message.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/message.mjs",
-                      "name": "message.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/message.names.d.ts",
-                      "name": "message.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/modal.d.ts",
-                      "name": "modal.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/modal.mjs",
-                      "name": "modal.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/modal.names.d.ts",
-                      "name": "modal.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/pagination.d.ts",
-                      "name": "pagination.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/pagination.mjs",
-                      "name": "pagination.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/pagination.names.d.ts",
-                      "name": "pagination.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/rating.d.ts",
-                      "name": "rating.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/rating.mjs",
-                      "name": "rating.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/rating.names.d.ts",
-                      "name": "rating.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/slide.d.ts",
-                      "name": "slide.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/slide.mjs",
-                      "name": "slide.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/slide.names.d.ts",
-                      "name": "slide.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/surface-selection.d.ts",
-                      "name": "surface-selection.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/surface-selection.mjs",
-                      "name": "surface-selection.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/surface-selection.names.d.ts",
-                      "name": "surface-selection.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/surface.d.ts",
-                      "name": "surface.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/surface.mjs",
-                      "name": "surface.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/surface.names.d.ts",
-                      "name": "surface.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/switch.d.ts",
-                      "name": "switch.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/switch.mjs",
-                      "name": "switch.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/switch.names.d.ts",
-                      "name": "switch.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/tab.d.ts",
-                      "name": "tab.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/tab.mjs",
-                      "name": "tab.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/tab.names.d.ts",
-                      "name": "tab.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/table.d.ts",
-                      "name": "table.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/table.mjs",
-                      "name": "table.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/table.names.d.ts",
-                      "name": "table.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/toggle-button.d.ts",
-                      "name": "toggle-button.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/toggle-button.mjs",
-                      "name": "toggle-button.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/toggle-button.names.d.ts",
-                      "name": "toggle-button.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/tooltip.d.ts",
-                      "name": "tooltip.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/tooltip.mjs",
-                      "name": "tooltip.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/components",
-                      "path": "web/default/types/components/tooltip.names.d.ts",
-                      "name": "tooltip.names.d.ts",
-                      "type": "file"
-                    }
-                  ]
-                },
-                {
-                  "parent": "web/default/types",
-                  "path": "web/default/types/foundations",
-                  "name": "foundations",
-                  "type": "directory",
-                  "children": [
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-background.d.ts",
-                      "name": "color-background.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-background.mjs",
-                      "name": "color-background.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-background.names.d.ts",
-                      "name": "color-background.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-border.d.ts",
-                      "name": "color-border.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-border.mjs",
-                      "name": "color-border.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-border.names.d.ts",
-                      "name": "color-border.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-text.d.ts",
-                      "name": "color-text.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-text.mjs",
-                      "name": "color-text.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/color-text.names.d.ts",
-                      "name": "color-text.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/motion.d.ts",
-                      "name": "motion.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/motion.mjs",
-                      "name": "motion.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/motion.names.d.ts",
-                      "name": "motion.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/prominence.d.ts",
-                      "name": "prominence.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/prominence.mjs",
-                      "name": "prominence.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/prominence.names.d.ts",
-                      "name": "prominence.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/radius.d.ts",
-                      "name": "radius.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/radius.mjs",
-                      "name": "radius.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/radius.names.d.ts",
-                      "name": "radius.names.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/space.d.ts",
-                      "name": "space.d.ts",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/space.mjs",
-                      "name": "space.mjs",
-                      "type": "file"
-                    },
-                    {
-                      "parent": "web/default/types/foundations",
-                      "path": "web/default/types/foundations/space.names.d.ts",
-                      "name": "space.names.d.ts",
-                      "type": "file"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }

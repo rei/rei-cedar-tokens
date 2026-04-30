@@ -1,3 +1,4 @@
+@forward "./foundations/cdr-breakpoint.scss";
 @forward "./foundations/cdr-color-background.scss";
 @forward "./foundations/cdr-color-border.scss";
 @forward "./foundations/cdr-color-icon.scss";
@@ -8,7 +9,7 @@
 @forward "./foundations/cdr-prominence.scss";
 @forward "./foundations/cdr-radius.scss";
 @forward "./foundations/cdr-space.scss";
-@forward "./utilities/cdr-breakpoint-mixins.scss";
+@forward "./utilities/cdr-breakpoint-mixins.scss" hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg;
 @forward "./utilities/cdr-display-mixins.scss";
 @forward "./utilities/cdr-type-mixins.scss";
 

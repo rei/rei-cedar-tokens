@@ -21,6 +21,11 @@ export const css = (theme: Theme): PlatformConfig => ({
         filter: 'remove-categories-tokens',
       },
       {
+        destination: 'foundations/cdr-breakpoint.css',
+        format: 'css/variables',
+        filter: 'foundations-breakpoint-tokens',
+      },
+      {
         destination: 'foundations/cdr-color-background.css',
         format: 'css/variables',
         filter: 'color-background-tokens',

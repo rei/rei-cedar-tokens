@@ -8,6 +8,7 @@ const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const imports = [
+    './foundations/cdr-breakpoint',
     './foundations/cdr-color-background',
     './foundations/cdr-color-border',
     './foundations/cdr-color-icon',
@@ -21,6 +22,13 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   ];
   const extensionImports: string[] = [];
   const isScss = fileExtension.includes('scss');
+
+  const scssHideMembers = [
+    '$cdr-breakpoint-xs',
+    '$cdr-breakpoint-sm',
+    '$cdr-breakpoint-md',
+    '$cdr-breakpoint-lg',
+  ];
 
   if (isScss) {
     imports.push(
@@ -43,6 +51,13 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
 
   importsExtension.forEach((importFile) => {
     const importStatement = isScss ? '@forward' : ' @import';
+    if (isScss && importFile === `./utilities/cdr-breakpoint-mixins${fileExtension}`) {
+      extensionImports.push(
+        `${importStatement} "${importFile}" hide ${scssHideMembers.join(', ')};`,
+      );
+      return;
+    }
+
     extensionImports.push(`${importStatement} "${importFile}";`);
   });
 

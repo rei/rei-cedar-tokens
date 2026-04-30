@@ -54,8 +54,8 @@ import { colorIconTokens } from './filters/legacy/color-icon-tokens';
 import { colorTextTokens } from './filters/legacy/color-text-tokens';
 import { formTokens } from './filters/legacy/form-tokens';
 import { iconTokens } from './filters/legacy/icon-tokens';
-import { membershipSubtleTokens } from './filters/legacy/membership-subtle-tokens';
-import { membershipVibrantTokens } from './filters/legacy/membership-vibrant-tokens';
+import { membershipSubtleTokens } from './filters/palettes/membership-subtle-tokens';
+import { membershipVibrantTokens } from './filters/palettes/membership-vibrant-tokens';
 import { motionTokens } from './filters/legacy/motion-tokens';
 import { prominenceTokens } from './filters/legacy/prominence-tokens';
 import { radiusTokens } from './filters/legacy/radius-tokens';
@@ -64,6 +64,7 @@ import { removeSourceTokens } from './filters/legacy/remove-source-tokens';
 import { spaceTokens } from './filters/legacy/space-tokens';
 
 // ==== Include custom foundations filters ====
+import { foundationsBreakpointTokens } from './filters/foundations/breakpoint-tokens';
 import { foundationsColorBackgroundTokens } from './filters/foundations/color-background-tokens';
 import { foundationsColorBorderTokens } from './filters/foundations/color-border-tokens';
 import { foundationsColorTextTokens } from './filters/foundations/color-text-tokens';
@@ -143,6 +144,7 @@ removeSourceTokens(StyleDictionary);
 spaceTokens(StyleDictionary);
 
 // ==== Register custom foundations filters ====
+foundationsBreakpointTokens(StyleDictionary);
 foundationsColorBackgroundTokens(StyleDictionary);
 foundationsColorBorderTokens(StyleDictionary);
 foundationsColorTextTokens(StyleDictionary);

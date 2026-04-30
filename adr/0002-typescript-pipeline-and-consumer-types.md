@@ -42,15 +42,18 @@ Token responsibilities follow the same folder taxonomy established in ADR 0001.
 | Responsibility | Example generated `.d.ts`                                             |
 | -------------- | --------------------------------------------------------------------- |
 | `foundations`  | `foundations/cdr-color-background.d.ts`, `foundations/cdr-space.d.ts` |
-| `palettes`     | `palettes/cdr-palette-membership-subtle.d.ts`                         |
+| `palettes`     | No public `.d.ts` module surface                                      |
 | `utilities`    | SCSS-only mixins; no value `.d.ts` module surface                     |
+| `components`   | No public `.d.ts` module surface                                      |
 
-Each generated module emits:
+Each generated foundations module emits:
 
 - one token-name union file (`*.names.d.ts`)
 - one module interface/value file (`*.d.ts`)
 
 > Note on utilities: the `utilities/` responsibility (for example breakpoint/display/container query mixins) is SCSS-only and excluded from TypeScript module generation.
+>
+> Note on palettes and components: these are value-layer outputs and not consumer type contracts. They are intentionally excluded from TypeScript module generation.
 
 ### 3. Literal union generation
 
@@ -158,6 +161,155 @@ Internal implementation (non-contract):
 
 - Generation internals, intermediate mapping artifacts, and deep generated file paths.
 - Any deep import path below the barrel surface.
+
+## Domain Contracts And Entrypoints (Cross-PR Reference)
+
+This section defines the complete token domain set and the output contract expected from each domain family. It is the shared reference for developers working across parallel PRs so the build remains predictable, schema-aligned, and consistent.
+
+### Contract Objectives
+
+- Define the complete set of token domains (foundations, components, palettes).
+- Clarify which domains emit TypeScript contracts and which do not.
+- Establish modularization expectations by consumer type.
+- Keep outputs deterministic across themes and platforms.
+
+### Domain Families
+
+#### Foundations
+
+Foundations are the stable, cross-component contract of the design system. Foundations are the only domains that emit typed public surfaces.
+
+Canonical foundation domains that must emit SCSS, JSON, TypeScript, and CSS:
+
+- `color-background`
+- `color-text`
+- `color-border`
+- `color-icon`
+- `motion-duration`
+- `motion-timing`
+- `prominence`
+- `radius`
+- `space`
+
+Additional schema-backed foundation domains that must also be represented consistently in modular output:
+
+- Typography
+  - `font-family`
+  - `line-height` (heading, subheading, body, utility)
+  - `text-size-root`
+  - `type-scale`
+  - text variants
+- Layout
+  - `breakpoints`
+- Extended spacing
+  - `spacing`
+  - `spacing-inset`
+
+#### Components
+
+Components consume foundations but are not a stable typed contract surface.
+
+Current component set:
+
+- `accordion`
+- `button`
+- `chip`
+- `form`
+- `icon`
+- `input`
+- `link`
+- `message`
+- `modal`
+- `pagination`
+- `rating`
+- `slide`
+- `surface`
+- `surface-selection`
+- `switch`
+- `tab`
+- `table`
+- `toggle-button`
+- `tooltip`
+
+Component output rules:
+
+- Do not emit component-specific token-name unions.
+- Do not emit component-specific TypeScript interfaces.
+- Do emit modular JSON, SCSS, and CSS bundles.
+- Do expose a simple generic tokens map type for JS/TS convenience when needed.
+- Do preserve barrel exports for modular runtime/asset consumption.
+
+#### Palettes
+
+Palettes are independent token sets used for membership and brand contexts.
+
+Current palette set:
+
+- `membership-vibrant`
+- `membership-subtle`
+
+Palette output rules:
+
+- Emit JSON, SCSS, and CSS.
+- Do not emit TypeScript contract surfaces.
+
+### Output Matrix By Domain Family
+
+| Domain family | JSON | SCSS | CSS | TypeScript unions/interfaces |
+| ------------- | ---- | ---- | --- | ---------------------------- |
+| Foundations   | Yes  | Yes  | Yes | Yes                          |
+| Components    | Yes  | Yes  | Yes | No                           |
+| Palettes      | Yes  | Yes  | Yes | No                           |
+
+### Platform Deliverables Matrix
+
+This matrix defines what each platform pipeline is expected to publish at a module level.
+
+| Platform deliverable | Foundations modules | Components modules | Palettes modules | Utilities modules |
+| -------------------- | ------------------- | ------------------ | ---------------- | ----------------- |
+| JS runtime values    | Yes                 | Yes                | Optional/No      | No                |
+| TypeScript modules   | Yes                 | No                 | No               | No                |
+| CSS modules          | Yes                 | Yes                | Yes              | No                |
+| SCSS modules         | Yes                 | Yes                | Yes              | Yes               |
+| JSON modules         | Yes                 | Yes                | Yes              | No                |
+
+Palette behavior clarification:
+
+- Palettes are theme bundles that apply value overrides to existing tokens (for example via `data-palette` switching behavior).
+- Palettes are not first-class consumer token contracts.
+- Palettes should remain in value-layer outputs (CSS, SCSS, JSON) and be excluded from consumer type exports.
+
+### Modularization Strategy
+
+#### Foundations
+
+- Required modularization for TypeScript and assets.
+- Supports tree-shaking, domain-focused iteration, and clearer ownership boundaries.
+
+#### Components
+
+- Modularization required for JSON/SCSS/CSS.
+- No requirement for component-specific TypeScript modules.
+
+#### JSON and JS consumers
+
+Modularization is beneficial but optional at consumption time. Consumers may choose:
+
+- full/root imports
+- domain-level imports
+- component-level imports
+
+This flexibility supports incremental migration without forcing all consumers to adopt modular paths at once.
+
+### Entrypoint Contract
+
+Preferred stable entrypoints:
+
+- Runtime values: `@rei/cdr-tokens`, `@rei/cdr-tokens/docsite`
+- Type barrels: `@rei/cdr-tokens/types`, `@rei/cdr-tokens/docsite/types`
+- Theme CSS/SCSS: `@rei/cdr-tokens/css`, `@rei/cdr-tokens/scss`, `@rei/cdr-tokens/docsite/css`, `@rei/cdr-tokens/docsite/scss`
+
+Internal deep dist paths remain available for compatibility but are not the preferred contract for new integrations.
 
 #### Package Exports Map (Relevant Entries)
 
