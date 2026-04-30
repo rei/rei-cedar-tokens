@@ -173,6 +173,34 @@ This section defines the complete token domain set and the output contract expec
 - Establish modularization expectations by consumer type.
 - Keep outputs deterministic across themes and platforms.
 
+### Filter Structure Contract
+
+To prevent regressions while integrating changes from `next`, filter ownership is defined by domain and output intent:
+
+- Foundations filters own baseline token domains and foundation-level modular outputs.
+- Component filters own component token domains for JSON/CSS/SCSS outputs.
+- Palette filters own contextual overrides and remain value-layer outputs (JSON/CSS/SCSS only).
+- TypeScript module generation is driven by token module targeting and responsibility mapping, not by ad-hoc filter lists.
+
+Implementation guardrails:
+
+- Keep CSS/SCSS and TypeScript domain mapping aligned, even when configured through different helpers/files.
+- Keep breakpoint foundation output as part of foundations output structure.
+- Preserve palette exclusion from TypeScript generation.
+- Treat helper aggregation files and filter registration order as implementation details; the domain/output contract in this ADR is the source of truth.
+
+Deprecated edge cases:
+
+- **Docsite knockout theming**: Docsite theme files define a `knockout` namespace for internal component variants (table, note, code-snippet, link-card). These are excluded from outputs by design (`token.path[0] !== 'knockout'` in component filters) because:
+  - Knockout is internal docsite theming, not a user-selectable palette.
+  - Docsite has no `data-palette` Surface component mechanism (unlike rei-dot-com).
+  - If docsite palette support becomes required in the future, knockout should be modeled as a dedicated palette module, not mixed with component outputs.
+  - For now, treat docsite knockout exclusion as stable behavior.
+
+Change management rule:
+
+- Any future change that alters domain ownership, output matrix behavior, or public entrypoint semantics must update this ADR in the same PR.
+
 ### Domain Families
 
 #### Foundations
@@ -490,6 +518,11 @@ Old and new entrypoints coexist without conflict. Existing code using deep impor
 - Use semver to signal API-level type changes.
 - Preserve backward compatibility at the public barrel boundary where feasible.
 - Complete `TokenDictionary` public export contract — tracked in [docs/tickets/token-dictionary-implementation.md](../docs/tickets/token-dictionary-implementation.md).
+
+ADR maintenance guidance:
+
+- Keep ADR 0002 as the source of truth for consumer contract and domain/output behavior.
+- If filter topology work expands further (for example, repeated cross-domain refactors or additional platform-specific filter stacks), split implementation-detail governance into a dedicated follow-up ADR while leaving public contract semantics in ADR 0002.
 
 ## Current Mainline Maturity Note
 
