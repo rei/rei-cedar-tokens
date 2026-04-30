@@ -75,14 +75,14 @@ const TOKEN_MODULES: TokenModuleDefinition[] = [
     responsibility: 'palettes',
     name: 'cdr-palette-membership-subtle',
     filter: 'membership-subtle-tokens',
-    targets: ['scss', 'types'],
+    targets: ['scss'],
     themes: ['rei-dot-com'],
   },
   {
     responsibility: 'palettes',
     name: 'cdr-palette-membership-vibrant',
     filter: 'membership-vibrant-tokens',
-    targets: ['scss', 'types'],
+    targets: ['scss'],
     themes: ['rei-dot-com'],
   },
 ];

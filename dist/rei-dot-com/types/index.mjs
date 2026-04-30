@@ -8,5 +8,3 @@ export * from './foundations/cdr-motion.mjs';
 export * from './foundations/cdr-prominence.mjs';
 export * from './foundations/cdr-radius.mjs';
 export * from './foundations/cdr-space.mjs';
-export * from './palettes/cdr-palette-membership-subtle.mjs';
-export * from './palettes/cdr-palette-membership-vibrant.mjs';

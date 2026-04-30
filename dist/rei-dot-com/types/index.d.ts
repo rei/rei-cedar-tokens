@@ -18,7 +18,3 @@ export type * from './foundations/cdr-radius.d.ts';
 export type * from './foundations/cdr-radius.names.d.ts';
 export type * from './foundations/cdr-space.d.ts';
 export type * from './foundations/cdr-space.names.d.ts';
-export type * from './palettes/cdr-palette-membership-subtle.d.ts';
-export type * from './palettes/cdr-palette-membership-subtle.names.d.ts';
-export type * from './palettes/cdr-palette-membership-vibrant.d.ts';
-export type * from './palettes/cdr-palette-membership-vibrant.names.d.ts';

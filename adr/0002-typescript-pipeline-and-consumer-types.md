@@ -241,7 +241,15 @@ Component output rules:
 
 #### Palettes
 
-Palettes are independent token sets used for membership and brand contexts.
+Palettes are context bundles used to apply value overrides to existing default theme tokens.
+
+Palettes are not first-class tokens and are not intended as consumer-selectable token APIs.
+
+Current baseline and activation model:
+
+- `rei-dot-com` is the unthemed default baseline.
+- Palette activation is container-scoped via `data-palette` assignment.
+- Palette usage is expected through Surface component APIs and context containers, not direct palette token references.
 
 Current palette set:
 
@@ -252,6 +260,15 @@ Palette output rules:
 
 - Emit JSON, SCSS, and CSS.
 - Do not emit TypeScript contract surfaces.
+- Do not expose palette token-name unions or module interfaces in public type barrels.
+- Do not encourage direct palette token imports in component/application code.
+
+Palette runtime behavior contract:
+
+- Palette application is an on/off context switch at a container boundary.
+- Fallback behavior must always resolve to default baseline theme values.
+- Nested palette contexts are isolated by default.
+- Invalid or unavailable palette values should soft-fail to baseline values (optionally warn in development) rather than produce partial override states.
 
 ### Output Matrix By Domain Family
 
@@ -278,6 +295,14 @@ Palette behavior clarification:
 - Palettes are theme bundles that apply value overrides to existing tokens (for example via `data-palette` switching behavior).
 - Palettes are not first-class consumer token contracts.
 - Palettes should remain in value-layer outputs (CSS, SCSS, JSON) and be excluded from consumer type exports.
+- Palette sets should be authored to support context switching and complete fallback semantics, not ad-hoc per-token color override workflows.
+
+External usage references:
+
+- Palette usage guidance: https://cedar.rei.com/guidelines/palettes
+- Surface component contract: https://cedar.rei.com/components/surface
+- Surface implementation reference: https://github.com/rei/rei-cedar/blob/main/src/components/surface/CdrSurface.vue
+- Current palette stylesheet source in Cedar app: https://github.com/rei/rei-cedar/blob/main/src/styles/cdr-palette.scss
 
 ### Modularization Strategy
 
@@ -310,6 +335,11 @@ Preferred stable entrypoints:
 - Theme CSS/SCSS: `@rei/cdr-tokens/css`, `@rei/cdr-tokens/scss`, `@rei/cdr-tokens/docsite/css`, `@rei/cdr-tokens/docsite/scss`
 
 Internal deep dist paths remain available for compatibility but are not the preferred contract for new integrations.
+
+Palette entrypoint guidance:
+
+- Palettes are currently consumed as value-layer assets within theme CSS/SCSS output.
+- If a dedicated palette entrypoint is introduced, it must remain explicitly separate from default token contract entrypoints and continue to exclude palette type surfaces.
 
 #### Package Exports Map (Relevant Entries)
 
