@@ -1,11 +1,26 @@
-export const foundatiosMoudulesName = [
+export const foundationsMoudulesName = [
   'color-background',
   'color-border',
   'color-text',
-  'motion',
+  'color-icon',
+  'motion-timing',
+  'motion-duration',
   'prominence',
   'radius',
   'space',
+  'space-inset',
+  'space-scale',
+  'breakpoint',
+  'font',
+  'line-height',
+  'text',
+  'text-font-size',
+  'text-font-weight',
+  'text-font-family',
+  'text-font-style',
+  'text-line-height',
+  'text-letter-spacing',
+  'type',
 ];
 
 export const componentModulesName = [

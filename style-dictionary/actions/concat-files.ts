@@ -3,32 +3,16 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
+import { foundationsMoudulesName, componentModulesName } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
-  const imports = [
-    './foundations/cdr-breakpoint',
-    './foundations/cdr-color-background',
-    './foundations/cdr-color-border',
-    './foundations/cdr-color-icon',
-    './foundations/cdr-color-text',
-    './foundations/cdr-form',
-    './foundations/cdr-icon',
-    './foundations/cdr-motion',
-    './foundations/cdr-prominence',
-    './foundations/cdr-radius',
-    './foundations/cdr-space',
-  ];
-  const extensionImports: string[] = [];
   const isScss = fileExtension.includes('scss');
-
-  const scssHideMembers = [
-    '$cdr-breakpoint-xs',
-    '$cdr-breakpoint-sm',
-    '$cdr-breakpoint-md',
-    '$cdr-breakpoint-lg',
-  ];
+  const importStatement = isScss ? '@forward' : '@import';
+  const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
+  imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
+  const extensionImports: string[] = [];
 
   if (isScss) {
     imports.push(
@@ -46,18 +30,10 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   }
 
   const importsExtension = imports.map((importLine) => {
-    return importLine + fileExtension;
+    return isScss ? importLine : importLine + fileExtension;
   });
 
   importsExtension.forEach((importFile) => {
-    const importStatement = isScss ? '@forward' : ' @import';
-    if (isScss && importFile === `./utilities/cdr-breakpoint-mixins${fileExtension}`) {
-      extensionImports.push(
-        `${importStatement} "${importFile}" hide ${scssHideMembers.join(', ')};`,
-      );
-      return;
-    }
-
     extensionImports.push(`${importStatement} "${importFile}";`);
   });
 
@@ -94,14 +70,10 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
           (f) => f.endsWith('.scss') || f.endsWith('.css') || f.endsWith('.less'),
         );
 
-        if (!sampleFile) {
-          console.log('No .scss/.css/.less files found in the build path.');
-          return;
-        }
-
         // Determine the file extension from the first file
-        const extension = path.extname(sampleFile);
+        const extension = !sampleFile ? '.css' : path.extname(sampleFile);
         const allPaths = files.map((f) => path.join(buildPath, f));
+
         const concatPaths = allPaths.filter((p) => !path.basename(p).includes('no_concat'));
         const noConcatPaths = allPaths.filter((p) => path.basename(p).includes('no_concat'));
 
@@ -112,13 +84,14 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         });
 
         // Concatenate files before removing source files
-        const concatenatedOutput = (await concat(concatPaths)) as string;
+        const concatenatedOutput =
+          concatPaths.length > 0 ? ((await concat(concatPaths)) as string) : '';
         const outFile = path.join(__dirname, '../../', config.buildPath, `cdr-tokens${extension}`);
 
         const importLines = createImportLine(extension, outFile);
         const finalOuput = extension.includes('less')
           ? concatenatedOutput
-          : `${importLines}\n\n${concatenatedOutput}`;
+          : `${importLines}${concatenatedOutput ? `\n\n${concatenatedOutput}` : ''}`;
 
         fs.outputFileSync(outFile, finalOuput);
 
