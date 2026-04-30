@@ -1,203 +1,112 @@
 {
-  "radius": [
+  "breakpoints": [
     {
       "$value": "0",
-      "$type": "dimension",
+      "$type": "breakpoint",
       "docs": {
-        "type": "corner",
-        "category": "radius",
-        "example": "sharp",
-        "description": {
-          "what": "Zero-radius corner",
-          "when": "Use for crisp, squared edges",
-          "alternatives": [
-            "0.2rem"
-          ]
-        }
+        "type": "breakpoint",
+        "category": "breakpoints",
+        "example": "breakpoint"
       },
-      "filePath": "tokens/global/radius.json",
+      "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
         "$value": "0",
-        "$type": "dimension",
+        "$type": "breakpoint",
         "docs": {
-          "type": "corner",
-          "category": "radius",
-          "example": "sharp",
-          "description": {
-            "what": "Zero-radius corner",
-            "when": "Use for crisp, squared edges",
-            "alternatives": [
-              "{radius.soft}"
-            ]
-          }
+          "type": "breakpoint",
+          "category": "breakpoints",
+          "example": "breakpoint"
         }
       },
-      "name": "cdr-radius-sharp",
+      "name": "cdr-breakpoint-xs",
       "attributes": {
-        "category": "radius",
-        "type": "sharp",
+        "category": "breakpoint",
+        "type": "xs",
         "deprecated": false
       },
-      "key": "{radius.sharp}"
+      "key": "{breakpoint.xs}"
     },
     {
-      "$value": "0.2rem",
-      "$type": "dimension",
+      "$value": "768px",
+      "$type": "breakpoint",
       "docs": {
-        "type": "corner",
-        "category": "radius",
-        "example": "soft",
-        "description": {
-          "what": "Small, subtle corner radius",
-          "when": "Use for gentle rounding",
-          "alternatives": [
-            "0.4rem"
-          ]
-        }
+        "type": "breakpoint",
+        "category": "breakpoints",
+        "example": "breakpoint"
       },
-      "filePath": "tokens/global/radius.json",
+      "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
-        "$value": "2px",
-        "$type": "dimension",
+        "$value": "768px",
+        "$type": "breakpoint",
         "docs": {
-          "type": "corner",
-          "category": "radius",
-          "example": "soft",
-          "description": {
-            "what": "Small, subtle corner radius",
-            "when": "Use for gentle rounding",
-            "alternatives": [
-              "{radius.softer}"
-            ]
-          }
+          "type": "breakpoint",
+          "category": "breakpoints",
+          "example": "breakpoint"
         }
       },
-      "name": "cdr-radius-soft",
+      "name": "cdr-breakpoint-sm",
       "attributes": {
-        "category": "radius",
-        "type": "soft",
+        "category": "breakpoint",
+        "type": "sm",
         "deprecated": false
       },
-      "key": "{radius.soft}"
+      "key": "{breakpoint.sm}"
     },
     {
-      "$value": "0.4rem",
-      "$type": "dimension",
+      "$value": "992px",
+      "$type": "breakpoint",
       "docs": {
-        "type": "corner",
-        "category": "radius",
-        "example": "softer",
-        "description": {
-          "what": "Medium corner radius",
-          "when": "Use for more noticeable rounding",
-          "alternatives": [
-            "0.6rem"
-          ]
-        }
+        "type": "breakpoint",
+        "category": "breakpoints",
+        "example": "breakpoint"
       },
-      "filePath": "tokens/global/radius.json",
+      "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
-        "$value": "4px",
-        "$type": "dimension",
+        "$value": "992px",
+        "$type": "breakpoint",
         "docs": {
-          "type": "corner",
-          "category": "radius",
-          "example": "softer",
-          "description": {
-            "what": "Medium corner radius",
-            "when": "Use for more noticeable rounding",
-            "alternatives": [
-              "{radius.softest}"
-            ]
-          }
+          "type": "breakpoint",
+          "category": "breakpoints",
+          "example": "breakpoint"
         }
       },
-      "name": "cdr-radius-softer",
+      "name": "cdr-breakpoint-md",
       "attributes": {
-        "category": "radius",
-        "type": "softer",
+        "category": "breakpoint",
+        "type": "md",
         "deprecated": false
       },
-      "key": "{radius.softer}"
+      "key": "{breakpoint.md}"
     },
     {
-      "$value": "0.6rem",
-      "$type": "dimension",
+      "$value": "1232px",
+      "$type": "breakpoint",
       "docs": {
-        "type": "corner",
-        "category": "radius",
-        "example": "softest",
-        "description": {
-          "what": "Large rounded corner",
-          "when": "Use for pill-like shapes",
-          "alternatives": [
-            "0.6rem"
-          ]
-        }
+        "type": "breakpoint",
+        "category": "breakpoints",
+        "example": "breakpoint"
       },
-      "filePath": "tokens/global/radius.json",
+      "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
-        "$value": "6px",
-        "$type": "dimension",
+        "$value": "1232px",
+        "$type": "breakpoint",
         "docs": {
-          "type": "corner",
-          "category": "radius",
-          "example": "softest",
-          "description": {
-            "what": "Large rounded corner",
-            "when": "Use for pill-like shapes",
-            "alternatives": [
-              "{radius.softest}"
-            ]
-          }
+          "type": "breakpoint",
+          "category": "breakpoints",
+          "example": "breakpoint"
         }
       },
-      "name": "cdr-radius-softest",
+      "name": "cdr-breakpoint-lg",
       "attributes": {
-        "category": "radius",
-        "type": "softest",
+        "category": "breakpoint",
+        "type": "lg",
         "deprecated": false
       },
-      "key": "{radius.softest}"
-    },
-    {
-      "$value": "999.9rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "corner",
-        "category": "radius",
-        "example": "round",
-        "description": {
-          "what": "Fully circular radius",
-          "when": "Use for circular elements"
-        }
-      },
-      "filePath": "tokens/global/radius.json",
-      "isSource": false,
-      "original": {
-        "$value": "9999px",
-        "$type": "dimension",
-        "docs": {
-          "type": "corner",
-          "category": "radius",
-          "example": "round",
-          "description": {
-            "what": "Fully circular radius",
-            "when": "Use for circular elements"
-          }
-        }
-      },
-      "name": "cdr-radius-round",
-      "attributes": {
-        "category": "radius",
-        "type": "round",
-        "deprecated": false
-      },
-      "key": "{radius.round}"
+      "key": "{breakpoint.lg}"
     }
   ]
 }

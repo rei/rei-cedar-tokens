@@ -13,6 +13,6 @@ import type { Token } from 'style-dictionary';
 export const foundationsBreakpointTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-breakpoint-tokens',
-    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'radius',
+    filter: (token: Token) => token.path[0] !== 'options' && token.path[0] === 'breakpoint',
   });
 };

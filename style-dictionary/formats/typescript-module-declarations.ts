@@ -38,6 +38,19 @@ export const typescriptModuleDeclarations = (sd: typeof StyleDictionary): void =
         left.name.localeCompare(right.name),
       );
 
+      const invalidKeys = dictionary.allTokens.filter((t) => {
+        // Enforce PascalCase
+        return !/^[A-Z][a-zA-Z0-9]*$/.test(t.name);
+      });
+
+      if (invalidKeys.length > 0) {
+        throw new Error(
+          `[Naming Contract]: Invalid TS exported names found: ${invalidKeys
+            .map((t) => t.name)
+            .join(', ')}`,
+        );
+      }
+
       const interfaceMembers = sortedTokens.map((token: TransformedToken) => {
         const description =
           // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -17,19 +17,82 @@ jobs:
         node-version: [22.18.0]
 
     steps:
-      - uses: actions/checkout@v4
+      # =======================================================================
+      # PHASE 1: GENERATE BASELINE (Target Branch)
+      # =======================================================================
+      - name: Checkout target branch (${{ github.base_ref }})
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.base_ref }}
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
-      - run: pnpm install --frozen-lockfile
+
+      - name: Install dependencies (Target Branch)
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Deprecation Baseline
+        # Removed CLI argument since path is hardcoded in the script
+        run: npx tsx scripts/generate-baseline.ts
+
+      - name: Preserve Baseline File
+        # Copy the generated file out of the workspace so checkout doesn't delete it
+        run: cp data/baseline.json /tmp/baseline.json
+
+      # =======================================================================
+      # PHASE 2: PREPARE PR BRANCH
+      # =======================================================================
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          clean: true
+
+      - name: Restore Baseline File
+        # Recreate the data folder and move the file back into place for the next script
+        run: |
+          mkdir -p data
+          cp /tmp/baseline.json data/baseline.json
+
+      - name: Install dependencies (PR Branch)
+        run: pnpm install --frozen-lockfile
+
+      # =======================================================================
+      # PHASE 3: STATIC ANALYSIS & GATES (Pre-Build)
+      # =======================================================================
       - name: Check formatting
         run: pnpm run format:check
+
       - name: Lint
         run: pnpm run lint
-      - run: pnpm test
-      - run: pnpm build
+
+      - name: Enforce Canonical Module Contract
+        run: npx tsx scripts/validate-contract.ts
+
+      - name: Enforce Rename & Deletion Governance
+        # Removed CLI argument since path is hardcoded in the script
+        run: npx tsx scripts/enforce-deletions.ts
+
+      # =======================================================================
+      # PHASE 4: TEST & COMPILE
+      # =======================================================================
+      - name: Test
+        run: pnpm test
+
+      - name: Build Tokens
+        run: pnpm build
+
+      # =======================================================================
+      # PHASE 5: POST-BUILD PARITY CHECKS
+      # =======================================================================
+      - name: Validate Syntax Boundaries
+        run: npx tsx scripts/validate-syntax-boundaries.ts
+
+      - name: Validate Output Parity & Scope Leaks
+        run: npx tsx scripts/validate-output-parity.ts
