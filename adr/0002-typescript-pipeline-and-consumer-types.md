@@ -511,6 +511,69 @@ Old and new entrypoints coexist without conflict. Existing code using deep impor
 - **Migrate when convenient.** Update entrypoints incrementally as you touch files.
 - **No special tooling needed.** Simple search-and-replace for most migrations.
 
+## Foundation Tokens & Platform-Specific Consumption
+
+### Web-Only Foundations (SCSS, TypeScript)
+
+**Breakpoint** and **Text** are web-specific foundations consumed via SCSS and TypeScript. They do not have multiplatform equivalents:
+
+- **Breakpoints:** Responsive design is a web concept. Native apps use platform-native viewport/screen size APIs.
+- **Text:** Android and iOS have their own type ramp systems and font rendering pipelines. Cedar text tokens don't translate directly to native platforms.
+
+### Cross-Platform Foundations (Color, Space)
+
+**Color** and **Space** foundations represent true cross-platform design decisions and are candidates for future native platform integration.
+
+### Utilities Layer: SCSS-Specific Implementation Pattern
+
+Utilities (`dist/rei-dot-com/scss/utilities/`) are an SCSS-only implementation detail that **packages foundation tokens into reusable mixin/class patterns**. They are NOT a public API surface; they are a convenience layer:
+
+| Utility                   | Foundation Dependency        | Platform Availability       | Consumer Pattern                            |
+| ------------------------- | ---------------------------- | --------------------------- | ------------------------------------------- |
+| `@mixin cdr-breakpoint-*` | Breakpoint tokens            | SCSS only                   | Use in media queries and responsive layouts |
+| `@mixin cdr-text-*`       | Text/Font/Line-height tokens | SCSS only                   | Apply typography styles to selectors        |
+| `@mixin cdr-space-*`      | Space tokens                 | SCSS only                   | Apply spacing via mixins or utility classes |
+| `.cdr-[utility-class]`    | Foundation tokens            | SCSS only (if CSS compiled) | Apply utility classes directly in HTML      |
+
+**Utilities are NOT for direct TypeScript consumption.** Non-SCSS consumers should use foundation token exports directly (e.g., `CdrBreakpoint.Medium` in JavaScript, breakpoint constant in Android/iOS).
+
+**Evolution note:** As the repo matures, utilities may be refactored or reorganized (e.g., new mixins added, old ones deprecated). See [Migration Path for Utilities Changes](#migration-path-for-utilities-changes) below.
+
+### Default Entrypoint Contract: Parity with Master
+
+The root monolithic exports (`dist/rei-dot-com/types/index.d.ts`, `dist/rei-dot-com/scss/cdr-tokens.scss`, `dist/rei-dot-com/css/cdr-tokens.css`) maintain **feature parity with master branch** (version 13.3.0), with the exception of palette exclusion:
+
+**Included in default entrypoint:**
+
+- ✅ All foundation tokens (color, space, breakpoint, font, line-height, motion, radius, prominence, etc.)
+- ✅ All component tokens (accordion, button, form, icon, link, table, etc.)
+- ✅ Utilities folder (SCSS mixins / utility classes)
+- ✅ Root bundle forwards/imports for quick setup
+
+**Excluded from default entrypoint:**
+
+- ❌ Palette tokens (`membership-subtle`, `membership-vibrant`) — these are opt-in only; see [Palette Contract](#palette-contract)
+- ❌ Docsite-internal knockout theme (internal, not user-selectable)
+- ❌ Platform-specific build artifacts (covered in platform-specific flows like site.android.ts, site.ios.ts)
+
+**Rationale:** Keeping palettes out of the default prevents consumers from accidentally importing competing palette definitions and maintains the principle that palettes are **chosen, not defaulted**.
+
+### Migration Path for Utilities Changes
+
+If utilities are added, removed, or refactored, consumers will be notified via:
+
+1. **Semver signals:**
+   - **Minor version bump (14.1.0):** New utilities added (backward-compatible)
+   - **Major version bump (15.0.0):** Utilities removed, renamed, or signature changed
+
+2. **Changelog entry:** Utilities changes documented with migration examples
+   - Old pattern: `@include cdr-old-mixin($value)` → New pattern: `@include cdr-new-mixin($value)`
+   - Deprecation window: Typically 2–3 releases before removal
+
+3. **Reference documentation:** Updates to `docs/TRANSFORMS.md` showing new/removed utilities
+
+4. **No runtime surprises:** Utilities are at build time; breaking changes surface immediately during SCSS compilation
+
 ## Future Direction
 
 - Add themes/platforms/responsibilities by extending schema and module maps.
@@ -518,6 +581,7 @@ Old and new entrypoints coexist without conflict. Existing code using deep impor
 - Use semver to signal API-level type changes.
 - Preserve backward compatibility at the public barrel boundary where feasible.
 - Complete `TokenDictionary` public export contract — tracked in [docs/tickets/token-dictionary-implementation.md](../docs/tickets/token-dictionary-implementation.md).
+- Expand multiplatform APIs: define native platform contracts for breakpoint, text, and utilities equivalents in Android/iOS.
 
 ADR maintenance guidance:
 
