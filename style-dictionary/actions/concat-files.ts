@@ -34,13 +34,18 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     return isScss ? importLine : importLine + fileExtension;
   });
 
+  const breakpointForwardHide =
+    ' hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg';
+
   importsExtension.forEach((importFile: string) => {
     const fsPath = isScss
       ? path.join(outputDir, `${importFile}.scss`)
       : path.join(outputDir, importFile);
 
     if (fs.pathExistsSync(fsPath)) {
-      extensionImports.push(`${importStatement} "${importFile}";`);
+      const hideClause =
+        isScss && importFile === './utilities/cdr-breakpoint-mixins' ? breakpointForwardHide : '';
+      extensionImports.push(`${importStatement} "${importFile}"${hideClause};`);
     }
   });
 
