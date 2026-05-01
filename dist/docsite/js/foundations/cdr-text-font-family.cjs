@@ -1,0 +1,135 @@
+module.exports = {
+  CdrTextDefaultFontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextEyebrow100FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextBody300FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextBody400FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextBody500FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextBodyStrong300FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextBodyStrong400FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextBodyStrong500FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextHeadingSans200FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextHeadingSans300FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextHeadingSans400FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextHeadingSans500FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextHeadingSans600FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextHeadingSerif200FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif300FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif400FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif500FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif600FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif700FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif800FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif900FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif1000FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif1100FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerif1200FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong600FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong700FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong800FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong900FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong1000FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong1100FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingSerifStrong1200FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay800FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay900FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1000FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1100FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1200FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1300FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1400FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1500FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextHeadingDisplay1600FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextSubheadingSans300FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextSubheadingSans400FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextSubheadingSans500FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextSubheadingSans600FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans100FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans200FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans300FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans400FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans500FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans600FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans700FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySans800FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong100FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong200FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong300FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong400FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong500FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong600FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong700FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySansStrong800FontFamily:
+    'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
+  CdrTextUtilitySerif200FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerif300FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerif400FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerif500FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerif600FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerif700FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerif800FontFamily: 'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong200FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong300FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong400FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong500FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong600FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong700FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+  CdrTextUtilitySerifStrong800FontFamily:
+    'Stuart, "Stuart fallback", Georgia, serif',
+};

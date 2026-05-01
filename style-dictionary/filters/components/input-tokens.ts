@@ -16,6 +16,9 @@ export const componentInputTokens = (sd: typeof StyleDictionary): void => {
     filter: (token: Token) =>
       token.path[0] !== 'options' &&
       token.path[0] !== 'theme' &&
-      (token.path.includes('input') || token.path.includes('label')),
+      token.path[0] !== 'form' &&
+      (token.path.includes('input') ||
+        token.path.includes('label') ||
+        (token.path[0] === 'color' && token.path[1] === 'icon' && token.path[2] === 'checkbox')),
   });
 };
