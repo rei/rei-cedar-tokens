@@ -42,6 +42,11 @@
       "types": "./dist/types/base/token-schema.d.ts",
       "default": "./dist/types/base/token-schema.d.ts"
     },
+    "./stable-v1": {
+      "types": "./dist/rei-dot-com/types/stable-v1.d.ts",
+      "import": "./dist/rei-dot-com/types/stable-v1.mjs",
+      "default": "./dist/rei-dot-com/types/stable-v1.mjs"
+    },
     "./rei-dot-com/js/*": {
       "types": "./dist/rei-dot-com/js/*.d.ts",
       "import": "./dist/rei-dot-com/js/*.mjs",
