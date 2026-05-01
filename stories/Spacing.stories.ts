@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '@rei/cdr-tokens';
+import { escapeHtml } from './guide-display';
 import { getTokenDescription } from './token-metadata';
 
 const meta: Meta = {
@@ -328,9 +329,10 @@ function staticRow(name: string, value: string, maxPx: number): string {
   const pct = maxPx > 0 ? Math.max((px / maxPx) * 100, 0.5) : 0;
   const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
   const doc = getTokenDescription(name);
+  const docHtml = doc ? `<span class="token-doc">${escapeHtml(doc)}</span>` : '';
   return `
     <div class="srow">
-      <span class="srow-name">${name}${doc ? `<span class="token-doc">${doc}</span>` : ''}</span>
+      <span class="srow-name">${name}${docHtml}</span>
       <div class="srow-track"><div class="srow-fill" style="width:${pct}%"></div></div>
       <span class="srow-value">${display}</span>
     </div>`;
@@ -342,9 +344,10 @@ function insetRow(name: string, value: string, maxPx: number): string {
   const boxSize = 8 + pad * 2;
   const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
   const doc = getTokenDescription(name);
+  const docHtml = doc ? `<span class="token-doc">${escapeHtml(doc)}</span>` : '';
   return `
     <div class="irow">
-      <span class="irow-name">${name}${doc ? `<span class="token-doc">${doc}</span>` : ''}</span>
+      <span class="irow-name">${name}${docHtml}</span>
       <div class="irow-box-wrap">
         <div class="irow-box" style="width:${boxSize}px;height:${boxSize}px;padding:${pad}px;">
           <div class="irow-box-inner"></div>
@@ -360,6 +363,7 @@ function fluidCard(name: string, value: string, absMax: number): string {
 
   const { min, max, slope, raw } = cp;
   const doc = getTokenDescription(name);
+  const docHtml = doc ? `<span class="token-doc">${escapeHtml(doc)}</span>` : '';
   const range = max - min;
   const rangePx = Math.round(range);
 
@@ -375,7 +379,7 @@ function fluidCard(name: string, value: string, absMax: number): string {
         <span class="fcard-name">${name}</span>
         ${slope ? `<span class="fcard-slope">${slope}</span>` : ''}
       </div>
-      ${doc ? `<span class="token-doc">${doc}</span>` : ''}
+      ${docHtml}
 
       <div class="fcard-range-wrap">
         <div class="fcard-track">

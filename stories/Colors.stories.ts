@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '@rei/cdr-tokens';
+import { escapeHtml } from './guide-display';
 import { getTokenDescription } from './token-metadata';
 
 const meta: Meta = {
@@ -267,15 +268,6 @@ function swatchCell(value: string): string {
       <div class="comp-swatch-checker"></div>
       <div class="comp-swatch-fill" style="background:${value};"></div>
     </div>`;
-}
-
-function escapeHtml(value: string): string {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
 }
 
 function tokenCell(key: string): string {
