@@ -1,7 +1,7 @@
-import { foundationsMoudulesName, componentModulesName } from './modules';
+import { foundationsModulesName, componentModulesName } from './modules';
 
 export const typesFilters = () => {
-  const filtersFoundations = foundationsMoudulesName.flatMap((moduleName) => [
+  const filtersFoundations = foundationsModulesName.flatMap((moduleName) => [
     {
       destination: `./foundations/cdr-${moduleName}.mjs`,
       format: 'typescript/module-values',

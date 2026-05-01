@@ -179,7 +179,6 @@ foundationsTextFontStyleTokens(StyleDictionary);
 foundationsTextLetterSpacingTokens(StyleDictionary);
 foundationsTypeTokens(StyleDictionary);
 foundationsFontTokens(StyleDictionary);
-foundationsBreakpointTokens(StyleDictionary);
 foundationsColorIconsTokens(StyleDictionary);
 
 // ==== Register custom component filters ====
