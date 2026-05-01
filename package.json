@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "14.0.0-alpha.0",
+  "version": "14.0.0-alpha.1",
   "private": false,
   "description": "Tokens for REI cedar design system",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -16,18 +16,28 @@
   "type": "module",
   "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
   "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
-  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+  "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
     },
     "./docsite": {
-      "types": "./dist/docsite/js/cdr-tokens.d.mts",
+      "types": "./dist/docsite/js/cdr-tokens.d.ts",
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
+    "./types": {
+      "types": "./dist/rei-dot-com/types/index.d.ts"
+    },
+    "./docsite/types": {
+      "types": "./dist/docsite/types/index.d.ts"
+    },
+    "./css": "./dist/rei-dot-com/css/cdr-tokens.css",
+    "./scss": "./dist/rei-dot-com/scss/cdr-tokens.scss",
+    "./docsite/css": "./dist/docsite/css/cdr-tokens.css",
+    "./docsite/scss": "./dist/docsite/scss/cdr-tokens.scss",
     "./types/base": {
       "types": "./dist/types/base/token-schema.d.ts",
       "default": "./dist/types/base/token-schema.d.ts"

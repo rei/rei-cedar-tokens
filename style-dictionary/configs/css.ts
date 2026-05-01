@@ -1,7 +1,6 @@
 import type { PlatformConfig } from 'style-dictionary/types';
 import type { Theme } from '../constants';
 import { commonConfig } from '../utils';
-import { foundationsFilters } from './filters/foundationsFilters';
 import { componentsFilters } from './filters/componentsFilters';
 
 export const css = (theme: Theme): PlatformConfig => ({
@@ -16,12 +15,65 @@ export const css = (theme: Theme): PlatformConfig => ({
       'value/clamp',
     ],
     files: [
-      // Foundations filters
-      ...foundationsFilters('css', 'css/variables'),
+      {
+        destination: 'cdr-variables.css',
+        format: 'css/variables',
+        filter: 'remove-categories-tokens',
+      },
+      {
+        destination: 'foundations/cdr-breakpoint.css',
+        format: 'css/variables',
+        filter: 'foundations-breakpoint-tokens',
+      },
+      {
+        destination: 'foundations/cdr-color-background.css',
+        format: 'css/variables',
+        filter: 'color-background-tokens',
+      },
+      {
+        destination: 'foundations/cdr-color-text.css',
+        format: 'css/variables',
+        filter: 'color-text-tokens',
+      },
+      {
+        destination: 'foundations/cdr-color-border.css',
+        format: 'css/variables',
+        filter: 'color-border-tokens',
+      },
+      {
+        destination: 'foundations/cdr-color-icon.css',
+        format: 'css/variables',
+        filter: 'color-icon-tokens',
+      },
+      {
+        destination: 'foundations/cdr-motion.css',
+        format: 'css/variables',
+        filter: 'motion-tokens',
+      },
+      {
+        destination: 'foundations/cdr-prominence.css',
+        format: 'css/variables',
+        filter: 'prominence-tokens',
+      },
+      {
+        destination: 'foundations/cdr-icon.css',
+        format: 'css/variables',
+        filter: 'icon-tokens',
+      },
+      {
+        destination: 'foundations/cdr-radius.css',
+        format: 'css/variables',
+        filter: 'radius-tokens',
+      },
+      {
+        destination: 'foundations/cdr-space.css',
+        format: 'css/variables',
+        filter: 'space-tokens',
+      },
       // Component filters
       ...componentsFilters('css', 'css/variables'),
       // REI Dot Com Specific Palettes
-      ...(theme === 'rei-dot-com'
+      ...(theme == 'rei-dot-com'
         ? [
             {
               destination: 'palettes/cdr-palette-membership-subtle.css',

@@ -3,7 +3,7 @@ import type { Theme } from './constants';
 export type ModuleTarget = 'js' | 'scss' | 'types';
 
 export interface TokenModuleDefinition {
-  responsibility: 'foundations' | 'components' | 'palettes';
+  responsibility: 'foundations' | 'palettes';
   name: string;
   filter: string;
   targets: ModuleTarget[];
@@ -48,15 +48,9 @@ const TOKEN_MODULES: TokenModuleDefinition[] = [
     targets: ['js', 'scss', 'types'],
   },
   {
-    responsibility: 'components',
-    name: 'cdr-form',
-    filter: 'component-form-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'components',
+    responsibility: 'foundations',
     name: 'cdr-icon',
-    filter: 'component-icon-tokens',
+    filter: 'icon-tokens',
     targets: ['js', 'scss', 'types'],
   },
   {
@@ -75,14 +69,14 @@ const TOKEN_MODULES: TokenModuleDefinition[] = [
     responsibility: 'palettes',
     name: 'cdr-palette-membership-subtle',
     filter: 'membership-subtle-tokens',
-    targets: ['scss', 'types'],
+    targets: ['scss'],
     themes: ['rei-dot-com'],
   },
   {
     responsibility: 'palettes',
     name: 'cdr-palette-membership-vibrant',
     filter: 'membership-vibrant-tokens',
-    targets: ['scss', 'types'],
+    targets: ['scss'],
     themes: ['rei-dot-com'],
   },
 ];

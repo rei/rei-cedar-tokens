@@ -74,12 +74,6 @@
                 },
                 {
                   "parent": "docsite/css/components",
-                  "path": "docsite/css/components/cdr-icon.css",
-                  "name": "cdr-icon.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/components",
                   "path": "docsite/css/components/cdr-input.css",
                   "name": "cdr-input.css",
                   "type": "file"
@@ -202,26 +196,14 @@
                 },
                 {
                   "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-font.css",
-                  "name": "cdr-font.css",
+                  "path": "docsite/css/foundations/cdr-icon.css",
+                  "name": "cdr-icon.css",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-line-height.css",
-                  "name": "cdr-line-height.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-motion-duration.css",
-                  "name": "cdr-motion-duration.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-motion-timing.css",
-                  "name": "cdr-motion-timing.css",
+                  "path": "docsite/css/foundations/cdr-motion.css",
+                  "name": "cdr-motion.css",
                   "type": "file"
                 },
                 {
@@ -238,68 +220,8 @@
                 },
                 {
                   "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-space-inset.css",
-                  "name": "cdr-space-inset.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-space-scale.css",
-                  "name": "cdr-space-scale.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
                   "path": "docsite/css/foundations/cdr-space.css",
                   "name": "cdr-space.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text-font-family.css",
-                  "name": "cdr-text-font-family.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text-font-size.css",
-                  "name": "cdr-text-font-size.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text-font-style.css",
-                  "name": "cdr-text-font-style.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text-font-weight.css",
-                  "name": "cdr-text-font-weight.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text-letter-spacing.css",
-                  "name": "cdr-text-letter-spacing.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text-line-height.css",
-                  "name": "cdr-text-line-height.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-text.css",
-                  "name": "cdr-text.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/css/foundations",
-                  "path": "docsite/css/foundations/cdr-type.css",
-                  "name": "cdr-type.css",
                   "type": "file"
                 }
               ]
@@ -366,378 +288,10 @@
           "children": [
             {
               "parent": "docsite/js",
-              "path": "docsite/js/components",
-              "name": "components",
-              "type": "directory",
-              "children": [
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-accordion.cjs",
-                  "name": "cdr-accordion.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-accordion.d.ts",
-                  "name": "cdr-accordion.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-accordion.mjs",
-                  "name": "cdr-accordion.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-button.cjs",
-                  "name": "cdr-button.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-button.d.ts",
-                  "name": "cdr-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-button.mjs",
-                  "name": "cdr-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-chip.cjs",
-                  "name": "cdr-chip.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-chip.d.ts",
-                  "name": "cdr-chip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-chip.mjs",
-                  "name": "cdr-chip.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-form.cjs",
-                  "name": "cdr-form.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-form.d.ts",
-                  "name": "cdr-form.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-form.mjs",
-                  "name": "cdr-form.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-icon.cjs",
-                  "name": "cdr-icon.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-icon.d.ts",
-                  "name": "cdr-icon.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-icon.mjs",
-                  "name": "cdr-icon.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-input.cjs",
-                  "name": "cdr-input.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-input.d.ts",
-                  "name": "cdr-input.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-input.mjs",
-                  "name": "cdr-input.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-link.cjs",
-                  "name": "cdr-link.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-link.d.ts",
-                  "name": "cdr-link.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-link.mjs",
-                  "name": "cdr-link.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-message.cjs",
-                  "name": "cdr-message.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-message.d.ts",
-                  "name": "cdr-message.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-message.mjs",
-                  "name": "cdr-message.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-modal.cjs",
-                  "name": "cdr-modal.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-modal.d.ts",
-                  "name": "cdr-modal.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-modal.mjs",
-                  "name": "cdr-modal.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-pagination.cjs",
-                  "name": "cdr-pagination.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-pagination.d.ts",
-                  "name": "cdr-pagination.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-pagination.mjs",
-                  "name": "cdr-pagination.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-rating.cjs",
-                  "name": "cdr-rating.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-rating.d.ts",
-                  "name": "cdr-rating.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-rating.mjs",
-                  "name": "cdr-rating.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-slide.cjs",
-                  "name": "cdr-slide.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-slide.d.ts",
-                  "name": "cdr-slide.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-slide.mjs",
-                  "name": "cdr-slide.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-surface-selection.cjs",
-                  "name": "cdr-surface-selection.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-surface-selection.d.ts",
-                  "name": "cdr-surface-selection.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-surface-selection.mjs",
-                  "name": "cdr-surface-selection.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-surface.cjs",
-                  "name": "cdr-surface.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-surface.d.ts",
-                  "name": "cdr-surface.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-surface.mjs",
-                  "name": "cdr-surface.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-switch.cjs",
-                  "name": "cdr-switch.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-switch.d.ts",
-                  "name": "cdr-switch.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-switch.mjs",
-                  "name": "cdr-switch.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-tab.cjs",
-                  "name": "cdr-tab.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-tab.d.ts",
-                  "name": "cdr-tab.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-tab.mjs",
-                  "name": "cdr-tab.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-table.cjs",
-                  "name": "cdr-table.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-table.d.ts",
-                  "name": "cdr-table.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-table.mjs",
-                  "name": "cdr-table.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-toggle-button.cjs",
-                  "name": "cdr-toggle-button.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-toggle-button.d.ts",
-                  "name": "cdr-toggle-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-toggle-button.mjs",
-                  "name": "cdr-toggle-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-tooltip.cjs",
-                  "name": "cdr-tooltip.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-tooltip.d.ts",
-                  "name": "cdr-tooltip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/components",
-                  "path": "docsite/js/components/cdr-tooltip.mjs",
-                  "name": "cdr-tooltip.mjs",
-                  "type": "file"
-                }
-              ]
-            },
-            {
-              "parent": "docsite/js",
               "path": "docsite/js/foundations",
               "name": "foundations",
               "type": "directory",
               "children": [
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-breakpoint.cjs",
-                  "name": "cdr-breakpoint.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-breakpoint.d.ts",
-                  "name": "cdr-breakpoint.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-breakpoint.mjs",
-                  "name": "cdr-breakpoint.mjs",
-                  "type": "file"
-                },
                 {
                   "parent": "docsite/js/foundations",
                   "path": "docsite/js/foundations/cdr-color-background.cjs",
@@ -812,74 +366,38 @@
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-font.cjs",
-                  "name": "cdr-font.cjs",
+                  "path": "docsite/js/foundations/cdr-icon.cjs",
+                  "name": "cdr-icon.cjs",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-font.d.ts",
-                  "name": "cdr-font.d.ts",
+                  "path": "docsite/js/foundations/cdr-icon.d.ts",
+                  "name": "cdr-icon.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-font.mjs",
-                  "name": "cdr-font.mjs",
+                  "path": "docsite/js/foundations/cdr-icon.mjs",
+                  "name": "cdr-icon.mjs",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-line-height.cjs",
-                  "name": "cdr-line-height.cjs",
+                  "path": "docsite/js/foundations/cdr-motion.cjs",
+                  "name": "cdr-motion.cjs",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-line-height.d.ts",
-                  "name": "cdr-line-height.d.ts",
+                  "path": "docsite/js/foundations/cdr-motion.d.ts",
+                  "name": "cdr-motion.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-line-height.mjs",
-                  "name": "cdr-line-height.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-motion-duration.cjs",
-                  "name": "cdr-motion-duration.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-motion-duration.d.ts",
-                  "name": "cdr-motion-duration.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-motion-duration.mjs",
-                  "name": "cdr-motion-duration.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-motion-timing.cjs",
-                  "name": "cdr-motion-timing.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-motion-timing.d.ts",
-                  "name": "cdr-motion-timing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-motion-timing.mjs",
-                  "name": "cdr-motion-timing.mjs",
+                  "path": "docsite/js/foundations/cdr-motion.mjs",
+                  "name": "cdr-motion.mjs",
                   "type": "file"
                 },
                 {
@@ -920,42 +438,6 @@
                 },
                 {
                   "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-space-inset.cjs",
-                  "name": "cdr-space-inset.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-space-inset.d.ts",
-                  "name": "cdr-space-inset.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-space-inset.mjs",
-                  "name": "cdr-space-inset.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-space-scale.cjs",
-                  "name": "cdr-space-scale.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-space-scale.d.ts",
-                  "name": "cdr-space-scale.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-space-scale.mjs",
-                  "name": "cdr-space-scale.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
                   "path": "docsite/js/foundations/cdr-space.cjs",
                   "name": "cdr-space.cjs",
                   "type": "file"
@@ -971,150 +453,6 @@
                   "path": "docsite/js/foundations/cdr-space.mjs",
                   "name": "cdr-space.mjs",
                   "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-family.cjs",
-                  "name": "cdr-text-font-family.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-family.d.ts",
-                  "name": "cdr-text-font-family.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-family.mjs",
-                  "name": "cdr-text-font-family.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-size.cjs",
-                  "name": "cdr-text-font-size.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-size.d.ts",
-                  "name": "cdr-text-font-size.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-size.mjs",
-                  "name": "cdr-text-font-size.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-style.cjs",
-                  "name": "cdr-text-font-style.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-style.d.ts",
-                  "name": "cdr-text-font-style.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-style.mjs",
-                  "name": "cdr-text-font-style.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-weight.cjs",
-                  "name": "cdr-text-font-weight.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-weight.d.ts",
-                  "name": "cdr-text-font-weight.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-font-weight.mjs",
-                  "name": "cdr-text-font-weight.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-letter-spacing.cjs",
-                  "name": "cdr-text-letter-spacing.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-letter-spacing.d.ts",
-                  "name": "cdr-text-letter-spacing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-letter-spacing.mjs",
-                  "name": "cdr-text-letter-spacing.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-line-height.cjs",
-                  "name": "cdr-text-line-height.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-line-height.d.ts",
-                  "name": "cdr-text-line-height.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text-line-height.mjs",
-                  "name": "cdr-text-line-height.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text.cjs",
-                  "name": "cdr-text.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text.d.ts",
-                  "name": "cdr-text.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-text.mjs",
-                  "name": "cdr-text.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-type.cjs",
-                  "name": "cdr-type.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-type.d.ts",
-                  "name": "cdr-type.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/js/foundations",
-                  "path": "docsite/js/foundations/cdr-type.mjs",
-                  "name": "cdr-type.mjs",
-                  "type": "file"
                 }
               ]
             },
@@ -1126,8 +464,8 @@
             },
             {
               "parent": "docsite/js",
-              "path": "docsite/js/cdr-tokens.d.mts",
-              "name": "cdr-tokens.d.mts",
+              "path": "docsite/js/cdr-tokens.d.ts",
+              "name": "cdr-tokens.d.ts",
               "type": "file"
             },
             {
@@ -1172,12 +510,6 @@
                   "parent": "docsite/json/components",
                   "path": "docsite/json/components/cdr-form.json",
                   "name": "cdr-form.json",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/json/components",
-                  "path": "docsite/json/components/cdr-icon.json",
-                  "name": "cdr-icon.json",
                   "type": "file"
                 },
                 {
@@ -1476,12 +808,6 @@
                 },
                 {
                   "parent": "docsite/scss/components",
-                  "path": "docsite/scss/components/cdr-icon.scss",
-                  "name": "cdr-icon.scss",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/scss/components",
                   "path": "docsite/scss/components/cdr-input.scss",
                   "name": "cdr-input.scss",
                   "type": "file"
@@ -1768,378 +1094,10 @@
             },
             {
               "parent": "docsite/types",
-              "path": "docsite/types/components",
-              "name": "components",
-              "type": "directory",
-              "children": [
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-accordion.d.ts",
-                  "name": "cdr-accordion.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-accordion.mjs",
-                  "name": "cdr-accordion.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-accordion.names.d.ts",
-                  "name": "cdr-accordion.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-button.d.ts",
-                  "name": "cdr-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-button.mjs",
-                  "name": "cdr-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-button.names.d.ts",
-                  "name": "cdr-button.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-chip.d.ts",
-                  "name": "cdr-chip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-chip.mjs",
-                  "name": "cdr-chip.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-chip.names.d.ts",
-                  "name": "cdr-chip.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-form.d.ts",
-                  "name": "cdr-form.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-form.mjs",
-                  "name": "cdr-form.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-form.names.d.ts",
-                  "name": "cdr-form.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-icon.d.ts",
-                  "name": "cdr-icon.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-icon.mjs",
-                  "name": "cdr-icon.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-icon.names.d.ts",
-                  "name": "cdr-icon.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-input.d.ts",
-                  "name": "cdr-input.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-input.mjs",
-                  "name": "cdr-input.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-input.names.d.ts",
-                  "name": "cdr-input.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-link.d.ts",
-                  "name": "cdr-link.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-link.mjs",
-                  "name": "cdr-link.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-link.names.d.ts",
-                  "name": "cdr-link.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-message.d.ts",
-                  "name": "cdr-message.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-message.mjs",
-                  "name": "cdr-message.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-message.names.d.ts",
-                  "name": "cdr-message.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-modal.d.ts",
-                  "name": "cdr-modal.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-modal.mjs",
-                  "name": "cdr-modal.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-modal.names.d.ts",
-                  "name": "cdr-modal.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-pagination.d.ts",
-                  "name": "cdr-pagination.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-pagination.mjs",
-                  "name": "cdr-pagination.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-pagination.names.d.ts",
-                  "name": "cdr-pagination.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-rating.d.ts",
-                  "name": "cdr-rating.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-rating.mjs",
-                  "name": "cdr-rating.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-rating.names.d.ts",
-                  "name": "cdr-rating.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-slide.d.ts",
-                  "name": "cdr-slide.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-slide.mjs",
-                  "name": "cdr-slide.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-slide.names.d.ts",
-                  "name": "cdr-slide.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-surface-selection.d.ts",
-                  "name": "cdr-surface-selection.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-surface-selection.mjs",
-                  "name": "cdr-surface-selection.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-surface-selection.names.d.ts",
-                  "name": "cdr-surface-selection.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-surface.d.ts",
-                  "name": "cdr-surface.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-surface.mjs",
-                  "name": "cdr-surface.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-surface.names.d.ts",
-                  "name": "cdr-surface.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-switch.d.ts",
-                  "name": "cdr-switch.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-switch.mjs",
-                  "name": "cdr-switch.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-switch.names.d.ts",
-                  "name": "cdr-switch.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-tab.d.ts",
-                  "name": "cdr-tab.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-tab.mjs",
-                  "name": "cdr-tab.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-tab.names.d.ts",
-                  "name": "cdr-tab.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-table.d.ts",
-                  "name": "cdr-table.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-table.mjs",
-                  "name": "cdr-table.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-table.names.d.ts",
-                  "name": "cdr-table.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-toggle-button.d.ts",
-                  "name": "cdr-toggle-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-toggle-button.mjs",
-                  "name": "cdr-toggle-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-toggle-button.names.d.ts",
-                  "name": "cdr-toggle-button.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-tooltip.d.ts",
-                  "name": "cdr-tooltip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-tooltip.mjs",
-                  "name": "cdr-tooltip.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/components",
-                  "path": "docsite/types/components/cdr-tooltip.names.d.ts",
-                  "name": "cdr-tooltip.names.d.ts",
-                  "type": "file"
-                }
-              ]
-            },
-            {
-              "parent": "docsite/types",
               "path": "docsite/types/foundations",
               "name": "foundations",
               "type": "directory",
               "children": [
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-breakpoint.d.ts",
-                  "name": "cdr-breakpoint.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-breakpoint.mjs",
-                  "name": "cdr-breakpoint.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-breakpoint.names.d.ts",
-                  "name": "cdr-breakpoint.names.d.ts",
-                  "type": "file"
-                },
                 {
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-color-background.d.ts",
@@ -2214,74 +1172,38 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-font.d.ts",
-                  "name": "cdr-font.d.ts",
+                  "path": "docsite/types/foundations/cdr-icon.d.ts",
+                  "name": "cdr-icon.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-font.mjs",
-                  "name": "cdr-font.mjs",
+                  "path": "docsite/types/foundations/cdr-icon.mjs",
+                  "name": "cdr-icon.mjs",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-font.names.d.ts",
-                  "name": "cdr-font.names.d.ts",
+                  "path": "docsite/types/foundations/cdr-icon.names.d.ts",
+                  "name": "cdr-icon.names.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-line-height.d.ts",
-                  "name": "cdr-line-height.d.ts",
+                  "path": "docsite/types/foundations/cdr-motion.d.ts",
+                  "name": "cdr-motion.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-line-height.mjs",
-                  "name": "cdr-line-height.mjs",
+                  "path": "docsite/types/foundations/cdr-motion.mjs",
+                  "name": "cdr-motion.mjs",
                   "type": "file"
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-line-height.names.d.ts",
-                  "name": "cdr-line-height.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-duration.d.ts",
-                  "name": "cdr-motion-duration.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-duration.mjs",
-                  "name": "cdr-motion-duration.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-duration.names.d.ts",
-                  "name": "cdr-motion-duration.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-timing.d.ts",
-                  "name": "cdr-motion-timing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-timing.mjs",
-                  "name": "cdr-motion-timing.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-timing.names.d.ts",
-                  "name": "cdr-motion-timing.names.d.ts",
+                  "path": "docsite/types/foundations/cdr-motion.names.d.ts",
+                  "name": "cdr-motion.names.d.ts",
                   "type": "file"
                 },
                 {
@@ -2322,42 +1244,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-inset.d.ts",
-                  "name": "cdr-space-inset.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-inset.mjs",
-                  "name": "cdr-space-inset.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-inset.names.d.ts",
-                  "name": "cdr-space-inset.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-scale.d.ts",
-                  "name": "cdr-space-scale.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-scale.mjs",
-                  "name": "cdr-space-scale.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-scale.names.d.ts",
-                  "name": "cdr-space-scale.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-space.d.ts",
                   "name": "cdr-space.d.ts",
                   "type": "file"
@@ -2373,152 +1259,20 @@
                   "path": "docsite/types/foundations/cdr-space.names.d.ts",
                   "name": "cdr-space.names.d.ts",
                   "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-family.d.ts",
-                  "name": "cdr-text-font-family.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-family.mjs",
-                  "name": "cdr-text-font-family.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-family.names.d.ts",
-                  "name": "cdr-text-font-family.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-size.d.ts",
-                  "name": "cdr-text-font-size.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-size.mjs",
-                  "name": "cdr-text-font-size.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-size.names.d.ts",
-                  "name": "cdr-text-font-size.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-style.d.ts",
-                  "name": "cdr-text-font-style.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-style.mjs",
-                  "name": "cdr-text-font-style.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-style.names.d.ts",
-                  "name": "cdr-text-font-style.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-weight.d.ts",
-                  "name": "cdr-text-font-weight.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-weight.mjs",
-                  "name": "cdr-text-font-weight.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-font-weight.names.d.ts",
-                  "name": "cdr-text-font-weight.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-letter-spacing.d.ts",
-                  "name": "cdr-text-letter-spacing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-letter-spacing.mjs",
-                  "name": "cdr-text-letter-spacing.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-letter-spacing.names.d.ts",
-                  "name": "cdr-text-letter-spacing.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-line-height.d.ts",
-                  "name": "cdr-text-line-height.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-line-height.mjs",
-                  "name": "cdr-text-line-height.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-line-height.names.d.ts",
-                  "name": "cdr-text-line-height.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text.d.ts",
-                  "name": "cdr-text.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text.mjs",
-                  "name": "cdr-text.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text.names.d.ts",
-                  "name": "cdr-text.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-type.d.ts",
-                  "name": "cdr-type.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-type.mjs",
-                  "name": "cdr-type.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-type.names.d.ts",
-                  "name": "cdr-type.names.d.ts",
-                  "type": "file"
                 }
               ]
+            },
+            {
+              "parent": "docsite/types",
+              "path": "docsite/types/index.d.ts",
+              "name": "index.d.ts",
+              "type": "file"
+            },
+            {
+              "parent": "docsite/types",
+              "path": "docsite/types/index.mjs",
+              "name": "index.mjs",
+              "type": "file"
             }
           ]
         }
@@ -2590,12 +1344,6 @@
                   "parent": "rei-dot-com/css/components",
                   "path": "rei-dot-com/css/components/cdr-form.css",
                   "name": "cdr-form.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/components",
-                  "path": "rei-dot-com/css/components/cdr-icon.css",
-                  "name": "cdr-icon.css",
                   "type": "file"
                 },
                 {
@@ -2722,26 +1470,14 @@
                 },
                 {
                   "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-font.css",
-                  "name": "cdr-font.css",
+                  "path": "rei-dot-com/css/foundations/cdr-icon.css",
+                  "name": "cdr-icon.css",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-line-height.css",
-                  "name": "cdr-line-height.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-motion-duration.css",
-                  "name": "cdr-motion-duration.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-motion-timing.css",
-                  "name": "cdr-motion-timing.css",
+                  "path": "rei-dot-com/css/foundations/cdr-motion.css",
+                  "name": "cdr-motion.css",
                   "type": "file"
                 },
                 {
@@ -2758,68 +1494,8 @@
                 },
                 {
                   "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-space-inset.css",
-                  "name": "cdr-space-inset.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-space-scale.css",
-                  "name": "cdr-space-scale.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
                   "path": "rei-dot-com/css/foundations/cdr-space.css",
                   "name": "cdr-space.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text-font-family.css",
-                  "name": "cdr-text-font-family.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text-font-size.css",
-                  "name": "cdr-text-font-size.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text-font-style.css",
-                  "name": "cdr-text-font-style.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text-font-weight.css",
-                  "name": "cdr-text-font-weight.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text-letter-spacing.css",
-                  "name": "cdr-text-letter-spacing.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text-line-height.css",
-                  "name": "cdr-text-line-height.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-text.css",
-                  "name": "cdr-text.css",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/css/foundations",
-                  "path": "rei-dot-com/css/foundations/cdr-type.css",
-                  "name": "cdr-type.css",
                   "type": "file"
                 }
               ]
@@ -2906,378 +1582,10 @@
           "children": [
             {
               "parent": "rei-dot-com/js",
-              "path": "rei-dot-com/js/components",
-              "name": "components",
-              "type": "directory",
-              "children": [
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-accordion.cjs",
-                  "name": "cdr-accordion.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-accordion.d.ts",
-                  "name": "cdr-accordion.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-accordion.mjs",
-                  "name": "cdr-accordion.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-button.cjs",
-                  "name": "cdr-button.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-button.d.ts",
-                  "name": "cdr-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-button.mjs",
-                  "name": "cdr-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-chip.cjs",
-                  "name": "cdr-chip.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-chip.d.ts",
-                  "name": "cdr-chip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-chip.mjs",
-                  "name": "cdr-chip.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-form.cjs",
-                  "name": "cdr-form.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-form.d.ts",
-                  "name": "cdr-form.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-form.mjs",
-                  "name": "cdr-form.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-icon.cjs",
-                  "name": "cdr-icon.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-icon.d.ts",
-                  "name": "cdr-icon.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-icon.mjs",
-                  "name": "cdr-icon.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-input.cjs",
-                  "name": "cdr-input.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-input.d.ts",
-                  "name": "cdr-input.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-input.mjs",
-                  "name": "cdr-input.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-link.cjs",
-                  "name": "cdr-link.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-link.d.ts",
-                  "name": "cdr-link.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-link.mjs",
-                  "name": "cdr-link.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-message.cjs",
-                  "name": "cdr-message.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-message.d.ts",
-                  "name": "cdr-message.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-message.mjs",
-                  "name": "cdr-message.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-modal.cjs",
-                  "name": "cdr-modal.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-modal.d.ts",
-                  "name": "cdr-modal.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-modal.mjs",
-                  "name": "cdr-modal.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-pagination.cjs",
-                  "name": "cdr-pagination.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-pagination.d.ts",
-                  "name": "cdr-pagination.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-pagination.mjs",
-                  "name": "cdr-pagination.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-rating.cjs",
-                  "name": "cdr-rating.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-rating.d.ts",
-                  "name": "cdr-rating.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-rating.mjs",
-                  "name": "cdr-rating.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-slide.cjs",
-                  "name": "cdr-slide.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-slide.d.ts",
-                  "name": "cdr-slide.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-slide.mjs",
-                  "name": "cdr-slide.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-surface-selection.cjs",
-                  "name": "cdr-surface-selection.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-surface-selection.d.ts",
-                  "name": "cdr-surface-selection.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-surface-selection.mjs",
-                  "name": "cdr-surface-selection.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-surface.cjs",
-                  "name": "cdr-surface.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-surface.d.ts",
-                  "name": "cdr-surface.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-surface.mjs",
-                  "name": "cdr-surface.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-switch.cjs",
-                  "name": "cdr-switch.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-switch.d.ts",
-                  "name": "cdr-switch.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-switch.mjs",
-                  "name": "cdr-switch.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-tab.cjs",
-                  "name": "cdr-tab.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-tab.d.ts",
-                  "name": "cdr-tab.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-tab.mjs",
-                  "name": "cdr-tab.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-table.cjs",
-                  "name": "cdr-table.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-table.d.ts",
-                  "name": "cdr-table.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-table.mjs",
-                  "name": "cdr-table.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-toggle-button.cjs",
-                  "name": "cdr-toggle-button.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-toggle-button.d.ts",
-                  "name": "cdr-toggle-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-toggle-button.mjs",
-                  "name": "cdr-toggle-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-tooltip.cjs",
-                  "name": "cdr-tooltip.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-tooltip.d.ts",
-                  "name": "cdr-tooltip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/components",
-                  "path": "rei-dot-com/js/components/cdr-tooltip.mjs",
-                  "name": "cdr-tooltip.mjs",
-                  "type": "file"
-                }
-              ]
-            },
-            {
-              "parent": "rei-dot-com/js",
               "path": "rei-dot-com/js/foundations",
               "name": "foundations",
               "type": "directory",
               "children": [
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-breakpoint.cjs",
-                  "name": "cdr-breakpoint.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-breakpoint.d.ts",
-                  "name": "cdr-breakpoint.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-breakpoint.mjs",
-                  "name": "cdr-breakpoint.mjs",
-                  "type": "file"
-                },
                 {
                   "parent": "rei-dot-com/js/foundations",
                   "path": "rei-dot-com/js/foundations/cdr-color-background.cjs",
@@ -3352,74 +1660,38 @@
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-font.cjs",
-                  "name": "cdr-font.cjs",
+                  "path": "rei-dot-com/js/foundations/cdr-icon.cjs",
+                  "name": "cdr-icon.cjs",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-font.d.ts",
-                  "name": "cdr-font.d.ts",
+                  "path": "rei-dot-com/js/foundations/cdr-icon.d.ts",
+                  "name": "cdr-icon.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-font.mjs",
-                  "name": "cdr-font.mjs",
+                  "path": "rei-dot-com/js/foundations/cdr-icon.mjs",
+                  "name": "cdr-icon.mjs",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-line-height.cjs",
-                  "name": "cdr-line-height.cjs",
+                  "path": "rei-dot-com/js/foundations/cdr-motion.cjs",
+                  "name": "cdr-motion.cjs",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-line-height.d.ts",
-                  "name": "cdr-line-height.d.ts",
+                  "path": "rei-dot-com/js/foundations/cdr-motion.d.ts",
+                  "name": "cdr-motion.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-line-height.mjs",
-                  "name": "cdr-line-height.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-motion-duration.cjs",
-                  "name": "cdr-motion-duration.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-motion-duration.d.ts",
-                  "name": "cdr-motion-duration.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-motion-duration.mjs",
-                  "name": "cdr-motion-duration.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-motion-timing.cjs",
-                  "name": "cdr-motion-timing.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-motion-timing.d.ts",
-                  "name": "cdr-motion-timing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-motion-timing.mjs",
-                  "name": "cdr-motion-timing.mjs",
+                  "path": "rei-dot-com/js/foundations/cdr-motion.mjs",
+                  "name": "cdr-motion.mjs",
                   "type": "file"
                 },
                 {
@@ -3460,42 +1732,6 @@
                 },
                 {
                   "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-space-inset.cjs",
-                  "name": "cdr-space-inset.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-space-inset.d.ts",
-                  "name": "cdr-space-inset.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-space-inset.mjs",
-                  "name": "cdr-space-inset.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-space-scale.cjs",
-                  "name": "cdr-space-scale.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-space-scale.d.ts",
-                  "name": "cdr-space-scale.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-space-scale.mjs",
-                  "name": "cdr-space-scale.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
                   "path": "rei-dot-com/js/foundations/cdr-space.cjs",
                   "name": "cdr-space.cjs",
                   "type": "file"
@@ -3511,150 +1747,6 @@
                   "path": "rei-dot-com/js/foundations/cdr-space.mjs",
                   "name": "cdr-space.mjs",
                   "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-family.cjs",
-                  "name": "cdr-text-font-family.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-family.d.ts",
-                  "name": "cdr-text-font-family.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-family.mjs",
-                  "name": "cdr-text-font-family.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-size.cjs",
-                  "name": "cdr-text-font-size.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-size.d.ts",
-                  "name": "cdr-text-font-size.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-size.mjs",
-                  "name": "cdr-text-font-size.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-style.cjs",
-                  "name": "cdr-text-font-style.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-style.d.ts",
-                  "name": "cdr-text-font-style.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-style.mjs",
-                  "name": "cdr-text-font-style.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-weight.cjs",
-                  "name": "cdr-text-font-weight.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-weight.d.ts",
-                  "name": "cdr-text-font-weight.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-font-weight.mjs",
-                  "name": "cdr-text-font-weight.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-letter-spacing.cjs",
-                  "name": "cdr-text-letter-spacing.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-letter-spacing.d.ts",
-                  "name": "cdr-text-letter-spacing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-letter-spacing.mjs",
-                  "name": "cdr-text-letter-spacing.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-line-height.cjs",
-                  "name": "cdr-text-line-height.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-line-height.d.ts",
-                  "name": "cdr-text-line-height.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text-line-height.mjs",
-                  "name": "cdr-text-line-height.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text.cjs",
-                  "name": "cdr-text.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text.d.ts",
-                  "name": "cdr-text.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-text.mjs",
-                  "name": "cdr-text.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-type.cjs",
-                  "name": "cdr-type.cjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-type.d.ts",
-                  "name": "cdr-type.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/js/foundations",
-                  "path": "rei-dot-com/js/foundations/cdr-type.mjs",
-                  "name": "cdr-type.mjs",
-                  "type": "file"
                 }
               ]
             },
@@ -3666,8 +1758,8 @@
             },
             {
               "parent": "rei-dot-com/js",
-              "path": "rei-dot-com/js/cdr-tokens.d.mts",
-              "name": "cdr-tokens.d.mts",
+              "path": "rei-dot-com/js/cdr-tokens.d.ts",
+              "name": "cdr-tokens.d.ts",
               "type": "file"
             },
             {
@@ -3712,12 +1804,6 @@
                   "parent": "rei-dot-com/json/components",
                   "path": "rei-dot-com/json/components/cdr-form.json",
                   "name": "cdr-form.json",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/json/components",
-                  "path": "rei-dot-com/json/components/cdr-icon.json",
-                  "name": "cdr-icon.json",
                   "type": "file"
                 },
                 {
@@ -4012,12 +2098,6 @@
                   "parent": "rei-dot-com/scss/components",
                   "path": "rei-dot-com/scss/components/cdr-form.scss",
                   "name": "cdr-form.scss",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/scss/components",
-                  "path": "rei-dot-com/scss/components/cdr-icon.scss",
-                  "name": "cdr-icon.scss",
                   "type": "file"
                 },
                 {
@@ -4328,378 +2408,10 @@
             },
             {
               "parent": "rei-dot-com/types",
-              "path": "rei-dot-com/types/components",
-              "name": "components",
-              "type": "directory",
-              "children": [
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-accordion.d.ts",
-                  "name": "cdr-accordion.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-accordion.mjs",
-                  "name": "cdr-accordion.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-accordion.names.d.ts",
-                  "name": "cdr-accordion.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-button.d.ts",
-                  "name": "cdr-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-button.mjs",
-                  "name": "cdr-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-button.names.d.ts",
-                  "name": "cdr-button.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-chip.d.ts",
-                  "name": "cdr-chip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-chip.mjs",
-                  "name": "cdr-chip.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-chip.names.d.ts",
-                  "name": "cdr-chip.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-form.d.ts",
-                  "name": "cdr-form.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-form.mjs",
-                  "name": "cdr-form.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-form.names.d.ts",
-                  "name": "cdr-form.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-icon.d.ts",
-                  "name": "cdr-icon.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-icon.mjs",
-                  "name": "cdr-icon.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-icon.names.d.ts",
-                  "name": "cdr-icon.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-input.d.ts",
-                  "name": "cdr-input.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-input.mjs",
-                  "name": "cdr-input.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-input.names.d.ts",
-                  "name": "cdr-input.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-link.d.ts",
-                  "name": "cdr-link.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-link.mjs",
-                  "name": "cdr-link.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-link.names.d.ts",
-                  "name": "cdr-link.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-message.d.ts",
-                  "name": "cdr-message.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-message.mjs",
-                  "name": "cdr-message.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-message.names.d.ts",
-                  "name": "cdr-message.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-modal.d.ts",
-                  "name": "cdr-modal.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-modal.mjs",
-                  "name": "cdr-modal.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-modal.names.d.ts",
-                  "name": "cdr-modal.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-pagination.d.ts",
-                  "name": "cdr-pagination.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-pagination.mjs",
-                  "name": "cdr-pagination.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-pagination.names.d.ts",
-                  "name": "cdr-pagination.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-rating.d.ts",
-                  "name": "cdr-rating.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-rating.mjs",
-                  "name": "cdr-rating.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-rating.names.d.ts",
-                  "name": "cdr-rating.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-slide.d.ts",
-                  "name": "cdr-slide.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-slide.mjs",
-                  "name": "cdr-slide.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-slide.names.d.ts",
-                  "name": "cdr-slide.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-surface-selection.d.ts",
-                  "name": "cdr-surface-selection.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-surface-selection.mjs",
-                  "name": "cdr-surface-selection.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-surface-selection.names.d.ts",
-                  "name": "cdr-surface-selection.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-surface.d.ts",
-                  "name": "cdr-surface.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-surface.mjs",
-                  "name": "cdr-surface.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-surface.names.d.ts",
-                  "name": "cdr-surface.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-switch.d.ts",
-                  "name": "cdr-switch.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-switch.mjs",
-                  "name": "cdr-switch.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-switch.names.d.ts",
-                  "name": "cdr-switch.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-tab.d.ts",
-                  "name": "cdr-tab.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-tab.mjs",
-                  "name": "cdr-tab.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-tab.names.d.ts",
-                  "name": "cdr-tab.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-table.d.ts",
-                  "name": "cdr-table.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-table.mjs",
-                  "name": "cdr-table.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-table.names.d.ts",
-                  "name": "cdr-table.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-toggle-button.d.ts",
-                  "name": "cdr-toggle-button.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-toggle-button.mjs",
-                  "name": "cdr-toggle-button.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-toggle-button.names.d.ts",
-                  "name": "cdr-toggle-button.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-tooltip.d.ts",
-                  "name": "cdr-tooltip.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-tooltip.mjs",
-                  "name": "cdr-tooltip.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/components",
-                  "path": "rei-dot-com/types/components/cdr-tooltip.names.d.ts",
-                  "name": "cdr-tooltip.names.d.ts",
-                  "type": "file"
-                }
-              ]
-            },
-            {
-              "parent": "rei-dot-com/types",
               "path": "rei-dot-com/types/foundations",
               "name": "foundations",
               "type": "directory",
               "children": [
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-breakpoint.d.ts",
-                  "name": "cdr-breakpoint.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-breakpoint.mjs",
-                  "name": "cdr-breakpoint.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-breakpoint.names.d.ts",
-                  "name": "cdr-breakpoint.names.d.ts",
-                  "type": "file"
-                },
                 {
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-color-background.d.ts",
@@ -4774,74 +2486,38 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-font.d.ts",
-                  "name": "cdr-font.d.ts",
+                  "path": "rei-dot-com/types/foundations/cdr-icon.d.ts",
+                  "name": "cdr-icon.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-font.mjs",
-                  "name": "cdr-font.mjs",
+                  "path": "rei-dot-com/types/foundations/cdr-icon.mjs",
+                  "name": "cdr-icon.mjs",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-font.names.d.ts",
-                  "name": "cdr-font.names.d.ts",
+                  "path": "rei-dot-com/types/foundations/cdr-icon.names.d.ts",
+                  "name": "cdr-icon.names.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-line-height.d.ts",
-                  "name": "cdr-line-height.d.ts",
+                  "path": "rei-dot-com/types/foundations/cdr-motion.d.ts",
+                  "name": "cdr-motion.d.ts",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-line-height.mjs",
-                  "name": "cdr-line-height.mjs",
+                  "path": "rei-dot-com/types/foundations/cdr-motion.mjs",
+                  "name": "cdr-motion.mjs",
                   "type": "file"
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-line-height.names.d.ts",
-                  "name": "cdr-line-height.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-duration.d.ts",
-                  "name": "cdr-motion-duration.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-duration.mjs",
-                  "name": "cdr-motion-duration.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-duration.names.d.ts",
-                  "name": "cdr-motion-duration.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-timing.d.ts",
-                  "name": "cdr-motion-timing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-timing.mjs",
-                  "name": "cdr-motion-timing.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-timing.names.d.ts",
-                  "name": "cdr-motion-timing.names.d.ts",
+                  "path": "rei-dot-com/types/foundations/cdr-motion.names.d.ts",
+                  "name": "cdr-motion.names.d.ts",
                   "type": "file"
                 },
                 {
@@ -4882,42 +2558,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-inset.d.ts",
-                  "name": "cdr-space-inset.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-inset.mjs",
-                  "name": "cdr-space-inset.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-inset.names.d.ts",
-                  "name": "cdr-space-inset.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-scale.d.ts",
-                  "name": "cdr-space-scale.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-scale.mjs",
-                  "name": "cdr-space-scale.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-scale.names.d.ts",
-                  "name": "cdr-space-scale.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-space.d.ts",
                   "name": "cdr-space.d.ts",
                   "type": "file"
@@ -4933,152 +2573,20 @@
                   "path": "rei-dot-com/types/foundations/cdr-space.names.d.ts",
                   "name": "cdr-space.names.d.ts",
                   "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-family.d.ts",
-                  "name": "cdr-text-font-family.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-family.mjs",
-                  "name": "cdr-text-font-family.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-family.names.d.ts",
-                  "name": "cdr-text-font-family.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-size.d.ts",
-                  "name": "cdr-text-font-size.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-size.mjs",
-                  "name": "cdr-text-font-size.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-size.names.d.ts",
-                  "name": "cdr-text-font-size.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-style.d.ts",
-                  "name": "cdr-text-font-style.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-style.mjs",
-                  "name": "cdr-text-font-style.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-style.names.d.ts",
-                  "name": "cdr-text-font-style.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-weight.d.ts",
-                  "name": "cdr-text-font-weight.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-weight.mjs",
-                  "name": "cdr-text-font-weight.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-font-weight.names.d.ts",
-                  "name": "cdr-text-font-weight.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-letter-spacing.d.ts",
-                  "name": "cdr-text-letter-spacing.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-letter-spacing.mjs",
-                  "name": "cdr-text-letter-spacing.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-letter-spacing.names.d.ts",
-                  "name": "cdr-text-letter-spacing.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-line-height.d.ts",
-                  "name": "cdr-text-line-height.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-line-height.mjs",
-                  "name": "cdr-text-line-height.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-line-height.names.d.ts",
-                  "name": "cdr-text-line-height.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text.d.ts",
-                  "name": "cdr-text.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text.mjs",
-                  "name": "cdr-text.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text.names.d.ts",
-                  "name": "cdr-text.names.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-type.d.ts",
-                  "name": "cdr-type.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-type.mjs",
-                  "name": "cdr-type.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-type.names.d.ts",
-                  "name": "cdr-type.names.d.ts",
-                  "type": "file"
                 }
               ]
+            },
+            {
+              "parent": "rei-dot-com/types",
+              "path": "rei-dot-com/types/index.d.ts",
+              "name": "index.d.ts",
+              "type": "file"
+            },
+            {
+              "parent": "rei-dot-com/types",
+              "path": "rei-dot-com/types/index.mjs",
+              "name": "index.mjs",
+              "type": "file"
             }
           ]
         }
