@@ -10,6 +10,7 @@ const __dirname = getDirname(import.meta.url);
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
   const importStatement = isScss ? '@forward' : '@import';
+  const outputDir = path.dirname(filePath);
   const imports = foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`);
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
   const extensionImports: string[] = [];
@@ -34,7 +35,13 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   });
 
   importsExtension.forEach((importFile: string) => {
-    extensionImports.push(`${importStatement} "${importFile}";`);
+    const fsPath = isScss
+      ? path.join(outputDir, `${importFile}.scss`)
+      : path.join(outputDir, importFile);
+
+    if (fs.pathExistsSync(fsPath)) {
+      extensionImports.push(`${importStatement} "${importFile}";`);
+    }
   });
 
   return extensionImports.join('\n');
