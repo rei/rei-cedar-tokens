@@ -1,7 +1,12 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
+import fs from 'fs-extra';
+import path from 'node:path';
 import { PLATFORMS, THEMES } from './constants';
 import { getConfig } from './configs';
+import { getDirname } from './utils';
+
+const __dirname = getDirname(import.meta.url);
 
 /**
  * REI Cedar Tokens Build Script
@@ -221,7 +226,14 @@ async function buildAllThemesAndPlatforms() {
       console.log('\n==============================================');
       console.log(`\nProcessing: [${platform}] [${theme}]`);
 
-      const sd = new StyleDictionary(getConfig(platform, theme));
+      const config = getConfig(platform, theme);
+      const platformConfig = config[platform];
+      if (platformConfig?.buildPath) {
+        // Ensure removed/renamed outputs from previous builds do not linger in dist.
+        fs.removeSync(path.join(__dirname, '../', platformConfig.buildPath));
+      }
+
+      const sd = new StyleDictionary(config);
       try {
         await sd.buildAllPlatforms();
       } catch (error) {

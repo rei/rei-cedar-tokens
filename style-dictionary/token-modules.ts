@@ -1,4 +1,5 @@
 import type { Theme } from './constants';
+import { foundationsModulesName } from './configs/filters/modules';
 
 export type ModuleTarget = 'js' | 'scss' | 'types';
 
@@ -10,61 +11,15 @@ export interface TokenModuleDefinition {
   themes?: Theme[];
 }
 
+const foundationsModules: TokenModuleDefinition[] = foundationsModulesName.map((moduleName) => ({
+  responsibility: 'foundations',
+  name: `cdr-${moduleName}`,
+  filter: `foundations-${moduleName}-tokens`,
+  targets: ['js', 'scss', 'types'],
+}));
+
 const TOKEN_MODULES: TokenModuleDefinition[] = [
-  {
-    responsibility: 'foundations',
-    name: 'cdr-color-background',
-    filter: 'color-background-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-color-text',
-    filter: 'color-text-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-color-border',
-    filter: 'color-border-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-color-icon',
-    filter: 'color-icon-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-motion',
-    filter: 'motion-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-prominence',
-    filter: 'prominence-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-icon',
-    filter: 'icon-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-radius',
-    filter: 'radius-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
-    name: 'cdr-space',
-    filter: 'space-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
+  ...foundationsModules,
   {
     responsibility: 'palettes',
     name: 'cdr-palette-membership-subtle',
