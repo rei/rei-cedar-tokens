@@ -73,7 +73,7 @@ export const css = (theme: Theme): PlatformConfig => ({
       // Component filters
       ...componentsFilters('css', 'css/variables'),
       // REI Dot Com Specific Palettes
-      ...(theme == 'rei-dot-com'
+      ...(theme === 'rei-dot-com'
         ? [
             {
               destination: 'palettes/cdr-palette-membership-subtle.css',
