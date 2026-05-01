@@ -32,16 +32,32 @@
       "types": "./dist/types/base/token-schema.d.ts",
       "default": "./dist/types/base/token-schema.d.ts"
     },
+    "./rei-dot-com/js/*": {
+      "types": "./dist/rei-dot-com/js/*.d.ts",
+      "import": "./dist/rei-dot-com/js/*.mjs",
+      "require": "./dist/rei-dot-com/js/*.cjs"
+    },
+    "./rei-dot-com/css/*": "./dist/rei-dot-com/css/*",
+    "./rei-dot-com/scss/*": "./dist/rei-dot-com/scss/*",
     "./rei-dot-com/types/*": {
       "types": "./dist/rei-dot-com/types/*.d.ts",
       "import": "./dist/rei-dot-com/types/*.mjs",
       "default": "./dist/rei-dot-com/types/*.mjs"
     },
+    "./rei-dot-com/json/*": "./dist/rei-dot-com/json/*",
+    "./docsite/js/*": {
+      "types": "./dist/docsite/js/*.d.ts",
+      "import": "./dist/docsite/js/*.mjs",
+      "require": "./dist/docsite/js/*.cjs"
+    },
+    "./docsite/css/*": "./dist/docsite/css/*",
+    "./docsite/scss/*": "./dist/docsite/scss/*",
     "./docsite/types/*": {
       "types": "./dist/docsite/types/*.d.ts",
       "import": "./dist/docsite/types/*.mjs",
       "default": "./dist/docsite/types/*.mjs"
     },
+    "./docsite/json/*": "./dist/docsite/json/*",
     "./dist/": "./dist/"
   },
   "publishConfig": {

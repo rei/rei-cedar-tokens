@@ -1115,86 +1115,99 @@
         "deprecated": false
       },
       "key": "{color.border.input.default-disabled}"
-    }
-  ],
-  "form": [
-    {
-      "$value": "4rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "height",
-        "category": "form",
-        "example": "height-default",
-        "description": {
-          "what": "Default input height",
-          "when": "Use for standard form fields",
-          "alternatives": [
-            "4.8rem"
-          ]
-        }
-      },
-      "filePath": "tokens/global/form.json",
-      "isSource": false,
-      "original": {
-        "$value": "40px",
-        "$type": "dimension",
-        "docs": {
-          "type": "height",
-          "category": "form",
-          "example": "height-default",
-          "description": {
-            "what": "Default input height",
-            "when": "Use for standard form fields",
-            "alternatives": [
-              "{form.input.height-large}"
-            ]
-          }
-        }
-      },
-      "name": "cdr-form-input-height-default",
-      "attributes": {
-        "category": "form",
-        "type": "input",
-        "item": "height-default",
-        "deprecated": false
-      },
-      "key": "{form.input.height-default}"
     },
     {
-      "$value": "4.8rem",
-      "$type": "dimension",
+      "$value": "#ffffff",
+      "$type": "color",
       "docs": {
-        "type": "height",
-        "category": "form",
-        "example": "height-large",
-        "description": {
-          "what": "Large input height",
-          "when": "Use for spacious layouts"
-        }
+        "category": "colors",
+        "type": "input",
+        "example": "color",
+        "description": "Rest state of a selected form icon"
       },
-      "filePath": "tokens/global/form.json",
+      "filePath": "tokens/global/input.json",
       "isSource": false,
       "original": {
-        "$value": "48px",
-        "$type": "dimension",
+        "$value": "{options.color.white}",
+        "$type": "color",
         "docs": {
-          "type": "height",
-          "category": "form",
-          "example": "height-large",
-          "description": {
-            "what": "Large input height",
-            "when": "Use for spacious layouts"
-          }
+          "category": "colors",
+          "type": "input",
+          "example": "color",
+          "description": "Rest state of a selected form icon"
         }
       },
-      "name": "cdr-form-input-height-large",
+      "name": "cdr-color-icon-checkbox-default-selected",
       "attributes": {
-        "category": "form",
-        "type": "input",
-        "item": "height-large",
+        "category": "color",
+        "type": "icon",
+        "item": "checkbox",
+        "subitem": "default-selected",
         "deprecated": false
       },
-      "key": "{form.input.height-large}"
+      "key": "{color.icon.checkbox.default-selected}"
+    },
+    {
+      "$value": "#ffffff",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "input",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "filePath": "tokens/global/input.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.white}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "input",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "cdr-color-icon-checkbox-default-selected-hover",
+      "attributes": {
+        "category": "color",
+        "type": "icon",
+        "item": "checkbox",
+        "subitem": "default-selected-hover",
+        "deprecated": false
+      },
+      "key": "{color.icon.checkbox.default-selected-hover}"
+    },
+    {
+      "$value": "#4b4a48",
+      "$type": "color",
+      "docs": {
+        "category": "colors",
+        "type": "input",
+        "example": "color",
+        "description": "Hover state of a selected form icon"
+      },
+      "filePath": "tokens/global/input.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.color.warm-grey-900}",
+        "$type": "color",
+        "docs": {
+          "category": "colors",
+          "type": "input",
+          "example": "color",
+          "description": "Hover state of a selected form icon"
+        }
+      },
+      "name": "cdr-color-icon-checkbox-default-selected-active",
+      "attributes": {
+        "category": "color",
+        "type": "icon",
+        "item": "checkbox",
+        "subitem": "default-selected-active",
+        "deprecated": false
+      },
+      "key": "{color.icon.checkbox.default-selected-active}"
     }
   ]
 }

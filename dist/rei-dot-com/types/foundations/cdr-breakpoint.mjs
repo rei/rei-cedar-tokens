@@ -1,9 +1,8 @@
 export const CdrBreakpoint = {
-  CdrRadiusRound: "9999",
-  CdrRadiusSharp: "0",
-  CdrRadiusSoft: "2",
-  CdrRadiusSofter: "4",
-  CdrRadiusSoftest: "6",
+  CdrBreakpointLg: "1232",
+  CdrBreakpointMd: "992",
+  CdrBreakpointSm: "768",
+  CdrBreakpointXs: "0",
 };
 
 export default CdrBreakpoint;

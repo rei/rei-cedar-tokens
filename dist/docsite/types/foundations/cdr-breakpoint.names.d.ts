@@ -1,6 +1,5 @@
 export type CdrBreakpointTokenName =
-  | "CdrRadiusRound"
-  | "CdrRadiusSharp"
-  | "CdrRadiusSoft"
-  | "CdrRadiusSofter"
-  | "CdrRadiusSoftest";
+  | "CdrBreakpointLg"
+  | "CdrBreakpointMd"
+  | "CdrBreakpointSm"
+  | "CdrBreakpointXs";

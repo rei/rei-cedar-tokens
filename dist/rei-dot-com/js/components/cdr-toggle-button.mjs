@@ -1,0 +1,10 @@
+export const CdrColorBackgroundToggleGroupDefaultRest = "#fafbf9";
+export const CdrColorBackgroundToggleButtonDefaultRest = "#fafbf9";
+export const CdrColorBackgroundToggleButtonDefaultHover = "#edeae3";
+export const CdrColorBackgroundToggleButtonDefaultFocus = "#edeae3";
+export const CdrColorBackgroundToggleButtonDefaultSelectedRest = "#ffffff";
+export const CdrColorBackgroundToggleButtonDefaultSelectedHover = "#ffffff";
+export const CdrColorTextToggleButtonDefaultRest = "#4b4a48";
+export const CdrColorBorderToggleButtonDefaultFocus = "#4b4a48";
+export const CdrColorBorderToggleButtonDefaultSelectedRest = "#4b4a48";
+export const CdrColorBorderToggleButtonDefaultSelectedFocus = "#4b4a48";

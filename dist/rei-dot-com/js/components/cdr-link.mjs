@@ -1,0 +1,10 @@
+export const CdrColorTextLinkRest = "#406eb5";
+export const CdrColorTextLinkHover = "#406eb5";
+export const CdrColorTextLinkActive = "#0b2d60";
+export const CdrColorTextLinkDisabled = "#d5cfc3";
+export const CdrColorTextLinkVisited = "#406eb5";
+export const CdrColorBorderLinkRest = "#406eb5";
+export const CdrColorBorderLinkHover = "#406eb5";
+export const CdrColorBorderLinkActive = "#0b2d60";
+export const CdrColorBorderLinkDisabled = "#d5cfc3";
+export const CdrColorBorderLinkVisited = "#406eb5";

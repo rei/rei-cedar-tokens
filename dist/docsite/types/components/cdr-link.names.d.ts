@@ -4,7 +4,6 @@ export type CdrLinkTokenName =
   | "CdrColorBorderLinkHover"
   | "CdrColorBorderLinkRest"
   | "CdrColorBorderLinkVisited"
-  | "CdrColorIconLink"
   | "CdrColorTextLinkActive"
   | "CdrColorTextLinkDisabled"
   | "CdrColorTextLinkHover"

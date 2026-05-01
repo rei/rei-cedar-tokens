@@ -3,7 +3,7 @@ import type { Theme } from './constants';
 export type ModuleTarget = 'js' | 'scss' | 'types';
 
 export interface TokenModuleDefinition {
-  responsibility: 'foundations' | 'palettes';
+  responsibility: 'foundations' | 'components' | 'palettes';
   name: string;
   filter: string;
   targets: ModuleTarget[];
@@ -48,15 +48,15 @@ const TOKEN_MODULES: TokenModuleDefinition[] = [
     targets: ['js', 'scss', 'types'],
   },
   {
-    responsibility: 'foundations',
+    responsibility: 'components',
     name: 'cdr-form',
-    filter: 'form-tokens',
+    filter: 'component-form-tokens',
     targets: ['js', 'scss', 'types'],
   },
   {
-    responsibility: 'foundations',
+    responsibility: 'components',
     name: 'cdr-icon',
-    filter: 'icon-tokens',
+    filter: 'component-icon-tokens',
     targets: ['js', 'scss', 'types'],
   },
   {

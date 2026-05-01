@@ -9,10 +9,8 @@ const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
-  const importStatement = isScss ? '@forward' : '@import';
   const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
-  const extensionImports: string[] = [];
 
   if (isScss) {
     imports.push(
@@ -29,15 +27,28 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     );
   }
 
-  const importsExtension = imports.map((importLine) => {
-    return isScss ? importLine : importLine + fileExtension;
+  // SCSS variables that are defined in both foundations and utilities
+  // cause @forward conflicts. The breakpoint-mixins utility redefines
+  // $cdr-breakpoint-* variables already forwarded by foundations/cdr-breakpoint.
+  // hide these from the utility forward to avoid the conflict.
+  const scssHideMembers = [
+    '$cdr-breakpoint-xs',
+    '$cdr-breakpoint-sm',
+    '$cdr-breakpoint-md',
+    '$cdr-breakpoint-lg',
+  ];
+
+  const lines = imports.map((importPath) => {
+    if (isScss) {
+      if (importPath === './utilities/cdr-breakpoint-mixins') {
+        return `@forward "${importPath}" hide ${scssHideMembers.join(', ')};`;
+      }
+      return `@forward "${importPath}";`;
+    }
+    return `@import "${importPath}${fileExtension}";`;
   });
 
-  importsExtension.forEach((importFile) => {
-    extensionImports.push(`${importStatement} "${importFile}";`);
-  });
-
-  return extensionImports.join('\n');
+  return lines.join('\n');
 };
 
 /**
