@@ -9,7 +9,7 @@ This document explains the TypeScript token tooling end-to-end:
 - how it works
 - how components fit together into a single build and distribution pipeline
 
-Decision-level contract details (consumer API boundaries and TokenDictionary acceptance) are defined in [ADR 0002](../adr/0002-typescript-pipeline-and-consumer-types.md).
+Decision-level contract details (consumer API boundaries and TokenDictionary acceptance) are defined in [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md).
 
 ## System At A Glance
 
@@ -291,7 +291,7 @@ When adding a new responsibility/platform/theme:
 
 ## Assessing TokenDictionary Work
 
-Use [ADR 0002](../adr/0002-typescript-pipeline-and-consumer-types.md) as the decision and acceptance source.
+Use [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md) as the decision and acceptance source.
 
 A TokenDictionary PR should be assessed against:
 
@@ -303,7 +303,7 @@ A TokenDictionary PR should be assessed against:
 
 ## Related Documentation
 
-- [ADR 0001](../adr/0001-modularize-tokens-output.md)
-- [ADR 0002](../adr/0002-typescript-pipeline-and-consumer-types.md)
+- [ADR 0001](./adr/0001-modularize-tokens-output.md)
+- [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md)
 - [docs/TRANSFORMS.md](./TRANSFORMS.md)
 - [README.md](../README.md)

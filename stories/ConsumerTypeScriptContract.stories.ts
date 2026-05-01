@@ -12,11 +12,6 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-const guideFooter = `
-  ADR reference: <a href="https://github.com/rei/rei-cedar-tokens/blob/next/adr/0002-typescript-pipeline-and-consumer-types.md" target="_blank" rel="noreferrer">ADR 0002: TypeScript Pipeline and Consumer Types API</a><br />
-  Follow-up ticket: <a href="https://github.com/rei/rei-cedar-tokens/blob/next/docs/tickets/token-dictionary-implementation.md" target="_blank" rel="noreferrer">TokenDictionary public contract implementation</a>
-`;
-
 const modularImport = `
 import type { CdrSpaceTokens } from "@rei/cdr-tokens/types";
 `;
@@ -80,7 +75,6 @@ export const ConsumerTypeScriptContract: Story = {
       title: 'Consumer Contract Overview',
       lede: 'This guide has been split by output type. Use the focused stories in this section for Types, Runtime, and Web Asset consumption paths.',
       note: 'The output-specific stories replace the previously grouped single page.',
-      footer: guideFooter,
       sections: [
         card(
           'Types Output',
@@ -111,7 +105,6 @@ export const TypesOutput: Story = {
       title: 'Type Declarations',
       lede: 'Theme-specific type barrels are the public API for compile-time safety. They expose interfaces, literal unions, and module-oriented types for every token category.',
       note: 'Supported entrypoints: @rei/cdr-tokens/types and @rei/cdr-tokens/docsite/types.',
-      footer: guideFooter,
       sections: [
         card(
           'Why use type barrels?',
@@ -161,7 +154,6 @@ export const RuntimeOutput: Story = {
       title: 'Runtime Values',
       lede: 'Runtime token values are consumed from root package entrypoints as named ES module exports. Keep value imports separate from type-only barrels.',
       note: 'Use @rei/cdr-tokens or @rei/cdr-tokens/docsite for values. Use the /types barrel for types.',
-      footer: guideFooter,
       sections: [
         card(
           'Why use runtime entrypoints?',
@@ -196,7 +188,6 @@ export const WebAssetEntrypoints: Story = {
       title: 'CSS and SCSS Entrypoints',
       lede: 'Use simplified package entrypoints for all new CSS and SCSS integrations. These are the recommended, stable paths that abstract away dist internals.',
       note: 'These are the preferred paths for all new web asset consumption.',
-      footer: guideFooter,
       sections: [
         card(
           'Why use entrypoints instead of deep paths?',
@@ -228,7 +219,6 @@ export const WebAssetModularLegacyPaths: Story = {
       title: 'Modular Deep Asset Paths',
       lede: 'Deep modular paths remain available for backward compatibility. Use them only when you need granular, per-category control and prefer an incremental migration over switching to entrypoints all at once.',
       note: 'Not preferred for new code — use the CSS/SCSS entrypoints for new integrations.',
-      footer: guideFooter,
       sections: [
         card(
           'Why keep deep paths at all?',

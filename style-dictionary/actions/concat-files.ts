@@ -3,14 +3,14 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
-import { foundationsMoudulesName, componentModulesName } from '../configs/filters/modules';
+import { foundationsModulesName, componentModulesName } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
   const importStatement = isScss ? '@forward' : '@import';
-  const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
+  const imports = foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`);
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
   const extensionImports: string[] = [];
 
@@ -29,11 +29,11 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     );
   }
 
-  const importsExtension = imports.map((importLine) => {
+  const importsExtension = imports.map((importLine: string) => {
     return isScss ? importLine : importLine + fileExtension;
   });
 
-  importsExtension.forEach((importFile) => {
+  importsExtension.forEach((importFile: string) => {
     extensionImports.push(`${importStatement} "${importFile}";`);
   });
 

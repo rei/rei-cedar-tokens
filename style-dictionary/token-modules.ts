@@ -49,12 +49,6 @@ const TOKEN_MODULES: TokenModuleDefinition[] = [
   },
   {
     responsibility: 'foundations',
-    name: 'cdr-form',
-    filter: 'form-tokens',
-    targets: ['js', 'scss', 'types'],
-  },
-  {
-    responsibility: 'foundations',
     name: 'cdr-icon',
     filter: 'icon-tokens',
     targets: ['js', 'scss', 'types'],

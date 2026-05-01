@@ -56,11 +56,6 @@ export const css = (theme: Theme): PlatformConfig => ({
         filter: 'prominence-tokens',
       },
       {
-        destination: 'foundations/cdr-form.css',
-        format: 'css/variables',
-        filter: 'form-tokens',
-      },
-      {
         destination: 'foundations/cdr-icon.css',
         format: 'css/variables',
         filter: 'icon-tokens',

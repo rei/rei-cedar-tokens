@@ -119,21 +119,6 @@ export const js = (theme: Theme): PlatformConfig => ({
         filter: 'prominence-tokens',
       },
       {
-        destination: 'foundations/cdr-form.mjs',
-        format: 'javascript/es6',
-        filter: 'form-tokens',
-      },
-      {
-        destination: 'foundations/cdr-form.cjs',
-        format: 'javascript/module-flat',
-        filter: 'form-tokens',
-      },
-      {
-        destination: 'foundations/cdr-form.d.ts',
-        format: 'typescript/es6-declarations',
-        filter: 'form-tokens',
-      },
-      {
         destination: 'foundations/cdr-icon.mjs',
         format: 'javascript/es6',
         filter: 'icon-tokens',

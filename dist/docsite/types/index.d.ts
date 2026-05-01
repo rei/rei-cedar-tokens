@@ -1,3 +1,4 @@
+export type * from './base/token-schema.d.ts';
 export type * from './foundations/cdr-color-background.d.ts';
 export type * from './foundations/cdr-color-background.names.d.ts';
 export type * from './foundations/cdr-color-border.d.ts';
@@ -6,8 +7,6 @@ export type * from './foundations/cdr-color-icon.d.ts';
 export type * from './foundations/cdr-color-icon.names.d.ts';
 export type * from './foundations/cdr-color-text.d.ts';
 export type * from './foundations/cdr-color-text.names.d.ts';
-export type * from './foundations/cdr-form.d.ts';
-export type * from './foundations/cdr-form.names.d.ts';
 export type * from './foundations/cdr-icon.d.ts';
 export type * from './foundations/cdr-icon.names.d.ts';
 export type * from './foundations/cdr-motion.d.ts';

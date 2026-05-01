@@ -2,7 +2,6 @@ export * from './foundations/cdr-color-background.mjs';
 export * from './foundations/cdr-color-border.mjs';
 export * from './foundations/cdr-color-icon.mjs';
 export * from './foundations/cdr-color-text.mjs';
-export * from './foundations/cdr-form.mjs';
 export * from './foundations/cdr-icon.mjs';
 export * from './foundations/cdr-motion.mjs';
 export * from './foundations/cdr-prominence.mjs';

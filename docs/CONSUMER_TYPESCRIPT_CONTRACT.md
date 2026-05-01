@@ -166,4 +166,4 @@ This is currently represented through theme-scoped module selection.
 
 ## ADR Reference
 
-- [ADR 0002: TypeScript Pipeline and Consumer Types API](../adr/0002-typescript-pipeline-and-consumer-types.md)
+- [ADR 0002: TypeScript Pipeline and Consumer Types API](./adr/0002-typescript-pipeline-and-consumer-types.md)
