@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/html';
-import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import * as tokens from '@rei/cdr-tokens';
 
 const meta: Meta = {
   title: 'Tokens/Border Radius',

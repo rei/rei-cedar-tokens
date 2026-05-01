@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
-import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import * as tokens from '@rei/cdr-tokens';
+import { getTokenDescription } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Colors',
@@ -130,6 +131,13 @@ const chrome = `
       opacity: 0.75;
       margin-top: 1px;
     }
+    .semantic-doc {
+      font-family: Graphik, 'Graphik fallback', sans-serif;
+      font-size: 10px;
+      color: var(--cedar-warm-750);
+      line-height: 1.4;
+      margin-top: 6px;
+    }
 
     /* ── Component group tables ── */
     .comp-section { margin-bottom: 48px; }
@@ -209,6 +217,16 @@ const chrome = `
       text-overflow: ellipsis;
       min-width: 0;
     }
+    .comp-token-doc {
+      font-family: Graphik, 'Graphik fallback', sans-serif;
+      font-size: 10px;
+      color: var(--cedar-warm-750);
+      line-height: 1.4;
+      margin-top: 2px;
+      display: block;
+      max-width: 520px;
+      white-space: normal;
+    }
     .comp-value {
       font-family: Pressura, monospace;
       font-size: 11px;
@@ -251,7 +269,23 @@ function swatchCell(value: string): string {
     </div>`;
 }
 
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function tokenCell(key: string): string {
+  const doc = getTokenDescription(key);
+  const docHtml = doc ? `<span class="comp-token-doc">${escapeHtml(doc)}</span>` : '';
+  return `<span class="comp-token-name">${key}</span>${docHtml}`;
+}
+
 function semanticCard(label: string, tokenName: string, value: string): string {
+  const doc = getTokenDescription(tokenName);
   return `
     <div class="semantic-card">
       <div class="semantic-swatch">
@@ -262,6 +296,7 @@ function semanticCard(label: string, tokenName: string, value: string): string {
         <div class="semantic-name">${label}</div>
         <div class="semantic-token">${tokenName}</div>
         <div class="semantic-value">${value}</div>
+        ${doc ? `<div class="semantic-doc">${escapeHtml(doc)}</div>` : ''}
       </div>
     </div>`;
 }
@@ -442,7 +477,7 @@ export const ByComponent: Story = {
                 <td>
                   <div class="comp-swatch-cell">
                     ${swatchCell(val)}
-                    <span class="comp-token-name">${key}</span>
+                    ${tokenCell(key)}
                   </div>
                 </td>
                 <td>${roleBadge(role)}</td>
@@ -490,7 +525,7 @@ export const BackgroundColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${tokenCell(key)}
             </div>
           </td>
           <td class="comp-value">${val}</td>
@@ -523,7 +558,7 @@ export const TextColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${tokenCell(key)}
             </div>
           </td>
           <td>
@@ -562,7 +597,7 @@ export const BorderColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${tokenCell(key)}
             </div>
           </td>
           <td>
@@ -598,7 +633,7 @@ export const IconColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${tokenCell(key)}
             </div>
           </td>
           <td>
