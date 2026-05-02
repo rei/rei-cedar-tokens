@@ -595,45 +595,129 @@ export const Overview: Story = {
       slug: 'overview',
       title: 'Consumer Contract',
       description:
-        'Documentation for how Cedar token outputs are consumed across type, css, scss, js, and json surfaces.',
-      badge: 'Recommended default: js semantic',
+        'Cedar publishes design tokens in five output formats. Each format has a defined contract describing what it is, when to use it, and how to import it. This page is your starting point for choosing the right integration path.',
       sections: [
         {
-          id: 'what-it-is',
-          heading: 'What it is',
+          id: 'what-is-a-contract',
+          heading: 'What is a Consumer Contract?',
           prose: [
-            'Consumer Contract is the reference surface for Cedar token output integrations. Each output type has a dedicated contract page that follows the same reading model.',
+            "A consumer contract defines the stable surface that your application should couple to. It is separate from Cedar's internal build details — the underlying Style Dictionary pipeline, file structure, and transform logic can evolve without breaking your integration, as long as you stay on the documented contract.",
+            'Think of it like depending on an API interface rather than its implementation.',
           ],
         },
         {
-          id: 'why-cedar-provides-it',
-          heading: 'Why Cedar provides it',
-          prose: [
-            'Consumers integrate tokens in different runtime and build environments. Separate output contracts reduce ambiguity and keep integration guidance stable.',
-          ],
-        },
-        {
-          id: 'when-to-use-it',
-          heading: 'When to use it',
-          prose: [
-            'Use this section set when deciding which output to adopt for a consumer integration. Start with js semantic unless your environment requires stylesheet or raw artifact ingestion.',
-            'Do not treat output contracts as interchangeable. Choose based on runtime constraints and tooling needs.',
-          ],
-        },
-        {
-          id: 'how-to-use-it',
-          heading: 'How to use it',
-          prose: ['Open one of the dedicated contract pages below and follow its import patterns.'],
+          id: 'available-contracts',
+          heading: 'Available Contracts',
+          prose: [],
           table: {
-            headers: ['Contract page', 'Use when'],
+            headers: ['Contract', 'Package path', 'Best for'],
             rows: [
-              ['type', 'TypeScript type safety and explicit contract annotations'],
-              ['css', 'Plain CSS import workflow'],
-              ['scss', 'Sass build + Cedar utility mixins'],
-              ['js', 'Runtime theming and semantic token mapping'],
-              ['json', 'Tooling, CI, transforms, and non-JS consumers'],
+              [
+                'type',
+                '@rei/cdr-tokens  /  @rei/cdr-tokens/types/*',
+                'TypeScript compile-time safety, IntelliSense',
+              ],
+              ['css', '@rei/cdr-tokens/css', 'Plain CSS imports, no Sass toolchain'],
+              ['scss', '@rei/cdr-tokens/scss', 'Sass workflows, Cedar mixins and utilities'],
+              [
+                'js',
+                '@rei/cdr-tokens  /  @rei/cdr-tokens/tokens',
+                'JS/TS app theming, framework mapping',
+              ],
+              ['json', '@rei/cdr-tokens/json', 'Tooling, pipelines, non-JS environments'],
             ],
           },
+        },
+        {
+          id: 'how-to-choose',
+          heading: 'How to Choose',
+          prose: [
+            'Start here: If you are writing JavaScript or TypeScript application code, use the js contract via the root @rei/cdr-tokens entrypoint. It is the recommended default for long-lived app-level token mappings.',
+            'Rule of thumb: pick the narrowest contract that meets your need. Avoid importing from dist/ paths directly unless a specific foundation module is required — use the published package export keys instead.',
+          ],
+          codeSamples: [
+            {
+              title: 'Decision tree',
+              language: 'sh',
+              code: `Are you writing JS/TS app code?
+  └─ Yes → js contract (@rei/cdr-tokens)
+       └─ Also want compile-time types? → add the type contract
+
+Are you writing stylesheets?
+  ├─ Plain CSS → css contract (@rei/cdr-tokens/css)
+  └─ Sass/SCSS → scss contract (@rei/cdr-tokens/scss)
+
+Are you building tooling, running transforms, or consuming outside JS?
+  └─ json contract (@rei/cdr-tokens/json)`,
+            },
+          ],
+        },
+        {
+          id: 'installation',
+          heading: 'Installation',
+          prose: [],
+          codeSamples: [
+            {
+              title: 'Install the package',
+              language: 'sh',
+              code: `npm install @rei/cdr-tokens`,
+            },
+          ],
+        },
+        {
+          id: 'quick-examples',
+          heading: 'Quick Examples',
+          prose: [],
+          codeSamples: [
+            {
+              title: 'App theme mapping — js + semantic root',
+              language: 'ts',
+              code: `import { CdrColorText, CdrSpace, CdrType } from '@rei/cdr-tokens';
+
+export const appTheme = {
+  color: {
+    textPrimary: CdrColorText.CdrColorTextPrimary,
+  },
+  space: {
+    stackMd: CdrSpace.CdrSpaceTwoX,
+  },
+  type: {
+    headingMd: CdrType.CdrTextHeadingSans400FontSize,
+  },
+};`,
+            },
+            {
+              title: 'Stylesheet integration — css',
+              language: 'ts',
+              code: `// CSS — no build toolchain required
+import '@rei/cdr-tokens/css';`,
+            },
+            {
+              title: 'Stylesheet integration — scss',
+              language: 'scss',
+              code: `// SCSS — Sass workflow with Cedar utilities
+@use '@rei/cdr-tokens/scss';
+@use '@rei/cdr-tokens/scss/breakpoint-mixins' as bp;`,
+            },
+            {
+              title: 'Pipeline ingestion — json',
+              language: 'ts',
+              code: `import platformTokens from '@rei/cdr-tokens/json/platform-tokens.json';
+import webTokens from '@rei/cdr-tokens/json';`,
+            },
+          ],
+        },
+        {
+          id: 'contract-pages',
+          heading: 'Contract Pages',
+          prose: [],
+          relatedLinks: [
+            'type — TypeScript type definitions',
+            'css — Prebuilt CSS bundles',
+            'scss — Sass outputs and utility mixins',
+            'js — JavaScript value contracts (recommended default)',
+            'json — Raw token artifacts',
+          ],
         },
       ],
     }),
@@ -709,11 +793,14 @@ export const textStyles = {
 };`,
             },
             {
-              title: 'Stylesheet integration (css + scss)',
+              title: 'Stylesheet integration — css (bundler import)',
+              language: 'ts',
+              code: `import '@rei/cdr-tokens/css';`,
+            },
+            {
+              title: 'Stylesheet integration — scss',
               language: 'scss',
-              code: `import '@rei/cdr-tokens/css';
-
-@use '@rei/cdr-tokens/scss';
+              code: `@use '@rei/cdr-tokens/scss';
 @use '@rei/cdr-tokens/scss/breakpoint-mixins' as bp;`,
             },
             {
@@ -878,6 +965,7 @@ export const diagnostics = {
           heading: 'Available files / exports',
           prose: [
             'Type definitions are co-located with generated foundation modules. Each .d.ts file annotates every property with @value (resolved token value), @cssvar (CSS custom property name), and a description. These annotations are read by TypeScript Language Server and appear in IDE hover tooltips automatically.',
+            'The ./types/* export maps @rei/cdr-tokens/types/<name> to dist/.../foundations/cdr-<name>.mjs — the cdr- prefix is added automatically. Use types/color-text, not types/cdr-color-text, in your import path.',
           ],
           table: {
             headers: ['Import path / file', 'Kind', 'Use for'],
@@ -1599,7 +1687,10 @@ export const Css: Story = {
         {
           id: 'available-files-exports',
           heading: 'Available files / exports',
-          prose: ['Foundation files are subsets of the full bundle.'],
+          prose: [
+            'Foundation files are subsets of the full bundle.',
+            'The ./css/* export maps @rei/cdr-tokens/css/<name> to dist/.../foundations/cdr-<name>.css — the cdr- prefix is added automatically. Use color-text, not cdr-color-text, in your import path.',
+          ],
           table: {
             headers: ['File', 'Contents'],
             rows: [
@@ -1683,7 +1774,10 @@ export const Scss: Story = {
         {
           id: 'available-files-exports',
           heading: 'Available files / exports',
-          prose: ['Utility partials are shipped alongside the core token Sass bundle.'],
+          prose: [
+            'Utility partials are shipped alongside the core token Sass bundle.',
+            'The ./scss/* export maps @rei/cdr-tokens/scss/<name> to dist/.../utilities/cdr-<name>.scss — the cdr- prefix is added automatically. Use breakpoint-mixins, not cdr-breakpoint-mixins, in your @use path.',
+          ],
           table: {
             headers: ['File', 'Contents'],
             rows: [
