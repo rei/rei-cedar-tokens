@@ -11,11 +11,11 @@ const toPosixPath = (value: string): string => value.split(path.sep).join('/');
 const toExportPath = (relativePath: string): string => `./${toPosixPath(relativePath)}`;
 
 /**
- * Generates index barrel files for TypeScript token module outputs.
+ * Generates tokens barrel files for TypeScript token module outputs.
  *
  * Output files:
- * - index.mjs  (runtime values from module .mjs files)
- * - index.d.ts (interfaces and name unions from .d.ts files)
+ * - tokens.mjs  (runtime values from module .mjs files)
+ * - tokens.d.ts (interfaces and name unions from .d.ts files)
  */
 export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
   sd.registerAction({
@@ -31,13 +31,13 @@ export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
       const mjsFiles = globSync('**/*.mjs', {
         cwd: buildPath,
         nodir: true,
-        ignore: ['index.mjs'],
+        ignore: ['tokens.mjs'],
       }).sort();
 
       const declarationFiles = globSync('**/*.d.ts', {
         cwd: buildPath,
         nodir: true,
-        ignore: ['index.d.ts'],
+        ignore: ['tokens.d.ts'],
       }).sort();
 
       const mjsExports = mjsFiles.map((file) => `export * from '${toExportPath(file)}';`);
@@ -45,11 +45,11 @@ export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
         (file) => `export type * from '${toExportPath(file)}';`,
       );
 
-      const indexMjsContent = `${mjsExports.join('\n')}\n`;
-      const indexDtsContent = `${declarationExports.join('\n')}\n`;
+      const tokensMjsContent = `${mjsExports.join('\n')}\n`;
+      const tokensDtsContent = `${declarationExports.join('\n')}\n`;
 
-      fs.outputFileSync(path.join(buildPath, 'index.mjs'), indexMjsContent);
-      fs.outputFileSync(path.join(buildPath, 'index.d.ts'), indexDtsContent);
+      fs.outputFileSync(path.join(buildPath, 'tokens.mjs'), tokensMjsContent);
+      fs.outputFileSync(path.join(buildPath, 'tokens.d.ts'), tokensDtsContent);
 
       console.log(`Generated TypeScript barrel files in ${buildPath}`);
     },
@@ -59,8 +59,8 @@ export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
       }
 
       const buildPath = path.join(__dirname, '../../', config.buildPath);
-      fs.removeSync(path.join(buildPath, 'index.mjs'));
-      fs.removeSync(path.join(buildPath, 'index.d.ts'));
+      fs.removeSync(path.join(buildPath, 'tokens.mjs'));
+      fs.removeSync(path.join(buildPath, 'tokens.d.ts'));
     },
   });
 };

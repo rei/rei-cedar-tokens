@@ -14,15 +14,15 @@
 
    \*\* REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
 
-### Stable V1 Contract (Recommended)
+### Semantic Contract (Recommended)
 
-For teams building framework integrations (Tailwind, styled-components, etc.), **use the Stable V1 contract**:
+For teams building framework integrations (Tailwind, styled-components, etc.), **use the semantic contract**:
 
 ```bash
-import { CdrColorText, CdrSpacing, CdrBreakpoint } from '@rei/cdr-tokens/stable-v1';
+import { CdrColorText, CdrSpacing, CdrBreakpoint } from '@rei/cdr-tokens';
 ```
 
-Stable V1 provides a versioned, stable export of semantic foundation tokens with a **guaranteed interface** that won't change within a major version. This is the recommended way to consume Cedar tokens in production applications.
+The semantic entrypoint provides a stable export of semantic foundation tokens with a **guaranteed interface** within a major version. This is the recommended way to consume Cedar tokens in production applications.
 
 See [Stable V1 Contract documentation](./docs/STABLE_V1_CONTRACT.md) for details, usage examples, and versioning guarantees. Team members and integration partners should also review the [Storybook Documentation](./docs/STABLE_V1_STORYBOOK.md) for comprehensive guidance.
 

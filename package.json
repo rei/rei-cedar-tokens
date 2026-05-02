@@ -14,11 +14,16 @@
     "dist"
   ],
   "type": "module",
-  "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
-  "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
-  "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
+  "main": "./dist/rei-dot-com/types/index.mjs",
+  "module": "./dist/rei-dot-com/types/index.mjs",
+  "types": "./dist/rei-dot-com/types/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/rei-dot-com/types/index.d.ts",
+      "import": "./dist/rei-dot-com/types/index.mjs",
+      "default": "./dist/rei-dot-com/types/index.mjs"
+    },
+    "./tokens": {
       "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
@@ -29,23 +34,26 @@
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
     "./types": {
-      "types": "./dist/rei-dot-com/types/index.d.ts"
+      "types": "./dist/rei-dot-com/types/tokens.d.ts",
+      "import": "./dist/rei-dot-com/types/tokens.mjs",
+      "default": "./dist/rei-dot-com/types/tokens.mjs"
     },
-    "./docsite/types": {
-      "types": "./dist/docsite/types/index.d.ts"
+    "./types/*": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-*.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-*.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-*.mjs"
     },
     "./css": "./dist/rei-dot-com/css/cdr-tokens.css",
+    "./css/*": "./dist/rei-dot-com/css/foundations/cdr-*.css",
     "./scss": "./dist/rei-dot-com/scss/cdr-tokens.scss",
+    "./scss/*": "./dist/rei-dot-com/scss/utilities/cdr-*.scss",
+    "./json": "./dist/rei-dot-com/json/web.json",
+    "./json/*": "./dist/rei-dot-com/json/*",
     "./docsite/css": "./dist/docsite/css/cdr-tokens.css",
     "./docsite/scss": "./dist/docsite/scss/cdr-tokens.scss",
     "./types/base": {
       "types": "./dist/types/base/token-schema.d.ts",
       "default": "./dist/types/base/token-schema.d.ts"
-    },
-    "./stable-v1": {
-      "types": "./dist/rei-dot-com/types/stable-v1.d.ts",
-      "import": "./dist/rei-dot-com/types/stable-v1.mjs",
-      "default": "./dist/rei-dot-com/types/stable-v1.mjs"
     },
     "./rei-dot-com/js/*": {
       "types": "./dist/rei-dot-com/js/*.d.ts",

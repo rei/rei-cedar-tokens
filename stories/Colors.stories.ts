@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getCssVar, getDesc } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Colors',
@@ -233,6 +234,25 @@ const chrome = `
     .role-border { color: #5a3a00; background: #fdf0d0; }
     .role-icon { color: #6b2121; background: #fce4e4; }
 
+    /* ── Token metadata ── */
+    .token-cssvar {
+      display: block;
+      font-family: Pressura, monospace;
+      font-size: 8px;
+      color: var(--cedar-warm-500);
+      margin-top: 2px;
+      opacity: 0.85;
+    }
+    .token-desc {
+      display: block;
+      font-family: Graphik, 'Graphik fallback', sans-serif;
+      font-size: 9px;
+      font-style: italic;
+      color: var(--cedar-warm-600);
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
     /* ── Mobile tweaks ── */
     @media (max-width: 480px) {
       .comp-table .comp-value { display: none; }
@@ -252,6 +272,8 @@ function swatchCell(value: string): string {
 }
 
 function semanticCard(label: string, tokenName: string, value: string): string {
+  const cssvar = getCssVar(tokenName);
+  const desc = getDesc(tokenName);
   return `
     <div class="semantic-card">
       <div class="semantic-swatch">
@@ -262,6 +284,8 @@ function semanticCard(label: string, tokenName: string, value: string): string {
         <div class="semantic-name">${label}</div>
         <div class="semantic-token">${tokenName}</div>
         <div class="semantic-value">${value}</div>
+        ${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}
+        ${desc ? `<span class="token-desc">${desc}</span>` : ''}
       </div>
     </div>`;
 }
@@ -278,6 +302,15 @@ function roleBadge(role: string): string {
   const short =
     role === 'Background' ? 'bg' : role === 'Text' ? 'text' : role === 'Border' ? 'border' : 'icon';
   return `<span class="role-badge ${cls}">${short}</span>`;
+}
+
+/** Render the token name + CSS var sub-line for a comp table row */
+function compNameCell(key: string): string {
+  const cssvar = getCssVar(key);
+  return `<div>
+    <span class="comp-token-name">${key}</span>
+    ${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}
+  </div>`;
 }
 
 function allTokens(): TokenEntry[] {
@@ -442,7 +475,7 @@ export const ByComponent: Story = {
                 <td>
                   <div class="comp-swatch-cell">
                     ${swatchCell(val)}
-                    <span class="comp-token-name">${key}</span>
+                    ${compNameCell(key)}
                   </div>
                 </td>
                 <td>${roleBadge(role)}</td>
@@ -490,7 +523,7 @@ export const BackgroundColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${compNameCell(key)}
             </div>
           </td>
           <td class="comp-value">${val}</td>
@@ -523,7 +556,7 @@ export const TextColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${compNameCell(key)}
             </div>
           </td>
           <td>
@@ -562,7 +595,7 @@ export const BorderColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${compNameCell(key)}
             </div>
           </td>
           <td>
@@ -598,7 +631,7 @@ export const IconColors: Story = {
           <td>
             <div class="comp-swatch-cell">
               ${swatchCell(val)}
-              <span class="comp-token-name">${key}</span>
+              ${compNameCell(key)}
             </div>
           </td>
           <td>

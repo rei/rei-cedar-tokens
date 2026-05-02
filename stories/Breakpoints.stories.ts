@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getCssVar } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Breakpoints',
@@ -107,6 +108,14 @@ const chrome = `
       color: var(--cedar-warm-600);
       opacity: 0.7;
     }
+    .token-cssvar {
+      display: block;
+      font-family: Pressura, monospace;
+      font-size: 8px;
+      color: var(--cedar-warm-500);
+      margin-top: 2px;
+      opacity: 0.85;
+    }
 
     /* ─── Visual device mockup ─── */
     .bp-devices {
@@ -166,6 +175,7 @@ export const Breakpoints: Story = {
             <div class="bp-value-wrap">
               <span class="bp-px">${px === 0 ? '0px' : px + 'px'}</span>
               <span class="bp-token">${key}</span>
+              <span class="token-cssvar">${getCssVar(key)}</span>
               <span class="bp-range">${range}</span>
             </div>
           </div>`;

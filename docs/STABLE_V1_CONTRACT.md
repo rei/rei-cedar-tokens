@@ -1,12 +1,12 @@
-# Stable V1 Contract: Cedar Foundation Tokens
+# Semantic Contract: Cedar Foundation Tokens
 
 ## Overview
 
-The `stable-v1` contract layer provides a versioned, stable export of Cedar's semantic foundation tokens. This is a **guaranteed interface** that consumers (DXP, other product teams) can depend on without worrying about breaking changes mid-lifecycle.
+The `semantic` contract layer provides a versioned, stable export of Cedar's semantic foundation tokens. This is a **guaranteed interface** that consumers (DXP, other product teams) can depend on without worrying about breaking changes mid-lifecycle.
 
 ## What's Included
 
-Stable V1 exports **semantic foundation tokens only**:
+Semantic Contract exports **semantic foundation tokens only**:
 
 ### Colors
 
@@ -63,7 +63,7 @@ Import stable tokens and map them to your framework:
 
 ```typescript
 // tailwind.config.ts
-import { CdrColorText, CdrSpacing, CdrBreakpoint } from '@rei/cdr-tokens/stable-v1';
+import { CdrColorText, CdrSpacing, CdrBreakpoint } from '@rei/cdr-tokens/semantic';
 
 export default {
   theme: {
@@ -121,11 +121,11 @@ When v2 is released:
 
 1. Create the token semantically in `/tokens/global/`
 2. Ensure it passes the Style Dictionary build
-3. It automatically appears in stable-v1 at next release
+3. It automatically appears in semantic at next release
 
 ### Deprecating a Token
 
-1. Don't remove it from stable-v1
+1. Don't remove it from semantic
 2. Mark it as deprecated in the source token definition
 3. Plan its removal for v2
 
@@ -139,8 +139,8 @@ When v2 is released:
 ## Consumer Responsibilities
 
 - Consumers own the mapping logic (tailwind, styled-components, etc.)
-- Consumer code is responsible for consuming stable-v1 correctly
-- Consumer maintains IntelliSense by importing types from stable-v1
+- Consumer code is responsible for consuming semantic correctly
+- Consumer maintains IntelliSense by importing types from semantic
 - Consumer can extend locally while tracking Cedar versions
 
 ## Related Documents

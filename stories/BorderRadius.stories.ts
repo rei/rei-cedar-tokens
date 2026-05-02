@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getCssVar } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Border Radius',
@@ -82,6 +83,14 @@ const chrome = `
       font-size: 10px;
       color: var(--cedar-warm-750);
     }
+    .token-cssvar {
+      display: block;
+      font-family: Pressura, monospace;
+      font-size: 8px;
+      color: var(--cedar-warm-500);
+      margin-top: 2px;
+      opacity: 0.85;
+    }
   </style>
 `;
 
@@ -101,6 +110,7 @@ export const BorderRadius: Story = {
       .map(([key, label]) => {
         const val = t[key] ?? '0';
         const px = val === '9999' ? '9999px' : `${val}px`;
+        const cssvar = getCssVar(key);
         return `
           <div class="radius-card">
             <div class="radius-box-wrap">
@@ -108,6 +118,7 @@ export const BorderRadius: Story = {
             </div>
             <span class="radius-label">${label}</span>
             <span class="radius-token">${key}</span>
+            ${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}
             <span class="radius-value">${px}</span>
           </div>`;
       })
