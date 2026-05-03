@@ -7,11 +7,14 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "composite": true // Required for references
   },
-  "include": ["style-dictionary/**/*"],
-  "exclude": ["node_modules", "dist"],
-  "ts-node": {
-    "esm": true
-  }
+  "include": [
+    "style-dictionary/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
 }
