@@ -1,25 +1,61 @@
-# ADR 0002: TypeScript Pipeline and Consumer Types API
+# ADR 0001: Modular Output Architecture
 
 ## Status
 
 Accepted
 
+## TL;DR
+
+- Token outputs are modularized by responsibility (foundations, components, palettes, utilities) rather than emitted as a single file per platform.
+- Foundation tokens are the only domain that emits typed public surfaces (TypeScript literal unions and module interfaces).
+- Stable entrypoints (`@rei/cdr-tokens/types`, `@rei/cdr-tokens/css`, `@rei/cdr-tokens/scss`) form the public contract; deep dist paths remain available but are not contractual.
+- `TokenDictionary<Theme, Platform, Responsibility, Module>` is the planned typed runtime contract — not yet finalized for public use.
+- Any PR that changes domain ownership, the output matrix, or public entrypoint semantics must update this ADR in the same commit.
+
+## Implementation Status
+
+Read this before interpreting the architecture sections — some describe planned state, not current state.
+
+- **Done:** Modular `.d.ts` files, literal token-name unions, and module interfaces in generated type outputs.
+- **Done:** Stable barrel exports (`./types` and `./docsite/types`) wired in package exports.
+- **Done:** Theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) available.
+- **Done:** Legacy `cdr-tokens.d.mts` generation and exports removed.
+- **Planned:** `TokenDictionary` public export contract and runtime dictionary shape finalization.
+- **Planned:** Complete composite token connections for typography module renames.
+
 ## Problem Statement
 
-The cedar-tokens build produced a single monolithic declaration file shared across all token categories. As the token surface grew, this created friction for consumers needing type safety and autocomplete for specific token groups.
+The cedar-tokens build produced a single monolithic output per platform (`cdr-tokens.scss`, `cdr-tokens.css`, `cdr-tokens.d.ts`). As the token surface grew, this created several problems:
 
-This ADR defines the modular TypeScript output architecture, the `/types` public barrel contract, and the typed runtime dictionary shape.
+- All consumers must import all tokens regardless of need.
+- Foundational values, semantic roles, component tokens, and utilities were mixed together.
+- No typed public surface existed for specific token groups, making compile-time validation impractical.
+- The structure did not align with Cedar's responsibility-based naming strategy.
+
+This ADR defines the modular output architecture across all platforms, the `/types` public barrel contract, and the typed runtime dictionary shape.
 
 ## Goals
 
-- Produce modular TypeScript outputs rather than one monolithic declaration file.
+- Modularize token outputs by responsibility while keeping a monolithic entrypoint for backward compatibility.
+- Emit SCSS, CSS, JSON, and JS runtime values for all domain families.
+- Produce modular TypeScript outputs for foundation tokens only (other domains are value-layer outputs).
 - Use JSON Schema as the canonical generation contract.
-- Generate literal union types for token names.
-- Generate module interfaces for grouped token surfaces.
+- Generate literal union types for foundation token names.
+- Generate module interfaces for grouped foundation token surfaces.
 - Define `TokenDictionary` as the typed runtime contract.
-- Expose a stable public `/types` API surface.
+- Expose a stable public API surface (`/types`, `/css`, `/scss` entrypoints).
 - Provide a barrel entrypoint for ergonomic imports.
-- Define a deprecation path for legacy `cdr-tokens.d.mts` consumption.
+
+## Terminology
+
+**Responsibility** is used two ways in this ADR:
+
+- _Folder taxonomy:_ A top-level grouping in the dist folder structure — `foundations`, `components`, `palettes`, `utilities`.
+- _Type parameter:_ The `Responsibility` parameter in `TokenDictionary` encodes the same concept at the type level.
+
+When referencing the folder structure, use the lowercase name (e.g., `foundations`). When showing TypeScript types, the parameter name `Responsibility` makes context clear.
+
+**Module** in this ADR means the physical generated file (e.g., `cdr-color-background.d.ts`, `cdr-color-background.mjs`). For the semantic grouping concept — the named set of related tokens — prefer **token-group** in prose to avoid conflating it with JS module semantics.
 
 ## Architecture
 
@@ -37,7 +73,7 @@ This ADR defines the modular TypeScript output architecture, the `/types` public
 
 ### Module Responsibility Mapping
 
-Token responsibilities follow the same folder taxonomy established in ADR 0001.
+Token responsibilities follow the folder taxonomy defined in this ADR (see [Domain Families](#domain-families)).
 
 | Responsibility | Example generated `.d.ts`                                             |
 | -------------- | --------------------------------------------------------------------- |
@@ -87,6 +123,18 @@ export declare const cdrColorBackground: CdrColorBackgroundTokens;
 export default cdrColorBackground;
 ```
 
+```js
+// generated: dist/rei-dot-com/js/foundations/cdr-color-background.mjs
+export const CdrColorBackgroundPrimary = '#ffffff';
+export const CdrColorBackgroundSecondary = '#f5f5f5';
+
+export const cdrColorBackground = {
+  CdrColorBackgroundPrimary: '#ffffff',
+  CdrColorBackgroundSecondary: '#f5f5f5',
+};
+export default cdrColorBackground;
+```
+
 The type barrel re-exports both files via `@rei/cdr-tokens/types`.
 
 ### 5. TokenDictionary generic
@@ -113,6 +161,29 @@ export type TokenDictionary<
 ```
 
 Until the public export is finalized, consumers should not depend on this type directly from deep internal paths.
+
+**Usage guidance (once finalized):**
+
+```ts
+// Too loose — avoid this
+const dict: TokenDictionary = loadTokens();
+
+// Correct — encode all four dimensions
+const dict: TokenDictionary<'rei-dot-com', 'web', 'foundations', CdrColorBackgroundTokens> =
+  loadTokens('rei-dot-com', 'web', 'foundations', 'color-background');
+```
+
+On literal union safety:
+
+```ts
+// Type error at compile time — 'CdrColorBackgroundTypo' is not in the union
+const name: CdrColorBackgroundTokenName = 'CdrColorBackgroundTypo';
+
+// Correct — compile-time validated
+const name: CdrColorBackgroundTokenName = 'CdrColorBackgroundPrimary';
+```
+
+Invalid token names are caught by the TypeScript compiler at build time, not at runtime. The literal union is the validation contract — no separate runtime validation step is needed for token-name lookups that go through the type barrel.
 
 ### 6. Barrel generation
 
@@ -162,9 +233,11 @@ Internal implementation (non-contract):
 - Generation internals, intermediate mapping artifacts, and deep generated file paths.
 - Any deep import path below the barrel surface.
 
-## Domain Contracts And Entrypoints (Cross-PR Reference)
+## Domain Contracts And Entrypoints
 
-This section defines the complete token domain set and the output contract expected from each domain family. It is the shared reference for developers working across parallel PRs so the build remains predictable, schema-aligned, and consistent.
+This section is the living spec for domain ownership, output matrix behavior, and entrypoint semantics. It is the shared reference for work across parallel PRs.
+
+> **Change management rule:** Any PR that alters domain ownership, output matrix behavior, or public entrypoint semantics must update this section in the same commit.
 
 ### Contract Objectives
 
@@ -197,10 +270,6 @@ Deprecated edge cases:
   - If docsite palette support becomes required in the future, knockout should be modeled as a dedicated palette module, not mixed with component outputs.
   - For now, treat docsite knockout exclusion as stable behavior.
 
-Change management rule:
-
-- Any future change that alters domain ownership, output matrix behavior, or public entrypoint semantics must update this ADR in the same PR.
-
 ### Domain Families
 
 #### Foundations
@@ -222,16 +291,19 @@ Canonical foundation domains that must emit SCSS, JSON, TypeScript, and CSS:
 Additional schema-backed foundation domains that must also be represented consistently in modular output:
 
 - Typography
-  - `font-family`
-  - `line-height` (heading, subheading, body, utility)
-  - `text-size-root`
-  - `type-scale`
-  - text variants
+  - `text-family`
+  - `text-height` (line-height; heading, subheading, body, utility)
+  - `text-size` (type scale)
+  - `text-style`
+  - `text-weight`
+  - `text-spacing` (letter-spacing)
+  - `text` (composite text variants)
+  - `type` (retained for tooling compatibility)
 - Layout
-  - `breakpoints`
+  - `breakpoint`
 - Extended spacing
-  - `spacing`
-  - `spacing-inset`
+  - `space-inset`
+  - `space-icon`
 
 #### Components
 
@@ -372,6 +444,8 @@ Palette entrypoint guidance:
 
 #### Package Exports Map (Relevant Entries)
 
+The following is illustrative — the authoritative source is `package.json`. If this block diverges from `package.json`, `package.json` wins.
+
 ```json
 {
   "exports": {
@@ -390,6 +464,18 @@ Palette entrypoint guidance:
     },
     "./docsite/types": {
       "types": "./dist/docsite/types/index.d.ts"
+    },
+    "./css": {
+      "import": "./dist/rei-dot-com/css/cdr-tokens.css"
+    },
+    "./scss": {
+      "import": "./dist/rei-dot-com/scss/cdr-tokens.scss"
+    },
+    "./docsite/css": {
+      "import": "./dist/docsite/css/cdr-tokens.css"
+    },
+    "./docsite/scss": {
+      "import": "./dist/docsite/scss/cdr-tokens.scss"
     }
   }
 }
@@ -399,11 +485,11 @@ Deep paths below these entrypoints are implementation details and may change.
 
 ## Deprecation Plan
 
-The legacy `cdr-tokens.d.mts` path has been removed from build output and package exports before broad consumer rollout.
+The legacy `cdr-tokens.d.mts` path has been removed from build output and package exports.
 
 ### Asset Entrypoint Evolution
 
-To provide a unified, consistent import experience across all asset types (types, runtime, CSS, SCSS), we are introducing simplified entrypoints. This is an **optional, non-breaking migration**.
+Simplified unified entrypoints have been introduced for a consistent import experience across all asset types. This is an **optional, non-breaking migration** — existing deep imports continue to work.
 
 #### Current Public Contract
 
@@ -417,7 +503,7 @@ To provide a unified, consistent import experience across all asset types (types
 - `@rei/cdr-tokens` (rei-dot-com)
 - `@rei/cdr-tokens/docsite` (docsite)
 
-**New unified asset entrypoints (preferred):**
+**Unified asset entrypoints (preferred for new code):**
 
 - `@rei/cdr-tokens/css` (rei-dot-com CSS)
 - `@rei/cdr-tokens/scss` (rei-dot-com SCSS)
@@ -429,8 +515,6 @@ To provide a unified, consistent import experience across all asset types (types
 - `@rei/cdr-tokens/dist/...` - all internal dist paths remain accessible via wildcard export
 
 ### Migration Guidance
-
-Migration to new entrypoints is **optional and gradual**. No breaking changes are planned. Choose to migrate at your own pace.
 
 **Old pattern (still works):**
 
@@ -457,37 +541,51 @@ import type { CdrColorBackgroundTokens } from '@rei/cdr-tokens/types';
 // New way: @import '@rei/cdr-tokens/css';
 ```
 
-### Legacy Patterns to Avoid in New Code
+### Patterns to Avoid in New Code
 
-- Deep imports into generated internals or dist-like paths tied to output layout.
-- Token-name usage as unconstrained `string` values (no literal union validation).
+**Must avoid:**
+
+- Deep imports into generated internals or dist paths (non-contractual; may break on rebuild).
+- Token-name usage as unconstrained `string` values — use the literal union types from `/types`.
+
+**Should avoid (not blocking, but tech debt):**
+
 - Ad-hoc object typing (`Record<string, string>`) instead of module interfaces.
 - Untyped dictionary loaders that do not encode theme/platform/responsibility dimensions.
 
-### Recommended Migration Path (Optional)
+### Recommended Migration Path
 
-For new projects or when updating existing code:
+**Must do for new code:**
 
-1. **Import types only from theme-specific `/types` barrels.**
+1. **Use theme-specific `/types` barrels for all type imports.** Deep internal type paths are not contractual.
 
    ```ts
    import type { CdrColorBackgroundTokenName } from '@rei/cdr-tokens/types';
    ```
 
-2. **Import CSS/SCSS from unified entrypoints.**
+2. **Do not reference token names as plain strings.** Use the literal union to get compile-time validation.
+
+   ```ts
+   // Caught at compile time if token is renamed or removed
+   const tokenName: CdrColorBackgroundTokenName = 'CdrColorBackgroundPrimary';
+   ```
+
+**Should do when convenient:**
+
+3. **Migrate CSS/SCSS to unified entrypoints.**
 
    ```scss
    @import '@rei/cdr-tokens/scss';
    @import '@rei/cdr-tokens/css';
    ```
 
-3. **Import runtime token values only from root/docsite entrypoints.**
+4. **Import runtime values from root/docsite entrypoints**, not deep dist paths.
 
    ```ts
    import { CdrSpaceScale2 } from '@rei/cdr-tokens';
    ```
 
-4. **Use module interfaces for grouped token shapes.**
+5. **Use module interfaces for grouped token shapes** instead of `Record<string, string>`.
 
    ```ts
    const bg: CdrColorBackgroundTokens = {
@@ -496,17 +594,11 @@ For new projects or when updating existing code:
    };
    ```
 
-5. **Use literal union token names for token lookup safety.**
-
-   ```ts
-   const tokenName: CdrColorBackgroundTokenName = 'CdrColorBackgroundPrimary';
-   ```
-
 6. **Adopt `TokenDictionary` when the public runtime dictionary contract is finalized.**
 
 ### Coexistence Strategy
 
-Old and new entrypoints coexist without conflict. Existing code using deep imports continues to work. Teams can migrate on their own schedule:
+Old and new entrypoints coexist without conflict. Teams can migrate on their own schedule:
 
 - **Immediate migration not required.** Your code is not broken.
 - **Migrate when convenient.** Update entrypoints incrementally as you touch files.
@@ -575,6 +667,44 @@ If utilities are added, removed, or refactored, consumers will be notified via:
 
 4. **No runtime surprises:** Utilities are at build time; breaking changes surface immediately during SCSS compilation
 
+## Testing and Validation
+
+Generated types are verified through:
+
+- **`tsc --noEmit` in CI:** Validates that generated `.d.ts` files compile without errors and that the barrel introduces no type conflicts.
+- **Build output diff in PRs:** `dist/` is committed and diffed. Unintended type surface changes surface in the PR diff — a renamed union member, a removed export, or an added interface all show up.
+- **Literal union completeness:** Token-name unions are generated deterministically from the token source. Adding or removing a token source file changes the union, which is visible in the build diff.
+
+The claim "generation is deterministic for a given schema and token graph state" is testable: the same input must always produce byte-identical output. Non-determinism in name generation, ordering, or formatting is a bug, not expected behavior.
+
+There is currently no `tsd` or `expect-type` test suite. If the type surface grows significantly, adding type-level tests is recommended.
+
+## Adding a New Foundation Token-Group
+
+1. Author token source files under `tokens/global/` or `tokens/themes/`.
+2. Register the new token-group name in the foundations module list — currently the exported array in [`style-dictionary/configs/filters/modules.ts`](../../style-dictionary/configs/filters/modules.ts). The specific export name is an internal implementation detail; if the file moves, follow the import chain from `style-dictionary/configs/filters/foundationsFilters.ts`.
+3. Add a filter file under `style-dictionary/filters/foundations/`.
+4. Add any required transforms under `style-dictionary/transforms/`.
+5. Run `pnpm build` and verify the generated module appears in `dist/rei-dot-com/`.
+6. Update the [Domain Families](#domain-families) section of this ADR to include the new token-group.
+
+For the token authoring schema, see `schema/token.schema.json`.
+
+## Versioning Policy for the Type Barrel
+
+Changes to the public type barrel (`@rei/cdr-tokens/types`) follow standard semver rules:
+
+| Change type                                       | Signal         | Example                                                   |
+| ------------------------------------------------- | -------------- | --------------------------------------------------------- |
+| New union member added                            | Minor bump     | New color token added to `CdrColorBackgroundTokenName`    |
+| Union member renamed                              | **Major bump** | `CdrColorBackgroundPrimary` → `CdrColorBackgroundDefault` |
+| Union member removed                              | **Major bump** | Token deleted from the design system                      |
+| New module interface added                        | Minor bump     | New `CdrMotionTimingTokens` export added to barrel        |
+| Module interface key renamed                      | **Major bump** | Interface property rename                                 |
+| `TokenDictionary` signature changed (once public) | **Major bump** | Type parameter added or removed                           |
+
+The type barrel is a public contract. TypeScript consumers depend on literal union members; any rename or removal breaks downstream code at compile time. Treat type renames with the same weight as value renames.
+
 ## Future Direction
 
 - Add themes/platforms/responsibilities by extending schema and module maps.
@@ -583,20 +713,3 @@ If utilities are added, removed, or refactored, consumers will be notified via:
 - Preserve backward compatibility at the public barrel boundary where feasible.
 - Complete `TokenDictionary` public export contract — tracked in [docs/tickets/token-dictionary-implementation.md](../tickets/token-dictionary-implementation.md).
 - Expand multiplatform APIs: define native platform contracts for breakpoint, text, and utilities equivalents in Android/iOS.
-
-ADR maintenance guidance:
-
-- Keep ADR 0002 as the source of truth for consumer contract and domain/output behavior.
-- If filter topology work expands further (for example, repeated cross-domain refactors or additional platform-specific filter stacks), split implementation-detail governance into a dedicated follow-up ADR while leaving public contract semantics in ADR 0002.
-
-## Current Mainline Maturity Note
-
-This ADR defines the adopted architecture and consumer contract for mainline usage.
-
-Current state is partial implementation:
-
-- Implemented: modular generated `.d.ts` module files, literal token-name unions, and module interfaces in generated type outputs.
-- Implemented: stable barrel exports (`./types` and `./docsite/types`) mapped in package exports.
-- Implemented: existing theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) remain available.
-- Implemented: legacy `cdr-tokens.d.mts` generation and exports removed.
-- Planned: `TokenDictionary` public export contract and complete deprecation rollout from legacy monolithic typing workflows.
