@@ -97,7 +97,6 @@ import { componentAccordionTokens } from './filters/components/accordion-tokens'
 import { componentButtonTokens } from './filters/components/button-tokens';
 import { componentChipTokens } from './filters/components/chip-tokens';
 import { componentFormTokens } from './filters/components/form-tokens';
-import { componentIconTokens } from './filters/components/icon-tokens';
 import { componentInputTokens } from './filters/components/input-tokens';
 import { componentLinkTokens } from './filters/components/link-tokens';
 import { componentMessageTokens } from './filters/components/message-tokens';
@@ -192,7 +191,6 @@ componentAccordionTokens(StyleDictionary);
 componentButtonTokens(StyleDictionary);
 componentChipTokens(StyleDictionary);
 componentFormTokens(StyleDictionary);
-componentIconTokens(StyleDictionary);
 componentInputTokens(StyleDictionary);
 componentLinkTokens(StyleDictionary);
 componentMessageTokens(StyleDictionary);
