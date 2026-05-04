@@ -2,30 +2,24 @@ import { describe, it, expect } from 'vitest';
 import type { Token } from 'style-dictionary';
 
 describe('foundations-color-icon-tokens filter', () => {
-  const createToken = (path: string[]): Token => ({
+  const createToken = (path: string[], filePath = 'tokens/global/color.json'): Token => ({
     name: 'test-token',
     path,
     $type: 'color',
     $value: '#000000',
     original: { $value: '#000000' },
-    filePath: 'test.json',
+    filePath,
     isSource: true,
   });
 
-  // The logic extracted from foundationsColorIconsTokens
-  const foundationsColorIconTokensFilter = (token: Token): boolean => {
-    const iconTokens = ['default', 'emphasis', 'link', 'disabled'];
+  const foundationsColorIconTokensFilter = (token: Token): boolean =>
+    token.path[0] !== 'options' &&
+    token.path[0] !== 'theme' &&
+    token.path[0] === 'color' &&
+    token.path[1] === 'icon' &&
+    (token.filePath as string).endsWith('color.json');
 
-    return (
-      token.path[0] !== 'options' &&
-      token.path[0] !== 'theme' &&
-      token.path[0] === 'color' &&
-      token.path[1] === 'icon' &&
-      iconTokens.includes(token.path[2])
-    );
-  };
-
-  it('should include valid icon tokens', () => {
+  it('should include color.icon tokens from color.json', () => {
     const validPaths = [
       ['color', 'icon', 'default'],
       ['color', 'icon', 'emphasis'],
@@ -37,6 +31,21 @@ describe('foundations-color-icon-tokens filter', () => {
       const token = createToken(path);
       expect(foundationsColorIconTokensFilter(token)).toBe(true);
     });
+  });
+
+  it('should include any color.icon token from color.json', () => {
+    const token = createToken(['color', 'icon', 'new-semantic-state']);
+    expect(foundationsColorIconTokensFilter(token)).toBe(true);
+  });
+
+  it('should include tokens from theme-level color.json files', () => {
+    const token = createToken(['color', 'icon', 'default'], 'tokens/themes/docsite/color.json');
+    expect(foundationsColorIconTokensFilter(token)).toBe(true);
+  });
+
+  it('should filter out color.icon tokens from component token files', () => {
+    const token = createToken(['color', 'icon', 'switch'], 'tokens/global/switch.json');
+    expect(foundationsColorIconTokensFilter(token)).toBe(false);
   });
 
   it('should filter out tokens in options namespace', () => {
@@ -54,19 +63,12 @@ describe('foundations-color-icon-tokens filter', () => {
     expect(foundationsColorIconTokensFilter(token)).toBe(false);
   });
 
-  it('should filter out icon tokens not in the allowed list', () => {
-    // "hover" is not in ["default", "emphasis", "link", "disabled"]
-    const token = createToken(['color', 'icon', 'hover']);
-    expect(foundationsColorIconTokensFilter(token)).toBe(false);
-  });
-
   it('should filter out tokens where path[0] is not color', () => {
     const token = createToken(['brand', 'icon', 'default']);
     expect(foundationsColorIconTokensFilter(token)).toBe(false);
   });
 
-  it('should return true for deeply nested tokens if the first three segments match', () => {
-    // Current logic does not check path length, only specific indices
+  it('should include deeply nested tokens from color.json', () => {
     const token = createToken(['color', 'icon', 'default', 'active']);
     expect(foundationsColorIconTokensFilter(token)).toBe(true);
   });

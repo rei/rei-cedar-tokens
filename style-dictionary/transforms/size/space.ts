@@ -28,8 +28,8 @@ export const space = (sd: typeof StyleDictionary): void => {
       token.$type === 'dimension' && !!(token as SpaceToken).spacingModifier,
     transform: (token: Token): string => {
       const { $value, spacingModifier } = token as SpaceToken;
-      const num = (parseFloat($value) * (spacingModifier || 1)).toFixed(1);
-      return num;
+      const num = parseFloat($value) * (spacingModifier || 1);
+      return String(parseFloat(num.toFixed(10)));
     },
   });
 };
