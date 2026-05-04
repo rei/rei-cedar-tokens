@@ -30,13 +30,29 @@ dist/
   <theme>/
     scss/
       foundations/
-        cdr-color-text.scss
+        cdr-breakpoint.scss
         cdr-color-background.scss
         cdr-color-border.scss
-        cdr-dimension-spacing.scss
-        cdr-motion.scss
+        cdr-color-icon.scss
+        cdr-color-text.scss
+        cdr-font.scss
+        cdr-line-height.scss
+        cdr-motion-duration.scss
+        cdr-motion-timing.scss
+        cdr-prominence.scss
         cdr-radius.scss
         cdr-space.scss
+        cdr-space-icon.scss
+        cdr-space-inset.scss
+        cdr-space-scale.scss
+        cdr-text-font-family.scss
+        cdr-text-font-size.scss
+        cdr-text-font-style.scss
+        cdr-text-font-weight.scss
+        cdr-text-letter-spacing.scss
+        cdr-text-line-height.scss
+        cdr-text.scss
+        cdr-type.scss
       palettes/
         cdr-palette-membership-subtle.scss
         cdr-palette-membership-vibrant.scss
@@ -45,6 +61,8 @@ dist/
         cdr-breakpoint-mixins.scss
       cdr-tokens.scss
 ```
+
+> The canonical list of foundation modules is maintained in `style-dictionary/configs/filters/modules.ts` and is the source of truth for what modules are emitted.
 
 ### Folder Overview
 

@@ -230,8 +230,10 @@ Additional schema-backed foundation domains that must also be represented consis
 - Layout
   - `breakpoints`
 - Extended spacing
-  - `spacing`
-  - `spacing-inset`
+  - `space`
+  - `space-inset`
+  - `space-scale`
+  - `space-icon` (icon dimension sizes: sm, default, lg)
 
 #### Components
 
