@@ -7,6 +7,7 @@ export const siteIos = (theme: Theme): PlatformConfig => ({
     ...commonConfig(theme, 'json'),
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/pascal',
       'color/UIColor',
       'size/strip-px',

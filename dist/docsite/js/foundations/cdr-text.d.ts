@@ -1,1 +1,1 @@
-export const CdrTextEyebrow100TextTransform: string;
+export const CdrTextEyebrow100Transform: string;

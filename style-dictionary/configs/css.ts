@@ -10,6 +10,7 @@ export const css = (theme: Theme): PlatformConfig => ({
     transformGroup: 'tokens-studio',
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/kebab',
       'size/space',
       'size/px-to-rem-transitive',

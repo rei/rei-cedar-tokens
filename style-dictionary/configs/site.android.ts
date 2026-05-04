@@ -7,6 +7,7 @@ export const siteAndroid = (theme: Theme): PlatformConfig => ({
     ...commonConfig(theme, 'json'),
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/snake',
       'size/space',
       'size/dp-transitive',

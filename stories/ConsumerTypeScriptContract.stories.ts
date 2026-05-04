@@ -682,7 +682,7 @@ export const appTheme = {
     stackMd: CdrSpace.CdrSpaceTwoX,
   },
   type: {
-    headingMd: CdrType.CdrTextHeadingSans400FontSize,
+    headingMd: CdrType.CdrTextHeadingSans400Size,
   },
 };`,
             },
@@ -770,7 +770,7 @@ export const appTheme = {
     stackMd: CdrSpace.CdrSpaceTwoX,
   },
   type: {
-    headingMd: CdrType.CdrTextHeadingSans400FontSize,
+    headingMd: CdrType.CdrTextHeadingSans400Size,
   },
 };`,
             },
@@ -781,14 +781,14 @@ export const appTheme = {
 
 export const textStyles = {
   body: {
-    fontSize: CdrText.CdrTextBody300FontSize,
-    fontWeight: CdrText.CdrTextBody300FontWeight,
-    lineHeight: CdrText.CdrTextBody300LineHeight,
+    fontSize: CdrText.CdrTextBody300Size,
+    fontWeight: CdrText.CdrTextBody300Weight,
+    lineHeight: CdrText.CdrTextBody300Height,
   },
   heading: {
-    fontSize: CdrType.CdrTextHeadingSans400FontSize,
-    fontWeight: CdrType.CdrTextHeadingSans400FontWeight,
-    lineHeight: CdrType.CdrTextHeadingSans400LineHeight,
+    fontSize: CdrType.CdrTextHeadingSans400Size,
+    fontWeight: CdrType.CdrTextHeadingSans400Weight,
+    lineHeight: CdrType.CdrTextHeadingSans400Height,
   },
 };`,
             },
@@ -913,7 +913,7 @@ const color = CdrColorText.CdrColorTextPrimary;`,
 const appTheme = {
   textPrimary: CdrColorText.CdrColorTextPrimary,
   spacingMd: CdrSpace.CdrSpaceTwoX,
-  headingMd: CdrType.CdrTextHeadingSans400FontSize,
+  headingMd: CdrType.CdrTextHeadingSans400Size,
 };`,
             },
             {
@@ -1845,7 +1845,7 @@ export const Js: Story = {
 
 CdrColorText.CdrColorTextPrimary;
 CdrSpace.CdrSpaceOneX;
-CdrType.CdrTextHeadingSans400FontSize;`,
+CdrType.CdrTextHeadingSans400Size;`,
             },
             {
               title: 'Typography app contract',
@@ -1854,14 +1854,14 @@ CdrType.CdrTextHeadingSans400FontSize;`,
 
 export const textStyles = {
   body: {
-    fontSize: CdrText.CdrTextBody300FontSize,
-    fontWeight: CdrText.CdrTextBody300FontWeight,
-    lineHeight: CdrText.CdrTextBody300LineHeight,
+    fontSize: CdrText.CdrTextBody300Size,
+    fontWeight: CdrText.CdrTextBody300Weight,
+    lineHeight: CdrText.CdrTextBody300Height,
   },
   heading: {
-    fontSize: CdrType.CdrTextHeadingSans400FontSize,
-    fontWeight: CdrType.CdrTextHeadingSans400FontWeight,
-    lineHeight: CdrType.CdrTextHeadingSans400LineHeight,
+    fontSize: CdrType.CdrTextHeadingSans400Size,
+    fontWeight: CdrType.CdrTextHeadingSans400Weight,
+    lineHeight: CdrType.CdrTextHeadingSans400Height,
   },
 };`,
             },

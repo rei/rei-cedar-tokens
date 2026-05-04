@@ -141,13 +141,13 @@ const chrome = `
 
 function getTypoStyle(prefix: string): string {
   const t = tokens as Record<string, string>;
-  const family = t[`${prefix}FontFamily`] ?? '';
-  const size = t[`${prefix}FontSize`];
-  const weight = t[`${prefix}FontWeight`];
-  const lineHeight = t[`${prefix}LineHeight`];
-  const letterSpacing = t[`${prefix}LetterSpacing`];
-  const style = t[`${prefix}FontStyle`] ?? 'normal';
-  const transform = t[`${prefix}TextTransform`] ?? '';
+  const family = t[`${prefix}Family`] ?? '';
+  const size = t[`${prefix}Size`];
+  const weight = t[`${prefix}Weight`];
+  const lineHeight = t[`${prefix}Height`];
+  const letterSpacing = t[`${prefix}Spacing`];
+  const style = t[`${prefix}Style`] ?? 'normal';
+  const transform = t[`${prefix}Transform`] ?? '';
 
   const parts: string[] = [];
   if (family) parts.push(`font-family: ${family};`);
@@ -162,12 +162,12 @@ function getTypoStyle(prefix: string): string {
 
 function typeRow(label: string, prefix: string, sampleText?: string): string {
   const t = tokens as Record<string, string>;
-  const size = t[`${prefix}FontSize`] ?? '?';
-  const weight = t[`${prefix}FontWeight`] ?? '?';
-  const lineHeight = t[`${prefix}LineHeight`] ?? '?';
-  const letterSpacing = t[`${prefix}LetterSpacing`];
-  const family = t[`${prefix}FontFamily`] ?? '';
-  const transform = t[`${prefix}TextTransform`] ?? '';
+  const size = t[`${prefix}Size`] ?? '?';
+  const weight = t[`${prefix}Weight`] ?? '?';
+  const lineHeight = t[`${prefix}Height`] ?? '?';
+  const letterSpacing = t[`${prefix}Spacing`];
+  const family = t[`${prefix}Family`] ?? '';
+  const transform = t[`${prefix}Transform`] ?? '';
 
   const text = sampleText ?? 'The quick brown fox jumps over the lazy dog';
   const css = getTypoStyle(prefix);

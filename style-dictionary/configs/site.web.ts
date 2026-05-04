@@ -10,6 +10,7 @@ export const siteWeb = (theme: Theme): PlatformConfig => ({
     transformGroup: 'tokens-studio',
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/kebab',
       'size/strip-px',
       'size/space-js',

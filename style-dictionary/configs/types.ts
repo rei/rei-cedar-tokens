@@ -9,6 +9,7 @@ export const types = (theme: Theme): PlatformConfig => ({
     actions: ['generate-types-barrel'],
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/pascal',
       'size/strip-all-px-js',
       'size/space-js',

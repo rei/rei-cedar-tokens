@@ -12,12 +12,12 @@ export type { CdrSpaceInsetTokens } from './foundations/cdr-space-inset.d.ts';
 export type { CdrSpaceScaleTokens } from './foundations/cdr-space-scale.d.ts';
 
 export type { CdrFontTokens } from './foundations/cdr-font.d.ts';
-export type { CdrTextFontFamilyTokens } from './foundations/cdr-text-font-family.d.ts';
-export type { CdrTextFontSizeTokens } from './foundations/cdr-text-font-size.d.ts';
-export type { CdrTextFontWeightTokens } from './foundations/cdr-text-font-weight.d.ts';
-export type { CdrTextFontStyleTokens } from './foundations/cdr-text-font-style.d.ts';
-export type { CdrTextLetterSpacingTokens } from './foundations/cdr-text-letter-spacing.d.ts';
-export type { CdrTextLineHeightTokens } from './foundations/cdr-text-line-height.d.ts';
+export type { CdrTextFamilyTokens } from './foundations/cdr-text-family.d.ts';
+export type { CdrTextSizeTokens } from './foundations/cdr-text-size.d.ts';
+export type { CdrTextWeightTokens } from './foundations/cdr-text-weight.d.ts';
+export type { CdrTextStyleTokens } from './foundations/cdr-text-style.d.ts';
+export type { CdrTextSpacingTokens } from './foundations/cdr-text-spacing.d.ts';
+export type { CdrTextHeightTokens } from './foundations/cdr-text-height.d.ts';
 export type { CdrLineHeightTokens } from './foundations/cdr-line-height.d.ts';
 export type { CdrTextTokens } from './foundations/cdr-text.d.ts';
 export type { CdrTypeTokens } from './foundations/cdr-type.d.ts';

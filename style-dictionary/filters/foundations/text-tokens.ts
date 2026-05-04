@@ -21,11 +21,11 @@ export const foundationsTextTokens = (sd: typeof StyleDictionary): void => {
         token.path[0].includes('text-body') ||
         token.path[0].includes('text-subheading') ||
         token.path[0].includes('text-utility')) &&
-      !token.path.includes('fontSize') &&
-      !token.path.includes('fontFamily') &&
-      !token.path.includes('lineHeight') &&
-      !token.path.includes('fontStyle') &&
-      !token.path.includes('letterSpacing') &&
-      !token.path.includes('fontWeight'),
+      !token.path.includes('family') &&
+      !token.path.includes('size') &&
+      !token.path.includes('height') &&
+      !token.path.includes('style') &&
+      !token.path.includes('spacing') &&
+      !token.path.includes('weight'),
   });
 };

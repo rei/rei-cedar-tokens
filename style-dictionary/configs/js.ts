@@ -8,6 +8,7 @@ export const js = (theme: Theme): PlatformConfig => ({
     ...commonConfig(theme, 'js'),
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/pascal',
       'size/strip-all-px-js',
       'size/space-js',

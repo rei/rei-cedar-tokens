@@ -5,7 +5,13 @@ import { commonConfig } from '../utils';
 export const figma = (theme: Theme): PlatformConfig => ({
   figma: {
     ...commonConfig(theme, 'figma'),
-    transforms: ['attribute/deprecated', 'name/kebab', 'size/space', 'size/px-to-rem-transitive'],
+    transforms: [
+      'attribute/deprecated',
+      'attribute/text-short-names',
+      'name/kebab',
+      'size/space',
+      'size/px-to-rem-transitive',
+    ],
     files: [
       {
         destination: 'figma.json',

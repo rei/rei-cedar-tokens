@@ -1,1 +1,1 @@
-export const CdrTextEyebrow100TextTransform = "uppercase";
+export const CdrTextEyebrow100Transform = "uppercase";

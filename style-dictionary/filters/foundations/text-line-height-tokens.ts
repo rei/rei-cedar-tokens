@@ -10,12 +10,12 @@ import type { Token } from 'style-dictionary';
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
-export const foundationsTextLineHeightTokens = (sd: typeof StyleDictionary): void => {
+export const foundationsTextHeightTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: 'foundations-text-line-height-tokens',
+    name: 'foundations-text-height-tokens',
     filter: (token: Token) =>
       token.path[0] !== 'options' &&
       token.path[0].includes('text') &&
-      token.path.includes('lineHeight'),
+      token.path.includes('height'),
   });
 };
