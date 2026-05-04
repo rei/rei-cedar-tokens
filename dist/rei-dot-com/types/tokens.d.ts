@@ -21,6 +21,8 @@ export type * from './foundations/cdr-prominence.d.ts';
 export type * from './foundations/cdr-prominence.names.d.ts';
 export type * from './foundations/cdr-radius.d.ts';
 export type * from './foundations/cdr-radius.names.d.ts';
+export type * from './foundations/cdr-space-icon.d.ts';
+export type * from './foundations/cdr-space-icon.names.d.ts';
 export type * from './foundations/cdr-space-inset.d.ts';
 export type * from './foundations/cdr-space-inset.names.d.ts';
 export type * from './foundations/cdr-space-scale.d.ts';

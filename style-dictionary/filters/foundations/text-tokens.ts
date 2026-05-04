@@ -15,7 +15,8 @@ export const foundationsTextTokens = (sd: typeof StyleDictionary): void => {
     name: 'foundations-text-tokens',
     filter: (token: Token) =>
       token.path[0] !== 'options' &&
-      (token.path[0].includes('text-default') ||
+      (token.path[0] === 'text-size-root' ||
+        token.path[0].includes('text-default') ||
         token.path[0].includes('text-eyebrow') ||
         token.path[0].includes('text-heading') ||
         token.path[0].includes('text-body') ||
