@@ -430,10 +430,11 @@ This flexibility supports incremental migration without forcing all consumers to
 
 Preferred stable entrypoints:
 
-- Runtime values: `@rei/cdr-tokens`, `@rei/cdr-tokens/docsite`
+- Runtime values: `@rei/cdr-tokens/tokens`, `@rei/cdr-tokens/docsite`
+- Semantic contract: `@rei/cdr-tokens` (grouped foundation objects)
 - Type barrels: `@rei/cdr-tokens/types`, `@rei/cdr-tokens/docsite/types`
 - Theme CSS/SCSS: `@rei/cdr-tokens/css`, `@rei/cdr-tokens/scss`, `@rei/cdr-tokens/docsite/css`, `@rei/cdr-tokens/docsite/scss`
-- Aggregate theme JSON artifact: `dist/<theme>/json/web.json` (legacy name `platform-tokens.json`)
+- Aggregate theme JSON artifact: `dist/<theme>/json/web.json`
 
 Internal deep dist paths remain available for compatibility but are not the preferred contract for new integrations.
 

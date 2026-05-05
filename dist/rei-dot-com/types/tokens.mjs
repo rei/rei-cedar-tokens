@@ -18,5 +18,4 @@ export * from './foundations/cdr-text-line-height.mjs';
 export * from './foundations/cdr-text-size.mjs';
 export * from './foundations/cdr-text-style.mjs';
 export * from './foundations/cdr-text-weight.mjs';
-export * from './foundations/cdr-text.mjs';
 export * from './foundations/cdr-type.mjs';

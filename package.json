@@ -14,14 +14,14 @@
     "dist"
   ],
   "type": "module",
-  "main": "./dist/rei-dot-com/types/index.mjs",
-  "module": "./dist/rei-dot-com/types/index.mjs",
+  "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
+  "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
   "types": "./dist/rei-dot-com/types/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/rei-dot-com/types/index.d.ts",
       "import": "./dist/rei-dot-com/types/index.mjs",
-      "default": "./dist/rei-dot-com/types/index.mjs"
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
     },
     "./tokens": {
       "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",

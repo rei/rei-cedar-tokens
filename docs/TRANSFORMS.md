@@ -48,7 +48,7 @@ Extracts deprecation metadata from token paths and removes the deprecation prefi
 **Input Token Path**:
 
 ```
-['deprecated-2024-R1', 'color', 'old-primary']
+['deprecated-2025-R1', 'color', 'old-primary']
 ```
 
 **Output**:

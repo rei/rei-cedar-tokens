@@ -9,7 +9,7 @@ This document explains the TypeScript token tooling end-to-end:
 - how it works
 - how components fit together into a single build and distribution pipeline
 
-Decision-level contract details (consumer API boundaries and TokenDictionary acceptance) are defined in [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md).
+Decision-level contract details (consumer API boundaries and TokenDictionary acceptance) are defined in [ADR 0001](./adr/0001-modular-output-architecture.md).
 
 ## System At A Glance
 
@@ -194,7 +194,8 @@ Public package entrypoints are defined in [package.json](../package.json).
 
 Current consumer contract includes:
 
-- runtime: `@rei/cdr-tokens`, `@rei/cdr-tokens/docsite`
+- runtime (semantic contract): `@rei/cdr-tokens` (grouped foundation objects)
+- runtime (flat values): `@rei/cdr-tokens/tokens`, `@rei/cdr-tokens/docsite`
 - type barrels: `@rei/cdr-tokens/types`, `@rei/cdr-tokens/docsite/types`
 - base schema types: `@rei/cdr-tokens/types/base`
 
@@ -291,7 +292,7 @@ When adding a new responsibility/platform/theme:
 
 ## Assessing TokenDictionary Work
 
-Use [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md) as the decision and acceptance source.
+Use [ADR 0001](./adr/0001-modular-output-architecture.md) as the decision and acceptance source.
 
 A TokenDictionary PR should be assessed against:
 
@@ -303,7 +304,6 @@ A TokenDictionary PR should be assessed against:
 
 ## Related Documentation
 
-- [ADR 0001](./adr/0001-modularize-tokens-output.md)
-- [ADR 0002](./adr/0002-typescript-pipeline-and-consumer-types.md)
+- [ADR 0001: Modular Output Architecture](./adr/0001-modular-output-architecture.md)
 - [docs/TRANSFORMS.md](./TRANSFORMS.md)
 - [README.md](../README.md)

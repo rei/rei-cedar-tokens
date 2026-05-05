@@ -19,7 +19,9 @@ export const stripAllPx = (sd: typeof StyleDictionary): void => {
     type: 'value',
     transitive: true,
     filter: (token: Token): boolean =>
-      typeof token.$value === 'string' && token.$value.endsWith('px'),
+      token.path[0] !== 'prominence' &&
+      typeof token.$value === 'string' &&
+      token.$value.endsWith('px'),
     transform: (token: Token): string => {
       let cleanVal = token.$value;
       if (typeof token.$value === 'string' && token.$value.endsWith('px')) {

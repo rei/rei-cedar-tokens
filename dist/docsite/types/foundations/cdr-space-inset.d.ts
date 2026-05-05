@@ -8,7 +8,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetEighthX: string;
   /**
    * @value 0 2
-   * @cssvar --cdr-space-inset-eighth-x-squish
+   * @cssvar --cdr-space-inset-eighth-xsquish
    */
   readonly CdrSpaceInsetEighthXSquish: string;
   /**
@@ -16,7 +16,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.eighth-x}
    * @value 2
-   * @cssvar --cdr-space-inset-eighth-x-squish-left-right
+   * @cssvar --cdr-space-inset-eighth-xsquish-left-right
    */
   readonly CdrSpaceInsetEighthXSquishLeftRight: string;
   /**
@@ -24,12 +24,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.eighth-x}
    * @value 0
-   * @cssvar --cdr-space-inset-eighth-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-eighth-xsquish-top-bottom
    */
   readonly CdrSpaceInsetEighthXSquishTopBottom: string;
   /**
    * @value 4 2
-   * @cssvar --cdr-space-inset-eighth-x-stretch
+   * @cssvar --cdr-space-inset-eighth-xstretch
    */
   readonly CdrSpaceInsetEighthXStretch: string;
   /**
@@ -37,7 +37,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.eighth-x}
    * @value 2
-   * @cssvar --cdr-space-inset-eighth-x-stretch-left-right
+   * @cssvar --cdr-space-inset-eighth-xstretch-left-right
    */
   readonly CdrSpaceInsetEighthXStretchLeftRight: string;
   /**
@@ -45,7 +45,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.eighth-x}
    * @value 4
-   * @cssvar --cdr-space-inset-eighth-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-eighth-xstretch-top-bottom
    */
   readonly CdrSpaceInsetEighthXStretchTopBottom: string;
   /**
@@ -57,7 +57,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetFourX: string;
   /**
    * @value 32 64
-   * @cssvar --cdr-space-inset-four-x-squish
+   * @cssvar --cdr-space-inset-four-xsquish
    */
   readonly CdrSpaceInsetFourXSquish: string;
   /**
@@ -65,7 +65,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.four-x}
    * @value 64
-   * @cssvar --cdr-space-inset-four-x-squish-left-right
+   * @cssvar --cdr-space-inset-four-xsquish-left-right
    */
   readonly CdrSpaceInsetFourXSquishLeftRight: string;
   /**
@@ -73,12 +73,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.four-x}
    * @value 32
-   * @cssvar --cdr-space-inset-four-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-four-xsquish-top-bottom
    */
   readonly CdrSpaceInsetFourXSquishTopBottom: string;
   /**
    * @value 96 64
-   * @cssvar --cdr-space-inset-four-x-stretch
+   * @cssvar --cdr-space-inset-four-xstretch
    */
   readonly CdrSpaceInsetFourXStretch: string;
   /**
@@ -86,7 +86,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.four-x}
    * @value 64
-   * @cssvar --cdr-space-inset-four-x-stretch-left-right
+   * @cssvar --cdr-space-inset-four-xstretch-left-right
    */
   readonly CdrSpaceInsetFourXStretchLeftRight: string;
   /**
@@ -94,7 +94,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.four-x}
    * @value 96
-   * @cssvar --cdr-space-inset-four-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-four-xstretch-top-bottom
    */
   readonly CdrSpaceInsetFourXStretchTopBottom: string;
   /**
@@ -106,7 +106,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetHalfX: string;
   /**
    * @value 4 8
-   * @cssvar --cdr-space-inset-half-x-squish
+   * @cssvar --cdr-space-inset-half-xsquish
    */
   readonly CdrSpaceInsetHalfXSquish: string;
   /**
@@ -114,7 +114,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.half-x}
    * @value 8
-   * @cssvar --cdr-space-inset-half-x-squish-left-right
+   * @cssvar --cdr-space-inset-half-xsquish-left-right
    */
   readonly CdrSpaceInsetHalfXSquishLeftRight: string;
   /**
@@ -122,12 +122,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.half-x}
    * @value 4
-   * @cssvar --cdr-space-inset-half-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-half-xsquish-top-bottom
    */
   readonly CdrSpaceInsetHalfXSquishTopBottom: string;
   /**
    * @value 12 8
-   * @cssvar --cdr-space-inset-half-x-stretch
+   * @cssvar --cdr-space-inset-half-xstretch
    */
   readonly CdrSpaceInsetHalfXStretch: string;
   /**
@@ -135,7 +135,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.half-x}
    * @value 8
-   * @cssvar --cdr-space-inset-half-x-stretch-left-right
+   * @cssvar --cdr-space-inset-half-xstretch-left-right
    */
   readonly CdrSpaceInsetHalfXStretchLeftRight: string;
   /**
@@ -143,19 +143,19 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.half-x}
    * @value 12
-   * @cssvar --cdr-space-inset-half-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-half-xstretch-top-bottom
    */
   readonly CdrSpaceInsetHalfXStretchTopBottom: string;
   /**
    * @usage Uniform inset padding at one and a half times the base unit.
    * @design Use for components needing generous padding such as modals or large cards.
    * @value 24
-   * @cssvar --cdr-space-inset-one-and-a-half-x
+   * @cssvar --cdr-space-inset-one-and-ahalf-x
    */
   readonly CdrSpaceInsetOneAndAHalfX: string;
   /**
    * @value 12 24
-   * @cssvar --cdr-space-inset-one-and-a-half-x-squish
+   * @cssvar --cdr-space-inset-one-and-ahalf-xsquish
    */
   readonly CdrSpaceInsetOneAndAHalfXSquish: string;
   /**
@@ -163,7 +163,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-and-a-half-x}
    * @value 24
-   * @cssvar --cdr-space-inset-one-and-a-half-x-squish-left-right
+   * @cssvar --cdr-space-inset-one-and-ahalf-xsquish-left-right
    */
   readonly CdrSpaceInsetOneAndAHalfXSquishLeftRight: string;
   /**
@@ -171,12 +171,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-and-a-half-x}
    * @value 12
-   * @cssvar --cdr-space-inset-one-and-a-half-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-one-and-ahalf-xsquish-top-bottom
    */
   readonly CdrSpaceInsetOneAndAHalfXSquishTopBottom: string;
   /**
    * @value 36 24
-   * @cssvar --cdr-space-inset-one-and-a-half-x-stretch
+   * @cssvar --cdr-space-inset-one-and-ahalf-xstretch
    */
   readonly CdrSpaceInsetOneAndAHalfXStretch: string;
   /**
@@ -184,7 +184,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-and-a-half-x}
    * @value 24
-   * @cssvar --cdr-space-inset-one-and-a-half-x-stretch-left-right
+   * @cssvar --cdr-space-inset-one-and-ahalf-xstretch-left-right
    */
   readonly CdrSpaceInsetOneAndAHalfXStretchLeftRight: string;
   /**
@@ -192,7 +192,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-and-a-half-x}
    * @value 36
-   * @cssvar --cdr-space-inset-one-and-a-half-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-one-and-ahalf-xstretch-top-bottom
    */
   readonly CdrSpaceInsetOneAndAHalfXStretchTopBottom: string;
   /**
@@ -204,7 +204,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetOneX: string;
   /**
    * @value 8 16
-   * @cssvar --cdr-space-inset-one-x-squish
+   * @cssvar --cdr-space-inset-one-xsquish
    */
   readonly CdrSpaceInsetOneXSquish: string;
   /**
@@ -212,7 +212,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-x}
    * @value 16
-   * @cssvar --cdr-space-inset-one-x-squish-left-right
+   * @cssvar --cdr-space-inset-one-xsquish-left-right
    */
   readonly CdrSpaceInsetOneXSquishLeftRight: string;
   /**
@@ -220,12 +220,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-x}
    * @value 8
-   * @cssvar --cdr-space-inset-one-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-one-xsquish-top-bottom
    */
   readonly CdrSpaceInsetOneXSquishTopBottom: string;
   /**
    * @value 24 16
-   * @cssvar --cdr-space-inset-one-x-stretch
+   * @cssvar --cdr-space-inset-one-xstretch
    */
   readonly CdrSpaceInsetOneXStretch: string;
   /**
@@ -233,7 +233,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-x}
    * @value 16
-   * @cssvar --cdr-space-inset-one-x-stretch-left-right
+   * @cssvar --cdr-space-inset-one-xstretch-left-right
    */
   readonly CdrSpaceInsetOneXStretchLeftRight: string;
   /**
@@ -241,7 +241,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.one-x}
    * @value 24
-   * @cssvar --cdr-space-inset-one-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-one-xstretch-top-bottom
    */
   readonly CdrSpaceInsetOneXStretchTopBottom: string;
   /**
@@ -253,7 +253,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetQuarterX: string;
   /**
    * @value 2 4
-   * @cssvar --cdr-space-inset-quarter-x-squish
+   * @cssvar --cdr-space-inset-quarter-xsquish
    */
   readonly CdrSpaceInsetQuarterXSquish: string;
   /**
@@ -261,7 +261,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.quarter-x}
    * @value 4
-   * @cssvar --cdr-space-inset-quarter-x-squish-left-right
+   * @cssvar --cdr-space-inset-quarter-xsquish-left-right
    */
   readonly CdrSpaceInsetQuarterXSquishLeftRight: string;
   /**
@@ -269,12 +269,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.quarter-x}
    * @value 2
-   * @cssvar --cdr-space-inset-quarter-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-quarter-xsquish-top-bottom
    */
   readonly CdrSpaceInsetQuarterXSquishTopBottom: string;
   /**
    * @value 6 4
-   * @cssvar --cdr-space-inset-quarter-x-stretch
+   * @cssvar --cdr-space-inset-quarter-xstretch
    */
   readonly CdrSpaceInsetQuarterXStretch: string;
   /**
@@ -282,7 +282,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.quarter-x}
    * @value 4
-   * @cssvar --cdr-space-inset-quarter-x-stretch-left-right
+   * @cssvar --cdr-space-inset-quarter-xstretch-left-right
    */
   readonly CdrSpaceInsetQuarterXStretchLeftRight: string;
   /**
@@ -290,7 +290,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.quarter-x}
    * @value 6
-   * @cssvar --cdr-space-inset-quarter-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-quarter-xstretch-top-bottom
    */
   readonly CdrSpaceInsetQuarterXStretchTopBottom: string;
   /**
@@ -316,7 +316,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetThreeQuarterX: string;
   /**
    * @value 6 12
-   * @cssvar --cdr-space-inset-three-quarter-x-squish
+   * @cssvar --cdr-space-inset-three-quarter-xsquish
    */
   readonly CdrSpaceInsetThreeQuarterXSquish: string;
   /**
@@ -324,7 +324,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-quarter-x}
    * @value 12
-   * @cssvar --cdr-space-inset-three-quarter-x-squish-left-right
+   * @cssvar --cdr-space-inset-three-quarter-xsquish-left-right
    */
   readonly CdrSpaceInsetThreeQuarterXSquishLeftRight: string;
   /**
@@ -332,12 +332,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-quarter-x}
    * @value 6
-   * @cssvar --cdr-space-inset-three-quarter-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-three-quarter-xsquish-top-bottom
    */
   readonly CdrSpaceInsetThreeQuarterXSquishTopBottom: string;
   /**
    * @value 18 12
-   * @cssvar --cdr-space-inset-three-quarter-x-stretch
+   * @cssvar --cdr-space-inset-three-quarter-xstretch
    */
   readonly CdrSpaceInsetThreeQuarterXStretch: string;
   /**
@@ -345,7 +345,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-quarter-x}
    * @value 12
-   * @cssvar --cdr-space-inset-three-quarter-x-stretch-left-right
+   * @cssvar --cdr-space-inset-three-quarter-xstretch-left-right
    */
   readonly CdrSpaceInsetThreeQuarterXStretchLeftRight: string;
   /**
@@ -353,7 +353,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-quarter-x}
    * @value 18
-   * @cssvar --cdr-space-inset-three-quarter-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-three-quarter-xstretch-top-bottom
    */
   readonly CdrSpaceInsetThreeQuarterXStretchTopBottom: string;
   /**
@@ -372,7 +372,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetThreeX: string;
   /**
    * @value 24 48
-   * @cssvar --cdr-space-inset-three-x-squish
+   * @cssvar --cdr-space-inset-three-xsquish
    */
   readonly CdrSpaceInsetThreeXSquish: string;
   /**
@@ -380,7 +380,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-x}
    * @value 48
-   * @cssvar --cdr-space-inset-three-x-squish-left-right
+   * @cssvar --cdr-space-inset-three-xsquish-left-right
    */
   readonly CdrSpaceInsetThreeXSquishLeftRight: string;
   /**
@@ -388,12 +388,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-x}
    * @value 24
-   * @cssvar --cdr-space-inset-three-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-three-xsquish-top-bottom
    */
   readonly CdrSpaceInsetThreeXSquishTopBottom: string;
   /**
    * @value 72 48
-   * @cssvar --cdr-space-inset-three-x-stretch
+   * @cssvar --cdr-space-inset-three-xstretch
    */
   readonly CdrSpaceInsetThreeXStretch: string;
   /**
@@ -401,7 +401,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-x}
    * @value 48
-   * @cssvar --cdr-space-inset-three-x-stretch-left-right
+   * @cssvar --cdr-space-inset-three-xstretch-left-right
    */
   readonly CdrSpaceInsetThreeXStretchLeftRight: string;
   /**
@@ -409,7 +409,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.three-x}
    * @value 72
-   * @cssvar --cdr-space-inset-three-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-three-xstretch-top-bottom
    */
   readonly CdrSpaceInsetThreeXStretchTopBottom: string;
   /**
@@ -421,7 +421,7 @@ export interface CdrSpaceInsetTokens {
   readonly CdrSpaceInsetTwoX: string;
   /**
    * @value 16 32
-   * @cssvar --cdr-space-inset-two-x-squish
+   * @cssvar --cdr-space-inset-two-xsquish
    */
   readonly CdrSpaceInsetTwoXSquish: string;
   /**
@@ -429,7 +429,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.two-x}
    * @value 32
-   * @cssvar --cdr-space-inset-two-x-squish-left-right
+   * @cssvar --cdr-space-inset-two-xsquish-left-right
    */
   readonly CdrSpaceInsetTwoXSquishLeftRight: string;
   /**
@@ -437,12 +437,12 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.two-x}
    * @value 16
-   * @cssvar --cdr-space-inset-two-x-squish-top-bottom
+   * @cssvar --cdr-space-inset-two-xsquish-top-bottom
    */
   readonly CdrSpaceInsetTwoXSquishTopBottom: string;
   /**
    * @value 48 32
-   * @cssvar --cdr-space-inset-two-x-stretch
+   * @cssvar --cdr-space-inset-two-xstretch
    */
   readonly CdrSpaceInsetTwoXStretch: string;
   /**
@@ -450,7 +450,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.two-x}
    * @value 32
-   * @cssvar --cdr-space-inset-two-x-stretch-left-right
+   * @cssvar --cdr-space-inset-two-xstretch-left-right
    */
   readonly CdrSpaceInsetTwoXStretchLeftRight: string;
   /**
@@ -458,7 +458,7 @@ export interface CdrSpaceInsetTokens {
    * @design Avoid in new work. Use the base inset token instead.
    * @alternatives {space.inset.two-x}
    * @value 48
-   * @cssvar --cdr-space-inset-two-x-stretch-top-bottom
+   * @cssvar --cdr-space-inset-two-xstretch-top-bottom
    */
   readonly CdrSpaceInsetTwoXStretchTopBottom: string;
 }

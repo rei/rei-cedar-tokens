@@ -31,13 +31,13 @@ export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
       const mjsFiles = globSync('**/*.mjs', {
         cwd: buildPath,
         nodir: true,
-        ignore: ['tokens.mjs'],
+        ignore: ['tokens.mjs', 'index.mjs'],
       }).sort();
 
       const declarationFiles = globSync('**/*.d.ts', {
         cwd: buildPath,
         nodir: true,
-        ignore: ['tokens.d.ts'],
+        ignore: ['tokens.d.ts', 'index.d.ts'],
       }).sort();
 
       const mjsExports = mjsFiles.map((file) => `export * from '${toExportPath(file)}';`);

@@ -702,8 +702,7 @@ import '@rei/cdr-tokens/css';`,
             {
               title: 'Pipeline ingestion — json',
               language: 'ts',
-              code: `import platformTokens from '@rei/cdr-tokens/json/platform-tokens.json';
-import webTokens from '@rei/cdr-tokens/json';`,
+              code: `import webTokens from '@rei/cdr-tokens/json';`,
             },
           ],
         },
