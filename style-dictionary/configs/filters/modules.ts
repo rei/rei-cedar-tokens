@@ -17,8 +17,8 @@ export const foundationsModulesName = [
   'text-size',
   'text-style',
   'text-weight',
-  'text-spacing',
-  'text-height',
+  'text-letter-spacing',
+  'text-line-height',
   'text',
   'type',
 ];

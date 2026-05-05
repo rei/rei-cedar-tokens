@@ -66,14 +66,15 @@ export const scssTypography = (sd: typeof StyleDictionary): void => {
       // Group them by their parent path to recreate the mixin
       const allTokens = dictionary.allTokens;
 
-      // Typography property names (short names after text-short-names transform)
+      // Typography property names — some are remapped by text-short-names transform (family, size, style, weight, transform),
+      // while lineHeight and letterSpacing remain in their DTCG expanded form
       const typographyProps = [
         'family',
         'size',
         'weight',
         'style',
-        'height',
-        'spacing',
+        'lineHeight',
+        'letterSpacing',
         'transform',
       ];
 
@@ -83,8 +84,8 @@ export const scssTypography = (sd: typeof StyleDictionary): void => {
         size: 'font-size',
         weight: 'font-weight',
         style: 'font-style',
-        height: 'line-height',
-        spacing: 'letter-spacing',
+        lineHeight: 'line-height',
+        letterSpacing: 'letter-spacing',
         transform: 'text-transform',
       };
 
@@ -122,7 +123,7 @@ export const scssTypography = (sd: typeof StyleDictionary): void => {
         typographyProps.forEach((prop) => {
           if (group.props[prop] !== undefined) {
             let value = group.props[prop];
-            if (prop === 'size' || prop === 'height') {
+            if (prop === 'size' || prop === 'lineHeight') {
               value = pxToRem(String(value));
             }
             declarations.push(`${cssPropertyMap[prop] || _.kebabCase(prop)}: ${value};`);

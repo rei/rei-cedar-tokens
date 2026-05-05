@@ -144,8 +144,8 @@ function getTypoStyle(prefix: string): string {
   const family = t[`${prefix}Family`] ?? '';
   const size = t[`${prefix}Size`];
   const weight = t[`${prefix}Weight`];
-  const lineHeight = t[`${prefix}Height`];
-  const letterSpacing = t[`${prefix}Spacing`];
+  const lineHeight = t[`${prefix}LineHeight`];
+  const letterSpacing = t[`${prefix}LetterSpacing`];
   const style = t[`${prefix}Style`] ?? 'normal';
   const transform = t[`${prefix}Transform`] ?? '';
 
@@ -164,8 +164,8 @@ function typeRow(label: string, prefix: string, sampleText?: string): string {
   const t = tokens as Record<string, string>;
   const size = t[`${prefix}Size`] ?? '?';
   const weight = t[`${prefix}Weight`] ?? '?';
-  const lineHeight = t[`${prefix}Height`] ?? '?';
-  const letterSpacing = t[`${prefix}Spacing`];
+  const lineHeight = t[`${prefix}LineHeight`] ?? '?';
+  const letterSpacing = t[`${prefix}LetterSpacing`];
   const family = t[`${prefix}Family`] ?? '';
   const transform = t[`${prefix}Transform`] ?? '';
 

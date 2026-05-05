@@ -783,12 +783,12 @@ export const textStyles = {
   body: {
     fontSize: CdrText.CdrTextBody300Size,
     fontWeight: CdrText.CdrTextBody300Weight,
-    lineHeight: CdrText.CdrTextBody300Height,
+    lineHeight: CdrText.CdrTextBody300LineHeight,
   },
   heading: {
     fontSize: CdrType.CdrTextHeadingSans400Size,
     fontWeight: CdrType.CdrTextHeadingSans400Weight,
-    lineHeight: CdrType.CdrTextHeadingSans400Height,
+    lineHeight: CdrType.CdrTextHeadingSans400LineHeight,
   },
 };`,
             },
@@ -1856,12 +1856,12 @@ export const textStyles = {
   body: {
     fontSize: CdrText.CdrTextBody300Size,
     fontWeight: CdrText.CdrTextBody300Weight,
-    lineHeight: CdrText.CdrTextBody300Height,
+    lineHeight: CdrText.CdrTextBody300LineHeight,
   },
   heading: {
     fontSize: CdrType.CdrTextHeadingSans400Size,
     fontWeight: CdrType.CdrTextHeadingSans400Weight,
-    lineHeight: CdrType.CdrTextHeadingSans400Height,
+    lineHeight: CdrType.CdrTextHeadingSans400LineHeight,
   },
 };`,
             },

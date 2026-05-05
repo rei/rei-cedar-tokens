@@ -10,12 +10,12 @@ import type { Token } from 'style-dictionary';
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
-export const foundationsTextSpacingTokens = (sd: typeof StyleDictionary): void => {
+export const foundationsTextLetterSpacingTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: 'foundations-text-spacing-tokens',
+    name: 'foundations-text-letter-spacing-tokens',
     filter: (token: Token) =>
       token.path[0] !== 'options' &&
       token.path[0].includes('text') &&
-      token.path.includes('spacing'),
+      token.path.includes('letterSpacing'),
   });
 };

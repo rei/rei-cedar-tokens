@@ -4,8 +4,6 @@ import type { Token } from 'style-dictionary';
 const TEXT_PROPERTY_MAP: Record<string, string> = {
   fontFamily: 'family',
   fontSize: 'size',
-  lineHeight: 'height',
-  letterSpacing: 'spacing',
   fontStyle: 'style',
   fontWeight: 'weight',
   textTransform: 'transform',
