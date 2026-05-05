@@ -1,7 +1,12 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
+import fs from 'fs-extra';
+import path from 'node:path';
 import { PLATFORMS, THEMES } from './constants';
 import { getConfig } from './configs';
+import { getDirname } from './utils';
+
+const __dirname = getDirname(import.meta.url);
 
 /**
  * REI Cedar Tokens Build Script
@@ -23,6 +28,7 @@ import { getConfig } from './configs';
 
 // ==== Include custom transforms ====
 import { deprecated } from './transforms/attribute/deprecated';
+import { textShortNames } from './transforms/attribute/text-short-names';
 import { dpTransitive } from './transforms/size/dp-transitive';
 import { space } from './transforms/size/space';
 import { spaceJs } from './transforms/size/space-js';
@@ -45,7 +51,7 @@ import { typescriptTokenNameUnion } from './formats/typescript-token-name-union'
 // ==== Include custom actions ====
 import { concatFiles } from './actions/concat-files';
 import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
-
+import { generateTypesBarrel } from './actions/generate-types-barrel';
 // ==== Include custom legacy filters ====
 import { colorBackgroundTokens } from './filters/legacy/color-background-tokens';
 import { colorBorderTokens } from './filters/legacy/color-border-tokens';
@@ -77,11 +83,11 @@ import { foundationsLineHeightTokens } from './filters/foundations/line-height-t
 import { foundationsTextTokens } from './filters/foundations/text-tokens';
 import { foundationsTypeTokens } from './filters/foundations/type-tokens';
 import { foundationsFontTokens } from './filters/foundations/font-tokens';
-import { foundationsTextFontSizeTokens } from './filters/foundations/text-font-size-tokens';
-import { foundationsTextFontWeightTokens } from './filters/foundations/text-font-weight-tokens';
+import { foundationsTextSizeTokens } from './filters/foundations/text-font-size-tokens';
+import { foundationsTextWeightTokens } from './filters/foundations/text-font-weight-tokens';
 import { foundationsTextLineHeightTokens } from './filters/foundations/text-line-height-tokens';
-import { foundationsTextFontStyleTokens } from './filters/foundations/text-font-style-tokens';
-import { foundationsTextFontFamilyTokens } from './filters/foundations/text-font-family';
+import { foundationsTextStyleTokens } from './filters/foundations/text-font-style-tokens';
+import { foundationsTextFamilyTokens } from './filters/foundations/text-font-family';
 import { foundationsTextLetterSpacingTokens } from './filters/foundations/text-letter-spacing-tokens';
 import { foundationsBreakpointTokens } from './filters/foundations/breakpoint-tokens';
 import { foundationsColorIconsTokens } from './filters/foundations/color-icon';
@@ -91,7 +97,6 @@ import { componentAccordionTokens } from './filters/components/accordion-tokens'
 import { componentButtonTokens } from './filters/components/button-tokens';
 import { componentChipTokens } from './filters/components/chip-tokens';
 import { componentFormTokens } from './filters/components/form-tokens';
-import { componentIconTokens } from './filters/components/icon-tokens';
 import { componentInputTokens } from './filters/components/input-tokens';
 import { componentLinkTokens } from './filters/components/link-tokens';
 import { componentMessageTokens } from './filters/components/message-tokens';
@@ -115,6 +120,7 @@ register(StyleDictionary);
 // IMPORTANT: Transform order matters! See docs/TRANSFORMS.md
 // deprecated MUST be first as it mutates token paths
 deprecated(StyleDictionary);
+textShortNames(StyleDictionary);
 dpTransitive(StyleDictionary);
 space(StyleDictionary);
 spaceJs(StyleDictionary);
@@ -138,6 +144,7 @@ typescriptTokenNameUnion(StyleDictionary);
 concatFiles(StyleDictionary);
 includeDisplayScss(StyleDictionary);
 includeQueriesFileScss(StyleDictionary);
+generateTypesBarrel(StyleDictionary);
 
 // ==== Register custom legacy filters ====
 colorBackgroundTokens(StyleDictionary);
@@ -156,6 +163,7 @@ removeSourceTokens(StyleDictionary);
 spaceTokens(StyleDictionary);
 
 // ==== Register custom foundations filters ====
+foundationsBreakpointTokens(StyleDictionary);
 foundationsColorBackgroundTokens(StyleDictionary);
 foundationsColorBorderTokens(StyleDictionary);
 foundationsColorTextTokens(StyleDictionary);
@@ -168,15 +176,14 @@ foundationsSpaceInsetTokens(StyleDictionary);
 foundationsSpaceScaleTokens(StyleDictionary);
 foundationsLineHeightTokens(StyleDictionary);
 foundationsTextTokens(StyleDictionary);
-foundationsTextFontSizeTokens(StyleDictionary);
-foundationsTextFontWeightTokens(StyleDictionary);
-foundationsTextFontFamilyTokens(StyleDictionary);
+foundationsTextSizeTokens(StyleDictionary);
+foundationsTextWeightTokens(StyleDictionary);
+foundationsTextFamilyTokens(StyleDictionary);
 foundationsTextLineHeightTokens(StyleDictionary);
-foundationsTextFontStyleTokens(StyleDictionary);
+foundationsTextStyleTokens(StyleDictionary);
 foundationsTextLetterSpacingTokens(StyleDictionary);
 foundationsTypeTokens(StyleDictionary);
 foundationsFontTokens(StyleDictionary);
-foundationsBreakpointTokens(StyleDictionary);
 foundationsColorIconsTokens(StyleDictionary);
 
 // ==== Register custom component filters ====
@@ -184,7 +191,6 @@ componentAccordionTokens(StyleDictionary);
 componentButtonTokens(StyleDictionary);
 componentChipTokens(StyleDictionary);
 componentFormTokens(StyleDictionary);
-componentIconTokens(StyleDictionary);
 componentInputTokens(StyleDictionary);
 componentLinkTokens(StyleDictionary);
 componentMessageTokens(StyleDictionary);
@@ -199,6 +205,103 @@ componentTabTokens(StyleDictionary);
 componentTableTokens(StyleDictionary);
 componentToggleButtonTokens(StyleDictionary);
 componentTooltipTokens(StyleDictionary);
+
+/**
+ * Generate semantic contract layer
+ *
+ * Writes dist/rei-dot-com/types/index.mjs and index.d.ts.
+ * These are the named exports for @rei/cdr-tokens (root entrypoint):
+ *   export { CdrColorText, CdrSpace, CdrType, ... }
+ *
+ * NOTE: dist/rei-dot-com/types/tokens.mjs and tokens.d.ts are a SEPARATE file —
+ * they are the full export* barrel generated by the generate-types-barrel Style
+ * Dictionary action (style-dictionary/actions/generate-types-barrel.ts).
+ * Do NOT rename or merge these two outputs — they serve different entrypoints.
+ */
+async function generateSemanticContract() {
+  const typesDir = path.join(__dirname, '../dist/rei-dot-com/types');
+
+  // Ensure directory exists
+  await fs.ensureDir(typesDir);
+
+  // Generate tokens.mjs
+  const semanticMjsContent = `/**
+ * Cedar Semantic Contract
+ *
+ * This module exports semantic foundation tokens with version stability guarantees.
+ * Consumers can depend on these exports not changing name or being removed within a major version.
+ *
+ * Use for framework integrations (Tailwind, styled-components, etc).
+ * Consumers own mapping these values to their framework.
+ */
+
+export { CdrColorText } from './foundations/cdr-color-text.mjs';
+export { CdrColorBackground } from './foundations/cdr-color-background.mjs';
+export { CdrColorBorder } from './foundations/cdr-color-border.mjs';
+export { CdrColorIcon } from './foundations/cdr-color-icon.mjs';
+
+export { CdrSpace } from './foundations/cdr-space.mjs';
+export { CdrSpaceInset } from './foundations/cdr-space-inset.mjs';
+export { CdrSpaceScale } from './foundations/cdr-space-scale.mjs';
+
+export { CdrFont } from './foundations/cdr-font.mjs';
+export { CdrTextFamily } from './foundations/cdr-text-family.mjs';
+export { CdrTextSize } from './foundations/cdr-text-size.mjs';
+export { CdrTextWeight } from './foundations/cdr-text-weight.mjs';
+export { CdrTextStyle } from './foundations/cdr-text-style.mjs';
+export { CdrTextLetterSpacing } from './foundations/cdr-text-letter-spacing.mjs';
+export { CdrTextLineHeight } from './foundations/cdr-text-line-height.mjs';
+export { CdrLineHeight } from './foundations/cdr-line-height.mjs';
+export { CdrText } from './foundations/cdr-text.mjs';
+export { CdrType } from './foundations/cdr-type.mjs';
+
+export { CdrMotionDuration } from './foundations/cdr-motion-duration.mjs';
+export { CdrMotionTiming } from './foundations/cdr-motion-timing.mjs';
+
+export { CdrRadius } from './foundations/cdr-radius.mjs';
+export { CdrProminence } from './foundations/cdr-prominence.mjs';
+export { CdrBreakpoint } from './foundations/cdr-breakpoint.mjs';
+`;
+
+  await fs.writeFile(path.join(typesDir, 'index.mjs'), semanticMjsContent);
+
+  // Generate index.d.ts
+  const semanticDtsContent = `/**
+ * Cedar Semantic Contract - TypeScript Type Definitions
+ */
+
+export type { CdrColorTextTokens } from './foundations/cdr-color-text.d.ts';
+export type { CdrColorBackgroundTokens } from './foundations/cdr-color-background.d.ts';
+export type { CdrColorBorderTokens } from './foundations/cdr-color-border.d.ts';
+export type { CdrColorIconTokens } from './foundations/cdr-color-icon.d.ts';
+
+export type { CdrSpaceTokens } from './foundations/cdr-space.d.ts';
+export type { CdrSpaceInsetTokens } from './foundations/cdr-space-inset.d.ts';
+export type { CdrSpaceScaleTokens } from './foundations/cdr-space-scale.d.ts';
+
+export type { CdrFontTokens } from './foundations/cdr-font.d.ts';
+export type { CdrTextFamilyTokens } from './foundations/cdr-text-family.d.ts';
+export type { CdrTextSizeTokens } from './foundations/cdr-text-size.d.ts';
+export type { CdrTextWeightTokens } from './foundations/cdr-text-weight.d.ts';
+export type { CdrTextStyleTokens } from './foundations/cdr-text-style.d.ts';
+export type { CdrTextLetterSpacingTokens } from './foundations/cdr-text-letter-spacing.d.ts';
+export type { CdrTextLineHeightTokens } from './foundations/cdr-text-line-height.d.ts';
+export type { CdrLineHeightTokens } from './foundations/cdr-line-height.d.ts';
+export type { CdrTextTokens } from './foundations/cdr-text.d.ts';
+export type { CdrTypeTokens } from './foundations/cdr-type.d.ts';
+
+export type { CdrMotionDurationTokens } from './foundations/cdr-motion-duration.d.ts';
+export type { CdrMotionTimingTokens } from './foundations/cdr-motion-timing.d.ts';
+
+export type { CdrRadiusTokens } from './foundations/cdr-radius.d.ts';
+export type { CdrProminenceTokens } from './foundations/cdr-prominence.d.ts';
+export type { CdrBreakpointTokens } from './foundations/cdr-breakpoint.d.ts';
+`;
+
+  await fs.writeFile(path.join(typesDir, 'index.d.ts'), semanticDtsContent);
+
+  console.log('✓ Generated semantic contract layer');
+}
 
 /**
  * Build all theme × platform combinations
@@ -219,7 +322,14 @@ async function buildAllThemesAndPlatforms() {
       console.log('\n==============================================');
       console.log(`\nProcessing: [${platform}] [${theme}]`);
 
-      const sd = new StyleDictionary(getConfig(platform, theme));
+      const config = getConfig(platform, theme);
+      const platformConfig = config[platform];
+      if (platformConfig?.buildPath) {
+        // Ensure removed/renamed outputs from previous builds do not linger in dist.
+        fs.removeSync(path.join(__dirname, '../', platformConfig.buildPath));
+      }
+
+      const sd = new StyleDictionary(config);
       try {
         await sd.buildAllPlatforms();
       } catch (error) {
@@ -233,6 +343,9 @@ async function buildAllThemesAndPlatforms() {
 
   console.log('\n==============================================');
   console.log('\nBuild completed!');
+
+  // Generate semantic contract layer after all builds complete
+  await generateSemanticContract();
 }
 
 // Run the function to process all themes and platforms

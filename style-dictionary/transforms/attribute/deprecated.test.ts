@@ -16,7 +16,7 @@ describe('deprecated transform', () => {
   const deprecatedTransform = (token: Token): Record<string, unknown> => {
     if (token.path[0].includes('deprecated')) {
       const [, year, release] = token.path[0].split('-');
-      token.path.shift();
+      token.path = token.path.slice(1);
 
       return {
         deprecated: true,
@@ -76,7 +76,7 @@ describe('deprecated transform', () => {
     });
   });
 
-  it('should mutate original token path', () => {
+  it('should remove the deprecated prefix from token path', () => {
     const originalPath = ['deprecated-2024-R1', 'color', 'test'];
     const token = createMockToken(originalPath);
 

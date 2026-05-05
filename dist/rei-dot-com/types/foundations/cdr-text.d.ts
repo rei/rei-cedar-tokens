@@ -1,5 +1,9 @@
 export interface CdrTextTokens {
-  readonly CdrTextEyebrow100TextTransform: string;
+  /**
+   * @value uppercase
+   * @cssvar --cdr-text-eyebrow100-transform
+   */
+  readonly CdrTextEyebrow100Transform: string;
 }
 
 export declare const CdrText: CdrTextTokens;

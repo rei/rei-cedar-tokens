@@ -22,7 +22,10 @@ export const deprecated = (sd: typeof StyleDictionary) => {
     transform: (token: Token): Record<string, unknown> => {
       if (token.path[0].includes('deprecated')) {
         const [, year, release] = token.path[0].split('-');
-        token.path.shift();
+        // Intentionally replaces token.path so the name transform
+        // generates clean variable names without the deprecated prefix.
+        // This must run before any name transforms (see build.ts ordering comment).
+        token.path = token.path.slice(1);
 
         return {
           deprecated: true,

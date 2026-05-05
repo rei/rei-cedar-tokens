@@ -3,14 +3,17 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
-import { foundationsMoudulesName, componentModulesName } from '../configs/filters/modules';
+import { foundationsModulesName, componentModulesName } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
-  const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
+  const importStatement = isScss ? '@forward' : '@import';
+  const outputDir = path.dirname(filePath);
+  const imports = foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`);
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
+  const extensionImports: string[] = [];
 
   if (isScss) {
     imports.push(
@@ -27,28 +30,26 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     );
   }
 
-  // SCSS variables that are defined in both foundations and utilities
-  // cause @forward conflicts. The breakpoint-mixins utility redefines
-  // $cdr-breakpoint-* variables already forwarded by foundations/cdr-breakpoint.
-  // hide these from the utility forward to avoid the conflict.
-  const scssHideMembers = [
-    '$cdr-breakpoint-xs',
-    '$cdr-breakpoint-sm',
-    '$cdr-breakpoint-md',
-    '$cdr-breakpoint-lg',
-  ];
-
-  const lines = imports.map((importPath) => {
-    if (isScss) {
-      if (importPath === './utilities/cdr-breakpoint-mixins') {
-        return `@forward "${importPath}" hide ${scssHideMembers.join(', ')};`;
-      }
-      return `@forward "${importPath}";`;
-    }
-    return `@import "${importPath}${fileExtension}";`;
+  const importsExtension = imports.map((importLine: string) => {
+    return isScss ? importLine : importLine + fileExtension;
   });
 
-  return lines.join('\n');
+  const breakpointForwardHide =
+    ' hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg';
+
+  importsExtension.forEach((importFile: string) => {
+    const fsPath = isScss
+      ? path.join(outputDir, `${importFile}.scss`)
+      : path.join(outputDir, importFile);
+
+    if (fs.pathExistsSync(fsPath)) {
+      const hideClause =
+        isScss && importFile === './utilities/cdr-breakpoint-mixins' ? breakpointForwardHide : '';
+      extensionImports.push(`${importStatement} "${importFile}"${hideClause};`);
+    }
+  });
+
+  return extensionImports.join('\n');
 };
 
 /**

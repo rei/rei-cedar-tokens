@@ -13,16 +13,11 @@ import type { Token } from 'style-dictionary';
 export const foundationsColorIconsTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-color-icon-tokens',
-    filter: (token: Token) => {
-      const iconTokens = ['default', 'emphasis', 'link', 'disabled'];
-
-      return (
-        token.path[0] !== 'options' &&
-        token.path[0] !== 'theme' &&
-        token.path[0] === 'color' &&
-        token.path[1] === 'icon' &&
-        iconTokens.includes(token.path[2])
-      );
-    },
+    filter: (token: Token) =>
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] === 'color' &&
+      token.path[1] === 'icon' &&
+      (token.filePath as string).endsWith('color.json'),
   });
 };

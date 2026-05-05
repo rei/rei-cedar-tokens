@@ -1,5 +1,5 @@
 export const CdrText = {
-  CdrTextEyebrow100TextTransform: "uppercase",
+  CdrTextEyebrow100Transform: "uppercase",
 };
 
 export default CdrText;

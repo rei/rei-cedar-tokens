@@ -67,6 +67,27 @@ dist/
 
 ---
 
+## Maintaining Token Separation
+
+To prevent component tokens from leaking into foundation exports, strict filter shapes are enforced during the build process. See [ADR-0002: Filter Shape Specification](./0002-filter-shape-specification.md) for detailed rules.
+
+**Key Guidelines:**
+
+- Foundations contain **only** semantic tokens (no component-specific states like focus, active, disabled)
+- Components contain tokens scoped to specific component needs
+- Palettes contain context-specific color compositions
+- Utilities contain reusable SCSS mixins (not value exports)
+
+Before adding a new token:
+
+1. Determine its responsibility (foundation / component / palette / utility)
+2. Verify it matches the filter shape spec in ADR-0002
+3. Ensure no cross-contamination with other categories
+4. Run `pnpm run validate` to confirm separation
+
+---
+
 ## Related Resources
 
+- [ADR-0002: Filter Shape Specification](./0002-filter-shape-specification.md) — Explicit token path rules
 - [Jira: CDR-3504](https://rei-coop.atlassian.net/browse/CDR-3504)

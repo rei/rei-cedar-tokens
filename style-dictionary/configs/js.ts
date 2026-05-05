@@ -1,14 +1,14 @@
 import type { PlatformConfig } from 'style-dictionary/types';
 import type { Theme } from '../constants';
+import { getTokenModules } from '../token-modules';
 import { commonConfig } from '../utils';
-import { foundationsFilters } from './filters/foundationsFilters';
-import { componentsFilters } from './filters/componentsFilters';
 
 export const js = (theme: Theme): PlatformConfig => ({
   js: {
     ...commonConfig(theme, 'js'),
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/pascal',
       'size/strip-all-px-js',
       'size/space-js',
@@ -26,16 +26,27 @@ export const js = (theme: Theme): PlatformConfig => ({
         filter: 'remove-source-tokens',
       },
       {
-        destination: 'cdr-tokens.d.mts',
+        destination: 'cdr-tokens.d.ts',
         format: 'typescript/es6-declarations',
         filter: 'remove-source-tokens',
       },
-      ...foundationsFilters('mjs', 'javascript/es6'),
-      ...foundationsFilters('cjs', 'javascript/module-flat'),
-      ...foundationsFilters('d.ts', 'typescript/es6-declarations'),
-      ...componentsFilters('mjs', 'javascript/es6'),
-      ...componentsFilters('cjs', 'javascript/module-flat'),
-      ...componentsFilters('d.ts', 'typescript/es6-declarations'),
+      ...getTokenModules(theme, 'js').flatMap((tokenModule) => [
+        {
+          destination: `${tokenModule.responsibility}/${tokenModule.name}.mjs`,
+          format: 'javascript/es6',
+          filter: tokenModule.filter,
+        },
+        {
+          destination: `${tokenModule.responsibility}/${tokenModule.name}.cjs`,
+          format: 'javascript/module-flat',
+          filter: tokenModule.filter,
+        },
+        {
+          destination: `${tokenModule.responsibility}/${tokenModule.name}.d.ts`,
+          format: 'typescript/es6-declarations',
+          filter: tokenModule.filter,
+        },
+      ]),
     ],
   },
 });

@@ -1,2 +1,2 @@
 export type CdrTextTokenName =
-  | "CdrTextEyebrow100TextTransform";
+  | "CdrTextEyebrow100Transform";

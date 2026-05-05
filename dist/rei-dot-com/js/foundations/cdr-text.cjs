@@ -1,3 +1,3 @@
 module.exports = {
-  CdrTextEyebrow100TextTransform: "uppercase",
+  CdrTextEyebrow100Transform: "uppercase",
 };

@@ -18,7 +18,7 @@ export const stripAllPxJs = (sd: typeof StyleDictionary): void => {
     name: 'size/strip-all-px-js',
     type: 'value',
     transitive: true,
-    filter: (token: Token): boolean => !token.name?.match('Prominence'),
+    filter: (token: Token): boolean => token.path[0] !== 'prominence',
     transform: (token: Token): string => {
       let cleanVal = token.$value;
       if (typeof token.$value === 'string' && token.$value.endsWith('px')) {

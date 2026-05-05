@@ -8,6 +8,7 @@ export const ios = (theme: Theme): PlatformConfig => ({
     ...commonConfig(theme, 'ios'),
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/pascal',
       'color/UIColor',
       'size/strip-px',
