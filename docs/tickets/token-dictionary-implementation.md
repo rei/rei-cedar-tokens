@@ -42,4 +42,4 @@ export type TokenDictionary<
 
 ## References
 
-- [ADR 0002: TypeScript Pipeline and Consumer Types API](../adr/0002-typescript-pipeline-and-consumer-types.md)
+- [ADR 0001: Modular Output Architecture](../adr/0001-modular-output-architecture.md)

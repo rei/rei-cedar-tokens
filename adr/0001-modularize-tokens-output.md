@@ -16,8 +16,7 @@ The cedar-tokens repository currently produces a single global token output per 
 
 - All consumers must import all tokens, regardless of need.
 - Foundational values, semantic roles, component tokens, and utilities are mixed together.
-- The structure does not align with Cedar’s naming strategy:## Decision
-- The component determines which price values to display based on discount presence, range detection, and compare‑at validity.
+- The structure does not align with Cedar's naming strategy.
 
 ## Decision
 

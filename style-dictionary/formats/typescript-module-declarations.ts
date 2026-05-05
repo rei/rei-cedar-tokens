@@ -5,7 +5,13 @@ import { getModuleTypeName, getValueName } from './typescript-module-utils';
 type TokenDescription = string | Record<string, string | string[]>;
 
 const toCssVar = (name: string): string =>
-  '--' + name.replace(/([A-Z])/g, (_, c: string) => `-${c.toLowerCase()}`).replace(/^-/, '');
+  '--' +
+  name
+    .replace(/([a-z])(\d)/g, '$1-$2')
+    .replace(/(\d)([A-Z])/g, '$1-$2')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .toLowerCase()
+    .replace(/^-/, '');
 
 const formatJSDoc = (description?: TokenDescription, value?: string, cssvar?: string): string => {
   const lines: string[] = [];

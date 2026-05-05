@@ -28,7 +28,7 @@ export interface CdrSpaceTokens {
    * @design Use for legacy components only. Prefer fluid scale tokens for new work.
    * @alternatives {space.scale.4}
    * @value 24
-   * @cssvar --cdr-space-one-and-a-half-x
+   * @cssvar --cdr-space-one-and-ahalf-x
    */
   readonly CdrSpaceOneAndAHalfX: string;
   /**

@@ -39,7 +39,5 @@ export type * from './foundations/cdr-text-style.d.ts';
 export type * from './foundations/cdr-text-style.names.d.ts';
 export type * from './foundations/cdr-text-weight.d.ts';
 export type * from './foundations/cdr-text-weight.names.d.ts';
-export type * from './foundations/cdr-text.d.ts';
-export type * from './foundations/cdr-text.names.d.ts';
 export type * from './foundations/cdr-type.d.ts';
 export type * from './foundations/cdr-type.names.d.ts';

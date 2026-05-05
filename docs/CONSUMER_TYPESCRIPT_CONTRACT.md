@@ -23,8 +23,10 @@ Type-only entrypoints:
 
 Runtime value entrypoints:
 
-- `@rei/cdr-tokens` (rei-dot-com)
-- `@rei/cdr-tokens/docsite` (docsite)
+- `@rei/cdr-tokens/tokens` (rei-dot-com flat runtime values)
+- `@rei/cdr-tokens/docsite` (docsite flat runtime values)
+
+The root `@rei/cdr-tokens` entrypoint exports the **semantic contract** — grouped foundation objects (e.g., `CdrColorText`, `CdrSpace`). This is the recommended entrypoint for framework integrations. Use `@rei/cdr-tokens/tokens` for flat token values.
 
 Type example:
 
@@ -36,18 +38,20 @@ import type { CdrSpaceTokenName } from '@rei/cdr-tokens/types';
 Runtime example:
 
 ```ts
-import { CdrSpaceScale2 } from '@rei/cdr-tokens';
+import { CdrSpaceScale2 } from '@rei/cdr-tokens/tokens';
 ```
 
 ## Public API Boundary
 
 Public API:
 
+- Semantic contract (grouped foundation objects):
+  - `@rei/cdr-tokens` (rei-dot-com)
 - Type-only barrels:
   - `@rei/cdr-tokens/types`
   - `@rei/cdr-tokens/docsite/types`
-- Runtime values:
-  - `@rei/cdr-tokens`
+- Runtime flat values:
+  - `@rei/cdr-tokens/tokens`
   - `@rei/cdr-tokens/docsite`
 
 Not public API:
@@ -166,4 +170,4 @@ This is currently represented through theme-scoped module selection.
 
 ## ADR Reference
 
-- [ADR 0002: TypeScript Pipeline and Consumer Types API](./adr/0002-typescript-pipeline-and-consumer-types.md)
+- [ADR 0001: Modular Output Architecture](./adr/0001-modular-output-architecture.md)
