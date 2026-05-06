@@ -1,5 +1,6 @@
 export const CdrTextDefaultStyle = "normal";
 export const CdrTextEyebrow100Style = "normal";
+export const CdrTextEyebrow100Transform = "uppercase";
 export const CdrTextBody300Style = "normal";
 export const CdrTextBody400Style = "normal";
 export const CdrTextBody500Style = "normal";
@@ -72,3 +73,5 @@ export const CdrTextUtilitySerifStrong500Style = "normal";
 export const CdrTextUtilitySerifStrong600Style = "normal";
 export const CdrTextUtilitySerifStrong700Style = "normal";
 export const CdrTextUtilitySerifStrong800Style = "normal";
+export const CdrTextItalicVariation = "'ital' 1";
+export const CdrTextItalicStyle = "italic";

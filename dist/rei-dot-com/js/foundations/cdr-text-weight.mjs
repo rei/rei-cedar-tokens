@@ -72,3 +72,4 @@ export const CdrTextUtilitySerifStrong500Weight = "600";
 export const CdrTextUtilitySerifStrong600Weight = "600";
 export const CdrTextUtilitySerifStrong700Weight = "600";
 export const CdrTextUtilitySerifStrong800Weight = "600";
+export const CdrTextStrongWeight = "700";

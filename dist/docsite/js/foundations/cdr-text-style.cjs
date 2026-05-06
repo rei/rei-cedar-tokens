@@ -1,6 +1,7 @@
 module.exports = {
   CdrTextDefaultStyle: "normal",
   CdrTextEyebrow100Style: "normal",
+  CdrTextEyebrow100Transform: "uppercase",
   CdrTextBody300Style: "normal",
   CdrTextBody400Style: "normal",
   CdrTextBody500Style: "normal",
@@ -73,4 +74,6 @@ module.exports = {
   CdrTextUtilitySerifStrong600Style: "normal",
   CdrTextUtilitySerifStrong700Style: "normal",
   CdrTextUtilitySerifStrong800Style: "normal",
+  CdrTextItalicVariation: "'ital' 1",
+  CdrTextItalicStyle: "italic",
 };

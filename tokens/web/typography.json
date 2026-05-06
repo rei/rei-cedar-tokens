@@ -837,5 +837,21 @@
         "lineHeight": "{options.font.height.1100}"
       }
     }
+  },
+  "text-italic": {
+    "variation": {
+      "$type": "string",
+      "$value": "'ital' 1"
+    },
+    "style": {
+      "$type": "fontStyle",
+      "$value": "{options.font.style.italic}"
+    }
+  },
+  "text-strong": {
+    "weight": {
+      "$type": "fontWeight",
+      "$value": "{options.font.weight.strong}"
+    }
   }
 }

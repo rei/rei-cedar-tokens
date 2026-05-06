@@ -38,6 +38,24 @@
     {
       "filePath": "tokens/web/typography.json",
       "isSource": false,
+      "$value": "uppercase",
+      "$type": "textTransform",
+      "original": {
+        "$value": "uppercase",
+        "$type": "textTransform"
+      },
+      "name": "cdr-text-eyebrow-100-transform",
+      "attributes": {
+        "category": "text-eyebrow",
+        "type": "100",
+        "item": "textTransform",
+        "deprecated": false
+      },
+      "key": "{text-eyebrow.100.textTransform}"
+    },
+    {
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
       "$value": "normal",
       "$type": "fontStyle",
       "original": {
@@ -1330,6 +1348,40 @@
         "deprecated": false
       },
       "key": "{text-utility-serif-strong.800.fontStyle}"
+    },
+    {
+      "$type": "string",
+      "$value": "'ital' 1",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "string",
+        "$value": "'ital' 1"
+      },
+      "name": "cdr-text-italic-variation",
+      "attributes": {
+        "category": "text-italic",
+        "type": "variation",
+        "deprecated": false
+      },
+      "key": "{text-italic.variation}"
+    },
+    {
+      "$type": "fontStyle",
+      "$value": "italic",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "fontStyle",
+        "$value": "{options.font.style.italic}"
+      },
+      "name": "cdr-text-italic-style",
+      "attributes": {
+        "category": "text-italic",
+        "type": "style",
+        "deprecated": false
+      },
+      "key": "{text-italic.style}"
     }
   ]
 }
