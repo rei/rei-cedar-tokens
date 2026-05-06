@@ -4,9 +4,8 @@ import type { Token } from 'style-dictionary';
 /**
  * Registers a custom Style Dictionary filter that includes only font size tokens.
  *
- * This filter includes tokens that are in the 'text' namespace including only "font-size" related, while
- * excluding tokens from the 'options' namespace, which is typically
- * used internally for configuration.
+ * This filter includes tokens that are in the 'text' namespace with "font-size" related paths,
+ * as well as the top-level 'text-size-root' token. Tokens in the 'options' namespace are excluded.
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
