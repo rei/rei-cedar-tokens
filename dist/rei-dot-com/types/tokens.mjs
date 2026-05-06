@@ -9,6 +9,7 @@ export * from './foundations/cdr-motion-duration.mjs';
 export * from './foundations/cdr-motion-timing.mjs';
 export * from './foundations/cdr-prominence.mjs';
 export * from './foundations/cdr-radius.mjs';
+export * from './foundations/cdr-space-icon.mjs';
 export * from './foundations/cdr-space-inset.mjs';
 export * from './foundations/cdr-space-scale.mjs';
 export * from './foundations/cdr-space.mjs';

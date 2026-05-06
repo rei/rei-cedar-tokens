@@ -200,6 +200,11 @@ export interface CdrTextSizeTokens {
    */
   readonly CdrTextHeadingSerifStrong900Size: string;
   /**
+   * @value 10
+   * @cssvar --cdr-text-size-root
+   */
+  readonly CdrTextSizeRoot: string;
+  /**
    * @value 16
    * @cssvar --cdr-text-subheading-sans-300-size
    */

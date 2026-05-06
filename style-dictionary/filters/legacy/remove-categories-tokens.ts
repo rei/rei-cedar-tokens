@@ -6,7 +6,7 @@ import type { Token } from 'style-dictionary';
  *
  * This filter excludes:
  * - Color tokens with subcategories: background, radius, icon, text, border
- * - Top-level categories: space, radius, icon, text, border, prominence, duration, timing, form
+ * - Top-level categories: space, radius, icon, text, text-size-root, border, prominence, duration, timing, form
  * - Tokens in the 'options' and 'theme' namespaces
  *
  * Use this filter to generate a token output that excludes commonly separated
@@ -24,6 +24,7 @@ export const removeCategoriesTokens = (sd: typeof StyleDictionary): void => {
         'radius',
         'icon',
         'text',
+        'text-size-root',
         'border',
         'prominence',
         'duration',

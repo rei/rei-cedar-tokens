@@ -13,7 +13,9 @@ describe('foundations-text-size-tokens filter', () => {
   });
 
   const foundationsTextSizeTokensFilter = (token: Token): boolean =>
-    token.path[0] !== 'options' && token.path[0].includes('text') && token.path.includes('size');
+    token.path[0] !== 'options' &&
+    (token.path[0] === 'text-size-root' ||
+      (token.path[0].includes('text') && token.path.includes('size')));
 
   it('should include tokens where path[0] includes "text" and path contains "size"', () => {
     const token = createToken(['text', 'size', 'medium']);
@@ -48,5 +50,10 @@ describe('foundations-text-size-tokens filter', () => {
   it('should filter out tokens where "text" is not at the root', () => {
     const token = createToken(['foundations', 'text', 'size']);
     expect(foundationsTextSizeTokensFilter(token)).toBe(false);
+  });
+
+  it('should include the text-size-root token', () => {
+    const token = createToken(['text-size-root']);
+    expect(foundationsTextSizeTokensFilter(token)).toBe(true);
   });
 });

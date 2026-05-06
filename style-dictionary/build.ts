@@ -78,6 +78,7 @@ import { foundationsMotionTimingTokens } from './filters/foundations/motion-timi
 import { foundationsProminenceTokens } from './filters/foundations/prominence-tokens';
 import { foundationsRadiusTokens } from './filters/foundations/radius-tokens';
 import { foundationsSpaceTokens } from './filters/foundations/space-tokens';
+import { foundationsSpaceIconTokens } from './filters/foundations/space-icon-tokens';
 import { foundationsSpaceInsetTokens } from './filters/foundations/space-inset-tokens';
 import { foundationsSpaceScaleTokens } from './filters/foundations/space-scale-tokens';
 import { foundationsLineHeightTokens } from './filters/foundations/line-height-tokens';
@@ -173,6 +174,7 @@ foundationsMotionTimingTokens(StyleDictionary);
 foundationsProminenceTokens(StyleDictionary);
 foundationsRadiusTokens(StyleDictionary);
 foundationsSpaceTokens(StyleDictionary);
+foundationsSpaceIconTokens(StyleDictionary);
 foundationsSpaceInsetTokens(StyleDictionary);
 foundationsSpaceScaleTokens(StyleDictionary);
 foundationsLineHeightTokens(StyleDictionary);

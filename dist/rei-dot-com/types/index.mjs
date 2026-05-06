@@ -20,6 +20,7 @@ export { CdrMotionTiming } from './foundations/cdr-motion-timing.mjs';
 export { CdrProminence } from './foundations/cdr-prominence.mjs';
 export { CdrRadius } from './foundations/cdr-radius.mjs';
 export { CdrSpace } from './foundations/cdr-space.mjs';
+export { CdrSpaceIcon } from './foundations/cdr-space-icon.mjs';
 export { CdrSpaceInset } from './foundations/cdr-space-inset.mjs';
 export { CdrSpaceScale } from './foundations/cdr-space-scale.mjs';
 export { CdrTextFamily } from './foundations/cdr-text-family.mjs';

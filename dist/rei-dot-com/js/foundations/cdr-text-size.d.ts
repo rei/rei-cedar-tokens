@@ -1,3 +1,4 @@
+export const CdrTextSizeRoot: string;
 export const CdrTextDefaultSize: string;
 export const CdrTextEyebrow100Size: string;
 export const CdrTextBody300Size: string;

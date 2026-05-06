@@ -1,4 +1,5 @@
 module.exports = {
+  CdrTextSizeRoot: "10",
   CdrTextDefaultSize: "16",
   CdrTextEyebrow100Size: "12",
   CdrTextBody300Size: "16",

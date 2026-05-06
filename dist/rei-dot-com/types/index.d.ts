@@ -14,6 +14,7 @@ export type { CdrMotionTimingTokens } from './foundations/cdr-motion-timing.d.ts
 export type { CdrProminenceTokens } from './foundations/cdr-prominence.d.ts';
 export type { CdrRadiusTokens } from './foundations/cdr-radius.d.ts';
 export type { CdrSpaceTokens } from './foundations/cdr-space.d.ts';
+export type { CdrSpaceIconTokens } from './foundations/cdr-space-icon.d.ts';
 export type { CdrSpaceInsetTokens } from './foundations/cdr-space-inset.d.ts';
 export type { CdrSpaceScaleTokens } from './foundations/cdr-space-scale.d.ts';
 export type { CdrTextFamilyTokens } from './foundations/cdr-text-family.d.ts';
