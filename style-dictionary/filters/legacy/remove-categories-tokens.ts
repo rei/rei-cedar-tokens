@@ -24,6 +24,7 @@ export const removeCategoriesTokens = (sd: typeof StyleDictionary): void => {
         'radius',
         'icon',
         'text',
+        'text-size-root',
         'border',
         'prominence',
         'duration',

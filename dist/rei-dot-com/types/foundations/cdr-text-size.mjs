@@ -39,6 +39,7 @@ export const CdrTextSize = {
   CdrTextHeadingSerifStrong700Size: "28",
   CdrTextHeadingSerifStrong800Size: "32",
   CdrTextHeadingSerifStrong900Size: "36",
+  CdrTextSizeRoot: "10",
   CdrTextSubheadingSans300Size: "16",
   CdrTextSubheadingSans400Size: "18",
   CdrTextSubheadingSans500Size: "20",

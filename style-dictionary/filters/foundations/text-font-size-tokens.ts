@@ -14,6 +14,8 @@ export const foundationsTextSizeTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-text-size-tokens',
     filter: (token: Token) =>
-      token.path[0] !== 'options' && token.path[0].includes('text') && token.path.includes('size'),
+      token.path[0] !== 'options' &&
+      (token.path[0] === 'text-size-root' ||
+        (token.path[0].includes('text') && token.path.includes('size'))),
   });
 };

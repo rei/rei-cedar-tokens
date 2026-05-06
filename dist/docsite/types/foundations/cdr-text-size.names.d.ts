@@ -39,6 +39,7 @@ export type CdrTextSizeTokenName =
   | "CdrTextHeadingSerifStrong700Size"
   | "CdrTextHeadingSerifStrong800Size"
   | "CdrTextHeadingSerifStrong900Size"
+  | "CdrTextSizeRoot"
   | "CdrTextSubheadingSans300Size"
   | "CdrTextSubheadingSans400Size"
   | "CdrTextSubheadingSans500Size"

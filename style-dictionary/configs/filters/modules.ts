@@ -11,6 +11,7 @@ export const foundationsModulesName = [
   'prominence',
   'radius',
   'space',
+  'space-icon',
   'space-inset',
   'space-scale',
   'text-family',
