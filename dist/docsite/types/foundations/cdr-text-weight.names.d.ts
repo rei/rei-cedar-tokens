@@ -39,6 +39,7 @@ export type CdrTextWeightTokenName =
   | "CdrTextHeadingSerifStrong700Weight"
   | "CdrTextHeadingSerifStrong800Weight"
   | "CdrTextHeadingSerifStrong900Weight"
+  | "CdrTextStrongWeight"
   | "CdrTextSubheadingSans300Weight"
   | "CdrTextSubheadingSans400Weight"
   | "CdrTextSubheadingSans500Weight"

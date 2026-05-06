@@ -200,6 +200,11 @@ export interface CdrTextWeightTokens {
    */
   readonly CdrTextHeadingSerifStrong900Weight: string;
   /**
+   * @value 700
+   * @cssvar --cdr-text-strong-weight
+   */
+  readonly CdrTextStrongWeight: string;
+  /**
    * @value 500
    * @cssvar --cdr-text-subheading-sans-300-weight
    */

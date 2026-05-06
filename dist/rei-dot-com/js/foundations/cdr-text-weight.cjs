@@ -73,4 +73,5 @@ module.exports = {
   CdrTextUtilitySerifStrong600Weight: "600",
   CdrTextUtilitySerifStrong700Weight: "600",
   CdrTextUtilitySerifStrong800Weight: "600",
+  CdrTextStrongWeight: "700",
 };

@@ -1339,3 +1339,19 @@
   line-height: 4rem;
   letter-spacing: -0.016rem;
 }
+
+@mixin cdr-text-italic() {
+  font-style: italic;
+}
+
+%cdr-text-italic {
+  font-style: italic;
+}
+
+@mixin cdr-text-strong() {
+  font-weight: 700;
+}
+
+%cdr-text-strong {
+  font-weight: 700;
+}

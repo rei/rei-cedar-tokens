@@ -40,6 +40,11 @@ export interface CdrTextStyleTokens {
    */
   readonly CdrTextEyebrow100Style: string;
   /**
+   * @value uppercase
+   * @cssvar --cdr-text-eyebrow-100-transform
+   */
+  readonly CdrTextEyebrow100Transform: string;
+  /**
    * @value normal
    * @cssvar --cdr-text-heading-display-1000-style
    */
@@ -199,6 +204,16 @@ export interface CdrTextStyleTokens {
    * @cssvar --cdr-text-heading-serif-strong-900-style
    */
   readonly CdrTextHeadingSerifStrong900Style: string;
+  /**
+   * @value italic
+   * @cssvar --cdr-text-italic-style
+   */
+  readonly CdrTextItalicStyle: string;
+  /**
+   * @value 'ital' 1
+   * @cssvar --cdr-text-italic-variation
+   */
+  readonly CdrTextItalicVariation: string;
   /**
    * @value normal
    * @cssvar --cdr-text-subheading-sans-300-style

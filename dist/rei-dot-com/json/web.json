@@ -8129,6 +8129,57 @@
         "deprecated": false
       },
       "key": "{text-utility-serif-strong.800.lineHeight}"
+    },
+    {
+      "$type": "string",
+      "$value": "'ital' 1",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "string",
+        "$value": "'ital' 1"
+      },
+      "name": "cdr-text-italic-variation",
+      "attributes": {
+        "category": "text-italic",
+        "type": "variation",
+        "deprecated": false
+      },
+      "key": "{text-italic.variation}"
+    },
+    {
+      "$type": "fontStyle",
+      "$value": "italic",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "fontStyle",
+        "$value": "{options.font.style.italic}"
+      },
+      "name": "cdr-text-italic-style",
+      "attributes": {
+        "category": "text-italic",
+        "type": "style",
+        "deprecated": false
+      },
+      "key": "{text-italic.style}"
+    },
+    {
+      "$type": "fontWeight",
+      "$value": "700",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "fontWeight",
+        "$value": "{options.font.weight.strong}"
+      },
+      "name": "cdr-text-strong-weight",
+      "attributes": {
+        "category": "text-strong",
+        "type": "weight",
+        "deprecated": false
+      },
+      "key": "{text-strong.weight}"
     }
   ],
   "colors": [

@@ -39,6 +39,7 @@ export const CdrTextWeight = {
   CdrTextHeadingSerifStrong700Weight: "600",
   CdrTextHeadingSerifStrong800Weight: "600",
   CdrTextHeadingSerifStrong900Weight: "600",
+  CdrTextStrongWeight: "700",
   CdrTextSubheadingSans300Weight: "500",
   CdrTextSubheadingSans400Weight: "500",
   CdrTextSubheadingSans500Weight: "500",
