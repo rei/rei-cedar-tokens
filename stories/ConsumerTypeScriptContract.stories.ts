@@ -672,7 +672,7 @@ Are you building tooling, running transforms, or consuming outside JS?
             {
               title: 'App theme mapping — js + semantic root',
               language: 'ts',
-              code: `import { CdrColorText, CdrSpace, CdrType } from '@rei/cdr-tokens';
+              code: `import { CdrColorText, CdrSpace, CdrTextSize } from '@rei/cdr-tokens';
 
 export const appTheme = {
   color: {
@@ -682,7 +682,7 @@ export const appTheme = {
     stackMd: CdrSpace.CdrSpaceTwoX,
   },
   type: {
-    headingMd: CdrType.CdrTextHeadingSans400Size,
+    headingMd: CdrTextSize.CdrTextHeadingSans400Size,
   },
 };`,
             },
@@ -759,7 +759,7 @@ export const UsageExamples: Story = {
             {
               title: 'App theme mapping (js + semantic)',
               language: 'ts',
-              code: `import { CdrColorText, CdrSpace, CdrType } from '@rei/cdr-tokens';
+              code: `import { CdrColorText, CdrSpace, CdrTextSize } from '@rei/cdr-tokens';
 
 export const appTheme = {
   color: {
@@ -769,25 +769,25 @@ export const appTheme = {
     stackMd: CdrSpace.CdrSpaceTwoX,
   },
   type: {
-    headingMd: CdrType.CdrTextHeadingSans400Size,
+    headingMd: CdrTextSize.CdrTextHeadingSans400Size,
   },
 };`,
             },
             {
               title: 'Map typography into an app contract',
               language: 'ts',
-              code: `import { CdrText, CdrType } from '@rei/cdr-tokens';
+              code: `import { CdrTextSize, CdrTextWeight, CdrTextLineHeight } from '@rei/cdr-tokens';
 
 export const textStyles = {
   body: {
-    fontSize: CdrText.CdrTextBody300Size,
-    fontWeight: CdrText.CdrTextBody300Weight,
-    lineHeight: CdrText.CdrTextBody300LineHeight,
+    fontSize: CdrTextSize.CdrTextBody300Size,
+    fontWeight: CdrTextWeight.CdrTextBody300Weight,
+    lineHeight: CdrTextLineHeight.CdrTextBody300LineHeight,
   },
   heading: {
-    fontSize: CdrType.CdrTextHeadingSans400Size,
-    fontWeight: CdrType.CdrTextHeadingSans400Weight,
-    lineHeight: CdrType.CdrTextHeadingSans400LineHeight,
+    fontSize: CdrTextSize.CdrTextHeadingSans400Size,
+    fontWeight: CdrTextWeight.CdrTextHeadingSans400Weight,
+    lineHeight: CdrTextLineHeight.CdrTextHeadingSans400LineHeight,
   },
 };`,
             },
@@ -907,12 +907,12 @@ const color = CdrColorText.CdrColorTextPrimary;`,
             {
               title: 'Semantic root (default)',
               language: 'ts',
-              code: `import { CdrColorText, CdrSpace, CdrType } from '@rei/cdr-tokens';
+              code: `import { CdrColorText, CdrSpace, CdrTextSize } from '@rei/cdr-tokens';
 
 const appTheme = {
   textPrimary: CdrColorText.CdrColorTextPrimary,
   spacingMd: CdrSpace.CdrSpaceTwoX,
-  headingMd: CdrType.CdrTextHeadingSans400Size,
+  headingMd: CdrTextSize.CdrTextHeadingSans400Size,
 };`,
             },
             {
@@ -1840,27 +1840,27 @@ export const Js: Story = {
             {
               title: 'Semantic grouped objects (semantic)',
               language: 'ts',
-              code: `import { CdrColorText, CdrSpace, CdrType } from '@rei/cdr-tokens';
+              code: `import { CdrColorText, CdrSpace, CdrTextSize } from '@rei/cdr-tokens';
 
 CdrColorText.CdrColorTextPrimary;
 CdrSpace.CdrSpaceOneX;
-CdrType.CdrTextHeadingSans400Size;`,
+CdrTextSize.CdrTextHeadingSans400Size;`,
             },
             {
               title: 'Typography app contract',
               language: 'ts',
-              code: `import { CdrText, CdrType } from '@rei/cdr-tokens';
+              code: `import { CdrTextSize, CdrTextWeight, CdrTextLineHeight } from '@rei/cdr-tokens';
 
 export const textStyles = {
   body: {
-    fontSize: CdrText.CdrTextBody300Size,
-    fontWeight: CdrText.CdrTextBody300Weight,
-    lineHeight: CdrText.CdrTextBody300LineHeight,
+    fontSize: CdrTextSize.CdrTextBody300Size,
+    fontWeight: CdrTextWeight.CdrTextBody300Weight,
+    lineHeight: CdrTextLineHeight.CdrTextBody300LineHeight,
   },
   heading: {
-    fontSize: CdrType.CdrTextHeadingSans400Size,
-    fontWeight: CdrType.CdrTextHeadingSans400Weight,
-    lineHeight: CdrType.CdrTextHeadingSans400LineHeight,
+    fontSize: CdrTextSize.CdrTextHeadingSans400Size,
+    fontWeight: CdrTextWeight.CdrTextHeadingSans400Weight,
+    lineHeight: CdrTextLineHeight.CdrTextHeadingSans400LineHeight,
   },
 };`,
             },
