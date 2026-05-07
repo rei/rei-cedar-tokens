@@ -3,6 +3,7 @@ import _ from 'lodash';
 import process from 'process';
 import dirToJson from 'dir-to-json';
 import fs from 'fs';
+import path from 'path';
 import type { DesignToken, DesignTokens } from 'style-dictionary/types';
 
 const args = process.argv.slice(2);
@@ -105,6 +106,45 @@ const validateStructure = async (): Promise<void> => {
   console.log('Dist data structure has not changed');
 };
 
+// Collect all dist file paths referenced in the package.json exports map
+const collectExportPaths = (value: unknown, results: string[] = []): string[] => {
+  if (typeof value === 'string') {
+    if (value.startsWith('./dist/')) results.push(value);
+  } else if (typeof value === 'object' && value !== null) {
+    for (const v of Object.values(value)) {
+      collectExportPaths(v, results);
+    }
+  }
+  return results;
+};
+
+// Validate that every dist path in the package.json exports map resolves to an existing file
+const validateExportMap = (): void => {
+  const pkgPath = path.resolve('package.json');
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8')) as { exports?: unknown };
+  if (!pkg.exports) return;
+
+  const allPaths = collectExportPaths(pkg.exports);
+  const broken: string[] = [];
+
+  for (const exportPath of allPaths) {
+    // Skip wildcard patterns - they cannot be checked statically
+    if (exportPath.includes('*')) continue;
+    const resolved = path.resolve(exportPath.startsWith('./') ? exportPath.slice(2) : exportPath);
+    if (!fs.existsSync(resolved)) {
+      broken.push(exportPath);
+    }
+  }
+
+  if (broken.length > 0) {
+    console.error('Export map references missing files:');
+    broken.forEach((p) => console.error(`  MISSING: ${p}`));
+    throw new Error(`Export map has ${broken.length} broken path(s)`);
+  }
+
+  console.log('Export map validated - all referenced files exist');
+};
+
 // Main execution flow
 const main = async (): Promise<void> => {
   const files = glob.sync('./tokens/**/*.json');
@@ -127,6 +167,14 @@ const main = async (): Promise<void> => {
     process.exitCode = 1;
   } else {
     console.log('All files successfully validated');
+  }
+
+  // Validate export map
+  try {
+    validateExportMap();
+  } catch (error) {
+    console.error((error as Error).message);
+    process.exitCode = 1;
   }
 
   // Validate structure

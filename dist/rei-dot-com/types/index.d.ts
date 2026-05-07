@@ -23,5 +23,4 @@ export type { CdrTextStyleTokens } from './foundations/cdr-text-style.d.ts';
 export type { CdrTextWeightTokens } from './foundations/cdr-text-weight.d.ts';
 export type { CdrTextLetterSpacingTokens } from './foundations/cdr-text-letter-spacing.d.ts';
 export type { CdrTextLineHeightTokens } from './foundations/cdr-text-line-height.d.ts';
-export type { CdrTextTokens } from './foundations/cdr-text.d.ts';
 export type { CdrTypeTokens } from './foundations/cdr-type.d.ts';

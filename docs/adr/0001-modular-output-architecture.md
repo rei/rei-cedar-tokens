@@ -20,6 +20,7 @@ Read this before interpreting the architecture sections — some describe planne
 - **Done:** Stable barrel exports (`./types` and `./docsite/types`) wired in package exports.
 - **Done:** Theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) available.
 - **Done:** Legacy `cdr-tokens.d.mts` generation and exports removed.
+- **Done:** Export map validation CI guard — `validateExportMap()` in `validate.ts` catches any package.json export entry that references a non-existent dist file at validate time.
 - **Planned:** `TokenDictionary` public export contract and runtime dictionary shape finalization.
 - **Planned:** Complete composite token connections for typography module renames.
 

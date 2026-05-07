@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getDesc } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Typography',
@@ -130,6 +131,13 @@ const chrome = `
       color: var(--cedar-warm-600);
       opacity: 0.7;
       word-break: break-all;
+    }
+    .font-desc {
+      font-family: Graphik, 'Graphik fallback', sans-serif;
+      font-size: 10px;
+      color: var(--cedar-warm-600);
+      line-height: 1.4;
+      margin-top: 4px;
     }
     @media (max-width: 600px) {
       .font-row { grid-template-columns: 1fr; }
@@ -386,6 +394,7 @@ export const FontFamilies: Story = {
     const rows = families
       .map(([key, label]) => {
         const val = t[key] ?? '';
+        const desc = getDesc(key);
         return `
           <div class="font-row">
             <div class="font-sample" style="font-family: ${val}">Aa Bb Cc 123 — The Trail Awaits</div>
@@ -393,6 +402,7 @@ export const FontFamilies: Story = {
               <span class="font-label">${label}</span>
               <span class="font-token">${key}</span>
               <span class="font-value">${val}</span>
+              ${desc ? `<span class="font-desc">${desc}</span>` : ''}
             </div>
           </div>`;
       })

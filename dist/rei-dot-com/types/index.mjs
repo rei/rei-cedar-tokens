@@ -29,5 +29,4 @@ export { CdrTextStyle } from './foundations/cdr-text-style.mjs';
 export { CdrTextWeight } from './foundations/cdr-text-weight.mjs';
 export { CdrTextLetterSpacing } from './foundations/cdr-text-letter-spacing.mjs';
 export { CdrTextLineHeight } from './foundations/cdr-text-line-height.mjs';
-export { CdrText } from './foundations/cdr-text.mjs';
 export { CdrType } from './foundations/cdr-type.mjs';
