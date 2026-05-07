@@ -314,6 +314,18 @@ export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
   await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.mjs'), bpOrderMjs);
   await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.d.ts'), bpOrderDts);
 
+  // Append breakpoint-order to the tokens.* barrel files.
+  // The generate-types-barrel SD action runs before this function, so
+  // cdr-breakpoint-order.{mjs,d.ts} don't exist at barrel-generation time.
+  // We patch them here so "@rei/cdr-tokens/types" also exposes CdrBreakpointOrder.
+  const tokensMjsPath = path.join(typesDir, 'tokens.mjs');
+  const tokensDtsPath = path.join(typesDir, 'tokens.d.ts');
+  await fs.appendFile(tokensMjsPath, `export * from './foundations/cdr-breakpoint-order.mjs';\n`);
+  await fs.appendFile(
+    tokensDtsPath,
+    `export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';\nexport type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';\n`,
+  );
+
   console.log('✓ Generated semantic contract layer');
 }
 

@@ -20,3 +20,4 @@ export * from './foundations/cdr-text-size.mjs';
 export * from './foundations/cdr-text-style.mjs';
 export * from './foundations/cdr-text-weight.mjs';
 export * from './foundations/cdr-type.mjs';
+export * from './foundations/cdr-breakpoint-order.mjs';
