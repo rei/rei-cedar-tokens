@@ -30,3 +30,5 @@ export { CdrTextWeight } from './foundations/cdr-text-weight.mjs';
 export { CdrTextLetterSpacing } from './foundations/cdr-text-letter-spacing.mjs';
 export { CdrTextLineHeight } from './foundations/cdr-text-line-height.mjs';
 export { CdrType } from './foundations/cdr-type.mjs';
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.mjs';

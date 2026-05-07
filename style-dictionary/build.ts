@@ -48,6 +48,7 @@ import { figma as figmaFormat } from './formats/figma';
 import { typescriptModuleValues } from './formats/typescript-module-values';
 import { typescriptModuleDeclarations } from './formats/typescript-module-declarations';
 import { typescriptTokenNameUnion } from './formats/typescript-token-name-union';
+import { typescriptTokenKeyUnion } from './formats/typescript-token-key-union';
 
 // ==== Include custom actions ====
 import { concatFiles } from './actions/concat-files';
@@ -141,7 +142,7 @@ figmaFormat(StyleDictionary);
 typescriptModuleValues(StyleDictionary);
 typescriptModuleDeclarations(StyleDictionary);
 typescriptTokenNameUnion(StyleDictionary);
-
+typescriptTokenKeyUnion(StyleDictionary);
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);
 includeDisplayScss(StyleDictionary);
@@ -261,6 +262,8 @@ async function generateSemanticContract() {
  */
 
 ${mjsExports.join('\n')}
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.mjs';
 `;
 
   await fs.writeFile(path.join(typesDir, 'index.mjs'), semanticMjsContent);
@@ -270,9 +273,46 @@ ${mjsExports.join('\n')}
  */
 
 ${dtsExports.join('\n')}
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';
 `;
 
   await fs.writeFile(path.join(typesDir, 'index.d.ts'), semanticDtsContent);
+
+  // Generate ordered breakpoint constant: derived by sorting token values ascending
+  // so the order stays correct if breakpoint values ever change.
+  const bpMjsPath = path.join(__dirname, '../dist/rei-dot-com/js/foundations/cdr-breakpoint.mjs');
+  const bpSrc = await fs.readFile(bpMjsPath, 'utf8');
+  const bpEntries: Array<[string, number]> = [];
+  for (const match of bpSrc.matchAll(/export const CdrBreakpoint(\w+) = "(\d+)"/g)) {
+    bpEntries.push([match[1].toLowerCase(), parseInt(match[2])]);
+  }
+  bpEntries.sort((a, b) => a[1] - b[1]);
+  const bpOrderKeys = bpEntries.map(([key]) => key);
+
+  const bpOrderMjs = `/**
+ * Canonical breakpoint order from smallest to largest.
+ * Use this instead of hardcoding breakpoint order in consumer code.
+ *
+ * @example
+ * import { CdrBreakpointOrder } from '@rei/cdr-tokens';
+ * CdrBreakpointOrder.forEach((bp) => applyBreakpointStyles(bp));
+ */
+export const CdrBreakpointOrder = ${JSON.stringify(bpOrderKeys)} as const;
+export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
+`;
+
+  const bpOrderDts = `/**
+ * Canonical breakpoint order from smallest to largest.
+ */
+export declare const CdrBreakpointOrder: ${JSON.stringify(bpOrderKeys)} as const;
+export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
+`;
+
+  const bpTypesDir = path.join(typesDir, 'foundations');
+  await fs.ensureDir(bpTypesDir);
+  await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.mjs'), bpOrderMjs);
+  await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.d.ts'), bpOrderDts);
 
   console.log('✓ Generated semantic contract layer');
 }

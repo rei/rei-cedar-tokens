@@ -32,6 +32,11 @@ export const types = (theme: Theme): PlatformConfig => ({
           format: 'typescript/token-name-union',
           filter: tokenModule.filter,
         },
+        {
+          destination: `${tokenModule.responsibility}/${tokenModule.name}.keys.d.ts`,
+          format: 'typescript/token-key-union',
+          filter: tokenModule.filter,
+        },
       ]),
     ],
   },

@@ -1,3 +1,10 @@
+$radius: (
+  cdr-radius-sharp: 0,
+  cdr-radius-soft: 0.2rem,
+  cdr-radius-softer: 0.4rem,
+  cdr-radius-softest: 0.6rem,
+  cdr-radius-round: 999.9rem
+);
 $spacing: (
   cdr-space-zero: 0,
   cdr-space-sixteenth-x: 0.1rem,
@@ -44,4 +51,10 @@ $spacing-inset: (
   cdr-space-inset-three-x-stretch: 7.2rem 4.8rem,
   cdr-space-inset-four-x-squish: 3.2rem 6.4rem,
   cdr-space-inset-four-x-stretch: 9.6rem 6.4rem
+);
+$breakpoints: (
+  cdr-breakpoint-xs: 0,
+  cdr-breakpoint-sm: 768px,
+  cdr-breakpoint-md: 992px,
+  cdr-breakpoint-lg: 1232px
 );

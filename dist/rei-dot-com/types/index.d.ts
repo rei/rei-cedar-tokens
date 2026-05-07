@@ -46,3 +46,5 @@ export { CdrTextLineHeight } from './foundations/cdr-text-line-height.d.ts';
 export type { CdrTextLineHeightTokens } from './foundations/cdr-text-line-height.d.ts';
 export { CdrType } from './foundations/cdr-type.d.ts';
 export type { CdrTypeTokens } from './foundations/cdr-type.d.ts';
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';
