@@ -33,3 +33,5 @@ jobs:
         run: pnpm run lint
       - run: pnpm test
       - run: pnpm build
+      - name: Consumer type compile check
+        run: pnpm run test:consumer-types

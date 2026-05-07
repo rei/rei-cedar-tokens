@@ -248,7 +248,9 @@ async function generateSemanticContract() {
 
   const dtsExports = foundationsModulesName.map((moduleName) => {
     const pascal = toPascalCase(moduleName);
-    return `export { Cdr${pascal} } from './foundations/cdr-${moduleName}.d.ts';\nexport type { Cdr${pascal}Tokens } from './foundations/cdr-${moduleName}.d.ts';`;
+    // Use extensionless paths in .d.ts re-exports — explicit .d.ts extensions
+    // are not valid module specifiers in declaration files.
+    return `export { Cdr${pascal} } from './foundations/cdr-${moduleName}';\nexport type { Cdr${pascal}Tokens } from './foundations/cdr-${moduleName}';`;
   });
 
   const semanticMjsContent = `/**
@@ -273,8 +275,8 @@ export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.m
  */
 
 ${dtsExports.join('\n')}
-export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';
-export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';
 `;
 
   await fs.writeFile(path.join(typesDir, 'index.d.ts'), semanticDtsContent);
@@ -298,14 +300,13 @@ export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d
  * import { CdrBreakpointOrder } from '@rei/cdr-tokens';
  * CdrBreakpointOrder.forEach((bp) => applyBreakpointStyles(bp));
  */
-export const CdrBreakpointOrder = ${JSON.stringify(bpOrderKeys)} as const;
-export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
+export const CdrBreakpointOrder = ${JSON.stringify(bpOrderKeys)};
 `;
 
   const bpOrderDts = `/**
  * Canonical breakpoint order from smallest to largest.
  */
-export declare const CdrBreakpointOrder: ${JSON.stringify(bpOrderKeys)} as const;
+export declare const CdrBreakpointOrder: readonly ${JSON.stringify(bpOrderKeys)};
 export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
 `;
 
@@ -323,7 +324,7 @@ export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
   await fs.appendFile(tokensMjsPath, `export * from './foundations/cdr-breakpoint-order.mjs';\n`);
   await fs.appendFile(
     tokensDtsPath,
-    `export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';\nexport type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';\n`,
+    `export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';\nexport type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';\n`,
   );
 
   console.log('✓ Generated semantic contract layer');

@@ -36,6 +36,18 @@ canonicalize the surface-facing key without this.
 4. Does a surface semantic key ever map to _multiple_ token values (e.g. a compound
    key that drives both background + border)?
 
+**Decision:**
+
+- Surface keys are property-scoped, not flat. Canonical shape is namespaced by property:
+  - `background`: `primary | secondary | brand | sale`
+  - `border-color`: `primary | secondary | success | warning | error | info`
+  - `border-style`: `solid | dotted | dashed`
+  - `border-radius`: `sharp | soft | softer | softest | round`
+  - `box-shadow`: `flat | raised | elevated | floating | lifted`
+- Do not use flat shared keys like `primary` without property context.
+- Semantic key set is frozen at stable. During alpha, additive changes are allowed; renames require aliasing and deprecation metadata.
+- A surface semantic key maps to one responsibility domain. Compound behaviors require a separate explicit composite key — no silent overloading.
+
 **Affects outputs:**  
 `utility-map.scss` surface groups, TS runtime surface maps, JSON contract artifact.
 
@@ -78,6 +90,16 @@ variable.
    import (e.g. `@use '@rei/cdr-tokens/scss/map-resolved'` vs
    `@use '@rei/cdr-tokens/scss/map-vars'`)?
 
+**Decision:**
+
+- Both are needed. Provide parallel maps:
+  - Resolved maps for arithmetic and compile-time math
+  - `var()` maps for runtime theming and dynamic overrides
+- Export as separate entrypoints to avoid ambiguity:
+  - `scss/map-resolved` — current resolved-value maps
+  - `scss/map-vars` — parallel maps using `var(--cdr-*)` references
+- Keep naming consistent across both map families so consumers can switch with minimal code churn.
+
 **Affects outputs:**  
 `utility-map.scss`, any new surface/breakpoint/radius SCSS maps, the `./scss/map`
 package export entrypoint.
@@ -107,6 +129,18 @@ names but not in the emitted object. Consumers currently hardcode this order (e.
    inserted between existing ones? The answer determines whether numeric indexing is
    safe for consumers.
 
+**Decision:**
+
+- Required families now: `breakpoints`, `space-scale`, `text-size` scale.
+- Order exported as semantic key arrays; a key union is derived from the array.
+  Example: `CdrBreakpointOrder = ["xs","sm","md","lg"] as const` + `CdrBreakpointOrderKey`.
+- Keep separate order modules per family (`cdr-breakpoint-order`, `cdr-space-scale-order`,
+  `cdr-text-size-order`) and re-export all from root.
+- Contract rule:
+  - Stable channel is **append-only** — new steps are always added at the end.
+  - Inserting between existing members is a breaking change and requires a major version.
+  - If insertion is unavoidable during alpha, it must include an explicit release note callout.
+
 **Affects outputs:**  
 `cdr-breakpoint.mjs` / `.d.ts`, any future `cdr-text-size-order`, `cdr-space-scale-order`
 equivalents.
@@ -131,6 +165,18 @@ expect to validate against.
    contract-breaking changes?
 5. Who owns validation against the artifact — the token repo, Cedar, or shared?
 
+**Decision:**
+
+- Add a dedicated `contract.json` artifact distinct from the full `web.json` dump.
+- Each entry must include at minimum: `tokenName`, `module`, `responsibility`,
+  `semanticKey`, `cssVar`, `resolvedValue`, `valueType`, `deprecated`,
+  `replacement` (nullable), `sinceVersion`.
+- Provide a grouped-by-module object and an optional flat list for simpler diffing.
+- Include deprecated entries with flags — do not drop them silently.
+- Regenerate on every build and validate schema in CI.
+- Ownership: tokens repo owns generation and schema validity; Cedar owns downstream
+  drift validation against released artifact.
+
 **Affects outputs:**  
 New `dist/rei-dot-com/json/contract.json` artifact, contract drift tests.
 
@@ -153,6 +199,17 @@ runtime maps. The token repo needs a policy before freezing the semantic key voc
    artifact) that downstream consumers can use in automated checks?
 4. Who approves a semantic key rename — token team alone, or requires Cedar
    sign-off?
+
+**Decision:**
+
+- Minimum retention: one full major version after deprecation.
+- Deprecations must emit:
+  - TS `@deprecated` JSDoc on the affected export
+  - SCSS `@warn` on deprecated map key access where possible
+  - JSON `deprecated: true` + `replacement` + `sinceVersion` fields in `contract.json`
+- Semantic key renames/removals require Cedar sign-off before stable release.
+- Alpha release notes must include a **Semantic Contract Changes** section listing
+  explicit adds, deprecations (with replacement), and removals.
 
 **Affects outputs:**  
 Deprecation tags in generated `.d.ts`, `@warn` in SCSS utilities, `docs/DEPRECATION.md`

@@ -6,5 +6,4 @@
  * import { CdrBreakpointOrder } from '@rei/cdr-tokens';
  * CdrBreakpointOrder.forEach((bp) => applyBreakpointStyles(bp));
  */
-export const CdrBreakpointOrder = ["xs","sm","md","lg"] as const;
-export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
+export const CdrBreakpointOrder = ["xs","sm","md","lg"];

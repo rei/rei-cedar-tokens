@@ -65,5 +65,5 @@ export type * from './foundations/cdr-text-weight.names.d.ts';
 export type * from './foundations/cdr-type.d.ts';
 export type * from './foundations/cdr-type.keys.d.ts';
 export type * from './foundations/cdr-type.names.d.ts';
-export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';
-export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';
