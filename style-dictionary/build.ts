@@ -247,7 +247,7 @@ async function generateSemanticContract() {
 
   const dtsExports = foundationsModulesName.map((moduleName) => {
     const pascal = toPascalCase(moduleName);
-    return `export type { Cdr${pascal}Tokens } from './foundations/cdr-${moduleName}.d.ts';`;
+    return `export { Cdr${pascal} } from './foundations/cdr-${moduleName}.d.ts';\nexport type { Cdr${pascal}Tokens } from './foundations/cdr-${moduleName}.d.ts';`;
   });
 
   const semanticMjsContent = `/**
