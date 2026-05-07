@@ -6,11 +6,10 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": false,
-    "baseUrl": "..",
     "paths": {
-      "@rei/cdr-tokens": ["dist/rei-dot-com/types/index.d.ts"],
-      "@rei/cdr-tokens/types": ["dist/rei-dot-com/types/tokens.d.ts"],
-      "@rei/cdr-tokens/types/*": ["dist/rei-dot-com/types/foundations/*"]
+      "@rei/cdr-tokens": ["../dist/rei-dot-com/types/index.d.ts"],
+      "@rei/cdr-tokens/types": ["../dist/rei-dot-com/types/tokens.d.ts"],
+      "@rei/cdr-tokens/types/*": ["../dist/rei-dot-com/types/foundations/*"]
     }
   },
   "include": ["./**/*.ts"]
