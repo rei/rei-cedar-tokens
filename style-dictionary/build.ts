@@ -1,7 +1,13 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
+import fs from 'fs-extra';
+import path from 'node:path';
 import { PLATFORMS, THEMES } from './constants';
 import { getConfig } from './configs';
+import { getDirname } from './utils';
+import { foundationsModulesName } from './configs/filters/modules';
+
+const __dirname = getDirname(import.meta.url);
 
 /**
  * REI Cedar Tokens Build Script
@@ -23,6 +29,7 @@ import { getConfig } from './configs';
 
 // ==== Include custom transforms ====
 import { deprecated } from './transforms/attribute/deprecated';
+import { textShortNames } from './transforms/attribute/text-short-names';
 import { dpTransitive } from './transforms/size/dp-transitive';
 import { space } from './transforms/size/space';
 import { spaceJs } from './transforms/size/space-js';
@@ -41,11 +48,12 @@ import { figma as figmaFormat } from './formats/figma';
 import { typescriptModuleValues } from './formats/typescript-module-values';
 import { typescriptModuleDeclarations } from './formats/typescript-module-declarations';
 import { typescriptTokenNameUnion } from './formats/typescript-token-name-union';
+import { typescriptTokenKeyUnion } from './formats/typescript-token-key-union';
 
 // ==== Include custom actions ====
 import { concatFiles } from './actions/concat-files';
 import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
-
+import { generateTypesBarrel } from './actions/generate-types-barrel';
 // ==== Include custom legacy filters ====
 import { colorBackgroundTokens } from './filters/legacy/color-background-tokens';
 import { colorBorderTokens } from './filters/legacy/color-border-tokens';
@@ -71,17 +79,18 @@ import { foundationsMotionTimingTokens } from './filters/foundations/motion-timi
 import { foundationsProminenceTokens } from './filters/foundations/prominence-tokens';
 import { foundationsRadiusTokens } from './filters/foundations/radius-tokens';
 import { foundationsSpaceTokens } from './filters/foundations/space-tokens';
+import { foundationsSpaceIconTokens } from './filters/foundations/space-icon-tokens';
 import { foundationsSpaceInsetTokens } from './filters/foundations/space-inset-tokens';
 import { foundationsSpaceScaleTokens } from './filters/foundations/space-scale-tokens';
 import { foundationsLineHeightTokens } from './filters/foundations/line-height-tokens';
 import { foundationsTextTokens } from './filters/foundations/text-tokens';
 import { foundationsTypeTokens } from './filters/foundations/type-tokens';
 import { foundationsFontTokens } from './filters/foundations/font-tokens';
-import { foundationsTextFontSizeTokens } from './filters/foundations/text-font-size-tokens';
-import { foundationsTextFontWeightTokens } from './filters/foundations/text-font-weight-tokens';
+import { foundationsTextSizeTokens } from './filters/foundations/text-font-size-tokens';
+import { foundationsTextWeightTokens } from './filters/foundations/text-font-weight-tokens';
 import { foundationsTextLineHeightTokens } from './filters/foundations/text-line-height-tokens';
-import { foundationsTextFontStyleTokens } from './filters/foundations/text-font-style-tokens';
-import { foundationsTextFontFamilyTokens } from './filters/foundations/text-font-family';
+import { foundationsTextStyleTokens } from './filters/foundations/text-font-style-tokens';
+import { foundationsTextFamilyTokens } from './filters/foundations/text-font-family';
 import { foundationsTextLetterSpacingTokens } from './filters/foundations/text-letter-spacing-tokens';
 import { foundationsBreakpointTokens } from './filters/foundations/breakpoint-tokens';
 import { foundationsColorIconsTokens } from './filters/foundations/color-icon';
@@ -91,7 +100,6 @@ import { componentAccordionTokens } from './filters/components/accordion-tokens'
 import { componentButtonTokens } from './filters/components/button-tokens';
 import { componentChipTokens } from './filters/components/chip-tokens';
 import { componentFormTokens } from './filters/components/form-tokens';
-import { componentIconTokens } from './filters/components/icon-tokens';
 import { componentInputTokens } from './filters/components/input-tokens';
 import { componentLinkTokens } from './filters/components/link-tokens';
 import { componentMessageTokens } from './filters/components/message-tokens';
@@ -115,6 +123,7 @@ register(StyleDictionary);
 // IMPORTANT: Transform order matters! See docs/TRANSFORMS.md
 // deprecated MUST be first as it mutates token paths
 deprecated(StyleDictionary);
+textShortNames(StyleDictionary);
 dpTransitive(StyleDictionary);
 space(StyleDictionary);
 spaceJs(StyleDictionary);
@@ -133,11 +142,12 @@ figmaFormat(StyleDictionary);
 typescriptModuleValues(StyleDictionary);
 typescriptModuleDeclarations(StyleDictionary);
 typescriptTokenNameUnion(StyleDictionary);
-
+typescriptTokenKeyUnion(StyleDictionary);
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);
 includeDisplayScss(StyleDictionary);
 includeQueriesFileScss(StyleDictionary);
+generateTypesBarrel(StyleDictionary);
 
 // ==== Register custom legacy filters ====
 colorBackgroundTokens(StyleDictionary);
@@ -156,6 +166,7 @@ removeSourceTokens(StyleDictionary);
 spaceTokens(StyleDictionary);
 
 // ==== Register custom foundations filters ====
+foundationsBreakpointTokens(StyleDictionary);
 foundationsColorBackgroundTokens(StyleDictionary);
 foundationsColorBorderTokens(StyleDictionary);
 foundationsColorTextTokens(StyleDictionary);
@@ -164,19 +175,19 @@ foundationsMotionTimingTokens(StyleDictionary);
 foundationsProminenceTokens(StyleDictionary);
 foundationsRadiusTokens(StyleDictionary);
 foundationsSpaceTokens(StyleDictionary);
+foundationsSpaceIconTokens(StyleDictionary);
 foundationsSpaceInsetTokens(StyleDictionary);
 foundationsSpaceScaleTokens(StyleDictionary);
 foundationsLineHeightTokens(StyleDictionary);
 foundationsTextTokens(StyleDictionary);
-foundationsTextFontSizeTokens(StyleDictionary);
-foundationsTextFontWeightTokens(StyleDictionary);
-foundationsTextFontFamilyTokens(StyleDictionary);
+foundationsTextSizeTokens(StyleDictionary);
+foundationsTextWeightTokens(StyleDictionary);
+foundationsTextFamilyTokens(StyleDictionary);
 foundationsTextLineHeightTokens(StyleDictionary);
-foundationsTextFontStyleTokens(StyleDictionary);
+foundationsTextStyleTokens(StyleDictionary);
 foundationsTextLetterSpacingTokens(StyleDictionary);
 foundationsTypeTokens(StyleDictionary);
 foundationsFontTokens(StyleDictionary);
-foundationsBreakpointTokens(StyleDictionary);
 foundationsColorIconsTokens(StyleDictionary);
 
 // ==== Register custom component filters ====
@@ -184,7 +195,6 @@ componentAccordionTokens(StyleDictionary);
 componentButtonTokens(StyleDictionary);
 componentChipTokens(StyleDictionary);
 componentFormTokens(StyleDictionary);
-componentIconTokens(StyleDictionary);
 componentInputTokens(StyleDictionary);
 componentLinkTokens(StyleDictionary);
 componentMessageTokens(StyleDictionary);
@@ -199,6 +209,125 @@ componentTabTokens(StyleDictionary);
 componentTableTokens(StyleDictionary);
 componentToggleButtonTokens(StyleDictionary);
 componentTooltipTokens(StyleDictionary);
+
+/**
+ * Convert a module name (e.g. 'color-text', 'space-inset') to PascalCase (e.g. 'ColorText', 'SpaceInset').
+ */
+function toPascalCase(name: string): string {
+  return name
+    .split('-')
+    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+    .join('');
+}
+
+/**
+ * Generate semantic contract layer
+ *
+ * Writes dist/rei-dot-com/types/index.mjs and index.d.ts.
+ * These are the named exports for @rei/cdr-tokens (root entrypoint):
+ *   export { CdrColorText, CdrSpace, CdrType, ... }
+ *
+ * Export list is derived from foundationsModulesName to prevent drift.
+ *
+ * NOTE: dist/rei-dot-com/types/tokens.mjs and tokens.d.ts are a SEPARATE file —
+ * they are the full export* barrel generated by the generate-types-barrel Style
+ * Dictionary action (style-dictionary/actions/generate-types-barrel.ts).
+ * Do NOT rename or merge these two outputs — they serve different entrypoints.
+ */
+async function generateSemanticContract() {
+  const typesDir = path.join(__dirname, '../dist/rei-dot-com/types');
+
+  // Ensure directory exists
+  await fs.ensureDir(typesDir);
+
+  // Derive exports from module registry to prevent drift
+  const mjsExports = foundationsModulesName.map((moduleName) => {
+    const pascal = toPascalCase(moduleName);
+    return `export { Cdr${pascal} } from './foundations/cdr-${moduleName}.mjs';`;
+  });
+
+  const dtsExports = foundationsModulesName.map((moduleName) => {
+    const pascal = toPascalCase(moduleName);
+    return `export { Cdr${pascal} } from './foundations/cdr-${moduleName}.d.ts';\nexport type { Cdr${pascal}Tokens } from './foundations/cdr-${moduleName}.d.ts';`;
+  });
+
+  const semanticMjsContent = `/**
+ * Cedar Semantic Contract
+ *
+ * This module exports semantic foundation tokens with version stability guarantees.
+ * Consumers can depend on these exports not changing name or being removed within a major version.
+ *
+ * Use for framework integrations (Tailwind, styled-components, etc).
+ * Consumers own mapping these values to their framework.
+ */
+
+${mjsExports.join('\n')}
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.mjs';
+`;
+
+  await fs.writeFile(path.join(typesDir, 'index.mjs'), semanticMjsContent);
+
+  const semanticDtsContent = `/**
+ * Cedar Semantic Contract - TypeScript Type Definitions
+ */
+
+${dtsExports.join('\n')}
+export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';
+export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';
+`;
+
+  await fs.writeFile(path.join(typesDir, 'index.d.ts'), semanticDtsContent);
+
+  // Generate ordered breakpoint constant: derived by sorting token values ascending
+  // so the order stays correct if breakpoint values ever change.
+  const bpMjsPath = path.join(__dirname, '../dist/rei-dot-com/js/foundations/cdr-breakpoint.mjs');
+  const bpSrc = await fs.readFile(bpMjsPath, 'utf8');
+  const bpEntries: Array<[string, number]> = [];
+  for (const match of bpSrc.matchAll(/export const CdrBreakpoint(\w+) = "(\d+)"/g)) {
+    bpEntries.push([match[1].toLowerCase(), parseInt(match[2])]);
+  }
+  bpEntries.sort((a, b) => a[1] - b[1]);
+  const bpOrderKeys = bpEntries.map(([key]) => key);
+
+  const bpOrderMjs = `/**
+ * Canonical breakpoint order from smallest to largest.
+ * Use this instead of hardcoding breakpoint order in consumer code.
+ *
+ * @example
+ * import { CdrBreakpointOrder } from '@rei/cdr-tokens';
+ * CdrBreakpointOrder.forEach((bp) => applyBreakpointStyles(bp));
+ */
+export const CdrBreakpointOrder = ${JSON.stringify(bpOrderKeys)} as const;
+export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
+`;
+
+  const bpOrderDts = `/**
+ * Canonical breakpoint order from smallest to largest.
+ */
+export declare const CdrBreakpointOrder: ${JSON.stringify(bpOrderKeys)} as const;
+export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
+`;
+
+  const bpTypesDir = path.join(typesDir, 'foundations');
+  await fs.ensureDir(bpTypesDir);
+  await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.mjs'), bpOrderMjs);
+  await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.d.ts'), bpOrderDts);
+
+  // Append breakpoint-order to the tokens.* barrel files.
+  // The generate-types-barrel SD action runs before this function, so
+  // cdr-breakpoint-order.{mjs,d.ts} don't exist at barrel-generation time.
+  // We patch them here so "@rei/cdr-tokens/types" also exposes CdrBreakpointOrder.
+  const tokensMjsPath = path.join(typesDir, 'tokens.mjs');
+  const tokensDtsPath = path.join(typesDir, 'tokens.d.ts');
+  await fs.appendFile(tokensMjsPath, `export * from './foundations/cdr-breakpoint-order.mjs';\n`);
+  await fs.appendFile(
+    tokensDtsPath,
+    `export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.d.ts';\nexport type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.d.ts';\n`,
+  );
+
+  console.log('✓ Generated semantic contract layer');
+}
 
 /**
  * Build all theme × platform combinations
@@ -219,7 +348,14 @@ async function buildAllThemesAndPlatforms() {
       console.log('\n==============================================');
       console.log(`\nProcessing: [${platform}] [${theme}]`);
 
-      const sd = new StyleDictionary(getConfig(platform, theme));
+      const config = getConfig(platform, theme);
+      const platformConfig = config[platform];
+      if (platformConfig?.buildPath) {
+        // Ensure removed/renamed outputs from previous builds do not linger in dist.
+        fs.removeSync(path.join(__dirname, '../', platformConfig.buildPath));
+      }
+
+      const sd = new StyleDictionary(config);
       try {
         await sd.buildAllPlatforms();
       } catch (error) {
@@ -233,6 +369,9 @@ async function buildAllThemesAndPlatforms() {
 
   console.log('\n==============================================');
   console.log('\nBuild completed!');
+
+  // Generate semantic contract layer after all builds complete
+  await generateSemanticContract();
 }
 
 // Run the function to process all themes and platforms

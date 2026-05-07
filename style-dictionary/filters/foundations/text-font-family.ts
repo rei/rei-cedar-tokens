@@ -10,12 +10,12 @@ import type { Token } from 'style-dictionary';
  *
  * @param sd - The Style Dictionary instance to register the filter with
  */
-export const foundationsTextFontFamilyTokens = (sd: typeof StyleDictionary): void => {
+export const foundationsTextFamilyTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
-    name: 'foundations-text-font-family-tokens',
+    name: 'foundations-text-family-tokens',
     filter: (token: Token) =>
       token.path[0] !== 'options' &&
       token.path[0].includes('text') &&
-      token.path.includes('fontFamily'),
+      token.path.includes('family'),
   });
 };

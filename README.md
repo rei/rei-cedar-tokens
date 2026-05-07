@@ -14,6 +14,24 @@
 
    \*\* REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
 
+### Semantic Contract (Recommended)
+
+For teams building framework integrations (Tailwind, styled-components, etc.), **use the semantic contract**:
+
+```bash
+import { CdrColorText, CdrSpace, CdrBreakpoint } from '@rei/cdr-tokens';
+```
+
+The semantic entrypoint provides a stable export of semantic foundation tokens with a **guaranteed interface** within a major version. This is the recommended way to consume Cedar tokens in production applications.
+
+For flat runtime values, use `@rei/cdr-tokens/tokens`:
+
+```ts
+import { CdrSpaceScale2 } from '@rei/cdr-tokens/tokens';
+```
+
+See [Architecture Guide](./docs/ARCHITECTURE.md) for details and [Consumer TypeScript Contract](./docs/CONSUMER_TYPESCRIPT_CONTRACT.md) for the full import contract reference.
+
 ## Updating
 
 If you are consuming tokens in SCSS, there are deprecation warnings for variables, mixins, etc. that will appear in the console during your build. These can be silenced by adding a variable to your code called `cdr-warn` and setting it to false like this: `$cdr-warn: false;`
@@ -34,6 +52,7 @@ Tokens are generated using [Style Dictionary v4](https://styledictionary.com/).
 
 - [Architecture Guide](./docs/ARCHITECTURE.md) - System architecture and design decisions
 - [Transform Guide](./docs/TRANSFORMS.md) - Transform ordering, usage, and creation
+- [Contract Alignment Review Map](./docs/CONTRACT_ALIGNMENT_REVIEW_MAP.md) - Reviewer-oriented summary of source and generated output changes for contract-alignment PRs
 
 ### Testing
 

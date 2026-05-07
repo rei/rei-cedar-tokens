@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "14.0.0-alpha.0",
+  "version": "14.0.0-alpha.6",
   "private": false,
   "description": "Tokens for REI cedar design system",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -16,32 +16,71 @@
   "type": "module",
   "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
   "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
-  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+  "types": "./dist/rei-dot-com/types/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+      "types": "./dist/rei-dot-com/types/index.d.ts",
+      "import": "./dist/rei-dot-com/types/index.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
+    },
+    "./tokens": {
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
     },
     "./docsite": {
-      "types": "./dist/docsite/js/cdr-tokens.d.mts",
+      "types": "./dist/docsite/js/cdr-tokens.d.ts",
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
-    "./types/base": {
-      "types": "./dist/types/base/token-schema.d.ts",
-      "default": "./dist/types/base/token-schema.d.ts"
+    "./types": {
+      "types": "./dist/rei-dot-com/types/tokens.d.ts",
+      "import": "./dist/rei-dot-com/types/tokens.mjs",
+      "default": "./dist/rei-dot-com/types/tokens.mjs"
     },
+    "./types/*": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-*.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-*.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-*.mjs"
+    },
+    "./css": "./dist/rei-dot-com/css/cdr-tokens.css",
+    "./css/*": "./dist/rei-dot-com/css/foundations/cdr-*.css",
+    "./scss": "./dist/rei-dot-com/scss/cdr-tokens.scss",
+    "./scss/*": "./dist/rei-dot-com/scss/utilities/cdr-*.scss",
+    "./json": "./dist/rei-dot-com/json/web.json",
+    "./json/*": "./dist/rei-dot-com/json/*",
+    "./docsite/css": "./dist/docsite/css/cdr-tokens.css",
+    "./docsite/scss": "./dist/docsite/scss/cdr-tokens.scss",
+    "./types/base": {
+      "types": "./dist/rei-dot-com/types/base/token-schema.d.ts",
+      "default": "./dist/rei-dot-com/types/base/token-schema.d.ts"
+    },
+    "./rei-dot-com/js/*": {
+      "types": "./dist/rei-dot-com/js/*.d.ts",
+      "import": "./dist/rei-dot-com/js/*.mjs",
+      "require": "./dist/rei-dot-com/js/*.cjs"
+    },
+    "./rei-dot-com/css/*": "./dist/rei-dot-com/css/*",
+    "./rei-dot-com/scss/*": "./dist/rei-dot-com/scss/*",
     "./rei-dot-com/types/*": {
       "types": "./dist/rei-dot-com/types/*.d.ts",
       "import": "./dist/rei-dot-com/types/*.mjs",
       "default": "./dist/rei-dot-com/types/*.mjs"
     },
+    "./rei-dot-com/json/*": "./dist/rei-dot-com/json/*",
+    "./docsite/js/*": {
+      "types": "./dist/docsite/js/*.d.ts",
+      "import": "./dist/docsite/js/*.mjs",
+      "require": "./dist/docsite/js/*.cjs"
+    },
+    "./docsite/css/*": "./dist/docsite/css/*",
+    "./docsite/scss/*": "./dist/docsite/scss/*",
     "./docsite/types/*": {
       "types": "./dist/docsite/types/*.d.ts",
       "import": "./dist/docsite/types/*.mjs",
       "default": "./dist/docsite/types/*.mjs"
     },
+    "./docsite/json/*": "./dist/docsite/json/*",
     "./dist/": "./dist/"
   },
   "publishConfig": {

@@ -4,31 +4,36 @@
       "serif-brand-font": {
         "$value": "{options.font.family.serif-main}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "The Cedar brand serif typeface (Stuart). Use for headings and editorial display text."
         }
       },
       "serif": {
         "$value": "{options.font.family.serif}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "Cedar's full serif typeface stack with system fallbacks. Use when the Stuart brand font may not be available."
         }
       },
       "sans-brand-font": {
         "$value": "{options.font.family.sans-main}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "The Cedar brand sans-serif typeface (Graphik). Use for UI text, labels, and body copy."
         }
       },
       "sans": {
         "$value": "{options.font.family.sans}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "Cedar's full sans-serif typeface stack with system fallbacks. Use when the Graphik brand font may not be available."
         }
       },
       "mono-brand-font": {
         "$value": "{options.font.family.mono-rounded}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "Cedar's monospace typeface (Pressura). Use for code, data, and technical content."
         }
       }
     }

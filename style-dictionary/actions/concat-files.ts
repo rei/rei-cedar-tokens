@@ -3,14 +3,15 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
-import { foundationsMoudulesName, componentModulesName } from '../configs/filters/modules';
+import { foundationsModulesName, componentModulesName } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
 const createImportLine = (fileExtension: string, filePath: string): string => {
   const isScss = fileExtension.includes('scss');
   const importStatement = isScss ? '@forward' : '@import';
-  const imports = foundationsMoudulesName.map((name) => `./foundations/cdr-${name}`);
+  const outputDir = path.dirname(filePath);
+  const imports = foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`);
   imports.push(...componentModulesName.map((name) => `./components/cdr-${name}`));
   const extensionImports: string[] = [];
 
@@ -29,12 +30,23 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     );
   }
 
-  const importsExtension = imports.map((importLine) => {
+  const importsExtension = imports.map((importLine: string) => {
     return isScss ? importLine : importLine + fileExtension;
   });
 
-  importsExtension.forEach((importFile) => {
-    extensionImports.push(`${importStatement} "${importFile}";`);
+  const breakpointForwardHide =
+    ' hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg';
+
+  importsExtension.forEach((importFile: string) => {
+    const fsPath = isScss
+      ? path.join(outputDir, `${importFile}.scss`)
+      : path.join(outputDir, importFile);
+
+    if (fs.pathExistsSync(fsPath)) {
+      const hideClause =
+        isScss && importFile === './utilities/cdr-breakpoint-mixins' ? breakpointForwardHide : '';
+      extensionImports.push(`${importStatement} "${importFile}"${hideClause};`);
+    }
   });
 
   return extensionImports.join('\n');

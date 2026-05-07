@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getCssVar } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Spacing',
@@ -128,6 +129,14 @@ const chrome = `
       color: var(--cedar-warm-750);
       text-align: right;
       white-space: nowrap;
+    }
+    .token-cssvar {
+      display: block;
+      font-family: Pressura, monospace;
+      font-size: 8px;
+      color: var(--cedar-warm-500);
+      margin-top: 2px;
+      opacity: 0.85;
     }
 
     /* ─── Inset token rows ─── */
@@ -323,9 +332,10 @@ function staticRow(name: string, value: string, maxPx: number): string {
   const px = valueToPx(value);
   const pct = maxPx > 0 ? Math.max((px / maxPx) * 100, 0.5) : 0;
   const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
+  const cssvar = getCssVar(name);
   return `
     <div class="srow">
-      <span class="srow-name">${name}</span>
+      <span class="srow-name">${name}${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}</span>
       <div class="srow-track"><div class="srow-fill" style="width:${pct}%"></div></div>
       <span class="srow-value">${display}</span>
     </div>`;
@@ -336,9 +346,10 @@ function insetRow(name: string, value: string, maxPx: number): string {
   const pad = Math.max(Math.round((px / maxPx) * 18), 2);
   const boxSize = 8 + pad * 2;
   const display = value.endsWith('px') || value === '0' ? value : `${px}px`;
+  const cssvar = getCssVar(name);
   return `
     <div class="irow">
-      <span class="irow-name">${name}</span>
+      <span class="irow-name">${name}${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}</span>
       <div class="irow-box-wrap">
         <div class="irow-box" style="width:${boxSize}px;height:${boxSize}px;padding:${pad}px;">
           <div class="irow-box-inner"></div>
@@ -362,12 +373,15 @@ function fluidCard(name: string, value: string, absMax: number): string {
   // Mid-tick at the midpoint of the range bar (not the midpoint of the track)
   const midPct = startPct + widthPct / 2;
 
+  const cssvar = getCssVar(name);
+
   return `
     <div class="fcard">
       <div class="fcard-header">
         <span class="fcard-name">${name}</span>
         ${slope ? `<span class="fcard-slope">${slope}</span>` : ''}
       </div>
+      ${cssvar ? `<span class="token-cssvar" style="margin-top:-6px;">${cssvar}</span>` : ''}
 
       <div class="fcard-range-wrap">
         <div class="fcard-track">

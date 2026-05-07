@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getCssVar } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Prominence (Shadow)',
@@ -129,6 +130,14 @@ const chrome = `
       word-break: break-all;
       line-height: 1.5;
     }
+    .token-cssvar {
+      display: block;
+      font-family: Pressura, monospace;
+      font-size: 8px;
+      color: var(--cedar-warm-500);
+      margin-top: 2px;
+      opacity: 0.85;
+    }
     .prominence-row-inner {
       display: flex;
       align-items: center;
@@ -156,6 +165,7 @@ export const Prominence: Story = {
     const cards = shadows
       .map(([key, label]) => {
         const val = t[key] ?? 'none';
+        const cssvar = getCssVar(key);
         return `
           <div class="shadow-card">
             <div class="shadow-stage">
@@ -164,6 +174,7 @@ export const Prominence: Story = {
             <div class="shadow-info">
               <span class="shadow-label">${label}</span>
               <span class="shadow-token">${key}</span>
+              ${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}
               <span class="shadow-value">${val}</span>
             </div>
           </div>`;
@@ -193,7 +204,7 @@ export const AllProminence: Story = {
       .map(([key, val]) => {
         return `
           <div class="prominence-row">
-            <span class="prominence-name">${key}</span>
+            <span class="prominence-name">${key}${getCssVar(key) ? `<span class="token-cssvar">${getCssVar(key)}</span>` : ''}</span>
             <div class="prominence-row-inner">
               <div class="prominence-swatch" style="box-shadow: ${val};"></div>
               <span class="prominence-val">${val}</span>

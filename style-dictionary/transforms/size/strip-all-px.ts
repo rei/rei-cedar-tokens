@@ -18,6 +18,10 @@ export const stripAllPx = (sd: typeof StyleDictionary): void => {
     name: 'size/strip-all-px',
     type: 'value',
     transitive: true,
+    filter: (token: Token): boolean =>
+      token.path[0] !== 'prominence' &&
+      typeof token.$value === 'string' &&
+      token.$value.endsWith('px'),
     transform: (token: Token): string => {
       let cleanVal = token.$value;
       if (typeof token.$value === 'string' && token.$value.endsWith('px')) {

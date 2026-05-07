@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { getCssVar } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/Motion',
@@ -139,6 +140,14 @@ const chrome = `
       color: var(--cedar-warm-750);
       word-break: break-all;
     }
+    .token-cssvar {
+      display: block;
+      font-family: Pressura, monospace;
+      font-size: 8px;
+      color: var(--cedar-warm-500);
+      margin-top: 2px;
+      opacity: 0.85;
+    }
   </style>
   <style>
     @keyframes cedar-slide {
@@ -183,9 +192,10 @@ export const Duration: Story = {
         const val = t[key] ?? '0';
         const ms = parseInt(val) || 0;
         const pct = maxMs > 0 ? Math.max((ms / maxMs) * 100, 1) : 0;
+        const cssvar = getCssVar(key);
         return `
           <div class="dur-row">
-            <span class="dur-name">duration-${label}</span>
+            <span class="dur-name">duration-${label}${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}</span>
             <div class="dur-bar-track">
               <div class="dur-bar-fill" style="width: ${pct}%;"></div>
             </div>
@@ -211,6 +221,7 @@ export const TimingFunctions: Story = {
     const cards = timings
       .map(([key, label]) => {
         const val = t[key] ?? 'ease';
+        const cssvar = getCssVar(key);
         return `
           <div class="timing-card">
             <div class="timing-track">
@@ -218,6 +229,7 @@ export const TimingFunctions: Story = {
             </div>
             <div class="timing-name">timing-function-${label}</div>
             <div class="timing-token">${key}</div>
+            ${cssvar ? `<div class="token-cssvar">${cssvar}</div>` : ''}
             <div class="timing-value">${val}</div>
           </div>`;
       })
@@ -256,9 +268,10 @@ export const AllMotion: Story = {
         const val = t[key] ?? '0';
         const ms = parseInt(val) || 0;
         const pct = maxMs > 0 ? Math.max((ms / maxMs) * 100, 1) : 0;
+        const cssvar = getCssVar(key);
         return `
           <div class="dur-row">
-            <span class="dur-name">duration-${label}</span>
+            <span class="dur-name">duration-${label}${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}</span>
             <div class="dur-bar-track">
               <div class="dur-bar-fill" style="width: ${pct}%;"></div>
             </div>
@@ -270,6 +283,7 @@ export const AllMotion: Story = {
     const timingCards = timings
       .map(([key, label]) => {
         const val = t[key] ?? 'ease';
+        const cssvar = getCssVar(key);
         return `
           <div class="timing-card">
             <div class="timing-track">
@@ -277,6 +291,7 @@ export const AllMotion: Story = {
             </div>
             <div class="timing-name">timing-function-${label}</div>
             <div class="timing-token">${key}</div>
+            ${cssvar ? `<div class="token-cssvar">${cssvar}</div>` : ''}
             <div class="timing-value">${val}</div>
           </div>`;
       })

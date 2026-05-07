@@ -48,7 +48,7 @@ Extracts deprecation metadata from token paths and removes the deprecation prefi
 **Input Token Path**:
 
 ```
-['deprecated-2024-R1', 'color', 'old-primary']
+['deprecated-2025-R1', 'color', 'old-primary']
 ```
 
 **Output**:
@@ -128,7 +128,7 @@ Applies spacing modifiers to dimension tokens for consistent spacing scales.
 }
 
 // Output
-'16.0'
+'16'
 ```
 
 **Usage**: CSS, SCSS outputs
@@ -140,7 +140,7 @@ Applies spacing modifiers to dimension tokens for consistent spacing scales.
 **Type**: Value (transitive)  
 **File**: `transforms/size/space-js.ts`
 
-JavaScript variant of `size/space` - returns integers instead of decimal strings.
+JavaScript variant of `size/space` - same calculation, same output format.
 
 **Transformation**:
 
@@ -152,7 +152,7 @@ JavaScript variant of `size/space` - returns integers instead of decimal strings
 }
 
 // Output
-16  // (integer, not '16.0')
+'16'
 ```
 
 **Usage**: JavaScript outputs only
@@ -187,7 +187,7 @@ Removes 'px' suffix from dimension values, with filtering.
 **Type**: Value (transitive)  
 **File**: `transforms/size/strip-all-px.ts`
 
-Removes 'px' suffix from ALL tokens (no filtering).
+Removes 'px' suffix from ALL tokens (only runs on px-valued tokens).
 
 **Transformation**:
 

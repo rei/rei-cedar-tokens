@@ -19,14 +19,16 @@
     {
       "$value": "Stuart",
       "docs": {
-        "type": "font-family"
+        "type": "font-family",
+        "description": "The Cedar brand serif typeface (Stuart). Use for headings and editorial display text."
       },
       "filePath": "tokens/web/font.json",
       "isSource": false,
       "original": {
         "$value": "{options.font.family.serif-main}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "The Cedar brand serif typeface (Stuart). Use for headings and editorial display text."
         }
       },
       "name": "cdr-font-family-serif-brand-font",
@@ -41,14 +43,16 @@
     {
       "$value": "Stuart, \"Stuart fallback\", Georgia, serif",
       "docs": {
-        "type": "font-family"
+        "type": "font-family",
+        "description": "Cedar's full serif typeface stack with system fallbacks. Use when the Stuart brand font may not be available."
       },
       "filePath": "tokens/web/font.json",
       "isSource": false,
       "original": {
         "$value": "{options.font.family.serif}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "Cedar's full serif typeface stack with system fallbacks. Use when the Stuart brand font may not be available."
         }
       },
       "name": "cdr-font-family-serif",
@@ -63,14 +67,16 @@
     {
       "$value": "Graphik",
       "docs": {
-        "type": "font-family"
+        "type": "font-family",
+        "description": "The Cedar brand sans-serif typeface (Graphik). Use for UI text, labels, and body copy."
       },
       "filePath": "tokens/web/font.json",
       "isSource": false,
       "original": {
         "$value": "{options.font.family.sans-main}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "The Cedar brand sans-serif typeface (Graphik). Use for UI text, labels, and body copy."
         }
       },
       "name": "cdr-font-family-sans-brand-font",
@@ -85,14 +91,16 @@
     {
       "$value": "Graphik, \"Graphik fallback\", \"Helvetica Neue\", sans-serif",
       "docs": {
-        "type": "font-family"
+        "type": "font-family",
+        "description": "Cedar's full sans-serif typeface stack with system fallbacks. Use when the Graphik brand font may not be available."
       },
       "filePath": "tokens/web/font.json",
       "isSource": false,
       "original": {
         "$value": "{options.font.family.sans}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "Cedar's full sans-serif typeface stack with system fallbacks. Use when the Graphik brand font may not be available."
         }
       },
       "name": "cdr-font-family-sans",
@@ -107,14 +115,16 @@
     {
       "$value": "Pressura,  \"Avenir Next\", Roboto, sans-serif",
       "docs": {
-        "type": "font-family"
+        "type": "font-family",
+        "description": "Cedar's monospace typeface (Pressura). Use for code, data, and technical content."
       },
       "filePath": "tokens/web/font.json",
       "isSource": false,
       "original": {
         "$value": "{options.font.family.mono-rounded}",
         "docs": {
-          "type": "font-family"
+          "type": "font-family",
+          "description": "Cedar's monospace typeface (Pressura). Use for code, data, and technical content."
         }
       },
       "name": "cdr-font-family-mono-brand-font",
@@ -135,7 +145,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-default-font-family",
+      "name": "cdr-text-default-family",
       "attributes": {
         "category": "text-default",
         "type": "fontFamily",
@@ -152,7 +162,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-default-font-style",
+      "name": "cdr-text-default-style",
       "attributes": {
         "category": "text-default",
         "type": "fontStyle",
@@ -169,7 +179,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-default-font-weight",
+      "name": "cdr-text-default-weight",
       "attributes": {
         "category": "text-default",
         "type": "fontWeight",
@@ -203,7 +213,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-default-font-size",
+      "name": "cdr-text-default-size",
       "attributes": {
         "category": "text-default",
         "type": "fontSize",
@@ -237,7 +247,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-eyebrow-100-font-family",
+      "name": "cdr-text-eyebrow-100-family",
       "attributes": {
         "category": "text-eyebrow",
         "type": "100",
@@ -255,7 +265,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-eyebrow-100-font-style",
+      "name": "cdr-text-eyebrow-100-style",
       "attributes": {
         "category": "text-eyebrow",
         "type": "100",
@@ -273,7 +283,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-eyebrow-100-font-weight",
+      "name": "cdr-text-eyebrow-100-weight",
       "attributes": {
         "category": "text-eyebrow",
         "type": "100",
@@ -309,7 +319,7 @@
         "$value": "{options.font.size.100}",
         "$type": "dimension"
       },
-      "name": "cdr-text-eyebrow-100-font-size",
+      "name": "cdr-text-eyebrow-100-size",
       "attributes": {
         "category": "text-eyebrow",
         "type": "100",
@@ -345,7 +355,7 @@
         "$value": "uppercase",
         "$type": "textTransform"
       },
-      "name": "cdr-text-eyebrow-100-text-transform",
+      "name": "cdr-text-eyebrow-100-transform",
       "attributes": {
         "category": "text-eyebrow",
         "type": "100",
@@ -363,7 +373,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-body-300-font-family",
+      "name": "cdr-text-body-300-family",
       "attributes": {
         "category": "text-body",
         "type": "300",
@@ -381,7 +391,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-body-300-font-style",
+      "name": "cdr-text-body-300-style",
       "attributes": {
         "category": "text-body",
         "type": "300",
@@ -399,7 +409,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-body-300-font-weight",
+      "name": "cdr-text-body-300-weight",
       "attributes": {
         "category": "text-body",
         "type": "300",
@@ -435,7 +445,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-body-300-font-size",
+      "name": "cdr-text-body-300-size",
       "attributes": {
         "category": "text-body",
         "type": "300",
@@ -471,7 +481,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-body-400-font-family",
+      "name": "cdr-text-body-400-family",
       "attributes": {
         "category": "text-body",
         "type": "400",
@@ -489,7 +499,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-body-400-font-style",
+      "name": "cdr-text-body-400-style",
       "attributes": {
         "category": "text-body",
         "type": "400",
@@ -507,7 +517,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-body-400-font-weight",
+      "name": "cdr-text-body-400-weight",
       "attributes": {
         "category": "text-body",
         "type": "400",
@@ -543,7 +553,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-body-400-font-size",
+      "name": "cdr-text-body-400-size",
       "attributes": {
         "category": "text-body",
         "type": "400",
@@ -579,7 +589,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-body-500-font-family",
+      "name": "cdr-text-body-500-family",
       "attributes": {
         "category": "text-body",
         "type": "500",
@@ -597,7 +607,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-body-500-font-style",
+      "name": "cdr-text-body-500-style",
       "attributes": {
         "category": "text-body",
         "type": "500",
@@ -615,7 +625,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-body-500-font-weight",
+      "name": "cdr-text-body-500-weight",
       "attributes": {
         "category": "text-body",
         "type": "500",
@@ -651,7 +661,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-body-500-font-size",
+      "name": "cdr-text-body-500-size",
       "attributes": {
         "category": "text-body",
         "type": "500",
@@ -687,7 +697,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-body-strong-300-font-family",
+      "name": "cdr-text-body-strong-300-family",
       "attributes": {
         "category": "text-body-strong",
         "type": "300",
@@ -705,7 +715,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-body-strong-300-font-style",
+      "name": "cdr-text-body-strong-300-style",
       "attributes": {
         "category": "text-body-strong",
         "type": "300",
@@ -723,7 +733,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-body-strong-300-font-weight",
+      "name": "cdr-text-body-strong-300-weight",
       "attributes": {
         "category": "text-body-strong",
         "type": "300",
@@ -759,7 +769,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-body-strong-300-font-size",
+      "name": "cdr-text-body-strong-300-size",
       "attributes": {
         "category": "text-body-strong",
         "type": "300",
@@ -795,7 +805,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-body-strong-400-font-family",
+      "name": "cdr-text-body-strong-400-family",
       "attributes": {
         "category": "text-body-strong",
         "type": "400",
@@ -813,7 +823,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-body-strong-400-font-style",
+      "name": "cdr-text-body-strong-400-style",
       "attributes": {
         "category": "text-body-strong",
         "type": "400",
@@ -831,7 +841,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-body-strong-400-font-weight",
+      "name": "cdr-text-body-strong-400-weight",
       "attributes": {
         "category": "text-body-strong",
         "type": "400",
@@ -867,7 +877,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-body-strong-400-font-size",
+      "name": "cdr-text-body-strong-400-size",
       "attributes": {
         "category": "text-body-strong",
         "type": "400",
@@ -903,7 +913,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-body-strong-500-font-family",
+      "name": "cdr-text-body-strong-500-family",
       "attributes": {
         "category": "text-body-strong",
         "type": "500",
@@ -921,7 +931,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-body-strong-500-font-style",
+      "name": "cdr-text-body-strong-500-style",
       "attributes": {
         "category": "text-body-strong",
         "type": "500",
@@ -939,7 +949,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-body-strong-500-font-weight",
+      "name": "cdr-text-body-strong-500-weight",
       "attributes": {
         "category": "text-body-strong",
         "type": "500",
@@ -975,7 +985,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-body-strong-500-font-size",
+      "name": "cdr-text-body-strong-500-size",
       "attributes": {
         "category": "text-body-strong",
         "type": "500",
@@ -1011,7 +1021,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-sans-200-font-family",
+      "name": "cdr-text-heading-sans-200-family",
       "attributes": {
         "category": "text-heading-sans",
         "type": "200",
@@ -1029,7 +1039,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-sans-200-font-style",
+      "name": "cdr-text-heading-sans-200-style",
       "attributes": {
         "category": "text-heading-sans",
         "type": "200",
@@ -1047,7 +1057,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-sans-200-font-weight",
+      "name": "cdr-text-heading-sans-200-weight",
       "attributes": {
         "category": "text-heading-sans",
         "type": "200",
@@ -1083,7 +1093,7 @@
         "$value": "{options.font.size.200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-sans-200-font-size",
+      "name": "cdr-text-heading-sans-200-size",
       "attributes": {
         "category": "text-heading-sans",
         "type": "200",
@@ -1119,7 +1129,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-sans-300-font-family",
+      "name": "cdr-text-heading-sans-300-family",
       "attributes": {
         "category": "text-heading-sans",
         "type": "300",
@@ -1137,7 +1147,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-sans-300-font-style",
+      "name": "cdr-text-heading-sans-300-style",
       "attributes": {
         "category": "text-heading-sans",
         "type": "300",
@@ -1155,7 +1165,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-sans-300-font-weight",
+      "name": "cdr-text-heading-sans-300-weight",
       "attributes": {
         "category": "text-heading-sans",
         "type": "300",
@@ -1191,7 +1201,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-sans-300-font-size",
+      "name": "cdr-text-heading-sans-300-size",
       "attributes": {
         "category": "text-heading-sans",
         "type": "300",
@@ -1227,7 +1237,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-sans-400-font-family",
+      "name": "cdr-text-heading-sans-400-family",
       "attributes": {
         "category": "text-heading-sans",
         "type": "400",
@@ -1245,7 +1255,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-sans-400-font-style",
+      "name": "cdr-text-heading-sans-400-style",
       "attributes": {
         "category": "text-heading-sans",
         "type": "400",
@@ -1263,7 +1273,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-sans-400-font-weight",
+      "name": "cdr-text-heading-sans-400-weight",
       "attributes": {
         "category": "text-heading-sans",
         "type": "400",
@@ -1299,7 +1309,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-sans-400-font-size",
+      "name": "cdr-text-heading-sans-400-size",
       "attributes": {
         "category": "text-heading-sans",
         "type": "400",
@@ -1335,7 +1345,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-sans-500-font-family",
+      "name": "cdr-text-heading-sans-500-family",
       "attributes": {
         "category": "text-heading-sans",
         "type": "500",
@@ -1353,7 +1363,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-sans-500-font-style",
+      "name": "cdr-text-heading-sans-500-style",
       "attributes": {
         "category": "text-heading-sans",
         "type": "500",
@@ -1371,7 +1381,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-sans-500-font-weight",
+      "name": "cdr-text-heading-sans-500-weight",
       "attributes": {
         "category": "text-heading-sans",
         "type": "500",
@@ -1407,7 +1417,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-sans-500-font-size",
+      "name": "cdr-text-heading-sans-500-size",
       "attributes": {
         "category": "text-heading-sans",
         "type": "500",
@@ -1443,7 +1453,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-sans-600-font-family",
+      "name": "cdr-text-heading-sans-600-family",
       "attributes": {
         "category": "text-heading-sans",
         "type": "600",
@@ -1461,7 +1471,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-sans-600-font-style",
+      "name": "cdr-text-heading-sans-600-style",
       "attributes": {
         "category": "text-heading-sans",
         "type": "600",
@@ -1479,7 +1489,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-sans-600-font-weight",
+      "name": "cdr-text-heading-sans-600-weight",
       "attributes": {
         "category": "text-heading-sans",
         "type": "600",
@@ -1515,7 +1525,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-sans-600-font-size",
+      "name": "cdr-text-heading-sans-600-size",
       "attributes": {
         "category": "text-heading-sans",
         "type": "600",
@@ -1551,7 +1561,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-200-font-family",
+      "name": "cdr-text-heading-serif-200-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "200",
@@ -1569,7 +1579,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-200-font-style",
+      "name": "cdr-text-heading-serif-200-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "200",
@@ -1587,7 +1597,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-200-font-weight",
+      "name": "cdr-text-heading-serif-200-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "200",
@@ -1623,7 +1633,7 @@
         "$value": "{options.font.size.200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-200-font-size",
+      "name": "cdr-text-heading-serif-200-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "200",
@@ -1659,7 +1669,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-300-font-family",
+      "name": "cdr-text-heading-serif-300-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "300",
@@ -1677,7 +1687,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-300-font-style",
+      "name": "cdr-text-heading-serif-300-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "300",
@@ -1695,7 +1705,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-300-font-weight",
+      "name": "cdr-text-heading-serif-300-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "300",
@@ -1731,7 +1741,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-300-font-size",
+      "name": "cdr-text-heading-serif-300-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "300",
@@ -1767,7 +1777,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-400-font-family",
+      "name": "cdr-text-heading-serif-400-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "400",
@@ -1785,7 +1795,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-400-font-style",
+      "name": "cdr-text-heading-serif-400-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "400",
@@ -1803,7 +1813,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-400-font-weight",
+      "name": "cdr-text-heading-serif-400-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "400",
@@ -1839,7 +1849,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-400-font-size",
+      "name": "cdr-text-heading-serif-400-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "400",
@@ -1875,7 +1885,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-500-font-family",
+      "name": "cdr-text-heading-serif-500-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "500",
@@ -1893,7 +1903,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-500-font-style",
+      "name": "cdr-text-heading-serif-500-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "500",
@@ -1911,7 +1921,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-500-font-weight",
+      "name": "cdr-text-heading-serif-500-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "500",
@@ -1947,7 +1957,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-500-font-size",
+      "name": "cdr-text-heading-serif-500-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "500",
@@ -1983,7 +1993,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-600-font-family",
+      "name": "cdr-text-heading-serif-600-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "600",
@@ -2001,7 +2011,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-600-font-style",
+      "name": "cdr-text-heading-serif-600-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "600",
@@ -2019,7 +2029,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-600-font-weight",
+      "name": "cdr-text-heading-serif-600-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "600",
@@ -2055,7 +2065,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-600-font-size",
+      "name": "cdr-text-heading-serif-600-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "600",
@@ -2091,7 +2101,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-700-font-family",
+      "name": "cdr-text-heading-serif-700-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "700",
@@ -2109,7 +2119,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-700-font-style",
+      "name": "cdr-text-heading-serif-700-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "700",
@@ -2127,7 +2137,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-700-font-weight",
+      "name": "cdr-text-heading-serif-700-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "700",
@@ -2163,7 +2173,7 @@
         "$value": "{options.font.size.700}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-700-font-size",
+      "name": "cdr-text-heading-serif-700-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "700",
@@ -2199,7 +2209,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-800-font-family",
+      "name": "cdr-text-heading-serif-800-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "800",
@@ -2217,7 +2227,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-800-font-style",
+      "name": "cdr-text-heading-serif-800-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "800",
@@ -2235,7 +2245,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-800-font-weight",
+      "name": "cdr-text-heading-serif-800-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "800",
@@ -2271,7 +2281,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-800-font-size",
+      "name": "cdr-text-heading-serif-800-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "800",
@@ -2307,7 +2317,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-900-font-family",
+      "name": "cdr-text-heading-serif-900-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "900",
@@ -2325,7 +2335,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-900-font-style",
+      "name": "cdr-text-heading-serif-900-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "900",
@@ -2343,7 +2353,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-900-font-weight",
+      "name": "cdr-text-heading-serif-900-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "900",
@@ -2379,7 +2389,7 @@
         "$value": "{options.font.size.900}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-900-font-size",
+      "name": "cdr-text-heading-serif-900-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "900",
@@ -2415,7 +2425,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-1000-font-family",
+      "name": "cdr-text-heading-serif-1000-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1000",
@@ -2433,7 +2443,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-1000-font-style",
+      "name": "cdr-text-heading-serif-1000-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1000",
@@ -2451,7 +2461,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-1000-font-weight",
+      "name": "cdr-text-heading-serif-1000-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1000",
@@ -2487,7 +2497,7 @@
         "$value": "{options.font.size.1000}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-1000-font-size",
+      "name": "cdr-text-heading-serif-1000-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1000",
@@ -2523,7 +2533,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-1100-font-family",
+      "name": "cdr-text-heading-serif-1100-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1100",
@@ -2541,7 +2551,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-1100-font-style",
+      "name": "cdr-text-heading-serif-1100-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1100",
@@ -2559,7 +2569,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-1100-font-weight",
+      "name": "cdr-text-heading-serif-1100-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1100",
@@ -2595,7 +2605,7 @@
         "$value": "{options.font.size.1100}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-1100-font-size",
+      "name": "cdr-text-heading-serif-1100-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1100",
@@ -2631,7 +2641,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-1200-font-family",
+      "name": "cdr-text-heading-serif-1200-family",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1200",
@@ -2649,7 +2659,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-1200-font-style",
+      "name": "cdr-text-heading-serif-1200-style",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1200",
@@ -2667,7 +2677,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-1200-font-weight",
+      "name": "cdr-text-heading-serif-1200-weight",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1200",
@@ -2703,7 +2713,7 @@
         "$value": "{options.font.size.1200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-1200-font-size",
+      "name": "cdr-text-heading-serif-1200-size",
       "attributes": {
         "category": "text-heading-serif",
         "type": "1200",
@@ -2739,7 +2749,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-600-font-family",
+      "name": "cdr-text-heading-serif-strong-600-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "600",
@@ -2757,7 +2767,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-600-font-style",
+      "name": "cdr-text-heading-serif-strong-600-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "600",
@@ -2775,7 +2785,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-600-font-weight",
+      "name": "cdr-text-heading-serif-strong-600-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "600",
@@ -2811,7 +2821,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-600-font-size",
+      "name": "cdr-text-heading-serif-strong-600-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "600",
@@ -2847,7 +2857,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-700-font-family",
+      "name": "cdr-text-heading-serif-strong-700-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "700",
@@ -2865,7 +2875,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-700-font-style",
+      "name": "cdr-text-heading-serif-strong-700-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "700",
@@ -2883,7 +2893,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-700-font-weight",
+      "name": "cdr-text-heading-serif-strong-700-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "700",
@@ -2919,7 +2929,7 @@
         "$value": "{options.font.size.700}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-700-font-size",
+      "name": "cdr-text-heading-serif-strong-700-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "700",
@@ -2955,7 +2965,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-800-font-family",
+      "name": "cdr-text-heading-serif-strong-800-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "800",
@@ -2973,7 +2983,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-800-font-style",
+      "name": "cdr-text-heading-serif-strong-800-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "800",
@@ -2991,7 +3001,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-800-font-weight",
+      "name": "cdr-text-heading-serif-strong-800-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "800",
@@ -3027,7 +3037,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-800-font-size",
+      "name": "cdr-text-heading-serif-strong-800-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "800",
@@ -3063,7 +3073,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-900-font-family",
+      "name": "cdr-text-heading-serif-strong-900-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "900",
@@ -3081,7 +3091,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-900-font-style",
+      "name": "cdr-text-heading-serif-strong-900-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "900",
@@ -3099,7 +3109,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-900-font-weight",
+      "name": "cdr-text-heading-serif-strong-900-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "900",
@@ -3135,7 +3145,7 @@
         "$value": "{options.font.size.900}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-900-font-size",
+      "name": "cdr-text-heading-serif-strong-900-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "900",
@@ -3171,7 +3181,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-1000-font-family",
+      "name": "cdr-text-heading-serif-strong-1000-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1000",
@@ -3189,7 +3199,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-1000-font-style",
+      "name": "cdr-text-heading-serif-strong-1000-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1000",
@@ -3207,7 +3217,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-1000-font-weight",
+      "name": "cdr-text-heading-serif-strong-1000-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1000",
@@ -3243,7 +3253,7 @@
         "$value": "{options.font.size.1000}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-1000-font-size",
+      "name": "cdr-text-heading-serif-strong-1000-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1000",
@@ -3279,7 +3289,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-1100-font-family",
+      "name": "cdr-text-heading-serif-strong-1100-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1100",
@@ -3297,7 +3307,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-1100-font-style",
+      "name": "cdr-text-heading-serif-strong-1100-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1100",
@@ -3315,7 +3325,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-1100-font-weight",
+      "name": "cdr-text-heading-serif-strong-1100-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1100",
@@ -3351,7 +3361,7 @@
         "$value": "{options.font.size.1100}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-1100-font-size",
+      "name": "cdr-text-heading-serif-strong-1100-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1100",
@@ -3387,7 +3397,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-serif-strong-1200-font-family",
+      "name": "cdr-text-heading-serif-strong-1200-family",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1200",
@@ -3405,7 +3415,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-serif-strong-1200-font-style",
+      "name": "cdr-text-heading-serif-strong-1200-style",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1200",
@@ -3423,7 +3433,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-serif-strong-1200-font-weight",
+      "name": "cdr-text-heading-serif-strong-1200-weight",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1200",
@@ -3459,7 +3469,7 @@
         "$value": "{options.font.size.1200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-serif-strong-1200-font-size",
+      "name": "cdr-text-heading-serif-strong-1200-size",
       "attributes": {
         "category": "text-heading-serif-strong",
         "type": "1200",
@@ -3495,7 +3505,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-800-font-family",
+      "name": "cdr-text-heading-display-800-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "800",
@@ -3513,7 +3523,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-800-font-style",
+      "name": "cdr-text-heading-display-800-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "800",
@@ -3531,7 +3541,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-800-font-weight",
+      "name": "cdr-text-heading-display-800-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "800",
@@ -3567,7 +3577,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-800-font-size",
+      "name": "cdr-text-heading-display-800-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "800",
@@ -3603,7 +3613,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-900-font-family",
+      "name": "cdr-text-heading-display-900-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "900",
@@ -3621,7 +3631,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-900-font-style",
+      "name": "cdr-text-heading-display-900-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "900",
@@ -3639,7 +3649,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-900-font-weight",
+      "name": "cdr-text-heading-display-900-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "900",
@@ -3675,7 +3685,7 @@
         "$value": "{options.font.size.900}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-900-font-size",
+      "name": "cdr-text-heading-display-900-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "900",
@@ -3711,7 +3721,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1000-font-family",
+      "name": "cdr-text-heading-display-1000-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1000",
@@ -3729,7 +3739,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1000-font-style",
+      "name": "cdr-text-heading-display-1000-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1000",
@@ -3747,7 +3757,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1000-font-weight",
+      "name": "cdr-text-heading-display-1000-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1000",
@@ -3783,7 +3793,7 @@
         "$value": "{options.font.size.1000}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1000-font-size",
+      "name": "cdr-text-heading-display-1000-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1000",
@@ -3819,7 +3829,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1100-font-family",
+      "name": "cdr-text-heading-display-1100-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1100",
@@ -3837,7 +3847,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1100-font-style",
+      "name": "cdr-text-heading-display-1100-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1100",
@@ -3855,7 +3865,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1100-font-weight",
+      "name": "cdr-text-heading-display-1100-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1100",
@@ -3891,7 +3901,7 @@
         "$value": "{options.font.size.1100}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1100-font-size",
+      "name": "cdr-text-heading-display-1100-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1100",
@@ -3927,7 +3937,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1200-font-family",
+      "name": "cdr-text-heading-display-1200-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1200",
@@ -3945,7 +3955,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1200-font-style",
+      "name": "cdr-text-heading-display-1200-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1200",
@@ -3963,7 +3973,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1200-font-weight",
+      "name": "cdr-text-heading-display-1200-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1200",
@@ -3999,7 +4009,7 @@
         "$value": "{options.font.size.1200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1200-font-size",
+      "name": "cdr-text-heading-display-1200-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1200",
@@ -4035,7 +4045,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1300-font-family",
+      "name": "cdr-text-heading-display-1300-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1300",
@@ -4053,7 +4063,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1300-font-style",
+      "name": "cdr-text-heading-display-1300-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1300",
@@ -4071,7 +4081,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1300-font-weight",
+      "name": "cdr-text-heading-display-1300-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1300",
@@ -4107,7 +4117,7 @@
         "$value": "{options.font.size.1300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1300-font-size",
+      "name": "cdr-text-heading-display-1300-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1300",
@@ -4143,7 +4153,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1400-font-family",
+      "name": "cdr-text-heading-display-1400-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1400",
@@ -4161,7 +4171,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1400-font-style",
+      "name": "cdr-text-heading-display-1400-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1400",
@@ -4179,7 +4189,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1400-font-weight",
+      "name": "cdr-text-heading-display-1400-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1400",
@@ -4215,7 +4225,7 @@
         "$value": "{options.font.size.1400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1400-font-size",
+      "name": "cdr-text-heading-display-1400-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1400",
@@ -4251,7 +4261,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1500-font-family",
+      "name": "cdr-text-heading-display-1500-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1500",
@@ -4269,7 +4279,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1500-font-style",
+      "name": "cdr-text-heading-display-1500-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1500",
@@ -4287,7 +4297,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1500-font-weight",
+      "name": "cdr-text-heading-display-1500-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1500",
@@ -4323,7 +4333,7 @@
         "$value": "{options.font.size.1500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1500-font-size",
+      "name": "cdr-text-heading-display-1500-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1500",
@@ -4359,7 +4369,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-heading-display-1600-font-family",
+      "name": "cdr-text-heading-display-1600-family",
       "attributes": {
         "category": "text-heading-display",
         "type": "1600",
@@ -4377,7 +4387,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-heading-display-1600-font-style",
+      "name": "cdr-text-heading-display-1600-style",
       "attributes": {
         "category": "text-heading-display",
         "type": "1600",
@@ -4395,7 +4405,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-heading-display-1600-font-weight",
+      "name": "cdr-text-heading-display-1600-weight",
       "attributes": {
         "category": "text-heading-display",
         "type": "1600",
@@ -4431,7 +4441,7 @@
         "$value": "{options.font.size.1600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-heading-display-1600-font-size",
+      "name": "cdr-text-heading-display-1600-size",
       "attributes": {
         "category": "text-heading-display",
         "type": "1600",
@@ -4467,7 +4477,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-subheading-sans-300-font-family",
+      "name": "cdr-text-subheading-sans-300-family",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "300",
@@ -4485,7 +4495,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-subheading-sans-300-font-style",
+      "name": "cdr-text-subheading-sans-300-style",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "300",
@@ -4503,7 +4513,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-subheading-sans-300-font-weight",
+      "name": "cdr-text-subheading-sans-300-weight",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "300",
@@ -4539,7 +4549,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-subheading-sans-300-font-size",
+      "name": "cdr-text-subheading-sans-300-size",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "300",
@@ -4575,7 +4585,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-subheading-sans-400-font-family",
+      "name": "cdr-text-subheading-sans-400-family",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "400",
@@ -4593,7 +4603,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-subheading-sans-400-font-style",
+      "name": "cdr-text-subheading-sans-400-style",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "400",
@@ -4611,7 +4621,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-subheading-sans-400-font-weight",
+      "name": "cdr-text-subheading-sans-400-weight",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "400",
@@ -4647,7 +4657,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-subheading-sans-400-font-size",
+      "name": "cdr-text-subheading-sans-400-size",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "400",
@@ -4683,7 +4693,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-subheading-sans-500-font-family",
+      "name": "cdr-text-subheading-sans-500-family",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "500",
@@ -4701,7 +4711,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-subheading-sans-500-font-style",
+      "name": "cdr-text-subheading-sans-500-style",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "500",
@@ -4719,7 +4729,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-subheading-sans-500-font-weight",
+      "name": "cdr-text-subheading-sans-500-weight",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "500",
@@ -4755,7 +4765,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-subheading-sans-500-font-size",
+      "name": "cdr-text-subheading-sans-500-size",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "500",
@@ -4791,7 +4801,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-subheading-sans-600-font-family",
+      "name": "cdr-text-subheading-sans-600-family",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "600",
@@ -4809,7 +4819,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-subheading-sans-600-font-style",
+      "name": "cdr-text-subheading-sans-600-style",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "600",
@@ -4827,7 +4837,7 @@
         "$value": "{options.font.weight.medium}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-subheading-sans-600-font-weight",
+      "name": "cdr-text-subheading-sans-600-weight",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "600",
@@ -4863,7 +4873,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-subheading-sans-600-font-size",
+      "name": "cdr-text-subheading-sans-600-size",
       "attributes": {
         "category": "text-subheading-sans",
         "type": "600",
@@ -4899,7 +4909,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-100-font-family",
+      "name": "cdr-text-utility-sans-100-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "100",
@@ -4917,7 +4927,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-100-font-style",
+      "name": "cdr-text-utility-sans-100-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "100",
@@ -4935,7 +4945,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-100-font-weight",
+      "name": "cdr-text-utility-sans-100-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "100",
@@ -4971,7 +4981,7 @@
         "$value": "{options.font.size.100}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-100-font-size",
+      "name": "cdr-text-utility-sans-100-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "100",
@@ -5007,7 +5017,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-200-font-family",
+      "name": "cdr-text-utility-sans-200-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "200",
@@ -5025,7 +5035,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-200-font-style",
+      "name": "cdr-text-utility-sans-200-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "200",
@@ -5043,7 +5053,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-200-font-weight",
+      "name": "cdr-text-utility-sans-200-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "200",
@@ -5079,7 +5089,7 @@
         "$value": "{options.font.size.200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-200-font-size",
+      "name": "cdr-text-utility-sans-200-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "200",
@@ -5115,7 +5125,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-300-font-family",
+      "name": "cdr-text-utility-sans-300-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "300",
@@ -5133,7 +5143,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-300-font-style",
+      "name": "cdr-text-utility-sans-300-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "300",
@@ -5151,7 +5161,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-300-font-weight",
+      "name": "cdr-text-utility-sans-300-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "300",
@@ -5187,7 +5197,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-300-font-size",
+      "name": "cdr-text-utility-sans-300-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "300",
@@ -5223,7 +5233,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-400-font-family",
+      "name": "cdr-text-utility-sans-400-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "400",
@@ -5241,7 +5251,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-400-font-style",
+      "name": "cdr-text-utility-sans-400-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "400",
@@ -5259,7 +5269,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-400-font-weight",
+      "name": "cdr-text-utility-sans-400-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "400",
@@ -5295,7 +5305,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-400-font-size",
+      "name": "cdr-text-utility-sans-400-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "400",
@@ -5331,7 +5341,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-500-font-family",
+      "name": "cdr-text-utility-sans-500-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "500",
@@ -5349,7 +5359,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-500-font-style",
+      "name": "cdr-text-utility-sans-500-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "500",
@@ -5367,7 +5377,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-500-font-weight",
+      "name": "cdr-text-utility-sans-500-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "500",
@@ -5403,7 +5413,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-500-font-size",
+      "name": "cdr-text-utility-sans-500-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "500",
@@ -5439,7 +5449,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-600-font-family",
+      "name": "cdr-text-utility-sans-600-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "600",
@@ -5457,7 +5467,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-600-font-style",
+      "name": "cdr-text-utility-sans-600-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "600",
@@ -5475,7 +5485,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-600-font-weight",
+      "name": "cdr-text-utility-sans-600-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "600",
@@ -5511,7 +5521,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-600-font-size",
+      "name": "cdr-text-utility-sans-600-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "600",
@@ -5547,7 +5557,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-700-font-family",
+      "name": "cdr-text-utility-sans-700-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "700",
@@ -5565,7 +5575,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-700-font-style",
+      "name": "cdr-text-utility-sans-700-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "700",
@@ -5583,7 +5593,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-700-font-weight",
+      "name": "cdr-text-utility-sans-700-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "700",
@@ -5619,7 +5629,7 @@
         "$value": "{options.font.size.700}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-700-font-size",
+      "name": "cdr-text-utility-sans-700-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "700",
@@ -5655,7 +5665,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-800-font-family",
+      "name": "cdr-text-utility-sans-800-family",
       "attributes": {
         "category": "text-utility-sans",
         "type": "800",
@@ -5673,7 +5683,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-800-font-style",
+      "name": "cdr-text-utility-sans-800-style",
       "attributes": {
         "category": "text-utility-sans",
         "type": "800",
@@ -5691,7 +5701,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-800-font-weight",
+      "name": "cdr-text-utility-sans-800-weight",
       "attributes": {
         "category": "text-utility-sans",
         "type": "800",
@@ -5727,7 +5737,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-800-font-size",
+      "name": "cdr-text-utility-sans-800-size",
       "attributes": {
         "category": "text-utility-sans",
         "type": "800",
@@ -5763,7 +5773,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-100-font-family",
+      "name": "cdr-text-utility-sans-strong-100-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "100",
@@ -5781,7 +5791,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-100-font-style",
+      "name": "cdr-text-utility-sans-strong-100-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "100",
@@ -5799,7 +5809,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-100-font-weight",
+      "name": "cdr-text-utility-sans-strong-100-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "100",
@@ -5835,7 +5845,7 @@
         "$value": "{options.font.size.100}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-100-font-size",
+      "name": "cdr-text-utility-sans-strong-100-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "100",
@@ -5871,7 +5881,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-200-font-family",
+      "name": "cdr-text-utility-sans-strong-200-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "200",
@@ -5889,7 +5899,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-200-font-style",
+      "name": "cdr-text-utility-sans-strong-200-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "200",
@@ -5907,7 +5917,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-200-font-weight",
+      "name": "cdr-text-utility-sans-strong-200-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "200",
@@ -5943,7 +5953,7 @@
         "$value": "{options.font.size.200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-200-font-size",
+      "name": "cdr-text-utility-sans-strong-200-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "200",
@@ -5979,7 +5989,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-300-font-family",
+      "name": "cdr-text-utility-sans-strong-300-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "300",
@@ -5997,7 +6007,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-300-font-style",
+      "name": "cdr-text-utility-sans-strong-300-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "300",
@@ -6015,7 +6025,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-300-font-weight",
+      "name": "cdr-text-utility-sans-strong-300-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "300",
@@ -6051,7 +6061,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-300-font-size",
+      "name": "cdr-text-utility-sans-strong-300-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "300",
@@ -6087,7 +6097,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-400-font-family",
+      "name": "cdr-text-utility-sans-strong-400-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "400",
@@ -6105,7 +6115,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-400-font-style",
+      "name": "cdr-text-utility-sans-strong-400-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "400",
@@ -6123,7 +6133,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-400-font-weight",
+      "name": "cdr-text-utility-sans-strong-400-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "400",
@@ -6159,7 +6169,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-400-font-size",
+      "name": "cdr-text-utility-sans-strong-400-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "400",
@@ -6195,7 +6205,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-500-font-family",
+      "name": "cdr-text-utility-sans-strong-500-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "500",
@@ -6213,7 +6223,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-500-font-style",
+      "name": "cdr-text-utility-sans-strong-500-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "500",
@@ -6231,7 +6241,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-500-font-weight",
+      "name": "cdr-text-utility-sans-strong-500-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "500",
@@ -6267,7 +6277,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-500-font-size",
+      "name": "cdr-text-utility-sans-strong-500-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "500",
@@ -6303,7 +6313,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-600-font-family",
+      "name": "cdr-text-utility-sans-strong-600-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "600",
@@ -6321,7 +6331,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-600-font-style",
+      "name": "cdr-text-utility-sans-strong-600-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "600",
@@ -6339,7 +6349,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-600-font-weight",
+      "name": "cdr-text-utility-sans-strong-600-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "600",
@@ -6375,7 +6385,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-600-font-size",
+      "name": "cdr-text-utility-sans-strong-600-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "600",
@@ -6411,7 +6421,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-700-font-family",
+      "name": "cdr-text-utility-sans-strong-700-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "700",
@@ -6429,7 +6439,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-700-font-style",
+      "name": "cdr-text-utility-sans-strong-700-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "700",
@@ -6447,7 +6457,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-700-font-weight",
+      "name": "cdr-text-utility-sans-strong-700-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "700",
@@ -6483,7 +6493,7 @@
         "$value": "{options.font.size.700}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-700-font-size",
+      "name": "cdr-text-utility-sans-strong-700-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "700",
@@ -6519,7 +6529,7 @@
         "$value": "{options.font.family.sans}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-sans-strong-800-font-family",
+      "name": "cdr-text-utility-sans-strong-800-family",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "800",
@@ -6537,7 +6547,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-sans-strong-800-font-style",
+      "name": "cdr-text-utility-sans-strong-800-style",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "800",
@@ -6555,7 +6565,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-sans-strong-800-font-weight",
+      "name": "cdr-text-utility-sans-strong-800-weight",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "800",
@@ -6591,7 +6601,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-sans-strong-800-font-size",
+      "name": "cdr-text-utility-sans-strong-800-size",
       "attributes": {
         "category": "text-utility-sans-strong",
         "type": "800",
@@ -6627,7 +6637,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-200-font-family",
+      "name": "cdr-text-utility-serif-200-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "200",
@@ -6645,7 +6655,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-200-font-style",
+      "name": "cdr-text-utility-serif-200-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "200",
@@ -6663,7 +6673,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-200-font-weight",
+      "name": "cdr-text-utility-serif-200-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "200",
@@ -6699,7 +6709,7 @@
         "$value": "{options.font.size.200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-200-font-size",
+      "name": "cdr-text-utility-serif-200-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "200",
@@ -6735,7 +6745,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-300-font-family",
+      "name": "cdr-text-utility-serif-300-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "300",
@@ -6753,7 +6763,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-300-font-style",
+      "name": "cdr-text-utility-serif-300-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "300",
@@ -6771,7 +6781,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-300-font-weight",
+      "name": "cdr-text-utility-serif-300-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "300",
@@ -6807,7 +6817,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-300-font-size",
+      "name": "cdr-text-utility-serif-300-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "300",
@@ -6843,7 +6853,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-400-font-family",
+      "name": "cdr-text-utility-serif-400-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "400",
@@ -6861,7 +6871,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-400-font-style",
+      "name": "cdr-text-utility-serif-400-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "400",
@@ -6879,7 +6889,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-400-font-weight",
+      "name": "cdr-text-utility-serif-400-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "400",
@@ -6915,7 +6925,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-400-font-size",
+      "name": "cdr-text-utility-serif-400-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "400",
@@ -6951,7 +6961,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-500-font-family",
+      "name": "cdr-text-utility-serif-500-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "500",
@@ -6969,7 +6979,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-500-font-style",
+      "name": "cdr-text-utility-serif-500-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "500",
@@ -6987,7 +6997,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-500-font-weight",
+      "name": "cdr-text-utility-serif-500-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "500",
@@ -7023,7 +7033,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-500-font-size",
+      "name": "cdr-text-utility-serif-500-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "500",
@@ -7059,7 +7069,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-600-font-family",
+      "name": "cdr-text-utility-serif-600-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "600",
@@ -7077,7 +7087,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-600-font-style",
+      "name": "cdr-text-utility-serif-600-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "600",
@@ -7095,7 +7105,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-600-font-weight",
+      "name": "cdr-text-utility-serif-600-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "600",
@@ -7131,7 +7141,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-600-font-size",
+      "name": "cdr-text-utility-serif-600-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "600",
@@ -7167,7 +7177,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-700-font-family",
+      "name": "cdr-text-utility-serif-700-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "700",
@@ -7185,7 +7195,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-700-font-style",
+      "name": "cdr-text-utility-serif-700-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "700",
@@ -7203,7 +7213,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-700-font-weight",
+      "name": "cdr-text-utility-serif-700-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "700",
@@ -7239,7 +7249,7 @@
         "$value": "{options.font.size.700}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-700-font-size",
+      "name": "cdr-text-utility-serif-700-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "700",
@@ -7275,7 +7285,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-800-font-family",
+      "name": "cdr-text-utility-serif-800-family",
       "attributes": {
         "category": "text-utility-serif",
         "type": "800",
@@ -7293,7 +7303,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-800-font-style",
+      "name": "cdr-text-utility-serif-800-style",
       "attributes": {
         "category": "text-utility-serif",
         "type": "800",
@@ -7311,7 +7321,7 @@
         "$value": "{options.font.weight.normal}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-800-font-weight",
+      "name": "cdr-text-utility-serif-800-weight",
       "attributes": {
         "category": "text-utility-serif",
         "type": "800",
@@ -7347,7 +7357,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-800-font-size",
+      "name": "cdr-text-utility-serif-800-size",
       "attributes": {
         "category": "text-utility-serif",
         "type": "800",
@@ -7383,7 +7393,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-200-font-family",
+      "name": "cdr-text-utility-serif-strong-200-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "200",
@@ -7401,7 +7411,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-200-font-style",
+      "name": "cdr-text-utility-serif-strong-200-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "200",
@@ -7419,7 +7429,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-200-font-weight",
+      "name": "cdr-text-utility-serif-strong-200-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "200",
@@ -7455,7 +7465,7 @@
         "$value": "{options.font.size.200}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-200-font-size",
+      "name": "cdr-text-utility-serif-strong-200-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "200",
@@ -7491,7 +7501,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-300-font-family",
+      "name": "cdr-text-utility-serif-strong-300-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "300",
@@ -7509,7 +7519,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-300-font-style",
+      "name": "cdr-text-utility-serif-strong-300-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "300",
@@ -7527,7 +7537,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-300-font-weight",
+      "name": "cdr-text-utility-serif-strong-300-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "300",
@@ -7563,7 +7573,7 @@
         "$value": "{options.font.size.300}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-300-font-size",
+      "name": "cdr-text-utility-serif-strong-300-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "300",
@@ -7599,7 +7609,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-400-font-family",
+      "name": "cdr-text-utility-serif-strong-400-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "400",
@@ -7617,7 +7627,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-400-font-style",
+      "name": "cdr-text-utility-serif-strong-400-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "400",
@@ -7635,7 +7645,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-400-font-weight",
+      "name": "cdr-text-utility-serif-strong-400-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "400",
@@ -7671,7 +7681,7 @@
         "$value": "{options.font.size.400}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-400-font-size",
+      "name": "cdr-text-utility-serif-strong-400-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "400",
@@ -7707,7 +7717,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-500-font-family",
+      "name": "cdr-text-utility-serif-strong-500-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "500",
@@ -7725,7 +7735,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-500-font-style",
+      "name": "cdr-text-utility-serif-strong-500-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "500",
@@ -7743,7 +7753,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-500-font-weight",
+      "name": "cdr-text-utility-serif-strong-500-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "500",
@@ -7779,7 +7789,7 @@
         "$value": "{options.font.size.500}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-500-font-size",
+      "name": "cdr-text-utility-serif-strong-500-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "500",
@@ -7815,7 +7825,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-600-font-family",
+      "name": "cdr-text-utility-serif-strong-600-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "600",
@@ -7833,7 +7843,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-600-font-style",
+      "name": "cdr-text-utility-serif-strong-600-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "600",
@@ -7851,7 +7861,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-600-font-weight",
+      "name": "cdr-text-utility-serif-strong-600-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "600",
@@ -7887,7 +7897,7 @@
         "$value": "{options.font.size.600}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-600-font-size",
+      "name": "cdr-text-utility-serif-strong-600-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "600",
@@ -7923,7 +7933,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-700-font-family",
+      "name": "cdr-text-utility-serif-strong-700-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "700",
@@ -7941,7 +7951,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-700-font-style",
+      "name": "cdr-text-utility-serif-strong-700-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "700",
@@ -7959,7 +7969,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-700-font-weight",
+      "name": "cdr-text-utility-serif-strong-700-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "700",
@@ -7995,7 +8005,7 @@
         "$value": "{options.font.size.700}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-700-font-size",
+      "name": "cdr-text-utility-serif-strong-700-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "700",
@@ -8031,7 +8041,7 @@
         "$value": "{options.font.family.serif}",
         "$type": "fontFamily"
       },
-      "name": "cdr-text-utility-serif-strong-800-font-family",
+      "name": "cdr-text-utility-serif-strong-800-family",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "800",
@@ -8049,7 +8059,7 @@
         "$value": "{options.font.style.normal}",
         "$type": "fontStyle"
       },
-      "name": "cdr-text-utility-serif-strong-800-font-style",
+      "name": "cdr-text-utility-serif-strong-800-style",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "800",
@@ -8067,7 +8077,7 @@
         "$value": "{options.font.weight.semibold}",
         "$type": "fontWeight"
       },
-      "name": "cdr-text-utility-serif-strong-800-font-weight",
+      "name": "cdr-text-utility-serif-strong-800-weight",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "800",
@@ -8103,7 +8113,7 @@
         "$value": "{options.font.size.800}",
         "$type": "dimension"
       },
-      "name": "cdr-text-utility-serif-strong-800-font-size",
+      "name": "cdr-text-utility-serif-strong-800-size",
       "attributes": {
         "category": "text-utility-serif-strong",
         "type": "800",
@@ -8129,6 +8139,57 @@
         "deprecated": false
       },
       "key": "{text-utility-serif-strong.800.lineHeight}"
+    },
+    {
+      "$type": "string",
+      "$value": "'ital' 1",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "string",
+        "$value": "'ital' 1"
+      },
+      "name": "cdr-text-italic-variation",
+      "attributes": {
+        "category": "text-italic",
+        "type": "variation",
+        "deprecated": false
+      },
+      "key": "{text-italic.variation}"
+    },
+    {
+      "$type": "fontStyle",
+      "$value": "italic",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "fontStyle",
+        "$value": "{options.font.style.italic}"
+      },
+      "name": "cdr-text-italic-style",
+      "attributes": {
+        "category": "text-italic",
+        "type": "style",
+        "deprecated": false
+      },
+      "key": "{text-italic.style}"
+    },
+    {
+      "$type": "fontWeight",
+      "$value": "700",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "fontWeight",
+        "$value": "{options.font.weight.strong}"
+      },
+      "name": "cdr-text-strong-weight",
+      "attributes": {
+        "category": "text-strong",
+        "type": "weight",
+        "deprecated": false
+      },
+      "key": "{text-strong.weight}"
     }
   ],
   "colors": [
@@ -18838,8 +18899,9 @@
     {
       "$value": "0",
       "$type": "dimension",
+      "utility-class": true,
       "docs": {
-        "type": "corner",
+        "type": "radius",
         "category": "radius",
         "example": "sharp",
         "description": {
@@ -18855,8 +18917,9 @@
       "original": {
         "$value": "0",
         "$type": "dimension",
+        "utility-class": true,
         "docs": {
-          "type": "corner",
+          "type": "radius",
           "category": "radius",
           "example": "sharp",
           "description": {
@@ -18879,8 +18942,9 @@
     {
       "$value": "0.2rem",
       "$type": "dimension",
+      "utility-class": true,
       "docs": {
-        "type": "corner",
+        "type": "radius",
         "category": "radius",
         "example": "soft",
         "description": {
@@ -18896,8 +18960,9 @@
       "original": {
         "$value": "2px",
         "$type": "dimension",
+        "utility-class": true,
         "docs": {
-          "type": "corner",
+          "type": "radius",
           "category": "radius",
           "example": "soft",
           "description": {
@@ -18920,8 +18985,9 @@
     {
       "$value": "0.4rem",
       "$type": "dimension",
+      "utility-class": true,
       "docs": {
-        "type": "corner",
+        "type": "radius",
         "category": "radius",
         "example": "softer",
         "description": {
@@ -18937,8 +19003,9 @@
       "original": {
         "$value": "4px",
         "$type": "dimension",
+        "utility-class": true,
         "docs": {
-          "type": "corner",
+          "type": "radius",
           "category": "radius",
           "example": "softer",
           "description": {
@@ -18961,8 +19028,9 @@
     {
       "$value": "0.6rem",
       "$type": "dimension",
+      "utility-class": true,
       "docs": {
-        "type": "corner",
+        "type": "radius",
         "category": "radius",
         "example": "softest",
         "description": {
@@ -18978,8 +19046,9 @@
       "original": {
         "$value": "6px",
         "$type": "dimension",
+        "utility-class": true,
         "docs": {
-          "type": "corner",
+          "type": "radius",
           "category": "radius",
           "example": "softest",
           "description": {
@@ -19002,8 +19071,9 @@
     {
       "$value": "999.9rem",
       "$type": "dimension",
+      "utility-class": true,
       "docs": {
-        "type": "corner",
+        "type": "radius",
         "category": "radius",
         "example": "round",
         "description": {
@@ -19016,8 +19086,9 @@
       "original": {
         "$value": "9999px",
         "$type": "dimension",
+        "utility-class": true,
         "docs": {
-          "type": "corner",
+          "type": "radius",
           "category": "radius",
           "example": "round",
           "description": {
@@ -22642,20 +22713,24 @@
     {
       "$value": "0",
       "$type": "breakpoint",
+      "utility-class": true,
       "docs": {
-        "type": "breakpoint",
+        "type": "breakpoints",
         "category": "breakpoints",
-        "example": "breakpoint"
+        "example": "breakpoint",
+        "description": "The default mobile-first base breakpoint starting at 0px. All styles outside a breakpoint query apply here."
       },
       "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
         "$value": "0",
         "$type": "breakpoint",
+        "utility-class": true,
         "docs": {
-          "type": "breakpoint",
+          "type": "breakpoints",
           "category": "breakpoints",
-          "example": "breakpoint"
+          "example": "breakpoint",
+          "description": "The default mobile-first base breakpoint starting at 0px. All styles outside a breakpoint query apply here."
         }
       },
       "name": "cdr-breakpoint-xs",
@@ -22669,20 +22744,24 @@
     {
       "$value": "768px",
       "$type": "breakpoint",
+      "utility-class": true,
       "docs": {
-        "type": "breakpoint",
+        "type": "breakpoints",
         "category": "breakpoints",
-        "example": "breakpoint"
+        "example": "breakpoint",
+        "description": "Small breakpoint at 768px. Use for tablet-portrait and larger layouts."
       },
       "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
         "$value": "768px",
         "$type": "breakpoint",
+        "utility-class": true,
         "docs": {
-          "type": "breakpoint",
+          "type": "breakpoints",
           "category": "breakpoints",
-          "example": "breakpoint"
+          "example": "breakpoint",
+          "description": "Small breakpoint at 768px. Use for tablet-portrait and larger layouts."
         }
       },
       "name": "cdr-breakpoint-sm",
@@ -22696,20 +22775,24 @@
     {
       "$value": "992px",
       "$type": "breakpoint",
+      "utility-class": true,
       "docs": {
-        "type": "breakpoint",
+        "type": "breakpoints",
         "category": "breakpoints",
-        "example": "breakpoint"
+        "example": "breakpoint",
+        "description": "Medium breakpoint at 992px. Use for tablet-landscape and larger layouts."
       },
       "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
         "$value": "992px",
         "$type": "breakpoint",
+        "utility-class": true,
         "docs": {
-          "type": "breakpoint",
+          "type": "breakpoints",
           "category": "breakpoints",
-          "example": "breakpoint"
+          "example": "breakpoint",
+          "description": "Medium breakpoint at 992px. Use for tablet-landscape and larger layouts."
         }
       },
       "name": "cdr-breakpoint-md",
@@ -22723,20 +22806,24 @@
     {
       "$value": "1232px",
       "$type": "breakpoint",
+      "utility-class": true,
       "docs": {
-        "type": "breakpoint",
+        "type": "breakpoints",
         "category": "breakpoints",
-        "example": "breakpoint"
+        "example": "breakpoint",
+        "description": "Large breakpoint at 1232px. Use for full desktop layouts."
       },
       "filePath": "tokens/web/breakpoints.json",
       "isSource": false,
       "original": {
         "$value": "1232px",
         "$type": "breakpoint",
+        "utility-class": true,
         "docs": {
-          "type": "breakpoint",
+          "type": "breakpoints",
           "category": "breakpoints",
-          "example": "breakpoint"
+          "example": "breakpoint",
+          "description": "Large breakpoint at 1232px. Use for full desktop layouts."
         }
       },
       "name": "cdr-breakpoint-lg",

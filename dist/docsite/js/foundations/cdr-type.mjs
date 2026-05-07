@@ -1,0 +1,10 @@
+export const CdrTypeScale0 = "clamp(1.6rem, 0.44cqw + 1.46rem, 2rem)";
+export const CdrTypeScale1 = "clamp(1.92rem, 0.64cqw + 1.72rem, 2.5rem)";
+export const CdrTypeScale2 = "clamp(2.3rem, 0.9cqw + 2.02rem, 3.13rem)";
+export const CdrTypeScale3 = "clamp(2.76rem, 1.25cqw + 2.36rem, 3.91rem)";
+export const CdrTypeScale4 = "clamp(3.32rem, 1.72cqw + 2.77rem, 4.88rem)";
+export const CdrTypeScale5 = "clamp(3.98rem, 2.33cqw + 3.24rem, 6.1rem)";
+export const CdrTypeScale6 = "clamp(4.78rem, 3.13cqw + 3.78rem, 7.63rem)";
+export const CdrTypeScale7 = "clamp(5.73rem, 4.17cqw + 4.4rem, 9.54rem)";
+export const CdrTypeScaleMinus1 = "clamp(1.33rem, 0.29cqw + 1.24rem, 1.6rem)";
+export const CdrTypeScaleMinus2 = "clamp(1.3rem, 0.29cqw + 1.24rem, 1.4rem)";

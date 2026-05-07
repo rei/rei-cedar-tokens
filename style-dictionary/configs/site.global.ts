@@ -7,6 +7,7 @@ export const siteGlobal = (theme: Theme): PlatformConfig => ({
     ...commonConfig(theme, 'json'),
     transforms: [
       'attribute/deprecated',
+      'attribute/text-short-names',
       'name/kebab',
       'size/strip-all-px-js',
       'size/space-js',

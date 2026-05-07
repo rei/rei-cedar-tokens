@@ -13,26 +13,11 @@ import type { Token } from 'style-dictionary';
 export const foundationsColorBackgroundTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'foundations-color-background-tokens',
-    filter: (token: Token) => {
-      const colorTokens = [
-        'transparent',
-        'primary',
-        'secondary',
-        'sale',
-        'brand-spruce',
-        'success',
-        'info',
-        'warning',
-        'error',
-      ];
-
-      return (
-        token.path[0] !== 'options' &&
-        token.path[0] !== 'theme' &&
-        token.path[0] === 'color' &&
-        token.path[1] === 'background' &&
-        colorTokens.includes(token.path[2])
-      );
-    },
+    filter: (token: Token) =>
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] === 'color' &&
+      token.path[1] === 'background' &&
+      (token.filePath as string).endsWith('color.json'),
   });
 };

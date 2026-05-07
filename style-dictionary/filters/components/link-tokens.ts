@@ -17,6 +17,7 @@ export const componentLinkTokens = (sd: typeof StyleDictionary): void => {
       token.path[0] !== 'options' &&
       token.path[0] !== 'theme' &&
       token.path[0] !== 'membership' &&
-      token.path.includes('link'),
+      token.path.includes('link') &&
+      !(token.path[0] === 'color' && token.path[1] === 'icon'),
   });
 };

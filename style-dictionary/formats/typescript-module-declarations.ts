@@ -4,10 +4,17 @@ import { getModuleTypeName, getValueName } from './typescript-module-utils';
 
 type TokenDescription = string | Record<string, string | string[]>;
 
-const formatJSDoc = (description?: TokenDescription): string => {
-  if (!description) return '';
+const toCssVar = (name: string): string =>
+  '--' +
+  name
+    .replace(/([a-z])(\d)/g, '$1-$2')
+    .replace(/(\d)([A-Z])/g, '$1-$2')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .toLowerCase()
+    .replace(/^-/, '');
 
-  let lines: string[] = [];
+const formatJSDoc = (description?: TokenDescription, value?: string, cssvar?: string): string => {
+  const lines: string[] = [];
 
   if (typeof description === 'string') {
     lines.push(`   * ${description}`);
@@ -17,12 +24,21 @@ const formatJSDoc = (description?: TokenDescription): string => {
       when: 'design',
     };
 
-    lines = Object.entries(description).map(([key, val]) => {
+    for (const [key, val] of Object.entries(description)) {
       const mappedKey = keyMap[key] || key;
       const formattedValue = Array.isArray(val) ? val.join(', ') : val;
-      return `   * @${mappedKey} ${formattedValue}`;
-    });
+      lines.push(`   * @${mappedKey} ${formattedValue}`);
+    }
   }
+
+  if (value !== undefined && value !== '') {
+    lines.push(`   * @value ${value}`);
+  }
+  if (cssvar) {
+    lines.push(`   * @cssvar ${cssvar}`);
+  }
+
+  if (lines.length === 0) return '';
 
   return ['  /**', ...lines, '   */'].join('\n');
 };
@@ -58,7 +74,9 @@ export const typescriptModuleDeclarations = (sd: typeof StyleDictionary): void =
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (token as any).docs?.description;
 
-        const jsDoc = formatJSDoc(description);
+        const value = token.$value !== undefined ? String(token.$value) : undefined;
+        const cssvar = toCssVar(token.name);
+        const jsDoc = formatJSDoc(description, value, cssvar);
         const declaration = `  readonly ${token.name}: string;`;
 
         return jsDoc ? `${jsDoc}\n${declaration}` : declaration;
