@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUSKY: 0
+      HUSKY: 0 # Disable husky hooks in CI to speed up pnpm install
 
     strategy:
       matrix:
@@ -18,12 +18,14 @@ jobs:
 
     steps:
       # =======================================================================
-      # PHASE 1: GENERATE BASELINE (Target Branch)
+      # STEP 1: INITIALIZE ENVIRONMENT
       # =======================================================================
-      - name: Checkout target branch (${{ github.base_ref }})
+      - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.base_ref }}
+          # fetch-depth: 0 is required to allow 'git checkout' of other branches
+          fetch-depth: 0
+          clean: true
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -35,36 +37,30 @@ jobs:
         with:
           version: 10
 
-      - name: Install dependencies (Target Branch)
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Generate Deprecation Baseline
-        # Removed CLI argument since path is hardcoded in the script
-        run: npx tsx scripts/generate-baseline.ts
-
-      - name: Preserve Baseline File
-        # Copy the generated file out of the workspace so checkout doesn't delete it
-        run: cp data/baseline.json /tmp/baseline.json
-
       # =======================================================================
-      # PHASE 2: PREPARE PR BRANCH
+      # STEP 2: GENERATE BASELINE (The Folder Swap)
       # =======================================================================
-      - name: Checkout PR branch
-        uses: actions/checkout@v4
-        with:
-          clean: true
-
-      - name: Restore Baseline File
-        # Recreate the data folder and move the file back into place for the next script
+      - name: Generate Deprecation Baseline from Target Branch
         run: |
-          mkdir -p data
-          cp /tmp/baseline.json data/baseline.json
+          echo "Moving current tokens to backup..."
+          mv tokens/global tokens/global-pr-backup
 
-      - name: Install dependencies (PR Branch)
-        run: pnpm install --frozen-lockfile
+          echo "Pulling token data from ${{ github.base_ref }}..."
+          # This specifically fetches ONLY the tokens from the base branch (master/next)
+          git checkout origin/${{ github.base_ref }} -- tokens/global
+
+          echo "Running baseline generation script..."
+          npx tsx scripts/generate-baseline.ts
+
+          echo "Restoring PR tokens..."
+          rm -rf tokens/global
+          mv tokens/global-pr-backup tokens/global
 
       # =======================================================================
-      # PHASE 3: STATIC ANALYSIS & GATES (Pre-Build)
+      # STEP 3: STATIC ANALYSIS & GATES (Pre-Build)
       # =======================================================================
       - name: Check formatting
         run: pnpm run format:check
@@ -76,11 +72,11 @@ jobs:
         run: npx tsx scripts/validate-contract.ts
 
       - name: Enforce Rename & Deletion Governance
-        # Removed CLI argument since path is hardcoded in the script
+        # This compares current tokens against the baseline.json created in Step 2
         run: npx tsx scripts/enforce-deletions.ts
 
       # =======================================================================
-      # PHASE 4: TEST & COMPILE
+      # STEP 4: TEST & COMPILE
       # =======================================================================
       - name: Test
         run: pnpm test
@@ -89,7 +85,7 @@ jobs:
         run: pnpm build
 
       # =======================================================================
-      # PHASE 5: POST-BUILD PARITY CHECKS
+      # STEP 5: POST-BUILD PARITY CHECKS
       # =======================================================================
       - name: Validate Syntax Boundaries
         run: npx tsx scripts/validate-syntax-boundaries.ts

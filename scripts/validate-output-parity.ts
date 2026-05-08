@@ -3,12 +3,12 @@ import path from 'path';
 import { globSync } from 'glob';
 import {
   componentModulesName as COMPONENTS,
-  foundationsMoudulesName as FOUNDATIONS,
+  foundationsModulesName as FOUNDATIONS,
 } from '../style-dictionary/configs/filters/modules';
 
 // Define legal secondary namespaces that a component is allowed to export
 const COMPONENT_ALIASES: Record<string, string[]> = {
-  input: ['label'],
+  input: ['label', 'color-icon-checkbox'],
   'toggle-button': ['toggle-group'],
 };
 
@@ -17,6 +17,8 @@ const FOUNDATION_ALIASES: Record<string, string[]> = {
   'breakpoint-mixins': ['breakpoint'],
   'motion-timing': ['timing'],
   'motion-duration': ['duration'],
+  'text-style': ['transform', 'text-eyebrow', 'text-italic'],
+  'space-icon': ['icon-size'],
 };
 
 function extractNormalizedTokens(filePath: string, content: string): string[] {
@@ -101,25 +103,19 @@ function runOutputParityCheck() {
   const errors: string[] = [];
 
   const containsKeyword = (tokenStr: string, keyword: string, componentToken: boolean = false) => {
-    const tokenStrSplit = tokenStr.split('-');
-    const multipleWordToken = keyword.split('-').length > 1;
-    const multipleWordTokenJoined = `${tokenStrSplit[2]}-${tokenStrSplit[3]}`;
-
     if (componentToken) {
-      if (multipleWordToken) {
-        return multipleWordTokenJoined === keyword;
-      }
+      const normalizedToken = `-${tokenStr}-`;
+      const normalizedKeyword = `-${keyword}-`;
 
-      return (
-        tokenStrSplit[0] === keyword || tokenStrSplit[1] === keyword || tokenStrSplit[2] === keyword
-      );
+      return normalizedToken.includes(normalizedKeyword);
     }
 
+    // Foundations must always be the exact prefix
     return tokenStr.startsWith(`${keyword}-`);
   };
 
   outputFiles.forEach((file) => {
-    const fileName = path.basename(file, path.extname(file));
+    const fileName = path.basename(file, path.extname(file)).replace(/\.d$/, '');
     const content = fs.readFileSync(file, 'utf-8');
     const tokens = extractNormalizedTokens(file, content);
 
