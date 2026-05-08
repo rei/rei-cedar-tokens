@@ -221,6 +221,131 @@ function toPascalCase(name: string): string {
 }
 
 /**
+ * Convert a PascalCase token name to a kebab-case semantic key by optionally
+ * stripping a module prefix first.
+ */
+function toSemanticKey(tokenName: string, prefix: string): string {
+  const withoutPrefix = tokenName.startsWith(prefix) ? tokenName.slice(prefix.length) : tokenName;
+  return withoutPrefix
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2')
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .toLowerCase();
+}
+
+/**
+ * Extract the first numeric value from a token string value.
+ *
+ * Examples:
+ * - "1232" -> 1232
+ * - "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)" -> 0.2
+ */
+function extractFirstNumeric(value: string): number {
+  const match = value.match(/-?\d+(?:\.\d+)?/);
+  return match ? Number.parseFloat(match[0]) : Number.NaN;
+}
+
+type OrderedTokenEntry = {
+  tokenName: string;
+  semanticKey: string;
+  rawValue: string;
+  numericValue: number;
+};
+
+type OrderModuleSpec = {
+  sourceModuleBase: string;
+  sourceTokenPrefix: string;
+  orderModuleBase: string;
+  orderConstName: string;
+  orderKeyTypeName: string;
+  description: string;
+  exampleImport: string;
+  numericExtractor: (value: string) => number;
+  compareEntries?: (a: OrderedTokenEntry, b: OrderedTokenEntry) => number;
+};
+
+/**
+ * Converts a space-scale semantic key to a sortable numeric rank.
+ *
+ * Examples:
+ * - "0" -> 0
+ * - "01" -> 0.1
+ * - "34" -> 3.4
+ * - "35" -> 3.5
+ */
+function spaceScaleRank(semanticKey: string): number {
+  if (!/^\d+$/.test(semanticKey)) {
+    return Number.POSITIVE_INFINITY;
+  }
+  if (semanticKey.length === 1) {
+    return Number.parseInt(semanticKey, 10);
+  }
+  if (semanticKey.startsWith('0')) {
+    return Number.parseFloat(`0.${semanticKey.slice(1)}`);
+  }
+  return Number.parseFloat(`${semanticKey[0]}.${semanticKey.slice(1)}`);
+}
+
+/**
+ * Generate a canonical order module from a foundations token module.
+ */
+async function generateOrderModule(typesDir: string, spec: OrderModuleSpec): Promise<void> {
+  const srcMjsPath = path.join(
+    __dirname,
+    `../dist/rei-dot-com/js/foundations/${spec.sourceModuleBase}.mjs`,
+  );
+  const src = await fs.readFile(srcMjsPath, 'utf8');
+
+  const entries: OrderedTokenEntry[] = [];
+  for (const match of src.matchAll(/export const (\w+) = "([^"]+)"/g)) {
+    const tokenName = match[1];
+    const rawValue = match[2];
+    entries.push({
+      tokenName,
+      rawValue,
+      semanticKey: toSemanticKey(tokenName, spec.sourceTokenPrefix),
+      numericValue: spec.numericExtractor(rawValue),
+    });
+  }
+
+  if (spec.compareEntries) {
+    entries.sort(spec.compareEntries);
+  } else {
+    entries.sort((a, b) => {
+      const numericDiff = a.numericValue - b.numericValue;
+      if (!Number.isNaN(numericDiff) && numericDiff !== 0) {
+        return numericDiff;
+      }
+      return a.semanticKey.localeCompare(b.semanticKey);
+    });
+  }
+
+  const orderKeys = entries.map((entry) => entry.semanticKey);
+
+  const orderMjs = `/**
+ * ${spec.description}
+ * Use this instead of hardcoding token order in consumer code.
+ *
+ * @example
+ * import { ${spec.orderConstName} } from '@rei/cdr-tokens';
+ * ${spec.exampleImport}
+ */
+export const ${spec.orderConstName} = ${JSON.stringify(orderKeys)};
+`;
+
+  const orderDts = `/**
+ * ${spec.description}
+ */
+export declare const ${spec.orderConstName}: readonly ${JSON.stringify(orderKeys)};
+export type ${spec.orderKeyTypeName} = (typeof ${spec.orderConstName})[number];
+`;
+
+  const foundationsTypesDir = path.join(typesDir, 'foundations');
+  await fs.ensureDir(foundationsTypesDir);
+  await fs.writeFile(path.join(foundationsTypesDir, `${spec.orderModuleBase}.mjs`), orderMjs);
+  await fs.writeFile(path.join(foundationsTypesDir, `${spec.orderModuleBase}.d.ts`), orderDts);
+}
+
+/**
  * Generate semantic contract layer
  *
  * Writes dist/rei-dot-com/types/index.mjs and index.d.ts.
@@ -265,7 +390,8 @@ async function generateSemanticContract() {
 
 ${mjsExports.join('\n')}
 export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
-export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.mjs';
+export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order.mjs';
+export { CdrTextSizeOrder } from './foundations/cdr-text-size-order.mjs';
 `;
 
   await fs.writeFile(path.join(typesDir, 'index.mjs'), semanticMjsContent);
@@ -277,54 +403,75 @@ export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order.m
 ${dtsExports.join('\n')}
 export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';
 export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';
+export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order';
+export type { CdrSpaceScaleOrderKey } from './foundations/cdr-space-scale-order';
+export { CdrTextSizeOrder } from './foundations/cdr-text-size-order';
+export type { CdrTextSizeOrderKey } from './foundations/cdr-text-size-order';
 `;
 
   await fs.writeFile(path.join(typesDir, 'index.d.ts'), semanticDtsContent);
 
-  // Generate ordered breakpoint constant: derived by sorting token values ascending
-  // so the order stays correct if breakpoint values ever change.
-  const bpMjsPath = path.join(__dirname, '../dist/rei-dot-com/js/foundations/cdr-breakpoint.mjs');
-  const bpSrc = await fs.readFile(bpMjsPath, 'utf8');
-  const bpEntries: Array<[string, number]> = [];
-  for (const match of bpSrc.matchAll(/export const CdrBreakpoint(\w+) = "(\d+)"/g)) {
-    bpEntries.push([match[1].toLowerCase(), parseInt(match[2])]);
-  }
-  bpEntries.sort((a, b) => a[1] - b[1]);
-  const bpOrderKeys = bpEntries.map(([key]) => key);
+  // Generate canonical order modules for ordered-dimension token families.
+  await generateOrderModule(typesDir, {
+    sourceModuleBase: 'cdr-breakpoint',
+    sourceTokenPrefix: 'CdrBreakpoint',
+    orderModuleBase: 'cdr-breakpoint-order',
+    orderConstName: 'CdrBreakpointOrder',
+    orderKeyTypeName: 'CdrBreakpointOrderKey',
+    description: 'Canonical breakpoint order from smallest to largest.',
+    exampleImport: 'CdrBreakpointOrder.forEach((bp) => applyBreakpointStyles(bp));',
+    numericExtractor: (value) => Number.parseInt(value, 10),
+  });
 
-  const bpOrderMjs = `/**
- * Canonical breakpoint order from smallest to largest.
- * Use this instead of hardcoding breakpoint order in consumer code.
- *
- * @example
- * import { CdrBreakpointOrder } from '@rei/cdr-tokens';
- * CdrBreakpointOrder.forEach((bp) => applyBreakpointStyles(bp));
- */
-export const CdrBreakpointOrder = ${JSON.stringify(bpOrderKeys)};
-`;
+  await generateOrderModule(typesDir, {
+    sourceModuleBase: 'cdr-space-scale',
+    sourceTokenPrefix: 'CdrSpaceScale',
+    orderModuleBase: 'cdr-space-scale-order',
+    orderConstName: 'CdrSpaceScaleOrder',
+    orderKeyTypeName: 'CdrSpaceScaleOrderKey',
+    description: 'Canonical space scale order from smallest to largest.',
+    exampleImport: 'CdrSpaceScaleOrder.forEach((step) => applySpaceStep(step));',
+    numericExtractor: extractFirstNumeric,
+    compareEntries: (a, b) => {
+      const rankDiff = spaceScaleRank(a.semanticKey) - spaceScaleRank(b.semanticKey);
+      if (rankDiff !== 0) {
+        return rankDiff;
+      }
+      return a.semanticKey.localeCompare(b.semanticKey);
+    },
+  });
 
-  const bpOrderDts = `/**
- * Canonical breakpoint order from smallest to largest.
- */
-export declare const CdrBreakpointOrder: readonly ${JSON.stringify(bpOrderKeys)};
-export type CdrBreakpointOrderKey = (typeof CdrBreakpointOrder)[number];
-`;
+  await generateOrderModule(typesDir, {
+    sourceModuleBase: 'cdr-text-size',
+    sourceTokenPrefix: 'CdrTextSize',
+    orderModuleBase: 'cdr-text-size-order',
+    orderConstName: 'CdrTextSizeOrder',
+    orderKeyTypeName: 'CdrTextSizeOrderKey',
+    description: 'Canonical text size order from smallest to largest.',
+    exampleImport: 'CdrTextSizeOrder.forEach((size) => applyTypeScale(size));',
+    numericExtractor: (value) => Number.parseInt(value, 10),
+  });
 
-  const bpTypesDir = path.join(typesDir, 'foundations');
-  await fs.ensureDir(bpTypesDir);
-  await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.mjs'), bpOrderMjs);
-  await fs.writeFile(path.join(bpTypesDir, 'cdr-breakpoint-order.d.ts'), bpOrderDts);
-
-  // Append breakpoint-order to the tokens.* barrel files.
+  // Append order modules to the tokens.* barrel files.
   // The generate-types-barrel SD action runs before this function, so
-  // cdr-breakpoint-order.{mjs,d.ts} don't exist at barrel-generation time.
-  // We patch them here so "@rei/cdr-tokens/types" also exposes CdrBreakpointOrder.
+  // these order modules don't exist at barrel-generation time.
+  // We patch them here so "@rei/cdr-tokens/types" also exposes them.
   const tokensMjsPath = path.join(typesDir, 'tokens.mjs');
   const tokensDtsPath = path.join(typesDir, 'tokens.d.ts');
   await fs.appendFile(tokensMjsPath, `export * from './foundations/cdr-breakpoint-order.mjs';\n`);
+  await fs.appendFile(tokensMjsPath, `export * from './foundations/cdr-space-scale-order.mjs';\n`);
+  await fs.appendFile(tokensMjsPath, `export * from './foundations/cdr-text-size-order.mjs';\n`);
   await fs.appendFile(
     tokensDtsPath,
-    `export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';\nexport type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';\n`,
+    [
+      `export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';`,
+      `export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';`,
+      `export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order';`,
+      `export type { CdrSpaceScaleOrderKey } from './foundations/cdr-space-scale-order';`,
+      `export { CdrTextSizeOrder } from './foundations/cdr-text-size-order';`,
+      `export type { CdrTextSizeOrderKey } from './foundations/cdr-text-size-order';`,
+      '',
+    ].join('\n'),
   );
 
   console.log('✓ Generated semantic contract layer');

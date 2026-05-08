@@ -14,6 +14,7 @@ import {
   CdrSpace,
   CdrBreakpoint,
   CdrRadius,
+  CdrTextSize,
   CdrColorBackground,
   CdrColorBorder,
   CdrColorText,
@@ -21,18 +22,31 @@ import {
   CdrMotionDuration,
   CdrMotionTiming,
   CdrBreakpointOrder,
+  CdrSpaceScaleOrder,
+  CdrTextSizeOrder,
 } from '@rei/cdr-tokens';
 
 import type {
   CdrSpaceTokens,
   CdrBreakpointTokens,
   CdrRadiusTokens,
+  CdrTextSizeTokens,
   CdrBreakpointOrderKey,
+  CdrSpaceScaleOrderKey,
+  CdrTextSizeOrderKey,
 } from '@rei/cdr-tokens';
 
 // ─── Root "./types" barrel ────────────────────────────────────────────────────
 import { CdrBreakpointOrder as CdrBreakpointOrderFromTypes } from '@rei/cdr-tokens/types';
-import type { CdrBreakpointOrderKey as CdrBreakpointOrderKeyFromTypes } from '@rei/cdr-tokens/types';
+import {
+  CdrSpaceScaleOrder as CdrSpaceScaleOrderFromTypes,
+  CdrTextSizeOrder as CdrTextSizeOrderFromTypes,
+} from '@rei/cdr-tokens/types';
+import type {
+  CdrBreakpointOrderKey as CdrBreakpointOrderKeyFromTypes,
+  CdrSpaceScaleOrderKey as CdrSpaceScaleOrderKeyFromTypes,
+  CdrTextSizeOrderKey as CdrTextSizeOrderKeyFromTypes,
+} from '@rei/cdr-tokens/types';
 
 // ─── Value shape assertions ───────────────────────────────────────────────────
 
@@ -53,6 +67,12 @@ const order: ReadonlyArray<CdrBreakpointOrderKey> = CdrBreakpointOrder;
 // Root and ./types barrel must export the same underlying type
 const _orderFromTypes: ReadonlyArray<CdrBreakpointOrderKeyFromTypes> = CdrBreakpointOrderFromTypes;
 
+const _spaceScaleOrderFromTypes: ReadonlyArray<CdrSpaceScaleOrderKeyFromTypes> =
+  CdrSpaceScaleOrderFromTypes;
+
+const _textSizeOrderFromTypes: ReadonlyArray<CdrTextSizeOrderKeyFromTypes> =
+  CdrTextSizeOrderFromTypes;
+
 // Order must contain exactly the 4 known breakpoints (tuple length check)
 const _orderLength: 4 = CdrBreakpointOrder.length;
 
@@ -65,6 +85,16 @@ const _testKey: CdrBreakpointOrderKey = 'sm';
 // @ts-expect-error — 'xl' is not a valid breakpoint key
 const _badKey: CdrBreakpointOrderKey = 'xl';
 
+// Space scale order key union
+const _spaceScaleKey: CdrSpaceScaleOrderKey = '4';
+// @ts-expect-error — '9' is not a valid space scale key
+const _badSpaceScaleKey: CdrSpaceScaleOrderKey = '9';
+
+// Text size order key union
+const _textSizeKey: CdrTextSizeOrderKey = 'cdr-text-heading-display1600-size';
+// @ts-expect-error — invalid text size key
+const _badTextSizeKey: CdrTextSizeOrderKey = 'cdr-text-heading-display1700-size';
+
 // ─── CdrBreakpointOrder is iterable over correct key type ────────────────────
 CdrBreakpointOrder.forEach((key: CdrBreakpointOrderKey) => {
   const _val: string =
@@ -72,6 +102,17 @@ CdrBreakpointOrder.forEach((key: CdrBreakpointOrderKey) => {
       `CdrBreakpoint${key.charAt(0).toUpperCase()}${key.slice(1)}` as keyof CdrBreakpointTokens
     ];
   void _val;
+});
+
+// ─── Additional order arrays are iterable over correct key types ─────────────
+CdrSpaceScaleOrder.forEach((key: CdrSpaceScaleOrderKey) => {
+  const _k: CdrSpaceScaleOrderKey = key;
+  void _k;
+});
+
+CdrTextSizeOrder.forEach((key: CdrTextSizeOrderKey) => {
+  const _k: CdrTextSizeOrderKey = key;
+  void _k;
 });
 
 // ─── Type interface shape ─────────────────────────────────────────────────────
@@ -85,9 +126,14 @@ const _typedBreakpoint: CdrBreakpointTokens = CdrBreakpoint;
 // CdrRadiusTokens
 const _typedRadius: CdrRadiusTokens = CdrRadius;
 
+// CdrTextSizeTokens
+const _typedTextSize: CdrTextSizeTokens = CdrTextSize;
+
 // ─── Suppress unused variable warnings ───────────────────────────────────────
 void order;
 void _orderFromTypes;
+void _spaceScaleOrderFromTypes;
+void _textSizeOrderFromTypes;
 void _breakpointLg;
 void _radiusSoft;
 void _spaceOneX;
@@ -98,9 +144,12 @@ void CdrColorIcon;
 void CdrMotionDuration;
 void CdrMotionTiming;
 void _testKey;
+void _spaceScaleKey;
+void _textSizeKey;
 void _firstKey;
 void _lastKey;
 void _orderLength;
 void _typedSpace;
 void _typedBreakpoint;
 void _typedRadius;
+void _typedTextSize;

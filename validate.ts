@@ -86,7 +86,7 @@ const validateStructure = async (): Promise<void> => {
 
   // If no existing data found or is updating, create it
   if (!existingData || isUpdating) {
-    fs.writeFileSync(validationFile, JSON.stringify(newData));
+    fs.writeFileSync(validationFile, `${JSON.stringify(newData, null, 2)}\n`);
     console.log('Created new validation data');
     return;
   }

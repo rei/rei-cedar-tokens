@@ -331,6 +331,17 @@ transforms: [
 ];
 ```
 
+### SCSS Map Entrypoints
+
+SCSS map outputs are generated from utility-class tokens and now exposed through two
+explicit entrypoints:
+
+- `@use '@rei/cdr-tokens/scss/map-resolved'` for resolved values (`0.2rem`, `992px`, etc.)
+- `@use '@rei/cdr-tokens/scss/map-vars'` for CSS variable values (`var(--cdr-...)`)
+
+The legacy `utility-map.scss` file remains as a compatibility shim. It emits a deprecation
+warning and forwards `map-resolved`.
+
 ### Android
 
 ```typescript

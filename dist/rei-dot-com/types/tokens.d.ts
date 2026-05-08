@@ -67,3 +67,7 @@ export type * from './foundations/cdr-type.keys.d.ts';
 export type * from './foundations/cdr-type.names.d.ts';
 export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order';
 export type { CdrBreakpointOrderKey } from './foundations/cdr-breakpoint-order';
+export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order';
+export type { CdrSpaceScaleOrderKey } from './foundations/cdr-space-scale-order';
+export { CdrTextSizeOrder } from './foundations/cdr-text-size-order';
+export type { CdrTextSizeOrderKey } from './foundations/cdr-text-size-order';
