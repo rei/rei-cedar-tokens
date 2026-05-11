@@ -41,16 +41,8 @@ export const scss = (theme: Theme): PlatformConfig => ({
         format: 'scss/typography',
       },
       {
-        destination: 'map-resolved.no_concat.scss',
-        format: 'scss/map',
-      },
-      {
-        destination: 'map-vars.no_concat.scss',
-        format: 'scss/map-vars',
-      },
-      {
         destination: 'utility-map.no_concat.scss',
-        format: 'scss/map-legacy-forward',
+        format: 'scss/map',
       },
     ],
     actions: ['include-queries-file-scss', 'include-display-scss', 'concat-files'],

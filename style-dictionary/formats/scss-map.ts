@@ -63,23 +63,4 @@ export const scssMap = (sd: typeof StyleDictionary): void => {
       });
     },
   });
-
-  sd.registerFormat({
-    name: 'scss/map-vars',
-    format: ({ dictionary }: FormatFnArguments): string => {
-      return buildUtilityMapScss(dictionary, (token) => {
-        return `var(--${token.name})`;
-      });
-    },
-  });
-
-  sd.registerFormat({
-    name: 'scss/map-legacy-forward',
-    format: (): string => {
-      return [
-        '@warn "utility-map.scss is deprecated. Use map-resolved.scss or map-vars.scss instead.";',
-        '@forward "map-resolved";',
-      ].join('\n');
-    },
-  });
 };
