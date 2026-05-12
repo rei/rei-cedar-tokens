@@ -92,3 +92,10 @@ jobs:
 
       - name: Validate Output Parity & Scope Leaks
         run: npx tsx scripts/validate-output-parity.ts
+
+      # =======================================================================
+      # STEP 6: POST-BUILD TYPE COMPILE CHECKS
+      # =======================================================================
+
+      - name: Consumer type compile check
+        run: pnpm run test:consumer-types
