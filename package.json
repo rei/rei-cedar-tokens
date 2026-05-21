@@ -92,7 +92,9 @@
     "build:base-types": "tsx ./style-dictionary/generate-base-types.ts",
     "build:tokens": "pnpm run clean && pnpm run build:base-types && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",
-    "build": "pnpm run clean && pnpm run build:tokens && pnpm run site-tokens && pnpm run validate",
+    "prebuild": "pnpm run validate:contract",
+    "build": "pnpm run clean && pnpm run build:tokens && pnpm run site-tokens && pnpm run validate:contract && pnpm run validate:syntax && pnpm run validate",
+    "postbuild": "pnpm run validate:syntax && pnpm run validate:parity",
     "build:grid": "tsx grid.ts",
     "site-tokens": "tsx ./site-tokens.ts",
     "lint-staged": "lint-staged",
@@ -102,6 +104,9 @@
     "prepush": "pnpm run lint && pnpm test",
     "validate": "tsx ./validate.ts",
     "validate:update": "tsx ./validate.ts --update",
+    "validate:contract": "tsx scripts/validate-contract.ts",
+    "validate:syntax": "tsx scripts/validate-syntax-boundaries.ts",
+    "validate:parity": "tsx scripts/validate-output-parity.ts",
     "tokens:update": "tsx ./tokens-studio/token-updater.ts",
     "test": "vitest run",
     "test:consumer-types": "tsc -p test-consumer/tsconfig.consumer.json",
@@ -111,6 +116,9 @@
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "semver": "^7.7.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
@@ -122,6 +130,7 @@
     "@tokens-studio/sd-transforms": "^1.2.2",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.21",
+    "@types/semver": "^7.7.1",
     "@vitest/ui": "^4.0.16",
     "commitizen": "^4.3.1",
     "concat": "^1.0.3",
