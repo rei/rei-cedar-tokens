@@ -17,6 +17,16 @@ export const typesFilters = () => {
       format: 'typescript/token-name-union',
       filter: `foundations-${moduleName}-tokens`,
     },
+    {
+      destination: `./foundations/cdr-${moduleName}.keys.d.ts`,
+      format: 'typescript/token-key-union',
+      filter: `foundations-${moduleName}-tokens`,
+    },
+    {
+      destination: `./foundations/cdr-${moduleName}.keys.mjs`,
+      format: 'typescript/token-key-union',
+      filter: `foundations-${moduleName}-tokens`,
+    },
   ]);
 
   const filtersComponent = componentModulesName.flatMap((moduleName) => [
@@ -33,6 +43,16 @@ export const typesFilters = () => {
     {
       destination: `./components/cdr-${moduleName}.names.d.ts`,
       format: 'typescript/token-name-union',
+      filter: `component-${moduleName}-tokens`,
+    },
+    {
+      destination: `./components/cdr-${moduleName}.keys.d.ts`,
+      format: 'typescript/token-key-union',
+      filter: `component-${moduleName}-tokens`,
+    },
+    {
+      destination: `./components/cdr-${moduleName}.keys.mjs`,
+      format: 'typescript/token-key-union',
       filter: `component-${moduleName}-tokens`,
     },
   ]);

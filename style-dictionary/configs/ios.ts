@@ -10,6 +10,7 @@ export const ios = (theme: Theme): PlatformConfig => ({
       'attribute/deprecated',
       'attribute/text-short-names',
       'name/pascal',
+      'name/pascal-space-scale-range',
       'color/UIColor',
       'size/strip-px',
       'size/space',

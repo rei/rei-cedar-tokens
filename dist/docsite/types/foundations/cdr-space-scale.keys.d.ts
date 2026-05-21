@@ -1,13 +1,27 @@
+export declare const CdrSpaceScaleKeys: readonly [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "range0-to1",
+  "range3-to4",
+  "range3-to5"
+];
 export type CdrSpaceScaleKey =
   | "0"
-  | "01"
   | "1"
   | "2"
   | "3"
-  | "34"
-  | "35"
   | "4"
   | "5"
   | "6"
   | "7"
-  | "8";
+  | "8"
+  | "range0-to1"
+  | "range3-to4"
+  | "range3-to5";

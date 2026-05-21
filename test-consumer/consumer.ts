@@ -38,10 +38,16 @@ import type {
 
 // ─── Root "./types" barrel ────────────────────────────────────────────────────
 import { CdrBreakpointOrder as CdrBreakpointOrderFromTypes } from '@rei/cdr-tokens/types';
+import { CdrBreakpointKeys } from '@rei/cdr-tokens/types/breakpoint.keys';
 import {
   CdrSpaceScaleOrder as CdrSpaceScaleOrderFromTypes,
   CdrTextSizeOrder as CdrTextSizeOrderFromTypes,
 } from '@rei/cdr-tokens/types';
+import { CdrColorBackgroundKeys } from '@rei/cdr-tokens/types/color-background.keys';
+import { CdrSpaceKeys } from '@rei/cdr-tokens/types/space.keys';
+import type { CdrBreakpointKey } from '@rei/cdr-tokens/types/breakpoint.keys';
+import type { CdrColorBackgroundKey } from '@rei/cdr-tokens/types/color-background.keys';
+import type { CdrSpaceKey } from '@rei/cdr-tokens/types/space.keys';
 import type {
   CdrBreakpointOrderKey as CdrBreakpointOrderKeyFromTypes,
   CdrSpaceScaleOrderKey as CdrSpaceScaleOrderKeyFromTypes,
@@ -52,6 +58,11 @@ import type {
 
 // CdrSpace is a plain object — spot-check a known key
 const _spaceOneX: string = CdrSpace.CdrSpaceOneX;
+
+// Token key arrays should be available from per-module key entrypoints
+const _breakpointKeys: ReadonlyArray<CdrBreakpointKey> = CdrBreakpointKeys;
+const _spaceKeys: ReadonlyArray<CdrSpaceKey> = CdrSpaceKeys;
+const _backgroundKeys: ReadonlyArray<CdrColorBackgroundKey> = CdrColorBackgroundKeys;
 
 // CdrBreakpoint object — known key
 const _breakpointLg: string = CdrBreakpoint.CdrBreakpointLg;
@@ -137,6 +148,9 @@ void _textSizeOrderFromTypes;
 void _breakpointLg;
 void _radiusSoft;
 void _spaceOneX;
+void _breakpointKeys;
+void _spaceKeys;
+void _backgroundKeys;
 void CdrColorBackground;
 void CdrColorBorder;
 void CdrColorText;
