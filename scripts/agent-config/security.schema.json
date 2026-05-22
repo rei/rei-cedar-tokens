@@ -24,7 +24,14 @@
       "scripts/agent-config/",
       "scripts/agent/"
     ],
-    "action": "redact and flag as agent-note before any publish step"
+    "action": "redact and flag as agent-note before any publish step",
+    "contentRules": [
+      {
+        "pattern": "## Changes in this branch",
+        "action": "strip entire section including all content below it"
+      },
+      { "pattern": "Updates .* \\([0-9]+ files?\\):", "action": "strip line" }
+    ]
   },
   "agentNoteGate": {
     "$comment": "Unresolved agent-notes must be resolved before promoting draft to published.",

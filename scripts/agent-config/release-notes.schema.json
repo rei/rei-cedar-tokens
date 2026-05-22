@@ -33,8 +33,21 @@
     },
     "validation": {
       "model": "claude-haiku-4-5-20251001",
-      "usedFor": ["validateAgainstSchema"],
-      "$comment": "Haiku for pattern-matching validation only"
+      "usedFor": ["validateAgainstSchema", "stripInternalSections"],
+      "$comment": "Haiku for pattern-matching validation and internal section stripping"
+    },
+    "pipelineOrder": {
+      "$comment": "Canonical execution order for Phase 6. Change here only.",
+      "steps": [
+        "detectBreakingChanges",
+        "generateHumanReleaseNotes",
+        "generateDesignSummary",
+        "draftMigrationSteps",
+        "generateMachineReleaseNotes",
+        "unifyDraftTone",
+        "stripInternalSections",
+        "scanForSecurityViolations"
+      ]
     }
   },
   "outputs": {
@@ -119,6 +132,16 @@
       "token-changes": "rei-cedar-tokens only",
       "component-api-changes": "rei-cedar only",
       "bolo": "only if release-intent.md BOLO is not 'None.'"
+    },
+    "stripFromOutput": [
+      "Changes in this branch",
+      "Updates branch:",
+      "any section containing only file path lists"
+    ],
+    "breakingChangeSubBulletFormat": {
+      "$comment": "Sub-bullets under breaking changes must use bold labels. Enforce during unifyDraftTone pass.",
+      "required": ["**Why:**", "**Before:**", "**After:**", "**Migrate:**"],
+      "pattern": "  - \\*\\*<label>:\\*\\* <content>"
     }
   },
   "machineRecord": {

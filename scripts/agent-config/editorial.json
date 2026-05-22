@@ -44,7 +44,9 @@
     "capabilityTest": "For every new-features entry: can the reader answer 'what can I do now that I could not do before?' If no, the before/after contrast is missing — add it.",
     "architectureLeadTest": "Does any sentence in the overview or new-features section lead with an architectural reason before the consumer benefit? If yes, flip the order.",
     "migrationTest": "Is every migration step concrete enough to write a codemod from?",
-    "voiceTest": "Does the entire document read as if one person wrote it?"
+    "voiceTest": "Does the entire document read as if one person wrote it?",
+    "breakingFormatTest": "Every breaking change entry must have bold **Why:** **Before:** **After:** **Migrate:** sub-bullets. Plain 'Why:' without bold is a formatting failure — rewrite.",
+    "fileListTest": "Does the output contain any file paths, file counts, or 'Changes in this branch' sections? If yes, strip them entirely before finalizing."
   },
   "voiceCalibration": {
     "$comment": "Read this file before generating any human-facing output. It is the canonical standard.",
