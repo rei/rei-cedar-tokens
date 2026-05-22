@@ -1064,6 +1064,12 @@
             },
             {
               "parent": "docsite/json",
+              "path": "docsite/json/platform-tokens.json",
+              "name": "platform-tokens.json",
+              "type": "file"
+            },
+            {
+              "parent": "docsite/json",
               "path": "docsite/json/web.json",
               "name": "web.json",
               "type": "file"
@@ -1366,6 +1372,18 @@
             },
             {
               "parent": "docsite/scss",
+              "path": "docsite/scss/map-resolved.scss",
+              "name": "map-resolved.scss",
+              "type": "file"
+            },
+            {
+              "parent": "docsite/scss",
+              "path": "docsite/scss/map-vars.scss",
+              "name": "map-vars.scss",
+              "type": "file"
+            },
+            {
+              "parent": "docsite/scss",
               "path": "docsite/scss/utility-map.scss",
               "name": "utility-map.scss",
               "type": "file"
@@ -1412,12 +1430,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-breakpoint.keys.mjs",
-                  "name": "cdr-breakpoint.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-breakpoint.mjs",
                   "name": "cdr-breakpoint.mjs",
                   "type": "file"
@@ -1438,12 +1450,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-color-background.keys.d.ts",
                   "name": "cdr-color-background.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-color-background.keys.mjs",
-                  "name": "cdr-color-background.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1472,12 +1478,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-color-border.keys.mjs",
-                  "name": "cdr-color-border.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-color-border.mjs",
                   "name": "cdr-color-border.mjs",
                   "type": "file"
@@ -1498,12 +1498,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-color-icon.keys.d.ts",
                   "name": "cdr-color-icon.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-color-icon.keys.mjs",
-                  "name": "cdr-color-icon.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1532,12 +1526,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-color-text.keys.mjs",
-                  "name": "cdr-color-text.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-color-text.mjs",
                   "name": "cdr-color-text.mjs",
                   "type": "file"
@@ -1558,12 +1546,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-font.keys.d.ts",
                   "name": "cdr-font.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-font.keys.mjs",
-                  "name": "cdr-font.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1592,12 +1574,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-line-height.keys.mjs",
-                  "name": "cdr-line-height.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-line-height.mjs",
                   "name": "cdr-line-height.mjs",
                   "type": "file"
@@ -1618,12 +1594,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-motion-duration.keys.d.ts",
                   "name": "cdr-motion-duration.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-duration.keys.mjs",
-                  "name": "cdr-motion-duration.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1652,12 +1622,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-motion-timing.keys.mjs",
-                  "name": "cdr-motion-timing.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-motion-timing.mjs",
                   "name": "cdr-motion-timing.mjs",
                   "type": "file"
@@ -1678,12 +1642,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-prominence.keys.d.ts",
                   "name": "cdr-prominence.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-prominence.keys.mjs",
-                  "name": "cdr-prominence.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1712,12 +1670,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-radius.keys.mjs",
-                  "name": "cdr-radius.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-radius.mjs",
                   "name": "cdr-radius.mjs",
                   "type": "file"
@@ -1738,12 +1690,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-space-icon.keys.d.ts",
                   "name": "cdr-space-icon.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-icon.keys.mjs",
-                  "name": "cdr-space-icon.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1772,12 +1718,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-inset.keys.mjs",
-                  "name": "cdr-space-inset.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-space-inset.mjs",
                   "name": "cdr-space-inset.mjs",
                   "type": "file"
@@ -1798,12 +1738,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-space-scale.keys.d.ts",
                   "name": "cdr-space-scale.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space-scale.keys.mjs",
-                  "name": "cdr-space-scale.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1832,12 +1766,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-space.keys.mjs",
-                  "name": "cdr-space.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-space.mjs",
                   "name": "cdr-space.mjs",
                   "type": "file"
@@ -1858,12 +1786,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-text-family.keys.d.ts",
                   "name": "cdr-text-family.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-family.keys.mjs",
-                  "name": "cdr-text-family.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1892,12 +1814,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-letter-spacing.keys.mjs",
-                  "name": "cdr-text-letter-spacing.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-text-letter-spacing.mjs",
                   "name": "cdr-text-letter-spacing.mjs",
                   "type": "file"
@@ -1918,12 +1834,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-text-line-height.keys.d.ts",
                   "name": "cdr-text-line-height.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-line-height.keys.mjs",
-                  "name": "cdr-text-line-height.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -1952,12 +1862,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-size.keys.mjs",
-                  "name": "cdr-text-size.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-text-size.mjs",
                   "name": "cdr-text-size.mjs",
                   "type": "file"
@@ -1978,12 +1882,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-text-style.keys.d.ts",
                   "name": "cdr-text-style.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-style.keys.mjs",
-                  "name": "cdr-text-style.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -2012,12 +1910,6 @@
                 },
                 {
                   "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-text-weight.keys.mjs",
-                  "name": "cdr-text-weight.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-text-weight.mjs",
                   "name": "cdr-text-weight.mjs",
                   "type": "file"
@@ -2038,12 +1930,6 @@
                   "parent": "docsite/types/foundations",
                   "path": "docsite/types/foundations/cdr-type.keys.d.ts",
                   "name": "cdr-type.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "docsite/types/foundations",
-                  "path": "docsite/types/foundations/cdr-type.keys.mjs",
-                  "name": "cdr-type.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3156,6 +3042,12 @@
             },
             {
               "parent": "rei-dot-com/json",
+              "path": "rei-dot-com/json/platform-tokens.json",
+              "name": "platform-tokens.json",
+              "type": "file"
+            },
+            {
+              "parent": "rei-dot-com/json",
               "path": "rei-dot-com/json/web.json",
               "name": "web.json",
               "type": "file"
@@ -3478,6 +3370,18 @@
             },
             {
               "parent": "rei-dot-com/scss",
+              "path": "rei-dot-com/scss/map-resolved.scss",
+              "name": "map-resolved.scss",
+              "type": "file"
+            },
+            {
+              "parent": "rei-dot-com/scss",
+              "path": "rei-dot-com/scss/map-vars.scss",
+              "name": "map-vars.scss",
+              "type": "file"
+            },
+            {
+              "parent": "rei-dot-com/scss",
               "path": "rei-dot-com/scss/utility-map.scss",
               "name": "utility-map.scss",
               "type": "file"
@@ -3536,12 +3440,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-breakpoint.keys.mjs",
-                  "name": "cdr-breakpoint.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-breakpoint.mjs",
                   "name": "cdr-breakpoint.mjs",
                   "type": "file"
@@ -3562,12 +3460,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-color-background.keys.d.ts",
                   "name": "cdr-color-background.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-color-background.keys.mjs",
-                  "name": "cdr-color-background.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3596,12 +3488,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-color-border.keys.mjs",
-                  "name": "cdr-color-border.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-color-border.mjs",
                   "name": "cdr-color-border.mjs",
                   "type": "file"
@@ -3622,12 +3508,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-color-icon.keys.d.ts",
                   "name": "cdr-color-icon.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-color-icon.keys.mjs",
-                  "name": "cdr-color-icon.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3656,12 +3536,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-color-text.keys.mjs",
-                  "name": "cdr-color-text.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-color-text.mjs",
                   "name": "cdr-color-text.mjs",
                   "type": "file"
@@ -3682,12 +3556,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-font.keys.d.ts",
                   "name": "cdr-font.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-font.keys.mjs",
-                  "name": "cdr-font.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3716,12 +3584,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-line-height.keys.mjs",
-                  "name": "cdr-line-height.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-line-height.mjs",
                   "name": "cdr-line-height.mjs",
                   "type": "file"
@@ -3742,12 +3604,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-motion-duration.keys.d.ts",
                   "name": "cdr-motion-duration.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-duration.keys.mjs",
-                  "name": "cdr-motion-duration.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3776,12 +3632,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-motion-timing.keys.mjs",
-                  "name": "cdr-motion-timing.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-motion-timing.mjs",
                   "name": "cdr-motion-timing.mjs",
                   "type": "file"
@@ -3802,12 +3652,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-prominence.keys.d.ts",
                   "name": "cdr-prominence.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-prominence.keys.mjs",
-                  "name": "cdr-prominence.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3836,12 +3680,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-radius.keys.mjs",
-                  "name": "cdr-radius.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-radius.mjs",
                   "name": "cdr-radius.mjs",
                   "type": "file"
@@ -3866,12 +3704,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-icon.keys.mjs",
-                  "name": "cdr-space-icon.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-space-icon.mjs",
                   "name": "cdr-space-icon.mjs",
                   "type": "file"
@@ -3892,12 +3724,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-space-inset.keys.d.ts",
                   "name": "cdr-space-inset.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-inset.keys.mjs",
-                  "name": "cdr-space-inset.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3938,12 +3764,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space-scale.keys.mjs",
-                  "name": "cdr-space-scale.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-space-scale.mjs",
                   "name": "cdr-space-scale.mjs",
                   "type": "file"
@@ -3964,12 +3784,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-space.keys.d.ts",
                   "name": "cdr-space.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-space.keys.mjs",
-                  "name": "cdr-space.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -3998,12 +3812,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-family.keys.mjs",
-                  "name": "cdr-text-family.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-family.mjs",
                   "name": "cdr-text-family.mjs",
                   "type": "file"
@@ -4028,12 +3836,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-letter-spacing.keys.mjs",
-                  "name": "cdr-text-letter-spacing.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-letter-spacing.mjs",
                   "name": "cdr-text-letter-spacing.mjs",
                   "type": "file"
@@ -4054,12 +3856,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-line-height.keys.d.ts",
                   "name": "cdr-text-line-height.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-line-height.keys.mjs",
-                  "name": "cdr-text-line-height.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -4100,12 +3896,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-size.keys.mjs",
-                  "name": "cdr-text-size.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-size.mjs",
                   "name": "cdr-text-size.mjs",
                   "type": "file"
@@ -4126,12 +3916,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-style.keys.d.ts",
                   "name": "cdr-text-style.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-style.keys.mjs",
-                  "name": "cdr-text-style.keys.mjs",
                   "type": "file"
                 },
                 {
@@ -4160,12 +3944,6 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-text-weight.keys.mjs",
-                  "name": "cdr-text-weight.keys.mjs",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-weight.mjs",
                   "name": "cdr-text-weight.mjs",
                   "type": "file"
@@ -4186,12 +3964,6 @@
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-type.keys.d.ts",
                   "name": "cdr-type.keys.d.ts",
-                  "type": "file"
-                },
-                {
-                  "parent": "rei-dot-com/types/foundations",
-                  "path": "rei-dot-com/types/foundations/cdr-type.keys.mjs",
-                  "name": "cdr-type.keys.mjs",
                   "type": "file"
                 },
                 {
