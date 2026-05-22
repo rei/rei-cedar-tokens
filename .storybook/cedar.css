@@ -118,3 +118,136 @@ body {
   --cedar-bg-secondary: #f7f5f3;
   --cedar-sale: #c7370f;
 }
+
+/* ─── Doc-site-aligned Storybook docs styles ─── */
+
+/* Docs page container */
+.sbdocs.sbdocs-wrapper {
+  background: #ffffff;
+  padding: 32px 48px 96px;
+}
+
+.sbdocs.sbdocs-content {
+  max-width: 1100px;
+}
+
+/* Docs headings — match cedar-site-nuxt content-styles.scss */
+.sbdocs .sbdocs-h1 {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #2e2e2b;
+}
+
+.sbdocs .sbdocs-h2 {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: #2e2e2b;
+  border-bottom: 1px solid #d5cfc3;
+  padding-bottom: 8px;
+}
+
+.sbdocs .sbdocs-h3 {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #4b4a48;
+}
+
+.sbdocs .sbdocs-h4 {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #4b4a48;
+}
+
+/* Docs body text */
+.sbdocs .sbdocs-p {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #4b4a48;
+  max-width: 60ch;
+}
+
+/* Docs links — cedar brand link color */
+.sbdocs .sbdocs-a {
+  color: #406eb5;
+}
+.sbdocs .sbdocs-a:hover {
+  color: #406eb5;
+  text-decoration: underline;
+}
+
+/* Docs code blocks */
+.sbdocs code {
+  font-family: Pressura, 'Courier New', monospace;
+  background: #f7f5f3;
+  border: 1px solid #d5cfc3;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  color: #2e2e2b;
+}
+
+.sbdocs pre code {
+  background: #f7f5f3;
+  border: none;
+  padding: 0;
+}
+
+.sbdocs pre {
+  background: #f7f5f3;
+  border: 1px solid #d5cfc3;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+/* Docs tables — match cedar-site-nuxt table styling */
+.sbdocs table {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  color: #4b4a48;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.sbdocs table thead {
+  background: #f7f5f3;
+}
+
+.sbdocs table th {
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #958e83;
+}
+
+.sbdocs table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #d5cfc3;
+}
+
+/* Docs lists */
+.sbdocs ul,
+.sbdocs ol {
+  font-family: Graphik, 'Graphik fallback', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #4b4a48;
+  max-width: 50ch;
+}
+
+.sbdocs ul {
+  list-style-type: '\2014';
+  padding-left: 16px;
+}
+
+.sbdocs ul li {
+  padding-left: 8px;
+}
