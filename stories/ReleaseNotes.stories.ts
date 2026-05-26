@@ -18,14 +18,12 @@ export const Overview: Story = {
     const html = markdownToHtml(releaseNotesData.markdown);
 
     return `
-      <section class="release-notes-shell">
-        <article class="release-notes">
-          ${html}
-          <p class="release-notes-meta">
-            Selected file: ${releaseNotesData.selectedFile} | Available files: ${releaseNotesData.availableFiles.length} | Generated: ${releaseNotesData.generatedAt}
-          </p>
-        </article>
-      </section>
+      <article>
+        ${html}
+        <p class="release-notes-meta">
+          Selected file: ${releaseNotesData.selectedFile} | Available files: ${releaseNotesData.availableFiles.length} | Generated: ${releaseNotesData.generatedAt}
+        </p>
+      </article>
     `;
   },
 };

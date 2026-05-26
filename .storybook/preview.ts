@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/html';
 import { cedarTheme } from './cedar-theme';
 import './cedar.scss';
+import './_content.scss';
 
 const preview: Preview = {
   parameters: {
@@ -50,6 +51,19 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (storyFn) => {
+      const content = storyFn();
+      const wrapper = document.createElement('div');
+      wrapper.className = 'cdr-doc-content';
+      if (typeof content === 'string') {
+        wrapper.innerHTML = content;
+      } else if (content instanceof HTMLElement) {
+        wrapper.appendChild(content);
+      }
+      return wrapper;
+    },
+  ],
 };
 
 export default preview;

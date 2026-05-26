@@ -1,0 +1,239 @@
+// .storybook/_content.scss
+// ─────────────────────────────────────────────────────────────────────────────
+// Cedar documentation content styles — Storybook edition
+//
+// This file is the single source of truth for how documentation content looks
+// inside Storybook. It mirrors cedar.rei.com/content-styles.scss.
+//
+// EDITING THIS FILE:
+//   - Use Cedar SCSS tokens only. No hardcoded values.
+//   - Cross-reference with content-styles.scss before adding anything new.
+//   - Changes here affect every story that uses .cdr-doc-content. Review in
+//     Storybook before merging.
+//   - If you add a new element style, add a corresponding entry in
+//     scripts/agent-config/storybook-style-guide.json so the agent knows it.
+//
+// TOKEN AVAILABILITY NOTES:
+//   - Docsite SCSS tokens are loaded via @use from dist/docsite/scss/cdr-tokens.
+//   - cdr-link-base-mixin and cdr-list-base-mixin live in @rei/cdr-component-variables,
+//     which is not a dependency of this repo. Link and list styles are inlined from
+//     the doc site source until the NX migration consolidates dependencies.
+//   - Code/note background tokens (code.json, note.json) are not compiled to SCSS
+//     variables. Nearest semantic tokens are used with comments.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
+@use '../dist/docsite/scss/cdr-tokens' as *;
+
+.cdr-doc-content {
+  // ── Body text ──────────────────────────────────────────────────────────────
+  @include cdr-text-body-400;
+
+  color: $cdr-color-text-primary;
+
+  p {
+    margin: $cdr-space-one-and-a-half-x 0;
+    max-width: 60ch;
+  }
+
+  // ── Headings ───────────────────────────────────────────────────────────────
+  // Font family: sans (Graphik), not serif (Stuart).
+  // Color: $cdr-color-text-primary, not $cdr-color-text-brand.
+  // See: content-styles.scss — headings never use brand green.
+
+  h1 {
+    font-family: $cdr-font-family-sans;
+    font-weight: 500;
+    font-size: 5.4rem;
+    line-height: 6rem;
+    margin: 0 0 $cdr-space-one-x;
+    color: $cdr-color-text-emphasis;
+  }
+
+  h2 {
+    @include cdr-text-heading-sans-600;
+
+    font-size: 4.8rem;
+    line-height: 5.2rem;
+    margin: 0 0 $cdr-space-one-x;
+    color: $cdr-color-text-primary;
+  }
+
+  h3 {
+    @include cdr-text-heading-sans-600;
+
+    font-size: 3rem;
+    line-height: 4.6rem;
+    margin: $cdr-space-three-x 0 $cdr-space-one-x;
+    max-width: 35ch;
+    color: $cdr-color-text-primary;
+  }
+
+  h4 {
+    @include cdr-text-heading-sans-600;
+
+    margin: $cdr-space-two-x 0 $cdr-space-half-x;
+    color: $cdr-color-text-primary;
+  }
+
+  h5 {
+    @include cdr-text-heading-sans-400;
+
+    margin: $cdr-space-one-and-a-half-x 0 $cdr-space-half-x;
+    color: $cdr-color-text-primary;
+  }
+
+  // ── Links ──────────────────────────────────────────────────────────────────
+  // Inlined from cdr-link-base-mixin (source: @rei/cdr-component-variables).
+  // TODO: Replace with @include cdr-link-base-mixin after NX migration.
+  a {
+    color: var(--cdr-color-text-link-rest);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: var(--cdr-color-text-link-hover);
+    }
+
+    &:active {
+      color: var(--cdr-color-text-link-active);
+    }
+
+    &:visited {
+      color: var(--cdr-color-text-link-visited);
+    }
+  }
+
+  // ── Lists ──────────────────────────────────────────────────────────────────
+  // Inlined from cdr-list-base-mixin (source: @rei/cdr-component-variables).
+  // TODO: Replace with @include cdr-list-base-mixin after NX migration.
+  ul,
+  ol {
+    @include cdr-text-body-400;
+
+    margin: $cdr-space-one-x 0 $cdr-space-two-x;
+    padding-left: $cdr-space-one-x;
+    max-width: 50ch;
+
+    li {
+      padding-left: 1rem;
+    }
+  }
+
+  ul {
+    list-style-type: '\2014'; // em dash — matching doc site
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li + li {
+    margin-top: $cdr-space-half-x;
+  }
+
+  // ── Tables ─────────────────────────────────────────────────────────────────
+  table {
+    @include cdr-text-utility-sans-200;
+
+    color: $cdr-color-text-primary;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    overflow-x: auto;
+    margin: $cdr-space-one-and-a-half-x 0;
+  }
+
+  thead {
+    background-color: $cdr-color-background-table-header;
+  }
+
+  th {
+    @include cdr-text-utility-sans-strong-200;
+
+    padding: $cdr-space-one-x;
+    border: none;
+    text-align: left;
+  }
+
+  tr:not(thead tr) {
+    border-bottom: 1px solid $cdr-color-border-table-row;
+  }
+
+  td {
+    @include cdr-text-body-300;
+
+    padding: $cdr-space-one-x;
+    vertical-align: top;
+  }
+
+  // ── Code ───────────────────────────────────────────────────────────────────
+  // No dedicated $cdr-color-background-code SCSS variable exists in docsite.
+  // Using $cdr-color-background-primary as nearest semantic match.
+  code {
+    font-family: $cdr-font-family-mono-brand-font;
+    font-size: 0.875em;
+    background: $cdr-color-background-primary;
+    border: 1px solid $cdr-color-border-primary;
+    border-radius: $cdr-radius-soft;
+    padding: 0.1em 0.35em;
+    color: $cdr-color-text-emphasis;
+  }
+
+  pre {
+    background: $cdr-color-background-primary;
+    border: 1px solid $cdr-color-border-primary;
+    border-radius: $cdr-radius-soft;
+    padding: $cdr-space-one-and-a-half-x;
+    overflow-x: auto;
+    margin: $cdr-space-one-and-a-half-x 0;
+
+    code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+    }
+  }
+
+  // ── Blockquote / callout ───────────────────────────────────────────────────
+  blockquote {
+    border-left: 4px solid $cdr-color-border-secondary;
+    margin: $cdr-space-two-x 0;
+    padding: $cdr-space-one-x $cdr-space-one-and-a-half-x;
+    color: $cdr-color-text-secondary;
+  }
+
+  // ── Note / warning boxes ───────────────────────────────────────────────────
+  // Used for BOLO callouts in release notes and deprecation notices.
+  // No dedicated $cdr-color-background-note SCSS variable exists in docsite.
+  // Using $cdr-color-background-primary as nearest semantic match.
+  .cdr-doc-note {
+    @include cdr-text-body-300;
+
+    background: $cdr-color-background-primary;
+    border-radius: $cdr-radius-soft;
+    padding: $cdr-space-one-x $cdr-space-one-and-a-half-x;
+    margin: $cdr-space-one-and-a-half-x 0;
+  }
+
+  .cdr-doc-warning {
+    @include cdr-text-body-300;
+
+    background: $cdr-color-background-message-warning-01;
+    border-radius: $cdr-radius-soft;
+    padding: $cdr-space-one-x $cdr-space-one-and-a-half-x;
+    margin: $cdr-space-one-and-a-half-x 0;
+  }
+
+  // ── Release notes meta ─────────────────────────────────────────────────────
+  .release-notes-meta {
+    @include cdr-text-utility-sans-200;
+
+    margin-top: $cdr-space-one-and-a-half-x;
+    color: $cdr-color-text-secondary;
+    border-top: 1px solid $cdr-color-border-primary;
+    padding-top: $cdr-space-three-quarter-x;
+  }
+}
