@@ -1372,12 +1372,6 @@
             },
             {
               "parent": "docsite/scss",
-              "path": "docsite/scss/utility-map.no_concat.scss",
-              "name": "utility-map.no_concat.scss",
-              "type": "file"
-            },
-            {
-              "parent": "docsite/scss",
               "path": "docsite/scss/utility-map.scss",
               "name": "utility-map.scss",
               "type": "file"
@@ -3496,12 +3490,6 @@
             },
             {
               "parent": "rei-dot-com/scss",
-              "path": "rei-dot-com/scss/utility-map.no_concat.scss",
-              "name": "utility-map.no_concat.scss",
-              "type": "file"
-            },
-            {
-              "parent": "rei-dot-com/scss",
               "path": "rei-dot-com/scss/utility-map.scss",
               "name": "utility-map.scss",
               "type": "file"
@@ -3534,6 +3522,18 @@
               "name": "foundations",
               "type": "directory",
               "children": [
+                {
+                  "parent": "rei-dot-com/types/foundations",
+                  "path": "rei-dot-com/types/foundations/cdr-breakpoint-order.d.ts",
+                  "name": "cdr-breakpoint-order.d.ts",
+                  "type": "file"
+                },
+                {
+                  "parent": "rei-dot-com/types/foundations",
+                  "path": "rei-dot-com/types/foundations/cdr-breakpoint-order.mjs",
+                  "name": "cdr-breakpoint-order.mjs",
+                  "type": "file"
+                },
                 {
                   "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-breakpoint.d.ts",
@@ -3926,6 +3926,18 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
+                  "path": "rei-dot-com/types/foundations/cdr-space-scale-order.d.ts",
+                  "name": "cdr-space-scale-order.d.ts",
+                  "type": "file"
+                },
+                {
+                  "parent": "rei-dot-com/types/foundations",
+                  "path": "rei-dot-com/types/foundations/cdr-space-scale-order.mjs",
+                  "name": "cdr-space-scale-order.mjs",
+                  "type": "file"
+                },
+                {
+                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-space-scale.d.ts",
                   "name": "cdr-space-scale.d.ts",
                   "type": "file"
@@ -4076,6 +4088,18 @@
                 },
                 {
                   "parent": "rei-dot-com/types/foundations",
+                  "path": "rei-dot-com/types/foundations/cdr-text-size-order.d.ts",
+                  "name": "cdr-text-size-order.d.ts",
+                  "type": "file"
+                },
+                {
+                  "parent": "rei-dot-com/types/foundations",
+                  "path": "rei-dot-com/types/foundations/cdr-text-size-order.mjs",
+                  "name": "cdr-text-size-order.mjs",
+                  "type": "file"
+                },
+                {
+                  "parent": "rei-dot-com/types/foundations",
                   "path": "rei-dot-com/types/foundations/cdr-text-size.d.ts",
                   "name": "cdr-text-size.d.ts",
                   "type": "file"
@@ -4195,6 +4219,18 @@
                   "type": "file"
                 }
               ]
+            },
+            {
+              "parent": "rei-dot-com/types",
+              "path": "rei-dot-com/types/index.d.ts",
+              "name": "index.d.ts",
+              "type": "file"
+            },
+            {
+              "parent": "rei-dot-com/types",
+              "path": "rei-dot-com/types/index.mjs",
+              "name": "index.mjs",
+              "type": "file"
             },
             {
               "parent": "rei-dot-com/types",
