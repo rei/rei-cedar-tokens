@@ -86,6 +86,12 @@
 
 // ─── Global story chrome ───
 
+// Match Cedar's root font-size so rem values resolve identically.
+// Cedar sets this via cdr-reset.scss → $cdr-text-size-root (10px / 62.5%).
+html {
+  font-size: 62.5%; // 10px — makes 1rem = 10px, matching Cedar
+}
+
 *,
 *::before,
 *::after {
@@ -94,6 +100,8 @@
 
 body {
   font-family: $cdr-font-family-sans;
+  font-size: 1.6rem; // 16px — matches Cedar's body reset
+  line-height: 1.5;
   background: #fafbf9; // warm-white — no direct Cedar token
   color: $cdr-color-text-emphasis;
   margin: 0;

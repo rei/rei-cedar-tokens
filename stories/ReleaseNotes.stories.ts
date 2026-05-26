@@ -5,8 +5,9 @@ import { markdownToHtml } from '../.storybook/release-notes/markdown-to-html';
 const meta: Meta = {
   title: 'Release Notes/V14.0.0',
   parameters: {
-    layout: 'padded',
+    layout: 'fullscreen',
     controls: { disable: true },
+    actions: { disable: true },
   },
 };
 
@@ -18,12 +19,14 @@ export const Overview: Story = {
     const html = markdownToHtml(releaseNotesData.markdown);
 
     return `
-      <article>
-        ${html}
-        <p class="release-notes-meta">
-          Selected file: ${releaseNotesData.selectedFile} | Available files: ${releaseNotesData.availableFiles.length} | Generated: ${releaseNotesData.generatedAt}
-        </p>
-      </article>
+      <div class="docs-page cdr-doc-content">
+        <article>
+          ${html}
+          <p class="release-notes-meta">
+            Selected file: ${releaseNotesData.selectedFile} | Available files: ${releaseNotesData.availableFiles.length} | Generated: ${releaseNotesData.generatedAt}
+          </p>
+        </article>
+      </div>
     `;
   },
 };

@@ -20,7 +20,7 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: 'cedar-light',
+      default: 'cedar-primary',
       values: [
         { name: 'cedar-light', value: '#fafbf9' },
         { name: 'cedar-primary', value: '#ffffff' },
@@ -51,19 +51,6 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [
-    (storyFn) => {
-      const content = storyFn();
-      const wrapper = document.createElement('div');
-      wrapper.className = 'cdr-doc-content';
-      if (typeof content === 'string') {
-        wrapper.innerHTML = content;
-      } else if (content instanceof HTMLElement) {
-        wrapper.appendChild(content);
-      }
-      return wrapper;
-    },
-  ],
 };
 
 export default preview;

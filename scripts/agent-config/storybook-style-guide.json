@@ -12,31 +12,38 @@
   "wrapperClass": {
     "$comment": "Every story that renders documentation content must use this class. The agent must emit it.",
     "name": "cdr-doc-content",
-    "appliedBy": "global Storybook decorator in .storybook/preview.ts"
+    "appliedBy": "per-story wrapper — applied by each story that renders prose content (not a global decorator)"
   },
 
   "typography": {
     "$comment": "Element-to-mixin mapping. Agent uses this to generate story prose templates.",
-    "body": { "mixin": "cdr-text-body-400", "color": "$cdr-color-text-primary" },
+    "body": { "mixin": "cdr-text-body-300", "color": "$cdr-color-text-primary" },
     "small": { "mixin": "cdr-text-body-300", "color": "$cdr-color-text-primary" },
     "h1": {
-      "family": "$cdr-font-family-sans",
-      "fontSize": "5.4rem",
-      "weight": "500",
+      "mixin": "cdr-text-heading-sans-600",
+      "fontSize": "3.6rem",
       "color": "$cdr-color-text-emphasis"
     },
     "h2": {
       "mixin": "cdr-text-heading-sans-600",
-      "fontSize": "4.8rem",
+      "fontSize": "2.8rem",
       "color": "$cdr-color-text-primary"
     },
     "h3": {
-      "mixin": "cdr-text-heading-sans-600",
-      "fontSize": "3.0rem",
+      "mixin": "cdr-text-heading-sans-500",
+      "fontSize": "2.0rem",
       "color": "$cdr-color-text-primary"
     },
-    "h4": { "mixin": "cdr-text-heading-sans-600", "color": "$cdr-color-text-primary" },
-    "h5": { "mixin": "cdr-text-heading-sans-400", "color": "$cdr-color-text-primary" },
+    "h4": {
+      "mixin": "cdr-text-heading-sans-400",
+      "fontSize": "1.8rem",
+      "color": "$cdr-color-text-primary"
+    },
+    "h5": {
+      "mixin": "cdr-text-heading-sans-300",
+      "fontSize": "1.6rem",
+      "color": "$cdr-color-text-primary"
+    },
     "code": {
       "family": "$cdr-font-family-mono-brand-font",
       "background": "$cdr-color-background-primary"
@@ -87,9 +94,9 @@
     "$comment": "Approved margins for documentation elements. These match content-styles.scss exactly.",
     "paragraph": "$cdr-space-one-and-a-half-x 0",
     "h1": "0 0 $cdr-space-one-x",
-    "h2": "0 0 $cdr-space-one-x",
-    "h3": "$cdr-space-three-x 0 $cdr-space-one-x",
-    "h4": "$cdr-space-two-x 0 $cdr-space-half-x",
+    "h2": "$cdr-space-two-x 0 $cdr-space-half-x",
+    "h3": "$cdr-space-one-and-a-half-x 0 $cdr-space-half-x",
+    "h4": "$cdr-space-one-and-a-half-x 0 $cdr-space-half-x",
     "h5": "$cdr-space-one-and-a-half-x 0 $cdr-space-half-x",
     "listBlock": "$cdr-space-one-x 0 $cdr-space-two-x",
     "codeBlock": "$cdr-space-one-and-a-half-x 0",
