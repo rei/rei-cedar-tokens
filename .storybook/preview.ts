@@ -13,6 +13,11 @@ const preview: Preview = {
     docs: {
       theme: cedarTheme,
     },
+    options: {
+      storySort: {
+        order: ['Release Notes', '*'],
+      },
+    },
     backgrounds: {
       default: 'cedar-light',
       values: [
