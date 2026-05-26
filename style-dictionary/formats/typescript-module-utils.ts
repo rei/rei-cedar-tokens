@@ -13,7 +13,7 @@ export const getModuleBaseName = (destination?: string): string => {
     throw new Error('TypeScript module formats require a file destination');
   }
 
-  return basename(destination).replace(/(\.names)?\.(d\.)?ts$/, '');
+  return basename(destination).replace(/(\.(names|keys))?\.(d\.)?(ts|mjs|cjs)$/, '');
 };
 
 export const getModuleName = (destination?: string): string => {
