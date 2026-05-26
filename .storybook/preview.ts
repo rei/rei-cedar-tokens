@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/html';
 import { cedarTheme } from './cedar-theme';
-import './cedar.css';
+import './cedar.scss';
 
 const preview: Preview = {
   parameters: {
@@ -21,6 +21,7 @@ const preview: Preview = {
         { name: 'cedar-secondary', value: '#f7f5f3' },
         { name: 'cedar-dark', value: '#2e2e2b' },
         { name: 'cedar-spruce', value: '#1f513f' },
+        { name: 'cedar-sale', value: '#c7370f' },
       ],
     },
     viewport: {

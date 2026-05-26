@@ -3,8 +3,9 @@ import { create } from '@storybook/theming';
 /**
  * Cedar doc-site theme for Storybook.
  *
- * Color values extracted from cedar-site-nuxt's rei-dot-com-theme.scss
- * so both Storybooks match the production documentation site appearance.
+ * Values sourced from **docsite** tokens (rei-cedar-tokens/dist/docsite/).
+ * Storybook's `create()` API requires static values — CSS custom properties
+ * are not supported. Each value is annotated with its Cedar token mapping.
  */
 export const cedarTheme = create({
   base: 'light',
@@ -15,34 +16,34 @@ export const cedarTheme = create({
   brandTarget: '_blank',
 
   // Chrome colors (sidebar, toolbar)
-  colorPrimary: '#1f513f',
-  colorSecondary: '#406eb5',
+  colorPrimary: '#1f513f', // $cdr-color-text-brand
+  colorSecondary: '#406eb5', // $cdr-color-icon-link
 
   // UI
-  appBg: '#f7f5f3',
-  appContentBg: '#ffffff',
-  appPreviewBg: '#ffffff',
-  appBorderColor: '#d5cfc3',
+  appBg: '#f7f5f3', // $cdr-color-background-primary
+  appContentBg: '#ffffff', // $cdr-color-background-secondary
+  appPreviewBg: '#ffffff', // $cdr-color-background-secondary
+  appBorderColor: '#d5cfc3', // $cdr-color-border-primary
   appBorderRadius: 4,
 
   // Text
-  textColor: '#4b4a48',
-  textInverseColor: '#fafbf9',
-  textMutedColor: '#736e65',
+  textColor: '#4b4a48', // $cdr-color-text-secondary
+  textInverseColor: '#fafbf9', // $cdr-color-text-inverse
+  textMutedColor: '#736e65', // warm-grey-700 — no docsite token
 
   // Toolbar
-  barTextColor: '#736e65',
-  barSelectedColor: '#1f513f',
-  barHoverColor: '#406eb5',
-  barBg: '#ffffff',
+  barTextColor: '#736e65', // warm-grey-700 — no docsite token
+  barSelectedColor: '#1f513f', // $cdr-color-text-brand
+  barHoverColor: '#406eb5', // $cdr-color-icon-link
+  barBg: '#ffffff', // $cdr-color-background-secondary
 
   // Inputs
-  inputBg: '#ffffff',
-  inputBorder: '#958e83',
-  inputTextColor: '#2e2e2b',
+  inputBg: '#ffffff', // $cdr-color-background-secondary
+  inputBorder: '#958e83', // $cdr-color-border-secondary
+  inputTextColor: '#2e2e2b', // $cdr-color-text-emphasis
   inputBorderRadius: 4,
 
   // Typography
-  fontBase: 'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif',
-  fontCode: 'Pressura, "Courier New", monospace',
+  fontBase: 'Graphik, "Graphik fallback", "Helvetica Neue", sans-serif', // $cdr-font-family-sans
+  fontCode: 'Pressura, "Courier New", monospace', // Pressura from $cdr-font-family-mono-brand-font + monospace fallback
 });
