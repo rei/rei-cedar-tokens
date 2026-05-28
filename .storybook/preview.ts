@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/html';
-import './cedar.css';
+import { cedarTheme } from './cedar-theme';
+import './cedar.scss';
+import './_content.scss';
 
 const preview: Preview = {
   parameters: {
@@ -9,14 +11,44 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+      theme: cedarTheme,
+    },
+    options: {
+      storySort: {
+        order: ['Release Notes', '*'],
+      },
+    },
     backgrounds: {
-      default: 'cedar-light',
+      default: 'cedar-primary',
       values: [
         { name: 'cedar-light', value: '#fafbf9' },
+        { name: 'cedar-primary', value: '#ffffff' },
         { name: 'cedar-secondary', value: '#f7f5f3' },
         { name: 'cedar-dark', value: '#2e2e2b' },
-        { name: 'white', value: '#ffffff' },
+        { name: 'cedar-spruce', value: '#1f513f' },
+        { name: 'cedar-sale', value: '#c7370f' },
       ],
+    },
+    viewport: {
+      viewports: {
+        xs: {
+          name: 'Extra Small (xs)',
+          styles: { width: '320px', height: '568px' },
+        },
+        sm: {
+          name: 'Small (sm)',
+          styles: { width: '768px', height: '1024px' },
+        },
+        md: {
+          name: 'Medium (md)',
+          styles: { width: '992px', height: '768px' },
+        },
+        lg: {
+          name: 'Large (lg)',
+          styles: { width: '1232px', height: '900px' },
+        },
+      },
     },
   },
 };

@@ -11,6 +11,7 @@ export const types = (theme: Theme): PlatformConfig => ({
       'attribute/deprecated',
       'attribute/text-short-names',
       'name/pascal',
+      'name/pascal-space-scale-range',
       'size/strip-all-px-js',
       'size/space-js',
       'value/clamp',
@@ -34,6 +35,11 @@ export const types = (theme: Theme): PlatformConfig => ({
         },
         {
           destination: `${tokenModule.responsibility}/${tokenModule.name}.keys.d.ts`,
+          format: 'typescript/token-key-union',
+          filter: tokenModule.filter,
+        },
+        {
+          destination: `${tokenModule.responsibility}/${tokenModule.name}.keys.mjs`,
           format: 'typescript/token-key-union',
           filter: tokenModule.filter,
         },

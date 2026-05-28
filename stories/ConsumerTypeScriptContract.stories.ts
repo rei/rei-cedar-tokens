@@ -112,62 +112,11 @@ const pageChrome = `
     }
 
     .docs-layout {
-      display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: var(--docs-space-4x);
-      align-items: start;
+      display: block;
     }
 
     .docs-nav {
-      position: sticky;
-      top: 20px;
-      align-self: start;
-      max-height: calc(100vh - 40px);
-      overflow: auto;
-      padding-right: var(--docs-space-1x);
-    }
-
-    .docs-nav-title {
-      margin: 0 0 var(--docs-space-1x);
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--docs-text-secondary);
-    }
-
-    .docs-nav-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .docs-nav-link {
-      display: block;
-      text-decoration: none;
-      color: var(--docs-text-secondary);
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 12px;
-      line-height: 1.4;
-      border-left: 2px solid transparent;
-      padding: 5px 8px;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .docs-nav-link:hover {
-      color: var(--docs-text-primary);
-      background: var(--docs-bg-surface);
-    }
-
-    .docs-nav-link.is-active {
-      color: var(--docs-text-primary);
-      border-left-color: var(--docs-text-primary);
-      background: var(--docs-bg-surface);
-      font-weight: 600;
+      display: none;
     }
 
     .docs-content {
@@ -337,22 +286,6 @@ const pageChrome = `
       background: var(--docs-bg-surface);
     }
 
-    @media (max-width: 940px) {
-      .docs-layout {
-        grid-template-columns: 1fr;
-        gap: var(--docs-space-2x);
-      }
-
-      .docs-nav {
-        position: relative;
-        top: 0;
-        max-height: none;
-        border: 1px solid var(--docs-border);
-        border-radius: 10px;
-        padding: 10px;
-        background: var(--docs-bg-surface);
-      }
-    }
   </style>
 `;
 

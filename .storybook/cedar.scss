@@ -1,0 +1,265 @@
+// ─── Docsite tokens for Storybook scaffold/editorial styling ───
+// Components rendered in stories use rei-dot-com CSS custom properties.
+// The SCSS tokens below compile to static values at build time, so they
+// do NOT conflict with the runtime CSS custom properties used by components.
+@use '../dist/docsite/scss/cdr-tokens' as *;
+
+@font-face {
+  font-display: swap;
+  font-family: Stuart;
+  font-weight: 1 999;
+  src:
+    url('//www.rei.com/satchel/media/font-optimized/Stuart/REIStuart-VF-Web-Subset.woff2')
+      format('woff2-variations'),
+    url('//www.rei.com/satchel/media/font-optimized/Stuart/REIStuart-VF-Web-Subset.woff2')
+      format('woff2');
+}
+
+@font-face {
+  font-family: 'Stuart fallback';
+  src: local('Georgia');
+  size-adjust: 106%;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Stuart;
+  font-weight: 1 999;
+  font-style: italic;
+  src:
+    url('//www.rei.com/satchel/media/font-optimized/Stuart/REIStuartWebItalics-VF-Web-Subset.woff2')
+      format('woff2-variations'),
+    url('//www.rei.com/satchel/media/font-optimized/Stuart/REIStuartWebItalics-VF-Web-Subset.woff2')
+      format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Graphik;
+  font-weight: 1 999;
+  src:
+    url('//www.rei.com/satchel/media/font-optimized/Graphik/Graphik-VF-Web-Subset.woff2')
+      format('woff2-variations'),
+    url('//www.rei.com/satchel/media/font-optimized/Graphik/Graphik-VF-Web-Subset.woff2')
+      format('woff2');
+}
+
+@font-face {
+  font-family: 'Graphik fallback';
+  src: local('Verdana');
+  size-adjust: 92%;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Graphik;
+  font-weight: 1 999;
+  font-style: italic;
+  src:
+    url('//www.rei.com/satchel/media/font-optimized/Graphik/GraphikWebItalic-VF-Web-Subset.woff2')
+      format('woff2-variations'),
+    url('//www.rei.com/satchel/media/font-optimized/Graphik/GraphikWebItalic-VF-Web-Subset.woff2')
+      format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Pressura;
+  font-weight: 400;
+  src:
+    url('//www.rei.com/satchel/media/font-optimized/Pressura/gt-pressura-mono-regular.woff2')
+      format('woff2'),
+    url('//www.rei.com/satchel/media/font-optimized/Pressura/gt-pressura-mono-regular.woff')
+      format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Pressura;
+  font-weight: 700;
+  src:
+    url('//www.rei.com/satchel/media/font-optimized/Pressura/gt-pressura-mono-bold.woff2')
+      format('woff2'),
+    url('//www.rei.com/satchel/media/font-optimized/Pressura/gt-pressura-mono-bold.woff')
+      format('woff');
+}
+
+// ─── Global story chrome ───
+
+// Match Cedar's root font-size so rem values resolve identically.
+// Cedar sets this via cdr-reset.scss → $cdr-text-size-root (10px / 62.5%).
+html {
+  font-size: 62.5%; // 10px — makes 1rem = 10px, matching Cedar
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $cdr-font-family-sans;
+  font-size: 1.6rem; // 16px — matches Cedar's body reset
+  line-height: 1.5;
+  background: #fafbf9; // warm-white — no direct Cedar token
+  color: $cdr-color-text-emphasis;
+  margin: 0;
+}
+
+// Responsive page wrapper used by all stories
+.sb-page {
+  padding: $cdr-space-two-x $cdr-space-three-x 9.6rem;
+  max-width: 1100px;
+}
+@media (max-width: 600px) {
+  .sb-page {
+    padding: $cdr-space-one-and-a-half-x $cdr-space-one-x $cdr-space-four-x;
+  }
+}
+
+// Cedar CSS custom property aliases consumed by story inline <style> blocks.
+// Values sourced from docsite tokens where a mapping exists.
+:root {
+  --cedar-green-900: #{$cdr-color-text-brand};
+  --cedar-green-700: #2d7a5f; // warm-spruce-700 — no Cedar token
+  --cedar-warm-100: #edeae3; // warm-grey-200 — no Cedar token
+  --cedar-warm-250: #{$cdr-color-border-primary};
+  --cedar-warm-600: #{$cdr-color-border-secondary};
+  --cedar-warm-750: #736e65; // warm-grey-700 — no Cedar token
+  --cedar-warm-900: #{$cdr-color-text-secondary};
+  --cedar-warm-1000: #{$cdr-color-text-emphasis};
+  --cedar-bg: #fafbf9; // warm-white — no direct Cedar token
+  --cedar-bg-secondary: #{$cdr-color-background-primary};
+  --cedar-sale: #{$cdr-color-text-sale};
+}
+
+// ─── Doc-site-aligned Storybook docs styles ───
+
+// Docs page container
+.sbdocs.sbdocs-wrapper {
+  background: $cdr-color-background-secondary;
+  padding: $cdr-space-two-x $cdr-space-three-x 9.6rem;
+}
+
+.sbdocs.sbdocs-content {
+  max-width: 1100px;
+}
+
+// Docs headings — match cedar-site-nuxt content-styles.scss
+.sbdocs .sbdocs-h1 {
+  font-family: $cdr-font-family-sans;
+  font-weight: 500;
+  font-size: 5.4rem;
+  line-height: 6rem;
+  color: $cdr-color-text-emphasis;
+}
+
+.sbdocs .sbdocs-h2 {
+  font-family: $cdr-font-family-sans;
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 5.2rem;
+  color: $cdr-color-text-emphasis;
+  border-bottom: 1px solid $cdr-color-border-primary;
+  padding-bottom: $cdr-space-half-x;
+}
+
+.sbdocs .sbdocs-h3 {
+  font-family: $cdr-font-family-sans;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 4.6rem;
+  color: $cdr-color-text-secondary;
+}
+
+.sbdocs .sbdocs-h4 {
+  @include cdr-text-heading-sans-600;
+  color: $cdr-color-text-secondary;
+}
+
+// Docs body text
+.sbdocs .sbdocs-p {
+  @include cdr-text-body-400;
+  color: $cdr-color-text-secondary;
+  max-width: 60ch;
+}
+
+// Docs links — rei-dot-com link color (CSS vars resolved at runtime)
+.sbdocs .sbdocs-a {
+  color: var(--cdr-color-text-link-rest);
+}
+.sbdocs .sbdocs-a:hover {
+  color: var(--cdr-color-text-link-hover);
+  text-decoration: underline;
+}
+
+// Docs code blocks
+.sbdocs code {
+  // Pressura with monospace fallback (token $cdr-font-family-mono-brand-font uses sans fallback)
+  font-family: Pressura, 'Courier New', monospace;
+  background: $cdr-color-background-primary;
+  border: 1px solid $cdr-color-border-primary;
+  border-radius: $cdr-radius-soft;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  color: $cdr-color-text-emphasis;
+}
+
+.sbdocs pre code {
+  background: $cdr-color-background-primary;
+  border: none;
+  padding: 0;
+}
+
+.sbdocs pre {
+  background: $cdr-color-background-primary;
+  border: 1px solid $cdr-color-border-primary;
+  border-radius: $cdr-radius-soft;
+  padding: $cdr-space-one-x;
+}
+
+// Docs tables — match cedar-site-nuxt table styling
+.sbdocs table {
+  @include cdr-text-utility-sans-200;
+  color: $cdr-color-text-secondary;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.sbdocs table thead {
+  background: $cdr-color-background-primary;
+}
+
+.sbdocs table th {
+  @include cdr-text-utility-sans-strong-200;
+  text-align: left;
+  padding: $cdr-space-three-quarter-x $cdr-space-one-x;
+  border-bottom: 1px solid $cdr-color-border-secondary;
+}
+
+.sbdocs table td {
+  padding: $cdr-space-three-quarter-x $cdr-space-one-x;
+  border-bottom: 1px solid $cdr-color-border-primary;
+}
+
+// Docs lists
+.sbdocs ul,
+.sbdocs ol {
+  @include cdr-text-body-400;
+  color: $cdr-color-text-secondary;
+  max-width: 50ch;
+}
+
+.sbdocs ul {
+  list-style-type: '\2014';
+  padding-left: $cdr-space-one-x;
+}
+
+.sbdocs ul li {
+  padding-left: $cdr-space-half-x;
+}
+
+// ─── Release notes story styles ───
+// Moved to .storybook/_content.scss (cdr-doc-content class).
+// See scripts/agent-config/storybook-style-guide.json for the style rules.
