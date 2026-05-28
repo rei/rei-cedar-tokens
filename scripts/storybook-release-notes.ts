@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
-import { parseFrontMatter, selectReleaseNote } from './release-notes-utils';
+import { parseFrontMatter, selectReleaseNote } from './release-notes-utils.ts';
 
 type ReleaseNoteSelection = {
   fileName: string;
@@ -208,7 +208,7 @@ function main(): void {
   const branchChangesMarkdown = buildBranchChangesMarkdown(changedFiles);
   const cleanupResult = cleanupDoneTicketDocs();
 
-  const combinedMarkdown = `${selection.markdown}\n\n## Changes in this branch\n\n${branchChangesMarkdown}`;
+  const combinedMarkdown = `${selection.markdown}\n\n<details>\n<summary>## Changes in this branch</summary>\n\n${branchChangesMarkdown}\n\n</details>`;
 
   fs.mkdirSync(generatedDir, { recursive: true });
   fs.writeFileSync(

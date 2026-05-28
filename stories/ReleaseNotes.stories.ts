@@ -22,9 +22,7 @@ export const Overview: Story = {
       <div class="docs-page cdr-doc-content">
         <article>
           ${html}
-          <p class="release-notes-meta">
-            Selected file: ${releaseNotesData.selectedFile} | Available files: ${releaseNotesData.availableFiles.length} | Generated: ${releaseNotesData.generatedAt}
-          </p>
+          <p class="release-notes-meta">Cedar Tokens is supported one major version back from the current release. For questions or help upgrading, reach out in the <strong>#cedar-user-support</strong> Slack channel.</p>
         </article>
       </div>
     `;
