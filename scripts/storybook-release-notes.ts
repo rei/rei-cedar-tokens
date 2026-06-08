@@ -64,15 +64,21 @@ function getReleaseNoteSelection(): { selection: ReleaseNoteSelection; allFiles:
 }
 
 function getChangedFiles(): string[] {
-  const output = execSync('git diff master...HEAD --name-only', {
-    cwd: repoRoot,
-    encoding: 'utf-8',
-  });
+  try {
+    const output = execSync('git diff master...HEAD --name-only', {
+      cwd: repoRoot,
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'pipe'],
+    });
 
-  return output
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean);
+    return output
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean);
+  } catch {
+    // On master or in shallow clones the diff range is unavailable
+    return [];
+  }
 }
 
 function groupLabelFromPath(filePath: string): string {
