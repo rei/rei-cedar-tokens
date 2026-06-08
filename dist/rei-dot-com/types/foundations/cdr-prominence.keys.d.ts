@@ -1,0 +1,63 @@
+export declare const CdrProminenceKeys: readonly [
+  "elevated",
+  "elevated-blur",
+  "elevated-color",
+  "elevated-spread",
+  "elevated-x",
+  "elevated-y",
+  "flat",
+  "flat-blur",
+  "flat-color",
+  "flat-spread",
+  "flat-x",
+  "flat-y",
+  "floating",
+  "floating-blur",
+  "floating-color",
+  "floating-spread",
+  "floating-x",
+  "floating-y",
+  "lifted",
+  "lifted-blur",
+  "lifted-color",
+  "lifted-spread",
+  "lifted-x",
+  "lifted-y",
+  "raised",
+  "raised-blur",
+  "raised-color",
+  "raised-spread",
+  "raised-x",
+  "raised-y"
+];
+export type CdrProminenceKey =
+  | "elevated"
+  | "elevated-blur"
+  | "elevated-color"
+  | "elevated-spread"
+  | "elevated-x"
+  | "elevated-y"
+  | "flat"
+  | "flat-blur"
+  | "flat-color"
+  | "flat-spread"
+  | "flat-x"
+  | "flat-y"
+  | "floating"
+  | "floating-blur"
+  | "floating-color"
+  | "floating-spread"
+  | "floating-x"
+  | "floating-y"
+  | "lifted"
+  | "lifted-blur"
+  | "lifted-color"
+  | "lifted-spread"
+  | "lifted-x"
+  | "lifted-y"
+  | "raised"
+  | "raised-blur"
+  | "raised-color"
+  | "raised-spread"
+  | "raised-x"
+  | "raised-y";

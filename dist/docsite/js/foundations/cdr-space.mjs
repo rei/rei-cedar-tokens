@@ -1,0 +1,13 @@
+export const CdrSpaceZero = "0";
+export const CdrSpaceSixteenthX = "1";
+export const CdrSpaceEighthX = "2";
+export const CdrSpaceThreeSixteenthX = "3";
+export const CdrSpaceQuarterX = "4";
+export const CdrSpaceThreeEighthX = "6";
+export const CdrSpaceHalfX = "8";
+export const CdrSpaceThreeQuarterX = "12";
+export const CdrSpaceOneX = "16";
+export const CdrSpaceOneAndAHalfX = "24";
+export const CdrSpaceTwoX = "32";
+export const CdrSpaceThreeX = "48";
+export const CdrSpaceFourX = "64";

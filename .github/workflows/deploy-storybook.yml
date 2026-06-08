@@ -1,0 +1,58 @@
+name: Deploy Storybook to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+      - next
+
+# Allow only one concurrent deployment per branch, cancelling in-progress runs
+concurrency:
+  group: pages-${{ github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 22.18.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.18.0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build tokens
+        run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm build-storybook
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: storybook-static/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

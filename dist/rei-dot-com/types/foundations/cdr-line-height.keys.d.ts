@@ -1,0 +1,45 @@
+export declare const CdrLineHeightKeys: readonly [
+  "ratio-body0",
+  "ratio-body1",
+  "ratio-heading-display2",
+  "ratio-heading-display3",
+  "ratio-heading-display4",
+  "ratio-heading-display5",
+  "ratio-heading-display6",
+  "ratio-heading-display7",
+  "ratio-heading1",
+  "ratio-heading2",
+  "ratio-heading3",
+  "ratio-heading4",
+  "ratio-heading5",
+  "ratio-subheading-sans0",
+  "ratio-subheading-sans1",
+  "ratio-subheading-sans2",
+  "ratio-utility-minus1",
+  "ratio-utility0",
+  "ratio-utility1",
+  "ratio-utility2",
+  "ratio-utility3"
+];
+export type CdrLineHeightKey =
+  | "ratio-body0"
+  | "ratio-body1"
+  | "ratio-heading-display2"
+  | "ratio-heading-display3"
+  | "ratio-heading-display4"
+  | "ratio-heading-display5"
+  | "ratio-heading-display6"
+  | "ratio-heading-display7"
+  | "ratio-heading1"
+  | "ratio-heading2"
+  | "ratio-heading3"
+  | "ratio-heading4"
+  | "ratio-heading5"
+  | "ratio-subheading-sans0"
+  | "ratio-subheading-sans1"
+  | "ratio-subheading-sans2"
+  | "ratio-utility-minus1"
+  | "ratio-utility0"
+  | "ratio-utility1"
+  | "ratio-utility2"
+  | "ratio-utility3";

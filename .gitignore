@@ -7,11 +7,24 @@ yarn-error.log*
 
 # Editor directories and files
 .idea
-.vscode
+.vscode/*
+!.vscode/extensions.json
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+/data
 
 docs/backstop_data/bitmaps_test/
 docs/backstop_data/html_report/
+
+# Storybook build output (built by CI for GH Pages deploy)
+storybook-static/
+debug-storybook.log
+
+# AI
+.agents/
+AGENTS.md
+
+# Storybook generated data (rebuilt on storybook dev/build)
+.storybook/generated/

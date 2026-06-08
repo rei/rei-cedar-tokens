@@ -1,0 +1,2544 @@
+{
+  "spacing": [
+    {
+      "$value": "0.1rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-sixteenth of the base unit.",
+          "when": "Use for the tightest padding on very small components such as micro badges."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-sixteenth of the base unit.",
+            "when": "Use for the tightest padding on very small components such as micro badges."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-sixteenth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "sixteenth-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.sixteenth-x}"
+    },
+    {
+      "$value": "0.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-eighth of the base unit.",
+          "when": "Use for compact components such as badges or tags."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-eighth of the base unit.",
+            "when": "Use for compact components such as badges or tags."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-eighth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x}"
+    },
+    {
+      "$value": "0",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished eighth-x inset, compressed to zero.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "0",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished eighth-x inset, compressed to zero.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-eighth-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x-squish-top-bottom}"
+    },
+    {
+      "$value": "0.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished eighth-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "2px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished eighth-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-eighth-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x-squish-left-right}"
+    },
+    {
+      "$value": "0.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched eighth-x inset, expanded beyond the base.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "4px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched eighth-x inset, expanded beyond the base.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-eighth-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "0.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched eighth-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "2px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched eighth-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.eighth-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-eighth-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x-stretch-left-right}"
+    },
+    {
+      "$value": "0.3rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three-sixteenths of the base unit.",
+          "when": "Use for compact components needing slightly more padding than eighth-x."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-sixteenths of the base unit.",
+            "when": "Use for compact components needing slightly more padding than eighth-x."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-sixteenth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-sixteenth-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-sixteenth-x}"
+    },
+    {
+      "$value": "0.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-quarter of the base unit.",
+          "when": "Use for small components such as chips or compact buttons."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-quarter of the base unit.",
+            "when": "Use for small components such as chips or compact buttons."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-quarter-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x}"
+    },
+    {
+      "$value": "0.2rem",
+      "spacingModifier": 0.5,
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished quarter-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.quarter-x}",
+        "spacingModifier": "{options.space.squish}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished quarter-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-quarter-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x-squish-top-bottom}"
+    },
+    {
+      "$value": "0.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-quarter-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x-squish-left-right}"
+    },
+    {
+      "$value": "0.6rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched quarter-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched quarter-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-quarter-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "0.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-quarter-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x-stretch-left-right}"
+    },
+    {
+      "$value": "0.6rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three-eighths of the base unit.",
+          "when": "Use for components needing slightly more padding than quarter-x."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-eighths of the base unit.",
+            "when": "Use for components needing slightly more padding than quarter-x."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-eighth-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-eighth-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-eighth-x}"
+    },
+    {
+      "$value": "0.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one-half of the base unit.",
+          "when": "Use for medium-density components such as form inputs or standard buttons."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-half of the base unit.",
+            "when": "Use for medium-density components such as form inputs or standard buttons."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-half-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x}"
+    },
+    {
+      "$value": "0.4rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished half-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished half-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-half-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x-squish-top-bottom}"
+    },
+    {
+      "$value": "0.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-half-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x-squish-left-right}"
+    },
+    {
+      "$value": "1.2rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched half-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched half-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-half-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "0.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "0.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-half-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x-stretch-left-right}"
+    },
+    {
+      "$value": "1.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three-quarters of the base unit.",
+          "when": "Use for components needing slightly more padding than half-x."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-quarters of the base unit.",
+            "when": "Use for components needing slightly more padding than half-x."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-quarter-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x}"
+    },
+    {
+      "$value": "0.6rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished three-quarter-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished three-quarter-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-quarter-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x-squish-top-bottom}"
+    },
+    {
+      "$value": "1.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished three-quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished three-quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-quarter-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x-squish-left-right}"
+    },
+    {
+      "$value": "1.8rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched three-quarter-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched three-quarter-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-quarter-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "1.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched three-quarter-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched three-quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-quarter-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-quarter-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x-stretch-left-right}"
+    },
+    {
+      "$value": "1.6rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at the base unit.",
+          "when": "Use for standard component padding such as cards or panels."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at the base unit.",
+            "when": "Use for standard component padding such as cards or panels."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-one-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x}"
+    },
+    {
+      "$value": "0.8rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished one-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished one-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x-squish-top-bottom}"
+    },
+    {
+      "$value": "1.6rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished one-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished one-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x-squish-left-right}"
+    },
+    {
+      "$value": "2.4rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched one-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched one-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "1.6rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched one-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "1.6rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched one-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x-stretch-left-right}"
+    },
+    {
+      "$value": "2.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at one and a half times the base unit.",
+          "when": "Use for components needing generous padding such as modals or large cards."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one and a half times the base unit.",
+            "when": "Use for components needing generous padding such as modals or large cards."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-one-and-a-half-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x}"
+    },
+    {
+      "$value": "1.2rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished one-and-a-half-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished one-and-a-half-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-and-a-half-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x-squish-top-bottom}"
+    },
+    {
+      "$value": "2.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished one-and-a-half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished one-and-a-half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-and-a-half-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x-squish-left-right}"
+    },
+    {
+      "$value": "3.6rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched one-and-a-half-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched one-and-a-half-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-and-a-half-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "2.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched one-and-a-half-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "2.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched one-and-a-half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.one-and-a-half-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-one-and-a-half-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x-stretch-left-right}"
+    },
+    {
+      "$value": "3.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at two times the base unit.",
+          "when": "Use for spacious layouts such as page sections or large containers."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at two times the base unit.",
+            "when": "Use for spacious layouts such as page sections or large containers."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-two-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x}"
+    },
+    {
+      "$value": "1.6rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished two-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished two-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-two-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x-squish-top-bottom}"
+    },
+    {
+      "$value": "3.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished two-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished two-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-two-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x-squish-left-right}"
+    },
+    {
+      "$value": "4.8rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched two-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched two-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-two-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "3.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched two-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "3.2rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched two-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.two-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-two-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x-stretch-left-right}"
+    },
+    {
+      "$value": "4.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at three times the base unit.",
+          "when": "Use for very spacious layouts or full-width content areas."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three times the base unit.",
+            "when": "Use for very spacious layouts or full-width content areas."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x}"
+    },
+    {
+      "$value": "2.4rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished three-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished three-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x-squish-top-bottom}"
+    },
+    {
+      "$value": "4.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished three-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished three-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x-squish-left-right}"
+    },
+    {
+      "$value": "7.2rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched three-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched three-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "4.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched three-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "4.8rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched three-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.three-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-three-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x-stretch-left-right}"
+    },
+    {
+      "$value": "6.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "inset",
+        "description": {
+          "what": "Uniform inset padding at four times the base unit.",
+          "when": "Use for the most spacious layouts such as hero sections."
+        }
+      },
+      "utility-class": true,
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at four times the base unit.",
+            "when": "Use for the most spacious layouts such as hero sections."
+          }
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-four-x",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x}"
+    },
+    {
+      "$value": "3.2rem",
+      "$type": "dimension",
+      "spacingModifier": 0.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a squished four-x inset, compressed by the squish modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished four-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-four-x-squish-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x-squish-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x-squish-top-bottom}"
+    },
+    {
+      "$value": "6.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a squished four-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished four-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-four-x-squish-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x-squish-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x-squish-left-right}"
+    },
+    {
+      "$value": "9.6rem",
+      "$type": "dimension",
+      "spacingModifier": 1.5,
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Top and bottom padding component of a stretched four-x inset, expanded by the stretch modifier.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched four-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-four-x-stretch-top-bottom",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x-stretch-top-bottom",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x-stretch-top-bottom}"
+    },
+    {
+      "$value": "6.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Left and right padding component of a stretched four-x inset.",
+          "when": "Avoid in new work. Use the base inset token instead.",
+          "alternatives": [
+            "6.4rem"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "64px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched four-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": [
+              "{space.inset.four-x}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-inset-four-x-stretch-left-right",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x-stretch-left-right",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x-stretch-left-right}"
+    },
+    {
+      "$value": "0 0.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.eighth-x-squish-top-bottom.$value} {space.inset.eighth-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-eighth-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x-squish}"
+    },
+    {
+      "$value": "0.4rem 0.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.eighth-x-stretch-top-bottom.$value} {space.inset.eighth-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-eighth-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "eighth-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.eighth-x-stretch}"
+    },
+    {
+      "$value": "0.2rem 0.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.quarter-x-squish-top-bottom.$value} {space.inset.quarter-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-quarter-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x-squish}"
+    },
+    {
+      "$value": "0.6rem 0.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.quarter-x-stretch-top-bottom.$value} {space.inset.quarter-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-quarter-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "quarter-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.quarter-x-stretch}"
+    },
+    {
+      "$value": "0.4rem 0.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.half-x-squish-top-bottom.$value} {space.inset.half-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-half-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x-squish}"
+    },
+    {
+      "$value": "1.2rem 0.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.half-x-stretch-top-bottom.$value} {space.inset.half-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-half-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "half-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.half-x-stretch}"
+    },
+    {
+      "$value": "0.6rem 1.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.three-quarter-x-squish-top-bottom.$value} {space.inset.three-quarter-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-quarter-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x-squish}"
+    },
+    {
+      "$value": "1.8rem 1.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.three-quarter-x-stretch-top-bottom.$value} {space.inset.three-quarter-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-quarter-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-quarter-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-quarter-x-stretch}"
+    },
+    {
+      "$value": "0.8rem 1.6rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.one-x-squish-top-bottom.$value} {space.inset.one-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-one-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x-squish}"
+    },
+    {
+      "$value": "2.4rem 1.6rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.one-x-stretch-top-bottom.$value} {space.inset.one-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-one-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-x-stretch}"
+    },
+    {
+      "$value": "1.2rem 2.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.one-and-a-half-x-squish-top-bottom.$value} {space.inset.one-and-a-half-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-one-and-a-half-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x-squish}"
+    },
+    {
+      "$value": "3.6rem 2.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.one-and-a-half-x-stretch-top-bottom.$value} {space.inset.one-and-a-half-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-one-and-a-half-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "one-and-a-half-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.one-and-a-half-x-stretch}"
+    },
+    {
+      "$value": "1.6rem 3.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.two-x-squish-top-bottom.$value} {space.inset.two-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-two-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x-squish}"
+    },
+    {
+      "$value": "4.8rem 3.2rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.two-x-stretch-top-bottom.$value} {space.inset.two-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-two-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "two-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.two-x-stretch}"
+    },
+    {
+      "$value": "2.4rem 4.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.three-x-squish-top-bottom.$value} {space.inset.three-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x-squish}"
+    },
+    {
+      "$value": "7.2rem 4.8rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.three-x-stretch-top-bottom.$value} {space.inset.three-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-three-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "three-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.three-x-stretch}"
+    },
+    {
+      "$value": "3.2rem 6.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.four-x-squish-top-bottom.$value} {space.inset.four-x-squish-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-four-x-squish",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x-squish",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x-squish}"
+    },
+    {
+      "$value": "9.6rem 6.4rem",
+      "$type": "dimension",
+      "docs": {
+        "type": "inset",
+        "category": "spacing",
+        "example": "spacing"
+      },
+      "utility-class": true,
+      "filePath": "tokens/web/space.json",
+      "isSource": false,
+      "original": {
+        "$value": "{space.inset.four-x-stretch-top-bottom.$value} {space.inset.four-x-stretch-left-right.$value}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "spacing"
+        },
+        "utility-class": true
+      },
+      "name": "cdr-space-inset-four-x-stretch",
+      "attributes": {
+        "category": "space",
+        "type": "inset",
+        "item": "four-x-stretch",
+        "deprecated": false
+      },
+      "key": "{space.inset.four-x-stretch}"
+    }
+  ]
+}

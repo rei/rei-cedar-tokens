@@ -1,79 +1,178 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "13.3.0",
-  "type": "module",
+  "version": "14.0.0",
+  "private": false,
   "description": "Tokens for REI cedar design system",
-  "author": "REI Software Engineering",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
+  "license": "ISC",
+  "author": "REI Software Engineering",
   "repository": {
     "type": "git",
     "url": "https://github.com/rei/rei-cedar-tokens.git"
   },
-  "license": "ISC",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "dist"
   ],
+  "type": "module",
   "main": "./dist/rei-dot-com/js/cdr-tokens.cjs",
   "module": "./dist/rei-dot-com/js/cdr-tokens.mjs",
-  "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+  "types": "./dist/rei-dot-com/types/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/rei-dot-com/js/cdr-tokens.d.mts",
+      "types": "./dist/rei-dot-com/types/index.d.ts",
+      "import": "./dist/rei-dot-com/types/index.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
+    },
+    "./tokens": {
+      "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
     },
     "./docsite": {
-      "types": "./dist/docsite/js/cdr-tokens.d.mts",
+      "types": "./dist/docsite/js/cdr-tokens.d.ts",
       "import": "./dist/docsite/js/cdr-tokens.mjs",
       "require": "./dist/docsite/js/cdr-tokens.cjs"
     },
+    "./types": {
+      "types": "./dist/rei-dot-com/types/tokens.d.ts",
+      "import": "./dist/rei-dot-com/types/tokens.mjs",
+      "default": "./dist/rei-dot-com/types/tokens.mjs"
+    },
+    "./types/*": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-*.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-*.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-*.mjs"
+    },
+    "./css": "./dist/rei-dot-com/css/cdr-tokens.css",
+    "./css/*": "./dist/rei-dot-com/css/foundations/cdr-*.css",
+    "./scss": "./dist/rei-dot-com/scss/cdr-tokens.scss",
+    "./scss/*": "./dist/rei-dot-com/scss/utilities/cdr-*.scss",
+    "./json": "./dist/rei-dot-com/json/web.json",
+    "./json/*": "./dist/rei-dot-com/json/*",
+    "./docsite/css": "./dist/docsite/css/cdr-tokens.css",
+    "./docsite/scss": "./dist/docsite/scss/cdr-tokens.scss",
+    "./types/base": {
+      "types": "./dist/rei-dot-com/types/base/token-schema.d.ts",
+      "default": "./dist/rei-dot-com/types/base/token-schema.d.ts"
+    },
+    "./rei-dot-com/js/*": {
+      "types": "./dist/rei-dot-com/js/*.d.ts",
+      "import": "./dist/rei-dot-com/js/*.mjs",
+      "require": "./dist/rei-dot-com/js/*.cjs"
+    },
+    "./rei-dot-com/css/*": "./dist/rei-dot-com/css/*",
+    "./rei-dot-com/scss/*": "./dist/rei-dot-com/scss/*",
+    "./rei-dot-com/types/*": {
+      "types": "./dist/rei-dot-com/types/*.d.ts",
+      "import": "./dist/rei-dot-com/types/*.mjs",
+      "default": "./dist/rei-dot-com/types/*.mjs"
+    },
+    "./rei-dot-com/json/*": "./dist/rei-dot-com/json/*",
+    "./docsite/js/*": {
+      "types": "./dist/docsite/js/*.d.ts",
+      "import": "./dist/docsite/js/*.mjs",
+      "require": "./dist/docsite/js/*.cjs"
+    },
+    "./docsite/css/*": "./dist/docsite/css/*",
+    "./docsite/scss/*": "./dist/docsite/scss/*",
+    "./docsite/types/*": {
+      "types": "./dist/docsite/types/*.d.ts",
+      "import": "./dist/docsite/types/*.mjs",
+      "default": "./dist/docsite/types/*.mjs"
+    },
+    "./docsite/json/*": "./dist/docsite/json/*",
     "./dist/": "./dist/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
-    "build:tokens": "npm run clean && node ./style-dictionary/build.mjs",
+    "build:base-types": "tsx ./style-dictionary/generate-base-types.ts",
+    "build:tokens": "pnpm run clean && pnpm run build:base-types && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",
-    "build": "npm run clean && npm run build:tokens && npm run site-tokens && npm run validate",
-    "build:grid": "node grid.mjs",
-    "site-tokens": "node ./site-tokens.mjs",
-    "validate": "node ./validate.mjs",
-    "format": "eslint --fix \"{style-dictionary,tokens-studio}/**/*.mjs\"",
-    "lint": "eslint \"style-dictionary/**/*.mjs\"",
-    "tokens:update": "node ./tokens-studio/token-updater.mjs"
+    "prebuild": "pnpm run validate:contract",
+    "build": "pnpm run clean && pnpm run build:tokens && pnpm run site-tokens && pnpm run validate:contract && pnpm run validate:syntax && pnpm run validate && node scripts/generate-release-notes.mjs",
+    "postbuild": "pnpm run validate:syntax && pnpm run validate:parity",
+    "build:grid": "tsx grid.ts",
+    "site-tokens": "tsx ./site-tokens.ts",
+    "lint-staged": "lint-staged",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "prepush": "pnpm run lint && pnpm test",
+    "validate": "tsx ./validate.ts",
+    "validate:update": "tsx ./validate.ts --update",
+    "validate:contract": "tsx scripts/validate-contract.ts",
+    "validate:syntax": "tsx scripts/validate-syntax-boundaries.ts",
+    "validate:parity": "tsx scripts/validate-output-parity.ts",
+    "tokens:update": "tsx ./tokens-studio/token-updater.ts",
+    "storybook:release-notes": "tsx ./scripts/storybook-release-notes.ts",
+    "docs:release-notes": "node scripts/generate-release-notes.mjs",
+    "docs:stories": "node scripts/generate-stories.mjs",
+    "test": "vitest run",
+    "test:consumer-types": "tsc -p test-consumer/tsconfig.consumer.json",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky",
+    "storybook": "pnpm run storybook:release-notes && storybook dev -p 6006",
+    "build-storybook": "pnpm run storybook:release-notes && storybook build"
+  },
+  "dependencies": {
+    "semver": "^7.7.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@divriots/style-dictionary-to-figma": "^0.4.0",
+    "@storybook/addon-essentials": "^8.6.17",
+    "@storybook/html": "^8.6.17",
+    "@storybook/html-vite": "^8.6.17",
+    "@storybook/manager-api": "^8.6.14",
+    "@storybook/theming": "^8.6.14",
     "@tokens-studio/sd-transforms": "^1.2.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/lodash": "^4.17.21",
+    "@types/semver": "^7.7.1",
+    "@vitest/ui": "^4.0.16",
+    "commitizen": "^4.3.1",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "dir-to-json": "^1.0.0",
-    "eslint": "^8.57.0",
     "fs-extra": "^11.2.0",
-    "glob": "^7.1.6",
-    "json5": "^2.2.3",
+    "glob": "^13.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "lodash": "^4.17.21",
     "npm-publish-prerelease": "^1.0.2",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
     "query-string": "^9.1.0",
-    "require-json5": "^1.3.0",
     "rimraf": "^6.0.1",
-    "standard": "^17.1.0",
+    "sass": "^1.97.2",
+    "storybook": "^8.6.17",
     "style-dictionary": "^4.0.1",
-    "tinycolor2": "^1.6.0"
+    "tinycolor2": "^1.6.0",
+    "tsx": "^4.19.2",
+    "vitest": "^4.0.16"
   },
-  "eslintConfig": {
-    "extends": "standard",
-    "ignorePatterns": [
-      "dist/",
-      "node_modules/"
-    ]
+  "lint-staged": {
+    "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}": [
+      "oxlint --fix --no-error-on-unmatched-pattern",
+      "oxfmt --no-error-on-unmatched-pattern"
+    ],
+    "**/*.{css,scss,html,json,jsonc,json5,md,mdx,toml,yml,yaml}": "oxfmt --no-error-on-unmatched-pattern"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "engines": {
-    "node": ">= 20.0.0",
-    "npm": ">= 10.0.0"
+    "node": ">= 22.0.0",
+    "pnpm": ">= 10.0.0"
   }
 }

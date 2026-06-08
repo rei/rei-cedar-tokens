@@ -1,0 +1,78 @@
+{
+  "radius": {
+    "sharp": {
+      "$value": "0",
+      "$type": "dimension",
+      "utility-class": true,
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "sharp",
+        "description": {
+          "what": "Zero-radius corner",
+          "when": "Use for crisp, squared edges",
+          "alternatives": ["{radius.soft}"]
+        }
+      }
+    },
+    "soft": {
+      "$value": "2px",
+      "$type": "dimension",
+      "utility-class": true,
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "soft",
+        "description": {
+          "what": "Small, subtle corner radius",
+          "when": "Use for gentle rounding",
+          "alternatives": ["{radius.softer}"]
+        }
+      }
+    },
+    "softer": {
+      "$value": "4px",
+      "$type": "dimension",
+      "utility-class": true,
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "softer",
+        "description": {
+          "what": "Medium corner radius",
+          "when": "Use for more noticeable rounding",
+          "alternatives": ["{radius.softest}"]
+        }
+      }
+    },
+    "softest": {
+      "$value": "6px",
+      "$type": "dimension",
+      "utility-class": true,
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "softest",
+        "description": {
+          "what": "Large rounded corner",
+          "when": "Use for pill-like shapes",
+          "alternatives": ["{radius.softest}"]
+        }
+      }
+    },
+    "round": {
+      "$value": "9999px",
+      "$type": "dimension",
+      "utility-class": true,
+      "docs": {
+        "type": "radius",
+        "category": "radius",
+        "example": "round",
+        "description": {
+          "what": "Fully circular radius",
+          "when": "Use for circular elements"
+        }
+      }
+    }
+  }
+}

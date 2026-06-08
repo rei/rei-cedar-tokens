@@ -1,0 +1,9 @@
+export const CdrColorBackgroundTransparent = "rgba(255, 255, 255, 0)";
+export const CdrColorBackgroundPrimary = "#f7f5f3";
+export const CdrColorBackgroundSecondary = "#ffffff";
+export const CdrColorBackgroundSale = "#c7370f";
+export const CdrColorBackgroundBrandSpruce = "#1f513f";
+export const CdrColorBackgroundSuccess = "#ecf9e6";
+export const CdrColorBackgroundInfo = "#e2f4fe";
+export const CdrColorBackgroundWarning = "#fdf6e2";
+export const CdrColorBackgroundError = "#fcefe4";

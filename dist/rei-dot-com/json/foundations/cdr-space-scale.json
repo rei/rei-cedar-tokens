@@ -1,0 +1,510 @@
+{
+  "spacing": [
+    {
+      "$value": "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "The smallest fluid spacing step, scaling from 3.2px to 4.8px.",
+          "when": "Use for the tightest gaps between inline elements such as an icon and a label."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.2rem",
+          "ideal": "0.2rem + 0.11cqi",
+          "max": "0.3rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "The smallest fluid spacing step, scaling from 3.2px to 4.8px.",
+            "when": "Use for the tightest gaps between inline elements such as an icon and a label."
+          }
+        }
+      },
+      "name": "cdr-space-scale-0",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "0",
+        "deprecated": false
+      },
+      "key": "{space.scale.0}"
+    },
+    {
+      "$value": "clamp(0.3rem, 0.3rem + 0.11cqi, 0.4rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 1, scaling from 4.8px to 6.4px.",
+          "when": "Use for minimal separation between closely related elements."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.3rem",
+          "ideal": "0.3rem + 0.11cqi",
+          "max": "0.4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 1, scaling from 4.8px to 6.4px.",
+            "when": "Use for minimal separation between closely related elements."
+          }
+        }
+      },
+      "name": "cdr-space-scale-1",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "1",
+        "deprecated": false
+      },
+      "key": "{space.scale.1}"
+    },
+    {
+      "$value": "clamp(0.4rem, 0.4rem + 0.11cqi, 0.5rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 2, scaling from 6.4px to 8px.",
+          "when": "Use for small gaps such as between stacked text elements or tight component internals."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.4rem",
+          "ideal": "0.4rem + 0.11cqi",
+          "max": "0.5rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 2, scaling from 6.4px to 8px.",
+            "when": "Use for small gaps such as between stacked text elements or tight component internals."
+          }
+        }
+      },
+      "name": "cdr-space-scale-2",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "2",
+        "deprecated": false
+      },
+      "key": "{space.scale.2}"
+    },
+    {
+      "$value": "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 3, scaling from 12.8px to 16px. Equivalent to the static base unit.",
+          "when": "Use for spacing between related components such as form fields or list items."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.8rem",
+          "ideal": "0.7rem + 0.22cqi",
+          "max": "1rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 3, scaling from 12.8px to 16px. Equivalent to the static base unit.",
+            "when": "Use for spacing between related components such as form fields or list items."
+          }
+        }
+      },
+      "name": "cdr-space-scale-3",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "3",
+        "deprecated": false
+      },
+      "key": "{space.scale.3}"
+    },
+    {
+      "$value": "clamp(1.2rem, 1.1rem + 0.33cqi, 1.5rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 4, scaling from 19.2px to 24px.",
+          "when": "Use for spacing between distinct components or content groups."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "1.2rem",
+          "ideal": "1.1rem + 0.33cqi",
+          "max": "1.5rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 4, scaling from 19.2px to 24px.",
+            "when": "Use for spacing between distinct components or content groups."
+          }
+        }
+      },
+      "name": "cdr-space-scale-4",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "4",
+        "deprecated": false
+      },
+      "key": "{space.scale.4}"
+    },
+    {
+      "$value": "clamp(1.6rem, 1.5rem + 0.44cqi, 2rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 5, scaling from 25.6px to 32px.",
+          "when": "Use for separation between major content sections."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "1.6rem",
+          "ideal": "1.5rem + 0.44cqi",
+          "max": "2rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 5, scaling from 25.6px to 32px.",
+            "when": "Use for separation between major content sections."
+          }
+        }
+      },
+      "name": "cdr-space-scale-5",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "5",
+        "deprecated": false
+      },
+      "key": "{space.scale.5}"
+    },
+    {
+      "$value": "clamp(2.4rem, 2.2rem + 0.66cqi, 3rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 6, scaling from 38.4px to 48px.",
+          "when": "Use for generous separation between page-level sections."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "2.4rem",
+          "ideal": "2.2rem + 0.66cqi",
+          "max": "3rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 6, scaling from 38.4px to 48px.",
+            "when": "Use for generous separation between page-level sections."
+          }
+        }
+      },
+      "name": "cdr-space-scale-6",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "6",
+        "deprecated": false
+      },
+      "key": "{space.scale.6}"
+    },
+    {
+      "$value": "clamp(3.2rem, 2.9rem + 0.88cqi, 4rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing step 7, scaling from 51.2px to 64px.",
+          "when": "Use for large layout gaps such as between hero sections and page content."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "3.2rem",
+          "ideal": "2.9rem + 0.88cqi",
+          "max": "4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 7, scaling from 51.2px to 64px.",
+            "when": "Use for large layout gaps such as between hero sections and page content."
+          }
+        }
+      },
+      "name": "cdr-space-scale-7",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "7",
+        "deprecated": false
+      },
+      "key": "{space.scale.7}"
+    },
+    {
+      "$value": "clamp(4.8rem, 4.4rem + 1.31cqi, 6rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "The largest fluid spacing step, scaling from 76.8px to 96px.",
+          "when": "Use for major page-level separation such as between full-width content blocks."
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "4.8rem",
+          "ideal": "4.4rem + 1.31cqi",
+          "max": "6rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "The largest fluid spacing step, scaling from 76.8px to 96px.",
+            "when": "Use for major page-level separation such as between full-width content blocks."
+          }
+        }
+      },
+      "name": "cdr-space-scale-8",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "8",
+        "deprecated": false
+      },
+      "key": "{space.scale.8}"
+    },
+    {
+      "$value": "clamp(0.2rem, 0.1rem + 0.223cqi, 0.4rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing spanning steps 0 to 1, scaling from 3.2px to 6.4px.",
+          "when": "Use when spacing needs to adapt across the range of the two smallest steps.",
+          "alternatives": [
+            "clamp(0.2rem, 0.2rem + 0.11cqi, 0.3rem)",
+            "clamp(0.3rem, 0.3rem + 0.11cqi, 0.4rem)"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.2rem",
+          "ideal": "0.1rem + 0.223cqi",
+          "max": "0.4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 0 to 1, scaling from 3.2px to 6.4px.",
+            "when": "Use when spacing needs to adapt across the range of the two smallest steps.",
+            "alternatives": [
+              "{space.scale.0}",
+              "{space.scale.1}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-scale-0-1",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "0--1",
+        "deprecated": false
+      },
+      "key": "{space.scale.0--1}"
+    },
+    {
+      "$value": "clamp(0.4rem, 0.2rem + 0.66cqi, 1rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing spanning steps 3 to 4, scaling from 6.4px to 16px.",
+          "when": "Use when spacing needs to adapt broadly between component and section spacing.",
+          "alternatives": [
+            "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)",
+            "clamp(1.2rem, 1.1rem + 0.33cqi, 1.5rem)"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.4rem",
+          "ideal": "0.2rem + 0.66cqi",
+          "max": "1rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 3 to 4, scaling from 6.4px to 16px.",
+            "when": "Use when spacing needs to adapt broadly between component and section spacing.",
+            "alternatives": [
+              "{space.scale.3}",
+              "{space.scale.4}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-scale-3-4",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "3--4",
+        "deprecated": false
+      },
+      "key": "{space.scale.3--4}"
+    },
+    {
+      "$value": "clamp(0.8rem, 0.1404px + 1.21cqi, 1.6rem)",
+      "$type": "clamp",
+      "docs": {
+        "type": "fluid space",
+        "category": "spacing",
+        "example": "clamp",
+        "description": {
+          "what": "Fluid spacing spanning steps 3 to 5, scaling from 12.8px to 25.6px.",
+          "when": "Use when spacing needs to adapt across a wide range of container sizes.",
+          "alternatives": [
+            "clamp(0.8rem, 0.7rem + 0.22cqi, 1rem)",
+            "clamp(1.2rem, 1.1rem + 0.33cqi, 1.5rem)",
+            "clamp(1.6rem, 1.5rem + 0.44cqi, 2rem)"
+          ]
+        }
+      },
+      "filePath": "tokens/global/space.json",
+      "isSource": false,
+      "original": {
+        "$value": {
+          "min": "0.8rem",
+          "ideal": "0.1404px + 1.21cqi",
+          "max": "1.6rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 3 to 5, scaling from 12.8px to 25.6px.",
+            "when": "Use when spacing needs to adapt across a wide range of container sizes.",
+            "alternatives": [
+              "{space.scale.3}",
+              "{space.scale.4}",
+              "{space.scale.5}"
+            ]
+          }
+        }
+      },
+      "name": "cdr-space-scale-3-5",
+      "attributes": {
+        "category": "space",
+        "type": "scale",
+        "item": "3--5",
+        "deprecated": false
+      },
+      "key": "{space.scale.3--5}"
+    }
+  ]
+}

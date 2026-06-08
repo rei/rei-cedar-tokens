@@ -1,0 +1,157 @@
+export declare const CdrTextStyleKeys: readonly [
+  "cdr-text-body-strong300-style",
+  "cdr-text-body-strong400-style",
+  "cdr-text-body-strong500-style",
+  "cdr-text-body300-style",
+  "cdr-text-body400-style",
+  "cdr-text-body500-style",
+  "cdr-text-default-style",
+  "cdr-text-eyebrow100-style",
+  "cdr-text-eyebrow100-transform",
+  "cdr-text-heading-display1000-style",
+  "cdr-text-heading-display1100-style",
+  "cdr-text-heading-display1200-style",
+  "cdr-text-heading-display1300-style",
+  "cdr-text-heading-display1400-style",
+  "cdr-text-heading-display1500-style",
+  "cdr-text-heading-display1600-style",
+  "cdr-text-heading-display800-style",
+  "cdr-text-heading-display900-style",
+  "cdr-text-heading-sans200-style",
+  "cdr-text-heading-sans300-style",
+  "cdr-text-heading-sans400-style",
+  "cdr-text-heading-sans500-style",
+  "cdr-text-heading-sans600-style",
+  "cdr-text-heading-serif-strong1000-style",
+  "cdr-text-heading-serif-strong1100-style",
+  "cdr-text-heading-serif-strong1200-style",
+  "cdr-text-heading-serif-strong600-style",
+  "cdr-text-heading-serif-strong700-style",
+  "cdr-text-heading-serif-strong800-style",
+  "cdr-text-heading-serif-strong900-style",
+  "cdr-text-heading-serif1000-style",
+  "cdr-text-heading-serif1100-style",
+  "cdr-text-heading-serif1200-style",
+  "cdr-text-heading-serif200-style",
+  "cdr-text-heading-serif300-style",
+  "cdr-text-heading-serif400-style",
+  "cdr-text-heading-serif500-style",
+  "cdr-text-heading-serif600-style",
+  "cdr-text-heading-serif700-style",
+  "cdr-text-heading-serif800-style",
+  "cdr-text-heading-serif900-style",
+  "cdr-text-italic-style",
+  "cdr-text-italic-variation",
+  "cdr-text-subheading-sans300-style",
+  "cdr-text-subheading-sans400-style",
+  "cdr-text-subheading-sans500-style",
+  "cdr-text-subheading-sans600-style",
+  "cdr-text-utility-sans-strong100-style",
+  "cdr-text-utility-sans-strong200-style",
+  "cdr-text-utility-sans-strong300-style",
+  "cdr-text-utility-sans-strong400-style",
+  "cdr-text-utility-sans-strong500-style",
+  "cdr-text-utility-sans-strong600-style",
+  "cdr-text-utility-sans-strong700-style",
+  "cdr-text-utility-sans-strong800-style",
+  "cdr-text-utility-sans100-style",
+  "cdr-text-utility-sans200-style",
+  "cdr-text-utility-sans300-style",
+  "cdr-text-utility-sans400-style",
+  "cdr-text-utility-sans500-style",
+  "cdr-text-utility-sans600-style",
+  "cdr-text-utility-sans700-style",
+  "cdr-text-utility-sans800-style",
+  "cdr-text-utility-serif-strong200-style",
+  "cdr-text-utility-serif-strong300-style",
+  "cdr-text-utility-serif-strong400-style",
+  "cdr-text-utility-serif-strong500-style",
+  "cdr-text-utility-serif-strong600-style",
+  "cdr-text-utility-serif-strong700-style",
+  "cdr-text-utility-serif-strong800-style",
+  "cdr-text-utility-serif200-style",
+  "cdr-text-utility-serif300-style",
+  "cdr-text-utility-serif400-style",
+  "cdr-text-utility-serif500-style",
+  "cdr-text-utility-serif600-style",
+  "cdr-text-utility-serif700-style",
+  "cdr-text-utility-serif800-style"
+];
+export type CdrTextStyleKey =
+  | "cdr-text-body-strong300-style"
+  | "cdr-text-body-strong400-style"
+  | "cdr-text-body-strong500-style"
+  | "cdr-text-body300-style"
+  | "cdr-text-body400-style"
+  | "cdr-text-body500-style"
+  | "cdr-text-default-style"
+  | "cdr-text-eyebrow100-style"
+  | "cdr-text-eyebrow100-transform"
+  | "cdr-text-heading-display1000-style"
+  | "cdr-text-heading-display1100-style"
+  | "cdr-text-heading-display1200-style"
+  | "cdr-text-heading-display1300-style"
+  | "cdr-text-heading-display1400-style"
+  | "cdr-text-heading-display1500-style"
+  | "cdr-text-heading-display1600-style"
+  | "cdr-text-heading-display800-style"
+  | "cdr-text-heading-display900-style"
+  | "cdr-text-heading-sans200-style"
+  | "cdr-text-heading-sans300-style"
+  | "cdr-text-heading-sans400-style"
+  | "cdr-text-heading-sans500-style"
+  | "cdr-text-heading-sans600-style"
+  | "cdr-text-heading-serif-strong1000-style"
+  | "cdr-text-heading-serif-strong1100-style"
+  | "cdr-text-heading-serif-strong1200-style"
+  | "cdr-text-heading-serif-strong600-style"
+  | "cdr-text-heading-serif-strong700-style"
+  | "cdr-text-heading-serif-strong800-style"
+  | "cdr-text-heading-serif-strong900-style"
+  | "cdr-text-heading-serif1000-style"
+  | "cdr-text-heading-serif1100-style"
+  | "cdr-text-heading-serif1200-style"
+  | "cdr-text-heading-serif200-style"
+  | "cdr-text-heading-serif300-style"
+  | "cdr-text-heading-serif400-style"
+  | "cdr-text-heading-serif500-style"
+  | "cdr-text-heading-serif600-style"
+  | "cdr-text-heading-serif700-style"
+  | "cdr-text-heading-serif800-style"
+  | "cdr-text-heading-serif900-style"
+  | "cdr-text-italic-style"
+  | "cdr-text-italic-variation"
+  | "cdr-text-subheading-sans300-style"
+  | "cdr-text-subheading-sans400-style"
+  | "cdr-text-subheading-sans500-style"
+  | "cdr-text-subheading-sans600-style"
+  | "cdr-text-utility-sans-strong100-style"
+  | "cdr-text-utility-sans-strong200-style"
+  | "cdr-text-utility-sans-strong300-style"
+  | "cdr-text-utility-sans-strong400-style"
+  | "cdr-text-utility-sans-strong500-style"
+  | "cdr-text-utility-sans-strong600-style"
+  | "cdr-text-utility-sans-strong700-style"
+  | "cdr-text-utility-sans-strong800-style"
+  | "cdr-text-utility-sans100-style"
+  | "cdr-text-utility-sans200-style"
+  | "cdr-text-utility-sans300-style"
+  | "cdr-text-utility-sans400-style"
+  | "cdr-text-utility-sans500-style"
+  | "cdr-text-utility-sans600-style"
+  | "cdr-text-utility-sans700-style"
+  | "cdr-text-utility-sans800-style"
+  | "cdr-text-utility-serif-strong200-style"
+  | "cdr-text-utility-serif-strong300-style"
+  | "cdr-text-utility-serif-strong400-style"
+  | "cdr-text-utility-serif-strong500-style"
+  | "cdr-text-utility-serif-strong600-style"
+  | "cdr-text-utility-serif-strong700-style"
+  | "cdr-text-utility-serif-strong800-style"
+  | "cdr-text-utility-serif200-style"
+  | "cdr-text-utility-serif300-style"
+  | "cdr-text-utility-serif400-style"
+  | "cdr-text-utility-serif500-style"
+  | "cdr-text-utility-serif600-style"
+  | "cdr-text-utility-serif700-style"
+  | "cdr-text-utility-serif800-style";

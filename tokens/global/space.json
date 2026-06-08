@@ -1,0 +1,1097 @@
+{
+  "space": {
+    "zero": {
+      "$value": "{options.space.zero}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Zero spacing, removes all space between elements.",
+          "when": "Use when elements must be flush against each other with no gap."
+        }
+      },
+      "utility-class": true
+    },
+    "sixteenth-x": {
+      "$value": "{options.space.sixteenth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "The smallest static spacing unit, one-sixteenth of the base.",
+          "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
+          "alternatives": ["{space.scale.0}"]
+        }
+      },
+      "utility-class": true
+    },
+    "eighth-x": {
+      "$value": "{options.space.eighth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one-eighth of the base unit.",
+          "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
+          "alternatives": ["{space.scale.0}"]
+        }
+      },
+      "utility-class": true
+    },
+    "three-sixteenth-x": {
+      "$value": "{options.space.three-sixteenth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three-sixteenths of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.0}"]
+        }
+      },
+      "utility-class": true
+    },
+    "quarter-x": {
+      "$value": "{options.space.quarter-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one-quarter of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.0}", "{space.scale.1}"]
+        }
+      },
+      "utility-class": true
+    },
+    "three-eighth-x": {
+      "$value": "{options.space.three-eighth-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three-eighths of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.1}"]
+        }
+      },
+      "utility-class": true
+    },
+    "half-x": {
+      "$value": "{options.space.half-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one-half of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.2}"]
+        }
+      },
+      "utility-class": true
+    },
+    "three-quarter-x": {
+      "$value": "{options.space.three-quarter-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three-quarters of the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.3}"]
+        }
+      },
+      "utility-class": true
+    },
+    "one-x": {
+      "$value": "{options.space.one-x}",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "The base static spacing unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.3}"]
+        }
+      },
+      "utility-class": true
+    },
+    "one-and-a-half-x": {
+      "$value": "24px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at one and a half times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.4}"]
+        }
+      },
+      "utility-class": true
+    },
+    "two-x": {
+      "$value": "32px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at two times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.5}"]
+        }
+      },
+      "utility-class": true
+    },
+    "three-x": {
+      "$value": "48px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at three times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.6}"]
+        }
+      },
+      "utility-class": true
+    },
+    "four-x": {
+      "$value": "64px",
+      "$type": "dimension",
+      "docs": {
+        "type": "spacing",
+        "category": "spacing",
+        "example": "spacing",
+        "description": {
+          "what": "Static spacing at four times the base unit.",
+          "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
+          "alternatives": ["{space.scale.7}"]
+        }
+      },
+      "utility-class": true
+    },
+    "scale": {
+      "0": {
+        "$value": {
+          "min": "0.2rem",
+          "ideal": "0.2rem + 0.11cqi",
+          "max": "0.3rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "The smallest fluid spacing step, scaling from 3.2px to 4.8px.",
+            "when": "Use for the tightest gaps between inline elements such as an icon and a label."
+          }
+        }
+      },
+      "1": {
+        "$value": {
+          "min": "0.3rem",
+          "ideal": "0.3rem + 0.11cqi",
+          "max": "0.4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 1, scaling from 4.8px to 6.4px.",
+            "when": "Use for minimal separation between closely related elements."
+          }
+        }
+      },
+      "2": {
+        "$value": {
+          "min": "0.4rem",
+          "ideal": "0.4rem + 0.11cqi",
+          "max": "0.5rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 2, scaling from 6.4px to 8px.",
+            "when": "Use for small gaps such as between stacked text elements or tight component internals."
+          }
+        }
+      },
+      "3": {
+        "$value": {
+          "min": "0.8rem",
+          "ideal": "0.7rem + 0.22cqi",
+          "max": "1rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 3, scaling from 12.8px to 16px. Equivalent to the static base unit.",
+            "when": "Use for spacing between related components such as form fields or list items."
+          }
+        }
+      },
+      "4": {
+        "$value": {
+          "min": "1.2rem",
+          "ideal": "1.1rem + 0.33cqi",
+          "max": "1.5rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 4, scaling from 19.2px to 24px.",
+            "when": "Use for spacing between distinct components or content groups."
+          }
+        }
+      },
+      "5": {
+        "$value": {
+          "min": "1.6rem",
+          "ideal": "1.5rem + 0.44cqi",
+          "max": "2rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 5, scaling from 25.6px to 32px.",
+            "when": "Use for separation between major content sections."
+          }
+        }
+      },
+      "6": {
+        "$value": {
+          "min": "2.4rem",
+          "ideal": "2.2rem + 0.66cqi",
+          "max": "3rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 6, scaling from 38.4px to 48px.",
+            "when": "Use for generous separation between page-level sections."
+          }
+        }
+      },
+      "7": {
+        "$value": {
+          "min": "3.2rem",
+          "ideal": "2.9rem + 0.88cqi",
+          "max": "4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing step 7, scaling from 51.2px to 64px.",
+            "when": "Use for large layout gaps such as between hero sections and page content."
+          }
+        }
+      },
+      "8": {
+        "$value": {
+          "min": "4.8rem",
+          "ideal": "4.4rem + 1.31cqi",
+          "max": "6rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "The largest fluid spacing step, scaling from 76.8px to 96px.",
+            "when": "Use for major page-level separation such as between full-width content blocks."
+          }
+        }
+      },
+      "0--1": {
+        "$value": {
+          "min": "0.2rem",
+          "ideal": "0.1rem + 0.223cqi",
+          "max": "0.4rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 0 to 1, scaling from 3.2px to 6.4px.",
+            "when": "Use when spacing needs to adapt across the range of the two smallest steps.",
+            "alternatives": ["{space.scale.0}", "{space.scale.1}"]
+          }
+        }
+      },
+      "3--4": {
+        "$value": {
+          "min": "0.4rem",
+          "ideal": "0.2rem + 0.66cqi",
+          "max": "1rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 3 to 4, scaling from 6.4px to 16px.",
+            "when": "Use when spacing needs to adapt broadly between component and section spacing.",
+            "alternatives": ["{space.scale.3}", "{space.scale.4}"]
+          }
+        }
+      },
+      "3--5": {
+        "$value": {
+          "min": "0.8rem",
+          "ideal": "0.1404px + 1.21cqi",
+          "max": "1.6rem"
+        },
+        "$type": "clamp",
+        "docs": {
+          "type": "fluid space",
+          "category": "spacing",
+          "example": "clamp",
+          "description": {
+            "what": "Fluid spacing spanning steps 3 to 5, scaling from 12.8px to 25.6px.",
+            "when": "Use when spacing needs to adapt across a wide range of container sizes.",
+            "alternatives": ["{space.scale.3}", "{space.scale.4}", "{space.scale.5}"]
+          }
+        }
+      }
+    },
+    "inset": {
+      "sixteenth-x": {
+        "$value": "{options.space.sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-sixteenth of the base unit.",
+            "when": "Use for the tightest padding on very small components such as micro badges."
+          }
+        },
+        "utility-class": true
+      },
+      "eighth-x": {
+        "$value": "{options.space.eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-eighth of the base unit.",
+            "when": "Use for compact components such as badges or tags."
+          }
+        },
+        "utility-class": true
+      },
+      "eighth-x-squish-top-bottom": {
+        "$value": "0",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished eighth-x inset, compressed to zero.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.eighth-x}"]
+          }
+        }
+      },
+      "eighth-x-squish-left-right": {
+        "$value": "2px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished eighth-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.eighth-x}"]
+          }
+        }
+      },
+      "eighth-x-stretch-top-bottom": {
+        "$value": "4px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched eighth-x inset, expanded beyond the base.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.eighth-x}"]
+          }
+        }
+      },
+      "eighth-x-stretch-left-right": {
+        "$value": "2px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched eighth-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.eighth-x}"]
+          }
+        }
+      },
+      "three-sixteenth-x": {
+        "$value": "{options.space.three-sixteenth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-sixteenths of the base unit.",
+            "when": "Use for compact components needing slightly more padding than eighth-x."
+          }
+        },
+        "utility-class": true
+      },
+      "quarter-x": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-quarter of the base unit.",
+            "when": "Use for small components such as chips or compact buttons."
+          }
+        },
+        "utility-class": true
+      },
+      "quarter-x-squish-top-bottom": {
+        "$value": "{options.space.quarter-x}",
+        "spacingModifier": "{options.space.squish}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished quarter-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.quarter-x}"]
+          }
+        }
+      },
+      "quarter-x-squish-left-right": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.quarter-x}"]
+          }
+        }
+      },
+      "quarter-x-stretch-top-bottom": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched quarter-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.quarter-x}"]
+          }
+        }
+      },
+      "quarter-x-stretch-left-right": {
+        "$value": "{options.space.quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.quarter-x}"]
+          }
+        }
+      },
+      "three-eighth-x": {
+        "$value": "{options.space.three-eighth-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-eighths of the base unit.",
+            "when": "Use for components needing slightly more padding than quarter-x."
+          }
+        },
+        "utility-class": true
+      },
+      "half-x": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one-half of the base unit.",
+            "when": "Use for medium-density components such as form inputs or standard buttons."
+          }
+        },
+        "utility-class": true
+      },
+      "half-x-squish-top-bottom": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished half-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.half-x}"]
+          }
+        }
+      },
+      "half-x-squish-left-right": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.half-x}"]
+          }
+        }
+      },
+      "half-x-stretch-top-bottom": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched half-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.half-x}"]
+          }
+        }
+      },
+      "half-x-stretch-left-right": {
+        "$value": "{options.space.half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.half-x}"]
+          }
+        }
+      },
+      "three-quarter-x": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three-quarters of the base unit.",
+            "when": "Use for components needing slightly more padding than half-x."
+          }
+        },
+        "utility-class": true
+      },
+      "three-quarter-x-squish-top-bottom": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished three-quarter-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-quarter-x}"]
+          }
+        }
+      },
+      "three-quarter-x-squish-left-right": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished three-quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-quarter-x}"]
+          }
+        }
+      },
+      "three-quarter-x-stretch-top-bottom": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched three-quarter-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-quarter-x}"]
+          }
+        }
+      },
+      "three-quarter-x-stretch-left-right": {
+        "$value": "{options.space.three-quarter-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched three-quarter-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-quarter-x}"]
+          }
+        }
+      },
+      "one-x": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at the base unit.",
+            "when": "Use for standard component padding such as cards or panels."
+          }
+        },
+        "utility-class": true
+      },
+      "one-x-squish-top-bottom": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished one-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-x}"]
+          }
+        }
+      },
+      "one-x-squish-left-right": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished one-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-x}"]
+          }
+        }
+      },
+      "one-x-stretch-top-bottom": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched one-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-x}"]
+          }
+        }
+      },
+      "one-x-stretch-left-right": {
+        "$value": "{options.space.one-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched one-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-x}"]
+          }
+        }
+      },
+      "one-and-a-half-x": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at one and a half times the base unit.",
+            "when": "Use for components needing generous padding such as modals or large cards."
+          }
+        },
+        "utility-class": true
+      },
+      "one-and-a-half-x-squish-top-bottom": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished one-and-a-half-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-and-a-half-x}"]
+          }
+        }
+      },
+      "one-and-a-half-x-squish-left-right": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished one-and-a-half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-and-a-half-x}"]
+          }
+        }
+      },
+      "one-and-a-half-x-stretch-top-bottom": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched one-and-a-half-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-and-a-half-x}"]
+          }
+        }
+      },
+      "one-and-a-half-x-stretch-left-right": {
+        "$value": "{options.space.one-and-a-half-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched one-and-a-half-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.one-and-a-half-x}"]
+          }
+        }
+      },
+      "two-x": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at two times the base unit.",
+            "when": "Use for spacious layouts such as page sections or large containers."
+          }
+        },
+        "utility-class": true
+      },
+      "two-x-squish-top-bottom": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished two-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.two-x}"]
+          }
+        }
+      },
+      "two-x-squish-left-right": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished two-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.two-x}"]
+          }
+        }
+      },
+      "two-x-stretch-top-bottom": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched two-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.two-x}"]
+          }
+        }
+      },
+      "two-x-stretch-left-right": {
+        "$value": "{options.space.two-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched two-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.two-x}"]
+          }
+        }
+      },
+      "three-x": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at three times the base unit.",
+            "when": "Use for very spacious layouts or full-width content areas."
+          }
+        },
+        "utility-class": true
+      },
+      "three-x-squish-top-bottom": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished three-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-x}"]
+          }
+        }
+      },
+      "three-x-squish-left-right": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished three-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-x}"]
+          }
+        }
+      },
+      "three-x-stretch-top-bottom": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched three-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-x}"]
+          }
+        }
+      },
+      "three-x-stretch-left-right": {
+        "$value": "{options.space.three-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched three-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.three-x}"]
+          }
+        }
+      },
+      "four-x": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "inset",
+          "category": "spacing",
+          "example": "inset",
+          "description": {
+            "what": "Uniform inset padding at four times the base unit.",
+            "when": "Use for the most spacious layouts such as hero sections."
+          }
+        },
+        "utility-class": true
+      },
+      "four-x-squish-top-bottom": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.squish}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a squished four-x inset, compressed by the squish modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.four-x}"]
+          }
+        }
+      },
+      "four-x-squish-left-right": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a squished four-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.four-x}"]
+          }
+        }
+      },
+      "four-x-stretch-top-bottom": {
+        "$value": "{options.space.four-x}",
+        "$type": "dimension",
+        "spacingModifier": "{options.space.stretch}",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Top and bottom padding component of a stretched four-x inset, expanded by the stretch modifier.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.four-x}"]
+          }
+        }
+      },
+      "four-x-stretch-left-right": {
+        "$value": "64px",
+        "$type": "dimension",
+        "docs": {
+          "type": "spacing",
+          "category": "spacing",
+          "example": "spacing",
+          "description": {
+            "what": "Left and right padding component of a stretched four-x inset.",
+            "when": "Avoid in new work. Use the base inset token instead.",
+            "alternatives": ["{space.inset.four-x}"]
+          }
+        }
+      }
+    }
+  }
+}

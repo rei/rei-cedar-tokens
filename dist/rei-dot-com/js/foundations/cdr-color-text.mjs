@@ -1,0 +1,11 @@
+export const CdrColorTextPrimary = "#4b4a48";
+export const CdrColorTextSecondary = "#736e65";
+export const CdrColorTextEmphasis = "#2e2e2b";
+export const CdrColorTextBrand = "#1f513f";
+export const CdrColorTextSale = "#c7370f";
+export const CdrColorTextInverse = "#fafbf9";
+export const CdrColorTextDisabled = "#d5cfc3";
+export const CdrColorTextSuccess = "#2e6b34";
+export const CdrColorTextWarning = "#854714";
+export const CdrColorTextError = "#811823";
+export const CdrColorTextInfo = "#1b437e";

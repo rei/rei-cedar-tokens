@@ -1,0 +1,15 @@
+module.exports = {
+  CdrSpaceZero: "0",
+  CdrSpaceSixteenthX: "1",
+  CdrSpaceEighthX: "2",
+  CdrSpaceThreeSixteenthX: "3",
+  CdrSpaceQuarterX: "4",
+  CdrSpaceThreeEighthX: "6",
+  CdrSpaceHalfX: "8",
+  CdrSpaceThreeQuarterX: "12",
+  CdrSpaceOneX: "16",
+  CdrSpaceOneAndAHalfX: "24",
+  CdrSpaceTwoX: "32",
+  CdrSpaceThreeX: "48",
+  CdrSpaceFourX: "64",
+};

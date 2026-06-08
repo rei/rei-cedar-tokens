@@ -1,0 +1,76 @@
+{
+  "form": {
+    "input": {
+      "height-default": {
+        "$value": "40px",
+        "$type": "dimension",
+        "docs": {
+          "type": "height",
+          "category": "form",
+          "example": "height-default",
+          "description": {
+            "what": "Default input height",
+            "when": "Use for standard form fields",
+            "alternatives": ["{form.input.height-large}"]
+          }
+        }
+      },
+      "height-large": {
+        "$value": "48px",
+        "$type": "dimension",
+        "docs": {
+          "type": "height",
+          "category": "form",
+          "example": "height-large",
+          "description": {
+            "what": "Large input height",
+            "when": "Use for spacious layouts"
+          }
+        }
+      }
+    },
+    "figure": {
+      "size-small": {
+        "$value": "16px",
+        "$type": "dimension",
+        "docs": {
+          "type": "size",
+          "category": "form",
+          "example": "size-small",
+          "description": {
+            "what": "Small figure size",
+            "when": "Use for compact forms",
+            "alternatives": ["{form.figure.size-medium}"]
+          }
+        }
+      },
+      "size-medium": {
+        "$value": "16px",
+        "$type": "dimension",
+        "docs": {
+          "type": "size",
+          "category": "form",
+          "example": "size-medium",
+          "description": {
+            "what": "Medium figure size",
+            "when": "Use for standard forms",
+            "alternatives": ["{form.figure.size-large}"]
+          }
+        }
+      },
+      "size-large": {
+        "$value": "20px",
+        "$type": "dimension",
+        "docs": {
+          "type": "size",
+          "category": "form",
+          "example": "size-large",
+          "description": {
+            "what": "Large figure size",
+            "when": "Use for large or expressive forms"
+          }
+        }
+      }
+    }
+  }
+}

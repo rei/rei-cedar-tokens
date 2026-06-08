@@ -1,0 +1,151 @@
+export declare const CdrTextLineHeightKeys: readonly [
+  "cdr-text-body-strong300-line-height",
+  "cdr-text-body-strong400-line-height",
+  "cdr-text-body-strong500-line-height",
+  "cdr-text-body300-line-height",
+  "cdr-text-body400-line-height",
+  "cdr-text-body500-line-height",
+  "cdr-text-default-line-height",
+  "cdr-text-eyebrow100-line-height",
+  "cdr-text-heading-display1000-line-height",
+  "cdr-text-heading-display1100-line-height",
+  "cdr-text-heading-display1200-line-height",
+  "cdr-text-heading-display1300-line-height",
+  "cdr-text-heading-display1400-line-height",
+  "cdr-text-heading-display1500-line-height",
+  "cdr-text-heading-display1600-line-height",
+  "cdr-text-heading-display800-line-height",
+  "cdr-text-heading-display900-line-height",
+  "cdr-text-heading-sans200-line-height",
+  "cdr-text-heading-sans300-line-height",
+  "cdr-text-heading-sans400-line-height",
+  "cdr-text-heading-sans500-line-height",
+  "cdr-text-heading-sans600-line-height",
+  "cdr-text-heading-serif-strong1000-line-height",
+  "cdr-text-heading-serif-strong1100-line-height",
+  "cdr-text-heading-serif-strong1200-line-height",
+  "cdr-text-heading-serif-strong600-line-height",
+  "cdr-text-heading-serif-strong700-line-height",
+  "cdr-text-heading-serif-strong800-line-height",
+  "cdr-text-heading-serif-strong900-line-height",
+  "cdr-text-heading-serif1000-line-height",
+  "cdr-text-heading-serif1100-line-height",
+  "cdr-text-heading-serif1200-line-height",
+  "cdr-text-heading-serif200-line-height",
+  "cdr-text-heading-serif300-line-height",
+  "cdr-text-heading-serif400-line-height",
+  "cdr-text-heading-serif500-line-height",
+  "cdr-text-heading-serif600-line-height",
+  "cdr-text-heading-serif700-line-height",
+  "cdr-text-heading-serif800-line-height",
+  "cdr-text-heading-serif900-line-height",
+  "cdr-text-subheading-sans300-line-height",
+  "cdr-text-subheading-sans400-line-height",
+  "cdr-text-subheading-sans500-line-height",
+  "cdr-text-subheading-sans600-line-height",
+  "cdr-text-utility-sans-strong100-line-height",
+  "cdr-text-utility-sans-strong200-line-height",
+  "cdr-text-utility-sans-strong300-line-height",
+  "cdr-text-utility-sans-strong400-line-height",
+  "cdr-text-utility-sans-strong500-line-height",
+  "cdr-text-utility-sans-strong600-line-height",
+  "cdr-text-utility-sans-strong700-line-height",
+  "cdr-text-utility-sans-strong800-line-height",
+  "cdr-text-utility-sans100-line-height",
+  "cdr-text-utility-sans200-line-height",
+  "cdr-text-utility-sans300-line-height",
+  "cdr-text-utility-sans400-line-height",
+  "cdr-text-utility-sans500-line-height",
+  "cdr-text-utility-sans600-line-height",
+  "cdr-text-utility-sans700-line-height",
+  "cdr-text-utility-sans800-line-height",
+  "cdr-text-utility-serif-strong200-line-height",
+  "cdr-text-utility-serif-strong300-line-height",
+  "cdr-text-utility-serif-strong400-line-height",
+  "cdr-text-utility-serif-strong500-line-height",
+  "cdr-text-utility-serif-strong600-line-height",
+  "cdr-text-utility-serif-strong700-line-height",
+  "cdr-text-utility-serif-strong800-line-height",
+  "cdr-text-utility-serif200-line-height",
+  "cdr-text-utility-serif300-line-height",
+  "cdr-text-utility-serif400-line-height",
+  "cdr-text-utility-serif500-line-height",
+  "cdr-text-utility-serif600-line-height",
+  "cdr-text-utility-serif700-line-height",
+  "cdr-text-utility-serif800-line-height"
+];
+export type CdrTextLineHeightKey =
+  | "cdr-text-body-strong300-line-height"
+  | "cdr-text-body-strong400-line-height"
+  | "cdr-text-body-strong500-line-height"
+  | "cdr-text-body300-line-height"
+  | "cdr-text-body400-line-height"
+  | "cdr-text-body500-line-height"
+  | "cdr-text-default-line-height"
+  | "cdr-text-eyebrow100-line-height"
+  | "cdr-text-heading-display1000-line-height"
+  | "cdr-text-heading-display1100-line-height"
+  | "cdr-text-heading-display1200-line-height"
+  | "cdr-text-heading-display1300-line-height"
+  | "cdr-text-heading-display1400-line-height"
+  | "cdr-text-heading-display1500-line-height"
+  | "cdr-text-heading-display1600-line-height"
+  | "cdr-text-heading-display800-line-height"
+  | "cdr-text-heading-display900-line-height"
+  | "cdr-text-heading-sans200-line-height"
+  | "cdr-text-heading-sans300-line-height"
+  | "cdr-text-heading-sans400-line-height"
+  | "cdr-text-heading-sans500-line-height"
+  | "cdr-text-heading-sans600-line-height"
+  | "cdr-text-heading-serif-strong1000-line-height"
+  | "cdr-text-heading-serif-strong1100-line-height"
+  | "cdr-text-heading-serif-strong1200-line-height"
+  | "cdr-text-heading-serif-strong600-line-height"
+  | "cdr-text-heading-serif-strong700-line-height"
+  | "cdr-text-heading-serif-strong800-line-height"
+  | "cdr-text-heading-serif-strong900-line-height"
+  | "cdr-text-heading-serif1000-line-height"
+  | "cdr-text-heading-serif1100-line-height"
+  | "cdr-text-heading-serif1200-line-height"
+  | "cdr-text-heading-serif200-line-height"
+  | "cdr-text-heading-serif300-line-height"
+  | "cdr-text-heading-serif400-line-height"
+  | "cdr-text-heading-serif500-line-height"
+  | "cdr-text-heading-serif600-line-height"
+  | "cdr-text-heading-serif700-line-height"
+  | "cdr-text-heading-serif800-line-height"
+  | "cdr-text-heading-serif900-line-height"
+  | "cdr-text-subheading-sans300-line-height"
+  | "cdr-text-subheading-sans400-line-height"
+  | "cdr-text-subheading-sans500-line-height"
+  | "cdr-text-subheading-sans600-line-height"
+  | "cdr-text-utility-sans-strong100-line-height"
+  | "cdr-text-utility-sans-strong200-line-height"
+  | "cdr-text-utility-sans-strong300-line-height"
+  | "cdr-text-utility-sans-strong400-line-height"
+  | "cdr-text-utility-sans-strong500-line-height"
+  | "cdr-text-utility-sans-strong600-line-height"
+  | "cdr-text-utility-sans-strong700-line-height"
+  | "cdr-text-utility-sans-strong800-line-height"
+  | "cdr-text-utility-sans100-line-height"
+  | "cdr-text-utility-sans200-line-height"
+  | "cdr-text-utility-sans300-line-height"
+  | "cdr-text-utility-sans400-line-height"
+  | "cdr-text-utility-sans500-line-height"
+  | "cdr-text-utility-sans600-line-height"
+  | "cdr-text-utility-sans700-line-height"
+  | "cdr-text-utility-sans800-line-height"
+  | "cdr-text-utility-serif-strong200-line-height"
+  | "cdr-text-utility-serif-strong300-line-height"
+  | "cdr-text-utility-serif-strong400-line-height"
+  | "cdr-text-utility-serif-strong500-line-height"
+  | "cdr-text-utility-serif-strong600-line-height"
+  | "cdr-text-utility-serif-strong700-line-height"
+  | "cdr-text-utility-serif-strong800-line-height"
+  | "cdr-text-utility-serif200-line-height"
+  | "cdr-text-utility-serif300-line-height"
+  | "cdr-text-utility-serif400-line-height"
+  | "cdr-text-utility-serif500-line-height"
+  | "cdr-text-utility-serif600-line-height"
+  | "cdr-text-utility-serif700-line-height"
+  | "cdr-text-utility-serif800-line-height";
