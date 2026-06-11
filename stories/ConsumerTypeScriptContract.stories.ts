@@ -951,6 +951,60 @@ export const diagnostics = {
           },
         },
         {
+          id: 'runtime-key-arrays',
+          heading: 'Runtime key arrays',
+          prose: [
+            'Every foundation module exports a Keys array — a runtime const tuple of kebab-case semantic keys. These map directly to CSS custom property names (--cdr-{group}-{key}) and are the recommended building block for framework integration layers.',
+            'Key arrays are exported from @rei/cdr-tokens/types alongside grouped objects and interfaces. They are runtime values, not type-only exports.',
+          ],
+          codeSamples: [
+            {
+              title: 'Import key arrays',
+              language: 'ts',
+              code: `import { CdrSpaceScaleKeys, CdrColorBackgroundKeys } from '@rei/cdr-tokens/types';
+
+// CdrSpaceScaleKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", ...]
+// CdrColorBackgroundKeys = ["primary", "secondary", "sale", ...]`,
+            },
+            {
+              title: 'Tailwind config integration',
+              language: 'ts',
+              code: `import {
+  CdrBreakpoint,
+  CdrSpaceKeys,
+  CdrSpaceScaleKeys,
+  CdrRadiusKeys,
+  CdrColorBackgroundKeys,
+  CdrColorTextKeys,
+  CdrColorBorderKeys,
+} from '@rei/cdr-tokens/types';
+
+const keysToVars = (keys: readonly string[], prefix: string) =>
+  Object.fromEntries(keys.map((key) => [key, \`var(--\${prefix}-\${key})\`]));
+
+export default {
+  theme: {
+    screens: {
+      xs: \`\${CdrBreakpoint.CdrBreakpointXs}px\`,
+      sm: \`\${CdrBreakpoint.CdrBreakpointSm}px\`,
+      md: \`\${CdrBreakpoint.CdrBreakpointMd}px\`,
+      lg: \`\${CdrBreakpoint.CdrBreakpointLg}px\`,
+    },
+    extend: {
+      spacing: keysToVars(CdrSpaceKeys, 'cdr-space'),
+      borderRadius: keysToVars(CdrRadiusKeys, 'cdr-radius'),
+      colors: {
+        background: keysToVars(CdrColorBackgroundKeys, 'cdr-color-background'),
+        text: keysToVars(CdrColorTextKeys, 'cdr-color-text'),
+        border: keysToVars(CdrColorBorderKeys, 'cdr-color-border'),
+      },
+    },
+  },
+};`,
+            },
+          ],
+        },
+        {
           id: 'related-contracts',
           heading: 'Related contracts',
           prose: ['Use the js contract for runtime values that these types describe.'],

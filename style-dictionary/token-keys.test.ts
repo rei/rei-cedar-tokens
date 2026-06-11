@@ -76,4 +76,27 @@ describe.skipIf(!distFilesExist)('Runtime token key arrays', () => {
       expectedColorBackgroundKeys,
     );
   });
+
+  it('tokens.d.ts barrel uses export type * only for type-only files', () => {
+    const tokensDts = resolve(DIST_ROOT, 'types/tokens.d.ts');
+    const content = readFileSync(tokensDts, 'utf8');
+    const lines = content
+      .split('\n')
+      .filter((line) => line.startsWith('export *') || line.startsWith('export type *'));
+
+    // .names.d.ts files export only type unions.
+    // base/ directory files (e.g. token-schema.d.ts) export only types/interfaces.
+    // Everything else exports declare const runtime values.
+    const isTypeOnly = (line: string) => line.includes('.names') || line.includes('/base/');
+
+    expect(lines.length).toBeGreaterThan(0);
+    for (const line of lines) {
+      if (isTypeOnly(line)) {
+        expect(line).toMatch(/^export type \* from/);
+      } else {
+        expect(line).toMatch(/^export \* from/);
+        expect(line).not.toMatch(/^export type \* from/);
+      }
+    }
+  });
 });
