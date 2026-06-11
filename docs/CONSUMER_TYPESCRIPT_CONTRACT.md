@@ -29,6 +29,21 @@ Runtime value entrypoints:
 
 The root `@rei/cdr-tokens` entrypoint exports the **semantic contract** — grouped foundation objects (e.g., `CdrColorText`, `CdrSpace`). This is the recommended entrypoint for framework integrations. Use `@rei/cdr-tokens/tokens` for flat token values.
 
+### Deprecated: v13-style flat imports from root entrypoint
+
+As of v14.0.1, the root entrypoint also re-exports all flat token values (e.g., `CdrBreakpointSm`) for backward compatibility. These are marked `@deprecated` and will show strikethrough in IDEs. They will be **removed in the next major version** (v15).
+
+```ts
+// Deprecated — works but will be removed in v15
+import { CdrBreakpointSm } from '@rei/cdr-tokens';
+
+// Preferred — grouped objects
+import { CdrBreakpoint } from '@rei/cdr-tokens';
+
+// Alternative — flat values via /tokens subpath
+import { CdrBreakpointSm } from '@rei/cdr-tokens/tokens';
+```
+
 Type example:
 
 ```ts
