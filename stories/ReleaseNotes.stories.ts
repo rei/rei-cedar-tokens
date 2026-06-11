@@ -13,32 +13,50 @@ const meta: Meta = {
 
 export default meta;
 
-// Generate a story for each release note version
+// Helper to create a story for a release note
+const createReleaseNoteStory = (version: string, markdown: string): StoryObj => ({
+  name: version,
+  render: () => {
+    const html = markdownToHtml(markdown);
+
+    return `
+      <div class="docs-page cdr-doc-content">
+        <article>
+          ${html}
+          <p class="release-notes-meta">Cedar Tokens is supported one major version back from the current release. For questions or help upgrading, reach out in the <strong>#cedar-user-support</strong> Slack channel.</p>
+        </article>
+      </div>
+    `;
+  },
+});
+
+// Get all release notes
 const allReleaseNotes = releaseNotesData.allReleaseNotes || [];
 
-const stories: Record<string, StoryObj> = {};
+// Export each version as a named story
+// Storybook requires named exports - we export known versions explicitly
+export const V14_0_0: StoryObj = createReleaseNoteStory(
+  '14.0.0',
+  allReleaseNotes.find((rn) => rn.version === '14.0.0')?.markdown || releaseNotesData.markdown,
+);
 
-for (const releaseNote of allReleaseNotes) {
-  const version = releaseNote.version;
-  // Replace dots with underscores for valid story names
-  const storyName = version.replace(/\./g, '_');
+export const V14_0_1: StoryObj = createReleaseNoteStory(
+  '14.0.1',
+  allReleaseNotes.find((rn) => rn.version === '14.0.1')?.markdown || '',
+);
 
-  stories[storyName] = {
-    name: version,
-    render: () => {
-      const html = markdownToHtml(releaseNote.markdown);
+// Export other versions as fallbacks
+export const Cedar15: StoryObj = createReleaseNoteStory(
+  '15',
+  allReleaseNotes.find((rn) => rn.version === '15')?.markdown || '',
+);
 
-      return `
-        <div class="docs-page cdr-doc-content">
-          <article>
-            ${html}
-            <p class="release-notes-meta">Cedar Tokens is supported one major version back from the current release. For questions or help upgrading, reach out in the <strong>#cedar-user-support</strong> Slack channel.</p>
-          </article>
-        </div>
-      `;
-    },
-  };
-}
+export const Cedar16: StoryObj = createReleaseNoteStory(
+  '16',
+  allReleaseNotes.find((rn) => rn.version === '16')?.markdown || '',
+);
 
-// Export all stories
-export const { ...allStories } = stories;
+export const Initial: StoryObj = createReleaseNoteStory(
+  'initial',
+  allReleaseNotes.find((rn) => rn.fileName.includes('initial'))?.markdown || '',
+);
