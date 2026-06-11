@@ -8,6 +8,12 @@ type ReleaseNoteSelection = {
   markdown: string;
 };
 
+type ReleaseNoteFile = {
+  fileName: string;
+  version: string;
+  markdown: string;
+};
+
 const repoRoot = process.cwd();
 const releaseNotesDir = path.join(repoRoot, 'releaseNotes');
 const generatedDir = path.join(repoRoot, '.storybook', 'generated');
@@ -18,7 +24,11 @@ const ticketDirectoryCandidates = [
   path.join(repoRoot, 'docs', 'tickets'),
 ];
 
-function getReleaseNoteSelection(): { selection: ReleaseNoteSelection; allFiles: string[] } {
+function getReleaseNoteSelection(): {
+  selection: ReleaseNoteSelection;
+  allFiles: string[];
+  allReleaseNotes: ReleaseNoteFile[];
+} {
   if (!fs.existsSync(releaseNotesDir)) {
     return {
       selection: {
@@ -27,6 +37,7 @@ function getReleaseNoteSelection(): { selection: ReleaseNoteSelection; allFiles:
           '# Release Notes\n\nNo release notes found in `releaseNotes/`. Add markdown files to populate this section.',
       },
       allFiles: [],
+      allReleaseNotes: [],
     };
   }
 
@@ -43,16 +54,24 @@ function getReleaseNoteSelection(): { selection: ReleaseNoteSelection; allFiles:
           '# Release Notes\n\nNo release notes found in `releaseNotes/`. Add markdown files to populate this section.',
       },
       allFiles: [],
+      allReleaseNotes: [],
     };
   }
 
   const parsedFiles = markdownFiles.map((fileName) => {
     const filePath = path.join(releaseNotesDir, fileName);
-    const parsed = parseFrontMatter(fs.readFileSync(filePath, 'utf-8'));
+    const parsed = parseFrontMatter(fs.readFileSync(filePath, 'utf8'));
     return { fileName, ...parsed };
   });
 
   const selected = selectReleaseNote(parsedFiles);
+
+  // Generate content for all release note files
+  const allReleaseNotes: ReleaseNoteFile[] = parsedFiles.map((parsed) => ({
+    fileName: parsed.fileName,
+    version: parsed.frontMatter.version || parsed.fileName,
+    markdown: parsed.body,
+  }));
 
   return {
     selection: {
@@ -60,6 +79,7 @@ function getReleaseNoteSelection(): { selection: ReleaseNoteSelection; allFiles:
       markdown: selected.body,
     },
     allFiles: markdownFiles,
+    allReleaseNotes,
   };
 }
 
@@ -175,6 +195,7 @@ function cleanupDoneTicketDocs(): { deleted: string[]; scannedDirs: string[] } {
 function buildGeneratedModuleSource(input: {
   selectedFile: string;
   allFiles: string[];
+  allReleaseNotes: ReleaseNoteFile[];
   markdown: string;
   changedFiles: string[];
   deletedTickets: string[];
@@ -186,6 +207,7 @@ function buildGeneratedModuleSource(input: {
     'export type ReleaseNotesData = {',
     '  selectedFile: string;',
     '  availableFiles: string[];',
+    '  allReleaseNotes: Array<{ fileName: string; version: string; markdown: string }>;',
     '  markdown: string;',
     '  changedFiles: string[];',
     '  deletedTickets: string[];',
@@ -196,6 +218,7 @@ function buildGeneratedModuleSource(input: {
       {
         selectedFile: input.selectedFile,
         availableFiles: input.allFiles,
+        allReleaseNotes: input.allReleaseNotes,
         markdown: input.markdown,
         changedFiles: input.changedFiles,
         deletedTickets: input.deletedTickets,
@@ -209,7 +232,7 @@ function buildGeneratedModuleSource(input: {
 }
 
 function main(): void {
-  const { selection, allFiles } = getReleaseNoteSelection();
+  const { selection, allFiles, allReleaseNotes } = getReleaseNoteSelection();
   const changedFiles = getChangedFiles();
   const branchChangesMarkdown = buildBranchChangesMarkdown(changedFiles);
   const cleanupResult = cleanupDoneTicketDocs();
@@ -222,6 +245,7 @@ function main(): void {
     buildGeneratedModuleSource({
       selectedFile: selection.fileName,
       allFiles,
+      allReleaseNotes,
       markdown: combinedMarkdown,
       changedFiles,
       deletedTickets: cleanupResult.deleted,
@@ -232,6 +256,7 @@ function main(): void {
   process.stdout.write(
     [
       `Selected release note: ${selection.fileName}`,
+      `Total release notes: ${allReleaseNotes.length}`,
       `Changed files found: ${changedFiles.length}`,
       `Ticket directories scanned: ${cleanupResult.scannedDirs.join(', ') || 'none'}`,
       `Ticket files deleted (status: done): ${cleanupResult.deleted.length}`,

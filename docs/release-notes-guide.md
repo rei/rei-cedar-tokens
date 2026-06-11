@@ -102,17 +102,34 @@ Copy the draft to `releaseNotes/` with frontmatter:
 
 ```markdown
 ---
-default: true
-version: 14.0.0
-date: 2026-05-20
+default: false
+version: 14.0.1
+date: 2026-06-10
 ---
 
-# Release notes – v14.0.0
+# Release notes – v14.0.1
 
 ...
 ```
 
-Set `default: false` on the previous release note file.
+#### Additive convention
+
+Release notes are **additive** — never modify or replace existing release note files.
+
+- **Major releases** get `default: true` — shown by default in Storybook.
+- **Minor and patch releases** get `default: false` — additive, accessible in Storybook but don't replace the major.
+- **Never set `default: false` on an existing file** when adding a new one.
+- Include full semver in the filename for patches/minors: `cedar-tokens-14.0.1.md`.
+
+Example directory over time:
+
+```
+releaseNotes/
+  2026-05-20-cedar-tokens-14.md            # v14.0.0 major  — default: true
+  2026-06-10-cedar-tokens-14.0.1.md        # v14.0.1 patch  — default: false
+  2026-07-15-cedar-tokens-14.1.0.md        # v14.1.0 minor  — default: false
+  2026-09-01-cedar-tokens-15.md            # v15.0.0 major  — default: true
+```
 
 Run `pnpm run storybook:release-notes` to regenerate the Storybook data.
 The `storybook` and `build-storybook` scripts do this automatically.

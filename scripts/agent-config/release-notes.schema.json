@@ -169,6 +169,22 @@
       "agentNote": "string | null — internal only; scrubbed in external publish"
     }
   },
+  "releaseNotesConvention": {
+    "$comment": "Release notes are additive. Never modify or replace existing files.",
+    "rules": [
+      "Major releases: default: true — shown by default in Storybook",
+      "Minor and patch releases: default: false — additive, accessible but do not replace the major",
+      "Never set default: false on an existing file when adding a new one",
+      "Include full semver in the filename for patches and minors (e.g. cedar-tokens-14.0.1.md)",
+      "Major versions omit patch/minor in the filename (e.g. cedar-tokens-14.md)"
+    ],
+    "fileNamePattern": "<date>-cedar-tokens-<version>.md",
+    "frontMatterTemplate": {
+      "default": "true for major, false for minor/patch",
+      "version": "semver string",
+      "date": "ISO 8601 date"
+    }
+  },
   "releaseIndex": {
     "$comment": "Append-only. Never rewrite existing records. Corrections use corrects pointer.",
     "path": "docs/releases/index.json",
