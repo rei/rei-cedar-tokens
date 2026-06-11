@@ -44,3 +44,8 @@ export const V14_0_1: StoryObj = createReleaseNoteStory(
   '14.0.1',
   allReleaseNotes.find((rn) => rn.version === '14.0.1')?.markdown || '',
 );
+
+export const V14_0_2: StoryObj = createReleaseNoteStory(
+  '14.0.2',
+  allReleaseNotes.find((rn) => rn.version === '14.0.2')?.markdown || '',
+);

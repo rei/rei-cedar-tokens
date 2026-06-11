@@ -1,0 +1,33 @@
+[
+  {
+    "id": "rei-cedar-tokens/14.0.2/bugfix/webpack4-exports-compatibility",
+    "repo": "rei-cedar-tokens",
+    "changeType": "bugfix",
+    "category": "build",
+    "subject": "Add explicit exports for Webpack 4 compatibility",
+    "before": "Wildcard pattern './types/*' in exports map",
+    "after": "Explicit exports for type paths plus wildcard fallback",
+    "resolvedValue": null,
+    "breaking": false,
+    "consumerActionRequired": false,
+    "consumerImpact": "Webpack 4 consumers can now resolve @rei/cdr-tokens/types/* imports without module resolution errors",
+    "compatibilityRange": {
+      "safeFrom": "14.0.0",
+      "requiresMigrationFrom": null
+    },
+    "crossRepoImpact": {
+      "affectedRepo": "rei-cedar",
+      "impactType": "bugfix",
+      "description": "Cedar v17 consumers using Webpack 4 can now upgrade successfully",
+      "automatable": false
+    },
+    "visualImpact": "none",
+    "figmaAction": null,
+    "deprecation": null,
+    "affectedComponents": [],
+    "migrationSteps": [
+      "Upgrade to @rei/cdr-tokens v14.0.2 if using Webpack 4",
+      "No action required for modern bundlers (Vite, Webpack 5, Rollup)"
+    ]
+  }
+]
