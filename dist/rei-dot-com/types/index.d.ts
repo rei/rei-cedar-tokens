@@ -52,3 +52,6 @@ export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order';
 export type { CdrSpaceScaleOrderKey } from './foundations/cdr-space-scale-order';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order';
 export type { CdrTextSizeOrderKey } from './foundations/cdr-text-size-order';
+
+// Deprecated v13 backward-compat: flat token values
+export * from './_compat-deprecated';

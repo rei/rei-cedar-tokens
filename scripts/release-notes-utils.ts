@@ -1,6 +1,7 @@
 export type FrontMatter = {
   default?: boolean;
   status?: string;
+  version?: string;
 };
 
 export type ParsedMarkdown = {
@@ -64,6 +65,11 @@ export function parseFrontMatter(markdownSource: string): ParsedMarkdown {
 
     if (key === 'status' && typeof value === 'string') {
       frontMatter.status = value;
+      continue;
+    }
+
+    if (key === 'version' && typeof value === 'string') {
+      frontMatter.version = value;
     }
   }
 

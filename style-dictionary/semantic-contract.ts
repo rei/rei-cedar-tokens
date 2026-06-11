@@ -189,9 +189,63 @@ export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order.mjs';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order.mjs';
 `;
 
-  await fs.writeFile(path.join(typesDir, 'index.mjs'), semanticMjsContent);
+  // ---- Generate deprecated backward-compat shim ----
+  // Re-export all flat token values (v13 style) so that
+  //   import { CdrBreakpointSm } from '@rei/cdr-tokens'
+  // still works, but every import is flagged @deprecated.
+  const flatMjsSrc = await fs.readFile(
+    path.join(__dirname, '../dist/rei-dot-com/js/cdr-tokens.mjs'),
+    'utf8',
+  );
+  const flatNames = [...flatMjsSrc.matchAll(/export const (\w+)/g)].map((m) => m[1]);
 
-  const semanticDtsContent = `/**
+  // Collect semantic contract export names to avoid collisions
+  const semanticNames = new Set<string>();
+  for (const moduleName of foundationsModulesName) {
+    semanticNames.add(`Cdr${toPascalCase(moduleName)}`);
+  }
+  semanticNames.add('CdrBreakpointOrder');
+  semanticNames.add('CdrSpaceScaleOrder');
+  semanticNames.add('CdrTextSizeOrder');
+
+  const compatNames = flatNames.filter((name) => !semanticNames.has(name));
+
+  // Generate deprecated compat .mjs — named re-exports from the flat file
+  const compatMjsLines = [
+    '/**',
+    ' * @deprecated These flat token exports are deprecated.',
+    ' * Use grouped objects from the main entrypoint instead:',
+    " *   import { CdrBreakpoint, CdrColorText } from '@rei/cdr-tokens';",
+    ' * Or use the /tokens subpath for flat values:',
+    " *   import { CdrBreakpointSm } from '@rei/cdr-tokens/tokens';",
+    ' */',
+    `export { ${compatNames.join(', ')} } from '../js/cdr-tokens.mjs';`,
+    '',
+  ];
+  await fs.writeFile(path.join(typesDir, '_compat-deprecated.mjs'), compatMjsLines.join('\n'));
+
+  // Generate deprecated compat .d.ts — each export gets a @deprecated JSDoc
+  const compatDtsLines = [
+    '// Deprecated backward-compat re-exports of flat token values.',
+    '// Use grouped objects or the /tokens subpath instead.',
+    '',
+  ];
+  for (const name of compatNames) {
+    compatDtsLines.push(
+      `/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */`,
+    );
+    compatDtsLines.push(`export const ${name}: string;`);
+  }
+  compatDtsLines.push('');
+  await fs.writeFile(path.join(typesDir, '_compat-deprecated.d.ts'), compatDtsLines.join('\n'));
+
+  // Append compat re-exports to the main entrypoint files
+  const compatMjsReexport = `\n// Deprecated v13 backward-compat: flat token values\nexport * from './_compat-deprecated.mjs';\n`;
+  const compatDtsReexport = `\n// Deprecated v13 backward-compat: flat token values\nexport * from './_compat-deprecated';\n`;
+
+  const fullMjsContent = semanticMjsContent + compatMjsReexport;
+  const fullDtsContent =
+    `/**
  * Cedar Semantic Contract - TypeScript Type Definitions
  */
 
@@ -202,9 +256,10 @@ export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order';
 export type { CdrSpaceScaleOrderKey } from './foundations/cdr-space-scale-order';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order';
 export type { CdrTextSizeOrderKey } from './foundations/cdr-text-size-order';
-`;
+` + compatDtsReexport;
 
-  await fs.writeFile(path.join(typesDir, 'index.d.ts'), semanticDtsContent);
+  await fs.writeFile(path.join(typesDir, 'index.mjs'), fullMjsContent);
+  await fs.writeFile(path.join(typesDir, 'index.d.ts'), fullDtsContent);
 
   // Generate canonical order modules for ordered-dimension token families.
   await generateOrderModule(typesDir, {
