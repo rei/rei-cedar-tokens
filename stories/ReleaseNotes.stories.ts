@@ -34,7 +34,7 @@ const createReleaseNoteStory = (version: string, markdown: string): StoryObj => 
 const allReleaseNotes = releaseNotesData.allReleaseNotes || [];
 
 // Export each version as a named story
-// Storybook requires named exports - we export known versions explicitly
+// Only actual cedar-tokens releases are exported
 export const V14_0_0: StoryObj = createReleaseNoteStory(
   '14.0.0',
   allReleaseNotes.find((rn) => rn.version === '14.0.0')?.markdown || releaseNotesData.markdown,
@@ -43,20 +43,4 @@ export const V14_0_0: StoryObj = createReleaseNoteStory(
 export const V14_0_1: StoryObj = createReleaseNoteStory(
   '14.0.1',
   allReleaseNotes.find((rn) => rn.version === '14.0.1')?.markdown || '',
-);
-
-// Export other versions as fallbacks
-export const Cedar15: StoryObj = createReleaseNoteStory(
-  '15',
-  allReleaseNotes.find((rn) => rn.version === '15')?.markdown || '',
-);
-
-export const Cedar16: StoryObj = createReleaseNoteStory(
-  '16',
-  allReleaseNotes.find((rn) => rn.version === '16')?.markdown || '',
-);
-
-export const Initial: StoryObj = createReleaseNoteStory(
-  'initial',
-  allReleaseNotes.find((rn) => rn.fileName.includes('initial'))?.markdown || '',
 );
