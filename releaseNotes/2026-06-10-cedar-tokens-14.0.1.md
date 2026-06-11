@@ -10,8 +10,7 @@ date: 2026-06-10
 
 Patch release that fixes a TypeScript declaration bug in the barrel file generation. The `@rei/cdr-tokens/types` entrypoint was using `export type *` for all `.d.ts` re-exports, which stripped runtime value exports from grouped objects and key arrays. This prevented consumers from importing and using these values at runtime (e.g., for Tailwind config integration). The fix distinguishes between genuinely type-only files (`.names.d.ts`, `base/` directory) and files with runtime value exports, using `export *` for the latter.
 
-<details>
-<summary>## Bug fixes</summary>
+## Bug fixes
 
 - **TypeScript barrel export bug** — The `generate-types-barrel` action applied `export type *` uniformly to all `.d.ts` file re-exports in `tokens.d.ts`. This stripped runtime `const` exports (grouped objects, key arrays, order arrays) from the `/types` barrel entrypoint, making them unusable as values at runtime.
   - **Root cause:** The barrel generator did not distinguish between type-only declaration files and files containing `declare const` runtime value exports.
@@ -21,10 +20,7 @@ Patch release that fixes a TypeScript declaration bug in the barrel file generat
   - **Before:** `import { CdrBreakpoint, CdrSpaceScaleKeys } from '@rei/cdr-tokens/types'` — TypeScript error: "cannot be used as a value because it was exported using 'export type'"
   - **After:** `import { CdrBreakpoint, CdrSpaceScaleKeys } from '@rei/cdr-tokens/types'` — works as both types and runtime values
 
-</details>
-
-<details>
-<summary>## Migration guide</summary>
+## Migration guide
 
 ### No breaking changes
 
@@ -60,15 +56,10 @@ export default {
 };
 ```
 
-</details>
-
-<details>
-<summary>## Be Aware Of</summary>
+## Be Aware Of
 
 ### Notices
 
 - The root `@rei/cdr-tokens` entrypoint is unchanged. CJS `require()` still resolves to the flat token constants. Use `@rei/cdr-tokens/types` for grouped objects and key arrays.
 - This patch does not change any token values, CSS output, SCSS output, or JSON artifacts — only the TypeScript declaration barrel file.
 - A regression test has been added to `style-dictionary/token-keys.test.ts` to prevent this from recurring.
-
-</details>
