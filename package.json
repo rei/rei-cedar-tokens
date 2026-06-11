@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-tokens",
-  "version": "14.0.1",
+  "version": "14.0.2",
   "private": false,
   "description": "Tokens for REI cedar design system",
   "homepage": "https://rei.github.io/rei-cedar-tokens/#/",
@@ -37,6 +37,76 @@
       "types": "./dist/rei-dot-com/types/tokens.d.ts",
       "import": "./dist/rei-dot-com/types/tokens.mjs",
       "default": "./dist/rei-dot-com/types/tokens.mjs"
+    },
+    "./types/breakpoint": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-breakpoint.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-breakpoint.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-breakpoint.mjs"
+    },
+    "./types/breakpoint.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-breakpoint.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-breakpoint.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-breakpoint.keys.mjs"
+    },
+    "./types/color-background": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-color-background.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-color-background.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-color-background.mjs"
+    },
+    "./types/color-background.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-color-background.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-color-background.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-color-background.keys.mjs"
+    },
+    "./types/color-border": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-color-border.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-color-border.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-color-border.mjs"
+    },
+    "./types/color-border.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-color-border.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-color-border.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-color-border.keys.mjs"
+    },
+    "./types/prominence": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-prominence.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-prominence.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-prominence.mjs"
+    },
+    "./types/prominence.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-prominence.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-prominence.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-prominence.keys.mjs"
+    },
+    "./types/radius": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-radius.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-radius.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-radius.mjs"
+    },
+    "./types/radius.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-radius.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-radius.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-radius.keys.mjs"
+    },
+    "./types/space": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-space.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-space.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-space.mjs"
+    },
+    "./types/space.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-space.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-space.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-space.keys.mjs"
+    },
+    "./types/space-scale": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-space-scale.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-space-scale.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-space-scale.mjs"
+    },
+    "./types/space-scale.keys": {
+      "types": "./dist/rei-dot-com/types/foundations/cdr-space-scale.keys.d.ts",
+      "import": "./dist/rei-dot-com/types/foundations/cdr-space-scale.keys.mjs",
+      "default": "./dist/rei-dot-com/types/foundations/cdr-space-scale.keys.mjs"
     },
     "./types/*": {
       "types": "./dist/rei-dot-com/types/foundations/cdr-*.d.ts",
