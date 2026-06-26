@@ -107,5 +107,4 @@ export interface CdrLineHeightTokens {
 }
 
 export declare const CdrLineHeight: CdrLineHeightTokens;
-
 export default CdrLineHeight;

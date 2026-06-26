@@ -25,5 +25,4 @@ export interface CdrSpaceIconTokens {
 }
 
 export declare const CdrSpaceIcon: CdrSpaceIconTokens;
-
 export default CdrSpaceIcon;

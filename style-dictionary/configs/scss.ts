@@ -7,13 +7,39 @@ import { componentsFilters } from './filters/componentsFilters';
 export const scss = (theme: Theme): PlatformConfig => ({
   scss: {
     ...commonConfig(theme, 'scss'),
-    transformGroup: 'tokens-studio',
     transforms: [
-      'attribute/deprecated',
+      // tokens-studio transforms
+      'ts/descriptionToComment',
+      'ts/resolveMath',
+      'ts/size/px',
+      'ts/opacity',
+      'ts/size/lineheight',
+      'ts/typography/fontWeight',
+      'ts/color/modifiers',
+      'ts/color/css/hexrgba',
+      'ts/size/css/letterspacing',
+      'ts/shadow/innerShadow',
+      // built-in CSS transforms (excluding size/rem to use our custom override)
+      'attribute/cti',
       'attribute/text-short-names',
       'name/kebab',
+      'time/seconds',
+      'html/icon',
+      'color/css',
+      'asset/url',
+      'fontFamily/css',
+      'cubicBezier/css',
+      'strokeStyle/css/shorthand',
+      'border/css/shorthand',
+      'typography/css/shorthand',
+      'transition/css/shorthand',
+      'shadow/css/shorthand',
+      // custom transforms
+      'attribute/deprecated',
       'size/space',
       'size/px-to-rem-transitive',
+      'size/rem-custom',
+      'fontFamily/css-quotes',
       'value/clamp',
     ],
     files: [

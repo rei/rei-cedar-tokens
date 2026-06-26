@@ -49,5 +49,4 @@ export interface CdrMotionDurationTokens {
 }
 
 export declare const CdrMotionDuration: CdrMotionDurationTokens;
-
 export default CdrMotionDuration;

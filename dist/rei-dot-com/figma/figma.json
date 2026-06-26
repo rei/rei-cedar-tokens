@@ -3342,6 +3342,215 @@
       }
     }
   },
+  "text-italic": {
+    "variation": {
+      "$value": "'ital' 1",
+      "$type": "string",
+      "filePath": "tokens/web/typography.json"
+    },
+    "style": {
+      "$value": "{font.style.italic}",
+      "$type": "fontStyle",
+      "filePath": "tokens/web/typography.json"
+    }
+  },
+  "text-strong": {
+    "weight": {
+      "$value": "{font.weight.strong}",
+      "$type": "fontWeight",
+      "filePath": "tokens/web/typography.json"
+    }
+  },
+  "membership": {
+    "vibrant": {
+      "color": {
+        "text": {
+          "button": {
+            "primary-hover": {
+              "$value": "#13352c",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/button.json"
+            }
+          },
+          "primary": {
+            "$value": "#13352c",
+            "$type": "color",
+            "filePath": "tokens/themes/rei-dot-com/color.json"
+          },
+          "link": {
+            "rest": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "hover": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "visited": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            }
+          }
+        },
+        "background": {
+          "button": {
+            "primary": {
+              "rest": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              },
+              "active": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              }
+            }
+          },
+          "primary": {
+            "$value": "#ffdc52",
+            "$type": "color",
+            "filePath": "tokens/themes/rei-dot-com/color.json"
+          }
+        },
+        "border": {
+          "button": {
+            "primary": {
+              "rest": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              },
+              "active": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              },
+              "hover": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              }
+            }
+          },
+          "link": {
+            "rest": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "hover": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "visited": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            }
+          }
+        }
+      }
+    },
+    "subtle": {
+      "color": {
+        "text": {
+          "button": {
+            "primary-hover": {
+              "$value": "#13352c",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/button.json"
+            }
+          },
+          "primary": {
+            "$value": "#13352c",
+            "$type": "color",
+            "filePath": "tokens/themes/rei-dot-com/color.json"
+          },
+          "link": {
+            "rest": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "hover": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "visited": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            }
+          }
+        },
+        "background": {
+          "button": {
+            "primary": {
+              "rest": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              },
+              "active": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              }
+            }
+          },
+          "primary": {
+            "$value": "#bfb33e",
+            "$type": "color",
+            "filePath": "tokens/themes/rei-dot-com/color.json"
+          }
+        },
+        "border": {
+          "button": {
+            "primary": {
+              "rest": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              },
+              "active": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              },
+              "hover": {
+                "$value": "#13352c",
+                "$type": "color",
+                "filePath": "tokens/themes/rei-dot-com/button.json"
+              }
+            }
+          },
+          "link": {
+            "rest": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "hover": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            },
+            "visited": {
+              "$value": "#13352C",
+              "$type": "color",
+              "filePath": "tokens/themes/rei-dot-com/link.json"
+            }
+          }
+        }
+      }
+    }
+  },
   "text-default": {
     "fontFamily": {
       "$value": "{font.family.sans}",
@@ -5736,215 +5945,6 @@
         "$value": "{font.height.1100}",
         "$type": "number",
         "filePath": "tokens/web/typography.json"
-      }
-    }
-  },
-  "text-italic": {
-    "variation": {
-      "$value": "'ital' 1",
-      "$type": "string",
-      "filePath": "tokens/web/typography.json"
-    },
-    "style": {
-      "$value": "{font.style.italic}",
-      "$type": "fontStyle",
-      "filePath": "tokens/web/typography.json"
-    }
-  },
-  "text-strong": {
-    "weight": {
-      "$value": "{font.weight.strong}",
-      "$type": "fontWeight",
-      "filePath": "tokens/web/typography.json"
-    }
-  },
-  "membership": {
-    "vibrant": {
-      "color": {
-        "text": {
-          "button": {
-            "primary-hover": {
-              "$value": "#13352c",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/button.json"
-            }
-          },
-          "primary": {
-            "$value": "#13352c",
-            "$type": "color",
-            "filePath": "tokens/themes/rei-dot-com/color.json"
-          },
-          "link": {
-            "rest": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "hover": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "visited": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            }
-          }
-        },
-        "background": {
-          "button": {
-            "primary": {
-              "rest": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              },
-              "active": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              }
-            }
-          },
-          "primary": {
-            "$value": "#ffdc52",
-            "$type": "color",
-            "filePath": "tokens/themes/rei-dot-com/color.json"
-          }
-        },
-        "border": {
-          "button": {
-            "primary": {
-              "rest": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              },
-              "active": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              },
-              "hover": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              }
-            }
-          },
-          "link": {
-            "rest": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "hover": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "visited": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            }
-          }
-        }
-      }
-    },
-    "subtle": {
-      "color": {
-        "text": {
-          "button": {
-            "primary-hover": {
-              "$value": "#13352c",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/button.json"
-            }
-          },
-          "primary": {
-            "$value": "#13352c",
-            "$type": "color",
-            "filePath": "tokens/themes/rei-dot-com/color.json"
-          },
-          "link": {
-            "rest": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "hover": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "visited": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            }
-          }
-        },
-        "background": {
-          "button": {
-            "primary": {
-              "rest": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              },
-              "active": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              }
-            }
-          },
-          "primary": {
-            "$value": "#bfb33e",
-            "$type": "color",
-            "filePath": "tokens/themes/rei-dot-com/color.json"
-          }
-        },
-        "border": {
-          "button": {
-            "primary": {
-              "rest": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              },
-              "active": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              },
-              "hover": {
-                "$value": "#13352c",
-                "$type": "color",
-                "filePath": "tokens/themes/rei-dot-com/button.json"
-              }
-            }
-          },
-          "link": {
-            "rest": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "hover": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            },
-            "visited": {
-              "$value": "#13352C",
-              "$type": "color",
-              "filePath": "tokens/themes/rei-dot-com/link.json"
-            }
-          }
-        }
       }
     }
   }

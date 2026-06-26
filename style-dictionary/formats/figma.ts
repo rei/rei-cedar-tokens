@@ -5,11 +5,48 @@ import type {
   TransformedTokens,
 } from 'style-dictionary/types';
 import _ from 'lodash';
-import { cleanMeta } from '@divriots/style-dictionary-to-figma';
 import { registerDeepMixin } from './utils';
 
 // Register the custom lodash mixin
 registerDeepMixin();
+
+/**
+ * Recursively removes specified keys from an object.
+ * Replaces @divriots/style-dictionary-to-figma cleanMeta (abandoned package).
+ */
+function cleanMeta(
+  obj: Record<string, unknown>,
+  opts?: { cleanMeta?: string[] | boolean },
+): Record<string, unknown> {
+  const cleanMetaOpts = opts?.cleanMeta;
+  if (!cleanMetaOpts) return obj;
+
+  const keys: string[] = Array.isArray(cleanMetaOpts)
+    ? cleanMetaOpts
+    : ['filePath', 'isSource', 'original', 'attributes', 'path'];
+
+  if (typeof obj !== 'object' || obj === null) return obj;
+
+  return Object.keys(obj)
+    .filter((k) => !keys.includes(k))
+    .reduce(
+      (acc, x) =>
+        Object.assign(acc, {
+          [x]: cleanMeta(obj[x] as Record<string, unknown>, { cleanMeta: keys }),
+        }),
+      {} as Record<string, unknown>,
+    );
+}
+
+/**
+ * Checks if a token path indicates it's inside options.font or options.space.
+ * These tokens were plain values (not DTCG) in SD v4, so the old figma format
+ * output them as flat strings/numbers rather than objects with $value/$type.
+ */
+function isFlatToken(token: TransformedToken): boolean {
+  const path = token.path || [];
+  return path[0] === 'options' && (path[1] === 'font' || path[1] === 'space');
+}
 
 /**
  * Registers a custom Figma format for Style Dictionary.
@@ -38,11 +75,9 @@ export const figma = (sd: typeof StyleDictionary): void => {
       ];
 
       /**
-       * Recursively preserves original token references in the token structure.
-       * Transforms tokens to maintain reference values instead of resolved values.
-       *
-       * @param tokens - The token dictionary to transform
-       * @returns Transformed tokens with preserved references
+       * Recursively processes tokens for the figma output.
+       * - For tokens inside options.font/options.space: output flat resolved values
+       * - For all other tokens: output objects with $value (resolved), $type, filePath
        */
       const preserveReferences = (tokens: TransformedTokens): Record<string, unknown> => {
         return _.deep(tokens, (obj) => {
@@ -52,17 +87,55 @@ export const figma = (sd: typeof StyleDictionary): void => {
               typeof value === 'object' &&
               value !== null &&
               'original' in value &&
-              value.original?.$value &&
-              typeof value.original.$value === 'string'
+              value.original?.$value !== undefined
             ) {
-              // Preserve the original reference value and remove the 'options.' prefix
+              const token = value as TransformedToken;
+
+              // Tokens inside options.font or options.space were plain values in SD v4.
+              // Output them as flat values to match the old figma format.
+              // For tokens with references: use resolved $value
+              // For simple tokens: use original $value (avoids px→rem transform)
+              if (isFlatToken(token)) {
+                const origVal = token.original?.$value;
+                if (typeof origVal === 'string' && origVal.includes('{')) {
+                  return token.$value;
+                }
+                return origVal ?? token.$value;
+              }
+
+              // All other tokens: output as objects with unresolved reference from original.$value.
+              // This preserves the reference syntax (e.g., "{color.warm-grey-010}") matching old behavior.
+              // Use original.$value with 'options.' prefix removed.
+              // For composite values (multiple references), add '.$value' to each reference
+              // to match the old SD v4 source format.
+              let origVal = token.original?.$value;
+              if (typeof origVal === 'string') {
+                origVal = origVal.replace('options.', '');
+                // Add .$value to references in composite values (multiple refs separated by spaces)
+                if (origVal.includes('} {')) {
+                  origVal = origVal.replace(/\{([^}]+)\}/g, (match, ref) => {
+                    return ref.includes('.$value') ? match : `{$ref.$value}`.replace('$ref', ref);
+                  });
+                }
+              }
+              // Clean original for clamp tokens: remove 'key' that SD v5 adds
+              let cleanOriginal: Record<string, unknown> | undefined;
+              if (token.$type === 'clamp' && token.original) {
+                const { key: _origKey, ...rest } = token.original as Record<string, unknown>;
+                void _origKey;
+                cleanOriginal = rest;
+              }
+
               return {
-                $value: value.original.$value.replace('options.', ''),
-                $type: value.$type,
-                ...(value.original.$description && {
-                  $description: value.original.$description,
+                $value: origVal,
+                $type: token.$type,
+                // Preserve filePath before original (matches old figma output order)
+                ...(token.filePath && { filePath: token.filePath }),
+                // Preserve original for clamp tokens (matches old figma output)
+                ...(token.$type === 'clamp' && cleanOriginal && { original: cleanOriginal }),
+                ...(token.original?.$description && {
+                  $description: token.original.$description,
                 }),
-                ...(value.filePath && { filePath: value.filePath }),
               };
             }
             return value;

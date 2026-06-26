@@ -377,5 +377,4 @@ export interface CdrTextSizeTokens {
 }
 
 export declare const CdrTextSize: CdrTextSizeTokens;
-
 export default CdrTextSize;

@@ -52,5 +52,4 @@ export interface CdrTypeTokens {
 }
 
 export declare const CdrType: CdrTypeTokens;
-
 export default CdrType;

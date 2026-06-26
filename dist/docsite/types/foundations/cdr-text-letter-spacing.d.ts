@@ -372,5 +372,4 @@ export interface CdrTextLetterSpacingTokens {
 }
 
 export declare const CdrTextLetterSpacing: CdrTextLetterSpacingTokens;
-
 export default CdrTextLetterSpacing;

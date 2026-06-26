@@ -26,5 +26,4 @@ export interface CdrColorIconTokens {
 }
 
 export declare const CdrColorIcon: CdrColorIconTokens;
-
 export default CdrColorIcon;

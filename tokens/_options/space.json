@@ -1,21 +1,66 @@
 {
   "options": {
     "space": {
-      "squish": 0.5,
-      "stretch": 1.5,
-      "zero": "0px",
-      "sixteenth-x": "1px",
-      "eighth-x": "2px",
-      "three-sixteenth-x": "3px",
-      "quarter-x": "4px",
-      "three-eighth-x": "6px",
-      "half-x": "8px",
-      "three-quarter-x": "12px",
-      "one-x": "16px",
-      "one-and-a-half-x": "24px",
-      "two-x": "32px",
-      "three-x": "48px",
-      "four-x": "64px"
+      "squish": {
+        "$value": 0.5,
+        "$type": "number"
+      },
+      "stretch": {
+        "$value": 1.5,
+        "$type": "number"
+      },
+      "zero": {
+        "$value": "0px",
+        "$type": "dimension"
+      },
+      "sixteenth-x": {
+        "$value": "1px",
+        "$type": "dimension"
+      },
+      "eighth-x": {
+        "$value": "2px",
+        "$type": "dimension"
+      },
+      "three-sixteenth-x": {
+        "$value": "3px",
+        "$type": "dimension"
+      },
+      "quarter-x": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "three-eighth-x": {
+        "$value": "6px",
+        "$type": "dimension"
+      },
+      "half-x": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "three-quarter-x": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "one-x": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "one-and-a-half-x": {
+        "$value": "24px",
+        "$type": "dimension"
+      },
+      "two-x": {
+        "$value": "32px",
+        "$type": "dimension"
+      },
+      "three-x": {
+        "$value": "48px",
+        "$type": "dimension"
+      },
+      "four-x": {
+        "$value": "64px",
+        "$type": "dimension"
+      }
     }
   }
 }

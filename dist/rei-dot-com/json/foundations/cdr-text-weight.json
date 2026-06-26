@@ -1,6 +1,23 @@
 {
   "misc": [
     {
+      "$type": "fontWeight",
+      "$value": "700",
+      "filePath": "tokens/web/typography.json",
+      "isSource": false,
+      "original": {
+        "$type": "fontWeight",
+        "$value": "{options.font.weight.strong}"
+      },
+      "name": "cdr-text-strong-weight",
+      "attributes": {
+        "category": "text-strong",
+        "type": "weight",
+        "deprecated": false
+      },
+      "key": "{text-strong.weight}"
+    },
+    {
       "filePath": "tokens/web/typography.json",
       "isSource": false,
       "$value": "400",
@@ -1330,23 +1347,6 @@
         "deprecated": false
       },
       "key": "{text-utility-serif-strong.800.fontWeight}"
-    },
-    {
-      "$type": "fontWeight",
-      "$value": "700",
-      "filePath": "tokens/web/typography.json",
-      "isSource": false,
-      "original": {
-        "$type": "fontWeight",
-        "$value": "{options.font.weight.strong}"
-      },
-      "name": "cdr-text-strong-weight",
-      "attributes": {
-        "category": "text-strong",
-        "type": "weight",
-        "deprecated": false
-      },
-      "key": "{text-strong.weight}"
     }
   ]
 }

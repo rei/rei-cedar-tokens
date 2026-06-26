@@ -56,5 +56,4 @@ export interface CdrColorBackgroundTokens {
 }
 
 export declare const CdrColorBackground: CdrColorBackgroundTokens;
-
 export default CdrColorBackground;

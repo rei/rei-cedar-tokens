@@ -377,5 +377,4 @@ export interface CdrTextWeightTokens {
 }
 
 export declare const CdrTextWeight: CdrTextWeightTokens;
-
 export default CdrTextWeight;

@@ -89,5 +89,4 @@ export interface CdrSpaceScaleTokens {
 }
 
 export declare const CdrSpaceScale: CdrSpaceScaleTokens;
-
 export default CdrSpaceScale;

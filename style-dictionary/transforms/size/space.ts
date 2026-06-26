@@ -28,8 +28,16 @@ export const space = (sd: typeof StyleDictionary): void => {
       token.$type === 'dimension' && !!(token as SpaceToken).spacingModifier,
     transform: (token: Token): string => {
       const { $value, spacingModifier } = token as SpaceToken;
-      const num = parseFloat($value) * (spacingModifier || 1);
-      return String(parseFloat(num.toFixed(10)));
+      const match = $value.match(/^(-?[\d.]+)\s*(.*)$/);
+      if (!match) {
+        const num = parseFloat($value) * (spacingModifier || 1);
+        return String(parseFloat(num.toFixed(10)));
+      }
+      const rawValue = parseFloat(match[1]);
+      const unit = match[2];
+      const num = rawValue * (spacingModifier || 1);
+      const result = parseFloat(num.toFixed(10));
+      return unit ? `${result}${unit}` : String(result);
     },
   });
 };
