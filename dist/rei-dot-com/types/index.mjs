@@ -33,3 +33,6 @@ export { CdrType } from './foundations/cdr-type.mjs';
 export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
 export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order.mjs';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order.mjs';
+
+// Deprecated v13 backward-compat: flat token values
+export * from './_compat-deprecated.mjs';

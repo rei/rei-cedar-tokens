@@ -10,6 +10,7 @@ export const js = (theme: Theme): PlatformConfig => ({
       'attribute/deprecated',
       'attribute/text-short-names',
       'name/pascal',
+      'name/pascal-space-scale-range',
       'size/strip-all-px-js',
       'size/space-js',
       'value/clamp',

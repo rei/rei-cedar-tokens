@@ -112,62 +112,11 @@ const pageChrome = `
     }
 
     .docs-layout {
-      display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: var(--docs-space-4x);
-      align-items: start;
+      display: block;
     }
 
     .docs-nav {
-      position: sticky;
-      top: 20px;
-      align-self: start;
-      max-height: calc(100vh - 40px);
-      overflow: auto;
-      padding-right: var(--docs-space-1x);
-    }
-
-    .docs-nav-title {
-      margin: 0 0 var(--docs-space-1x);
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--docs-text-secondary);
-    }
-
-    .docs-nav-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .docs-nav-link {
-      display: block;
-      text-decoration: none;
-      color: var(--docs-text-secondary);
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 12px;
-      line-height: 1.4;
-      border-left: 2px solid transparent;
-      padding: 5px 8px;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .docs-nav-link:hover {
-      color: var(--docs-text-primary);
-      background: var(--docs-bg-surface);
-    }
-
-    .docs-nav-link.is-active {
-      color: var(--docs-text-primary);
-      border-left-color: var(--docs-text-primary);
-      background: var(--docs-bg-surface);
-      font-weight: 600;
+      display: none;
     }
 
     .docs-content {
@@ -337,22 +286,6 @@ const pageChrome = `
       background: var(--docs-bg-surface);
     }
 
-    @media (max-width: 940px) {
-      .docs-layout {
-        grid-template-columns: 1fr;
-        gap: var(--docs-space-2x);
-      }
-
-      .docs-nav {
-        position: relative;
-        top: 0;
-        max-height: none;
-        border: 1px solid var(--docs-border);
-        border-radius: 10px;
-        padding: 10px;
-        background: var(--docs-bg-surface);
-      }
-    }
   </style>
 `;
 
@@ -1016,6 +949,60 @@ export const diagnostics = {
               ],
             ],
           },
+        },
+        {
+          id: 'runtime-key-arrays',
+          heading: 'Runtime key arrays',
+          prose: [
+            'Every foundation module exports a Keys array — a runtime const tuple of kebab-case semantic keys. These map directly to CSS custom property names (--cdr-{group}-{key}) and are the recommended building block for framework integration layers.',
+            'Key arrays are exported from @rei/cdr-tokens/types alongside grouped objects and interfaces. They are runtime values, not type-only exports.',
+          ],
+          codeSamples: [
+            {
+              title: 'Import key arrays',
+              language: 'ts',
+              code: `import { CdrSpaceScaleKeys, CdrColorBackgroundKeys } from '@rei/cdr-tokens/types';
+
+// CdrSpaceScaleKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", ...]
+// CdrColorBackgroundKeys = ["primary", "secondary", "sale", ...]`,
+            },
+            {
+              title: 'Tailwind config integration',
+              language: 'ts',
+              code: `import {
+  CdrBreakpoint,
+  CdrSpaceKeys,
+  CdrSpaceScaleKeys,
+  CdrRadiusKeys,
+  CdrColorBackgroundKeys,
+  CdrColorTextKeys,
+  CdrColorBorderKeys,
+} from '@rei/cdr-tokens/types';
+
+const keysToVars = (keys: readonly string[], prefix: string) =>
+  Object.fromEntries(keys.map((key) => [key, \`var(--\${prefix}-\${key})\`]));
+
+export default {
+  theme: {
+    screens: {
+      xs: \`\${CdrBreakpoint.CdrBreakpointXs}px\`,
+      sm: \`\${CdrBreakpoint.CdrBreakpointSm}px\`,
+      md: \`\${CdrBreakpoint.CdrBreakpointMd}px\`,
+      lg: \`\${CdrBreakpoint.CdrBreakpointLg}px\`,
+    },
+    extend: {
+      spacing: keysToVars(CdrSpaceKeys, 'cdr-space'),
+      borderRadius: keysToVars(CdrRadiusKeys, 'cdr-radius'),
+      colors: {
+        background: keysToVars(CdrColorBackgroundKeys, 'cdr-color-background'),
+        text: keysToVars(CdrColorTextKeys, 'cdr-color-text'),
+        border: keysToVars(CdrColorBorderKeys, 'cdr-color-border'),
+      },
+    },
+  },
+};`,
+            },
+          ],
         },
         {
           id: 'related-contracts',

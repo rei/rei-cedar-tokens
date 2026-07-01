@@ -11,7 +11,7 @@ import { getModuleBaseName, toPascalCase } from './typescript-module-utils';
  */
 function getModulePrefix(destination?: string): string {
   // getModuleBaseName strips .names.d.ts → keep parity for .keys.d.ts
-  const base = getModuleBaseName(destination).replace(/\.keys$/, '');
+  const base = getModuleBaseName(destination);
   return toPascalCase(base);
 }
 
@@ -56,6 +56,7 @@ export const typescriptTokenKeyUnion = (sd: typeof StyleDictionary): void => {
       const prefix = getModulePrefix(file?.destination);
       const moduleName = prefix; // e.g. "CdrBreakpoint"
       const unionTypeName = `${moduleName}Key`;
+      const arrayName = `${moduleName}Keys`;
 
       const keys = dictionary.allTokens
         .map((token) => toSemanticKey(token.name, prefix))
@@ -64,7 +65,22 @@ export const typescriptTokenKeyUnion = (sd: typeof StyleDictionary): void => {
 
       const uniqueKeys = [...new Set(keys)];
 
+      if (file?.destination?.endsWith('.mjs')) {
+        return [
+          `export const ${arrayName} = [`,
+          ...uniqueKeys.map((key) => `  ${JSON.stringify(key)},`),
+          `];`,
+          '',
+        ].join('\n');
+      }
+
       return [
+        `export declare const ${arrayName}: readonly [`,
+        ...uniqueKeys.map((key, index) => {
+          const suffix = index === uniqueKeys.length - 1 ? '' : ',';
+          return `  ${JSON.stringify(key)}${suffix}`;
+        }),
+        `];`,
         `export type ${unionTypeName} =`,
         ...uniqueKeys.map((key, index) => {
           const suffix = index === uniqueKeys.length - 1 ? ';' : '';

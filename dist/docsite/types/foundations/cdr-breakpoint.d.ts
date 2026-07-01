@@ -26,4 +26,5 @@ export interface CdrBreakpointTokens {
 }
 
 export declare const CdrBreakpoint: CdrBreakpointTokens;
+
 export default CdrBreakpoint;

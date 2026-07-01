@@ -30,6 +30,7 @@ const __dirname = getDirname(import.meta.url);
 // ==== Include custom transforms ====
 import { deprecated } from './transforms/attribute/deprecated';
 import { textShortNames } from './transforms/attribute/text-short-names';
+import { spaceScaleRangeNames } from './transforms/attribute/space-scale-range-names';
 import { dpTransitive } from './transforms/size/dp-transitive';
 import { space } from './transforms/size/space';
 import { spaceJs } from './transforms/size/space-js';
@@ -129,6 +130,7 @@ sizeRemOverride(StyleDictionary);
 // deprecated MUST be first as it mutates token paths
 deprecated(StyleDictionary);
 textShortNames(StyleDictionary);
+spaceScaleRangeNames(StyleDictionary);
 dpTransitive(StyleDictionary);
 space(StyleDictionary);
 spaceJs(StyleDictionary);

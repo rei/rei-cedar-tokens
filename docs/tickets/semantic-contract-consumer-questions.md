@@ -208,8 +208,10 @@ runtime maps. The token repo needs a policy before freezing the semantic key voc
   - SCSS `@warn` on deprecated map key access where possible
   - JSON `deprecated: true` + `replacement` + `sinceVersion` fields in `contract.json`
 - Semantic key renames/removals require Cedar sign-off before stable release.
-- Alpha release notes must include a **Semantic Contract Changes** section listing
-  explicit adds, deprecations (with replacement), and removals.
+- Token name changes are breaking changes and must be listed in the release notes
+  under a **Semantic Contract Changes** / breaking changes section.
+- That section must list explicit adds, deprecations (with replacement), removals,
+  and any token-name renames that change the consumer-facing contract.
 
 **Affects outputs:**  
 Deprecation tags in generated `.d.ts`, `@warn` in SCSS utilities, `docs/DEPRECATION.md`
@@ -227,3 +229,89 @@ When an answer is reached for any question:
 3. Open an implementation ticket in `docs/tickets/` with the specific output changes
    required.
 4. Freeze the decision in the next alpha release notes.
+
+---
+
+## Alpha v14 — Semantic Contract Changes Tracking
+
+> **Status:** Pre-release / `feature/cedarContract` branch (targeting `next`).
+> This section is the source of truth for the **Semantic Contract Changes** section
+> in the v14 release notes. All items below require Cedar sign-off before promotion
+> to stable.
+
+### Additive (non-breaking — new exports)
+
+| Symbol / entrypoint                       | Kind                | Notes                                                                                                                                              |
+| ----------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CdrBreakpointOrder`                      | `readonly string[]` | Canonical breakpoint order `["xs","sm","md","lg"]`. Exported from root, `./types`, and `./types/cdr-breakpoint-order`.                             |
+| `CdrBreakpointOrderKey`                   | type                | `(typeof CdrBreakpointOrder)[number]` union.                                                                                                       |
+| `CdrSpaceScaleOrder`                      | `readonly string[]` | Canonical space-scale order including range keys `["0","01","1","2","3","34","35","4","5","6","7","8"]`.                                           |
+| `CdrSpaceScaleOrderKey`                   | type                | `(typeof CdrSpaceScaleOrder)[number]` union.                                                                                                       |
+| `CdrTextSizeOrder`                        | `readonly string[]` | Canonical text-size step order.                                                                                                                    |
+| `CdrTextSizeOrderKey`                     | type                | `(typeof CdrTextSizeOrder)[number]` union.                                                                                                         |
+| `*.keys.mjs` runtime arrays               | module              | Every token group (e.g. `cdr-space-scale.keys.mjs`) now ships a runtime JS array of semantic keys alongside the existing `*.keys.d.ts` type union. |
+| `CdrBreakpointTokenName`, `Cdr*TokenName` | types               | Token-name union types for all groups added to `*.names.d.ts` and re-exported via `./types` barrel.                                                |
+
+### Finalized — Space Scale Range Symbol Naming
+
+| Final symbol             | Semantic key |
+| ------------------------ | ------------ |
+| `CdrSpaceScaleRange0To1` | `"01"`       |
+| `CdrSpaceScaleRange3To4` | `"34"`       |
+| `CdrSpaceScaleRange3To5` | `"35"`       |
+
+**Context:** Space-scale range entries are now represented with explicit `Range*To*`
+identifiers in generated TypeScript/JavaScript symbols so range intent remains clear.
+
+**Scope of change:** Affects `CdrSpaceScaleTokenName` union, `cdr-space-scale.names.d.ts`,
+`cdr-space-scale.keys.d.ts` key literal, `cdr-space-scale.keys.mjs` array entry, and
+`CdrSpaceScaleOrder` array entry.
+
+**Action required:** Include these finalized symbol names in v14 release notes.
+
+### Module / Entrypoint Changes
+
+| Change                                                                               | Notes                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| New `./types/*` wildcard entrypoint (per-group)                                      | `@rei/cdr-tokens/types/cdr-breakpoint` etc. now resolve to individual module files. Non-breaking addition.                                                                                                                                                                                              |
+| Speculative SCSS map entrypoints (`map-resolved`, `map-vars`) added and **reverted** | These were introduced in `feat(tokens): add dual SCSS map entrypoints` and fully reverted in `revert(scss): remove speculative map-resolved and map-vars entrypoints`. No consumer impact.                                                                                                              |
+| New `./scss/*` wildcard maps to `utilities/`                                         | `@rei/cdr-tokens/scss/cdr-breakpoint-mixins` and `@rei/cdr-tokens/scss/cdr-type-mixins` (and other utility files) now available as named per-file entrypoints for granular imports. Existing `@use '@rei/cdr-tokens/scss'` barrel import unchanged. Non-breaking addition enabling better tree-shaking. |
+
+### Consumer Migration Guide (Optional, Non-Breaking)
+
+All existing consumer imports continue to work without any changes. The following are **optional improvements** consumers can adopt at their own pace:
+
+#### SCSS Typography Mixins (Optional Optimization)
+
+**Today (still supported):**
+
+```scss
+@use '@rei/cdr-tokens/scss' as cdr;
+@include cdr.cdr-text-body-300();
+```
+
+**Optional (more granular, better tree-shaking):**
+
+```scss
+@use '@rei/cdr-tokens/scss/cdr-type-mixins' as typeHelpers;
+@include typeHelpers.cdr-text-body-300();
+```
+
+Benefits: Reduces bundle size if your build system can tree-shake unused mixins from the file-level import.
+
+#### TypeScript / JavaScript Semantic Tokens (Optional Granularity)
+
+**Today (still supported):**
+
+```ts
+import { CdrSpace, CdrBreakpoint } from '@rei/cdr-tokens';
+```
+
+**Optional (per-group imports for stricter boundaries):**
+
+```ts
+import { CdrSpace } from '@rei/cdr-tokens/types/space';
+import { CdrBreakpoint } from '@rei/cdr-tokens/types/breakpoint';
+```
+
+Benefits: Enables more explicit dependency declarations and can improve type-checking performance in large monorepos.

@@ -41,9 +41,20 @@ export const generateTypesBarrel = (sd: typeof StyleDictionary): void => {
       }).sort();
 
       const mjsExports = mjsFiles.map((file) => `export * from '${toExportPath(file)}';`);
-      const declarationExports = declarationFiles.map(
-        (file) => `export type * from '${toExportPath(file)}';`,
-      );
+      const declarationExports = declarationFiles.map((file) => {
+        // .names.d.ts files are purely type-only (export type unions).
+        // base/ directory files are purely type-only (interfaces/types only).
+        // All other .d.ts files export `declare const` runtime values
+        // (grouped objects, key arrays, order arrays) and need `export *`
+        // to preserve value exports for consumers.
+        const isTypeOnly = file.endsWith('.names.d.ts') || file.startsWith('base/');
+        const keyword = isTypeOnly ? 'export type *' : 'export *';
+        // Strip .d.ts extension — TypeScript resolves extensionless paths to
+        // .d.ts files automatically, and explicit .d.ts extensions with
+        // `export *` trigger TS2846 ("cannot import a declaration file").
+        const extensionless = file.replace(/\.d\.ts$/, '');
+        return `${keyword} from '${toExportPath(extensionless)}';`;
+      });
 
       const tokensMjsContent = `${mjsExports.join('\n')}\n`;
       const tokensDtsContent = `${declarationExports.join('\n')}\n`;

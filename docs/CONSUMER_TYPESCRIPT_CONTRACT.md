@@ -6,9 +6,10 @@ This document is the canonical consumer contract for TypeScript token usage in t
 
 This document describes the supported TypeScript consumer usage patterns currently available.
 
-- Type-only barrel entrypoints available for both themes.
+- Barrel entrypoints available for both themes — export runtime values (grouped objects, key arrays) and types.
 - Literal token-name union files (`*.names.d.ts`) exported for modules.
 - Module interfaces available for strongly-typed usage.
+- Runtime key arrays (`*Keys`) available for programmatic iteration.
 
 These patterns work today and are ready for production use.
 
@@ -16,7 +17,7 @@ These patterns work today and are ready for production use.
 
 Use theme-specific type barrels for type imports.
 
-Type-only entrypoints:
+Type + runtime entrypoints (grouped objects, key arrays, interfaces):
 
 - `@rei/cdr-tokens/types` (rei-dot-com)
 - `@rei/cdr-tokens/docsite/types` (docsite)
@@ -28,6 +29,21 @@ Runtime value entrypoints:
 
 The root `@rei/cdr-tokens` entrypoint exports the **semantic contract** — grouped foundation objects (e.g., `CdrColorText`, `CdrSpace`). This is the recommended entrypoint for framework integrations. Use `@rei/cdr-tokens/tokens` for flat token values.
 
+### Deprecated: v13-style flat imports from root entrypoint
+
+As of v14.0.1, the root entrypoint also re-exports all flat token values (e.g., `CdrBreakpointSm`) for backward compatibility. These are marked `@deprecated` and will show strikethrough in IDEs. They will be **removed in the next major version** (v15).
+
+```ts
+// Deprecated — works but will be removed in v15
+import { CdrBreakpointSm } from '@rei/cdr-tokens';
+
+// Preferred — grouped objects
+import { CdrBreakpoint } from '@rei/cdr-tokens';
+
+// Alternative — flat values via /tokens subpath
+import { CdrBreakpointSm } from '@rei/cdr-tokens/tokens';
+```
+
 Type example:
 
 ```ts
@@ -35,21 +51,34 @@ import type { CdrSpaceTokens } from '@rei/cdr-tokens/types';
 import type { CdrSpaceTokenName } from '@rei/cdr-tokens/types';
 ```
 
-Runtime example:
+Runtime example (flat values):
 
 ```ts
 import { CdrSpaceScale2 } from '@rei/cdr-tokens/tokens';
+```
+
+Runtime example (grouped objects + keys via `/types`):
+
+```ts
+import { CdrBreakpoint, CdrSpaceScaleKeys } from '@rei/cdr-tokens/types';
+
+// Grouped objects contain resolved values
+const lgBreakpoint = CdrBreakpoint.CdrBreakpointLg; // 1232
+
+// Key arrays contain kebab-case token suffixes for programmatic mapping
+CdrSpaceScaleKeys.forEach((key) => {
+  console.log(`--cdr-space-scale-${key}`);
+});
 ```
 
 ## Public API Boundary
 
 Public API:
 
-- Semantic contract (grouped foundation objects):
-  - `@rei/cdr-tokens` (rei-dot-com)
-- Type-only barrels:
-  - `@rei/cdr-tokens/types`
-  - `@rei/cdr-tokens/docsite/types`
+- Semantic contract (grouped foundation objects + key arrays):
+  - `@rei/cdr-tokens` (rei-dot-com — CJS resolves to flat values)
+  - `@rei/cdr-tokens/types` (rei-dot-com — grouped objects, key arrays, interfaces)
+  - `@rei/cdr-tokens/docsite/types` (docsite — grouped objects, key arrays, interfaces)
 - Runtime flat values:
   - `@rei/cdr-tokens/tokens`
   - `@rei/cdr-tokens/docsite`
@@ -167,6 +196,66 @@ Consumers should treat tokens as dimensioned by:
 - `Responsibility` (module grouping such as spacing, color-background)
 
 This is currently represented through theme-scoped module selection.
+
+## 4) Runtime Key Arrays
+
+### What it is
+
+Runtime `const` arrays of kebab-case semantic keys for each token module, exported alongside types.
+
+### Why it exists
+
+To enable programmatic iteration over token keys without hardcoding token names. Key arrays map directly to CSS custom property names (`--cdr-{group}-{key}`) and are the recommended building block for framework integration layers (Tailwind presets, styled-system configs, etc.).
+
+### How to import it
+
+```ts
+import { CdrSpaceScaleKeys, CdrColorBackgroundKeys } from '@rei/cdr-tokens/types';
+```
+
+### How to use it
+
+```ts
+import {
+  CdrBreakpoint,
+  CdrSpaceKeys,
+  CdrSpaceScaleKeys,
+  CdrRadiusKeys,
+  CdrColorBackgroundKeys,
+  CdrColorTextKeys,
+  CdrColorBorderKeys,
+} from '@rei/cdr-tokens/types';
+
+// Map keys to CSS custom property references
+const keysToVars = (keys: readonly string[], prefix: string) =>
+  Object.fromEntries(keys.map((key) => [key, `var(--${prefix}-${key})`]));
+
+// Tailwind config example
+export default {
+  theme: {
+    screens: {
+      xs: `${CdrBreakpoint.CdrBreakpointXs}px`,
+      sm: `${CdrBreakpoint.CdrBreakpointSm}px`,
+      md: `${CdrBreakpoint.CdrBreakpointMd}px`,
+      lg: `${CdrBreakpoint.CdrBreakpointLg}px`,
+    },
+    extend: {
+      spacing: keysToVars(CdrSpaceKeys, 'cdr-space'),
+      borderRadius: keysToVars(CdrRadiusKeys, 'cdr-radius'),
+      colors: {
+        background: keysToVars(CdrColorBackgroundKeys, 'cdr-color-background'),
+        text: keysToVars(CdrColorTextKeys, 'cdr-color-text'),
+        border: keysToVars(CdrColorBorderKeys, 'cdr-color-border'),
+      },
+    },
+  },
+};
+```
+
+### Public vs internal
+
+- Public: key arrays re-exported by theme-specific type barrels
+- Internal: generated key array source files
 
 ## ADR Reference
 
