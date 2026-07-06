@@ -387,5 +387,4 @@ export interface CdrTextStyleTokens {
 }
 
 export declare const CdrTextStyle: CdrTextStyleTokens;
-
 export default CdrTextStyle;

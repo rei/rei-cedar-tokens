@@ -44,5 +44,4 @@ export interface CdrColorBorderTokens {
 }
 
 export declare const CdrColorBorder: CdrColorBorderTokens;
-
 export default CdrColorBorder;

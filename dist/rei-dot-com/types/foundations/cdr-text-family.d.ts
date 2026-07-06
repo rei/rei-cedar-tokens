@@ -372,5 +372,4 @@ export interface CdrTextFamilyTokens {
 }
 
 export declare const CdrTextFamily: CdrTextFamilyTokens;
-
 export default CdrTextFamily;

@@ -202,5 +202,4 @@ export interface CdrProminenceTokens {
 }
 
 export declare const CdrProminence: CdrProminenceTokens;
-
 export default CdrProminence;

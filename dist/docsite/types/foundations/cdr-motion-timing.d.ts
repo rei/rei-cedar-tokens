@@ -25,5 +25,4 @@ export interface CdrMotionTimingTokens {
 }
 
 export declare const CdrMotionTiming: CdrMotionTimingTokens;
-
 export default CdrMotionTiming;

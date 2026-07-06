@@ -34,12 +34,25 @@ export const pxToRemTransitive = (sd: typeof StyleDictionary): void => {
         return false;
       }
 
-      // Include dimension, fontSize, and check if value contains 'px' for expanded typography tokens
-      return (
-        token.$type === 'dimension' ||
-        token.$type === 'fontSize' ||
-        (typeof token.$value === 'string' && token.$value.includes('px'))
-      );
+      // Exclude options tokens - they are config values that should be stripped of px
+      // but not converted to rem. The tokens that reference them handle rem conversion.
+      if (token.path[0] === 'options') {
+        return false;
+      }
+
+      // Exclude lineHeight, letterSpacing, and number type tokens
+      if (
+        token.$type === 'lineHeight' ||
+        token.$type === 'letterSpacing' ||
+        token.$type === 'number'
+      ) {
+        return false;
+      }
+
+      const hasPx = typeof token.$value === 'string' && token.$value.includes('px');
+
+      // Include dimension, fontSize, and expanded typography tokens with 'px' values
+      return token.$type === 'dimension' || token.$type === 'fontSize' || hasPx;
     },
     transform: (token: Token, config: Config): string => {
       const REM = config.basePxFontSize || BASE_FONT_SIZE;

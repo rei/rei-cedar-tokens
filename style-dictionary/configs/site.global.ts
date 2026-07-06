@@ -12,6 +12,7 @@ export const siteGlobal = (theme: Theme): PlatformConfig => ({
       'size/strip-all-px-js',
       'size/space-js',
       'size/px-to-rem-transitive',
+      'fontFamily/css-quotes',
       'time/seconds',
       'value/clamp',
     ],

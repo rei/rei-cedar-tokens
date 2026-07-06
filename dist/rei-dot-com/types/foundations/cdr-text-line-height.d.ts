@@ -372,5 +372,4 @@ export interface CdrTextLineHeightTokens {
 }
 
 export declare const CdrTextLineHeight: CdrTextLineHeightTokens;
-
 export default CdrTextLineHeight;
