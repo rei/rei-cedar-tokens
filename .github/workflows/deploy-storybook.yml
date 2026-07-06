@@ -22,10 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 22.18.0
+      - name: Use Node.js 24.0.0
         uses: actions/setup-node@v4
         with:
-          node-version: 22.18.0
+          node-version: 24.0.0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
