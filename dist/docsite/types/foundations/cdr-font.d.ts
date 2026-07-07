@@ -32,5 +32,4 @@ export interface CdrFontTokens {
 }
 
 export declare const CdrFont: CdrFontTokens;
-
 export default CdrFont;

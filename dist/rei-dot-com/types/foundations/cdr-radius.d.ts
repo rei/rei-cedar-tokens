@@ -41,5 +41,4 @@ export interface CdrRadiusTokens {
 }
 
 export declare const CdrRadius: CdrRadiusTokens;
-
 export default CdrRadius;

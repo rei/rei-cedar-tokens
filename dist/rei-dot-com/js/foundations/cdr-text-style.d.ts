@@ -1,3 +1,5 @@
+export const CdrTextItalicVariation: string;
+export const CdrTextItalicStyle: string;
 export const CdrTextDefaultStyle: string;
 export const CdrTextEyebrow100Style: string;
 export const CdrTextEyebrow100Transform: string;
@@ -73,5 +75,3 @@ export const CdrTextUtilitySerifStrong500Style: string;
 export const CdrTextUtilitySerifStrong600Style: string;
 export const CdrTextUtilitySerifStrong700Style: string;
 export const CdrTextUtilitySerifStrong800Style: string;
-export const CdrTextItalicVariation: string;
-export const CdrTextItalicStyle: string;

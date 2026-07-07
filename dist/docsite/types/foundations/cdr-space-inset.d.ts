@@ -464,5 +464,4 @@ export interface CdrSpaceInsetTokens {
 }
 
 export declare const CdrSpaceInset: CdrSpaceInsetTokens;
-
 export default CdrSpaceInset;

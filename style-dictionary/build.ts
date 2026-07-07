@@ -40,6 +40,8 @@ import { stripAllPx } from './transforms/size/strip-all-px';
 import { stripAllPxJs } from './transforms/size/strip-all-px-js';
 import { float } from './transforms/size/float';
 import { cssClamp as clamp } from './transforms/size/clamp';
+import { fontFamilyQuotes } from './transforms/font/font-family-quotes';
+import { sizeRemOverride } from './transforms/size/rem-override';
 
 // ==== Include custom formats ====
 import { scssTypography } from './formats/scss-typography';
@@ -120,6 +122,9 @@ import { componentTooltipTokens } from './filters/components/tooltip-tokens';
 // Tokens Studio provides preprocessors and additional transforms for composite tokens
 register(StyleDictionary);
 
+// Override SD v5 built-in size/rem to exclude lineHeight/letterSpacing tokens
+sizeRemOverride(StyleDictionary);
+
 // ==== Register custom transforms ====
 // IMPORTANT: Transform order matters! See docs/TRANSFORMS.md
 // deprecated MUST be first as it mutates token paths
@@ -135,6 +140,7 @@ stripAllPx(StyleDictionary);
 stripAllPxJs(StyleDictionary);
 float(StyleDictionary);
 clamp(StyleDictionary);
+fontFamilyQuotes(StyleDictionary);
 
 // ==== Register custom formats ====
 scssTypography(StyleDictionary);

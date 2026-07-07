@@ -68,5 +68,4 @@ export interface CdrColorTextTokens {
 }
 
 export declare const CdrColorText: CdrColorTextTokens;
-
 export default CdrColorText;

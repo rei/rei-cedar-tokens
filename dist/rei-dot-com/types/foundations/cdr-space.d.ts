@@ -105,5 +105,4 @@ export interface CdrSpaceTokens {
 }
 
 export declare const CdrSpace: CdrSpaceTokens;
-
 export default CdrSpace;

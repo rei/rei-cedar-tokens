@@ -88,7 +88,6 @@ export const typescriptModuleDeclarations = (sd: typeof StyleDictionary): void =
         '}',
         '',
         `export declare const ${valueName}: ${moduleInterfaceName};`,
-        '',
         `export default ${valueName};`,
       ].join('\n');
     },

@@ -10,6 +10,7 @@ import { siteAndroid as siteAndroidConfig } from './site.android';
 import { siteIos as siteIosConfig } from './site.ios';
 import { figma as figmaConfig } from './figma';
 import { types as typesConfig } from './types';
+import { expandTypesMap } from '@tokens-studio/sd-transforms';
 import type { Platform, Theme } from '../constants';
 import type { Config, PlatformConfig } from 'style-dictionary/types';
 
@@ -58,7 +59,15 @@ export const getConfig = (platform: Platform, theme: Theme): PlatformConfig => {
     include: defaultTokens,
     source: themeOverrides,
     expand: {
-      include: ['typography'],
+      typesMap: {
+        ...expandTypesMap,
+        typography: {
+          ...expandTypesMap.typography,
+          lineHeight: 'number',
+          letterSpacing: 'dimension',
+        },
+      },
+      exclude: (token) => token.$type === 'clamp',
     },
     preprocessors: ['tokens-studio'],
     platforms: allPlatforms(platform, theme),
