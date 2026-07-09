@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/html';
+import type { Preview } from '@storybook/html-vite';
 import { cedarTheme } from './cedar-theme';
 import './cedar.scss';
 import './_content.scss';
@@ -20,18 +20,17 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: 'cedar-primary',
-      values: [
-        { name: 'cedar-light', value: '#fafbf9' },
-        { name: 'cedar-primary', value: '#ffffff' },
-        { name: 'cedar-secondary', value: '#f7f5f3' },
-        { name: 'cedar-dark', value: '#2e2e2b' },
-        { name: 'cedar-spruce', value: '#1f513f' },
-        { name: 'cedar-sale', value: '#c7370f' },
-      ],
+      options: {
+        'cedar-light': { name: 'cedar-light', value: '#fafbf9' },
+        'cedar-primary': { name: 'cedar-primary', value: '#ffffff' },
+        'cedar-secondary': { name: 'cedar-secondary', value: '#f7f5f3' },
+        'cedar-dark': { name: 'cedar-dark', value: '#2e2e2b' },
+        'cedar-spruce': { name: 'cedar-spruce', value: '#1f513f' },
+        'cedar-sale': { name: 'cedar-sale', value: '#c7370f' },
+      },
     },
     viewport: {
-      viewports: {
+      options: {
         xs: {
           name: 'Extra Small (xs)',
           styles: { width: '320px', height: '568px' },
@@ -49,6 +48,12 @@ const preview: Preview = {
           styles: { width: '1232px', height: '900px' },
         },
       },
+    },
+  },
+
+  initialGlobals: {
+    backgrounds: {
+      value: 'cedar-primary',
     },
   },
 };
