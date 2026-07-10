@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/html';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 import { releaseNotesData } from '../.storybook/generated/release-notes.generated';
 import { markdownToHtml } from '../.storybook/release-notes/markdown-to-html';
 

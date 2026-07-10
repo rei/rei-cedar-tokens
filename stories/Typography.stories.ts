@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/html';
+import type { StoryObj, Meta } from '@storybook/html-vite';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 import { getDesc } from './token-metadata';
 
