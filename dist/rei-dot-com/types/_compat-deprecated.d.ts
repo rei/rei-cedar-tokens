@@ -894,6 +894,68 @@ export const CdrTypeScaleMinus1: string;
 /** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
 export const CdrTypeScaleMinus2: string;
 /** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrTextItalicVariation: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrTextItalicStyle: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrTextStrongWeight: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorTextButtonPrimaryHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorTextPrimary: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorTextLinkRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorTextLinkHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorTextLinkVisited: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBackgroundButtonPrimaryRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBackgroundButtonPrimaryActive: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBackgroundPrimary: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBorderButtonPrimaryRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBorderButtonPrimaryActive: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBorderButtonPrimaryHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBorderLinkRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBorderLinkHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipVibrantColorBorderLinkVisited: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorTextButtonPrimaryHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorTextPrimary: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorTextLinkRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorTextLinkHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorTextLinkVisited: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBackgroundButtonPrimaryRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBackgroundButtonPrimaryActive: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBackgroundPrimary: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBorderButtonPrimaryRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBorderButtonPrimaryActive: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBorderButtonPrimaryHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBorderLinkRest: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBorderLinkHover: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
+export const CdrMembershipSubtleColorBorderLinkVisited: string;
+/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
 export const CdrTextDefaultFamily: string;
 /** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
 export const CdrTextDefaultStyle: string;
@@ -1783,65 +1845,3 @@ export const CdrTextUtilitySerifStrong800LetterSpacing: string;
 export const CdrTextUtilitySerifStrong800Size: string;
 /** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
 export const CdrTextUtilitySerifStrong800LineHeight: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrTextItalicVariation: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrTextItalicStyle: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrTextStrongWeight: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorTextButtonPrimaryHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorTextPrimary: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorTextLinkRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorTextLinkHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorTextLinkVisited: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBackgroundButtonPrimaryRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBackgroundButtonPrimaryActive: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBackgroundPrimary: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBorderButtonPrimaryRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBorderButtonPrimaryActive: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBorderButtonPrimaryHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBorderLinkRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBorderLinkHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipVibrantColorBorderLinkVisited: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorTextButtonPrimaryHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorTextPrimary: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorTextLinkRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorTextLinkHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorTextLinkVisited: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBackgroundButtonPrimaryRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBackgroundButtonPrimaryActive: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBackgroundPrimary: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBorderButtonPrimaryRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBorderButtonPrimaryActive: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBorderButtonPrimaryHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBorderLinkRest: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBorderLinkHover: string;
-/** @deprecated Use grouped token objects or '@rei/cdr-tokens/tokens' instead. */
-export const CdrMembershipSubtleColorBorderLinkVisited: string;

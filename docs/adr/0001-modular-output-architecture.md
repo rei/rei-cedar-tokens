@@ -17,7 +17,9 @@ Accepted
 Read this before interpreting the architecture sections — some describe planned state, not current state.
 
 - **Done:** Modular `.d.ts` files, literal token-name unions, and module interfaces in generated type outputs.
-- **Done:** Stable barrel exports (`./types` and `./docsite/types`) wired in package exports.
+- **Done:** Stable barrel export `./types` wired in package exports.
+- **Planned:** `./docsite/types` barrel (`./dist/docsite/types/index.d.ts`) and its package export. `generateSemanticContract` currently writes `index.{mjs,d.ts}` only for `rei-dot-com`; docsite only has the `export *` `tokens.d.ts` barrel from `generate-types-barrel`. ADR-0001 previously listed this as Done — corrected to Planned after the Story 0.8 contract suite flagged it (see the skipped `./docsite/types` assertions in `src/contract/canonical-contract.test.ts`).
+- **Planned:** Palette exclusion from default entrypoint. ADR-0001 "Default Entrypoint Contract" excludes palettes from `cdr-tokens.scss`/`.css`, but `concat-files.ts` currently auto-forwards palette files for `rei-dot-com`. The Story 0.8 contract suite flags this (see the skipped `excludes palettes from the default entrypoint` assertion in `src/contract/canonical-contract.test.ts`).
 - **Done:** Theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) available.
 - **Done:** Legacy `cdr-tokens.d.mts` generation and exports removed.
 - **Done:** Export map validation CI guard — `validateExportMap()` in `validate.ts` catches any package.json export entry that references a non-existent dist file at validate time.
@@ -452,6 +454,11 @@ The following is illustrative — the authoritative source is `package.json`. If
 {
   "exports": {
     ".": {
+      "types": "./dist/rei-dot-com/types/index.d.ts",
+      "import": "./dist/rei-dot-com/types/index.mjs",
+      "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
+    },
+    "./tokens": {
       "types": "./dist/rei-dot-com/js/cdr-tokens.d.ts",
       "import": "./dist/rei-dot-com/js/cdr-tokens.mjs",
       "require": "./dist/rei-dot-com/js/cdr-tokens.cjs"
@@ -463,9 +470,6 @@ The following is illustrative — the authoritative source is `package.json`. If
     },
     "./types": {
       "types": "./dist/rei-dot-com/types/index.d.ts"
-    },
-    "./docsite/types": {
-      "types": "./dist/docsite/types/index.d.ts"
     },
     "./css": {
       "import": "./dist/rei-dot-com/css/cdr-tokens.css"
@@ -482,6 +486,8 @@ The following is illustrative — the authoritative source is `package.json`. If
   }
 }
 ```
+
+Note: `./docsite/types` is a known gap (see Implementation Status above). Wildcard patterns (`./types/*`, `./css/*`, `./scss/*`, `./json/*`, theme-scoped wildcards) are present in `package.json` but omitted here for brevity.
 
 Deep paths below these entrypoints are implementation details and may change.
 
@@ -679,6 +685,8 @@ Generated types are verified through:
 
 The claim "generation is deterministic for a given schema and token graph state" is testable: the same input must always produce byte-identical output. Non-determinism in name generation, ordering, or formatting is a bug, not expected behavior.
 
+**Known gap:** The contract suite (`src/contract/canonical-contract.test.ts`) does not currently enforce determinism (build twice, diff output). This is a machine-checkable invariant that should be added as a separate test when build pipeline stability is a concern.
+
 There is currently no `tsd` or `expect-type` test suite. If the type surface grows significantly, adding type-level tests is recommended.
 
 ## Adding a New Foundation Token-Group
@@ -706,6 +714,19 @@ Changes to the public type barrel (`@rei/cdr-tokens/types`) follow standard semv
 | `TokenDictionary` signature changed (once public) | **Major bump** | Type parameter added or removed                           |
 
 The type barrel is a public contract. TypeScript consumers depend on literal union members; any rename or removal breaks downstream code at compile time. Treat type renames with the same weight as value renames.
+
+## Contract Testing
+
+ADR-0001's machine-checkable invariants are enforced by `src/contract/canonical-contract.test.ts`, run via `pnpm test:contract` (also part of `pnpm test` and CI). Each assertion maps to a `RULE_DOCS` entry that points at the ADR section it enforces.
+
+Co-change rule: **When this ADR (or any ADR) changes, the corresponding contract tests must be updated in the same PR.** The rule goes both directions:
+
+- If an ADR rule changes the contract, update the test assertion to match.
+- If a test fails against the repo and the repo is correct, the ADR is wrong — fix the ADR text, not the test.
+
+Known gaps are recorded as `it.skip` with a tracking note (see `./docsite/types` barrel, marked Planned above). A skipped contract test is an explicit TODO, not a silent omission — flip `it.skip` to `it` once the gap is resolved.
+
+Adding rules for future ADRs: append a rule id + `RULE_DOCS` entry to the contract suite and write the assertion. Do not weaken existing assertions to make the suite green; weaken the assertion only when the ADR itself changes.
 
 ## Future Direction
 

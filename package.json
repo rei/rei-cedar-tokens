@@ -112,6 +112,7 @@
     "docs:release-notes": "node scripts/generate-release-notes.mjs",
     "docs:stories": "node scripts/generate-stories.mjs",
     "test": "vitest run",
+    "test:contract": "vitest run src/contract/canonical-contract.test.ts",
     "test:consumer-types": "tsc -p test-consumer/tsconfig.consumer.json",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
