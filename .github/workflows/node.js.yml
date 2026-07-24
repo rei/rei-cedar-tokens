@@ -84,6 +84,11 @@ jobs:
       - name: Build Tokens
         run: pnpm build
 
+      - name: Enforce ADR-0001 Contract
+        # Validates dist/ modular output invariants from ADR-0001.
+        # Runs against freshly-built dist. See src/contract/canonical-contract.test.ts.
+        run: pnpm test:contract
+
       # =======================================================================
       # STEP 5: POST-BUILD PARITY CHECKS
       # =======================================================================
