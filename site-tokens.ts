@@ -14,21 +14,18 @@ interface TokensByCategory {
 interface DataByPlatform {
   global: TokensByCategory;
   web: TokensByCategory;
-  android: TokensByCategory;
   ios: TokensByCategory;
 }
 
 themes.forEach((theme) => {
   const rawGlobal: TokensByCategory = require(`./dist/${theme}/json/global.json`);
   const rawWeb: TokensByCategory = require(`./dist/${theme}/json/web.json`);
-  const rawAndroid: TokensByCategory = require(`./dist/${theme}/json/android.json`);
   const rawIos: TokensByCategory = require(`./dist/${theme}/json/ios.json`);
   const utilities: TokensByCategory = require('./style-dictionary/utilities/utilities.json');
 
   // get keys for each category per platform
   const globalKeyArr = Object.keys(rawGlobal);
   const webKeyArr = Object.keys(rawWeb);
-  const androidKeyArr = Object.keys(rawAndroid);
   const iosKeyArr = Object.keys(rawIos);
 
   // diffing function
@@ -40,12 +37,11 @@ themes.forEach((theme) => {
   }
 
   // get unique list of all keys
-  const allKeys = _.union(globalKeyArr, webKeyArr, androidKeyArr, iosKeyArr);
+  const allKeys = _.union(globalKeyArr, webKeyArr, iosKeyArr);
 
   const dataByPlatform: DataByPlatform = {
     global: {},
     web: utilities,
-    android: {},
     ios: {},
   };
 
@@ -55,7 +51,6 @@ themes.forEach((theme) => {
 
     // find unique tokens by platform
     dataByPlatform.web[key] = _.differenceWith(rawWeb[key], rawGlobal[key], hasSameName);
-    dataByPlatform.android[key] = _.differenceWith(rawAndroid[key], rawGlobal[key], hasSameName);
     dataByPlatform.ios[key] = _.differenceWith(rawIos[key], rawGlobal[key], hasSameName);
   });
 

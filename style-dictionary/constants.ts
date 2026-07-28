@@ -17,18 +17,15 @@ export const THEMES = ['rei-dot-com', 'docsite'];
  *
  * Each platform generates specific output formats:
  * - web: CSS, SCSS, JavaScript
- * - android: XML (colors, dimensions)
- * - ios: Swift (colors, sizes)
+ * - ios: Swift (sizes, text)
  * - figma: JSON for Figma integration
  * - site/*: JSON for documentation site
  */
 export const PLATFORMS = [
   'site/global', // Documentation - all platforms
   'site/web', // Documentation - web tokens
-  'site/android', // Documentation - Android tokens
   'site/ios', // Documentation - iOS tokens
   'web', // Web applications
-  'android', // Android native
   'ios', // iOS native
   'figma', // Figma design tool
   'types', // TypeScript modules

@@ -45,6 +45,22 @@ const restoreDollarValueInOriginal = (current: Record<string, unknown>): void =>
  *
  * @param sd - The Style Dictionary instance to register the format with
  */
+const getDocsCategory = (token: TransformedToken): string | undefined => {
+  const cedarDocs = (token.$extensions as { cedar?: { docs?: { category?: string } } } | undefined)
+    ?.cedar?.docs;
+  return (
+    cedarDocs?.category ?? (token as unknown as { docs?: { category?: string } }).docs?.category
+  );
+};
+
+const getDocs = (token: TransformedToken): Record<string, unknown> | undefined => {
+  const cedarDocs = (
+    token.$extensions as { cedar?: { docs?: Record<string, unknown> } } | undefined
+  )?.cedar?.docs;
+  if (cedarDocs) return cedarDocs;
+  return (token as unknown as { docs?: Record<string, unknown> }).docs;
+};
+
 export const site = (sd: typeof StyleDictionary): void => {
   sd.registerFormat({
     name: 'site',
@@ -52,7 +68,7 @@ export const site = (sd: typeof StyleDictionary): void => {
       const prefix = platform.prefix ? `${platform.prefix}-` : '';
       const toRet: Record<string, Partial<TransformedToken>[]> = {};
 
-      const grouped = _.groupBy(dictionary.allTokens, 'docs.category');
+      const grouped = _.groupBy(dictionary.allTokens, getDocsCategory);
       const keys = Object.keys(grouped);
 
       for (const key of keys) {
@@ -70,6 +86,13 @@ export const site = (sd: typeof StyleDictionary): void => {
           }
 
           const currentObj = current as unknown as Record<string, unknown>;
+
+          // Surface Cedar docs metadata at the top level for site consumers.
+          // Prefer the spike $extensions.cedar.docs pattern, fallback to legacy docs.
+          const docs = getDocs(token);
+          if (docs) {
+            currentObj.docs = docs;
+          }
 
           // Remove `key` from nested objects (original, docs, etc.) added by SD v5
           removeKeyFromNested(currentObj);
