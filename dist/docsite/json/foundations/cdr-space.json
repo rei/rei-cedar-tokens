@@ -1,6 +1,6 @@
 {
-  "spacing": [
-    {
+  "space": {
+    "zero": {
       "$value": "0",
       "$type": "dimension",
       "docs": {
@@ -13,31 +13,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.zero}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Zero spacing, removes all space between elements.",
-            "when": "Use when elements must be flush against each other with no gap."
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-zero",
       "attributes": {
         "category": "space",
         "type": "zero",
         "deprecated": false
-      },
-      "key": "{space.zero}"
+      }
     },
-    {
+    "sixteenth-x": {
       "$value": "0.1rem",
       "$type": "dimension",
       "docs": {
@@ -53,34 +36,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.sixteenth-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "The smallest static spacing unit, one-sixteenth of the base.",
-            "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
-            "alternatives": [
-              "{space.scale.0}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-sixteenth-x",
       "attributes": {
         "category": "space",
         "type": "sixteenth-x",
         "deprecated": false
-      },
-      "key": "{space.sixteenth-x}"
+      }
     },
-    {
+    "eighth-x": {
       "$value": "0.2rem",
       "$type": "dimension",
       "docs": {
@@ -96,34 +59,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.eighth-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at one-eighth of the base unit.",
-            "when": "Use for legacy components only. No direct scale equivalent — scale.0 is the closest but produces slightly larger spacing.",
-            "alternatives": [
-              "{space.scale.0}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-eighth-x",
       "attributes": {
         "category": "space",
         "type": "eighth-x",
         "deprecated": false
-      },
-      "key": "{space.eighth-x}"
+      }
     },
-    {
+    "three-sixteenth-x": {
       "$value": "0.3rem",
       "$type": "dimension",
       "docs": {
@@ -139,34 +82,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.three-sixteenth-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at three-sixteenths of the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.0}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-three-sixteenth-x",
       "attributes": {
         "category": "space",
         "type": "three-sixteenth-x",
         "deprecated": false
-      },
-      "key": "{space.three-sixteenth-x}"
+      }
     },
-    {
+    "quarter-x": {
       "$value": "0.4rem",
       "$type": "dimension",
       "docs": {
@@ -183,35 +106,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.quarter-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at one-quarter of the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.0}",
-              "{space.scale.1}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-quarter-x",
       "attributes": {
         "category": "space",
         "type": "quarter-x",
         "deprecated": false
-      },
-      "key": "{space.quarter-x}"
+      }
     },
-    {
+    "three-eighth-x": {
       "$value": "0.6rem",
       "$type": "dimension",
       "docs": {
@@ -227,34 +129,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.three-eighth-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at three-eighths of the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.1}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-three-eighth-x",
       "attributes": {
         "category": "space",
         "type": "three-eighth-x",
         "deprecated": false
-      },
-      "key": "{space.three-eighth-x}"
+      }
     },
-    {
+    "half-x": {
       "$value": "0.8rem",
       "$type": "dimension",
       "docs": {
@@ -270,34 +152,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.half-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at one-half of the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.2}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-half-x",
       "attributes": {
         "category": "space",
         "type": "half-x",
         "deprecated": false
-      },
-      "key": "{space.half-x}"
+      }
     },
-    {
+    "three-quarter-x": {
       "$value": "1.2rem",
       "$type": "dimension",
       "docs": {
@@ -313,34 +175,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.three-quarter-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at three-quarters of the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.3}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-three-quarter-x",
       "attributes": {
         "category": "space",
         "type": "three-quarter-x",
         "deprecated": false
-      },
-      "key": "{space.three-quarter-x}"
+      }
     },
-    {
+    "one-x": {
       "$value": "1.6rem",
       "$type": "dimension",
       "docs": {
@@ -356,34 +198,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "{options.space.one-x}",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "The base static spacing unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.3}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-one-x",
       "attributes": {
         "category": "space",
         "type": "one-x",
         "deprecated": false
-      },
-      "key": "{space.one-x}"
+      }
     },
-    {
+    "one-and-a-half-x": {
       "$value": "2.4rem",
       "$type": "dimension",
       "docs": {
@@ -399,34 +221,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "24px",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at one and a half times the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.4}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-one-and-a-half-x",
       "attributes": {
         "category": "space",
         "type": "one-and-a-half-x",
         "deprecated": false
-      },
-      "key": "{space.one-and-a-half-x}"
+      }
     },
-    {
+    "two-x": {
       "$value": "3.2rem",
       "$type": "dimension",
       "docs": {
@@ -442,34 +244,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "32px",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at two times the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.5}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-two-x",
       "attributes": {
         "category": "space",
         "type": "two-x",
         "deprecated": false
-      },
-      "key": "{space.two-x}"
+      }
     },
-    {
+    "three-x": {
       "$value": "4.8rem",
       "$type": "dimension",
       "docs": {
@@ -485,34 +267,14 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "48px",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at three times the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.6}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-three-x",
       "attributes": {
         "category": "space",
         "type": "three-x",
         "deprecated": false
-      },
-      "key": "{space.three-x}"
+      }
     },
-    {
+    "four-x": {
       "$value": "6.4rem",
       "$type": "dimension",
       "docs": {
@@ -528,32 +290,12 @@
         }
       },
       "utility-class": true,
-      "filePath": "tokens/global/space.json",
-      "isSource": false,
-      "original": {
-        "$value": "64px",
-        "$type": "dimension",
-        "docs": {
-          "type": "spacing",
-          "category": "spacing",
-          "example": "spacing",
-          "description": {
-            "what": "Static spacing at four times the base unit.",
-            "when": "Use for legacy components only. Prefer fluid scale tokens for new work.",
-            "alternatives": [
-              "{space.scale.7}"
-            ]
-          }
-        },
-        "utility-class": true
-      },
       "name": "cdr-space-four-x",
       "attributes": {
         "category": "space",
         "type": "four-x",
         "deprecated": false
-      },
-      "key": "{space.four-x}"
+      }
     }
-  ]
+  }
 }

@@ -1,24 +1,8 @@
 {
-  "form": [
-    {
-      "$value": "4rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "height",
-        "category": "form",
-        "example": "height-default",
-        "description": {
-          "what": "Default input height",
-          "when": "Use for standard form fields",
-          "alternatives": [
-            "4.8rem"
-          ]
-        }
-      },
-      "filePath": "tokens/global/form.json",
-      "isSource": false,
-      "original": {
-        "$value": "40px",
+  "form": {
+    "input": {
+      "height-default": {
+        "$value": "4rem",
         "$type": "dimension",
         "docs": {
           "type": "height",
@@ -28,36 +12,20 @@
             "what": "Default input height",
             "when": "Use for standard form fields",
             "alternatives": [
-              "{form.input.height-large}"
+              "4.8rem"
             ]
           }
+        },
+        "name": "cdr-form-input-height-default",
+        "attributes": {
+          "category": "form",
+          "type": "input",
+          "item": "height-default",
+          "deprecated": false
         }
       },
-      "name": "cdr-form-input-height-default",
-      "attributes": {
-        "category": "form",
-        "type": "input",
-        "item": "height-default",
-        "deprecated": false
-      },
-      "key": "{form.input.height-default}"
-    },
-    {
-      "$value": "4.8rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "height",
-        "category": "form",
-        "example": "height-large",
-        "description": {
-          "what": "Large input height",
-          "when": "Use for spacious layouts"
-        }
-      },
-      "filePath": "tokens/global/form.json",
-      "isSource": false,
-      "original": {
-        "$value": "48px",
+      "height-large": {
+        "$value": "4.8rem",
         "$type": "dimension",
         "docs": {
           "type": "height",
@@ -67,36 +35,19 @@
             "what": "Large input height",
             "when": "Use for spacious layouts"
           }
+        },
+        "name": "cdr-form-input-height-large",
+        "attributes": {
+          "category": "form",
+          "type": "input",
+          "item": "height-large",
+          "deprecated": false
         }
-      },
-      "name": "cdr-form-input-height-large",
-      "attributes": {
-        "category": "form",
-        "type": "input",
-        "item": "height-large",
-        "deprecated": false
-      },
-      "key": "{form.input.height-large}"
+      }
     },
-    {
-      "$value": "1.6rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "size",
-        "category": "form",
-        "example": "size-small",
-        "description": {
-          "what": "Small figure size",
-          "when": "Use for compact forms",
-          "alternatives": [
-            "1.6rem"
-          ]
-        }
-      },
-      "filePath": "tokens/global/form.json",
-      "isSource": false,
-      "original": {
-        "$value": "16px",
+    "figure": {
+      "size-small": {
+        "$value": "1.6rem",
         "$type": "dimension",
         "docs": {
           "type": "size",
@@ -106,39 +57,20 @@
             "what": "Small figure size",
             "when": "Use for compact forms",
             "alternatives": [
-              "{form.figure.size-medium}"
+              "1.6rem"
             ]
           }
+        },
+        "name": "cdr-form-figure-size-small",
+        "attributes": {
+          "category": "form",
+          "type": "figure",
+          "item": "size-small",
+          "deprecated": false
         }
       },
-      "name": "cdr-form-figure-size-small",
-      "attributes": {
-        "category": "form",
-        "type": "figure",
-        "item": "size-small",
-        "deprecated": false
-      },
-      "key": "{form.figure.size-small}"
-    },
-    {
-      "$value": "1.6rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "size",
-        "category": "form",
-        "example": "size-medium",
-        "description": {
-          "what": "Medium figure size",
-          "when": "Use for standard forms",
-          "alternatives": [
-            "2rem"
-          ]
-        }
-      },
-      "filePath": "tokens/global/form.json",
-      "isSource": false,
-      "original": {
-        "$value": "16px",
+      "size-medium": {
+        "$value": "1.6rem",
         "$type": "dimension",
         "docs": {
           "type": "size",
@@ -148,36 +80,20 @@
             "what": "Medium figure size",
             "when": "Use for standard forms",
             "alternatives": [
-              "{form.figure.size-large}"
+              "2rem"
             ]
           }
+        },
+        "name": "cdr-form-figure-size-medium",
+        "attributes": {
+          "category": "form",
+          "type": "figure",
+          "item": "size-medium",
+          "deprecated": false
         }
       },
-      "name": "cdr-form-figure-size-medium",
-      "attributes": {
-        "category": "form",
-        "type": "figure",
-        "item": "size-medium",
-        "deprecated": false
-      },
-      "key": "{form.figure.size-medium}"
-    },
-    {
-      "$value": "2rem",
-      "$type": "dimension",
-      "docs": {
-        "type": "size",
-        "category": "form",
-        "example": "size-large",
-        "description": {
-          "what": "Large figure size",
-          "when": "Use for large or expressive forms"
-        }
-      },
-      "filePath": "tokens/global/form.json",
-      "isSource": false,
-      "original": {
-        "$value": "20px",
+      "size-large": {
+        "$value": "2rem",
         "$type": "dimension",
         "docs": {
           "type": "size",
@@ -187,16 +103,15 @@
             "what": "Large figure size",
             "when": "Use for large or expressive forms"
           }
+        },
+        "name": "cdr-form-figure-size-large",
+        "attributes": {
+          "category": "form",
+          "type": "figure",
+          "item": "size-large",
+          "deprecated": false
         }
-      },
-      "name": "cdr-form-figure-size-large",
-      "attributes": {
-        "category": "form",
-        "type": "figure",
-        "item": "size-large",
-        "deprecated": false
-      },
-      "key": "{form.figure.size-large}"
+      }
     }
-  ]
+  }
 }

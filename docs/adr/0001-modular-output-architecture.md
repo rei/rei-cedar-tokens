@@ -619,7 +619,7 @@ Old and new entrypoints coexist without conflict. Teams can migrate on their own
 **Breakpoint** and **Text** are web-specific foundations consumed via SCSS and TypeScript. They do not have multiplatform equivalents:
 
 - **Breakpoints:** Responsive design is a web concept. Native apps use platform-native viewport/screen size APIs.
-- **Text:** Android and iOS have their own type ramp systems and font rendering pipelines. Cedar text tokens don't translate directly to native platforms.
+- **Text:** Native platforms have their own type ramp systems and font rendering pipelines. Cedar text tokens don't translate directly to native platforms.
 
 ### Cross-Platform Foundations (Color, Space)
 
@@ -636,7 +636,7 @@ Utilities (`dist/rei-dot-com/scss/utilities/`) are an SCSS-only implementation d
 | `@mixin cdr-space-*`      | Space tokens                 | SCSS only                   | Apply spacing via mixins or utility classes |
 | `.cdr-[utility-class]`    | Foundation tokens            | SCSS only (if CSS compiled) | Apply utility classes directly in HTML      |
 
-**Utilities are NOT for direct TypeScript consumption.** Non-SCSS consumers should use foundation token exports directly (e.g., `CdrBreakpoint.Medium` in JavaScript, breakpoint constant in Android/iOS).
+**Utilities are NOT for direct TypeScript consumption.** Non-SCSS consumers should use foundation token exports directly (e.g., `CdrBreakpoint.Medium` in JavaScript, breakpoint constants in native integrations).
 
 **Evolution note:** As the repo matures, utilities may be refactored or reorganized (e.g., new mixins added, old ones deprecated). See [Migration Path for Utilities Changes](#migration-path-for-utilities-changes) below.
 
@@ -655,7 +655,7 @@ The root monolithic exports (`dist/rei-dot-com/types/index.d.ts`, `dist/rei-dot-
 
 - ❌ Palette tokens (`membership-subtle`, `membership-vibrant`) — these are opt-in only; see [Palette Contract](#palette-contract)
 - ❌ Docsite-internal knockout theme (internal, not user-selectable)
-- ❌ Platform-specific build artifacts (covered in platform-specific flows like site.android.ts, site.ios.ts)
+- ❌ Platform-specific build artifacts (covered in platform-specific flows like site.ios.ts)
 
 **Rationale:** Keeping palettes out of the default prevents consumers from accidentally importing competing palette definitions and maintains the principle that palettes are **chosen, not defaulted**.
 
@@ -735,4 +735,4 @@ Adding rules for future ADRs: append a rule id + `RULE_DOCS` entry to the contra
 - Use semver to signal API-level type changes.
 - Preserve backward compatibility at the public barrel boundary where feasible.
 - Complete `TokenDictionary` public export contract — tracked in [docs/tickets/token-dictionary-implementation.md](../tickets/token-dictionary-implementation.md).
-- Expand multiplatform APIs: define native platform contracts for breakpoint, text, and utilities equivalents in Android/iOS.
+- Expand multiplatform APIs: define native platform contracts for breakpoint, text, and utilities equivalents in iOS.

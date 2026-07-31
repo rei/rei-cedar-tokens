@@ -32,9 +32,9 @@ describe('utils', () => {
     });
 
     it('should handle different themes and platforms', () => {
-      const config = commonConfig('docsite', 'android');
+      const config = commonConfig('docsite', 'ios');
 
-      expect(config.buildPath).toBe('dist/docsite/android/');
+      expect(config.buildPath).toBe('dist/docsite/ios/');
       expect(config.prefix).toBe('cdr');
     });
   });

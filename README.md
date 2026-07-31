@@ -9,10 +9,9 @@
    - JS: commonjs (default) and es module
    - SCSS: variables, maps, and mixins
    - CSS: custom properties (CSS variables)
-   - Android: XML style sheets for Colors and Dimensions
    - iOS: Swift classes for Color and Size
 
-   \*\* REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) and [Android](https://git.rei.com/projects/CDR2/repos/rei-cedar-android/) packages.
+   \*\* REI Internal teams should use the internal [iOS](https://git.rei.com/projects/CDR2/repos/rei-cedar-ios/) package.
 
 ### Semantic Contract (Recommended)
 
@@ -168,7 +167,7 @@ Token output of above:
 
 Types define how style-dictionary should transform values between platforms.
 
-For example, a type of "dimension" will transform to 'rem' for SCSS/LESS but 'dp' for Android. A type of "fontSize" will still transform values to 'rem' for SCSS/LESS but 'sp' for Android.
+For example, a type of "dimension" will transform to 'rem' for SCSS/LESS. A type of "fontSize" will also transform values to 'rem' for SCSS/LESS.
 
 Categories are one of the following:
 

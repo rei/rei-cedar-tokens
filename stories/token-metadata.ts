@@ -16,6 +16,30 @@ interface RawTokenEntry {
   };
 }
 
+function flattenTokens(obj: unknown): RawTokenEntry[] {
+  const tokens: RawTokenEntry[] = [];
+
+  function walk(node: unknown) {
+    if (!node || typeof node !== 'object' || Array.isArray(node)) return;
+    const entry = node as Record<string, unknown>;
+
+    if (entry.$value !== undefined) {
+      const { name, docs } = entry;
+      if (typeof name === 'string') {
+        tokens.push({ name, docs: docs as RawTokenEntry['docs'] });
+      }
+      return;
+    }
+
+    for (const value of Object.values(entry)) {
+      walk(value);
+    }
+  }
+
+  walk(obj);
+  return tokens;
+}
+
 /** Convert a CSS-variable kebab name to the JS PascalCase export name.
  *  e.g. cdr-color-text-primary → CdrColorTextPrimary
  *       cdr-duration-1-x       → CdrDuration1X
@@ -37,15 +61,12 @@ function formatDesc(
 
 const tokenMeta = new Map<string, { cssvar: string; description: string }>();
 
-for (const category of Object.values(webJson as Record<string, RawTokenEntry[]>)) {
-  if (!Array.isArray(category)) continue;
-  for (const token of category) {
-    if (!token.name) continue;
-    tokenMeta.set(toPascal(token.name), {
-      cssvar: '--' + token.name,
-      description: formatDesc(token.docs?.description),
-    });
-  }
+for (const token of flattenTokens(webJson)) {
+  if (!token.name) continue;
+  tokenMeta.set(toPascal(token.name), {
+    cssvar: '--' + token.name,
+    description: formatDesc(token.docs?.description),
+  });
 }
 
 /** Get CSS custom property name and description for a JS token name.

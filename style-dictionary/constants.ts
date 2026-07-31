@@ -19,7 +19,7 @@ export const THEMES = ['rei-dot-com', 'docsite'];
  * - web: CSS, SCSS, JavaScript
  * - ios: Swift (sizes, text)
  * - figma: JSON for Figma integration
- * - site/*: JSON for documentation site
+ * - site/*: JSON outputs consumed directly by the documentation site
  */
 export const PLATFORMS = [
   'site/global', // Documentation - all platforms

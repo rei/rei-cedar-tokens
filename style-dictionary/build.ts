@@ -29,6 +29,7 @@ const __dirname = getDirname(import.meta.url);
 
 // ==== Include custom transforms ====
 import { deprecated } from './transforms/attribute/deprecated';
+import { surfaceDocs } from './transforms/attribute/surface-docs';
 import { textShortNames } from './transforms/attribute/text-short-names';
 import { spaceScaleRangeNames } from './transforms/attribute/space-scale-range-names';
 import { iosNameTransform } from './transforms/ios/ios-name-transform';
@@ -47,7 +48,6 @@ import { sizeRemOverride } from './transforms/size/rem-override';
 // ==== Include custom formats ====
 import { scssTypography } from './formats/scss-typography';
 import { scssMap } from './formats/scss-map';
-import { site } from './formats/site';
 import { iosTextFormat } from './formats/ios/ios-text-format';
 import { figma as figmaFormat } from './formats/figma';
 import { typescriptModuleValues } from './formats/typescript-module-values';
@@ -131,6 +131,7 @@ sizeRemOverride(StyleDictionary);
 // IMPORTANT: Transform order matters! See docs/TRANSFORMS.md
 // deprecated MUST be first as it mutates token paths
 deprecated(StyleDictionary);
+surfaceDocs(StyleDictionary);
 textShortNames(StyleDictionary);
 spaceScaleRangeNames(StyleDictionary);
 iosNameTransform(StyleDictionary);
@@ -148,7 +149,6 @@ fontFamilyQuotes(StyleDictionary);
 // ==== Register custom formats ====
 scssTypography(StyleDictionary);
 scssMap(StyleDictionary);
-site(StyleDictionary);
 iosTextFormat(StyleDictionary);
 figmaFormat(StyleDictionary);
 typescriptModuleValues(StyleDictionary);
@@ -226,7 +226,7 @@ componentTooltipTokens(StyleDictionary);
  * Build all theme × platform combinations
  *
  * Iterates through all themes (rei-dot-com, docsite) and platforms
- * (web, android, ios, figma, site/*) to generate complete token sets.
+ * (web, ios, figma, site/*) to generate complete token sets.
  *
  * Each combination gets its own Style Dictionary instance with:
  * - Base tokens from tokens/global/ and tokens/[platform]/

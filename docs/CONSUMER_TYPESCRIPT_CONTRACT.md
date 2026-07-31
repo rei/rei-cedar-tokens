@@ -192,7 +192,7 @@ const bg: Partial<CdrColorBackgroundTokens> = {
 Consumers should treat tokens as dimensioned by:
 
 - `Theme` (for example site theme)
-- `Platform` (web, ios, android)
+- `Platform` (web, ios)
 - `Responsibility` (module grouping such as spacing, color-background)
 
 This is currently represented through theme-scoped module selection.

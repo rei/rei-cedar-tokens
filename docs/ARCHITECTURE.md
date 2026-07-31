@@ -23,7 +23,7 @@ Token JSON -> Preprocess -> Transforms -> Filters -> Formats -> Actions -> dist/
 
 Primary outputs:
 
-- runtime values: JS (ESM + CJS), CSS, SCSS, Android, iOS, Figma, site JSON
+- runtime values: JS (ESM + CJS), CSS, SCSS, iOS, Figma, site JSON
 - type surfaces: module interfaces, token-name unions, type barrels
 
 ## Source Of Truth
@@ -40,7 +40,7 @@ Primary outputs:
 Defined in [style-dictionary/constants.ts](../style-dictionary/constants.ts):
 
 - themes: `rei-dot-com`, `docsite`
-- platforms: `site/global`, `site/web`, `site/android`, `site/ios`, `web`, `android`, `ios`, `figma`
+- platforms: `site/global`, `site/web`, `site/ios`, `web`, `ios`, `figma`
 
 The build executes every `theme x platform` combination.
 
@@ -72,12 +72,10 @@ Platform configs:
 - [style-dictionary/configs/js.ts](../style-dictionary/configs/js.ts)
 - [style-dictionary/configs/css.ts](../style-dictionary/configs/css.ts)
 - [style-dictionary/configs/scss.ts](../style-dictionary/configs/scss.ts)
-- [style-dictionary/configs/android.ts](../style-dictionary/configs/android.ts)
 - [style-dictionary/configs/ios.ts](../style-dictionary/configs/ios.ts)
 - [style-dictionary/configs/figma.ts](../style-dictionary/configs/figma.ts)
 - [style-dictionary/configs/site.global.ts](../style-dictionary/configs/site.global.ts)
 - [style-dictionary/configs/site.web.ts](../style-dictionary/configs/site.web.ts)
-- [style-dictionary/configs/site.android.ts](../style-dictionary/configs/site.android.ts)
 - [style-dictionary/configs/site.ios.ts](../style-dictionary/configs/site.ios.ts)
 - [style-dictionary/configs/types.ts](../style-dictionary/configs/types.ts)
 
@@ -99,7 +97,7 @@ Value transforms cover:
 - px/rem conversion
 - spacing normalization
 - unit stripping for JS/SCSS targets
-- platform-specific sizing (dp for Android)
+- iOS-specific sizing
 - clamp value generation
 
 Detailed transform ordering guidance lives in [docs/TRANSFORMS.md](./TRANSFORMS.md).
@@ -235,7 +233,6 @@ Build and validation scripts are defined in [package.json](../package.json):
 
 - `build:base-types`
 - `build:tokens`
-- `site-tokens`
 - `validate`
 - `build`
 
