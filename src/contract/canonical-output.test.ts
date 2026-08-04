@@ -1,21 +1,17 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import _ from 'lodash';
 
-type Token = Record<string, unknown> & {
+type TokenLeaf = Record<string, unknown> & {
   $value?: unknown;
-  name?: string;
   $type?: string;
+  $extensions?: unknown;
+  docs?: unknown;
 };
 
-type TokensByCategory = Record<string, Token[]>;
-
-type CanonicalData = {
-  global: TokensByCategory;
-  web: TokensByCategory;
-  ios: TokensByCategory;
-};
+function isLeaf(node: unknown): node is TokenLeaf {
+  return typeof node === 'object' && node !== null && '$value' in node;
+}
 
 function readJson(relPath: string): unknown {
   const fullPath = path.resolve(process.cwd(), relPath);
@@ -23,106 +19,69 @@ function readJson(relPath: string): unknown {
   return JSON.parse(raw);
 }
 
-function flattenTokens(obj: unknown): Token[] {
-  const tokens: Token[] = [];
-
-  function walk(node: unknown) {
-    if (!node || typeof node !== 'object') return;
-
-    if (Array.isArray(node)) {
-      for (const item of node) walk(item);
-      return;
-    }
-
-    const token = node as Token;
-    if (token.$value !== undefined) {
-      tokens.push(token);
-      return;
-    }
-
-    for (const value of Object.values(token)) {
-      walk(value);
-    }
+function walk(
+  node: unknown,
+  callback: (leaf: TokenLeaf, segments: string[]) => void,
+  segments: string[] = [],
+) {
+  if (isLeaf(node)) {
+    callback(node, segments);
+    return;
   }
 
-  walk(obj);
-  return tokens;
-}
+  if (Array.isArray(node)) {
+    for (let i = 0; i < node.length; i += 1) {
+      walk(node[i], callback, [...segments, String(i)]);
+    }
+    return;
+  }
 
-function allTokens(data: TokensByCategory): Token[] {
-  return Object.values(data).flat();
+  if (node && typeof node === 'object') {
+    for (const [key, value] of Object.entries(node)) {
+      walk(value, callback, [...segments, key]);
+    }
+  }
 }
 
 const THEMES = ['rei-dot-com', 'docsite'];
 
-describe('canonical.json output', () => {
+describe('canonical output', () => {
   for (const theme of THEMES) {
-    it(`${theme}: canonical.json exists and has global, web, and ios platforms`, () => {
-      const canonical = readJson(`dist/${theme}/json/canonical.json`) as CanonicalData;
+    it(`${theme}: canonical/${theme}/tokens.json is a nested DTCG tree with $value, docs, and $extensions`, () => {
+      const canonical = readJson(`canonical/${theme}/tokens.json`) as Record<string, unknown>;
 
-      expect(canonical).toHaveProperty('global');
-      expect(canonical).toHaveProperty('web');
-      expect(canonical).toHaveProperty('ios');
+      expect(canonical).toBeTruthy();
+      expect(typeof canonical).toBe('object');
+      expect(Array.isArray(canonical)).toBe(false);
 
-      for (const platform of ['global', 'web', 'ios'] as const) {
-        expect(typeof canonical[platform]).toBe('object');
-        const categories = Object.values(canonical[platform]);
-        expect(categories.length).toBeGreaterThan(0);
+      let leafCount = 0;
+      let withDocs = 0;
+      let withType = 0;
+      let withExtensions = 0;
 
-        for (const tokens of categories) {
-          expect(Array.isArray(tokens)).toBe(true);
-          for (const token of tokens) {
-            expect(typeof token.name).toBe('string');
-            expect(token.$value).toBeDefined();
-          }
-        }
-      }
+      walk(canonical, (leaf) => {
+        leafCount += 1;
+        expect(leaf.$value).toBeDefined();
+
+        if (leaf.$type) withType += 1;
+        if (leaf.docs) withDocs += 1;
+        if (leaf.$extensions) withExtensions += 1;
+      });
+
+      expect(leafCount).toBeGreaterThan(100);
+      expect(withDocs).toBeGreaterThan(0);
+      expect(withType).toBeGreaterThan(0);
+      // Mobile text tokens still carry $extensions.cedar.docs in the canonical output.
+      expect(withExtensions).toBeGreaterThan(0);
     });
 
-    it(`${theme}: web tokens do not duplicate global token names`, () => {
-      const canonical = readJson(`dist/${theme}/json/canonical.json`) as CanonicalData;
-      const globalNames = new Set(allTokens(canonical.global).map((t) => t.name));
+    it(`${theme}: canonical includes source primitive and semantic sections`, () => {
+      const canonical = readJson(`canonical/${theme}/tokens.json`) as Record<string, unknown>;
 
-      for (const token of allTokens(canonical.web)) {
-        expect(globalNames.has(token.name)).toBe(false);
-      }
-    });
-
-    it(`${theme}: iOS tokens do not duplicate global names by kebab-case`, () => {
-      const canonical = readJson(`dist/${theme}/json/canonical.json`) as CanonicalData;
-      const globalKebabs = new Set(
-        allTokens(canonical.global).map((t) => _.kebabCase(String(t.name ?? ''))),
-      );
-
-      for (const token of allTokens(canonical.ios)) {
-        expect(globalKebabs.has(_.kebabCase(String(token.name ?? '')))).toBe(false);
-      }
-    });
-
-    it(`${theme}: canonical web count matches web.json minus global duplicates`, () => {
-      const canonical = readJson(`dist/${theme}/json/canonical.json`) as CanonicalData;
-      const webJson = readJson(`dist/${theme}/json/web.json`) as unknown;
-      const globalJson = readJson(`dist/${theme}/json/global.json`) as unknown;
-
-      const globalNames = new Set(flattenTokens(globalJson).map((t) => t.name));
-      const expectedWeb = flattenTokens(webJson).filter((t) => !globalNames.has(t.name));
-
-      expect(allTokens(canonical.web).length).toBe(expectedWeb.length);
-    });
-
-    it(`${theme}: canonical ios count matches ios.json minus global duplicates`, () => {
-      const canonical = readJson(`dist/${theme}/json/canonical.json`) as CanonicalData;
-      const iosJson = readJson(`dist/${theme}/json/ios.json`) as unknown;
-      const globalJson = readJson(`dist/${theme}/json/global.json`) as unknown;
-
-      const globalKebabs = new Set(
-        flattenTokens(globalJson).map((t) => _.kebabCase(String(t.name ?? ''))),
-      );
-      const expectedIos = flattenTokens(iosJson).filter(
-        (t) => !globalKebabs.has(_.kebabCase(String(t.name ?? ''))),
-      );
-
-      expect(allTokens(canonical.ios).length).toBe(expectedIos.length);
+      expect(Object.keys(canonical).length).toBeGreaterThan(0);
+      expect(canonical).toHaveProperty('options');
+      expect(canonical).toHaveProperty('color');
+      expect(canonical).toHaveProperty('space');
     });
   }
 });

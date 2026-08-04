@@ -25,6 +25,7 @@ export const PLATFORMS = [
   'site/global', // Documentation - all platforms
   'site/web', // Documentation - web tokens
   'site/ios', // Documentation - iOS tokens
+  'canonical', // Internal normalized DTCG source of truth
   'web', // Web applications
   'ios', // iOS native
   'figma', // Figma design tool

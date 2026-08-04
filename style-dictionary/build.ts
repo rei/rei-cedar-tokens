@@ -4,7 +4,6 @@ import fs from 'fs-extra';
 import path from 'node:path';
 import { PLATFORMS, THEMES } from './constants';
 import { getConfig } from './configs';
-import { generateCanonical } from './generate-canonical';
 import { generateSemanticContract } from './semantic-contract';
 import { getDirname } from './utils';
 
@@ -263,11 +262,6 @@ async function buildAllThemesAndPlatforms() {
 
   console.log('\n==============================================');
   console.log('\nBuild completed!');
-
-  // Generate internal canonical token aggregation from platform JSON outputs.
-  // This is a build-time artifact for downstream testing and should not be
-  // consumed by the documentation site at runtime.
-  await generateCanonical();
 
   // Generate semantic contract layer after all builds complete
   await generateSemanticContract();
