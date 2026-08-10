@@ -3,6 +3,7 @@ import { css as cssConfig } from './css';
 import { scss as scssConfig } from './scss';
 import { js as jsConfig } from './js';
 import { ios as iosConfig } from './ios';
+import { canonical as canonicalConfig } from './canonical';
 import { siteGlobal as siteGlobalConfig } from './site.global';
 import { siteWeb as siteWebConfig } from './site.web';
 import { siteIos as siteIosConfig } from './site.ios';
@@ -17,6 +18,7 @@ const getSources = (platform: Platform) => {
     'site/global': [],
     'site/web': ['tokens/web/**/*.json'],
     'site/ios': ['tokens/mobile/**/*.json'],
+    canonical: ['tokens/web/**/*.json', 'tokens/mobile/**/*.json'],
     web: ['tokens/web/**/*.json'],
     ios: ['tokens/mobile/**/*.json'],
     figma: ['tokens/web/**/*.json'],
@@ -29,6 +31,7 @@ const getSources = (platform: Platform) => {
 const allPlatforms = (platform: Platform, theme: Theme) => {
   const platforms: Record<Platform, Config> = {
     web: { ...cssConfig(theme), ...scssConfig(theme), ...jsConfig(theme) },
+    canonical: { ...canonicalConfig(theme) },
     figma: { ...figmaConfig(theme) },
     ios: { ...iosConfig(theme) },
     'site/global': { ...siteGlobalConfig(theme) },

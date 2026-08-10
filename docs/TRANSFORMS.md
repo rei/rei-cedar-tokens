@@ -210,29 +210,6 @@ JavaScript variant - strips 'px' and ensures numeric output.
 
 ---
 
-### `size/dp-transitive`
-
-**Type**: Value (transitive)  
-**File**: `transforms/size/dp-transitive.ts`
-
-Converts dimension values to Android density-independent pixels (dp).
-
-**Filter**:
-
-- `dimension` or `fontSize` tokens
-- NOT `text-size-root` or `breakpoint`
-
-**Transformation**:
-
-```typescript
-'16px' → '16.00dp'
-'24' → '24.00dp'
-```
-
-**Usage**: Android platform only
-
----
-
 ### `size/float`
 
 **Type**: Value (transitive)  
@@ -328,21 +305,6 @@ transforms: [
   'size/space',
   'size/px-to-rem-transitive',
   'value/clamp',
-];
-```
-
-### Android
-
-```typescript
-transforms: [
-  'attribute/deprecated',
-  'name/pascal',
-  'ts/resolveMath',
-  'ts/size/px',
-  'ts/color/css/hexrgba',
-  'size/strip-px',
-  'size/space',
-  'size/dp-transitive',
 ];
 ```
 
