@@ -6,17 +6,17 @@
 
 ## Context
 
-The current token directory structure in cedar-tokens has evolved without a clear architectural architeral convention, resulting in scattered foundation tokens across multiple directories (`global/`, `web/`, `themes/`). This structure makes it difficult to:
+The current token directory structure in cedar-tokens has evolved without a clear architectural architeral convention, resulting in scattered primitive tokens across multiple directories (`global/`, `web/`, `themes/`). This structure makes it difficult to:
 
-1. Identify which tokens are foundation vs. component-specific
+1. Identify which tokens are Primitive vs. component-specific
 2. Maintain clear boundaries between platform-agnostic and platform-specific tokens
 3. Support theme overrides in a consistent manner
 
 Current structure issues:
 
-- Foundation tokens (color, spacing, typography) split between `global/` and `web/`
-- Component tokens (button, link, input) mixed with foundation tokens in `global/`
-- Theme-specific overrides (`themes/rei-dot-com/`, `themes/docsite/`) contain foundation tokens
+- Primitive tokens (color, spacing, typography) split between `global/` and `web/`
+- Component tokens (button, link, input) mixed with Primitive tokens in `global/`
+- Theme-specific overrides (`themes/rei-dot-com/`, `themes/docsite/`) contain Primitive tokens
 - SCSS utilities contain implementation details that should live in Cedar
 - No clear canonical structure aligned with modern design token best practices
 
@@ -24,40 +24,68 @@ Current structure issues:
 
 We will reorganize the token directory structure to align with a canonical design token architecture that separates concerns by function rather than platform. The new structure will enable clear separation between:
 
-1. **Foundation tokens** - Platform-agnostic design primitives
-2. **Semantic tokens** - Contextual design tokens
-3. **Component tokens** - Component-specific design tokens (moved to Cedar)
-4. **Theme tokens** - Theme-specific overrides (moved to Cedar or consuming applications)
+1. **Primitive tokens** - Raw design token values (color palette, spacing scale, typography primitives)
+2. **Semantic tokens** - Contextual design tokens that reference primitives
+3. **Component tokens** - Component-specific design tokens (thin maps, palettes, themes)
 
 ### Target Directory Structure
 
 ```
 cedar-tokens/
 ├── tokens/
-│   ├── options/                    # Raw design token values (primitives)
-│   │   ├── color.json             # Color palette values
-│   │   ├── spacing.json           # Spacing scale values
-│   │   ├── typography.json       # Font family, size, weight, spacing values
-│   │   ├── motion.json           # Duration and timing function values
-│   │   └── radius.json           # Border radius values
+│   ├── primitives/              # Raw design token values
+│   │   ├── color/
+│   │   │   └── palette.json     # Color palette values
+│   │   ├── spacing/
+│   │   │   └── space.json       # Spacing scale values
+│   │   ├── typography/
+│   │   │   ├── family.json      # Font family values
+│   │   │   ├── size.json        # Font size values
+│   │   │   ├── weight.json      # Font weight values
+│   │   │   └── spacing.json     # Letter spacing values
+│   │   ├── motion/
+│   │   │   ├── duration.json    # Animation duration values
+│   │   │   └── timing.json      # Timing function values
+│   │   ├── breakpoint/
+│   │   │   └── breakpoint.json  # Timing function values
+│   │   └── radius/
+│   │       └── scale.json       # Border radius values
 │   │
-│   ├── foundation/                # Platform-agnostic foundation tokens
-│   │   ├── color.json            # Semantic color tokens (text, icon, background, border)
-│   │   ├── spacing.json          # Spacing system tokens (static, fluid, inset)
-│   │   ├── typography.json       # Typography scale tokens (type scale, line-height)
-│   │   ├── motion.json           # Motion tokens (duration, timing)
-│   │   ├── prominence.json       # Shadow/prominence tokens
-│   │   └── radius.json           # Border radius tokens
+│   ├── semantic/                  # Semantic tokens that reference primitives
+│   │   ├── color/
+│   │   │   ├── text.json        # Text color tokens
+│   │   │   ├── icon.json        # Icon color tokens
+│   │   │   ├── background.json  # Background color tokens
+│   │   │   └── border.json      # Border color tokens
+│   │   ├── feedback/
+│   │   │   ├── success.json     # Success state colors
+│   │   │   ├── warning.json     # Warning state colors
+│   │   │   └── error.json       # Error state colors
+│   │   ├── surface/
+│   │   │   ├── background.json  # Surface background colors
+│   │   │   └── border.json      # Surface border colors
+│   │   ├── action/
+│   │   │   └── button.json      # Action component colors
+│   │   ├── selection/
+│   │   │   └── checkbox.json    # Selection component colors
+│   │   ├── navigation/
+│   │   │   └── link.json        # Navigation component colors
+│   │   ├── spacing/
+│   │   │   ├── inset.json       # Inset spacing tokens
+│   │   │   └── scale.json       # Stack spacing tokens
+│   │   ├── typography/
+│   │   │   ├── heading.json     # Heading typography tokens
+│   │   │   ├── body.json        # Body typography tokens
+│   │   │   └── utility.json    # Utility typography tokens
+│   │   ├── motion/
+│   │   │   ├── duration.json    # Semantic duration tokens
+│   │   │   └── timing.json      # Semantic timing tokens
+│   │   └── prominence/
+│   │       └── shadow.json      # Shadow/prominence tokens
 │   │
-│   ├── web/                       # Web-specific foundation tokens
-│   │   ├── typography.json       # Web-specific composite typography tokens
-│   │   └── breakpoints.json      # Web-specific breakpoint tokens
-│   │
-│   └── index.json                 # Main entry point that references all token files
-│
-└── docs/
-    └── adr/
-        └── 001-token-directory-structure-reorganization.md
+│   ├── component/ # Component-specific tokens (thin maps)
+│   │   ├── palettes/             # Component-specific color palettes
+│   │   └── themes/               # Component-specific themes/modes
 ```
 
 ### What Moves to Cedar Component Repository
@@ -142,18 +170,20 @@ All theme-specific tokens will be removed from cedar-tokens:
 
 The migration will be executed in phases to avoid breaking consumers:
 
-#### Phase 1: Foundation Token Consolidation (Non-Breaking)
+#### Phase 1: Primitive, Semantic, and Platform Token Consolidation (Non-Breaking)
 
-**Goal**: Consolidate foundation tokens without changing public API
+**Goal**: Consolidate primitive, semantic, and platform tokens without changing public API
 
 **Steps**:
 
-1. Create new directory structure alongside existing structure
-2. Move foundation tokens from `global/` and `web/` to new locations
-3. Create alias files in old locations that reference new locations
-4. Update `index.json` to include both old and new paths temporarily
-5. Run full test suite to ensure no breaking changes
-6. Document deprecation of old paths
+1. Create new `primitives/`, `semantic/`, and `platform/` directory structure alongside existing structure
+2. Move primitive tokens from `global/` and `web/` to `primitives/`
+3. Move semantic tokens from `global/` and `web/` to `semantic/`
+4. Move platform tokens from `web/` to `platform/web/`
+5. Create alias files in old locations that reference new locations
+6. Update `index.json` to include both old and new paths temporarily
+7. Run full test suite to ensure no breaking changes
+8. Document deprecation of old paths
 
 **Risk**: Low (backward compatible via aliases)
 
@@ -188,18 +218,19 @@ The migration will be executed in phases to avoid breaking consumers:
 
 **Risk**: Medium (affects SCSS imports)
 
-#### Phase 4: Theme Token Removal (Breaking Change)
+#### Phase 4: Cleanup (Non-Breaking)
 
-**Goal**: Remove theme-specific tokens from cedar-tokens
+**Goal**: Remove temporary aliases and finalize structure
 
 **Steps**:
 
-1. REI consuming applications and Docsite use Cedar local theme override files
-2. Remove `tokens/themes/` directory from cedar-tokens
-3. Publish minor version bump for cedar-tokens (v2.2.0)
-4. REI.com and docsite teams deploy updated theme implementations
+1. Remove alias files from old directory locations
+2. Remove old empty directories
+3. Update documentation to reflect new structure
+4. Publish patch version bump for cedar-tokens (v2.1.1)
+5. Archive migration guide
 
-**Risk**: Medium (requires application changes)
+**Risk**: Low (cleanup only)
 
 #### Phase 5: Cleanup (Non-Breaking)
 
@@ -222,7 +253,7 @@ During Phase 1, we will maintain backward compatibility through alias files:
 ```json
 // tokens/global/color.json (temporary alias)
 {
-  "$extends": ["../foundation/color.json"]
+  "$extends": ["../primitive/color.json"]
 }
 ```
 
@@ -234,7 +265,7 @@ We will provide a migration guide for consuming applications:
 
 1. **Foundation Token Imports**
    - Old: `@import 'cedar-tokens/tokens/...'`
-   - New: `@import 'cedar-tokens/tokens/foundation/color'`
+   - New: `@import 'cedar-tokens/tokens/primitive/color'`
 
 2. **Component Token Imports**
    - Old: `@import 'cedar-tokens/tokens/...'`
@@ -252,7 +283,7 @@ We will provide a migration guide for consuming applications:
 
 ### Positive
 
-- **Clear separation of concerns** between foundation, semantic, and component tokens
+- **Clear separation of concerns** between primitive, semantic, and component tokens
 - **Reduced token repository scope** to only platform-agnostic design primitives
 - **Better maintainability** with co-located component tokens and SCSS in Cedar
 - **Flexible theming** model that doesn't pollute shared token repository
