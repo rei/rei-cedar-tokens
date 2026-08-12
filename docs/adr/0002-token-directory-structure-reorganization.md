@@ -56,30 +56,45 @@ cedar-tokens/
 │   │
 │   ├── semantic/                  # Semantic tokens that reference primitives
 │   │   ├── color/
-│   │   │   ├── text.json        # Text color tokens
-│   │   │   ├── icon.json        # Icon color tokens
-│   │   │   ├── background.json  # Background color tokens
-│   │   │   └── border.json      # Border color tokens
-│   │   ├── surface/
-│   │   │   ├── background.json  # Surface background colors
-│   │   │   └── border.json      # Surface border colors
-│   │   ├── action/
-│   │   │   └── button.json      # Action component colors
-│   │   ├── selection/
-│   │   │   └── checkbox.json    # Selection component colors
-│   │   ├── navigation/
-│   │   │   └── link.json        # Navigation component colors
-│   │   ├── feedback/
-│   │   │   ├── success.json     # Success state colors
-│   │   │   ├── warning.json     # Warning state colors
-│   │   │   └── error.json       # Error state colors
+│   │   │   ├── universal/       # Universal colors (surface, text, border, icon)
+│   │   │   │   ├── surface.json
+│   │   │   │   ├── text.json
+│   │   │   │   ├── border.json
+│   │   │   │   └── icon.json
+│   │   │   ├── action/          # Action colors (surface, text, border, icon)
+│   │   │   │   ├── surface.json
+│   │   │   │   ├── text.json
+│   │   │   │   ├── border.json
+│   │   │   │   └── icon.json
+│   │   │   ├── selection/       # Selection colors (surface, text, border, icon)
+│   │   │   │   ├── surface.json
+│   │   │   │   ├── text.json
+│   │   │   │   ├── border.json
+│   │   │   │   └── icon.json
+│   │   │   └── feedback/        # Feedback colors (surface, text, border, icon)
+│   │   │       ├── surface.json
+│   │   │       ├── text.json
+│   │   │       ├── border.json
+│   │   │       └── icon.json
 │   │   ├── spacing/
 │   │   │   ├── inset.json       # Inset spacing tokens
 │   │   │   └── stack.json       # Stack spacing tokens
 │   │   ├── typography/
-│   │   │   ├── heading.json     # Heading typography tokens
-│   │   │   ├── body.json        # Body typography tokens
-│   │   │   └── utility.json    # Utility typography tokens
+│   │   │   ├── heading/
+│   │   │   │   ├── size.json
+│   │   │   │   ├── weight.json
+│   │   │   │   ├── line-height.json
+│   │   │   │   └── letter-spacing.json
+│   │   │   ├── body/
+│   │   │   │   ├── size.json
+│   │   │   │   ├── weight.json
+│   │   │   │   ├── line-height.json
+│   │   │   │   └── letter-spacing.json
+│   │   │   └── utility/
+│   │   │       ├── size.json
+│   │   │       ├── weight.json
+│   │   │       ├── line-height.json
+│   │   │       └── letter-spacing.json
 │   │   ├── motion/
 │   │   │   ├── duration.json    # Semantic duration tokens
 │   │   │   └── timing.json      # Semantic timing tokens
@@ -93,16 +108,16 @@ The following items will be moved from cedar-tokens to Cedar platform implementa
 
 **1. SCSS Mixins and Utilities**
 
-- `cdr-breakpoint-mixins.scss` → Cedar web (@rei/cedar-styles)
-- `cdr-display-mixins.scss` → Cedar web (@rei/cedar-styles)
-- `cdr-type-mixins.scss` → Cedar web (@rei/cedar-styles)
+- `cdr-breakpoint-mixins.scss` → Cedar web (@rei/cedar)
+- `cdr-display-mixins.scss` → Cedar web (@rei/cedar)
+- `cdr-type-mixins.scss` → Cedar web (@rei/cedar)
 
 **Rationale**: These are web-specific implementation details. They should live in Cedar web, not the platform-agnostic token repository.
 
 **2. Web-Specific Foundations**
 
-- Breakpoint values and breakpoint mixins → Cedar web (@rei/cedar-styles)
-- Composite text/typography styles → Cedar web (@rei/cedar-styles)
+- Breakpoint values and breakpoint mixins → Cedar web (@rei/cedar)
+- Composite text/typography styles → Cedar web (@rei/cedar)
 
 **Rationale**: Web-specific and composite concerns are implementation details that belong to Cedar web, not the canonical token repository.
 
@@ -116,15 +131,15 @@ The following items will be moved from cedar-tokens to Cedar platform implementa
 
 ### Output Matrix
 
-| Domain Family                                       | Token Repo Output                     | Cedar Web Output                                                                                                | Cedar iOS Output                     | Cedar Android Output                 |
-| --------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ |
-| Primitives (color, space, radius, typography atoms) | CSS, SCSS, JS, TS, JSON               | —                                                                                                               | —                                    | —                                    |
-| Semantic tokens (text colors, surface colors, etc.) | CSS, SCSS, JS, TS, JSON               | —                                                                                                               | —                                    | —                                    |
-| Web-specific atoms (web fluid, font stacks)         | Web-only module, not in public barrel | —                                                                                                               | —                                    | —                                    |
-| Breakpoints                                         | Optional dimension reference or none  | Mixins, utility classes, CSS vars                                                                               | Platform-specific breakpoints        | Platform-specific breakpoints        |
-| Composite text styles                               | No                                    | Components / cedar-styles                                                                                       | Platform-specific text styles        | Platform-specific text styles        |
-| Component token maps                                | No                                    | Component maps (nested variant/state) → flat CSS vars, data-attribute selectors, Sass maps, three-tier fallback | Platform-specific component bindings | Platform-specific component bindings |
-| Component variable types                            | No                                    | Cedar / cedar-types                                                                                             | Platform-specific types              | Platform-specific types              |
+| Domain Family                                       | Token Repo Output                     | In Public Barrel | Cedar Web Output                                                                                                | Cedar iOS Output                     | Cedar Android Output                 |
+| --------------------------------------------------- | ------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ |
+| Primitives (color, space, radius, typography atoms) | CSS, SCSS, JS, TS, JSON               | Yes              | —                                                                                                               | —                                    | —                                    |
+| Semantic tokens (text colors, surface colors, etc.) | CSS, SCSS, JS, TS, JSON               | Yes              | —                                                                                                               | —                                    | —                                    |
+| Web-specific atoms (web fluid, font stacks)         | Web-only module, not in public barrel | No               | —                                                                                                               | —                                    | —                                    |
+| Breakpoints                                         | Optional dimension reference or none  | No               | Mixins, utility classes, CSS vars                                                                               | Platform-specific breakpoints        | Platform-specific breakpoints        |
+| Composite text styles                               | No                                    | No               | Components / cedar                                                                                              | Platform-specific text styles        | Platform-specific text styles        |
+| Component token maps                                | No                                    | No               | Component maps (nested variant/state) → flat CSS vars, data-attribute selectors, Sass maps, three-tier fallback | Platform-specific component bindings | Platform-specific component bindings |
+| Component variable types                            | No                                    | No               | Cedar / cedar-types                                                                                             | Platform-specific types              | Platform-specific types              |
 
 **Default entrypoint contract**: The public barrel (@rei/cdr-tokens/css, /scss, /types) includes only cross-platform primitives and semantic tokens. Component token maps, web-only values, and utilities are platform-specific and owned by respective Cedar implementations.
 
@@ -141,11 +156,10 @@ The migration will be executed in phases to avoid breaking consumers:
 1. Create new `primitives/` and `semantic/` directory structure alongside existing structure
 2. Move primitive tokens from `global/` and `web/` to `primitives/`
 3. Move semantic tokens from `global/` and `web/` to `semantic/`
-4. Create alias files in old locations that reference new locations
-5. Run full test suite to ensure no breaking changes
-6. Document deprecation of old paths
+4. Run full test suite to ensure no breaking changes
+5. Remove old empty directories
 
-**Risk**: Low (backward compatible via aliases)
+**Risk**: Low (internal restructuring only)
 
 #### Phase 2: Component Token Map Migration (Breaking Change)
 
@@ -170,9 +184,9 @@ The migration will be executed in phases to avoid breaking consumers:
 
 **Steps**:
 
-1. Move SCSS mixin files to Cedar web (@rei/cedar-styles)
-2. Move breakpoint values and mixins to Cedar web (@rei/cedar-styles)
-3. Move composite text/typography styles to Cedar web (@rei/cedar-styles)
+1. Move SCSS mixin files to Cedar web (@rei/cedar)
+2. Move breakpoint values and mixins to Cedar web (@rei/cedar)
+3. Move composite text/typography styles to Cedar web (@rei/cedar)
 4. Remove `dist/<theme>/scss/utilities/` from cedar-tokens
 5. Remove `tokens/web/` directory from cedar-tokens (breakpoints, composite typography)
 6. Publish minor version bump for cedar-tokens (v2.1.0)
@@ -184,61 +198,35 @@ The migration will be executed in phases to avoid breaking consumers:
 
 #### Phase 4: Cleanup (Non-Breaking)
 
-**Goal**: Remove temporary aliases and finalize structure
+**Goal**: Finalize structure and update documentation
 
 **Steps**:
 
-1. Remove alias files from old directory locations
-2. Remove old empty directories
-3. Update documentation to reflect new structure
-4. Publish patch version bump for cedar-tokens (v2.1.1)
-5. Archive migration guide
+1. Update documentation to reflect new structure
+2. Publish patch version bump for cedar-tokens (v2.1.1)
+3. Archive migration guide
 
-**Risk**: Low (cleanup only)
-
-### Backward Compatibility Strategy
-
-During Phase 1, we will maintain backward compatibility through alias files:
-
-```json
-// tokens/global/color.json (temporary alias)
-{
-  "$extends": ["../semantic/color/text.json"]
-}
-```
-
-This allows consumers to continue using old import paths while we transition them to new paths.
+**Risk**: Low (documentation only)
 
 ### Consumer Migration Guide
 
-We will provide a migration guide for consuming applications:
+Since this restructuring only affects the internal token directory structure (not the public API), most consumers will not need to change their imports. The public barrel (@rei/cdr-tokens/css, /scss, /types) will continue to provide the same primitives and semantic tokens.
 
-1. **Primitive Token Imports**
-   - Old: `@import 'cedar-tokens/tokens/global/color'`
-   - New: `@import 'cedar-tokens/tokens/primitives/color/palette'`
+Migration is only required for:
 
-2. **Semantic Token Imports**
-   - Old: `@import 'cedar-tokens/tokens/global/color'`
-   - New: `@import 'cedar-tokens/tokens/semantic/color/text'`
-
-3. **Component Token Map Imports (Web)**
-   - Old: `@import 'cedar-tokens/tokens/global/button'`
-   - New: Import from Cedar web (Cedar web owns component token maps)
-   - Note: Component token maps are platform-specific and owned by Cedar implementations
-
-4. **SCSS Mixin Imports (Web)**
+1. **SCSS Mixin Imports (Web)**
    - Old: `@import 'cedar-tokens/dist/docsite/scss/utilities/cdr-type-mixins'`
-   - New: `@import '@rei/cedar-styles/utilities/cdr-type-mixins'`
+   - New: `@import '@rei/cedar/utilities/cdr-type-mixins'`
 
-5. **Breakpoint Imports (Web)**
+2. **Breakpoint Imports (Web)**
    - Old: `@import 'cedar-tokens/tokens/web/breakpoints'`
-   - New: `@import '@rei/cedar-styles/breakpoints'`
+   - New: `@import '@rei/cedar/breakpoints'`
 
-6. **Component CSS (Web)**
+3. **Component CSS (Web)**
    - Old: Import from cedar-tokens dist output
    - New: Import from Cedar web (Cedar web generates CSS from component token maps)
 
-7. **Component Token Bindings (iOS/Android)**
+4. **Component Token Bindings (iOS/Android)**
    - Old: Import from cedar-tokens (if applicable)
    - New: Import from Cedar iOS / Cedar Android (platform-specific bindings)
 
