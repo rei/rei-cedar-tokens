@@ -56,7 +56,7 @@ cedar-tokens/
 │   │
 │   ├── semantic/                  # Semantic tokens that reference primitives
 │   │   ├── color/
-│   │   │   ├── universal/       # Universal colors (surface, text, border, icon)
+│   │   │   ├── control/       # Universal colors (surface, text, border, icon)
 │   │   │   │   ├── surface.json
 │   │   │   │   ├── text.json
 │   │   │   │   ├── border.json
