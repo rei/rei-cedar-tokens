@@ -28,6 +28,9 @@ review as implying an automatic extension of the color taxonomy to other foundat
    codebases and migrate consumers.
 5. [`05-open-questions.md`](./05-open-questions.md) — unresolved design/architecture
    questions that block or affect the migration.
+6. [`06-foundation-lane-triage.md`](./06-foundation-lane-triage.md) — classifies every
+   token domain into an integration lane (semantic / deferred / deprecating /
+   unchanged) so the mixed-model pipeline knows how to treat each one.
 
 ## Sources
 
