@@ -193,7 +193,69 @@ All of the following are scoped to the `color` foundation only, unless noted oth
 6. **Validation** — `validate-contract.ts` and `canonical-contract.test.ts` must enforce
    the five-tier grammar instead of the ADR-0004 rules.
 
-## 6. What Does _Not_ Change
+## 7. Interaction Bundles — Config-Over-Code / DXP Consumption Model
+
+**Status: proposed, not decided.** Raised from a real gap: the Role-first module
+boundary in §2 (`color-surface`, `color-text`, `color-border`, `color-icon`) is right
+for CSS/SCSS output, but wrong as the _selection surface_ for config-driven consumers
+(DXP/low-code tools) that today iterate a flat, curated list (e.g.
+`CdrColorBackgroundTokens`) to populate a dropdown. Once `color-surface` includes every
+interaction family × identity × expression combination, that flat list becomes "every
+surface color in the system," not "background color" — worse for a picker UI, not
+better.
+
+**Proposal:** generate a second, additive artifact — an **Interaction Bundle** — on top
+of the same canonical color data, keyed by `interaction-family + identity` (e.g.
+"Action / Brand"), whose value is the set of role tokens that exist for that
+combination:
+
+```ts
+interface CdrColorActionBrand {
+  surface: string; // color.action.surface.brand
+  text: string; // color.action.text.brand
+  border: string; // color.action.border.brand
+  icon: string; // color.action.icon.brand
+}
+```
+
+A DXP config picker iterates **bundles** ("Action / Brand", "Feedback / Warning",
+"Control / Neutral"), not raw role tokens — one selection resolves to a coherent role
+set instead of four independent pickers that may or may not agree with each other.
+
+This does **not** change the atomic token grammar from §1 — CSS/SCSS/JS still generate
+directly from the atomic `color[.interaction-family].role.identity[.expression]`
+tokens. The bundle is a derived, additive TypeScript/JSON view for the DXP consumption
+case only.
+
+### Decisions made so far
+
+1. **Partial bundles (missing role for an identity/interaction combo):** treat as a
+   **bug until validated with design**, not an assumed intentional gap. If design
+   confirms a role is genuinely absent for a given combination (not an oversight), DXP
+   tooling must accommodate partial bundles gracefully (omit or disable that role in
+   the picker) — but that accommodation is a fallback, not the default expectation.
+2. **Universal/base tokens (no interaction family):** bundle these the same way we do
+   **today** — as a flat list (matching the current `CdrColorBackgroundTokens`-style
+   experience), not as an interaction bundle. Interaction bundles only apply where an
+   interaction family is present.
+3. **Expression:** the bundle exposes the **full expression range per role**, not a
+   single collapsed value — e.g. `CdrColorActionBrand.surface` isn't one string, it's
+   the set of expression variants (`faint`/`base`/`bold`/etc.) available for that role.
+   Exact shape (nested object vs. flat per-expression keys) is an implementation
+   detail to settle when this is built, not a taxonomy decision.
+
+### Explicitly not decided yet (see `05-open-questions.md`)
+
+- Whether contrast/pairing safety metadata (the functional gap left by dropping `on`)
+  is **forwarded raw** to consumers so they assemble their own validated pairs, or
+  **pre-computed into valid pairs** as a higher-level generated deliverable. See
+  `08-color-metadata-and-pairing.md` for the metadata pipeline proposal this depends
+  on.
+- DXP/config-tooling team feedback on whether the bundle-first picker model
+  (interaction + identity, then role/expression) is actually the UX they want, before
+  any of this is built.
+
+## 8. What Does _Not_ Change
 
 - Package export surface: `@rei/cdr-tokens/types`, `/css`, `/scss`, theme-scoped deep
   paths.

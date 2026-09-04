@@ -34,6 +34,10 @@ review as implying an automatic extension of the color taxonomy to other foundat
 7. [`07-dist-output-diagrams.md`](./07-dist-output-diagrams.md) — current-vs-future
    directory trees and token-level diffs for the SCSS, CSS, iOS, and Android dist
    outputs, with every current-state tree read directly from `dist/`.
+8. [`08-color-metadata-and-pairing.md`](./08-color-metadata-and-pairing.md) — proposed
+   pipeline for replacing the dropped `on` vocabulary with Figma-authored pairing
+   metadata plus automated contrast checking, feeding the Interaction Bundle proposal
+   in `03-future-state-proposal.md` §7.
 
 ## Sources
 
