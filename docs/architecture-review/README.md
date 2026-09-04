@@ -7,6 +7,13 @@ This folder contains the architecture review comparing the Cedar Token Pipeline 
 Guiding principle: **the token model is allowed to change; the delivery model should
 only change when there is a clear architectural benefit.**
 
+**Scope note: the semantic taxonomy discussed in this folder is a `color`-only
+model.** It has not been worked through for other foundations (`radius`, `spacing`,
+`typography`, `motion`, `size`, `shape`). Those foundations have their own, often more
+primitive, semantic structures and keep their current naming/structure until a
+separate, dedicated effort scopes a semantic layer for each of them. Do not treat this
+review as implying an automatic extension of the color taxonomy to other foundations.
+
 ## Contents
 
 1. [`01-architecture-review.md`](./01-architecture-review.md) — side-by-side comparison
@@ -15,8 +22,8 @@ only change when there is a clear architectural benefit.**
 2. [`02-findings-matrix.md`](./02-findings-matrix.md) — condensed findings table used to
    drive the future-state decision.
 3. [`03-future-state-proposal.md`](./03-future-state-proposal.md) — the proposed hybrid
-   architecture, including the corrected five-tier semantic token taxonomy
-   (Foundation → Interaction Family → Role → Identity → Expression).
+   architecture, including the corrected five-tier semantic **color** taxonomy
+   (color → Interaction Family → Role → Identity → Expression). Scoped to color only.
 4. [`04-migration-plan.md`](./04-migration-plan.md) — phased plan to converge the two
    codebases and migrate consumers.
 5. [`05-open-questions.md`](./05-open-questions.md) — unresolved design/architecture

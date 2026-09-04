@@ -5,8 +5,14 @@
 **Adopt the spike's semantic token model — corrected to the taxonomy below — combined
 with mainline's build orchestration, modular distribution, package exports, and
 TypeScript generation.** The token names, canonical paths, filter definitions, and
-type-generation inputs need to be rebuilt against the corrected grammar; the mainline
-distribution/export layer does not need to change shape to do this.
+type-generation inputs for `color` need to be rebuilt against the corrected grammar;
+the mainline distribution/export layer does not need to change shape to do this.
+
+**This taxonomy covers `color` only.** It is a semantic _color_ taxonomy, not a
+general-purpose token grammar. Other foundations (`radius`, `spacing`, `typography`,
+`motion`, `size`, `shape`) have their own, more primitive semantic structures and are
+explicitly out of scope for this proposal. They keep their current naming until a
+separate effort defines whether/how each one gets a semantic layer.
 
 ---
 
@@ -17,26 +23,35 @@ historical `semantic-taxonomy-confluence.md` notes are **superseded** by the "Ce
 Semantic Taxonomy — Discovery & Alignment" document supplied by design/architecture
 stakeholders. All recommendations below use the corrected five-tier model.
 
+**Scope: this taxonomy is a semantic model for `color` only.** It has not been worked
+through for any other foundation. `size`, `shape`, `radius`, `spacing`, `typography`,
+and `motion` tokens are **out of scope** for this model and must keep their current
+naming/structure until a separate, dedicated design/architecture effort decides how (or
+whether) each of those foundations gets a semantic layer. Radius, spacing, etc. tend to
+have a much more primitive semantic structure than color and should not be assumed to
+map onto this same five-tier shape.
+
 ```
-FOUNDATION[.INTERACTION FAMILY].ROLE.IDENTITY[.EXPRESSION]
+color[.INTERACTION FAMILY].ROLE.IDENTITY[.EXPRESSION]
 ```
 
-| Tier                   | Values                                                                                                                                          | Notes                                                                       |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **Foundation**         | `color`, `size`, `shape`, `radius`, `spacing`, `typography`, `motion`                                                                           | Not only "color"; all primitive systems follow the same semantic treatment. |
-| **Interaction Family** | `action` \| `feedback` \| `selection` \| `control`                                                                                              | **Optional.** Omitted = universal/foundation-only context.                  |
-| **Role**               | `surface` \| `text` \| `border` \| `icon`                                                                                                       | Required.                                                                   |
-| **Identity**           | `brand` \| `accent` \| `warning` \| `success` \| `sale` \| `trigger` \| `neutral` \| `natural` \| `info` \| `membership` \| `rating` \| `error` | Required.                                                                   |
-| **Expression**         | `trace` \| `faint` \| `subtle` \| `base` \| `prominent` \| `bold` \| `intense`                                                                  | **Optional.** `base` is an omission default, never a literal suffix.        |
+| Tier                   | Values                                                                                                                                          | Notes                                                                              |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Foundation**         | `color`                                                                                                                                         | Scoped to color only — see scope note above. Not a template for other foundations. |
+| **Interaction Family** | `action` \| `feedback` \| `selection` \| `control`                                                                                              | **Optional.** Omitted = universal/foundation-only context.                         |
+| **Role**               | `surface` \| `text` \| `border` \| `icon`                                                                                                       | Required.                                                                          |
+| **Identity**           | `brand` \| `accent` \| `warning` \| `success` \| `sale` \| `trigger` \| `neutral` \| `natural` \| `info` \| `membership` \| `rating` \| `error` | Required.                                                                          |
+| **Expression**         | `trace` \| `faint` \| `subtle` \| `base` \| `prominent` \| `bold` \| `intense`                                                                  | **Optional.** `base` is an omission default, never a literal suffix.               |
 
 Key rules:
 
 - **Omission is not a value.** There is no `universal` interaction family and no
   literal `base` segment. `color.surface.brand` means `color.surface.brand.base`.
-- **Expression is a hierarchy primitive**, not a color-only concept. The same
-  seven-step scale should extend to other foundations (spacing rhythm, radius
-  prominence, etc.), resolved per-identity at build time, not by a single runtime
-  color function.
+- **Expression, as defined here, is a color-hierarchy concept**, not a generic
+  cross-foundation primitive. Whether an analogous prominence/emphasis scale makes
+  sense for other foundations (e.g. spacing rhythm, radius prominence) is an open
+  question, not a decided extension — see `05-open-questions.md`. Until that is
+  decided, other foundations keep their existing naming.
 - **Icon is its own role**, not mirrored from text.
 - **`inverse` and `link` are not identities.** A dark/inverse variant is
   `identity: neutral` at an `intense`/`bold` expression. A link is `identity: trigger`.
@@ -56,7 +71,7 @@ module list in
 ## 1. Token Path Grammar
 
 ```
-<foundation>[.<interaction-family>].<role>.<identity>[.<expression>]
+color[.<interaction-family>].<role>.<identity>[.<expression>]
 ```
 
 Canonical examples:
@@ -69,12 +84,10 @@ color.icon.trigger                  (universal icon, trigger, base)
 color.control.border.neutral        (control border, neutral, base)
 ```
 
-Other foundations apply the same optional-expression scale as it becomes relevant:
-
-```
-radius.action.interactive           (radius for interactive controls)
-spacing.prominent.layout            (spacing rhythm expression)
-```
+**This grammar applies to `color` only.** `radius`, `spacing`, `typography`, `motion`,
+`size`, and `shape` tokens are not touched by this proposal and should continue to use
+their current mainline naming/structure (e.g. existing `radius`/`space` foundation
+modules per ADR-0001) until a separate taxonomy effort is scoped for each of them.
 
 ## 2. Module Boundary Recommendation
 
@@ -153,16 +166,24 @@ migration plan, not a final mapping.
 
 ## 5. Architectural Changes Required in Mainline's Pipeline
 
+All of the following are scoped to the `color` foundation only, unless noted otherwise.
+
 1. **Canonical `tokens.json` shape** — reshape the canonical color tree so that
    `surface`/`text`/`border`/`icon` are roles and `action`/`feedback`/`selection`/`control`
    are optional interaction-family segments, rather than mixed top-level groupings.
-2. **Module registry** — regenerate `foundationsModulesName`/module definitions from a
-   schema-driven list of Foundation × Role (× Identity), not a hard-coded list mixing
-   old and new concepts. Delete `componentModulesName` and the component domain family
-   entirely (phased — see migration plan).
-3. **Filter layer** — rewrite `style-dictionary/filters/foundations/*` to match
-   foundation/role/identity/expression instead of the current domain list; remove
-   component filters.
+   Non-color foundation trees (`radius`, `spacing`, `typography`, `motion`, etc.) are
+   left untouched by this change.
+2. **Module registry** — regenerate the color-related entries in
+   `foundationsModulesName`/module definitions from a schema-driven list of Role ×
+   Identity, not a hard-coded list mixing old and new concepts. Non-color foundation
+   modules (`radius`, `space`, `motion-duration`, `motion-timing`, `prominence`, text
+   modules, etc.) keep their current definitions unchanged. Delete
+   `componentModulesName` and the component domain family entirely (phased — see
+   migration plan) — this is a separate cleanup, not dependent on the color taxonomy.
+3. **Filter layer** — rewrite `style-dictionary/filters/foundations/color-*` to match
+   role/identity/expression instead of the current domain list; remove component
+   filters. All other `style-dictionary/filters/foundations/*` files (radius, space,
+   text, motion, breakpoint, prominence, etc.) are unaffected.
 4. **Type generation** — `typescript/module-interface` and `typescript/token-name-union`
    formats must handle optional intermediate segments (interaction family, expression)
    and correctly omit `base`.
@@ -180,3 +201,6 @@ migration plan, not a final mapping.
 - `TokenDictionary` typed runtime contract direction (still planned, per ADR-0001).
 - `validateExportMap()` CI guard mechanism.
 - Theme model (`rei-dot-com`, `docsite`) and palette-as-context-override mechanism.
+- **All non-color foundations** (`radius`, `spacing`, `typography`, `motion`, `size`,
+  `shape`) — naming, canonical shape, filters, and module definitions for these are
+  unaffected by this proposal and are not implied to be moving to this taxonomy.
