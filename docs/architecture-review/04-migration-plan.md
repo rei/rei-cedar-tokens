@@ -65,6 +65,11 @@ assumed to reuse this taxonomy's shape.
 
 ## Phase 4 — Component Token Retirement
 
+The entire `components` domain family is **already decided as deprecated** (see
+`06-foundation-lane-triage.md`) — this is not gated on Phase 0/1 completion. No new
+component-token domains should be added to `style-dictionary/filters/components/**`
+going forward.
+
 - For each of the 18+ component domains currently listed in ADR-0001 §Domain Families,
   confirm the Phase 0 mapping target, then:
   - Update component-library consumers to reference the new semantic tokens directly
