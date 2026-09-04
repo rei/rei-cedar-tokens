@@ -31,6 +31,9 @@ review as implying an automatic extension of the color taxonomy to other foundat
 6. [`06-foundation-lane-triage.md`](./06-foundation-lane-triage.md) — classifies every
    token domain into an integration lane (semantic / deferred / deprecating /
    unchanged) so the mixed-model pipeline knows how to treat each one.
+7. [`07-dist-output-diagrams.md`](./07-dist-output-diagrams.md) — current-vs-future
+   directory trees and token-level diffs for the SCSS, CSS, iOS, and Android dist
+   outputs, with every current-state tree read directly from `dist/`.
 
 ## Sources
 
