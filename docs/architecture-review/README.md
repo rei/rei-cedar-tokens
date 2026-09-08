@@ -16,6 +16,11 @@ review as implying an automatic extension of the color taxonomy to other foundat
 
 ## Contents
 
+0. [`00-checklist.md`](./00-checklist.md) — **start here if you just need the
+   to-do list.** A short, plain-language checklist scoped to the migration itself
+   (canonical model / normalization pulling Figma color data, dist output matching
+   expectations) — not the full release, state layer, or component retirement.
+   Links back to the relevant document for detail on each item.
 1. [`01-architecture-review.md`](./01-architecture-review.md) — side-by-side comparison
    of source organization, build pipeline, Style Dictionary usage, generated artifacts,
    and public API surface for both repos.
