@@ -47,7 +47,7 @@ describe('webCssAction', () => {
     expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('accent'));
   });
 
-  it('writes theme index files with imports relative to cdr-prefixed outputs', () => {
+  it('writes color CSS files to the foundations directory', () => {
     vi.spyOn(console, 'log').mockImplementation(() => {});
     vi.spyOn(console, 'warn').mockImplementation(() => {});
     const buildPath = fs.mkdtempSync(path.join(os.tmpdir(), 'web-css-action-'));
@@ -62,7 +62,7 @@ describe('webCssAction', () => {
           $extensions: {
             cedar: {
               resolved: {
-                web: { light: '#ffffff', dark: '#111111' },
+                web: { light: '#ffffff' },
               },
             },
           },
@@ -73,13 +73,13 @@ describe('webCssAction', () => {
 
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
-    const lightIndex = fs.readFileSync(path.join(buildPath, 'cdr-light.css'), 'utf8');
-    const darkIndex = fs.readFileSync(path.join(buildPath, 'cdr-dark.css'), 'utf8');
-
-    expect(lightIndex).toContain("@import './light/cdr-color-surface.css';");
-    expect(darkIndex).toContain("@import './dark/cdr-color-surface.css';");
-    expect(lightIndex).not.toContain("@import './color-surface.css';");
-    expect(darkIndex).not.toContain("@import './color-surface.css';");
+    const surfaceCss = fs.readFileSync(
+      path.join(buildPath, 'foundations', 'cdr-color-surface.css'),
+      'utf8',
+    );
+    expect(surfaceCss).toContain('--cdr-surface-base: #ffffff;');
+    expect(surfaceCss).toContain('--cdr-surface-base: oklch(');
+    expect(surfaceCss).toContain(':root {');
   });
 
   it('writes hex fallback before oklch color declarations', () => {
@@ -109,7 +109,7 @@ describe('webCssAction', () => {
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const lightTextCss = fs.readFileSync(
-      path.join(buildPath, 'light', 'cdr-color-text.css'),
+      path.join(buildPath, 'foundations', 'cdr-color-text.css'),
       'utf8',
     );
     const hexDeclaration = '--cdr-text-link: #406eb5;';
@@ -149,7 +149,7 @@ describe('webCssAction', () => {
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const lightSurfaceCss = fs.readFileSync(
-      path.join(buildPath, 'light', 'cdr-color-surface.css'),
+      path.join(buildPath, 'foundations', 'cdr-color-surface.css'),
       'utf8',
     );
 
@@ -177,7 +177,7 @@ describe('webCssAction', () => {
 
     expect(() =>
       webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never),
-    ).toThrow('missing $extensions.cedar.web');
+    ).toThrow('missing $extensions.cedar.web.light');
   });
 
   it('throws when web option refs are not strings', () => {
@@ -207,10 +207,10 @@ describe('webCssAction', () => {
 
     expect(() =>
       webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never),
-    ).toThrow('Expected string refs but got light=object, dark=string');
+    ).toThrow('missing $extensions.cedar.web.light');
   });
 
-  it('resolves dark values from the dark option node', () => {
+  it('resolves web option refs and writes hex declarations', () => {
     vi.spyOn(console, 'log').mockImplementation(() => {});
     vi.spyOn(console, 'warn').mockImplementation(() => {});
     const buildPath = fs.mkdtempSync(path.join(os.tmpdir(), 'web-css-action-'));
@@ -226,7 +226,6 @@ describe('webCssAction', () => {
             cedar: {
               web: {
                 light: 'color.option.brand.blue.400',
-                dark: 'color.option.brand.blue.600',
               },
             },
           },
@@ -239,23 +238,6 @@ describe('webCssAction', () => {
               blue: {
                 400: {
                   $value: '#123456',
-                  $extensions: {
-                    cedar: {
-                      appearances: {
-                        dark: '#999999',
-                      },
-                    },
-                  },
-                },
-                600: {
-                  $value: '#222222',
-                  $extensions: {
-                    cedar: {
-                      appearances: {
-                        dark: '#abcdef',
-                      },
-                    },
-                  },
                 },
               },
             },
@@ -266,8 +248,10 @@ describe('webCssAction', () => {
 
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
-    const darkTextCss = fs.readFileSync(path.join(buildPath, 'dark', 'cdr-color-text.css'), 'utf8');
-    expect(darkTextCss).toContain('--cdr-text-link: #abcdef;');
-    expect(darkTextCss).not.toContain('--cdr-text-link: #999999;');
+    const textCss = fs.readFileSync(
+      path.join(buildPath, 'foundations', 'cdr-color-text.css'),
+      'utf8',
+    );
+    expect(textCss).toContain('--cdr-text-link: #123456;');
   });
 });
