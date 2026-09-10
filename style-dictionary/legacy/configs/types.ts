@@ -6,7 +6,7 @@ import { commonConfig } from '../utils';
 export const types = (theme: Theme): PlatformConfig => ({
   types: {
     ...commonConfig(theme, 'types'),
-    actions: ['deprecate-component-files', 'generate-types-barrel'],
+    actions: ['generate-types-barrel'],
     transforms: [
       'attribute/deprecated',
       'attribute/text-short-names',

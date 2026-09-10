@@ -1,0 +1,916 @@
+{
+  "color": {
+    "background": {
+      "button": {
+        "primary-rest": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the primary button"
+          },
+          "name": "cdr-color-background-button-primary-rest",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "primary-rest",
+            "deprecated": false
+          }
+        },
+        "primary-active": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the active and pressed states of the primary button"
+          },
+          "name": "cdr-color-background-button-primary-active",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "primary-active",
+            "deprecated": false
+          }
+        },
+        "primary-hover": {
+          "$value": "#c7dfd1",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the hover state of the primary button"
+          },
+          "name": "cdr-color-background-button-primary-hover",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "primary-hover",
+            "deprecated": false
+          }
+        },
+        "primary-icon-alt-hover": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Alternate background color for the hover state of the icon button"
+          },
+          "name": "cdr-color-background-button-primary-icon-alt-hover",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "primary-icon-alt-hover",
+            "deprecated": false
+          }
+        },
+        "secondary-rest": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the secondary button"
+          },
+          "name": "cdr-color-background-button-secondary-rest",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "secondary-rest",
+            "deprecated": false
+          }
+        },
+        "secondary-active": {
+          "$value": "#958e83",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the active and pressed states of the secondary button"
+          },
+          "name": "cdr-color-background-button-secondary-active",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "secondary-active",
+            "deprecated": false
+          }
+        },
+        "secondary-hover": {
+          "$value": "#f9f8f6",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the hover state of the secondary button"
+          },
+          "name": "cdr-color-background-button-secondary-hover",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "secondary-hover",
+            "deprecated": false
+          }
+        },
+        "secondary-disabled": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the disabled state of the secondary button"
+          },
+          "name": "cdr-color-background-button-secondary-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "secondary-disabled",
+            "deprecated": false
+          }
+        },
+        "dark-rest": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the dark button"
+          },
+          "name": "cdr-color-background-button-dark-rest",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "dark-rest",
+            "deprecated": false
+          }
+        },
+        "dark-active": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the active and pressed states of the dark button"
+          },
+          "name": "cdr-color-background-button-dark-active",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "dark-active",
+            "deprecated": false
+          }
+        },
+        "dark-hover": {
+          "$value": "#edeae3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the hover state of the dark button"
+          },
+          "name": "cdr-color-background-button-dark-hover",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "dark-hover",
+            "deprecated": false
+          }
+        },
+        "sale-rest": {
+          "$value": "#c7370f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the sale button"
+          },
+          "name": "cdr-color-background-button-sale-rest",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "sale-rest",
+            "deprecated": false
+          }
+        },
+        "sale-active": {
+          "$value": "#c7370f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the active and pressed states of the sale button"
+          },
+          "name": "cdr-color-background-button-sale-active",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "sale-active",
+            "deprecated": false
+          }
+        },
+        "sale-hover": {
+          "$value": "#fde2e2",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the hover state of the sale button"
+          },
+          "name": "cdr-color-background-button-sale-hover",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "sale-hover",
+            "deprecated": false
+          }
+        },
+        "default-disabled": {
+          "$value": "#d5cfc3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Default disabled border color"
+          },
+          "name": "cdr-color-background-button-default-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "default-disabled",
+            "deprecated": false
+          }
+        },
+        "icon-only-active": {
+          "$value": "#f7f5f3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Background color for the icon only button active and focus states"
+          },
+          "name": "cdr-color-background-button-icon-only-active",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "button",
+            "subitem": "icon-only-active",
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "text": {
+      "button": {
+        "primary": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for primary buttons"
+          },
+          "name": "cdr-color-text-button-primary",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "primary",
+            "deprecated": false
+          }
+        },
+        "primary-hover": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the hover state of primary buttons"
+          },
+          "name": "cdr-color-text-button-primary-hover",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "primary-hover",
+            "deprecated": false
+          }
+        },
+        "primary-active": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the active state of primary buttons"
+          },
+          "name": "cdr-color-text-button-primary-active",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "primary-active",
+            "deprecated": false
+          }
+        },
+        "primary-disabled": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for disabled primary buttons"
+          },
+          "name": "cdr-color-text-button-primary-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "primary-disabled",
+            "deprecated": false
+          }
+        },
+        "secondary": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for secondary buttons"
+          },
+          "name": "cdr-color-text-button-secondary",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "secondary",
+            "deprecated": false
+          }
+        },
+        "secondary-hover": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the hover state of secondary buttons"
+          },
+          "name": "cdr-color-text-button-secondary-hover",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "secondary-hover",
+            "deprecated": false
+          }
+        },
+        "secondary-active": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the active state of secondary buttons"
+          },
+          "name": "cdr-color-text-button-secondary-active",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "secondary-active",
+            "deprecated": false
+          }
+        },
+        "secondary-disabled": {
+          "$value": "#d5cfc3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for disabled secondary buttons"
+          },
+          "name": "cdr-color-text-button-secondary-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "secondary-disabled",
+            "deprecated": false
+          }
+        },
+        "dark": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the dark button"
+          },
+          "name": "cdr-color-text-button-dark",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "dark",
+            "deprecated": false
+          }
+        },
+        "dark-hover": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the hover state of the dark button"
+          },
+          "name": "cdr-color-text-button-dark-hover",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "dark-hover",
+            "deprecated": false
+          }
+        },
+        "dark-active": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the active state of the dark button"
+          },
+          "name": "cdr-color-text-button-dark-active",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "dark-active",
+            "deprecated": false
+          }
+        },
+        "dark-disabled": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for disabled dark buttons"
+          },
+          "name": "cdr-color-text-button-dark-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "dark-disabled",
+            "deprecated": false
+          }
+        },
+        "sale": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the sale button"
+          },
+          "name": "cdr-color-text-button-sale",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "sale",
+            "deprecated": false
+          }
+        },
+        "sale-hover": {
+          "$value": "#c7370f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the hover state of the sale button"
+          },
+          "name": "cdr-color-text-button-sale-hover",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "sale-hover",
+            "deprecated": false
+          }
+        },
+        "sale-active": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for the active state of the sale button"
+          },
+          "name": "cdr-color-text-button-sale-active",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "sale-active",
+            "deprecated": false
+          }
+        },
+        "sale-disabled": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Text color for disabled sale buttons"
+          },
+          "name": "cdr-color-text-button-sale-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "button",
+            "subitem": "sale-disabled",
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "border": {
+      "button": {
+        "primary-rest": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the primary button"
+          },
+          "name": "cdr-color-border-button-primary-rest",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "primary-rest",
+            "deprecated": false
+          }
+        },
+        "primary-active": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the active and pressed states of the primary button"
+          },
+          "name": "cdr-color-border-button-primary-active",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "primary-active",
+            "deprecated": false
+          }
+        },
+        "primary-active-inset": {
+          "$value": "#f7f5f3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Inset border for the active state of the primary button"
+          },
+          "name": "cdr-color-border-button-primary-active-inset",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "primary-active-inset",
+            "deprecated": false
+          }
+        },
+        "primary-hover": {
+          "$value": "#1f513f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the hover state of the primary button"
+          },
+          "name": "cdr-color-border-button-primary-hover",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "primary-hover",
+            "deprecated": false
+          }
+        },
+        "secondary-rest": {
+          "$value": "#958e83",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the secondary button"
+          },
+          "name": "cdr-color-border-button-secondary-rest",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "secondary-rest",
+            "deprecated": false
+          }
+        },
+        "secondary-active": {
+          "$value": "#958e83",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the active and pressed states of the secondary button"
+          },
+          "name": "cdr-color-border-button-secondary-active",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "secondary-active",
+            "deprecated": false
+          }
+        },
+        "secondary-active-inset": {
+          "$value": "#f7f5f3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Inset border for the active state of the secondary button"
+          },
+          "name": "cdr-color-border-button-secondary-active-inset",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "secondary-active-inset",
+            "deprecated": false
+          }
+        },
+        "secondary-hover": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the hover state of the secondary button"
+          },
+          "name": "cdr-color-border-button-secondary-hover",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "secondary-hover",
+            "deprecated": false
+          }
+        },
+        "dark-rest": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the dark button"
+          },
+          "name": "cdr-color-border-button-dark-rest",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "dark-rest",
+            "deprecated": false
+          }
+        },
+        "dark-active": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the active and pressed states of the dark button"
+          },
+          "name": "cdr-color-border-button-dark-active",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "dark-active",
+            "deprecated": false
+          }
+        },
+        "dark-active-inset": {
+          "$value": "#edeae3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Inset border for the active state of the dark button"
+          },
+          "name": "cdr-color-border-button-dark-active-inset",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "dark-active-inset",
+            "deprecated": false
+          }
+        },
+        "dark-hover": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the hover state of the dark button"
+          },
+          "name": "cdr-color-border-button-dark-hover",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "dark-hover",
+            "deprecated": false
+          }
+        },
+        "sale-rest": {
+          "$value": "#c7370f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the sale button"
+          },
+          "name": "cdr-color-border-button-sale-rest",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "sale-rest",
+            "deprecated": false
+          }
+        },
+        "sale-active": {
+          "$value": "#c7370f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the active and pressed states of the sale button"
+          },
+          "name": "cdr-color-border-button-sale-active",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "sale-active",
+            "deprecated": false
+          }
+        },
+        "sale-active-inset": {
+          "$value": "#fde2e2",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Inset border for the active state of the sale button"
+          },
+          "name": "cdr-color-border-button-sale-active-inset",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "sale-active-inset",
+            "deprecated": false
+          }
+        },
+        "sale-hover": {
+          "$value": "#c7370f",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the hover state of the sale button"
+          },
+          "name": "cdr-color-border-button-sale-hover",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "sale-hover",
+            "deprecated": false
+          }
+        },
+        "default-disabled": {
+          "$value": "#d5cfc3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Default disabled border color"
+          },
+          "name": "cdr-color-border-button-default-disabled",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "default-disabled",
+            "deprecated": false
+          }
+        },
+        "icon-only-active": {
+          "$value": "#958e83",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "button",
+            "example": "color",
+            "description": "Border color for the icon only button active and focus states"
+          },
+          "name": "cdr-color-border-button-icon-only-active",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "button",
+            "subitem": "icon-only-active",
+            "deprecated": false
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "form": {
+    "input": {
+      "height-default": {
+        "$value": "4rem",
+        "$type": "dimension",
+        "docs": {
+          "type": "height",
+          "category": "form",
+          "example": "height-default",
+          "description": {
+            "what": "Default input height",
+            "when": "Use for standard form fields",
+            "alternatives": [
+              "4.8rem"
+            ]
+          }
+        },
+        "name": "cdr-form-input-height-default",
+        "attributes": {
+          "category": "form",
+          "type": "input",
+          "item": "height-default",
+          "deprecated": false
+        }
+      },
+      "height-large": {
+        "$value": "4.8rem",
+        "$type": "dimension",
+        "docs": {
+          "type": "height",
+          "category": "form",
+          "example": "height-large",
+          "description": {
+            "what": "Large input height",
+            "when": "Use for spacious layouts"
+          }
+        },
+        "name": "cdr-form-input-height-large",
+        "attributes": {
+          "category": "form",
+          "type": "input",
+          "item": "height-large",
+          "deprecated": false
+        }
+      }
+    },
+    "figure": {
+      "size-small": {
+        "$value": "1.6rem",
+        "$type": "dimension",
+        "docs": {
+          "type": "size",
+          "category": "form",
+          "example": "size-small",
+          "description": {
+            "what": "Small figure size",
+            "when": "Use for compact forms",
+            "alternatives": [
+              "1.6rem"
+            ]
+          }
+        },
+        "name": "cdr-form-figure-size-small",
+        "attributes": {
+          "category": "form",
+          "type": "figure",
+          "item": "size-small",
+          "deprecated": false
+        }
+      },
+      "size-medium": {
+        "$value": "1.6rem",
+        "$type": "dimension",
+        "docs": {
+          "type": "size",
+          "category": "form",
+          "example": "size-medium",
+          "description": {
+            "what": "Medium figure size",
+            "when": "Use for standard forms",
+            "alternatives": [
+              "2rem"
+            ]
+          }
+        },
+        "name": "cdr-form-figure-size-medium",
+        "attributes": {
+          "category": "form",
+          "type": "figure",
+          "item": "size-medium",
+          "deprecated": false
+        }
+      },
+      "size-large": {
+        "$value": "2rem",
+        "$type": "dimension",
+        "docs": {
+          "type": "size",
+          "category": "form",
+          "example": "size-large",
+          "description": {
+            "what": "Large figure size",
+            "when": "Use for large or expressive forms"
+          }
+        },
+        "name": "cdr-form-figure-size-large",
+        "attributes": {
+          "category": "form",
+          "type": "figure",
+          "item": "size-large",
+          "deprecated": false
+        }
+      }
+    }
+  }
+}

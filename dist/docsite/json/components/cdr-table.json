@@ -1,0 +1,151 @@
+{
+  "color": {
+    "background": {
+      "table": {
+        "header": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "The background color of table headers"
+          },
+          "name": "cdr-color-background-table-header",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "table",
+            "subitem": "header",
+            "deprecated": false
+          }
+        },
+        "row": {
+          "$value": "#f7f5f3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "The background color of table rows"
+          },
+          "name": "cdr-color-background-table-row",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "table",
+            "subitem": "row",
+            "deprecated": false
+          }
+        },
+        "row-alt": {
+          "$value": "#fafbf9",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "An alternate row color to aid grouping row data"
+          },
+          "name": "cdr-color-background-table-row-alt",
+          "attributes": {
+            "category": "color",
+            "type": "background",
+            "item": "table",
+            "subitem": "row-alt",
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "text": {
+      "table": {
+        "primary": {
+          "$value": "rgba(46, 46, 43, 0.9)",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          },
+          "name": "cdr-color-text-table-primary",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "table",
+            "subitem": "primary",
+            "deprecated": false
+          }
+        },
+        "secondary": {
+          "$value": "#4b4a48",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          },
+          "name": "cdr-color-text-table-secondary",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "table",
+            "subitem": "secondary",
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "border": {
+      "table": {
+        "default": {
+          "$value": "#d5cfc3",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "The border color of table rows and their corresponding data cells"
+          },
+          "name": "cdr-color-border-table-default",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "table",
+            "subitem": "default",
+            "deprecated": false
+          }
+        },
+        "head": {
+          "$value": "#958e83",
+          "$type": "color",
+          "docs": {
+            "category": "colors",
+            "type": "table",
+            "example": "color",
+            "description": "Border color separating complex table heads"
+          },
+          "name": "cdr-color-border-table-head",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "table",
+            "subitem": "head",
+            "deprecated": false
+          }
+        },
+        "row": {
+          "$value": "#d5cfc3",
+          "$type": "color",
+          "docs": {
+            "type": "table"
+          },
+          "name": "cdr-color-border-table-row",
+          "attributes": {
+            "category": "color",
+            "type": "border",
+            "item": "table",
+            "subitem": "row",
+            "deprecated": false
+          }
+        }
+      }
+    }
+  }
+}

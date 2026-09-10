@@ -1,8 +1,0 @@
-// @deprecated Component tokens are deprecated and will be removed in a future release.
-export const CdrTooltip = {
-  CdrColorBackgroundTooltipDefault: "#2e2e2b",
-  CdrColorBorderTooltipDefault: "#fafbf9",
-  CdrColorTextTooltipDefault: "#fafbf9",
-};
-
-export default CdrTooltip;

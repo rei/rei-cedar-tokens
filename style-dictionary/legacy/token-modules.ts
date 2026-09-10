@@ -1,5 +1,5 @@
 import type { Theme } from './constants';
-import { componentModulesName, jsFoundationsModulesName } from './configs/filters/modules';
+import { jsFoundationsModulesName } from './configs/filters/modules';
 
 export type ModuleTarget = 'js' | 'scss' | 'types';
 
@@ -18,16 +18,8 @@ const foundationsModules: TokenModuleDefinition[] = jsFoundationsModulesName.map
   targets: ['js', 'scss', 'types'],
 }));
 
-const componentModules: TokenModuleDefinition[] = componentModulesName.map((moduleName) => ({
-  responsibility: 'components',
-  name: `cdr-${moduleName}`,
-  filter: `component-${moduleName}-tokens`,
-  targets: ['types'],
-}));
-
 const TOKEN_MODULES: TokenModuleDefinition[] = [
   ...foundationsModules,
-  ...componentModules,
   {
     responsibility: 'palettes',
     name: 'cdr-palette-membership-subtle',

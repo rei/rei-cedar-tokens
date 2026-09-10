@@ -1,7 +1,9 @@
 import type { PlatformConfig } from 'style-dictionary/types';
 import type { Theme } from '../constants';
 import { commonConfig } from '../utils';
+import { componentFilters } from './filters/componentFilters';
 import { foundationsFilters } from './filters/foundationsFilters';
+import { jsFoundationsModulesName } from './filters/modules';
 
 const keep = ['$value', '$type', 'name', 'attributes', 'docs', 'mixin', 'utility-class'];
 
@@ -58,7 +60,9 @@ export const siteWeb = (theme: Theme): PlatformConfig => {
           filter: 'remove-source-tokens',
         },
         // Foundations filters
-        ...foundationsFilters('json', 'json'),
+        ...foundationsFilters('json', 'json', jsFoundationsModulesName, []),
+        // Component filters
+        ...componentFilters('json', 'json'),
       ],
     },
   };
