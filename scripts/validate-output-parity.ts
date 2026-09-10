@@ -3,8 +3,8 @@ import path from 'path';
 import { globSync } from 'glob';
 import {
   componentModulesName as COMPONENTS,
-  foundationsModulesName as FOUNDATIONS,
-} from '../style-dictionary/configs/filters/modules';
+  jsFoundationsModulesName as FOUNDATIONS,
+} from '../style-dictionary/legacy/configs/filters/modules.js';
 
 // Define legal secondary namespaces that a component is allowed to export
 const COMPONENT_ALIASES: Record<string, string[]> = {
@@ -19,6 +19,11 @@ const FOUNDATION_ALIASES: Record<string, string[]> = {
   'motion-duration': ['duration'],
   'text-style': ['transform', 'text-eyebrow', 'text-italic'],
   'space-icon': ['icon-size'],
+  'color-background': ['background'],
+  'color-border': ['border'],
+  'color-icon': ['icon'],
+  'color-surface': ['surface'],
+  'color-text': ['text'],
 };
 
 function extractNormalizedTokens(filePath: string, content: string): string[] {

@@ -1,0 +1,21 @@
+// @deprecated Component tokens are deprecated and will be removed in a future release.
+export type CdrSwitchTokenName =
+  | "CdrColorBackgroundSwitchDefaultFocus"
+  | "CdrColorBackgroundSwitchDefaultHover"
+  | "CdrColorBackgroundSwitchDefaultRest"
+  | "CdrColorBackgroundSwitchHandleDefaultFocus"
+  | "CdrColorBackgroundSwitchHandleDefaultHover"
+  | "CdrColorBackgroundSwitchHandleDefaultRest"
+  | "CdrColorBackgroundSwitchHandleSelectedDefaultFocus"
+  | "CdrColorBackgroundSwitchHandleSelectedDefaultHover"
+  | "CdrColorBackgroundSwitchHandleSelectedDefaultRest"
+  | "CdrColorBackgroundSwitchSelectedDefaultFocus"
+  | "CdrColorBackgroundSwitchSelectedDefaultHover"
+  | "CdrColorBackgroundSwitchSelectedDefaultRest"
+  | "CdrColorBorderSwitchDefaultHover"
+  | "CdrColorBorderSwitchHandleDefaultFocus"
+  | "CdrColorBorderSwitchHandleDefaultHover"
+  | "CdrColorBorderSwitchHandleDefaultRest"
+  | "CdrColorIconSwitchSelectedDefaultFocus"
+  | "CdrColorIconSwitchSelectedDefaultHover"
+  | "CdrColorIconSwitchSelectedDefaultRest";

@@ -1,0 +1,66 @@
+// @deprecated Component tokens are deprecated and will be removed in a future release.
+export declare const CdrMessageKeys: readonly [
+  "cdr-color-background-message-default01",
+  "cdr-color-background-message-default02",
+  "cdr-color-background-message-error",
+  "cdr-color-background-message-error01",
+  "cdr-color-background-message-error02",
+  "cdr-color-background-message-info",
+  "cdr-color-background-message-info01",
+  "cdr-color-background-message-info02",
+  "cdr-color-background-message-sale",
+  "cdr-color-background-message-success",
+  "cdr-color-background-message-success01",
+  "cdr-color-background-message-success02",
+  "cdr-color-background-message-warning",
+  "cdr-color-background-message-warning01",
+  "cdr-color-background-message-warning02",
+  "cdr-color-border-message-default01",
+  "cdr-color-border-message-default02",
+  "cdr-color-border-message-error01",
+  "cdr-color-border-message-error02",
+  "cdr-color-border-message-info01",
+  "cdr-color-border-message-info02",
+  "cdr-color-border-message-success01",
+  "cdr-color-border-message-success02",
+  "cdr-color-border-message-warning01",
+  "cdr-color-border-message-warning02",
+  "cdr-color-icon-message-default",
+  "cdr-color-icon-message-error",
+  "cdr-color-icon-message-info",
+  "cdr-color-icon-message-success",
+  "cdr-color-icon-message-warning",
+  "cdr-color-text-message-error"
+];
+export type CdrMessageKey =
+  | "cdr-color-background-message-default01"
+  | "cdr-color-background-message-default02"
+  | "cdr-color-background-message-error"
+  | "cdr-color-background-message-error01"
+  | "cdr-color-background-message-error02"
+  | "cdr-color-background-message-info"
+  | "cdr-color-background-message-info01"
+  | "cdr-color-background-message-info02"
+  | "cdr-color-background-message-sale"
+  | "cdr-color-background-message-success"
+  | "cdr-color-background-message-success01"
+  | "cdr-color-background-message-success02"
+  | "cdr-color-background-message-warning"
+  | "cdr-color-background-message-warning01"
+  | "cdr-color-background-message-warning02"
+  | "cdr-color-border-message-default01"
+  | "cdr-color-border-message-default02"
+  | "cdr-color-border-message-error01"
+  | "cdr-color-border-message-error02"
+  | "cdr-color-border-message-info01"
+  | "cdr-color-border-message-info02"
+  | "cdr-color-border-message-success01"
+  | "cdr-color-border-message-success02"
+  | "cdr-color-border-message-warning01"
+  | "cdr-color-border-message-warning02"
+  | "cdr-color-icon-message-default"
+  | "cdr-color-icon-message-error"
+  | "cdr-color-icon-message-info"
+  | "cdr-color-icon-message-success"
+  | "cdr-color-icon-message-warning"
+  | "cdr-color-text-message-error";
