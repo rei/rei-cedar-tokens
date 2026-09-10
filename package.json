@@ -90,8 +90,9 @@
   "scripts": {
     "prepublishOnly": "pnpm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
-    "build:base-types": "tsx ./style-dictionary/generate-base-types.ts",
-    "build:tokens": "pnpm run clean && pnpm run build:base-types && tsx ./style-dictionary/build.ts",
+    "tokens:normalize": "tsx src/normalization/normalize.ts",
+    "build:base-types": "tsx ./style-dictionary/legacy/generate-base-types.ts",
+    "build:tokens": "pnpm run clean && pnpm run build:base-types && pnpm run tokens:normalize && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",
     "prebuild": "pnpm run validate:contract",
     "build": "pnpm run clean && pnpm run build:tokens && pnpm run validate:contract && pnpm run validate:syntax && pnpm run validate && node scripts/generate-release-notes.mjs",
@@ -127,6 +128,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
+    "@figma/rest-api-spec": "^0.42.0",
     "@storybook/addon-docs": "^10.4.6",
     "@storybook/html": "^10.4.6",
     "@storybook/html-vite": "^10.4.6",

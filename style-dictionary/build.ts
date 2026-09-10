@@ -1,125 +1,124 @@
+// build.ts
+import fs from 'node:fs';
 import StyleDictionary from 'style-dictionary';
+import { iosNameTransform } from './transforms/ios/ios-name-transform.js';
+import { iosColorsetAction } from './actions/ios/ios-color-action.js';
+import { androidNameTransform } from './transforms/android/android-name-transform.js';
+import { androidColorTransform } from './transforms/android/android-color-transform.js';
+// import { androidColorAction } from './actions/android/android-color-action.js';
+import { webCssAction } from './actions/web/web-css-transform.js';
+import { webScssAction } from './actions/web/web-scss-transform.js';
+import { webConfig, docsiteWebConfig } from './configs/web.js';
+
+// ****** Beggining Legacy Imports ******
 import { register } from '@tokens-studio/sd-transforms';
-import fs from 'fs-extra';
-import path from 'node:path';
-import { PLATFORMS, THEMES } from './constants';
-import { getConfig } from './configs';
-import { generateSemanticContract } from './semantic-contract';
-import { getDirname } from './utils';
+// import path from 'node:path'; Uncomment
+import { PLATFORMS, THEMES } from './legacy/constants.js';
+import { getConfig } from './legacy/configs/index.js';
+import { generateSemanticContract } from './legacy/semantic-contract.js';
+import { getDirname } from './legacy/utils.js';
 
 const __dirname = getDirname(import.meta.url);
 
-/**
- * REI Cedar Tokens Build Script
- *
- * This script builds all theme × platform combinations using Style Dictionary.
- *
- * Build Process:
- * 1. Register Tokens Studio preprocessor for composite token expansion
- * 2. Register custom transforms (value & attribute modifications)
- * 3. Register custom formats (output file generation)
- * 4. Register custom actions (post-build file operations)
- * 5. Register custom filters (token inclusion/exclusion)
- * 6. Build all theme × platform combinations
- *
- * Transform Order Matters:
- * - attribute/deprecated MUST be first (mutates token paths)
- * - See docs/TRANSFORMS.md for detailed ordering requirements
- */
-
-// ==== Include custom transforms ====
-import { deprecated } from './transforms/attribute/deprecated';
-import { surfaceDocs } from './transforms/attribute/surface-docs';
-import { textShortNames } from './transforms/attribute/text-short-names';
-import { spaceScaleRangeNames } from './transforms/attribute/space-scale-range-names';
-import { iosNameTransform } from './transforms/ios/ios-name-transform';
-import { iosTextValueTransform } from './transforms/ios/ios-text-value-transform';
-import { space } from './transforms/size/space';
-import { spaceJs } from './transforms/size/space-js';
-import { pxToRemTransitive } from './transforms/size/px-to-rem';
-import { stripPx } from './transforms/size/strip-px';
-import { stripAllPx } from './transforms/size/strip-all-px';
-import { stripAllPxJs } from './transforms/size/strip-all-px-js';
-import { float } from './transforms/size/float';
-import { cssClamp as clamp } from './transforms/size/clamp';
-import { fontFamilyQuotes } from './transforms/font/font-family-quotes';
-import { sizeRemOverride } from './transforms/size/rem-override';
+// Register Legacy Transforms
+import { deprecated } from './legacy/transforms/attribute/deprecated.js';
+import { surfaceDocs } from './legacy/transforms/attribute/surface-docs.js';
+import { textShortNames } from './legacy/transforms/attribute/text-short-names.js';
+import { spaceScaleRangeNames } from './legacy/transforms/attribute/space-scale-range-names.js';
+import { iosNameTransform as legacyIosNameTransform } from './legacy/transforms/ios/ios-name-transform.js';
+import { iosTextValueTransform as legacyIosTextValueTransform } from './legacy/transforms/ios/ios-text-value-transform.js';
+import { space } from './legacy/transforms/size/space.js';
+import { spaceJs } from './legacy/transforms/size/space-js.js';
+import { pxToRemTransitive } from './legacy/transforms/size/px-to-rem.js';
+import { stripPx } from './legacy/transforms/size/strip-px.js';
+import { stripAllPx } from './legacy/transforms/size/strip-all-px.js';
+import { stripAllPxJs } from './legacy/transforms/size/strip-all-px-js.js';
+import { float } from './legacy/transforms/size/float.js';
+import { cssClamp as clamp } from './legacy/transforms/size/clamp.js';
+import { fontFamilyQuotes } from './legacy/transforms/font/font-family-quotes.js';
+import { sizeRemOverride } from './legacy/transforms/size/rem-override.js';
 
 // ==== Include custom formats ====
-import { scssTypography } from './formats/scss-typography';
-import { scssMap } from './formats/scss-map';
-import { iosTextFormat } from './formats/ios/ios-text-format';
-import { figma as figmaFormat } from './formats/figma';
-import { typescriptModuleValues } from './formats/typescript-module-values';
-import { typescriptModuleDeclarations } from './formats/typescript-module-declarations';
-import { typescriptTokenNameUnion } from './formats/typescript-token-name-union';
-import { typescriptTokenKeyUnion } from './formats/typescript-token-key-union';
+import { scssTypography } from './legacy/formats/scss-typography.js';
+import { scssMap } from './legacy/formats/scss-map.js';
+import { iosTextFormat } from './legacy/formats/ios/ios-text-format.js';
+import { figma as figmaFormat } from './legacy/formats/figma.js';
+import { typescriptModuleValues } from './legacy/formats/typescript-module-values.js';
+import { typescriptModuleDeclarations } from './legacy/formats/typescript-module-declarations.js';
+import { typescriptTokenNameUnion } from './legacy/formats/typescript-token-name-union.js';
+import { typescriptTokenKeyUnion } from './legacy/formats/typescript-token-key-union.js';
 
 // ==== Include custom actions ====
-import { concatFiles } from './actions/concat-files';
-import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
-import { generateTypesBarrel } from './actions/generate-types-barrel';
+import { concatFiles } from './legacy/actions/concat-files.js';
+import {
+  includeDisplayScss,
+  includeQueriesFileScss,
+} from './legacy/actions/include-utility-file.js';
+import { generateTypesBarrel } from './legacy/actions/generate-types-barrel.js';
+import { deprecateComponentFiles } from './legacy/actions/deprecate-component-files.js';
 // ==== Include custom legacy filters ====
-import { colorBackgroundTokens } from './filters/legacy/color-background-tokens';
-import { colorBorderTokens } from './filters/legacy/color-border-tokens';
-import { colorIconTokens } from './filters/legacy/color-icon-tokens';
-import { colorTextTokens } from './filters/legacy/color-text-tokens';
-import { formTokens } from './filters/legacy/form-tokens';
-import { iconTokens } from './filters/legacy/icon-tokens';
-import { membershipSubtleTokens } from './filters/palettes/membership-subtle-tokens';
-import { membershipVibrantTokens } from './filters/palettes/membership-vibrant-tokens';
-import { motionTokens } from './filters/legacy/motion-tokens';
-import { prominenceTokens } from './filters/legacy/prominence-tokens';
-import { radiusTokens } from './filters/legacy/radius-tokens';
-import { removeCategoriesTokens } from './filters/legacy/remove-categories-tokens';
-import { removeSourceTokens } from './filters/legacy/remove-source-tokens';
-import { spaceTokens } from './filters/legacy/space-tokens';
+import { colorBackgroundTokens } from './legacy/filters/legacy/color-background-tokens.js';
+import { colorBorderTokens } from './legacy/filters/legacy/color-border-tokens.js';
+import { colorIconTokens } from './legacy/filters/legacy/color-icon-tokens.js';
+import { colorTextTokens } from './legacy/filters/legacy/color-text-tokens.js';
+import { formTokens } from './legacy/filters/legacy/form-tokens.js';
+import { iconTokens } from './legacy/filters/legacy/icon-tokens.js';
+import { membershipSubtleTokens } from './legacy/filters/palettes/membership-subtle-tokens.js';
+import { membershipVibrantTokens } from './legacy/filters/palettes/membership-vibrant-tokens.js';
+import { motionTokens } from './legacy/filters/legacy/motion-tokens.js';
+import { prominenceTokens } from './legacy/filters/legacy/prominence-tokens.js';
+import { radiusTokens } from './legacy/filters/legacy/radius-tokens.js';
+import { removeCategoriesTokens } from './legacy/filters/legacy/remove-categories-tokens.js';
+import { removeSourceTokens } from './legacy/filters/legacy/remove-source-tokens.js';
+import { spaceTokens } from './legacy/filters/legacy/space-tokens.js';
 
 // ==== Include custom foundations filters ====
-import { foundationsColorBackgroundTokens } from './filters/foundations/color-background-tokens';
-import { foundationsColorBorderTokens } from './filters/foundations/color-border-tokens';
-import { foundationsColorTextTokens } from './filters/foundations/color-text-tokens';
-import { foundationsMotionDurationTokens } from './filters/foundations/motion-duration-tokens';
-import { foundationsMotionTimingTokens } from './filters/foundations/motion-timing-tokens';
-import { foundationsProminenceTokens } from './filters/foundations/prominence-tokens';
-import { foundationsRadiusTokens } from './filters/foundations/radius-tokens';
-import { foundationsSpaceTokens } from './filters/foundations/space-tokens';
-import { foundationsSpaceIconTokens } from './filters/foundations/space-icon-tokens';
-import { foundationsSpaceInsetTokens } from './filters/foundations/space-inset-tokens';
-import { foundationsSpaceScaleTokens } from './filters/foundations/space-scale-tokens';
-import { foundationsLineHeightTokens } from './filters/foundations/line-height-tokens';
-import { foundationsTextTokens } from './filters/foundations/text-tokens';
-import { foundationsTypeTokens } from './filters/foundations/type-tokens';
-import { foundationsFontTokens } from './filters/foundations/font-tokens';
-import { foundationsTextSizeTokens } from './filters/foundations/text-font-size-tokens';
-import { foundationsTextWeightTokens } from './filters/foundations/text-font-weight-tokens';
-import { foundationsTextLineHeightTokens } from './filters/foundations/text-line-height-tokens';
-import { foundationsTextStyleTokens } from './filters/foundations/text-font-style-tokens';
-import { foundationsTextFamilyTokens } from './filters/foundations/text-font-family';
-import { foundationsTextLetterSpacingTokens } from './filters/foundations/text-letter-spacing-tokens';
-import { foundationsBreakpointTokens } from './filters/foundations/breakpoint-tokens';
-import { foundationsColorIconsTokens } from './filters/foundations/color-icon';
+import { foundationsColorBackgroundTokens } from './legacy/filters/foundations/color-background-tokens.js';
+import { foundationsColorBorderTokens } from './legacy/filters/foundations/color-border-tokens.js';
+import { foundationsColorTextTokens } from './legacy/filters/foundations/color-text-tokens.js';
+import { foundationsMotionDurationTokens } from './legacy/filters/foundations/motion-duration-tokens.js';
+import { foundationsMotionTimingTokens } from './legacy/filters/foundations/motion-timing-tokens.js';
+import { foundationsProminenceTokens } from './legacy/filters/foundations/prominence-tokens.js';
+import { foundationsRadiusTokens } from './legacy/filters/foundations/radius-tokens.js';
+import { foundationsSpaceTokens } from './legacy/filters/foundations/space-tokens.js';
+import { foundationsSpaceIconTokens } from './legacy/filters/foundations/space-icon-tokens.js';
+import { foundationsSpaceInsetTokens } from './legacy/filters/foundations/space-inset-tokens.js';
+import { foundationsSpaceScaleTokens } from './legacy/filters/foundations/space-scale-tokens.js';
+import { foundationsLineHeightTokens } from './legacy/filters/foundations/line-height-tokens.js';
+import { foundationsTextTokens } from './legacy/filters/foundations/text-tokens.js';
+import { foundationsTypeTokens } from './legacy/filters/foundations/type-tokens.js';
+import { foundationsFontTokens } from './legacy/filters/foundations/font-tokens.js';
+import { foundationsTextSizeTokens } from './legacy/filters/foundations/text-font-size-tokens.js';
+import { foundationsTextWeightTokens } from './legacy/filters/foundations/text-font-weight-tokens.js';
+import { foundationsTextLineHeightTokens } from './legacy/filters/foundations/text-line-height-tokens.js';
+import { foundationsTextStyleTokens } from './legacy/filters/foundations/text-font-style-tokens.js';
+import { foundationsTextFamilyTokens } from './legacy/filters/foundations/text-font-family.js';
+import { foundationsTextLetterSpacingTokens } from './legacy/filters/foundations/text-letter-spacing-tokens.js';
+import { foundationsBreakpointTokens } from './legacy/filters/foundations/breakpoint-tokens.js';
+import { foundationsColorIconsTokens } from './legacy/filters/foundations/color-icon.js';
 
 // ==== Include custom component filters ====
-import { componentAccordionTokens } from './filters/components/accordion-tokens';
-import { componentButtonTokens } from './filters/components/button-tokens';
-import { componentChipTokens } from './filters/components/chip-tokens';
-import { componentFormTokens } from './filters/components/form-tokens';
-import { componentInputTokens } from './filters/components/input-tokens';
-import { componentLinkTokens } from './filters/components/link-tokens';
-import { componentMessageTokens } from './filters/components/message-tokens';
-import { componentModalTokens } from './filters/components/modal-tokens';
-import { componentPaginationTokens } from './filters/components/pagination-tokens';
-import { componentRatingTokens } from './filters/components/rating-tokens';
-import { componentSlideTokens } from './filters/components/slide-tokens';
-import { componentSurfaceSelectionTokens } from './filters/components/surface-selection-tokens';
-import { componentSurfaceTokens } from './filters/components/surface-tokens';
-import { componentSwitchTokens } from './filters/components/switch-tokens';
-import { componentTabTokens } from './filters/components/tab-tokens';
-import { componentTableTokens } from './filters/components/table-tokens';
-import { componentToggleButtonTokens } from './filters/components/toggle-button-tokens';
-import { componentTooltipTokens } from './filters/components/tooltip-tokens';
+import { componentAccordionTokens } from './legacy/filters/components/accordion-tokens.js';
+import { componentButtonTokens } from './legacy/filters/components/button-tokens.js';
+import { componentChipTokens } from './legacy/filters/components/chip-tokens.js';
+import { componentFormTokens } from './legacy/filters/components/form-tokens.js';
+import { componentInputTokens } from './legacy/filters/components/input-tokens.js';
+import { componentLinkTokens } from './legacy/filters/components/link-tokens.js';
+import { componentMessageTokens } from './legacy/filters/components/message-tokens.js';
+import { componentModalTokens } from './legacy/filters/components/modal-tokens.js';
+import { componentPaginationTokens } from './legacy/filters/components/pagination-tokens.js';
+import { componentRatingTokens } from './legacy/filters/components/rating-tokens.js';
+import { componentSlideTokens } from './legacy/filters/components/slide-tokens.js';
+import { componentSurfaceSelectionTokens } from './legacy/filters/components/surface-selection-tokens.js';
+import { componentSurfaceTokens } from './legacy/filters/components/surface-tokens.js';
+import { componentSwitchTokens } from './legacy/filters/components/switch-tokens.js';
+import { componentTabTokens } from './legacy/filters/components/tab-tokens.js';
+import { componentTableTokens } from './legacy/filters/components/table-tokens.js';
+import { componentToggleButtonTokens } from './legacy/filters/components/toggle-button-tokens.js';
+import { componentTooltipTokens } from './legacy/filters/components/tooltip-tokens.js';
+// ****** Finished Legacy Imports ******
 
+// ****** Beggining Legacy Register Style Dictionary ******
 // ==== Register style dictionary ====
 // Tokens Studio provides preprocessors and additional transforms for composite tokens
 register(StyleDictionary);
@@ -134,8 +133,8 @@ deprecated(StyleDictionary);
 surfaceDocs(StyleDictionary);
 textShortNames(StyleDictionary);
 spaceScaleRangeNames(StyleDictionary);
-iosNameTransform(StyleDictionary);
-iosTextValueTransform(StyleDictionary);
+legacyIosNameTransform(StyleDictionary);
+legacyIosTextValueTransform(StyleDictionary);
 space(StyleDictionary);
 spaceJs(StyleDictionary);
 pxToRemTransitive(StyleDictionary);
@@ -160,6 +159,7 @@ concatFiles(StyleDictionary);
 includeDisplayScss(StyleDictionary);
 includeQueriesFileScss(StyleDictionary);
 generateTypesBarrel(StyleDictionary);
+deprecateComponentFiles(StyleDictionary);
 
 // ==== Register custom legacy filters ====
 colorBackgroundTokens(StyleDictionary);
@@ -221,20 +221,60 @@ componentTabTokens(StyleDictionary);
 componentTableTokens(StyleDictionary);
 componentToggleButtonTokens(StyleDictionary);
 componentTooltipTokens(StyleDictionary);
+// ****** Finished Legacy Register Style Dictionary ******
 
-/**
- * Build all theme × platform combinations
- *
- * Iterates through all themes (rei-dot-com, docsite) and platforms
- * (web, ios, figma, site/*) to generate complete token sets.
- *
- * Each combination gets its own Style Dictionary instance with:
- * - Base tokens from tokens/global/ and tokens/[platform]/
- * - Theme overrides from tokens/themes/[theme]/
- * - Platform-specific transforms and formats
- *
- * Output: dist/[theme]/[platform]/
- */
+// Register iOS transforms
+StyleDictionary.registerTransform(iosNameTransform);
+StyleDictionary.registerAction(iosColorsetAction);
+
+// Register Android transforms
+StyleDictionary.registerTransform(androidNameTransform);
+StyleDictionary.registerTransform(androidColorTransform);
+// Note: Android action disabled until normalization layer generates android extensions
+// StyleDictionary.registerAction(androidColorAction);
+
+// Register web action
+StyleDictionary.registerAction(webCssAction);
+StyleDictionary.registerAction(webScssAction);
+
+// cedar/ios — name transform only; value resolution handled by the action
+StyleDictionary.registerTransformGroup({
+  name: 'cedar/ios',
+  transforms: ['name/ios-camel'],
+});
+
+// cedar/android — name and color transforms
+StyleDictionary.registerTransformGroup({
+  name: 'cedar/android',
+  transforms: ['name/android-snake', 'value/android-color'],
+});
+
+// cedar/web — name transform only; CSS generation handled by the action
+StyleDictionary.registerTransformGroup({
+  name: 'cedar/web',
+  transforms: ['name/camel'],
+});
+
+function toBuildError(message: string, err: unknown) {
+  return err instanceof Error
+    ? new Error(message, { cause: err })
+    : new Error(`${message}: ${String(err)}`);
+}
+
+function removeLegacyOutputRoots() {
+  const legacyOutputRoots = [
+    'dist/css',
+    'dist/ios',
+    'dist/rei-dot-com/css',
+    'dist/rei-dot-com/ios',
+  ];
+  legacyOutputRoots.forEach((legacyRoot) => {
+    if (fs.existsSync(legacyRoot)) {
+      fs.rmSync(legacyRoot, { recursive: true, force: true });
+    }
+  });
+}
+
 async function buildAllThemesAndPlatforms() {
   for (const theme of THEMES) {
     for (const platform of PLATFORMS) {
@@ -245,7 +285,7 @@ async function buildAllThemesAndPlatforms() {
       const platformConfig = config[platform];
       if (platformConfig?.buildPath) {
         // Ensure removed/renamed outputs from previous builds do not linger in dist.
-        fs.removeSync(path.join(__dirname, '../', platformConfig.buildPath));
+        // fs.removeSync(path.join(__dirname, '../../', platformConfig.buildPath));
       }
 
       const sd = new StyleDictionary(config);
@@ -267,5 +307,30 @@ async function buildAllThemesAndPlatforms() {
   await generateSemanticContract();
 }
 
-// Run the function to process all themes and platforms
-buildAllThemesAndPlatforms();
+async function buildAll() {
+  console.log('\n==============================================');
+  console.log('Building platforms…');
+
+  removeLegacyOutputRoots();
+
+  for (const config of [webConfig, docsiteWebConfig]) {
+    const webSd = new StyleDictionary(config);
+
+    try {
+      await webSd.buildAllPlatforms();
+      console.log('  ✓ Web build complete');
+    } catch (err) {
+      console.error(err);
+      throw toBuildError('Error building Web platform', err);
+    }
+  }
+
+  await buildAllThemesAndPlatforms();
+
+  console.log('==============================================\n');
+}
+
+buildAll().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

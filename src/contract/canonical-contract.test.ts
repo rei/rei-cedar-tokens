@@ -2,9 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
-  foundationsModulesName,
+  jsFoundationsModulesName as foundationsModulesName,
   componentModulesName,
-} from '../../style-dictionary/configs/filters/modules';
+} from '../../style-dictionary/legacy/configs/filters/modules.js';
 
 type Violation = {
   tokenPath: string;
