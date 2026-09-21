@@ -10,8 +10,13 @@
 
 export { CdrBreakpoint } from './foundations/cdr-breakpoint.mjs';
 export { CdrColorBackground } from './foundations/cdr-color-background.mjs';
+export { CdrColorAction } from './foundations/cdr-color-action.mjs';
 export { CdrColorBorder } from './foundations/cdr-color-border.mjs';
+export { CdrColorControl } from './foundations/cdr-color-control.mjs';
+export { CdrColorFeedback } from './foundations/cdr-color-feedback.mjs';
+export { CdrColorGraphik } from './foundations/cdr-color-graphik.mjs';
 export { CdrColorIcon } from './foundations/cdr-color-icon.mjs';
+export { CdrColorSelection } from './foundations/cdr-color-selection.mjs';
 export { CdrColorText } from './foundations/cdr-color-text.mjs';
 export { CdrFont } from './foundations/cdr-font.mjs';
 export { CdrLineHeight } from './foundations/cdr-line-height.mjs';

@@ -22,7 +22,7 @@ const getSources = (platform: Platform) => {
     web: ['tokens/legacy/web/**/*.json'],
     ios: ['tokens/legacy/mobile/**/*.json'],
     figma: ['tokens/legacy/web/**/*.json'],
-    types: ['tokens/legacy/web/**/*.json'],
+    types: ['canonical/tokens.json', 'tokens/legacy/web/**/*.json'],
   };
 
   return sources[platform];

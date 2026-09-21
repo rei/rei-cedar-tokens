@@ -1,4 +1,4 @@
-import { GetLocalVariablesResponse, LocalVariable } from '@figma/rest-api-spec';
+import { GetLocalVariablesResponse, LocalVariable, RGBA } from '@figma/rest-api-spec';
 import { rgbToHex } from './utils';
 import { Token, TokensFile } from './types';
 
@@ -32,24 +32,147 @@ function tokenTypeFromVariable(variable: LocalVariable) {
  * @returns The token value as a string, number, or boolean
  * @throws {Error} If the variable value format is invalid
  */
+/**
+ * Resolves a Figma color value to an RGBA object.
+ *
+ * Supports plain RGB(A) objects, color overrides that combine a `color` reference
+ * with an `opacity` percentage, and chains of variable aliases.
+ */
+function resolveColorValue(
+  value: unknown,
+  modeId: string,
+  modeName: string,
+  localVariables: { [id: string]: LocalVariable },
+  localVariableCollections: {
+    [id: string]: {
+      name: string;
+      defaultModeId?: string;
+      modes: { modeId: string; name: string }[];
+    };
+  },
+  seen = new Set<string>(),
+): RGBA {
+  if (typeof value !== 'object' || value === null || Array.isArray(value)) {
+    throw new Error(`Expected color object, got ${JSON.stringify(value)}`);
+  }
+
+  const obj = value as Record<string, unknown>;
+
+  if (obj.type === 'VARIABLE_ALIAS' && typeof obj.id === 'string') {
+    const id = obj.id;
+    if (seen.has(id)) {
+      throw new Error(`Circular color alias detected: ${id}`);
+    }
+    const aliasedVariable = localVariables[id];
+    if (!aliasedVariable) {
+      throw new Error(`Color alias references unknown variable: ${id}`);
+    }
+    const aliasedCollection = localVariableCollections[aliasedVariable.variableCollectionId];
+    if (!aliasedCollection) {
+      throw new Error(
+        `Color alias ${id} -> "${aliasedVariable.name}" does not belong to a known collection`,
+      );
+    }
+    let targetMode = aliasedCollection.modes.find((m) => m.name === modeName);
+    if (!targetMode) {
+      const defaultMode = aliasedCollection.defaultModeId
+        ? aliasedCollection.modes.find((m) => m.modeId === aliasedCollection.defaultModeId)
+        : undefined;
+      targetMode = defaultMode ?? aliasedCollection.modes[0];
+    }
+    if (!targetMode) {
+      throw new Error(
+        `Color alias ${id} -> "${aliasedVariable.name}" has no mode named "${modeName}" in collection "${aliasedCollection.name}"`,
+      );
+    }
+    const aliasedValue = aliasedVariable.valuesByMode[targetMode.modeId];
+    if (aliasedValue === undefined) {
+      throw new Error(
+        `Color alias ${id} -> "${aliasedVariable.name}" has no value for mode "${modeName}" (${targetMode.modeId})`,
+      );
+    }
+    return resolveColorValue(
+      aliasedValue,
+      targetMode.modeId,
+      modeName,
+      localVariables,
+      localVariableCollections,
+      new Set([...seen, id]),
+    );
+  }
+
+  if ('color' in obj) {
+    const color = obj.color as unknown;
+    const opacityPercent = typeof obj.opacity === 'number' ? obj.opacity : 100;
+    const baseColor = resolveColorValue(
+      color,
+      modeId,
+      modeName,
+      localVariables,
+      localVariableCollections,
+      seen,
+    );
+    return {
+      ...baseColor,
+      a: baseColor.a * (opacityPercent / 100),
+    };
+  }
+
+  if ('r' in obj && 'g' in obj && 'b' in obj) {
+    const color = obj as Record<string, number>;
+    return {
+      r: color.r,
+      g: color.g,
+      b: color.b,
+      a: 'a' in color && typeof color.a === 'number' ? color.a : 1,
+    };
+  }
+
+  throw new Error(`Invalid color value format: ${JSON.stringify(value)}`);
+}
+
 function tokenValueFromVariable(
   variable: LocalVariable,
   modeId: string,
+  modeName: string,
   localVariables: { [id: string]: LocalVariable },
-) {
+  localVariableCollections: {
+    [id: string]: {
+      name: string;
+      defaultModeId?: string;
+      modes: { modeId: string; name: string }[];
+    };
+  },
+): string | number | boolean {
   const value = variable.valuesByMode[modeId];
-  if (typeof value === 'object') {
-    if ('type' in value && value.type === 'VARIABLE_ALIAS') {
-      const aliasedVariable = localVariables[value.id];
-      return `{${aliasedVariable.name.replace(/\//g, '.')}}`;
-    } else if ('r' in value) {
-      return rgbToHex(value);
-    }
 
-    throw new Error(`Format of variable value is invalid: ${value}`);
-  } else {
+  if (value === null) {
+    throw new Error(`[mode ${modeId}] Variable "${variable.name}" has a null value`);
+  }
+
+  if (typeof value !== 'object') {
     return value;
   }
+
+  const obj = value as Record<string, unknown>;
+
+  if (obj.type === 'VARIABLE_ALIAS' && typeof obj.id === 'string') {
+    const aliasedVariable = localVariables[obj.id];
+    if (!aliasedVariable) {
+      throw new Error(`Alias "${variable.name}" references unknown variable ${obj.id}`);
+    }
+    return `{${aliasedVariable.name.replace(/\//g, '.')}}`;
+  }
+
+  if ('r' in obj || 'color' in obj) {
+    return rgbToHex(
+      resolveColorValue(value, modeId, modeName, localVariables, localVariableCollections),
+    );
+  }
+
+  throw new Error(
+    `[mode ${modeId}] Invalid value for variable "${variable.name}": ${JSON.stringify(value)} (resolvedType: ${variable.resolvedType})`,
+  );
 }
 
 /**
@@ -90,7 +213,13 @@ export function tokenFilesFromLocalVariables(localVariablesResponse: GetLocalVar
 
       const token: Token = {
         $type: tokenTypeFromVariable(variable),
-        $value: tokenValueFromVariable(variable, mode.modeId, localVariables),
+        $value: tokenValueFromVariable(
+          variable,
+          mode.modeId,
+          mode.name,
+          localVariables,
+          localVariableCollections,
+        ),
         $description: variable.description,
         $extensions: {
           'com.figma': {

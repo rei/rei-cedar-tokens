@@ -76,38 +76,47 @@ export const webScssAction: Action = {
     fs.mkdirSync(buildPath, { recursive: true });
     fs.mkdirSync(path.join(buildPath, 'foundations'), { recursive: true });
 
-    // Organize color tokens by semantic category
+    // Organize color tokens by family
     const colorByCategory: Record<string, string[]> = {};
-    const COLOR_CATEGORIES = new Set([
+    const CATEGORY_FILE_MAP: Record<string, string> = {
+      graphic: 'graphik',
+    };
+    const VALID_COLOR_FAMILIES = [
+      'background',
       'surface',
-      'text',
       'border',
       'icon',
-      // "action", // TODO: Add action category when ready
-      // "selection", // TODO: Add selection category when ready
-      // "navigation", // TODO: Add navigation category when ready
-      // "feedback", // TODO: Add feedback category when ready
-      // "overlay" , // TODO: Add overlay category when ready
-    ]);
+      'text',
+      'action',
+      'control',
+      'feedback',
+      'graphic',
+      'selection',
+      'navigation',
+      'overlay',
+    ];
+    const NEW_COLOR_FAMILIES = ['action', 'control', 'feedback', 'graphic', 'selection'];
 
     function getColorCategory(token: any): string | undefined {
       if (token.path[0] !== 'color') return undefined;
-      if (token.path[1] === 'modes') return token.path[3];
       if (token.path[1] === 'option') return undefined;
-      return token.path[1];
+      const familyIndex = token.path[1] === 'modes' ? 3 : 1;
+      return token.path[familyIndex];
     }
 
     function pushColorByCategory(token: any, line: string): boolean {
-      const category = getColorCategory(token);
-      if (!category || !COLOR_CATEGORIES.has(category)) {
+      const family = getColorCategory(token);
+      if (typeof family !== 'string' || !VALID_COLOR_FAMILIES.includes(family)) {
         console.warn(
-          `[web-scss] Token ${token.name}: unknown semantic color category "${String(
-            category,
-          )}" at path "${token.path.join('.')}"`,
+          `[web-scss] Token ${token.name}: unknown semantic color category at path "${token.path.join('.')}"`,
         );
-        return false;
+        return true;
+      }
+      if (!NEW_COLOR_FAMILIES.includes(family)) {
+        return true;
       }
 
+      const category = CATEGORY_FILE_MAP[family] ?? family;
       if (!colorByCategory[category]) {
         colorByCategory[category] = [];
       }
@@ -137,36 +146,41 @@ export const webScssAction: Action = {
 
       const webCedar = (token.$extensions as any)?.cedar?.web;
 
-      if (typeof webCedar?.light !== 'string') {
+      let lightHex: string | undefined;
+      let colorFamily: string | undefined;
+
+      if (typeof webCedar?.light === 'string') {
+        const lightOptionNode = getTokenAtPath(dictionary.tokens, webCedar.light) as
+          | CedarOptionNode
+          | undefined;
+
+        if (!lightOptionNode) {
+          throw new Error(
+            `[web-scss] Token ${token.name}: could not resolve web option token. ` +
+              `light="${webCedar.light}".`,
+          );
+        }
+
+        lightHex = resolveOptionHex(lightOptionNode, 'web', 'light') ?? undefined;
+        if (!lightHex) {
+          throw new Error(
+            `[web-scss] Token ${token.name}: could not resolve web hex value. ` +
+              `light="${webCedar.light}"→${lightHex}.`,
+          );
+        }
+
+        colorFamily = (lightOptionNode.$extensions as any)?.cedar?.colorFamily;
+      } else if (typeof token.$value === 'string' && token.$value.startsWith('#')) {
+        // Some semantic tokens carry a literal hex (e.g. 8-digit with alpha) instead of an alias.
+        lightHex = token.$value;
+      } else {
         throw new Error(
-          `[web-scss] Token ${token.name}: missing $extensions.cedar.web.light. ` +
-            `Expected a string ref but got ${typeof webCedar?.light}. ` +
-            `Ensure normalize.ts mergeColorVariants generated web option refs.`,
-        );
-      }
-
-      const lightOptionNode = getTokenAtPath(dictionary.tokens, webCedar.light) as
-        | CedarOptionNode
-        | undefined;
-
-      if (!lightOptionNode) {
-        throw new Error(
-          `[web-scss] Token ${token.name}: could not resolve web option token. ` +
-            `light="${webCedar.light}".`,
-        );
-      }
-
-      const lightHex = resolveOptionHex(lightOptionNode, 'web', 'light');
-
-      if (!lightHex) {
-        throw new Error(
-          `[web-scss] Token ${token.name}: could not resolve web hex value. ` +
-            `light="${webCedar.light}"→${lightHex}.`,
+          `[web-scss] Token ${token.name}: missing $extensions.cedar.web.light and no literal hex $value. ` +
+            `Expected a string ref or hex but got ${typeof webCedar?.light} / ${typeof token.$value}.`,
         );
       }
 
       const scssVar = toScssVar(token.path);
-      const colorFamily = (lightOptionNode.$extensions as any)?.cedar?.colorFamily;
       const line = renderColorDeclarations(scssVar, lightHex, colorFamily);
 
       pushColorByCategory(token, line);

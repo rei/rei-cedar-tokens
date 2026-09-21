@@ -56,8 +56,8 @@ describe('webCssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'surfaceBase',
-          path: ['color', 'modes', 'default', 'surface', 'base'],
+          name: 'actionBase',
+          path: ['color', 'modes', 'default', 'action', 'base'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -74,11 +74,11 @@ describe('webCssAction', () => {
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const surfaceCss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-surface.css'),
+      path.join(buildPath, 'foundations', 'cdr-color-action.css'),
       'utf8',
     );
-    expect(surfaceCss).toContain('--cdr-surface-base: #ffffff;');
-    expect(surfaceCss).toContain('--cdr-surface-base: oklch(');
+    expect(surfaceCss).toContain('--cdr-action-base: #ffffff;');
+    expect(surfaceCss).toContain('--cdr-action-base: oklch(');
     expect(surfaceCss).toContain(':root {');
   });
 
@@ -91,8 +91,8 @@ describe('webCssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'textLink',
-          path: ['color', 'modes', 'default', 'text', 'link'],
+          name: 'actionPrimary',
+          path: ['color', 'modes', 'default', 'action', 'primary'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -109,11 +109,11 @@ describe('webCssAction', () => {
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const lightTextCss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-text.css'),
+      path.join(buildPath, 'foundations', 'cdr-color-action.css'),
       'utf8',
     );
-    const hexDeclaration = '--cdr-text-link: #406eb5;';
-    const oklchDeclaration = '--cdr-text-link: oklch(';
+    const hexDeclaration = '--cdr-action-primary: #406eb5;';
+    const oklchDeclaration = '--cdr-action-primary: oklch(';
 
     expect(lightTextCss).toContain(hexDeclaration);
     expect(lightTextCss).toContain(oklchDeclaration);
@@ -131,8 +131,8 @@ describe('webCssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'surfaceScrim',
-          path: ['color', 'modes', 'default', 'surface', 'scrim'],
+          name: 'graphicScrim',
+          path: ['color', 'modes', 'default', 'graphic', 'scrim'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -149,12 +149,12 @@ describe('webCssAction', () => {
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const lightSurfaceCss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-surface.css'),
+      path.join(buildPath, 'foundations', 'cdr-color-graphik.css'),
       'utf8',
     );
 
-    expect(lightSurfaceCss).toContain('--cdr-surface-scrim: #ffffffd9;');
-    expect(lightSurfaceCss).toContain('--cdr-surface-scrim: oklch(100% 0 0 / 0.851);');
+    expect(lightSurfaceCss).toContain('--cdr-graphic-scrim: #ffffffd9;');
+    expect(lightSurfaceCss).toContain('--cdr-graphic-scrim: oklch(100% 0 0 / 0.851);');
   });
 
   it('throws when web option refs are missing', () => {
@@ -219,8 +219,8 @@ describe('webCssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'textLink',
-          path: ['color', 'modes', 'default', 'text', 'link'],
+          name: 'actionPrimary',
+          path: ['color', 'modes', 'default', 'action', 'primary'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -249,9 +249,9 @@ describe('webCssAction', () => {
     webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const textCss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-text.css'),
+      path.join(buildPath, 'foundations', 'cdr-color-action.css'),
       'utf8',
     );
-    expect(textCss).toContain('--cdr-text-link: #123456;');
+    expect(textCss).toContain('--cdr-action-primary: #123456;');
   });
 });

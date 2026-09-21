@@ -1,7 +1,6 @@
 export interface CdrColorTextTokens {
   /**
-   * Text set in our primary brand color
-   * @value #1f513f
+   * @value #143528
    * @cssvar --cdr-color-text-brand
    */
   readonly CdrColorTextBrand: string;
@@ -42,8 +41,7 @@ export interface CdrColorTextTokens {
    */
   readonly CdrColorTextPrimary: string;
   /**
-   * The color of sale text
-   * @value #c7370f
+   * @value #d44703
    * @cssvar --cdr-color-text-sale
    */
   readonly CdrColorTextSale: string;

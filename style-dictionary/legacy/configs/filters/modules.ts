@@ -1,6 +1,5 @@
 export const foundationsModulesName = [
   'breakpoint',
-  'color-surface',
   'color-border',
   'color-icon',
   'color-text',
@@ -26,8 +25,13 @@ export const foundationsModulesName = [
 export const jsFoundationsModulesName = [
   'breakpoint',
   'color-background',
+  'color-action',
   'color-border',
+  'color-control',
+  'color-feedback',
+  'color-graphik',
   'color-icon',
+  'color-selection',
   'color-text',
   'font',
   'line-height',
@@ -48,7 +52,7 @@ export const jsFoundationsModulesName = [
   'type',
 ];
 
-export const EXCLUDED_MODULES = ['color-surface', 'color-border', 'color-icon', 'color-text'];
+export const EXCLUDED_MODULES: string[] = [];
 
 export const componentModulesName = [
   'accordion',

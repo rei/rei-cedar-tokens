@@ -1,0 +1,31 @@
+export declare const CdrColorGraphikKeys: readonly [
+  "cdr-color-graphic-border-accent-faint",
+  "cdr-color-graphic-border-brand",
+  "cdr-color-graphic-border-membership",
+  "cdr-color-graphic-border-natural",
+  "cdr-color-graphic-border-neutral",
+  "cdr-color-graphic-border-rating",
+  "cdr-color-graphic-border-sale",
+  "cdr-color-graphic-surface-accent-faint",
+  "cdr-color-graphic-surface-brand",
+  "cdr-color-graphic-surface-membership",
+  "cdr-color-graphic-surface-natural",
+  "cdr-color-graphic-surface-neutral-faint",
+  "cdr-color-graphic-surface-rating-faint",
+  "cdr-color-graphic-surface-sale"
+];
+export type CdrColorGraphikKey =
+  | "cdr-color-graphic-border-accent-faint"
+  | "cdr-color-graphic-border-brand"
+  | "cdr-color-graphic-border-membership"
+  | "cdr-color-graphic-border-natural"
+  | "cdr-color-graphic-border-neutral"
+  | "cdr-color-graphic-border-rating"
+  | "cdr-color-graphic-border-sale"
+  | "cdr-color-graphic-surface-accent-faint"
+  | "cdr-color-graphic-surface-brand"
+  | "cdr-color-graphic-surface-membership"
+  | "cdr-color-graphic-surface-natural"
+  | "cdr-color-graphic-surface-neutral-faint"
+  | "cdr-color-graphic-surface-rating-faint"
+  | "cdr-color-graphic-surface-sale";

@@ -95,6 +95,8 @@
     "build:tokens": "pnpm run clean && pnpm run build:base-types && pnpm run tokens:normalize && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",
     "prebuild": "pnpm run validate:contract",
+    "sync:figma-to-tokens": "tsx src/sync/figma-to-tokens.ts",
+    "sync:tokens-to-figma": "tsx src/sync/tokens-to-figma.ts",
     "build": "pnpm run clean && pnpm run build:tokens && pnpm run validate:contract && pnpm run validate:syntax && pnpm run validate && node scripts/generate-release-notes.mjs",
     "postbuild": "pnpm run validate:syntax && pnpm run validate:parity",
     "build:grid": "tsx grid.ts",

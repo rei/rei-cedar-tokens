@@ -73,8 +73,14 @@ import { removeSourceTokens } from './legacy/filters/legacy/remove-source-tokens
 import { spaceTokens } from './legacy/filters/legacy/space-tokens.js';
 
 // ==== Include custom foundations filters ====
+import { foundationsColorActionTokens } from './legacy/filters/foundations/color-action-tokens.js';
 import { foundationsColorBackgroundTokens } from './legacy/filters/foundations/color-background-tokens.js';
 import { foundationsColorBorderTokens } from './legacy/filters/foundations/color-border-tokens.js';
+import { foundationsColorControlTokens } from './legacy/filters/foundations/color-control-tokens.js';
+import { foundationsColorFeedbackTokens } from './legacy/filters/foundations/color-feedback-tokens.js';
+import { foundationsColorGraphikTokens } from './legacy/filters/foundations/color-graphik-tokens.js';
+import { foundationsColorSelectionTokens } from './legacy/filters/foundations/color-selection-tokens.js';
+import { foundationsColorSurfaceTokens } from './legacy/filters/foundations/color-surface-tokens.js';
 import { foundationsColorTextTokens } from './legacy/filters/foundations/color-text-tokens.js';
 import { foundationsMotionDurationTokens } from './legacy/filters/foundations/motion-duration-tokens.js';
 import { foundationsMotionTimingTokens } from './legacy/filters/foundations/motion-timing-tokens.js';
@@ -179,8 +185,14 @@ spaceTokens(StyleDictionary);
 
 // ==== Register custom foundations filters ====
 foundationsBreakpointTokens(StyleDictionary);
+foundationsColorActionTokens(StyleDictionary);
 foundationsColorBackgroundTokens(StyleDictionary);
 foundationsColorBorderTokens(StyleDictionary);
+foundationsColorControlTokens(StyleDictionary);
+foundationsColorFeedbackTokens(StyleDictionary);
+foundationsColorGraphikTokens(StyleDictionary);
+foundationsColorSelectionTokens(StyleDictionary);
+foundationsColorSurfaceTokens(StyleDictionary);
 foundationsColorTextTokens(StyleDictionary);
 foundationsMotionDurationTokens(StyleDictionary);
 foundationsMotionTimingTokens(StyleDictionary);
@@ -329,6 +341,11 @@ async function buildAll() {
 
   console.log('==============================================\n');
 }
+
+buildAll().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
 
 buildAll().catch((err) => {
   console.error(err);

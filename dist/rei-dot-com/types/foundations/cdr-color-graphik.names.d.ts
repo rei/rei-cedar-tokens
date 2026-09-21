@@ -1,0 +1,15 @@
+export type CdrColorGraphikTokenName =
+  | "CdrColorGraphicBorderAccentFaint"
+  | "CdrColorGraphicBorderBrand"
+  | "CdrColorGraphicBorderMembership"
+  | "CdrColorGraphicBorderNatural"
+  | "CdrColorGraphicBorderNeutral"
+  | "CdrColorGraphicBorderRating"
+  | "CdrColorGraphicBorderSale"
+  | "CdrColorGraphicSurfaceAccentFaint"
+  | "CdrColorGraphicSurfaceBrand"
+  | "CdrColorGraphicSurfaceMembership"
+  | "CdrColorGraphicSurfaceNatural"
+  | "CdrColorGraphicSurfaceNeutralFaint"
+  | "CdrColorGraphicSurfaceRatingFaint"
+  | "CdrColorGraphicSurfaceSale";

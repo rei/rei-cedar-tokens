@@ -76,7 +76,7 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         }
 
         // Read files from the specified build path
-        const buildPath = path.join(__dirname, '../../../', config.buildPath);
+        const buildPath = path.resolve(config.buildPath);
         const entries = fs.readdirSync(buildPath, { withFileTypes: true });
         const files = entries.filter((e) => e.isFile()).map((e) => e.name);
 
@@ -86,10 +86,15 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
 
         // Determine the file extension from the first file
         const extension = !sampleFile ? '.css' : path.extname(sampleFile);
+        const outFile = path.resolve(config.buildPath, `cdr-tokens${extension}`);
         const allPaths = files.map((f) => path.join(buildPath, f));
 
-        const concatPaths = allPaths.filter((p) => !path.basename(p).includes('no_concat'));
-        const noConcatPaths = allPaths.filter((p) => path.basename(p).includes('no_concat'));
+        const concatPaths = allPaths.filter(
+          (p) => !path.basename(p).includes('no_concat') && p !== outFile,
+        );
+        const noConcatPaths = allPaths.filter(
+          (p) => path.basename(p).includes('no_concat') && p !== outFile,
+        );
 
         // Rename files with 'no_concat' in their name
         noConcatPaths.forEach((p) => {
@@ -100,13 +105,6 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
         // Concatenate files before removing source files
         const concatenatedOutput =
           concatPaths.length > 0 ? ((await concat(concatPaths)) as string) : '';
-        const outFile = path.join(
-          __dirname,
-          '../../../',
-          config.buildPath,
-          `cdr-tokens${extension}`,
-        );
-
         const importLines = createImportLine(extension, outFile);
         const finalOuput = extension.includes('less')
           ? concatenatedOutput

@@ -56,8 +56,8 @@ describe('webScssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'textLink',
-          path: ['color', 'modes', 'default', 'text', 'link'],
+          name: 'actionPrimary',
+          path: ['color', 'modes', 'default', 'action', 'primary'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -74,12 +74,12 @@ describe('webScssAction', () => {
     webScssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const textScss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-text.scss'),
+      path.join(buildPath, 'foundations', 'cdr-color-action.scss'),
       'utf8',
     );
 
-    const hexDeclaration = '$cdr-text-link: #406eb5;';
-    const oklchDeclaration = '$cdr-text-link: oklch(';
+    const hexDeclaration = '$cdr-action-primary: #406eb5;';
+    const oklchDeclaration = '$cdr-action-primary: oklch(';
 
     expect(textScss).toContain(hexDeclaration);
     expect(textScss).toContain(oklchDeclaration);
@@ -97,8 +97,8 @@ describe('webScssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'surfaceScrim',
-          path: ['color', 'modes', 'default', 'surface', 'scrim'],
+          name: 'graphicScrim',
+          path: ['color', 'modes', 'default', 'graphic', 'scrim'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -115,12 +115,12 @@ describe('webScssAction', () => {
     webScssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const surfaceScss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-surface.scss'),
+      path.join(buildPath, 'foundations', 'cdr-color-graphik.scss'),
       'utf8',
     );
 
-    expect(surfaceScss).toContain('$cdr-surface-scrim: #ffffffd9;');
-    expect(surfaceScss).toContain('$cdr-surface-scrim: oklch(100% 0 0 / 0.851);');
+    expect(surfaceScss).toContain('$cdr-graphic-scrim: #ffffffd9;');
+    expect(surfaceScss).toContain('$cdr-graphic-scrim: oklch(100% 0 0 / 0.851);');
   });
 
   it('throws when web option refs are missing', () => {
@@ -184,8 +184,8 @@ describe('webScssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'textLink',
-          path: ['color', 'modes', 'default', 'text', 'link'],
+          name: 'actionPrimary',
+          path: ['color', 'modes', 'default', 'action', 'primary'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -214,10 +214,10 @@ describe('webScssAction', () => {
     webScssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
 
     const textScss = fs.readFileSync(
-      path.join(buildPath, 'foundations', 'cdr-color-text.scss'),
+      path.join(buildPath, 'foundations', 'cdr-color-action.scss'),
       'utf8',
     );
-    expect(textScss).toContain('$cdr-text-link: #123456;');
+    expect(textScss).toContain('$cdr-action-primary: #123456;');
   });
 
   it('removes generated color files on undo', () => {
@@ -229,8 +229,8 @@ describe('webScssAction', () => {
     const dictionary = {
       allTokens: [
         {
-          name: 'textLink',
-          path: ['color', 'modes', 'default', 'text', 'link'],
+          name: 'actionPrimary',
+          path: ['color', 'modes', 'default', 'action', 'primary'],
           $type: 'color',
           $extensions: {
             cedar: {
@@ -245,10 +245,10 @@ describe('webScssAction', () => {
     };
 
     webScssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
-    expect(fs.existsSync(path.join(buildPath, 'foundations', 'cdr-color-text.scss'))).toBe(true);
+    expect(fs.existsSync(path.join(buildPath, 'foundations', 'cdr-color-action.scss'))).toBe(true);
 
     webScssAction.undo?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
-    expect(fs.existsSync(path.join(buildPath, 'foundations', 'cdr-color-text.scss'))).toBe(false);
+    expect(fs.existsSync(path.join(buildPath, 'foundations', 'cdr-color-action.scss'))).toBe(false);
   });
 
   describe('toScssValue', () => {

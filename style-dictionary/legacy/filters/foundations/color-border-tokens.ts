@@ -29,7 +29,8 @@ export const foundationsColorBorderTokens = (sd: typeof StyleDictionary): void =
         token.path[0] !== 'theme' &&
         token.path[0] === 'color' &&
         token.path[1] === 'border' &&
-        borderTokens.includes(token.path[2])
+        borderTokens.includes(token.path[2]) &&
+        !(token.filePath as string).endsWith('canonical/tokens.json')
       );
     },
   });
