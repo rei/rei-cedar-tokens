@@ -19,7 +19,6 @@ export const foundationsColorSurfaceTokens = (sd: typeof StyleDictionary): void 
       token.path[0] !== 'options' &&
       token.path[0] !== 'theme' &&
       token.path[0] === 'color' &&
-      token.path[2] === 'surface' &&
-      (token.filePath as string).endsWith('surface.json'),
+      token.path[1] === 'surface',
   });
 };

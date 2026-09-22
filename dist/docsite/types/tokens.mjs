@@ -16,6 +16,8 @@ export * from './foundations/cdr-color-icon.keys.mjs';
 export * from './foundations/cdr-color-icon.mjs';
 export * from './foundations/cdr-color-selection.keys.mjs';
 export * from './foundations/cdr-color-selection.mjs';
+export * from './foundations/cdr-color-surface.keys.mjs';
+export * from './foundations/cdr-color-surface.mjs';
 export * from './foundations/cdr-color-text.keys.mjs';
 export * from './foundations/cdr-color-text.mjs';
 export * from './foundations/cdr-font.keys.mjs';

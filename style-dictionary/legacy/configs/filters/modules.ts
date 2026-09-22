@@ -32,6 +32,7 @@ export const jsFoundationsModulesName = [
   'color-graphik',
   'color-icon',
   'color-selection',
+  'color-surface',
   'color-text',
   'font',
   'line-height',

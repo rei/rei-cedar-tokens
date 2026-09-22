@@ -97,7 +97,7 @@ export const webCssAction: Action = {
       'navigation',
       'overlay',
     ];
-    const NEW_COLOR_FAMILIES = ['action', 'control', 'feedback', 'graphic', 'selection'];
+    const NEW_COLOR_FAMILIES = ['action', 'control', 'feedback', 'graphic', 'selection', 'surface'];
 
     function getColorCategory(token: any): string | undefined {
       if (token.path[0] !== 'color') return undefined;

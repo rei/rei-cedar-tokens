@@ -20,6 +20,8 @@ export { CdrColorIcon } from './foundations/cdr-color-icon';
 export type { CdrColorIconTokens } from './foundations/cdr-color-icon';
 export { CdrColorSelection } from './foundations/cdr-color-selection';
 export type { CdrColorSelectionTokens } from './foundations/cdr-color-selection';
+export { CdrColorSurface } from './foundations/cdr-color-surface';
+export type { CdrColorSurfaceTokens } from './foundations/cdr-color-surface';
 export { CdrColorText } from './foundations/cdr-color-text';
 export type { CdrColorTextTokens } from './foundations/cdr-color-text';
 export { CdrFont } from './foundations/cdr-font';

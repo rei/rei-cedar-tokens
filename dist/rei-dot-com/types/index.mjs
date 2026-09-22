@@ -17,6 +17,7 @@ export { CdrColorFeedback } from './foundations/cdr-color-feedback.mjs';
 export { CdrColorGraphik } from './foundations/cdr-color-graphik.mjs';
 export { CdrColorIcon } from './foundations/cdr-color-icon.mjs';
 export { CdrColorSelection } from './foundations/cdr-color-selection.mjs';
+export { CdrColorSurface } from './foundations/cdr-color-surface.mjs';
 export { CdrColorText } from './foundations/cdr-color-text.mjs';
 export { CdrFont } from './foundations/cdr-font.mjs';
 export { CdrLineHeight } from './foundations/cdr-line-height.mjs';

@@ -1,5 +1,11 @@
 import type { StoryObj, Meta } from '@storybook/html-vite';
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
+import { CdrColorAction } from '../dist/rei-dot-com/types/foundations/cdr-color-action.mjs';
+import { CdrColorControl } from '../dist/rei-dot-com/types/foundations/cdr-color-control.mjs';
+import { CdrColorFeedback } from '../dist/rei-dot-com/types/foundations/cdr-color-feedback.mjs';
+import { CdrColorGraphik } from '../dist/rei-dot-com/types/foundations/cdr-color-graphik.mjs';
+import { CdrColorSelection } from '../dist/rei-dot-com/types/foundations/cdr-color-selection.mjs';
+import { CdrColorSurface } from '../dist/rei-dot-com/types/foundations/cdr-color-surface.mjs';
 import { getCssVar, getDesc } from './token-metadata';
 
 const meta: Meta = {
@@ -510,15 +516,18 @@ export const ByComponent: Story = {
   },
 };
 
-/** Background tokens only, flat grid */
-export const BackgroundColors: Story = {
-  name: 'Background',
-  render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorBackground'));
+/** Render a flat grid story for a single color family object */
+function familyColorStory(title: string, source: Record<string, string>): Story {
+  return {
+    name: title,
+    render: () => {
+      const entries = Object.entries(source).filter(
+        ([, v]) => typeof v === 'string',
+      ) as TokenEntry[];
 
-    const tableRows = entries
-      .map(
-        ([key, val]) => `
+      const tableRows = entries
+        .map(
+          ([key, val]) => `
         <tr>
           <td>
             <div class="comp-swatch-cell">
@@ -528,20 +537,39 @@ export const BackgroundColors: Story = {
           </td>
           <td class="comp-value">${val}</td>
         </tr>`,
-      )
-      .join('');
+        )
+        .join('');
 
-    return `${chrome}<div class="sb-page">
+      return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader('Background Colors', entries.length)}
+        ${sectionHeader(`${title} Colors`, entries.length)}
         <table class="comp-table">
           <thead><tr><th>Token</th><th>Value</th></tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
       </div>
     </div>`;
-  },
-};
+    },
+  };
+}
+
+/** Surface tokens only, flat grid */
+export const SurfaceColors: Story = familyColorStory('Surface', CdrColorSurface);
+
+/** Action tokens only, flat grid */
+export const ActionColors: Story = familyColorStory('Action', CdrColorAction);
+
+/** Control tokens only, flat grid */
+export const ControlColors: Story = familyColorStory('Control', CdrColorControl);
+
+/** Feedback tokens only, flat grid */
+export const FeedbackColors: Story = familyColorStory('Feedback', CdrColorFeedback);
+
+/** Graphik tokens only, flat grid */
+export const GraphikColors: Story = familyColorStory('Graphik', CdrColorGraphik);
+
+/** Selection tokens only, flat grid */
+export const SelectionColors: Story = familyColorStory('Selection', CdrColorSelection);
 
 /** Text tokens only */
 export const TextColors: Story = {
