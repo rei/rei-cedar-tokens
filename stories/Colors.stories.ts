@@ -377,24 +377,30 @@ export const Palette: Story = {
   },
 };
 
-/** Semantic surface / text / border / icon tokens — the small set designers use most */
+/** Semantic color tokens — the small set designers use most */
 export const Semantic: Story = {
   name: 'Semantic',
   render: () => {
     const t = tokens as Record<string, string>;
 
-    const surfaces: [string, string, string][] = [
-      ['Primary surface', 'CdrColorBackgroundPrimary', t.CdrColorBackgroundPrimary],
-      ['Secondary surface', 'CdrColorBackgroundSecondary', t.CdrColorBackgroundSecondary],
-      ['Brand (Spruce)', 'CdrColorBackgroundBrandSpruce', t.CdrColorBackgroundBrandSpruce],
-      ['Error surface', 'CdrColorBackgroundError', t.CdrColorBackgroundError],
-      ['Warning surface', 'CdrColorBackgroundWarning', t.CdrColorBackgroundWarning],
-      ['Success surface', 'CdrColorBackgroundSuccess', t.CdrColorBackgroundSuccess],
-      ['Info surface', 'CdrColorBackgroundInfo', t.CdrColorBackgroundInfo],
-      ['Sale surface', 'CdrColorBackgroundSale', t.CdrColorBackgroundSale],
-      ['Transparent', 'CdrColorBackgroundTransparent', t.CdrColorBackgroundTransparent],
-      ['Tooltip bg', 'CdrColorBackgroundTooltipDefault', t.CdrColorBackgroundTooltipDefault],
-    ];
+    const familyTokens = (source: Record<string, string>): [string, string, string][] =>
+      Object.entries(source)
+        .filter(([, v]) => typeof v === 'string')
+        .map(([key, value]) => [
+          key
+            .replace(/^CdrColor/, '')
+            .replace(/([A-Z])/g, ' $1')
+            .trim(),
+          key,
+          value,
+        ]);
+
+    const surfaceTokens: [string, string, string][] = familyTokens(CdrColorSurface);
+    const actionTokens: [string, string, string][] = familyTokens(CdrColorAction);
+    const controlTokens: [string, string, string][] = familyTokens(CdrColorControl);
+    const feedbackTokens: [string, string, string][] = familyTokens(CdrColorFeedback);
+    const graphikTokens: [string, string, string][] = familyTokens(CdrColorGraphik);
+    const selectionTokens: [string, string, string][] = familyTokens(CdrColorSelection);
 
     const textTokens: [string, string, string][] = [
       ['Primary text', 'CdrColorTextPrimary', t.CdrColorTextPrimary],
@@ -436,8 +442,8 @@ export const Semantic: Story = {
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader('Background', surfaces.length)}
-        ${grid(surfaces)}
+        ${sectionHeader('Surface', surfaceTokens.length)}
+        ${grid(surfaceTokens)}
       </div>
       <div class="sb-section">
         ${sectionHeader('Text', textTokens.length)}
@@ -450,6 +456,26 @@ export const Semantic: Story = {
       <div class="sb-section">
         ${sectionHeader('Icon', iconTokens.length)}
         ${grid(iconTokens)}
+      </div>
+      <div class="sb-section">
+        ${sectionHeader('Action', actionTokens.length)}
+        ${grid(actionTokens)}
+      </div>
+      <div class="sb-section">
+        ${sectionHeader('Control', controlTokens.length)}
+        ${grid(controlTokens)}
+      </div>
+      <div class="sb-section">
+        ${sectionHeader('Feedback', feedbackTokens.length)}
+        ${grid(feedbackTokens)}
+      </div>
+      <div class="sb-section">
+        ${sectionHeader('Graphik', graphikTokens.length)}
+        ${grid(graphikTokens)}
+      </div>
+      <div class="sb-section">
+        ${sectionHeader('Selection', selectionTokens.length)}
+        ${grid(selectionTokens)}
       </div>
     </div>`;
   },
@@ -516,60 +542,8 @@ export const ByComponent: Story = {
   },
 };
 
-/** Render a flat grid story for a single color family object */
-function familyColorStory(title: string, source: Record<string, string>): Story {
-  return {
-    name: title,
-    render: () => {
-      const entries = Object.entries(source).filter(
-        ([, v]) => typeof v === 'string',
-      ) as TokenEntry[];
-
-      const tableRows = entries
-        .map(
-          ([key, val]) => `
-        <tr>
-          <td>
-            <div class="comp-swatch-cell">
-              ${swatchCell(val)}
-              ${compNameCell(key)}
-            </div>
-          </td>
-          <td class="comp-value">${val}</td>
-        </tr>`,
-        )
-        .join('');
-
-      return `${chrome}<div class="sb-page">
-      <div class="sb-section">
-        ${sectionHeader(`${title} Colors`, entries.length)}
-        <table class="comp-table">
-          <thead><tr><th>Token</th><th>Value</th></tr></thead>
-          <tbody>${tableRows}</tbody>
-        </table>
-      </div>
-    </div>`;
-    },
-  };
-}
-
-/** Surface tokens only, flat grid */
-export const SurfaceColors: Story = familyColorStory('Surface', CdrColorSurface);
-
-/** Action tokens only, flat grid */
-export const ActionColors: Story = familyColorStory('Action', CdrColorAction);
-
-/** Control tokens only, flat grid */
-export const ControlColors: Story = familyColorStory('Control', CdrColorControl);
-
-/** Feedback tokens only, flat grid */
-export const FeedbackColors: Story = familyColorStory('Feedback', CdrColorFeedback);
-
-/** Graphik tokens only, flat grid */
-export const GraphikColors: Story = familyColorStory('Graphik', CdrColorGraphik);
-
-/** Selection tokens only, flat grid */
-export const SelectionColors: Story = familyColorStory('Selection', CdrColorSelection);
+/* The cdr-color-action, control, feedback, graphik, selection and surface
+   families are rendered inside the Semantic story above. */
 
 /** Text tokens only */
 export const TextColors: Story = {
