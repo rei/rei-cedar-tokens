@@ -46,11 +46,11 @@ jobs:
       - name: Generate Deprecation Baseline from Target Branch
         run: |
           echo "Moving current tokens to backup..."
-          mv tokens/global tokens/global-pr-backup
+          mv tokens/legacy/global tokens/global-pr-backup
 
           echo "Pulling token data from ${{ github.base_ref }}..."
           # This specifically fetches ONLY the tokens from the base branch (master/next)
-          git checkout origin/${{ github.base_ref }} -- tokens/global
+          git checkout origin/${{ github.base_ref }} -- tokens/legacy/global
 
           echo "Running baseline generation script..."
           npx tsx scripts/generate-baseline.ts
