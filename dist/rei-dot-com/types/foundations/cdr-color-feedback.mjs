@@ -1,0 +1,26 @@
+export const CdrColorFeedback = {
+  CdrColorFeedbackBorderErrorFaint: "#ffccc1",
+  CdrColorFeedbackBorderInfoFaint: "#c8e5e6",
+  CdrColorFeedbackBorderNatural: "#756e5c",
+  CdrColorFeedbackBorderNautralFaint: "#e6ddc9",
+  CdrColorFeedbackBorderNeutralTrace: "#ffffff",
+  CdrColorFeedbackBorderSuccessFaint: "#c8e8c9",
+  CdrColorFeedbackBorderWarningFaint: "#f2dd9f",
+  CdrColorFeedbackIconError: "#c33122",
+  CdrColorFeedbackIconNeutral: "#ffffff",
+  CdrColorFeedbackSurfaceErrorFaint: "#fff1ed",
+  CdrColorFeedbackSurfaceErrorTrace: "#fff8f6",
+  CdrColorFeedbackSurfaceInfoFaint: "#f1f8f9",
+  CdrColorFeedbackSurfaceNaturalFaint: "#f8f7f2",
+  CdrColorFeedbackSurfaceNeutralTrace: "#ffffff",
+  CdrColorFeedbackSurfaceSuccessFaint: "#eefbee",
+  CdrColorFeedbackSurfaceWarningFaint: "#fef7e1",
+  CdrColorFeedbackTextError: "#c33122",
+  CdrColorFeedbackTextInfo: "#257d81",
+  CdrColorFeedbackTextNatural: "#756e5c",
+  CdrColorFeedbackTextNeutralFaint: "#746e63",
+  CdrColorFeedbackTextSuccess: "#3d8044",
+  CdrColorFeedbackTextWarning: "#8a6b00",
+};
+
+export default CdrColorFeedback;

@@ -26,7 +26,9 @@ function run() {
   console.log('********** Generating token baseline from current branch **********');
 
   // Ignore deprecation files for the baseline
-  const files = globSync('tokens/global/*.json', { ignore: 'tokens/global/deprecated*.json' });
+  const files = globSync('tokens/legacy/global/*.json', {
+    ignore: 'tokens/legacy/global/deprecated*.json',
+  });
 
   files.forEach((file) => {
     const content = JSON.parse(fs.readFileSync(file, 'utf-8'));

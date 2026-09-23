@@ -1,0 +1,2344 @@
+{
+  "color": {
+    "surface": {
+      "brand": {
+        "$type": "color",
+        "$value": "{blue-spruce-green.1400}",
+        "$description": "Replaces: --cdr-color-background-brand-spruce",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-brand"
+            }
+          }
+        }
+      },
+      "brand-subtle": {
+        "$type": "color",
+        "$value": "{golden-moss.1100}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-brand-subtle"
+            }
+          }
+        }
+      },
+      "membership": {
+        "$type": "color",
+        "$value": "{membership-yellow.300}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-membership"
+            }
+          }
+        }
+      },
+      "sale": {
+        "$type": "color",
+        "$value": "{sale-red.1000}",
+        "$description": "Replaces: --cdr-color-background-sale",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-sale"
+            }
+          }
+        }
+      },
+      "natural": {
+        "$type": "color",
+        "$value": "{natural-grey.050}",
+        "$description": "Replaces: --cdr-color-background-secondary",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-natural"
+            }
+          }
+        }
+      },
+      "neutral-intense": {
+        "$type": "color",
+        "$value": "{warm-grey.1400}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-neutral-intense"
+            }
+          }
+        }
+      },
+      "neutral": {
+        "$type": "color",
+        "$value": "{warm-grey.100}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-neutral"
+            }
+          }
+        }
+      },
+      "neutral-subtle": {
+        "$type": "color",
+        "$value": "{warm-grey.050}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-neutral-subtle"
+            }
+          }
+        }
+      },
+      "neutral-trace": {
+        "$type": "color",
+        "$value": "{warm-grey.000}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-surface-neutral-trace"
+            }
+          }
+        }
+      }
+    },
+    "border": {
+      "brand": {
+        "$type": "color",
+        "$value": "{blue-spruce-green.1400}",
+        "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-brand"
+            }
+          }
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{lichen.100}",
+        "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1)\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1)\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1)\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-accent"
+            }
+          }
+        }
+      },
+      "neutral-bold": {
+        "$type": "color",
+        "$value": "{warm-grey.900}",
+        "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-neutral-bold"
+            }
+          }
+        }
+      },
+      "neutral-prominent": {
+        "$type": "color",
+        "$value": "{warm-grey.850}",
+        "$description": "△ Large only: surface/neutral-intense (4.4:1), control/surface/neutral-intense (4.4:1), surface/brand (4.3:1)\n✗ Avoid: action/surface/neutral-bold (1.1:1), control/surface/neutral-prominent (1.1:1), graphic/surface/rating-bold (1.1:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-neutral-prominent"
+            }
+          }
+        }
+      },
+      "neutral": {
+        "$type": "color",
+        "$value": "{warm-grey.500}",
+        "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-neutral"
+            }
+          }
+        }
+      },
+      "neutral-subtle": {
+        "$type": "color",
+        "$value": "{warm-grey.400}",
+        "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-neutral-subtle"
+            }
+          }
+        }
+      },
+      "neutral-trace": {
+        "$type": "color",
+        "$value": "{warm-grey.000}",
+        "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["STROKE_COLOR"],
+            "codeSyntax": {
+              "WEB": "--cdr-border-neutral-trace"
+            }
+          }
+        }
+      }
+    },
+    "text": {
+      "neutral-bold": {
+        "$type": "color",
+        "$value": "{warm-grey.1400}",
+        "$description": "✓ AAA: surface/neutral-trace (13.7:1), control/surface/neutral-trace (13.7:1), selection/surface/neutral-trace (13.7:1), feedback/surface/neutral-trace (13.7:1)\n△ Large only: action/surface/neutral-bold (3.9:1), control/surface/neutral-prominent (3.9:1), graphic/surface/rating-bold (3.9:1)\n✗ Avoid: surface/neutral-intense (1.0:1), control/surface/neutral-intense (1.0:1), surface/brand (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-neutral-bold"
+            }
+          }
+        }
+      },
+      "neutral-prominent": {
+        "$type": "color",
+        "$value": "{warm-grey.1300}",
+        "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-neutral-prominent"
+            }
+          }
+        }
+      },
+      "neutral": {
+        "$type": "color",
+        "$value": "{warm-grey.1100}",
+        "$description": "Replaces: --cdr-color-text-primary\n✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-neutral"
+            }
+          }
+        }
+      },
+      "neutral-subtle": {
+        "$type": "color",
+        "$value": "{warm-grey.400}",
+        "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-neutral-subtle"
+            }
+          }
+        }
+      },
+      "neutral-trace": {
+        "$type": "color",
+        "$value": "{warm-grey.000}",
+        "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-neutral-trace"
+            }
+          }
+        }
+      },
+      "sale": {
+        "$type": "color",
+        "$value": "{sale-red.1000}",
+        "$description": "Replaces: --cdr-color-text-sale\n△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-sale"
+            }
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{blue-spruce-green.1400}",
+        "$description": "Replaces: --cdr-color-text-brand\n✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-brand"
+            }
+          }
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{lichen.100}",
+        "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1)\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1)\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1)\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-accent"
+            }
+          }
+        }
+      },
+      "natural": {
+        "$type": "color",
+        "$value": "{natural-grey.050}",
+        "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/natural (1.0:1), feedback/surface/natural-faint (1.0:1), graphic/surface/natural (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-text-natural"
+            }
+          }
+        }
+      }
+    },
+    "graphic": {
+      "surface": {
+        "brand": {
+          "$type": "color",
+          "$value": "{blue-spruce-green.1400}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-brand"
+              }
+            }
+          }
+        },
+        "membership": {
+          "$type": "color",
+          "$value": "{membership-yellow.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-membership"
+              }
+            }
+          }
+        },
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-natural"
+              }
+            }
+          }
+        },
+        "accent-bold": {
+          "$type": "color",
+          "$value": "{golden-moss.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-accent-bold"
+              }
+            }
+          }
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{apex-moss.500}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-accent"
+              }
+            }
+          }
+        },
+        "accent-faint": {
+          "$type": "color",
+          "$value": "{lichen.100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-accent-faint"
+              }
+            }
+          }
+        },
+        "sale": {
+          "$type": "color",
+          "$value": "{sale-red.1000}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-sale"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-neutral-faint"
+              }
+            }
+          }
+        },
+        "rating-bold": {
+          "$type": "color",
+          "$value": "{golden-yellow.900}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-rating-bold"
+              }
+            }
+          }
+        },
+        "rating": {
+          "$type": "color",
+          "$value": "{golden-yellow.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-rating"
+              }
+            }
+          }
+        },
+        "rating-faint": {
+          "$type": "color",
+          "$value": "{golden-yellow.010}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-surface-rating-faint"
+              }
+            }
+          }
+        }
+      },
+      "border": {
+        "brand": {
+          "$type": "color",
+          "$value": "{blue-spruce-green.1400}",
+          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-brand"
+              }
+            }
+          }
+        },
+        "accent-bold": {
+          "$type": "color",
+          "$value": "{golden-moss.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.0:1), control/surface/neutral-trace (5.0:1), selection/surface/neutral-trace (5.0:1), feedback/surface/neutral-trace (5.0:1)\n△ Large only: graphic/surface/accent-faint (4.5:1), selection/surface/natural (4.4:1), surface/neutral (4.4:1)\n✗ Avoid: surface/brand-subtle (1.0:1), graphic/surface/accent-bold (1.0:1), feedback/surface/warning-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-accent-bold"
+              }
+            }
+          }
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{apex-moss.500}",
+          "$description": "✓ AAA: surface/neutral-intense (8.6:1), control/surface/neutral-intense (8.6:1), surface/brand (8.4:1), action/surface/brand (8.4:1)\n✓ AA: action/surface/neutral-intense (5.8:1), control/surface/neutral-bold (5.8:1)\n△ Large only: feedback/surface/error-bold (3.5:1), feedback/surface/natural-bold (3.2:1), feedback/surface/warning-bold (3.2:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-accent"
+              }
+            }
+          }
+        },
+        "accent-faint": {
+          "$type": "color",
+          "$value": "{lichen.100}",
+          "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1)\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1)\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1)\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-accent-faint"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-neutral"
+              }
+            }
+          }
+        },
+        "sale": {
+          "$type": "color",
+          "$value": "{sale-red.1000}",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-sale"
+              }
+            }
+          }
+        },
+        "membership": {
+          "$type": "color",
+          "$value": "{membership-yellow.300}",
+          "$description": "✓ AAA: surface/neutral-intense (10.0:1), control/surface/neutral-intense (10.0:1), surface/brand (9.8:1), action/surface/brand (9.8:1)\n✓ AA: action/surface/neutral-intense (6.8:1), control/surface/neutral-bold (6.8:1)\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.7:1), feedback/surface/warning-bold (3.7:1)\n✗ Avoid: surface/membership (1.0:1), graphic/surface/membership (1.0:1), feedback/surface/natural (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-membership"
+              }
+            }
+          }
+        },
+        "rating": {
+          "$type": "color",
+          "$value": "{golden-yellow.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: graphic/surface/rating-bold (1.0:1), action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-rating"
+              }
+            }
+          }
+        },
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.050}",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/natural (1.0:1), feedback/surface/natural-faint (1.0:1), graphic/surface/natural (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-graphic-border-natural"
+              }
+            }
+          }
+        }
+      }
+    },
+    "icon": {
+      "accent": {
+        "$type": "color",
+        "$value": "{apex-moss.500}",
+        "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AAA (≥7:1): surface/brand (8.4:1), surface/neutral/intense (8.6:1), action/surface/brand (8.4:1), control/surface/neutral/intense (8.6:1), graphic/surface/brand (8.4:1)\n✓ AA (≥4.5:1): action/surface/neutral/intense (5.8:1), control/surface/neutral/bold (5.8:1)\n△ AA large only (≥3:1): surface/brand/subtle (3.2:1), feedback/surface/success/bold (3.0:1), feedback/surface/error/bold (3.5:1), feedback/surface/natural/bold (3.2:1), feedback/surface/info/bold (3.1:1), feedback/surface/warning/bold (3.2:1), graphic/surface/accent/bold (3.2:1)\n✗ Fails (&lt;3:1): surface/neutral (1.6:1), surface/neutral/trace (1.5:1), surface/natural (1.5:1), surface/sale (2.8:1), surface/membership (1.2:1), surface/neutral/subtle (1.5:1), feedback/surface/success (1.2:1), feedback/surface/success/faint (1.5:1), feedback/surface/error (1.1:1), feedback/surface/error/faint (1.4:1), feedback/surface/error/trace (1.5:1), feedback/surface/natural (1.2:1), feedback/surface/natural/faint (1.5:1), feedback/surface/info (1.2:1), feedback/surface/info/faint (1.5:1), feedback/surface/warning (1.2:1), feedback/surface/warning/faint (1.5:1), action/surface/brand/faint (1.1:1), action/surface/sale (2.8:1), action/surface/sale/faint (1.4:1), action/surface/neutral (1.3:1), action/surface/neutral/bold (2.2:1), action/surface/neutral/faint (1.5:1), action/surface/neutral/prominent (1.1:1), action/surface/neutral/subtle (1.4:1), action/surface/neutral/trace (1.5:1), control/surface/neutral (1.3:1), control/surface/neutral/faint (1.5:1), control/surface/neutral/prominent (2.2:1), control/surface/neutral/subtle (1.5:1), control/surface/neutral/trace (1.6:1), control/surface/natural (1.3:1), control/surface/natural/bold (1.1:1), selection/surface/neutral (1.3:1), selection/surface/neutral/trace (1.6:1), selection/surface/neutral/faint (1.5:1), selection/surface/neutral/subtle (1.4:1), selection/surface/natural (1.4:1), graphic/surface/neutral/faint (1.5:1), graphic/surface/accent (1.0:1), graphic/surface/accent/faint (1.4:1), graphic/surface/membership (1.2:1), graphic/surface/natural (1.5:1), graphic/surface/sale (2.8:1), graphic/surface/rating (1.1:1), graphic/surface/rating/faint (1.5:1), graphic/surface/rating/bold (2.2:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-icon-accent"
+            }
+          }
+        },
+        "bold": {
+          "$type": "color",
+          "$value": "{golden-moss.1100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AA (≥4.5:1): surface/neutral (5.0:1), surface/neutral/trace (4.7:1), surface/natural (4.7:1), surface/neutral/subtle (4.7:1), feedback/surface/success/faint (4.7:1), feedback/surface/error/faint (4.5:1), feedback/surface/error/trace (4.8:1), feedback/surface/natural/faint (4.7:1), feedback/surface/info/faint (4.7:1), feedback/surface/warning/faint (4.7:1), action/surface/neutral/faint (4.7:1), action/surface/neutral/trace (4.9:1), control/surface/neutral/faint (4.9:1), control/surface/neutral/subtle (4.7:1), control/surface/neutral/trace (5.0:1), selection/surface/neutral/trace (5.0:1), selection/surface/neutral/faint (4.7:1), graphic/surface/neutral/faint (4.7:1), graphic/surface/natural (4.7:1), graphic/surface/rating/faint (4.9:1)\n△ AA large only (≥3:1): surface/membership (3.7:1), feedback/surface/success (3.8:1), feedback/surface/error (3.5:1), feedback/surface/natural (3.7:1), feedback/surface/info (3.8:1), feedback/surface/warning (3.7:1), action/surface/brand/faint (3.4:1), action/surface/sale/faint (4.3:1), action/surface/neutral (4.1:1), action/surface/neutral/prominent (3.4:1), action/surface/neutral/subtle (4.4:1), control/surface/neutral (4.1:1), control/surface/natural (4.1:1), control/surface/natural/bold (3.4:1), selection/surface/neutral (4.1:1), selection/surface/neutral/subtle (4.4:1), selection/surface/natural (4.4:1), graphic/surface/accent (3.2:1), graphic/surface/accent/faint (4.5:1), graphic/surface/membership (3.7:1), graphic/surface/rating (3.5:1)\n✗ Fails (&lt;3:1): surface/brand (2.7:1), surface/sale (1.1:1), surface/brand/subtle (1.0:1), surface/neutral/intense (2.7:1), feedback/surface/success/bold (1.0:1), feedback/surface/error/bold (1.1:1), feedback/surface/natural/bold (1.0:1), feedback/surface/info/bold (1.0:1), feedback/surface/warning/bold (1.0:1), action/surface/brand (2.7:1), action/surface/sale (1.1:1), action/surface/neutral/bold (1.4:1), action/surface/neutral/intense (1.8:1), control/surface/neutral/bold (1.8:1), control/surface/neutral/intense (2.7:1), control/surface/neutral/prominent (1.4:1), graphic/surface/accent/bold (1.0:1), graphic/surface/brand (2.7:1), graphic/surface/sale (1.1:1), graphic/surface/rating/bold (1.4:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-icon-accent-bold"
+              }
+            }
+          }
+        },
+        "faint": {
+          "$type": "color",
+          "$value": "{lichen.100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AAA (≥7:1): surface/brand (12.0:1), surface/neutral/intense (12.3:1), action/surface/brand (12.0:1), action/surface/neutral/intense (8.3:1), control/surface/neutral/bold (8.3:1), control/surface/neutral/intense (12.3:1), graphic/surface/brand (12.0:1)\n✓ AA (≥4.5:1): feedback/surface/error/bold (5.0:1), feedback/surface/natural/bold (4.6:1), feedback/surface/warning/bold (4.6:1)\n△ AA large only (≥3:1): surface/sale (4.0:1), surface/brand/subtle (4.5:1), feedback/surface/success/bold (4.3:1), feedback/surface/info/bold (4.4:1), action/surface/sale (4.0:1), action/surface/neutral/bold (3.2:1), control/surface/neutral/prominent (3.2:1), graphic/surface/accent/bold (4.5:1), graphic/surface/sale (4.0:1), graphic/surface/rating/bold (3.2:1)\n✗ Fails (&lt;3:1): surface/neutral (1.1:1), surface/neutral/trace (1.0:1), surface/natural (1.0:1), surface/membership (1.2:1), surface/neutral/subtle (1.0:1), feedback/surface/success (1.2:1), feedback/surface/success/faint (1.0:1), feedback/surface/error (1.3:1), feedback/surface/error/faint (1.0:1), feedback/surface/error/trace (1.1:1), feedback/surface/natural (1.2:1), feedback/surface/natural/faint (1.0:1), feedback/surface/info (1.2:1), feedback/surface/info/faint (1.0:1), feedback/surface/warning (1.2:1), feedback/surface/warning/faint (1.0:1), action/surface/brand/faint (1.3:1), action/surface/sale/faint (1.0:1), action/surface/neutral (1.1:1), action/surface/neutral/faint (1.0:1), action/surface/neutral/prominent (1.3:1), action/surface/neutral/subtle (1.0:1), action/surface/neutral/trace (1.1:1), control/surface/neutral (1.1:1), control/surface/neutral/faint (1.1:1), control/surface/neutral/subtle (1.0:1), control/surface/neutral/trace (1.1:1), control/surface/natural (1.1:1), control/surface/natural/bold (1.3:1), selection/surface/neutral (1.1:1), selection/surface/neutral/trace (1.1:1), selection/surface/neutral/faint (1.0:1), selection/surface/neutral/subtle (1.0:1), selection/surface/natural (1.0:1), graphic/surface/neutral/faint (1.0:1), graphic/surface/accent (1.4:1), graphic/surface/accent/faint (1.0:1), graphic/surface/membership (1.2:1), graphic/surface/natural (1.0:1), graphic/surface/rating (1.3:1), graphic/surface/rating/faint (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-icon-accent-faint"
+              }
+            }
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{blue-spruce-green.1400}",
+        "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AAA (≥7:1): surface/neutral (13.4:1), surface/neutral/trace (12.5:1), surface/natural (12.5:1), surface/membership (9.8:1), surface/neutral/subtle (12.5:1), feedback/surface/success (10.1:1), feedback/surface/success/faint (12.5:1), feedback/surface/error (9.3:1), feedback/surface/error/faint (12.1:1), feedback/surface/error/trace (12.7:1), feedback/surface/natural (9.9:1), feedback/surface/natural/faint (12.5:1), feedback/surface/info (10.1:1), feedback/surface/info/faint (12.4:1), feedback/surface/warning (10.0:1), feedback/surface/warning/faint (12.5:1), action/surface/brand/faint (9.2:1), action/surface/sale/faint (11.5:1), action/surface/neutral (10.9:1), action/surface/neutral/faint (12.5:1), action/surface/neutral/prominent (9.0:1), action/surface/neutral/subtle (11.7:1), action/surface/neutral/trace (13.0:1), control/surface/neutral (10.9:1), control/surface/neutral/faint (13.0:1), control/surface/neutral/subtle (12.5:1), control/surface/neutral/trace (13.4:1), control/surface/natural (10.9:1), control/surface/natural/bold (9.1:1), selection/surface/neutral (10.9:1), selection/surface/neutral/trace (13.4:1), selection/surface/neutral/faint (12.5:1), selection/surface/neutral/subtle (11.7:1), selection/surface/natural (11.8:1), graphic/surface/neutral/faint (12.5:1), graphic/surface/accent (8.4:1), graphic/surface/accent/faint (12.0:1), graphic/surface/membership (9.8:1), graphic/surface/natural (12.5:1), graphic/surface/rating (9.5:1), graphic/surface/rating/faint (13.0:1)\n△ AA large only (≥3:1): action/surface/neutral/bold (3.8:1), control/surface/neutral/prominent (3.8:1), graphic/surface/rating/bold (3.8:1)\n✗ Fails (&lt;3:1): surface/brand (1.0:1), surface/sale (3.0:1), surface/brand/subtle (2.7:1), surface/neutral/intense (1.0:1), feedback/surface/success/bold (2.8:1), feedback/surface/error/bold (2.4:1), feedback/surface/natural/bold (2.6:1), feedback/surface/info/bold (2.8:1), feedback/surface/warning/bold (2.6:1), action/surface/brand (1.0:1), action/surface/sale (3.0:1), action/surface/neutral/intense (1.5:1), control/surface/neutral/bold (1.5:1), control/surface/neutral/intense (1.0:1), graphic/surface/accent/bold (2.7:1), graphic/surface/brand (1.0:1), graphic/surface/sale (3.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-icon-brand"
+            }
+          }
+        }
+      },
+      "membership": {
+        "$type": "color",
+        "$value": "{membership-yellow.300}",
+        "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AAA (≥7:1): surface/brand (9.8:1), surface/neutral/intense (10.0:1), action/surface/brand (9.8:1), control/surface/neutral/intense (10.0:1), graphic/surface/brand (9.8:1)\n✓ AA (≥4.5:1): action/surface/neutral/intense (6.8:1), control/surface/neutral/bold (6.8:1)\n△ AA large only (≥3:1): surface/sale (3.3:1), surface/brand/subtle (3.7:1), feedback/surface/success/bold (3.5:1), feedback/surface/error/bold (4.1:1), feedback/surface/natural/bold (3.7:1), feedback/surface/info/bold (3.6:1), feedback/surface/warning/bold (3.7:1), action/surface/sale (3.3:1), graphic/surface/accent/bold (3.7:1), graphic/surface/sale (3.3:1)\n✗ Fails (&lt;3:1): surface/neutral (1.4:1), surface/neutral/trace (1.3:1), surface/natural (1.3:1), surface/membership (1.0:1), surface/neutral/subtle (1.3:1), feedback/surface/success (1.0:1), feedback/surface/success/faint (1.3:1), feedback/surface/error (1.1:1), feedback/surface/error/faint (1.2:1), feedback/surface/error/trace (1.3:1), feedback/surface/natural (1.0:1), feedback/surface/natural/faint (1.3:1), feedback/surface/info (1.0:1), feedback/surface/info/faint (1.3:1), feedback/surface/warning (1.0:1), feedback/surface/warning/faint (1.3:1), action/surface/brand/faint (1.1:1), action/surface/sale/faint (1.2:1), action/surface/neutral (1.1:1), action/surface/neutral/bold (2.6:1), action/surface/neutral/faint (1.3:1), action/surface/neutral/prominent (1.1:1), action/surface/neutral/subtle (1.2:1), action/surface/neutral/trace (1.3:1), control/surface/neutral (1.1:1), control/surface/neutral/faint (1.3:1), control/surface/neutral/prominent (2.6:1), control/surface/neutral/subtle (1.3:1), control/surface/neutral/trace (1.4:1), control/surface/natural (1.1:1), control/surface/natural/bold (1.1:1), selection/surface/neutral (1.1:1), selection/surface/neutral/trace (1.4:1), selection/surface/neutral/faint (1.3:1), selection/surface/neutral/subtle (1.2:1), selection/surface/natural (1.2:1), graphic/surface/neutral/faint (1.3:1), graphic/surface/accent (1.2:1), graphic/surface/accent/faint (1.2:1), graphic/surface/membership (1.0:1), graphic/surface/natural (1.3:1), graphic/surface/rating (1.0:1), graphic/surface/rating/faint (1.3:1), graphic/surface/rating/bold (2.6:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-icon-membership"
+            }
+          }
+        }
+      },
+      "natural": {
+        "$type": "color",
+        "$value": "{natural-grey.050}",
+        "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AAA (≥7:1): surface/brand (12.5:1), surface/neutral/intense (12.8:1), action/surface/brand (12.5:1), action/surface/neutral/intense (8.6:1), control/surface/neutral/bold (8.6:1), control/surface/neutral/intense (12.8:1), graphic/surface/brand (12.5:1)\n✓ AA (≥4.5:1): surface/brand/subtle (4.7:1), feedback/surface/error/bold (5.2:1), feedback/surface/natural/bold (4.7:1), feedback/surface/info/bold (4.5:1), feedback/surface/warning/bold (4.7:1), graphic/surface/accent/bold (4.7:1)\n△ AA large only (≥3:1): surface/sale (4.2:1), feedback/surface/success/bold (4.5:1), action/surface/sale (4.2:1), action/surface/neutral/bold (3.3:1), control/surface/neutral/prominent (3.3:1), graphic/surface/sale (4.2:1), graphic/surface/rating/bold (3.3:1)\n✗ Fails (&lt;3:1): surface/neutral (1.1:1), surface/neutral/trace (1.0:1), surface/natural (1.0:1), surface/membership (1.3:1), surface/neutral/subtle (1.0:1), feedback/surface/success (1.2:1), feedback/surface/success/faint (1.0:1), feedback/surface/error (1.3:1), feedback/surface/error/faint (1.0:1), feedback/surface/error/trace (1.0:1), feedback/surface/natural (1.3:1), feedback/surface/natural/faint (1.0:1), feedback/surface/info (1.2:1), feedback/surface/info/faint (1.0:1), feedback/surface/warning (1.3:1), feedback/surface/warning/faint (1.0:1), action/surface/brand/faint (1.4:1), action/surface/sale/faint (1.1:1), action/surface/neutral (1.1:1), action/surface/neutral/faint (1.0:1), action/surface/neutral/prominent (1.4:1), action/surface/neutral/subtle (1.1:1), action/surface/neutral/trace (1.0:1), control/surface/neutral (1.1:1), control/surface/neutral/faint (1.0:1), control/surface/neutral/subtle (1.0:1), control/surface/neutral/trace (1.1:1), control/surface/natural (1.1:1), control/surface/natural/bold (1.4:1), selection/surface/neutral (1.1:1), selection/surface/neutral/trace (1.1:1), selection/surface/neutral/faint (1.0:1), selection/surface/neutral/subtle (1.1:1), selection/surface/natural (1.1:1), graphic/surface/neutral/faint (1.0:1), graphic/surface/accent (1.5:1), graphic/surface/accent/faint (1.0:1), graphic/surface/membership (1.3:1), graphic/surface/natural (1.0:1), graphic/surface/rating (1.3:1), graphic/surface/rating/faint (1.0:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-icon-natural"
+            }
+          }
+        }
+      },
+      "sale": {
+        "$type": "color",
+        "$value": "{sale-red.1000}",
+        "$description": "WCAG 2.1 contrast · web-light mode\n\n△ AA large only (≥3:1): surface/neutral (4.5:1), surface/neutral/trace (4.2:1), surface/natural (4.2:1), surface/membership (3.3:1), surface/neutral/intense (3.1:1), surface/neutral/subtle (4.2:1), feedback/surface/success (3.4:1), feedback/surface/success/faint (4.2:1), feedback/surface/error (3.1:1), feedback/surface/error/faint (4.1:1), feedback/surface/error/trace (4.3:1), feedback/surface/natural (3.3:1), feedback/surface/natural/faint (4.2:1), feedback/surface/info (3.4:1), feedback/surface/info/faint (4.2:1), feedback/surface/warning (3.3:1), feedback/surface/warning/faint (4.2:1), action/surface/brand/faint (3.1:1), action/surface/sale/faint (3.8:1), action/surface/neutral (3.6:1), action/surface/neutral/faint (4.2:1), action/surface/neutral/prominent (3.0:1), action/surface/neutral/subtle (3.9:1), action/surface/neutral/trace (4.4:1), control/surface/neutral (3.6:1), control/surface/neutral/faint (4.4:1), control/surface/neutral/intense (3.1:1), control/surface/neutral/subtle (4.2:1), control/surface/neutral/trace (4.5:1), control/surface/natural (3.6:1), control/surface/natural/bold (3.0:1), selection/surface/neutral (3.6:1), selection/surface/neutral/trace (4.5:1), selection/surface/neutral/faint (4.2:1), selection/surface/neutral/subtle (3.9:1), selection/surface/natural (3.9:1), graphic/surface/neutral/faint (4.2:1), graphic/surface/accent/faint (4.0:1), graphic/surface/membership (3.3:1), graphic/surface/natural (4.2:1), graphic/surface/rating (3.2:1), graphic/surface/rating/faint (4.4:1)\n✗ Fails (&lt;3:1): surface/brand (3.0:1), surface/sale (1.0:1), surface/brand/subtle (1.1:1), feedback/surface/success/bold (1.1:1), feedback/surface/error/bold (1.2:1), feedback/surface/natural/bold (1.1:1), feedback/surface/info/bold (1.1:1), feedback/surface/warning/bold (1.1:1), action/surface/brand (3.0:1), action/surface/sale (1.0:1), action/surface/neutral/bold (1.3:1), action/surface/neutral/intense (2.1:1), control/surface/neutral/bold (2.1:1), control/surface/neutral/prominent (1.3:1), graphic/surface/accent (2.8:1), graphic/surface/accent/bold (1.1:1), graphic/surface/brand (3.0:1), graphic/surface/sale (1.0:1), graphic/surface/rating/bold (1.3:1)",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": ["FRAME_FILL", "SHAPE_FILL", "TEXT_FILL"],
+            "codeSyntax": {
+              "WEB": "--cdr-icon-sale"
+            }
+          }
+        }
+      }
+    },
+    "feedback": {
+      "surface": {
+        "natural-bold": {
+          "$type": "color",
+          "$value": "{natural-grey.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-natural-bold"
+              }
+            }
+          }
+        },
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-natural"
+              }
+            }
+          }
+        },
+        "natural-faint": {
+          "$type": "color",
+          "$value": "{natural-grey.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-natural-faint"
+              }
+            }
+          }
+        },
+        "info-bold": {
+          "$type": "color",
+          "$value": "{info-blue.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-info-bold"
+              }
+            }
+          }
+        },
+        "info": {
+          "$type": "color",
+          "$value": "{info-blue.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-info"
+              }
+            }
+          }
+        },
+        "info-faint": {
+          "$type": "color",
+          "$value": "{info-blue.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-info-faint"
+              }
+            }
+          }
+        },
+        "success-bold": {
+          "$type": "color",
+          "$value": "{success-green.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-success-bold"
+              }
+            }
+          }
+        },
+        "success": {
+          "$type": "color",
+          "$value": "{success-green.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-success"
+              }
+            }
+          }
+        },
+        "success-faint": {
+          "$type": "color",
+          "$value": "{success-green.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-success-faint"
+              }
+            }
+          }
+        },
+        "warning-bold": {
+          "$type": "color",
+          "$value": "{warning-yellow.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-warning-bold"
+              }
+            }
+          }
+        },
+        "warning": {
+          "$type": "color",
+          "$value": "{warning-yellow.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-warning"
+              }
+            }
+          }
+        },
+        "warning-faint": {
+          "$type": "color",
+          "$value": "{warning-yellow.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-warning-faint"
+              }
+            }
+          }
+        },
+        "error-bold": {
+          "$type": "color",
+          "$value": "{error-red.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-error-bold"
+              }
+            }
+          }
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{error-red.300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-error"
+              }
+            }
+          }
+        },
+        "error-faint": {
+          "$type": "color",
+          "$value": "{error-red.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-error-faint"
+              }
+            }
+          }
+        },
+        "error-trace": {
+          "$type": "color",
+          "$value": "{error-red.010}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-error-trace"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {}
+            }
+          }
+        }
+      },
+      "border": {
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.5:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-natural"
+              }
+            }
+          }
+        },
+        "nautral-faint": {
+          "$type": "color",
+          "$value": "{natural-grey.300}",
+          "$description": "✓ AAA: surface/neutral-intense (10.1:1), control/surface/neutral-intense (10.1:1), surface/brand (9.9:1), action/surface/brand (9.9:1)\n✓ AA: action/surface/neutral-intense (6.8:1), control/surface/neutral-bold (6.8:1)\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/natural (1.0:1), feedback/surface/warning (1.0:1), surface/membership (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-natural-faint"
+              }
+            }
+          }
+        },
+        "info": {
+          "$type": "color",
+          "$value": "{info-blue.1100}",
+          "$description": "✓ AA: surface/neutral-trace (4.9:1), control/surface/neutral-trace (4.9:1), selection/surface/neutral-trace (4.9:1), feedback/surface/neutral-trace (4.9:1)\n△ Large only: feedback/surface/error-faint (4.4:1), graphic/surface/accent-faint (4.4:1), selection/surface/natural (4.3:1)\n✗ Avoid: feedback/surface/info-bold (1.0:1), feedback/surface/success-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-info"
+              }
+            }
+          }
+        },
+        "info-faint": {
+          "$type": "color",
+          "$value": "{info-blue.300}",
+          "$description": "✓ AAA: surface/neutral-intense (10.3:1), control/surface/neutral-intense (10.3:1), surface/brand (10.1:1), action/surface/brand (10.1:1)\n✓ AA: action/surface/neutral-intense (6.9:1), control/surface/neutral-bold (6.9:1)\n△ Large only: feedback/surface/error-bold (4.2:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/info (1.0:1), feedback/surface/success (1.0:1), feedback/surface/warning (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-info-faint"
+              }
+            }
+          }
+        },
+        "success": {
+          "$type": "color",
+          "$value": "{success-green.1100}",
+          "$description": "✓ AA: surface/neutral-trace (4.8:1), control/surface/neutral-trace (4.8:1), selection/surface/neutral-trace (4.8:1), feedback/surface/neutral-trace (4.8:1)\n△ Large only: feedback/surface/warning-faint (4.5:1), surface/natural (4.5:1), feedback/surface/natural-faint (4.5:1)\n✗ Avoid: feedback/surface/success-bold (1.0:1), feedback/surface/info-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-success"
+              }
+            }
+          }
+        },
+        "success-faint": {
+          "$type": "color",
+          "$value": "{success-green.300}",
+          "$description": "✓ AAA: surface/neutral-intense (10.3:1), control/surface/neutral-intense (10.3:1), surface/brand (10.1:1), action/surface/brand (10.1:1)\n✓ AA: action/surface/neutral-intense (7.0:1), control/surface/neutral-bold (7.0:1)\n△ Large only: feedback/surface/error-bold (4.2:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/success (1.0:1), feedback/surface/info (1.0:1), feedback/surface/warning (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-success-faint"
+              }
+            }
+          }
+        },
+        "warning": {
+          "$type": "color",
+          "$value": "{warning-yellow.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.5:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-warning"
+              }
+            }
+          }
+        },
+        "warning-faint": {
+          "$type": "color",
+          "$value": "{warning-yellow.300}",
+          "$description": "✓ AAA: surface/neutral-intense (10.2:1), control/surface/neutral-intense (10.2:1), surface/brand (10.0:1), action/surface/brand (10.0:1)\n✓ AA: action/surface/neutral-intense (6.9:1), control/surface/neutral-bold (6.9:1)\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/warning (1.0:1), feedback/surface/natural (1.0:1), feedback/surface/info (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-warning-faint"
+              }
+            }
+          }
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{error-red.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.6:1), control/surface/neutral-trace (5.6:1), selection/surface/neutral-trace (5.6:1), feedback/surface/neutral-trace (5.6:1)\n△ Large only: feedback/surface/success (4.2:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1)\n✗ Avoid: feedback/surface/error-bold (1.0:1), feedback/surface/natural-bold (1.1:1), feedback/surface/warning-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-error"
+              }
+            }
+          }
+        },
+        "error-faint": {
+          "$type": "color",
+          "$value": "{error-red.300}",
+          "$description": "✓ AAA: surface/neutral-intense (9.5:1), control/surface/neutral-intense (9.5:1), surface/brand (9.3:1), action/surface/brand (9.3:1)\n✓ AA: action/surface/neutral-intense (6.4:1), control/surface/neutral-bold (6.4:1)\n△ Large only: feedback/surface/error-bold (3.9:1), feedback/surface/natural-bold (3.5:1), feedback/surface/warning-bold (3.5:1)\n✗ Avoid: feedback/surface/error (1.0:1), graphic/surface/rating (1.0:1), action/surface/brand-faint (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-error-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {}
+            }
+          }
+        }
+      },
+      "text": {
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.1100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AA (≥4.5:1): surface/neutral (5.1:1), surface/neutral/trace (4.7:1), surface/natural (4.7:1), surface/neutral/subtle (4.7:1), feedback/surface/success/faint (4.7:1), feedback/surface/error/faint (4.6:1), feedback/surface/error/trace (4.8:1), feedback/surface/natural/faint (4.7:1), feedback/surface/info/faint (4.7:1), feedback/surface/warning/faint (4.7:1)\n△ AA large only (≥3:1): surface/membership (3.7:1), feedback/surface/success (3.8:1), feedback/surface/error (3.5:1), feedback/surface/natural (3.8:1), feedback/surface/info (3.8:1), feedback/surface/warning (3.8:1)\n✗ Fails (&lt;3:1): surface/brand (2.6:1), surface/sale (1.1:1), surface/brand/subtle (1.0:1), surface/neutral/intense (2.7:1), feedback/surface/success/bold (1.1:1), feedback/surface/error/bold (1.1:1), feedback/surface/natural/bold (1.0:1), feedback/surface/info/bold (1.0:1), feedback/surface/warning/bold (1.0:1)\n\nCross-family passing:\nAA: action/surface/neutral/faint (4.7:1), action/surface/neutral/trace (4.9:1), control/surface/neutral/faint (4.9:1), control/surface/neutral/subtle (4.7:1), control/surface/neutral/trace (5.1:1), selection/surface/neutral/trace (5.1:1), selection/surface/neutral/faint (4.7:1), graphic/surface/neutral/faint (4.7:1), graphic/surface/accent/faint (4.6:1), graphic/surface/natural (4.7:1), graphic/surface/rating/faint (4.9:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-text-natural"
+              }
+            }
+          }
+        },
+        "info": {
+          "$type": "color",
+          "$value": "{info-blue.1100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AA (≥4.5:1): surface/neutral (4.9:1), surface/neutral/trace (4.5:1), surface/natural (4.5:1), surface/neutral/subtle (4.5:1), feedback/surface/success/faint (4.5:1), feedback/surface/error/trace (4.6:1), feedback/surface/natural/faint (4.5:1), feedback/surface/info/faint (4.5:1), feedback/surface/warning/faint (4.5:1)\n△ AA large only (≥3:1): surface/membership (3.6:1), feedback/surface/success (3.7:1), feedback/surface/error (3.4:1), feedback/surface/error/faint (4.4:1), feedback/surface/natural (3.6:1), feedback/surface/info (3.7:1), feedback/surface/warning (3.6:1)\n✗ Fails (&lt;3:1): surface/brand (2.8:1), surface/sale (1.1:1), surface/brand/subtle (1.0:1), surface/neutral/intense (2.8:1), feedback/surface/success/bold (1.0:1), feedback/surface/error/bold (1.1:1), feedback/surface/natural/bold (1.0:1), feedback/surface/info/bold (1.0:1), feedback/surface/warning/bold (1.0:1)\n\nCross-family passing:\nAA: action/surface/neutral/faint (4.5:1), action/surface/neutral/trace (4.7:1), control/surface/neutral/faint (4.7:1), control/surface/neutral/subtle (4.5:1), control/surface/neutral/trace (4.9:1), selection/surface/neutral/trace (4.9:1), selection/surface/neutral/faint (4.5:1), graphic/surface/neutral/faint (4.5:1), graphic/surface/natural (4.5:1), graphic/surface/rating/faint (4.7:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-text-info"
+              }
+            }
+          }
+        },
+        "success": {
+          "$type": "color",
+          "$value": "{success-green.1100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AA (≥4.5:1): surface/neutral (4.8:1), feedback/surface/success/faint (4.5:1), feedback/surface/error/trace (4.6:1)\n△ AA large only (≥3:1): surface/neutral/trace (4.5:1), surface/natural (4.5:1), surface/membership (3.5:1), surface/neutral/subtle (4.5:1), feedback/surface/success (3.6:1), feedback/surface/error (3.4:1), feedback/surface/error/faint (4.4:1), feedback/surface/natural (3.6:1), feedback/surface/natural/faint (4.5:1), feedback/surface/info (3.6:1), feedback/surface/info/faint (4.5:1), feedback/surface/warning (3.6:1), feedback/surface/warning/faint (4.5:1)\n✗ Fails (&lt;3:1): surface/brand (2.8:1), surface/sale (1.1:1), surface/brand/subtle (1.0:1), surface/neutral/intense (2.8:1), feedback/surface/success/bold (1.0:1), feedback/surface/error/bold (1.2:1), feedback/surface/natural/bold (1.1:1), feedback/surface/info/bold (1.0:1), feedback/surface/warning/bold (1.1:1)\n\nCross-family passing:\nAA: action/surface/neutral/trace (4.7:1), control/surface/neutral/faint (4.7:1), control/surface/neutral/trace (4.8:1), selection/surface/neutral/trace (4.8:1), graphic/surface/rating/faint (4.7:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-text-success"
+              }
+            }
+          }
+        },
+        "warning": {
+          "$type": "color",
+          "$value": "{warning-yellow.1100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AA (≥4.5:1): surface/neutral (5.1:1), surface/neutral/trace (4.7:1), surface/natural (4.7:1), surface/neutral/subtle (4.7:1), feedback/surface/success/faint (4.7:1), feedback/surface/error/faint (4.6:1), feedback/surface/error/trace (4.8:1), feedback/surface/natural/faint (4.7:1), feedback/surface/info/faint (4.7:1), feedback/surface/warning/faint (4.7:1)\n△ AA large only (≥3:1): surface/membership (3.7:1), feedback/surface/success (3.8:1), feedback/surface/error (3.5:1), feedback/surface/natural (3.8:1), feedback/surface/info (3.8:1), feedback/surface/warning (3.8:1)\n✗ Fails (&lt;3:1): surface/brand (2.6:1), surface/sale (1.1:1), surface/brand/subtle (1.0:1), surface/neutral/intense (2.7:1), feedback/surface/success/bold (1.1:1), feedback/surface/error/bold (1.1:1), feedback/surface/natural/bold (1.0:1), feedback/surface/info/bold (1.0:1), feedback/surface/warning/bold (1.0:1)\n\nCross-family passing:\nAA: action/surface/neutral/faint (4.7:1), action/surface/neutral/trace (4.9:1), control/surface/neutral/faint (4.9:1), control/surface/neutral/subtle (4.7:1), control/surface/neutral/trace (5.1:1), selection/surface/neutral/trace (5.1:1), selection/surface/neutral/faint (4.7:1), graphic/surface/neutral/faint (4.7:1), graphic/surface/accent/faint (4.6:1), graphic/surface/natural (4.7:1), graphic/surface/rating/faint (4.9:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-text-warning"
+              }
+            }
+          }
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{error-red.1100}",
+          "$description": "WCAG 2.1 contrast · web-light mode\n\n✓ AA (≥4.5:1): surface/neutral (5.6:1), surface/neutral/trace (5.2:1), surface/natural (5.2:1), surface/neutral/subtle (5.2:1), feedback/surface/success/faint (5.2:1), feedback/surface/error/faint (5.0:1), feedback/surface/error/trace (5.3:1), feedback/surface/natural/faint (5.2:1), feedback/surface/info/faint (5.2:1), feedback/surface/warning/faint (5.2:1)\n△ AA large only (≥3:1): surface/membership (4.1:1), feedback/surface/success (4.2:1), feedback/surface/error (3.9:1), feedback/surface/natural (4.1:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1)\n✗ Fails (&lt;3:1): surface/brand (2.4:1), surface/sale (1.2:1), surface/brand/subtle (1.1:1), surface/neutral/intense (2.5:1), feedback/surface/success/bold (1.2:1), feedback/surface/error/bold (1.0:1), feedback/surface/natural/bold (1.1:1), feedback/surface/info/bold (1.1:1), feedback/surface/warning/bold (1.1:1)\n\nCross-family passing:\nAA: action/surface/sale/faint (4.8:1), action/surface/neutral (4.5:1), action/surface/neutral/faint (5.2:1), action/surface/neutral/subtle (4.9:1), action/surface/neutral/trace (5.4:1), control/surface/neutral (4.5:1), control/surface/neutral/faint (5.4:1), control/surface/neutral/subtle (5.2:1), control/surface/neutral/trace (5.6:1), control/surface/natural (4.5:1), selection/surface/neutral (4.5:1), selection/surface/neutral/trace (5.6:1), selection/surface/neutral/faint (5.2:1), selection/surface/neutral/subtle (4.9:1), selection/surface/natural (4.9:1), graphic/surface/neutral/faint (5.2:1), graphic/surface/accent/faint (5.0:1), graphic/surface/natural (5.2:1), graphic/surface/rating/faint (5.4:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-text-error"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {}
+            }
+          }
+        }
+      },
+      "icon": {
+        "error": {
+          "$type": "color",
+          "$value": "{error-red.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.6:1), control/surface/neutral-trace (5.6:1), selection/surface/neutral-trace (5.6:1), feedback/surface/neutral-trace (5.6:1)\n△ Large only: feedback/surface/success (4.2:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1)\n✗ Avoid: feedback/surface/error-bold (1.0:1), feedback/surface/natural-bold (1.1:1), feedback/surface/warning-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-icon-error"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {}
+            }
+          }
+        }
+      }
+    },
+    "action": {
+      "surface": {
+        "sale": {
+          "$type": "color",
+          "$value": "{sale-red.1000}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-sale"
+              }
+            }
+          }
+        },
+        "sale-faint": {
+          "$type": "color",
+          "$value": "{sale-red.100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-sale-faint"
+              }
+            }
+          }
+        },
+        "brand": {
+          "$type": "color",
+          "$value": "{blue-spruce-green.1400}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-brand"
+              }
+            }
+          }
+        },
+        "brand-faint": {
+          "$type": "color",
+          "$value": "{sage-green.400}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-brand-faint"
+              }
+            }
+          }
+        },
+        "neutral-intense": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral-intense"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral-prominent": {
+          "$type": "color",
+          "$value": "{warm-grey.400}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral-prominent"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.200}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.010}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-surface-neutral-trace"
+              }
+            }
+          }
+        }
+      },
+      "border": {
+        "trigger": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-trigger"
+              }
+            }
+          }
+        },
+        "trigger-faint": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-trigger-faint"
+              }
+            }
+          }
+        },
+        "brand": {
+          "$type": "color",
+          "$value": "{blue-spruce-green.1400}",
+          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-brand"
+              }
+            }
+          }
+        },
+        "sale": {
+          "$type": "color",
+          "$value": "{sale-red.1000}",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-sale"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral-prominent": {
+          "$type": "color",
+          "$value": "{warm-grey.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-neutral-prominent"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-neutral"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.400}",
+          "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-border-neutral-faint"
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "brand": {
+          "$type": "color",
+          "$value": "{blue-spruce-green.1400}",
+          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-brand"
+              }
+            }
+          }
+        },
+        "sale": {
+          "$type": "color",
+          "$value": "{sale-red.1000}",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-sale"
+              }
+            }
+          }
+        },
+        "trigger-bold": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.3:1), control/surface/neutral-trace (9.3:1), selection/surface/neutral-trace (9.3:1), feedback/surface/neutral-trace (9.3:1)\n✓ AA: feedback/surface/info (7.0:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.9:1), surface/membership (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.4:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-trigger-bold"
+              }
+            }
+          }
+        },
+        "trigger": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-trigger"
+              }
+            }
+          }
+        },
+        "trigger-faint": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-trigger-faint"
+              }
+            }
+          }
+        },
+        "neutral-intense": {
+          "$type": "color",
+          "$value": "{warm-grey.1500}",
+          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1)\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1)\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1)\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral-intense"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral-prominent": {
+          "$type": "color",
+          "$value": "{warm-grey.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral-prominent"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.500}",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-text-neutral-trace"
+              }
+            }
+          }
+        }
+      },
+      "icon": {
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-icon-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-icon-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.400}",
+          "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-icon-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-icon-neutral-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-icon-neutral-trace"
+              }
+            }
+          }
+        },
+        "sale": {
+          "$type": "color",
+          "$value": "{sale-red.1000}",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-action-icon-sale"
+              }
+            }
+          }
+        }
+      }
+    },
+    "control": {
+      "surface": {
+        "natural-bold": {
+          "$type": "color",
+          "$value": "{natural-grey.400}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-natural-bold"
+              }
+            }
+          }
+        },
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.200}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-natural"
+              }
+            }
+          }
+        },
+        "natural-faint": {
+          "$type": "color",
+          "$value": "#f4f0e626",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-natural-faint"
+              }
+            }
+          }
+        },
+        "neutral-intense": {
+          "$type": "color",
+          "$value": "{warm-grey.1400}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral-intense"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral-prominent": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral-prominent"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.200}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.010}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-neutral-trace"
+              }
+            }
+          }
+        }
+      },
+      "border": {
+        "neutral-intense": {
+          "$type": "color",
+          "$value": "{warm-grey.1500}",
+          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1)\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1)\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1)\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-border-neutral-intense"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-border-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-border-neutral"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.500}",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-border-neutral-faint"
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1500}",
+          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1)\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1)\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1)\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-text-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral-prominent": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-text-neutral-prominent"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-text-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.700}",
+          "$description": "✓ AA: surface/neutral-intense (6.3:1), control/surface/neutral-intense (6.3:1), surface/brand (6.1:1), action/surface/brand (6.1:1)\n△ Large only: action/surface/neutral-intense (4.2:1), control/surface/neutral-bold (4.2:1)\n✗ Avoid: graphic/surface/accent (1.4:1), action/surface/neutral-prominent (1.5:1), control/surface/natural-bold (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-text-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.500}",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-text-neutral-faint"
+              }
+            }
+          }
+        }
+      },
+      "icon": {
+        "neutral-intense": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral-intense"
+              }
+            }
+          }
+        },
+        "neutral-bold": {
+          "$type": "color",
+          "$value": "{warm-grey.1200}",
+          "$description": "✓ AA: surface/neutral-trace (6.8:1), control/surface/neutral-trace (6.8:1), selection/surface/neutral-trace (6.8:1), feedback/surface/neutral-trace (6.8:1)\n△ Large only: graphic/surface/accent (4.3:1)\n✗ Avoid: feedback/surface/error-bold (1.2:1), feedback/surface/natural-bold (1.3:1), feedback/surface/warning-bold (1.3:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral-bold"
+              }
+            }
+          }
+        },
+        "neutral-prominent": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral-prominent"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.500}",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.010}",
+          "$description": "✓ AAA: surface/neutral-intense (13.3:1), control/surface/neutral-intense (13.3:1), surface/brand (13.0:1), action/surface/brand (13.0:1)\n✓ AA: feedback/surface/error-bold (5.4:1), feedback/surface/natural-bold (4.9:1), feedback/surface/warning-bold (4.9:1), surface/brand-subtle (4.9:1)\n△ Large only: surface/sale (4.4:1), action/surface/sale (4.4:1), graphic/surface/sale (4.4:1)\n✗ Avoid: action/surface/neutral-trace (1.0:1), control/surface/neutral-faint (1.0:1), graphic/surface/rating-faint (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-icon-neutral-trace"
+              }
+            }
+          }
+        }
+      }
+    },
+    "selection": {
+      "surface": {
+        "natural": {
+          "$type": "color",
+          "$value": "{natural-grey.100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-surface-natural"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.200}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-surface-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-surface-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.050}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-surface-neutral-faint"
+              }
+            }
+          }
+        },
+        "neutral-trace": {
+          "$type": "color",
+          "$value": "{warm-grey.000}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-surface-neutral-trace"
+              }
+            }
+          }
+        }
+      },
+      "border": {
+        "trigger": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-border-trigger"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.900}",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-border-neutral"
+              }
+            }
+          }
+        },
+        "neutral-subtle": {
+          "$type": "color",
+          "$value": "{warm-grey.850}",
+          "$description": "△ Large only: surface/neutral-intense (4.4:1), control/surface/neutral-intense (4.4:1), surface/brand (4.3:1)\n✗ Avoid: action/surface/neutral-bold (1.1:1), control/surface/neutral-prominent (1.1:1), graphic/surface/rating-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-border-neutral-subtle"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.500}",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["STROKE_COLOR"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-border-neutral-faint"
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "trigger": {
+          "$type": "color",
+          "$value": "{alpine-lake-blue.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-text-trigger"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$type": "color",
+          "$value": "{warm-grey.1300}",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-text-neutral"
+              }
+            }
+          }
+        },
+        "neutral-faint": {
+          "$type": "color",
+          "$value": "{warm-grey.1100}",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["TEXT_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-selection-text-neutral-faint"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
