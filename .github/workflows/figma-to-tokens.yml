@@ -1,0 +1,127 @@
+name: Sync Figma variables to tokens
+on:
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug mode (skips Figma sync, only builds)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+# Allow one run at a time so baselines never interleave
+concurrency:
+  group: figma-to-tokens
+  cancel-in-progress: false
+
+jobs:
+  sync-figma-to-tokens:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      pages: write
+      id-token: write
+
+    # The branch name used for the PR (and the GH Pages sub-path)
+    env:
+      BASE_BRANCH: ${{ github.event.repository.default_branch }}
+      PR_BRANCH: update-tokens
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Clone repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+
+      # ── 2. Toolchain ─────────────────────────────────────────────────────────
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+      - name: Verify Node.js version
+        run: node --version
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # ── 3. Baseline snapshot (BEFORE Figma sync) ─────────────────────────────
+      - name: Build baseline snapshot
+        run: pnpm diff:baseline
+
+      # ── 4. Figma → tokens sync ───────────────────────────────────────────────
+      - name: Sync variables in Figma files to tokens
+        if: github.event.inputs.debug != 'true'
+        run: pnpm run sync:figma-to-tokens -- --output tokens
+        env:
+          FILE_KEYS: ${{ secrets.FIGMA_FILE_KEYS }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_ACTION_VARIABLES_SYNC_FIGMA_TOKEN }}
+      - name: Debug sync failure
+        if: failure() && github.event.inputs.debug != 'true'
+        run: |
+          echo "FILE_KEYS is set: $([ -n "$FILE_KEYS" ] && echo 'YES' || echo 'NO')"
+          echo "PERSONAL_ACCESS_TOKEN is set: $([ -n "$PERSONAL_ACCESS_TOKEN" ] && echo 'YES' || echo 'NO')"
+        env:
+          FILE_KEYS: ${{ secrets.FIGMA_FILE_KEYS }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_ACTION_VARIABLES_SYNC_FIGMA_TOKEN }}
+
+      # ── 5. Current snapshot (AFTER Figma sync) ───────────────────────────────
+      - name: Build current snapshot
+        run: pnpm diff:current
+
+      # ── 6. Build Storybook (snapshots are baked in as static assets) ─────────
+      # STORYBOOK_BASE_URL tells Vite the sub-path it will be served from so
+      # all asset references in the built HTML are correct.
+      - name: Build tokens and Storybook
+        run: pnpm build
+        env:
+          STORYBOOK_BASE_URL: /rei-cedar-token-pipeline-spike/pr/${{ env.PR_BRANCH }}/
+
+      # ── 7. Deploy Storybook to GH Pages under /pr/update-tokens/ ─────────────
+      #
+      # We use a dedicated orphan branch (gh-pages) and place the built site
+      # under a PR-specific sub-directory so multiple PRs can coexist without
+      # overwriting each other.  The action only touches the sub-directory it
+      # writes; other paths on the branch are left intact.
+      - name: Deploy Storybook preview to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
+          publish_branch: gh-pages
+          destination_dir: pr/${{ env.PR_BRANCH }}
+          keep_files: true
+
+      # ── 8. Create (or update) the Pull Request ───────────────────────────────
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        env:
+          HUSKY: 0
+        with:
+          commit-message: 'chore: update tokens from Figma'
+          title: 'chore: update tokens from Figma'
+          base: ${{ env.BASE_BRANCH }}
+          branch: ${{ env.PR_BRANCH }}
+          body: |
+            ## Token update from Figma
+
+            Tokens have been synced from Figma. The diff snapshots are bundled
+            into the Storybook preview linked below — open the **Live Diff** story
+            to see exactly what changed between the old and new token values.
+
+            ### Storybook preview
+
+            | Story | Link |
+            |-------|------|
+            | Live Diff (old vs new) | https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr/${{ env.PR_BRANCH }}/?path=/story/cedar-tokens-semantic-diff--live-diff |
+            | Full token set | https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr/${{ env.PR_BRANCH }}/ |
+
+            > The preview is deployed to GitHub Pages and will be available a few
+            > minutes after this workflow completes.
