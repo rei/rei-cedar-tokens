@@ -4,6 +4,14 @@ import { CdrColorControl } from '../dist/rei-dot-com/types/foundations/cdr-color
 import { CdrColorSelection } from '../dist/rei-dot-com/types/foundations/cdr-color-selection.mjs';
 import { CdrColorSurface } from '../dist/rei-dot-com/types/foundations/cdr-color-surface.mjs';
 import { CdrColorText } from '../dist/rei-dot-com/types/foundations/cdr-color-text.mjs';
+import {
+  hexToRgb,
+  rgbToHex,
+  rgbToOklch,
+  oklchToRgb,
+  contrastRatio,
+  type Oklch,
+} from './oklch-math';
 
 const meta: Meta = {
   title: 'OKLCH/Utility Color Functions',
@@ -15,79 +23,6 @@ const meta: Meta = {
 
 export default meta;
 type Story = StoryObj;
-
-// ─── OKLCH color math ─────────────────────────────────────────────────────────
-// States are computed in JS so we can show resolved values, run contrast checks,
-// and detect out-of-gamut results — not just render CSS syntax.
-
-type Rgb = { r: number; g: number; b: number };
-type Oklch = { l: number; c: number; h: number };
-
-function hexToRgb(hex: string): Rgb {
-  const h = hex.replace('#', '');
-  return {
-    r: parseInt(h.slice(0, 2), 16) / 255,
-    g: parseInt(h.slice(2, 4), 16) / 255,
-    b: parseInt(h.slice(4, 6), 16) / 255,
-  };
-}
-
-function rgbToHex({ r, g, b }: Rgb): string {
-  const to = (v: number) =>
-    Math.round(Math.min(1, Math.max(0, v)) * 255)
-      .toString(16)
-      .padStart(2, '0');
-  return `#${to(r)}${to(g)}${to(b)}`;
-}
-
-function linearize(c: number): number {
-  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-}
-
-function delinearize(c: number): number {
-  return c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
-}
-
-function rgbToOklch({ r, g, b }: Rgb): Oklch {
-  const lr = linearize(r);
-  const lg = linearize(g);
-  const lb = linearize(b);
-  const l_ = Math.cbrt(0.4122214708 * lr + 0.5363325363 * lg + 0.0514459929 * lb);
-  const m_ = Math.cbrt(0.2119034982 * lr + 0.6806995451 * lg + 0.1073969566 * lb);
-  const s_ = Math.cbrt(0.0883024619 * lr + 0.2817188376 * lg + 0.6299787005 * lb);
-  const L = 0.2104542553 * l_ + 0.793617785 * m_ - 0.0040720468 * s_;
-  const a = 1.9779984951 * l_ - 2.428592205 * m_ + 0.4505937099 * s_;
-  const b2 = 0.0259040371 * l_ + 0.7827717662 * m_ - 0.808675766 * s_;
-  return {
-    l: L,
-    c: Math.sqrt(a * a + b2 * b2),
-    h: ((Math.atan2(b2, a) * 180) / Math.PI + 360) % 360,
-  };
-}
-
-function oklchToRgb({ l, c, h }: Oklch): { rgb: Rgb; inGamut: boolean } {
-  const a = c * Math.cos((h * Math.PI) / 180);
-  const b2 = c * Math.sin((h * Math.PI) / 180);
-  const l_ = Math.pow(l + 0.3963377774 * a + 0.2158037573 * b2, 3);
-  const m_ = Math.pow(l - 0.1055613458 * a - 0.0638541728 * b2, 3);
-  const s_ = Math.pow(l - 0.0894841775 * a - 1.291485548 * b2, 3);
-  const lr = 4.0767416621 * l_ - 3.3077115913 * m_ + 0.2309699292 * s_;
-  const lg = -1.2684380046 * l_ + 2.6097574011 * m_ - 0.3413193965 * s_;
-  const lb = -0.0041960863 * l_ - 0.7034186147 * m_ + 1.707614701 * s_;
-  const rgb = { r: delinearize(lr), g: delinearize(lg), b: delinearize(lb) };
-  const inGamut = [rgb.r, rgb.g, rgb.b].every((v) => v >= -0.001 && v <= 1.001);
-  return { rgb, inGamut };
-}
-
-function luminance({ r, g, b }: Rgb): number {
-  return 0.2126 * linearize(r) + 0.7152 * linearize(g) + 0.0722 * linearize(b);
-}
-
-function contrastRatio(fg: string, bg: string): number {
-  const l1 = luminance(hexToRgb(fg));
-  const l2 = luminance(hexToRgb(bg));
-  return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
-}
 
 // ─── Approved semantic bases ─────────────────────────────────────────────────
 // Only tokens that belong to each intent — no arbitrary colors.

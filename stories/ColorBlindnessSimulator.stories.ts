@@ -1,7 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html-vite';
-import { CdrColorText } from '../dist/rei-dot-com/types/foundations/cdr-color-text.mjs';
-import { CdrColorSurface } from '../dist/rei-dot-com/types/foundations/cdr-color-surface.mjs';
-import { CdrColorFeedback } from '../dist/rei-dot-com/types/foundations/cdr-color-feedback.mjs';
+import { combinations, resolvePath } from './color-registry';
+import { contrastRatio, deltaE, simulateCvd } from './oklch-math';
 
 const meta: Meta = {
   title: 'OKLCH/Color Blindness Simulator',
@@ -14,318 +13,119 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-// ─── Shared chrome ────────────────────────────────────────────────────────────
+const VISION_TYPES = [
+  { key: 'normal', label: 'Normal', sim: null },
+  { key: 'protanopia', label: 'Protanopia', sim: 'protanopia' as const },
+  { key: 'deuteranopia', label: 'Deuteranopia', sim: 'deuteranopia' as const },
+  { key: 'tritanopia', label: 'Tritanopia', sim: 'tritanopia' as const },
+];
+
+// Combinations from the canonical registry that exercise color-as-meaning:
+// feedback banners (hue carries intent) plus sale/brand text and selection.
+const SHOWCASE = [
+  'feedback-error-banner',
+  'feedback-success-banner',
+  'feedback-warning-banner',
+  'feedback-info-banner',
+  'sale-text-on-trace',
+  'brand-text-on-trace',
+  'selection-trigger',
+];
+
+function renderCombination(name: string): string {
+  const combo = combinations[name];
+  const surface = resolvePath(combo.surface);
+  const content = resolvePath(combo.content);
+  const border = combo.border ? resolvePath(combo.border) : null;
+  const wcag = contrastRatio(content, surface);
+
+  const cells = VISION_TYPES.map((v) => {
+    const simSurface = v.sim ? simulateCvd(surface, v.sim) : surface;
+    const simContent = v.sim ? simulateCvd(content, v.sim) : content;
+    const simBorder = border && v.sim ? simulateCvd(border, v.sim) : border;
+    // Distinguishability: perceptual distance between content and surface
+    // as perceived under this vision type.
+    const distinguish = deltaE(simContent, simSurface);
+    return `<div class="cb-cell">
+      <div class="cb-cell-label">${v.label}</div>
+      <div class="cb-preview" style="background:${simSurface};border:2px solid ${simBorder ?? 'transparent'};">
+        <span style="color:${simContent}">Sample text</span>
+      </div>
+      <div class="cb-delta" title="Perceptual distance between content and surface under this vision type">ΔE ${distinguish.toFixed(3)}</div>
+    </div>`;
+  }).join('');
+
+  return `<div class="cb-card">
+    <div class="cb-card-head">
+      <div>
+        <div class="cb-card-name">${name}</div>
+        <div class="cb-card-paths"><code>${combo.content}</code> on <code>${combo.surface}</code></div>
+      </div>
+      <div class="cb-wcag" title="WCAG contrast — a single measurement, independent of vision simulation">
+        <span class="cb-wcag-label">WCAG</span>
+        <span class="cb-wcag-val ${wcag >= 4.5 ? 'pass' : wcag >= 3 ? 'warn' : 'fail'}">${wcag.toFixed(1)}:1</span>
+      </div>
+    </div>
+    <div class="cb-grid">${cells}</div>
+    <div class="cb-cue"><span class="cb-cue-label">Non-color cue:</span> ${combo.nonColorCue}</div>
+  </div>`;
+}
 
 const chrome = `
   <style>
     *, *::before, *::after { box-sizing: border-box; }
-
-    /* ── Section chrome ── */
     .sb-section { margin-bottom: 64px; }
-    .sb-section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 24px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--cedar-warm-100);
-    }
-    .sb-section-title {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif;
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--cedar-warm-1000);
-      margin: 0;
-      letter-spacing: -0.3px;
-    }
-
-    /* ── Vision selector ── */
-    .vision-selector {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-    }
-    .vision-btn {
-      background: var(--cedar-warm-100);
-      color: var(--cedar-warm-700);
-      border: 1px solid var(--cedar-warm-300);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-family: Pressura, monospace;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .vision-btn:hover {
-      background: var(--cedar-warm-200);
-    }
-    .vision-btn.active {
-      background: var(--cedar-blue-600);
-      color: white;
-      border-color: var(--cedar-blue-600);
-    }
-
-    /* ── Accessibility grid ── */
-    .accessibility-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 24px;
-      margin-bottom: 48px;
-    }
-    .accessibility-card {
-      background: white;
-      border: 1px solid var(--cedar-warm-200);
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .accessibility-title {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--cedar-warm-900);
-      margin: 0 0 16px 0;
-      text-align: center;
-    }
-    .vision-variants {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-    .vision-variant {
-      text-align: center;
-    }
-    .vision-variant h4 {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--cedar-warm-700);
-      margin: 0 0 8px 0;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .text-surface-combo {
-      width: 100%;
-      height: 60px;
-      border-radius: 6px;
-      border: 1px solid var(--cedar-warm-200);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
-      font-family: Graphik, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .contrast-badge {
-      font-family: Pressura, monospace;
-      font-size: 10px;
-      font-weight: 600;
-      padding: 2px 6px;
-      border-radius: 3px;
-      display: inline-block;
-    }
-    .contrast-badge.aaa { background: #d4edda; color: #155724; }
-    .contrast-badge.aa { background: #fff3cd; color: #856404; }
-    .contrast-badge.fail { background: #f8d7da; color: #721c24; }
-
-    /* ── Vision simulation filters ── */
-    .protanopia-sim {
-      filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0 0.558, 0.442, 0, 0, 0 0, 0.242, 0.758, 0, 0 0, 0, 0, 1, 0"/></filter></svg>#protanopia');
-    }
-    .deuteranopia-sim {
-      filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0 0.7, 0.3, 0, 0, 0 0, 0.3, 0.7, 0, 0 0, 0, 0, 1, 0"/></filter></svg>#deuteranopia');
-    }
-    .tritanopia-sim {
-      filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0 0, 0.433, 0.567, 0, 0 0, 0.475, 0.525, 0, 0 0, 0, 0, 1, 0"/></filter></svg>#tritanopia');
-    }
-
-    /* ── OKLCH benefit ── */
-    .oklch-benefit {
-      background: var(--cedar-green-50);
-      border: 1px solid var(--cedar-green-200);
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .oklch-benefit-title {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--cedar-green-900);
-      margin: 0 0 16px 0;
-    }
-    .oklch-benefit-content {
-      color: var(--cedar-green-800);
-      line-height: 1.6;
-    }
-    .oklch-benefit-content p {
-      margin: 0 0 12px 0;
-    }
-    .oklch-benefit-content p:last-child {
-      margin-bottom: 0;
-    }
+    .sb-section-header { display:flex; align-items:baseline; gap:12px; margin-bottom:24px; padding-bottom:10px; border-bottom:2px solid var(--cedar-warm-100); }
+    .sb-section-title { font-family:Stuart,'Stuart fallback',Georgia,serif; font-size:22px; font-weight:600; color:var(--cedar-warm-1000); margin:0; letter-spacing:-0.3px; }
+    .cb-card { background:white; border:1px solid var(--cedar-warm-200); border-radius:12px; padding:20px; margin-bottom:20px; }
+    .cb-card-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; }
+    .cb-card-name { font-family:Stuart,'Stuart fallback',Georgia,serif; font-size:14px; font-weight:600; color:var(--cedar-warm-900); }
+    .cb-card-paths { font-size:11px; color:var(--cedar-warm-600); margin-top:2px; }
+    .cb-wcag { text-align:right; }
+    .cb-wcag-label { font-family:Pressura,monospace; font-size:9px; text-transform:uppercase; letter-spacing:0.05em; color:var(--cedar-warm-600); display:block; }
+    .cb-wcag-val { font-family:monospace; font-size:14px; font-weight:700; padding:1px 8px; border-radius:4px; }
+    .cb-wcag-val.pass { color:#2e6b34; }
+    .cb-wcag-val.warn { color:#854714; }
+    .cb-wcag-val.fail { color:#811823; }
+    .cb-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:12px; }
+    .cb-cell-label { font-family:Pressura,monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--cedar-warm-600); margin-bottom:6px; }
+    .cb-preview { height:56px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-family:Graphik,'Helvetica Neue',sans-serif; font-size:13px; font-weight:500; }
+    .cb-delta { font-family:monospace; font-size:10px; color:var(--cedar-warm-600); margin-top:4px; }
+    .cb-cue { font-size:12px; color:var(--cedar-warm-700); border-top:1px solid var(--cedar-warm-200); padding-top:10px; }
+    .cb-cue-label { font-weight:600; }
+    .cb-explainer { background:var(--cedar-green-50); border:1px solid var(--cedar-green-200); border-radius:12px; padding:24px; }
+    .cb-explainer h3 { font-family:Stuart,'Stuart fallback',Georgia,serif; font-size:18px; font-weight:600; color:var(--cedar-green-900); margin:0 0 12px 0; }
+    .cb-explainer li { color:var(--cedar-green-800); line-height:1.6; font-size:14px; margin-bottom:8px; }
+    .cb-explainer ul { margin:0; padding-left:20px; }
   </style>
 `;
-
-function sectionHeader(title: string): string {
-  return `<div class="sb-section-header">
-    <h2 class="sb-section-title">${title}</h2>
-  </div>`;
-}
-
-// ─── Color Blindness Simulator Story ──────────────────────────────────────────
 
 export const ColorBlindnessSimulator: Story = {
   name: 'Color Blindness Simulator',
   render: () => {
-    const testCombinations = [
-      {
-        text: 'CdrColorTextPrimary',
-        textValue: CdrColorText.CdrColorTextPrimary,
-        surface: 'CdrColorSurfaceNeutralTrace',
-        surfaceValue: CdrColorSurface.CdrColorSurfaceNeutralTrace,
-        contrast: '13.4:1 AAA',
-      },
-      {
-        text: 'CdrColorTextBrand',
-        textValue: CdrColorText.CdrColorTextBrand,
-        surface: 'CdrColorSurfaceNeutralTrace',
-        surfaceValue: CdrColorSurface.CdrColorSurfaceNeutralTrace,
-        contrast: '12.1:1 AAA',
-      },
-      {
-        text: 'CdrColorFeedbackTextError',
-        textValue: CdrColorFeedback.CdrColorFeedbackTextError,
-        surface: 'CdrColorFeedbackSurfaceErrorFaint',
-        surfaceValue: CdrColorFeedback.CdrColorFeedbackSurfaceErrorFaint,
-        contrast: '8.2:1 AA',
-      },
-      {
-        text: 'CdrColorTextSale',
-        textValue: CdrColorText.CdrColorTextSale,
-        surface: 'CdrColorSurfaceNeutralTrace',
-        surfaceValue: CdrColorSurface.CdrColorSurfaceNeutralTrace,
-        contrast: '6.1:1 AA',
-      },
-    ];
-
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader('Color Blindness Simulator')}
-        <p style="margin-bottom: 32px; color: var(--cedar-warm-700); line-height: 1.5;">
-          See how color combinations appear with different vision types.
-          OKLCH's perceptual uniformity helps maintain better contrast ratios across all vision types.
+        <div class="sb-section-header">
+          <h2 class="sb-section-title">Color-Vision Simulation: Approved Combinations</h2>
+        </div>
+        <p style="margin-bottom:24px; color:var(--cedar-warm-700); line-height:1.6; max-width:780px;">
+          Each card renders an approved combination from
+          <code>tokens/compatibility-registry.json</code> under simulated color-vision
+          deficiencies. The WCAG ratio is a single measurement of the real colors — it does not
+          change per vision type. ΔE shows how distinguishable the pairing remains under
+          simulation.
         </p>
-
-        <div class="vision-selector">
-          <button class="vision-btn active" data-vision="normal">Normal Vision</button>
-          <button class="vision-btn" data-vision="protanopia">Protanopia (Red-Blind)</button>
-          <button class="vision-btn" data-vision="deuteranopia">Deuteranopia (Green-Blind)</button>
-          <button class="vision-btn" data-vision="tritanopia">Tritanopia (Blue-Blind)</button>
-        </div>
-
-        <div class="accessibility-grid">
-          ${testCombinations
-            .map(
-              (combo) => `
-            <div class="accessibility-card">
-              <h3 class="accessibility-title">${combo.text} on ${combo.surface}</h3>
-              <div class="vision-variants">
-                <div class="vision-variant">
-                  <h4>Normal</h4>
-                  <div class="text-surface-combo" style="background: ${combo.surfaceValue}; color: ${combo.textValue};">
-                    Sample Text
-                  </div>
-                  <span class="contrast-badge aaa">${combo.contrast}</span>
-                </div>
-                <div class="vision-variant">
-                  <h4>Protanopia</h4>
-                  <div class="text-surface-combo protanopia-sim" style="background: ${combo.surfaceValue}; color: ${combo.textValue};">
-                    Sample Text
-                  </div>
-                  <span class="contrast-badge aa">11.2:1 AA</span>
-                </div>
-                <div class="vision-variant">
-                  <h4>Deuteranopia</h4>
-                  <div class="text-surface-combo deuteranopia-sim" style="background: ${combo.surfaceValue}; color: ${combo.textValue};">
-                    Sample Text
-                  </div>
-                  <span class="contrast-badge aa">10.8:1 AA</span>
-                </div>
-                <div class="vision-variant">
-                  <h4>Tritanopia</h4>
-                  <div class="text-surface-combo tritanopia-sim" style="background: ${combo.surfaceValue}; color: ${combo.textValue};">
-                    Sample Text
-                  </div>
-                  <span class="contrast-badge aaa">12.1:1 AAA</span>
-                </div>
-              </div>
-            </div>
-          `,
-            )
-            .join('')}
-        </div>
-
-        <div class="oklch-benefit">
-          <h3 class="oklch-benefit-title">OKLCH's Perceptual Uniformity Helps Accessibility</h3>
-          <div class="oklch-benefit-content">
-            <p>
-              Because OKLCH is designed around human perception, color combinations that work
-              for normal vision tend to maintain better contrast ratios for different vision
-              types compared to traditional color spaces.
-            </p>
-            <p>
-              The semantic token system's accessibility metadata helps ensure proper contrast
-              ratios across all vision types. This is especially important for:
-            </p>
-            <ul style="margin: 0; padding-left: 20px; color: var(--cedar-green-800);">
-              <li>Text on colored backgrounds</li>
-              <li>Interactive element states</li>
-              <li>Error and feedback indicators</li>
-              <li>Brand and marketing elements</li>
-            </ul>
-            <p>
-              The wide gamut capability of OKLCH also means more colors are available that
-              remain distinguishable for users with color vision deficiencies.
-            </p>
-          </div>
+        ${SHOWCASE.map(renderCombination).join('')}
+        <div class="cb-explainer">
+          <h3>Reading the results</h3>
+          <ul>
+            <li><strong>WCAG contrast ≠ simulation:</strong> WCAG measures the actual colors against a fixed formula. Simulation asks a different question — does the pairing still look different to someone with a CVD? Both are shown, separately.</li>
+            <li><strong>ΔE under simulation</strong> is perceptual distance between the simulated content and surface colors. Larger = easier to tell apart. There is no universal pass threshold; compare relative values.</li>
+            <li><strong>Color is never the only signal:</strong> every registry entry declares a non-color cue — icon, copy, border, or shape — so meaning survives even when hues converge.</li>
+            <li><strong>Simulation is approximate:</strong> linear-sRGB deficiency matrices (Viénot/Brettel) approximate how these colors may appear; they are a review aid, not a certification.</li>
+          </ul>
         </div>
       </div>
-    </div>
-
-    <script>
-      // Vision selector functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const visionButtons = document.querySelectorAll('.vision-btn');
-
-        visionButtons.forEach(btn => {
-          btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            visionButtons.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
-            this.classList.add('active');
-
-            const visionType = this.dataset.vision;
-
-            // Apply vision filter to all combos
-            const combos = document.querySelectorAll('.text-surface-combo');
-            combos.forEach(combo => {
-              // Remove all simulation classes
-              combo.classList.remove('protanopia-sim', 'deuteranopia-sim', 'tritanopia-sim');
-
-              // Add appropriate simulation class
-              if (visionType === 'protanopia') {
-                combo.classList.add('protanopia-sim');
-              } else if (visionType === 'deuteranopia') {
-                combo.classList.add('deuteranopia-sim');
-              } else if (visionType === 'tritanopia') {
-                combo.classList.add('tritanopia-sim');
-              }
-            });
-          });
-        });
-      });
-    </script>`;
+    </div>`;
   },
 };

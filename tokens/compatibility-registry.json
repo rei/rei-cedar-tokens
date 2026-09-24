@@ -1,0 +1,127 @@
+{
+  "$schema": "https://rei.com/schemas/cdr-color-compatibility-registry.json",
+  "version": 1,
+  "description": "Canonical registry of approved semantic color combinations. Storybook, Figma documentation, validation, and component code consume this file — combinations must not be derived independently from token descriptions.",
+  "combinations": {
+    "body-primary-on-trace": {
+      "surface": "color/surface/neutral/trace",
+      "content": "color/text/primary",
+      "border": null,
+      "states": ["default"],
+      "nonColorCue": "Text content is legible without color",
+      "notes": "Default body text on the primary page surface."
+    },
+    "body-primary-on-subtle": {
+      "surface": "color/surface/neutral/subtle",
+      "content": "color/text/primary",
+      "border": null,
+      "states": ["default"],
+      "nonColorCue": "Text content is legible without color",
+      "notes": "Body text on subtly differentiated sections."
+    },
+    "body-primary-on-natural": {
+      "surface": "color/surface/natural",
+      "content": "color/text/primary",
+      "border": null,
+      "states": ["default"],
+      "nonColorCue": "Text content is legible without color",
+      "notes": "Body text on natural-warm sections."
+    },
+    "brand-text-on-trace": {
+      "surface": "color/surface/neutral/trace",
+      "content": "color/text/brand",
+      "border": null,
+      "states": ["default"],
+      "nonColorCue": "Brand is also expressed through type and voice",
+      "notes": "Brand-colored headings/links on the primary surface."
+    },
+    "sale-text-on-trace": {
+      "surface": "color/surface/neutral/trace",
+      "content": "color/text/sale",
+      "border": null,
+      "states": ["default"],
+      "nonColorCue": "Sale messaging carries explicit price/discount text",
+      "notes": "Sale-colored text on the primary surface."
+    },
+    "action-brand": {
+      "surface": "color/action/surface/brand/faint",
+      "content": "color/action/text/brand",
+      "border": "color/action/border/brand",
+      "states": ["default", "hover", "pressed", "disabled"],
+      "nonColorCue": "Actionable role conveyed by control shape and label",
+      "notes": "Brand action — faint surface, brand content and border."
+    },
+    "action-sale": {
+      "surface": "color/action/surface/sale/faint",
+      "content": "color/action/text/sale",
+      "border": "color/action/border/sale",
+      "states": ["default", "hover", "pressed", "disabled"],
+      "nonColorCue": "Actionable role conveyed by control shape and label",
+      "notes": "Sale action — faint surface with sale content."
+    },
+    "action-trigger-border": {
+      "surface": "color/action/surface/neutral/trace",
+      "content": "color/action/text/neutral/trace",
+      "border": "color/action/border/trigger/faint",
+      "states": ["default", "hover", "pressed", "disabled"],
+      "nonColorCue": "Actionable role conveyed by control shape and label",
+      "notes": "Trigger/tertiary action on a trace surface."
+    },
+    "selection-trigger": {
+      "surface": "color/selection/surface/neutral/trace",
+      "content": "color/selection/text/trigger",
+      "border": "color/selection/border/trigger",
+      "states": ["default", "hover", "selected", "disabled"],
+      "nonColorCue": "Selected state also uses check/indeterminate iconography",
+      "notes": "Selected affordance — trigger border and content on trace."
+    },
+    "control-neutral": {
+      "surface": "color/control/surface/neutral/subtle",
+      "content": "color/text/primary",
+      "border": "color/control/border/neutral/faint",
+      "states": ["default", "hover", "disabled"],
+      "nonColorCue": "Control affordance conveyed by form element shape",
+      "notes": "Neutral form control surface."
+    },
+    "feedback-error-banner": {
+      "surface": "color/feedback/surface/error/faint",
+      "content": "color/feedback/text/error",
+      "border": "color/feedback/border/error/faint",
+      "states": ["default"],
+      "nonColorCue": "Error icon + explicit error copy required",
+      "notes": "Error messaging — icon and copy carry meaning, not color alone."
+    },
+    "feedback-success-banner": {
+      "surface": "color/feedback/surface/success/faint",
+      "content": "color/feedback/text/success",
+      "border": "color/feedback/border/success/faint",
+      "states": ["default"],
+      "nonColorCue": "Success icon + explicit confirmation copy required",
+      "notes": "Success messaging — icon and copy carry meaning."
+    },
+    "feedback-warning-banner": {
+      "surface": "color/feedback/surface/warning/faint",
+      "content": "color/feedback/text/warning",
+      "border": "color/feedback/border/warning/faint",
+      "states": ["default"],
+      "nonColorCue": "Warning icon + explicit warning copy required",
+      "notes": "Warning messaging — icon and copy carry meaning."
+    },
+    "feedback-info-banner": {
+      "surface": "color/feedback/surface/info/faint",
+      "content": "color/feedback/text/info",
+      "border": "color/feedback/border/info/faint",
+      "states": ["default"],
+      "nonColorCue": "Info icon + explicit informational copy required",
+      "notes": "Info messaging — icon and copy carry meaning."
+    },
+    "feedback-natural-banner": {
+      "surface": "color/feedback/surface/natural/faint",
+      "content": "color/feedback/text/natural",
+      "border": "color/feedback/border/natural",
+      "states": ["default"],
+      "nonColorCue": "Neutral messaging relies on copy, not color",
+      "notes": "Neutral informational messaging."
+    }
+  }
+}
