@@ -166,8 +166,8 @@ export const SemanticImports: Story = {
 <span class="code-keyword">import</span> { CdrColorSurface } <span class="code-keyword">from</span> <span class="code-string">'@rei/cdr-tokens'</span>;
 
 <span class="code-comment">// Usage</span>
-<span class="code-keyword">const</span> <span class="code-variable">brandSurface</span> = CdrColorSurface.brand;
-<span class="code-keyword">const</span> <span class="code-variable">subtleBrand</span> = CdrColorSurface.brand.subtle;
+<span class="code-keyword">const</span> <span class="code-variable">brandSurface</span> = CdrColorSurface.CdrColorSurfaceBrandSubtle;
+<span class="code-keyword">const</span> <span class="code-variable">neutralTrace</span> = CdrColorSurface.CdrColorSurfaceNeutralTrace;
 
 <span class="code-comment">// Benefits:</span>
 <span class="code-comment">// • Semantic organization</span>
@@ -186,17 +186,14 @@ export const SemanticImports: Story = {
             <pre><span class="code-keyword">import</span> { CdrColorSurface } <span class="code-keyword">from</span> <span class="code-string">'@rei/cdr-tokens'</span>;
 
 <span class="code-comment">// Access semantic surface colors</span>
-<span class="code-keyword">const</span> <span class="code-variable">brandSurface</span> = CdrColorSurface.brand;
-<span class="code-variable">membershipSurface</span> = CdrColorSurface.membership;
-<span class="code-variable">saleSurface</span> = CdrColorSurface.sale;
-<span class="code-variable">naturalSurface</span> = CdrColorSurface.natural;
-<span class="code-variable">neutralSurface</span> = CdrColorSurface.neutral;
+<span class="code-keyword">const</span> <span class="code-variable">brandSurface</span> = CdrColorSurface.CdrColorSurfaceBrandSubtle;
+<span class="code-variable">membershipSurface</span> = CdrColorSurface.CdrColorSurfaceMembership;
+<span class="code-variable">saleSurface</span> = CdrColorSurface.CdrColorSurfaceSale;
+<span class="code-variable">naturalSurface</span> = CdrColorSurface.CdrColorSurfaceNatural;
 
-<span class="code-comment">// Access variants</span>
-<span class="code-keyword">const</span> <span class="code-variable">brandSubtle</span> = CdrColorSurface.brand.subtle;
-<span class="code-variable">neutralIntense</span> = CdrColorSurface.neutral.intense;
-<span class="code-variable">neutralSubtle</span> = CdrColorSurface.neutral.subtle;
-<span class="code-variable">neutralTrace</span> = CdrColorSurface.neutral.trace;</pre>
+<span class="code-comment">// Access neutral variants</span>
+<span class="code-keyword">const</span> <span class="code-variable">neutralSubtle</span> = CdrColorSurface.CdrColorSurfaceNeutralSubtle;
+<span class="code-variable">neutralTrace</span> = CdrColorSurface.CdrColorSurfaceNeutralTrace;</pre>
           </div>
         </div>
 
@@ -207,16 +204,15 @@ export const SemanticImports: Story = {
           <div class="code-content">
             <pre><span class="code-keyword">import</span> { CdrColorAction } <span class="code-keyword">from</span> <span class="code-string">'@rei/cdr-tokens'</span>;
 
-<span class="code-comment">// Access platform-specific values</span>
-<span class="code-keyword">const</span> <span class="code-variable">actionColor</span> = CdrColorAction.surface.sale;
-<span class="code-keyword">const</span> <span class="code-variable">iosColor</span> = actionColor.$extensions.cedar.ios.light;
-<span class="code-keyword">const</span> <span class="code-variable">webColor</span> = actionColor.$extensions.cedar.web.light;
-<span class="code-keyword">const</span> <span class="code-variable">androidColor</span> = actionColor.$extensions.cedar.android.light;
+<span class="code-comment">// Platform values are resolved at build time per output target</span>
+<span class="code-keyword">const</span> <span class="code-variable">actionColor</span> = CdrColorAction.CdrColorActionSurfaceSaleFaint;
 
-<span class="code-comment">// Access resolved hex values</span>
-<span class="code-keyword">const</span> <span class="code-variable">iosHex</span> = actionColor.$extensions.cedar.resolved.ios.light;
-<span class="code-keyword">const</span> <span class="code-variable">webHex</span> = actionColor.$extensions.cedar.resolved.web.light;
-<span class="code-keyword">const</span> <span class="code-variable">androidHex</span> = actionColor.$extensions.cedar.resolved.android.light;</pre>
+<span class="code-comment">// Web: dist/rei-dot-com outputs (OKLCH + hex fallback)</span>
+<span class="code-comment">// iOS: dist/ios outputs (XCAssets, Swift constants)</span>
+<span class="code-comment">// Android: dist/android outputs (XML resources)</span>
+
+<span class="code-comment">// Same token name, platform-appropriate value —</span>
+<span class="code-comment">// divergence happens in the build pipeline, not in app code</span></pre>
           </div>
         </div>
 
@@ -228,16 +224,16 @@ export const SemanticImports: Story = {
             <pre><span class="code-keyword">import</span> { CdrColorFeedback } <span class="code-keyword">from</span> <span class="code-string">'@rei/cdr-tokens'</span>;
 
 <span class="code-comment">// Full type safety with IntelliSense</span>
-<span class="code-keyword">const</span> <span class="code-variable">errorSurface</span>: <span class="code-keyword">string</span> = CdrColorFeedback.surface.error;
-<span class="code-keyword">const</span> <span class="code-variable">errorBorder</span>: <span class="code-keyword">string</span> = CdrColorFeedback.border.error;
-<span class="code-keyword">const</span> <span class="code-variable">errorText</span>: <span class="code-keyword">string</span> = CdrColorFeedback.text.error;
+<span class="code-keyword">const</span> <span class="code-variable">errorSurface</span>: <span class="code-keyword">string</span> = CdrColorFeedback.CdrColorFeedbackSurfaceErrorFaint;
+<span class="code-keyword">const</span> <span class="code-variable">errorBorder</span>: <span class="code-keyword">string</span> = CdrColorFeedback.CdrColorFeedbackBorderErrorFaint;
+<span class="code-keyword">const</span> <span class="code-variable">errorText</span>: <span class="code-keyword">string</span> = CdrColorFeedback.CdrColorFeedbackTextError;
 
 <span class="code-comment">// TypeScript prevents invalid access</span>
-<span class="code-comment">// CdrColorFeedback.surface.invalid ❌ Type error</span>
-<span class="code-comment">// CdrColorFeedback.surface.error ✅ Valid access</span>
+<span class="code-comment">// CdrColorFeedback.CdrColorFeedbackSurfaceInvalid ❌ Type error</span>
+<span class="code-comment">// CdrColorFeedback.CdrColorFeedbackSurfaceErrorFaint ✅ Valid access</span>
 
-<span class="code-comment">// Autocomplete shows available options:</span>
-<span class="code-comment">// CdrColorFeedback.surface. → error, info, natural, success, warning</span></pre>
+<span class="code-comment">// Autocomplete on CdrColorFeedback. lists every token:</span>
+<span class="code-comment">// → CdrColorFeedbackSurface{Error,Info,Natural,Neutral,Success,Warning}…</span></pre>
           </div>
         </div>
 
@@ -256,8 +252,9 @@ export const SemanticImports: Story = {
 <span class="code-comment">// Tree-shaking friendly - only import what you need</span>
 <span class="code-comment">// Bundle size optimized</span>
 
-<span class="code-comment">// Each family has consistent structure:</span>
-<span class="code-comment">// CdrColorFamily.surface|border|text|icon.intent.variant</span></pre>
+<span class="code-comment">// Each family uses consistent flat naming:</span>
+<span class="code-comment">// CdrColor{Family}{Category}{Intent}{Variant}</span>
+<span class="code-comment">// e.g. CdrColorFeedbackSurfaceErrorFaint</span></pre>
           </div>
         </div>
 
@@ -270,25 +267,25 @@ export const SemanticImports: Story = {
 
 <span class="code-comment">// Button component with semantic tokens</span>
 <span class="code-keyword">const</span> <span class="code-variable">Button</span> = {
-  <span class="code-variable">background</span>: CdrColorAction.surface.brand,
-  <span class="code-variable">color</span>: CdrColorAction.text.brand,
-  <span class="code-variable">border</span>: CdrColorAction.border.brand,
+  <span class="code-variable">background</span>: CdrColorAction.CdrColorActionSurfaceBrandFaint,
+  <span class="code-variable">color</span>: CdrColorAction.CdrColorActionTextBrand,
+  <span class="code-variable">border</span>: CdrColorAction.CdrColorActionBorderBrand,
 
   <span class="code-variable">hover</span>: {
-    <span class="code-variable">background</span>: CdrColorAction.surface.brand.subtle,
+    <span class="code-variable">background</span>: CdrColorAction.CdrColorActionSurfaceNeutralSubtle,
   },
 
   <span class="code-variable">error</span>: {
-    <span class="code-variable">background</span>: CdrColorFeedback.surface.error,
-    <span class="code-variable">color</span>: CdrColorFeedback.text.error,
-    <span class="code-variable">border</span>: CdrColorFeedback.border.error,
+    <span class="code-variable">background</span>: CdrColorFeedback.CdrColorFeedbackSurfaceErrorFaint,
+    <span class="code-variable">color</span>: CdrColorFeedback.CdrColorFeedbackTextError,
+    <span class="code-variable">border</span>: CdrColorFeedback.CdrColorFeedbackBorderErrorFaint,
   }
 };
 
 <span class="code-comment">// Card component with surface hierarchy</span>
 <span class="code-keyword">const</span> <span class="code-variable">Card</span> = {
-  <span class="code-variable">background</span>: CdrColorSurface.neutral.trace,
-  <span class="code-variable">border</span>: CdrColorSurface.neutral.subtle,
+  <span class="code-variable">background</span>: CdrColorSurface.CdrColorSurfaceNeutralTrace,
+  <span class="code-variable">border</span>: CdrColorSurface.CdrColorSurfaceNeutralSubtle,
   <span class="code-variable">shadow</span>: <span class="code-string">'0 2px 4px rgba(0,0,0,0.1)'</span>,
 };</pre>
           </div>

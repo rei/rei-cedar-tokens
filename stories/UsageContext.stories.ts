@@ -162,8 +162,8 @@ export const UsageContext: Story = {
     // For now, using mock data based on the token descriptions
     const usageContexts = [
       {
-        token: 'CdrColorSurface.brand',
-        value: CdrColorSurface.brand,
+        token: 'CdrColorSurfaceBrandSubtle',
+        value: CdrColorSurface.CdrColorSurfaceBrandSubtle,
         contexts: [
           'Primary brand sections',
           'Marketing elements',
@@ -179,8 +179,8 @@ export const UsageContext: Story = {
         figmaPath: 'surface/brand',
       },
       {
-        token: 'CdrColorAction.surface.brand',
-        value: CdrColorAction.surface.brand,
+        token: 'CdrColorActionSurfaceBrandFaint',
+        value: CdrColorAction.CdrColorActionSurfaceBrandFaint,
         contexts: [
           'Primary buttons',
           'Call-to-action elements',
@@ -191,8 +191,8 @@ export const UsageContext: Story = {
         figmaPath: 'action/surface/brand',
       },
       {
-        token: 'CdrColorFeedback.surface.error',
-        value: CdrColorFeedback.surface.error,
+        token: 'CdrColorFeedbackSurfaceErrorFaint',
+        value: CdrColorFeedback.CdrColorFeedbackSurfaceErrorFaint,
         contexts: [
           'Error states',
           'Form validation messages',
@@ -203,15 +203,15 @@ export const UsageContext: Story = {
         figmaPath: 'feedback/surface/error',
       },
       {
-        token: 'CdrColorSurface.neutral.trace',
-        value: CdrColorSurface.neutral.trace,
+        token: 'CdrColorSurfaceNeutralTrace',
+        value: CdrColorSurface.CdrColorSurfaceNeutralTrace,
         contexts: ['Card backgrounds', 'Page backgrounds', 'Neutral sections', 'Content areas'],
         avoid: ['Primary actions', 'Brand elements', 'Error states', 'Emphasis areas'],
         figmaPath: 'surface/neutral/trace',
       },
       {
-        token: 'CdrColorSurface.sale',
-        value: CdrColorSurface.sale,
+        token: 'CdrColorSurfaceSale',
+        value: CdrColorSurface.CdrColorSurfaceSale,
         contexts: ['Sale sections', 'Promotional content', 'Discount indicators', 'Special offers'],
         avoid: ['Primary navigation', 'Brand elements', 'Form elements', 'Neutral UI'],
         figmaPath: 'surface/sale',
@@ -229,14 +229,14 @@ export const UsageContext: Story = {
             <code>${ctx.figmaPath}</code>
           </div>
         </div>
-        
+
         <div class="context-section">
           <h4 class="context-section-title">✓ Use for:</h4>
           <ul class="context-list use">
             ${ctx.contexts.map((c) => `<li>${c}</li>`).join('')}
           </ul>
         </div>
-        
+
         <div class="context-section">
           <h4 class="context-section-title">✗ Avoid:</h4>
           <ul class="context-list avoid">
@@ -251,7 +251,7 @@ export const UsageContext: Story = {
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
         ${sectionHeader('Usage Context (from Figma Metadata)', usageContexts.length)}
-        
+
         <div class="metadata-note">
           <h4>📋 Figma Metadata Integration</h4>
           <p>

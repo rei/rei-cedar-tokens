@@ -163,7 +163,7 @@ export const FigmaIntegration: Story = {
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
         ${sectionHeader('Figma → Code Pipeline')}
-        
+
         <div class="workflow-diagram">
           <div class="workflow-step">
             <div class="workflow-icon">🎨</div>
@@ -262,8 +262,8 @@ Notes: Use for high-impact brand areas</pre>
           <div class="pipeline-code">
             <pre>import { CdrColorSurface } from '@rei/cdr-tokens';
 
-const brandSurface = CdrColorSurface.brand;
-const subtleBrand = CdrColorSurface.brand.subtle;</pre>
+const brandSurface = CdrColorSurface.CdrColorSurfaceBrandSubtle;
+const neutralTrace = CdrColorSurface.CdrColorSurfaceNeutralTrace;</pre>
           </div>
         </div>
 

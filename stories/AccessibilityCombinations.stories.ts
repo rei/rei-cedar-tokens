@@ -121,45 +121,53 @@ export const AccessibilityCombinations: Story = {
   name: 'Accessibility Combinations',
   render: () => {
     // Parse text tokens with accessibility metadata
-    const textTokens = Object.entries(CdrColorText).filter(
-      ([key]) => key.includes('neutral') || key.includes('brand') || key.includes('sale'),
-    );
+    const textTokens = Object.entries(CdrColorText).filter(([key]) =>
+      ['CdrColorTextPrimary', 'CdrColorTextBrand', 'CdrColorTextSale'].includes(key),
+    ) as [string, string][];
 
     // Parse surface tokens
-    const surfaceTokens = Object.entries(CdrColorSurface);
+    const surfaceTokens = Object.entries(CdrColorSurface) as [string, string][];
 
     // Mock accessibility data based on token descriptions
     // In a real implementation, this would parse the actual metadata
     const getAccessibilityInfo = (tokenName: string) => {
       const mockData: Record<string, any> = {
-        neutral: {
-          validSurfaces: ['neutral.trace', 'neutral.subtle', 'natural'],
+        Primary: {
+          validSurfaces: [
+            'CdrColorSurfaceNeutralTrace',
+            'CdrColorSurfaceNeutralSubtle',
+            'CdrColorSurfaceNatural',
+          ],
           contrastRatios: {
-            'neutral.trace': '13.4:1 (AAA)',
-            'neutral.subtle': '8.4:1 (AA)',
-            natural: '5.2:1 (AA)',
+            CdrColorSurfaceNeutralTrace: '13.4:1 (AAA)',
+            CdrColorSurfaceNeutralSubtle: '8.4:1 (AA)',
+            CdrColorSurfaceNatural: '5.2:1 (AA)',
           },
-          avoidSurfaces: ['brand', 'sale'],
+          avoidSurfaces: ['CdrColorSurfaceBrandSubtle', 'CdrColorSurfaceSale'],
         },
-        brand: {
-          validSurfaces: ['neutral.trace', 'neutral.subtle'],
+        Brand: {
+          validSurfaces: ['CdrColorSurfaceNeutralTrace', 'CdrColorSurfaceNeutralSubtle'],
           contrastRatios: {
-            'neutral.trace': '12.1:1 (AAA)',
-            'neutral.subtle': '7.8:1 (AA)',
+            CdrColorSurfaceNeutralTrace: '12.1:1 (AAA)',
+            CdrColorSurfaceNeutralSubtle: '7.8:1 (AA)',
           },
-          avoidSurfaces: ['neutral', 'natural'],
+          avoidSurfaces: ['CdrColorSurfaceBrandSubtle', 'CdrColorSurfaceNatural'],
         },
-        sale: {
-          validSurfaces: ['neutral.trace'],
+        Sale: {
+          validSurfaces: ['CdrColorSurfaceNeutralTrace'],
           contrastRatios: {
-            'neutral.trace': '6.2:1 (AA)',
+            CdrColorSurfaceNeutralTrace: '6.2:1 (AA)',
           },
-          avoidSurfaces: ['neutral', 'brand', 'natural'],
+          avoidSurfaces: [
+            'CdrColorSurfaceNeutralSubtle',
+            'CdrColorSurfaceBrandSubtle',
+            'CdrColorSurfaceNatural',
+          ],
         },
       };
 
-      // Extract the color name from the token key
-      const colorName = tokenName.split('.').pop() || '';
+      // Extract the intent name from the flat token key (e.g. CdrColorTextBrand → Brand)
+      const colorName = tokenName.replace(/^CdrColorText/, '');
       return (
         mockData[colorName] || {
           validSurfaces: [],

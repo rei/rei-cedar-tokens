@@ -181,31 +181,31 @@ export const ColorBlindnessSimulator: Story = {
   render: () => {
     const testCombinations = [
       {
-        text: 'CdrColorText.neutral',
-        textValue: CdrColorText.neutral,
-        surface: 'CdrColorSurface.neutral.trace',
-        surfaceValue: CdrColorSurface.neutral.trace,
+        text: 'CdrColorTextPrimary',
+        textValue: CdrColorText.CdrColorTextPrimary,
+        surface: 'CdrColorSurfaceNeutralTrace',
+        surfaceValue: CdrColorSurface.CdrColorSurfaceNeutralTrace,
         contrast: '13.4:1 AAA',
       },
       {
-        text: 'CdrColorText.brand',
-        textValue: CdrColorText.brand,
-        surface: 'CdrColorSurface.brand',
-        surfaceValue: CdrColorSurface.brand,
+        text: 'CdrColorTextBrand',
+        textValue: CdrColorText.CdrColorTextBrand,
+        surface: 'CdrColorSurfaceNeutralTrace',
+        surfaceValue: CdrColorSurface.CdrColorSurfaceNeutralTrace,
         contrast: '12.1:1 AAA',
       },
       {
-        text: 'CdrColorFeedback.text.error',
-        textValue: CdrColorFeedback.text.error,
-        surface: 'CdrColorFeedback.surface.error',
-        surfaceValue: CdrColorFeedback.surface.error,
+        text: 'CdrColorFeedbackTextError',
+        textValue: CdrColorFeedback.CdrColorFeedbackTextError,
+        surface: 'CdrColorFeedbackSurfaceErrorFaint',
+        surfaceValue: CdrColorFeedback.CdrColorFeedbackSurfaceErrorFaint,
         contrast: '8.2:1 AA',
       },
       {
-        text: 'CdrColorText.sale',
-        textValue: CdrColorText.sale,
-        surface: 'CdrColorSurface.sale',
-        surfaceValue: CdrColorSurface.sale,
+        text: 'CdrColorTextSale',
+        textValue: CdrColorText.CdrColorTextSale,
+        surface: 'CdrColorSurfaceNeutralTrace',
+        surfaceValue: CdrColorSurface.CdrColorSurfaceNeutralTrace,
         contrast: '6.1:1 AA',
       },
     ];
@@ -214,10 +214,10 @@ export const ColorBlindnessSimulator: Story = {
       <div class="sb-section">
         ${sectionHeader('Color Blindness Simulator')}
         <p style="margin-bottom: 32px; color: var(--cedar-warm-700); line-height: 1.5;">
-          See how color combinations appear with different vision types. 
+          See how color combinations appear with different vision types.
           OKLCH's perceptual uniformity helps maintain better contrast ratios across all vision types.
         </p>
-        
+
         <div class="vision-selector">
           <button class="vision-btn active" data-vision="normal">Normal Vision</button>
           <button class="vision-btn" data-vision="protanopia">Protanopia (Red-Blind)</button>
@@ -271,12 +271,12 @@ export const ColorBlindnessSimulator: Story = {
           <h3 class="oklch-benefit-title">OKLCH's Perceptual Uniformity Helps Accessibility</h3>
           <div class="oklch-benefit-content">
             <p>
-              Because OKLCH is designed around human perception, color combinations that work 
-              for normal vision tend to maintain better contrast ratios for different vision 
+              Because OKLCH is designed around human perception, color combinations that work
+              for normal vision tend to maintain better contrast ratios for different vision
               types compared to traditional color spaces.
             </p>
             <p>
-              The semantic token system's accessibility metadata helps ensure proper contrast 
+              The semantic token system's accessibility metadata helps ensure proper contrast
               ratios across all vision types. This is especially important for:
             </p>
             <ul style="margin: 0; padding-left: 20px; color: var(--cedar-green-800);">
@@ -286,7 +286,7 @@ export const ColorBlindnessSimulator: Story = {
               <li>Brand and marketing elements</li>
             </ul>
             <p>
-              The wide gamut capability of OKLCH also means more colors are available that 
+              The wide gamut capability of OKLCH also means more colors are available that
               remain distinguishable for users with color vision deficiencies.
             </p>
           </div>
@@ -298,22 +298,22 @@ export const ColorBlindnessSimulator: Story = {
       // Vision selector functionality
       document.addEventListener('DOMContentLoaded', function() {
         const visionButtons = document.querySelectorAll('.vision-btn');
-        
+
         visionButtons.forEach(btn => {
           btn.addEventListener('click', function() {
             // Remove active class from all buttons
             visionButtons.forEach(b => b.classList.remove('active'));
             // Add active class to clicked button
             this.classList.add('active');
-            
+
             const visionType = this.dataset.vision;
-            
+
             // Apply vision filter to all combos
             const combos = document.querySelectorAll('.text-surface-combo');
             combos.forEach(combo => {
               // Remove all simulation classes
               combo.classList.remove('protanopia-sim', 'deuteranopia-sim', 'tritanopia-sim');
-              
+
               // Add appropriate simulation class
               if (visionType === 'protanopia') {
                 combo.classList.add('protanopia-sim');

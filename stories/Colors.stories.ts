@@ -23,6 +23,13 @@ type Story = StoryObj;
 
 type TokenEntry = [string, string];
 
+// Compiled token modules export flat objects keyed `CdrColor<Family><Intent><Variant>`.
+// Filter by key prefix to group tokens into semantic Family > Intent buckets.
+const semanticEntries = (obj: Record<string, string>, prefix: string): TokenEntry[] =>
+  Object.entries(obj).filter(
+    ([k, v]) => k.startsWith(prefix) && typeof v === 'string',
+  ) as TokenEntry[];
+
 // ─── Shared chrome ────────────────────────────────────────────────────────────
 
 const chrome = `
@@ -666,9 +673,7 @@ export const IconColors: Story = {
 export const SurfaceBrand: Story = {
   name: 'Surface / Brand',
   render: () => {
-    const entries = Object.entries(CdrColorSurface.brand).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSurface, 'CdrColorSurfaceBrand');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -698,9 +703,7 @@ export const SurfaceBrand: Story = {
 export const SurfaceMembership: Story = {
   name: 'Surface / Membership',
   render: () => {
-    const entries = Object.entries(CdrColorSurface.membership).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSurface, 'CdrColorSurfaceMembership');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -730,9 +733,7 @@ export const SurfaceMembership: Story = {
 export const SurfaceSale: Story = {
   name: 'Surface / Sale',
   render: () => {
-    const entries = Object.entries(CdrColorSurface.sale).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSurface, 'CdrColorSurfaceSale');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -762,9 +763,7 @@ export const SurfaceSale: Story = {
 export const SurfaceNatural: Story = {
   name: 'Surface / Natural',
   render: () => {
-    const entries = Object.entries(CdrColorSurface.natural).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSurface, 'CdrColorSurfaceNatural');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -794,9 +793,7 @@ export const SurfaceNatural: Story = {
 export const SurfaceNeutral: Story = {
   name: 'Surface / Neutral',
   render: () => {
-    const entries = Object.entries(CdrColorSurface.neutral).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSurface, 'CdrColorSurfaceNeutral');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -826,9 +823,7 @@ export const SurfaceNeutral: Story = {
 export const ActionNatural: Story = {
   name: 'Action / Natural',
   render: () => {
-    const entries = Object.entries(CdrColorAction.surface.neutral).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorAction, 'CdrColorActionSurfaceNeutral');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -858,9 +853,7 @@ export const ActionNatural: Story = {
 export const ActionBrand: Story = {
   name: 'Action / Brand',
   render: () => {
-    const entries = Object.entries(CdrColorAction.surface.brand).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorAction, 'CdrColorActionSurfaceBrand');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -890,9 +883,7 @@ export const ActionBrand: Story = {
 export const ActionSale: Story = {
   name: 'Action / Sale',
   render: () => {
-    const entries = Object.entries(CdrColorAction.surface.sale).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorAction, 'CdrColorActionSurfaceSale');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -922,9 +913,7 @@ export const ActionSale: Story = {
 export const ActionTrigger: Story = {
   name: 'Action / Trigger',
   render: () => {
-    const entries = Object.entries(CdrColorAction.border.trigger).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorAction, 'CdrColorActionBorderTrigger');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -954,9 +943,7 @@ export const ActionTrigger: Story = {
 export const FeedbackError: Story = {
   name: 'Feedback / Error',
   render: () => {
-    const entries = Object.entries(CdrColorFeedback.surface.error).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorFeedback, 'CdrColorFeedbackSurfaceError');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -986,9 +973,7 @@ export const FeedbackError: Story = {
 export const FeedbackSuccess: Story = {
   name: 'Feedback / Success',
   render: () => {
-    const entries = Object.entries(CdrColorFeedback.surface.success).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorFeedback, 'CdrColorFeedbackSurfaceSuccess');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1018,9 +1003,7 @@ export const FeedbackSuccess: Story = {
 export const FeedbackWarning: Story = {
   name: 'Feedback / Warning',
   render: () => {
-    const entries = Object.entries(CdrColorFeedback.surface.warning).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorFeedback, 'CdrColorFeedbackSurfaceWarning');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1050,9 +1033,7 @@ export const FeedbackWarning: Story = {
 export const FeedbackInfo: Story = {
   name: 'Feedback / Info',
   render: () => {
-    const entries = Object.entries(CdrColorFeedback.surface.info).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorFeedback, 'CdrColorFeedbackSurfaceInfo');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1082,9 +1063,7 @@ export const FeedbackInfo: Story = {
 export const FeedbackNatural: Story = {
   name: 'Feedback / Natural',
   render: () => {
-    const entries = Object.entries(CdrColorFeedback.surface.natural).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorFeedback, 'CdrColorFeedbackSurfaceNatural');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1114,9 +1093,7 @@ export const FeedbackNatural: Story = {
 export const ControlNatural: Story = {
   name: 'Control / Natural',
   render: () => {
-    const entries = Object.entries(CdrColorControl.surface.natural).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorControl, 'CdrColorControlSurfaceNatural');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1146,9 +1123,7 @@ export const ControlNatural: Story = {
 export const ControlNeutral: Story = {
   name: 'Control / Neutral',
   render: () => {
-    const entries = Object.entries(CdrColorControl.surface.neutral).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorControl, 'CdrColorControlSurfaceNeutral');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1178,9 +1153,7 @@ export const ControlNeutral: Story = {
 export const SelectionNatural: Story = {
   name: 'Selection / Natural',
   render: () => {
-    const entries = Object.entries(CdrColorSelection.surface.natural).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSelection, 'CdrColorSelectionSurfaceNatural');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1210,9 +1183,7 @@ export const SelectionNatural: Story = {
 export const SelectionNeutral: Story = {
   name: 'Selection / Neutral',
   render: () => {
-    const entries = Object.entries(CdrColorSelection.surface.neutral).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSelection, 'CdrColorSelectionSurfaceNeutral');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1242,9 +1213,7 @@ export const SelectionNeutral: Story = {
 export const SelectionTrigger: Story = {
   name: 'Selection / Trigger',
   render: () => {
-    const entries = Object.entries(CdrColorSelection.border.trigger).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorSelection, 'CdrColorSelectionBorderTrigger');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1274,9 +1243,7 @@ export const SelectionTrigger: Story = {
 export const GraphicSurface: Story = {
   name: 'Graphic / Surface',
   render: () => {
-    const entries = Object.entries(CdrColorGraphik.surface).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorGraphik, 'CdrColorGraphicSurface');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
@@ -1306,173 +1273,11 @@ export const GraphicSurface: Story = {
 export const GraphicBorder: Story = {
   name: 'Graphic / Border',
   render: () => {
-    const entries = Object.entries(CdrColorGraphik.border).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
+    const entries = semanticEntries(CdrColorGraphik, 'CdrColorGraphicBorder');
 
     return `${chrome}<div class="sb-page">
       <div class="semantic-family-section">
         <div class="family-header">Graphic Border</div>
-        <div class="intent-grid">
-          ${entries
-            .map(
-              ([key, val]) => `
-            <div class="intent-card">
-              <div class="intent-swatch" style="background: ${val}"></div>
-              <div class="intent-info">
-                <h4 class="intent-name">${key}</h4>
-                <code class="intent-code">${key}</code>
-                <div class="intent-value">${val}</div>
-              </div>
-            </div>
-          `,
-            )
-            .join('')}
-        </div>
-      </div>
-    </div>`;
-  },
-};
-
-/** Icon Family - Accent */
-export const IconAccent: Story = {
-  name: 'Icon / Accent',
-  render: () => {
-    const entries = Object.entries(CdrColorIcon.accent).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
-
-    return `${chrome}<div class="sb-page">
-      <div class="semantic-family-section">
-        <div class="family-header">Icon Accent</div>
-        <div class="intent-grid">
-          ${entries
-            .map(
-              ([key, val]) => `
-            <div class="intent-card">
-              <div class="intent-swatch" style="background: ${val}"></div>
-              <div class="intent-info">
-                <h4 class="intent-name">${key}</h4>
-                <code class="intent-code">${key}</code>
-                <div class="intent-value">${val}</div>
-              </div>
-            </div>
-          `,
-            )
-            .join('')}
-        </div>
-      </div>
-    </div>`;
-  },
-};
-
-/** Icon Family - Brand */
-export const IconBrand: Story = {
-  name: 'Icon / Brand',
-  render: () => {
-    const entries = Object.entries(CdrColorIcon.brand).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
-
-    return `${chrome}<div class="sb-page">
-      <div class="semantic-family-section">
-        <div class="family-header">Icon Brand</div>
-        <div class="intent-grid">
-          ${entries
-            .map(
-              ([key, val]) => `
-            <div class="intent-card">
-              <div class="intent-swatch" style="background: ${val}"></div>
-              <div class="intent-info">
-                <h4 class="intent-name">${key}</h4>
-                <code class="intent-code">${key}</code>
-                <div class="intent-value">${val}</div>
-              </div>
-            </div>
-          `,
-            )
-            .join('')}
-        </div>
-      </div>
-    </div>`;
-  },
-};
-
-/** Icon Family - Membership */
-export const IconMembership: Story = {
-  name: 'Icon / Membership',
-  render: () => {
-    const entries = Object.entries(CdrColorIcon.membership).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
-
-    return `${chrome}<div class="sb-page">
-      <div class="semantic-family-section">
-        <div class="family-header">Icon Membership</div>
-        <div class="intent-grid">
-          ${entries
-            .map(
-              ([key, val]) => `
-            <div class="intent-card">
-              <div class="intent-swatch" style="background: ${val}"></div>
-              <div class="intent-info">
-                <h4 class="intent-name">${key}</h4>
-                <code class="intent-code">${key}</code>
-                <div class="intent-value">${val}</div>
-              </div>
-            </div>
-          `,
-            )
-            .join('')}
-        </div>
-      </div>
-    </div>`;
-  },
-};
-
-/** Icon Family - Natural */
-export const IconNatural: Story = {
-  name: 'Icon / Natural',
-  render: () => {
-    const entries = Object.entries(CdrColorIcon.natural).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
-
-    return `${chrome}<div class="sb-page">
-      <div class="semantic-family-section">
-        <div class="family-header">Icon Natural</div>
-        <div class="intent-grid">
-          ${entries
-            .map(
-              ([key, val]) => `
-            <div class="intent-card">
-              <div class="intent-swatch" style="background: ${val}"></div>
-              <div class="intent-info">
-                <h4 class="intent-name">${key}</h4>
-                <code class="intent-code">${key}</code>
-                <div class="intent-value">${val}</div>
-              </div>
-            </div>
-          `,
-            )
-            .join('')}
-        </div>
-      </div>
-    </div>`;
-  },
-};
-
-/** Icon Family - Sale */
-export const IconSale: Story = {
-  name: 'Icon / Sale',
-  render: () => {
-    const entries = Object.entries(CdrColorIcon.sale).filter(
-      ([, v]) => typeof v === 'string',
-    ) as TokenEntry[];
-
-    return `${chrome}<div class="sb-page">
-      <div class="semantic-family-section">
-        <div class="family-header">Icon Sale</div>
         <div class="intent-grid">
           ${entries
             .map(

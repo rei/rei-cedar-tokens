@@ -143,11 +143,11 @@ export const TokenMigration: Story = {
     const migrations = [
       {
         legacy: '--cdr-color-background-brand-spruce',
-        new: '--cdr-surface-brand',
+        new: '--cdr-surface-brand-subtle',
         category: 'Surface → Brand',
         status: 'direct',
         oldValue: '#143528',
-        newValue: CdrColorSurface.brand,
+        newValue: CdrColorSurface.CdrColorSurfaceBrandSubtle,
       },
       {
         legacy: '--cdr-color-background-sale',
@@ -155,7 +155,7 @@ export const TokenMigration: Story = {
         category: 'Surface → Sale',
         status: 'direct',
         oldValue: '#d44703',
-        newValue: CdrColorSurface.sale,
+        newValue: CdrColorSurface.CdrColorSurfaceSale,
       },
       {
         legacy: '--cdr-color-background-membership',
@@ -163,15 +163,15 @@ export const TokenMigration: Story = {
         category: 'Surface → Membership',
         status: 'direct',
         oldValue: '#ffdb22',
-        newValue: CdrColorSurface.membership,
+        newValue: CdrColorSurface.CdrColorSurfaceMembership,
       },
       {
         legacy: '--cdr-color-text-primary-on-dark',
-        new: '--cdr-text-neutral-bold',
+        new: '--cdr-text-emphasis',
         category: 'Text → Neutral',
         status: 'contextual',
         oldValue: '#292929',
-        newValue: CdrColorText.neutral.bold,
+        newValue: CdrColorText.CdrColorTextEmphasis,
       },
       {
         legacy: '--cdr-color-text-sale',
@@ -179,7 +179,7 @@ export const TokenMigration: Story = {
         category: 'Text → Sale',
         status: 'direct',
         oldValue: '#d44703',
-        newValue: CdrColorText.sale,
+        newValue: CdrColorText.CdrColorTextSale,
       },
       {
         legacy: '--cdr-color-border-brand',
@@ -187,7 +187,7 @@ export const TokenMigration: Story = {
         category: 'Border → Action',
         status: 'direct',
         oldValue: '#143528',
-        newValue: CdrColorAction.border.brand,
+        newValue: CdrColorAction.CdrColorActionBorderBrand,
       },
       {
         legacy: '--cdr-color-border-error',
@@ -195,7 +195,7 @@ export const TokenMigration: Story = {
         category: 'Border → Feedback',
         status: 'direct',
         oldValue: '#b3292d',
-        newValue: CdrColorFeedback.border.error,
+        newValue: CdrColorFeedback.CdrColorFeedbackBorderErrorFaint,
       },
     ];
 
@@ -226,7 +226,7 @@ export const TokenMigration: Story = {
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
         ${sectionHeader('Legacy → Semantic Token Migration', migrations.length)}
-        
+
         <div style="background: var(--cedar-blue-50); padding: 20px; border-radius: 8px; border-left: 4px solid var(--cedar-blue-500); margin-bottom: 24px;">
           <h3 style="font-family: Stuart, 'Stuart fallback', Georgia, serif; margin: 0 0 12px 0; color: var(--cedar-blue-900);">
             🚀 New Semantic Token Structure
