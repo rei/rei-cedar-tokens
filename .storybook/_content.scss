@@ -425,3 +425,907 @@ $cdr-color-background-message-warning-01: #fefcf1 !default;
     list-style-type: none;
   }
 }
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SEMANTIC DOCUMENTATION STYLES
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ── Semantic Intent Organization (Family > Intent) ────────────────────────────
+.semantic-family-section {
+  margin-bottom: 3rem;
+
+  .family-header {
+    @include cdr-text-heading-sans-600;
+
+    font-size: 1.8rem;
+    color: $cdr-color-text-primary;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $cdr-color-border-primary;
+  }
+
+  .intent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .intent-card {
+    background: $cdr-color-background-primary;
+    border: 1px solid $cdr-color-border-primary;
+    border-radius: $cdr-radius-soft;
+    overflow: hidden;
+
+    .intent-swatch {
+      height: 80px;
+      position: relative;
+    }
+
+    .intent-info {
+      padding: 1rem;
+
+      .intent-name {
+        @include cdr-text-heading-sans-500;
+
+        font-size: 0.9rem;
+        color: $cdr-color-text-primary;
+        margin: 0 0 0.5rem;
+      }
+
+      .intent-code {
+        font-family: $cdr-font-family-mono-brand-font;
+        font-size: 0.75rem;
+        color: $cdr-color-text-secondary;
+        background: $cdr-color-background-secondary;
+        padding: 0.2rem 0.4rem;
+        border-radius: $cdr-radius-soft;
+        display: inline-block;
+      }
+
+      .intent-value {
+        @include cdr-text-utility-sans-200;
+
+        color: $cdr-color-text-secondary;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+// ── Accessibility Combinations ────────────────────────────────────────────────
+.accessibility-combinations {
+  .combination-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+
+    th {
+      @include cdr-text-utility-sans-strong-200;
+
+      padding: 1rem;
+      text-align: left;
+      background: $cdr-color-background-table-header;
+      border-bottom: 2px solid $cdr-color-border-primary;
+    }
+
+    td {
+      @include cdr-text-body-300;
+
+      padding: 1rem;
+      border-bottom: 1px solid $cdr-color-border-table-row;
+      vertical-align: top;
+    }
+
+    .text-preview {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      .text-swatch {
+        width: 2rem;
+        height: 2rem;
+        border-radius: $cdr-radius-soft;
+        border: 1px solid $cdr-color-border-primary;
+      }
+    }
+
+    .surface-previews {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .surface-preview {
+        padding: 0.5rem;
+        border-radius: $cdr-radius-soft;
+        font-family: $cdr-font-family-graphik;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+
+    .contrast-ratios {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .contrast-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .surface-badge {
+          font-family: $cdr-font-family-mono-brand-font;
+          font-size: 0.75rem;
+          background: $cdr-color-background-secondary;
+          padding: 0.2rem 0.4rem;
+          border-radius: $cdr-radius-soft;
+        }
+
+        .contrast-value {
+          font-family: $cdr-font-family-mono-brand-font;
+          font-size: 0.75rem;
+          color: $cdr-color-text-secondary;
+        }
+      }
+    }
+
+    .avoid-surfaces {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .avoid-badge {
+        font-family: $cdr-font-family-mono-brand-font;
+        font-size: 0.75rem;
+        background: #f8d7da;
+        color: #721c24;
+        padding: 0.2rem 0.4rem;
+        border-radius: $cdr-radius-soft;
+      }
+    }
+  }
+}
+
+// ── Migration Guide ────────────────────────────────────────────────────────────
+.migration-guide {
+  .migration-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+
+    th {
+      @include cdr-text-utility-sans-strong-200;
+
+      padding: 1rem;
+      text-align: left;
+      background: $cdr-color-background-table-header;
+      border-bottom: 2px solid $cdr-color-border-primary;
+    }
+
+    td {
+      @include cdr-text-body-300;
+
+      padding: 1rem;
+      border-bottom: 1px solid $cdr-color-border-table-row;
+      vertical-align: top;
+    }
+
+    .token-code {
+      font-family: $cdr-font-family-mono-brand-font;
+      font-size: 0.75rem;
+      background: $cdr-color-background-secondary;
+      padding: 0.2rem 0.4rem;
+      border-radius: $cdr-radius-soft;
+      display: inline-block;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &.status-direct {
+        background: #d4edda;
+        color: #155724;
+      }
+      &.status-contextual {
+        background: #fff3cd;
+        color: #856404;
+      }
+      &.status-complex {
+        background: #f8d7da;
+        color: #721c24;
+      }
+    }
+
+    .swatch-preview {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: $cdr-radius-soft;
+      border: 1px solid $cdr-color-border-primary;
+    }
+  }
+
+  .migration-timeline {
+    background: $cdr-color-background-secondary;
+    border-radius: $cdr-radius-soft;
+    padding: 1.5rem;
+    margin-top: 2rem;
+
+    .timeline-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1.1rem;
+      color: $cdr-color-text-primary;
+      margin: 0 0 1rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &:before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $cdr-color-text-link-rest;
+        font-weight: bold;
+      }
+
+      strong {
+        color: $cdr-color-text-primary;
+      }
+    }
+  }
+}
+
+// ── Semantic Imports ───────────────────────────────────────────────────────────
+.semantic-imports {
+  .comparison-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    .comparison-side {
+      background: $cdr-color-background-primary;
+      border: 1px solid $cdr-color-border-primary;
+      border-radius: $cdr-radius-soft;
+      overflow: hidden;
+
+      .comparison-header {
+        padding: 1rem 1.5rem;
+        font-family: $cdr-font-family-graphik;
+        font-weight: 600;
+        font-size: 0.875rem;
+        color: white;
+        text-align: center;
+
+        &.old {
+          background: #dc3545;
+        }
+        &.new {
+          background: #28a745;
+        }
+      }
+
+      .comparison-content {
+        padding: 1.5rem;
+        font-family: $cdr-font-family-mono-brand-font;
+        font-size: 0.75rem;
+        line-height: 1.4;
+
+        .code-comment {
+          color: $cdr-color-text-secondary;
+          font-style: italic;
+        }
+        .code-keyword {
+          color: #0066cc;
+          font-weight: 600;
+        }
+        .code-string {
+          color: #22863a;
+        }
+        .code-variable {
+          color: #6f42c1;
+        }
+        .code-highlight {
+          background: #fff3cd;
+          padding: 1px 3px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+
+  .code-example {
+    background: $cdr-color-background-secondary;
+    border: 1px solid $cdr-color-border-primary;
+    border-radius: $cdr-radius-soft;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+
+    .code-header {
+      background: $cdr-color-background-table-header;
+      padding: 0.75rem 1.5rem;
+      border-bottom: 1px solid $cdr-color-border-primary;
+      font-family: $cdr-font-family-graphik;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: $cdr-color-text-primary;
+    }
+
+    .code-content {
+      padding: 1.5rem;
+      font-family: $cdr-font-family-mono-brand-font;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      overflow-x: auto;
+
+      .code-comment {
+        color: $cdr-color-text-secondary;
+        font-style: italic;
+      }
+      .code-keyword {
+        color: #0066cc;
+        font-weight: 600;
+      }
+      .code-string {
+        color: #22863a;
+      }
+      .code-variable {
+        color: #6f42c1;
+      }
+      .code-highlight {
+        background: #fff3cd;
+        padding: 1px 3px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+// ── Release Notes ─────────────────────────────────────────────────────────────
+.release-notes {
+  .release-version {
+    font-family: $cdr-font-family-mono-brand-font;
+    font-size: 0.875rem;
+    color: #0066cc;
+    background: #e6f3ff;
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    margin-left: auto;
+  }
+
+  .release-section {
+    margin-bottom: 2rem;
+
+    .release-section-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1.1rem;
+      color: $cdr-color-text-primary;
+      margin: 0 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .release-section-icon {
+        font-size: 1.25rem;
+      }
+    }
+
+    .release-list {
+      margin: 0;
+      padding-left: 1.25rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+        color: $cdr-color-text-primary;
+
+        code {
+          font-family: $cdr-font-family-mono-brand-font;
+          font-size: 0.75rem;
+          background: $cdr-color-background-secondary;
+          padding: 0.2rem 0.4rem;
+          border-radius: $cdr-radius-soft;
+        }
+      }
+    }
+  }
+
+  .highlight-box {
+    background: #e6f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: $cdr-radius-soft;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    &.warning {
+      background: #fff3cd;
+      border-color: #ffeaa7;
+    }
+
+    &.danger {
+      background: #f8d7da;
+      border-color: #f5c6cb;
+    }
+
+    .highlight-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1rem;
+      margin: 0 0 0.75rem;
+
+      &:not(.warning):not(.danger) {
+        color: #0066cc;
+      }
+      &.warning {
+        color: #856404;
+      }
+      &.danger {
+        color: #721c24;
+      }
+    }
+
+    .highlight-content {
+      line-height: 1.5;
+
+      &:not(.warning):not(.danger) {
+        color: #004085;
+      }
+      &.warning {
+        color: #856404;
+      }
+      &.danger {
+        color: #721c24;
+      }
+    }
+  }
+
+  .feature-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .feature-card {
+      background: $cdr-color-background-primary;
+      border: 1px solid $cdr-color-border-primary;
+      border-radius: $cdr-radius-soft;
+      padding: 1rem;
+      text-align: center;
+
+      .feature-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-title {
+        @include cdr-text-heading-sans-500;
+
+        font-size: 0.875rem;
+        color: $cdr-color-text-primary;
+        margin: 0 0 0.5rem;
+      }
+
+      .feature-description {
+        font-size: 0.75rem;
+        color: $cdr-color-text-secondary;
+        line-height: 1.4;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// ── Usage Context ─────────────────────────────────────────────────────────────
+.usage-context {
+  .metadata-note {
+    background: #f3e5f5;
+    border: 1px solid #ce93d8;
+    border-radius: $cdr-radius-soft;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+
+    h4 {
+      @include cdr-text-heading-sans-500;
+
+      font-size: 0.875rem;
+      color: #7b1fa2;
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: #7b1fa2;
+      line-height: 1.4;
+    }
+  }
+
+  .context-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .context-card {
+      background: $cdr-color-background-primary;
+      border: 1px solid $cdr-color-border-primary;
+      border-radius: $cdr-radius-soft;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+      .context-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid $cdr-color-border-primary;
+
+        .context-swatch {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: $cdr-radius-soft;
+          border: 1px solid $cdr-color-border-primary;
+        }
+
+        .context-info h3 {
+          @include cdr-text-heading-sans-500;
+
+          font-size: 1rem;
+          color: $cdr-color-text-primary;
+          margin: 0;
+        }
+
+        .context-info code {
+          font-family: $cdr-font-family-mono-brand-font;
+          font-size: 0.75rem;
+          color: $cdr-color-text-secondary;
+          background: $cdr-color-background-secondary;
+          padding: 0.2rem 0.4rem;
+          border-radius: $cdr-radius-soft;
+        }
+      }
+
+      .context-section {
+        margin-bottom: 1rem;
+
+        .context-section-title {
+          @include cdr-text-heading-sans-500;
+
+          font-size: 0.75rem;
+          color: $cdr-color-text-secondary;
+          margin: 0 0 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          display: flex;
+          align-items: center;
+          gap: 0.375rem;
+        }
+
+        .context-list {
+          margin: 0;
+          padding-left: 1rem;
+
+          li {
+            margin-bottom: 0.25rem;
+            font-size: 0.875rem;
+            color: $cdr-color-text-primary;
+            line-height: 1.4;
+
+            &.avoid {
+              color: #dc3545;
+            }
+            &.use {
+              color: #28a745;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ── Figma Integration ─────────────────────────────────────────────────────────
+.figma-integration {
+  .pipeline-step {
+    background: $cdr-color-background-primary;
+    border: 1px solid $cdr-color-border-primary;
+    border-radius: $cdr-radius-soft;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &:before {
+      content: attr(data-step);
+      position: absolute;
+      top: -0.75rem;
+      left: 1.5rem;
+      background: #0066cc;
+      color: white;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $cdr-font-family-graphik;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    .pipeline-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1.1rem;
+      color: $cdr-color-text-primary;
+      margin: 0 0 0.75rem;
+    }
+
+    .pipeline-description {
+      color: $cdr-color-text-secondary;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .pipeline-code {
+      background: $cdr-color-background-secondary;
+      border: 1px solid $cdr-color-border-primary;
+      border-radius: $cdr-radius-soft;
+      padding: 0.75rem;
+      font-family: $cdr-font-family-mono-brand-font;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      overflow-x: auto;
+
+      pre {
+        margin: 0;
+      }
+    }
+  }
+
+  .transformation-note {
+    background: #f3e5f5;
+    border: 1px solid #ce93d8;
+    border-radius: $cdr-radius-soft;
+    padding: 1.5rem;
+    margin: 2rem 0;
+
+    .transformation-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1rem;
+      color: #7b1fa2;
+      margin: 0 0 0.75rem;
+    }
+
+    .transformation-content {
+      color: #7b1fa2;
+      line-height: 1.5;
+    }
+
+    .transformation-example {
+      background: white;
+      border: 1px solid #ce93d8;
+      border-radius: $cdr-radius-soft;
+      padding: 0.75rem;
+      margin-top: 0.75rem;
+      font-family: $cdr-font-family-mono-brand-font;
+      font-size: 0.75rem;
+    }
+  }
+
+  .workflow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: $cdr-color-background-secondary;
+    border-radius: $cdr-radius-soft;
+
+    .workflow-step {
+      text-align: center;
+      flex: 1;
+
+      .workflow-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .workflow-label {
+        @include cdr-text-heading-sans-500;
+
+        font-size: 0.875rem;
+        color: $cdr-color-text-primary;
+      }
+    }
+
+    .workflow-arrow {
+      font-size: 1.5rem;
+      color: #0066cc;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+// ── OKLCH Demos ───────────────────────────────────────────────────────────────
+.oklch-demo {
+  .color-space-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .space-panel {
+      background: $cdr-color-background-primary;
+      border: 1px solid $cdr-color-border-primary;
+      border-radius: $cdr-radius-soft;
+      padding: 1.5rem;
+
+      .space-title {
+        @include cdr-text-heading-sans-600;
+
+        font-size: 1.1rem;
+        color: $cdr-color-text-primary;
+        margin: 0 0 1.25rem;
+        text-align: center;
+      }
+
+      .interactive-demo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .slider-group {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+
+          label {
+            font-family: $cdr-font-family-mono-brand-font;
+            font-size: 0.75rem;
+            color: $cdr-color-text-secondary;
+            min-width: 5rem;
+          }
+
+          input[type='range'] {
+            flex: 1;
+            height: 0.375rem;
+            border-radius: 0.1875rem;
+            background: $cdr-color-border-primary;
+            outline: none;
+            -webkit-appearance: none;
+
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              background: #0066cc;
+              cursor: pointer;
+            }
+
+            &::-moz-range-thumb {
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              background: #0066cc;
+              cursor: pointer;
+              border: none;
+            }
+          }
+
+          span {
+            font-family: $cdr-font-family-mono-brand-font;
+            font-size: 0.75rem;
+            color: $cdr-color-text-secondary;
+            min-width: 2.5rem;
+            text-align: right;
+          }
+        }
+
+        .color-preview {
+          width: 100%;
+          height: 5rem;
+          border-radius: $cdr-radius-soft;
+          border: 1px solid $cdr-color-border-primary;
+          margin-top: 1rem;
+        }
+
+        .color-code {
+          font-family: $cdr-font-family-mono-brand-font;
+          font-size: 0.75rem;
+          color: $cdr-color-text-secondary;
+          text-align: center;
+          margin-top: 0.5rem;
+          background: $cdr-color-background-secondary;
+          padding: 0.375rem;
+          border-radius: $cdr-radius-soft;
+        }
+      }
+    }
+  }
+
+  .gradient-test {
+    margin-bottom: 3rem;
+
+    .gradient-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1rem;
+      color: $cdr-color-text-primary;
+      margin: 0 0 1rem;
+    }
+
+    .gradient-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+
+      .gradient-item {
+        text-align: center;
+
+        h4 {
+          @include cdr-text-heading-sans-500;
+
+          font-size: 0.875rem;
+          color: $cdr-color-text-primary;
+          margin: 0 0 0.75rem;
+        }
+
+        .gradient-box {
+          width: 100%;
+          height: 3.75rem;
+          border-radius: $cdr-radius-soft;
+          border: 1px solid $cdr-color-border-primary;
+        }
+
+        .gradient-analysis {
+          font-size: 0.75rem;
+          color: $cdr-color-text-secondary;
+          margin-top: 0.5rem;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .benefits-section {
+    background: #e6f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: $cdr-radius-soft;
+    padding: 1.5rem;
+
+    .benefits-title {
+      @include cdr-text-heading-sans-600;
+
+      font-size: 1.1rem;
+      color: #0066cc;
+      margin: 0 0 1rem;
+    }
+
+    .benefits-list {
+      margin: 0;
+      padding-left: 1.25rem;
+
+      li {
+        margin-bottom: 0.75rem;
+        color: #004085;
+        line-height: 1.5;
+
+        strong {
+          color: #0066cc;
+        }
+      }
+    }
+  }
+}

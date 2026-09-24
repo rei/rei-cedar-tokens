@@ -16,7 +16,29 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Release Notes', '*'],
+        order: [
+          'Documentation',
+          [
+            'Overview',
+            'Release Notes',
+            'Token Migration',
+            'Accessibility Combinations',
+            'Semantic Imports',
+            'Usage Context',
+            'Figma Integration',
+          ],
+          'OKLCH',
+          [
+            'Color Space Explorer',
+            'Wide Gamut Showcase',
+            'Perceptual Uniformity Demo',
+            'Utility Color Functions',
+            'Color Blindness Simulator',
+          ],
+          'Tokens',
+          ['Colors', 'Typography', 'Spacing', 'Motion', 'Breakpoints', 'Radius', 'Prominence'],
+          '*',
+        ],
       },
     },
     backgrounds: {
