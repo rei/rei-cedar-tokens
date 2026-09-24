@@ -12,6 +12,7 @@ import {
   contrastRatio,
   type Oklch,
 } from './oklch-math';
+import { OPTION_RAMPS } from './cedar-color-data';
 
 const meta: Meta = {
   title: 'OKLCH/Utility Color Functions',
@@ -26,6 +27,9 @@ type Story = StoryObj;
 
 // ─── Approved semantic bases ─────────────────────────────────────────────────
 // Only tokens that belong to each intent — no arbitrary colors.
+
+const stepHex = (ramp: string, step: string): string =>
+  OPTION_RAMPS[ramp].find((s) => s.step === step)!.hex;
 
 const INTENT_BASES: Record<string, { label: string; token: string; hex: string }[]> = {
   action: [
@@ -104,7 +108,47 @@ const INTENT_BASES: Record<string, { label: string; token: string; hex: string }
       hex: CdrColorSelection.CdrColorSelectionSurfaceNeutralTrace,
     },
   ],
+  options: [
+    {
+      label: 'option / golden-moss / 800 (not a semantic surface)',
+      token: 'CdrColorOptionGoldenMoss800',
+      hex: stepHex('golden-moss', '800'),
+    },
+    {
+      label: 'option / golden-moss / 1000',
+      token: 'CdrColorOptionGoldenMoss1000',
+      hex: stepHex('golden-moss', '1000'),
+    },
+    {
+      label: 'option / apex-moss / 800',
+      token: 'CdrColorOptionApexMoss800',
+      hex: stepHex('apex-moss', '800'),
+    },
+    {
+      label: 'option / alpine-lake-blue / 900',
+      token: 'CdrColorOptionAlpineLakeBlue900',
+      hex: stepHex('alpine-lake-blue', '900'),
+    },
+    {
+      label: 'option / sale-red / 800',
+      token: 'CdrColorOptionSaleRed800',
+      hex: stepHex('sale-red', '800'),
+    },
+    {
+      label: 'option / blue-spruce-green / 800',
+      token: 'CdrColorOptionBlueSpruceGreen800',
+      hex: stepHex('blue-spruce-green', '800'),
+    },
+  ],
 };
+
+// Kebab-case a flat compiled key into its shipped CSS variable name.
+// CdrColorActionSurfaceBrandFaint → --cdr-action-surface-brand-faint
+function tokenToCssVar(tokenKey: string): string {
+  return (
+    '--cdr-' + tokenKey.replace(/^CdrColor/, '').replace(/([A-Z])/g, (m) => '-' + m.toLowerCase())
+  );
+}
 
 // ─── Measured state relationships ────────────────────────────────────────────
 // The recipe is not invented — it is the measured OKLCH transform between the
@@ -150,7 +194,6 @@ const CONTEXTS: Record<string, { label: string; hex: string }> = {
 };
 
 const FOCUS_RING = '#3d6db9'; // CdrColorSelectionBorderTrigger — focus is an indicator, not a recolor
-const TRACE = CdrColorSurface.CdrColorSurfaceNeutralTrace;
 
 // ─── State computation ────────────────────────────────────────────────────────
 
@@ -177,7 +220,12 @@ function contentFor(surfaceHex: string): string {
 // State mapping mirrors the spec: hover moves the surface toward its faint
 // counterpart, pressed returns toward rest, disabled neutralizes. Direction is
 // chosen from the base lightness — solid bases lift, faint bases deepen.
-function computeStates(baseHex: string, strength: string, contextHex: string): ComputedState[] {
+function computeStates(
+  baseHex: string,
+  baseRef: string,
+  strength: string,
+  contextHex: string,
+): ComputedState[] {
   const base = rgbToOklch(hexToRgb(baseHex));
   const s = STRENGTH_SCALE[strength];
   const dir = base.l < 0.6 ? 1 : -1;
@@ -199,8 +247,8 @@ function computeStates(baseHex: string, strength: string, contextHex: string): C
       hex: rgbToHex(rgb),
       css:
         Math.abs(dL) < 0.0001 && Math.abs(cR - 1) < 0.001
-          ? baseHex
-          : `oklch(from ${baseHex} calc(l ${dL >= 0 ? '+' : '-'} ${(Math.abs(dL) * 100).toFixed(1)}%) calc(c * ${cR.toFixed(2)}) h)`,
+          ? baseRef
+          : `oklch(from ${baseRef} calc(l ${dL >= 0 ? '+' : '-'} ${(Math.abs(dL) * 100).toFixed(1)}%) calc(c * ${cR.toFixed(2)}) h)`,
       inGamut,
     };
   };
@@ -222,28 +270,26 @@ function badge(pass: boolean | 'warn', label: string): string {
   return `<span class="vr-badge ${cls}">${label}</span>`;
 }
 
-function renderDemo(intent: string, baseToken: string, context: string, strength: string): string {
-  const bases = INTENT_BASES[intent];
-  const base = bases.find((b) => b.token === baseToken) ?? bases[0];
-  const ctx = CONTEXTS[context];
-  const states = computeStates(base.hex, strength, ctx.hex);
+const MOUNTAIN_ICON = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>`;
 
-  // Secondary variant per spec: trace surface + base as border/text accent.
-  // Hover reuses the same measured faint transform for its surface.
-  const secondaryStates = states.map((st) => ({
-    ...st,
-    surface:
-      st.name === 'Disabled'
-        ? st.hex
-        : st.name === 'Hover'
-          ? st.hex
-          : st.name === 'Selected'
-            ? st.hex
-            : TRACE,
-  }));
+function renderDemo(
+  intent: string,
+  baseToken: string,
+  customHex: string | null,
+  context: string,
+  strength: string,
+): string {
+  const bases = INTENT_BASES[intent];
+  const picked = bases.find((b) => b.token === baseToken) ?? bases[0];
+  const base = customHex
+    ? { label: 'custom (arbitrary)', token: 'custom', hex: customHex }
+    : picked;
+  const baseRef = customHex ? customHex : `var(${tokenToCssVar(base.token)})`;
+  const ctx = CONTEXTS[context];
+  const states = computeStates(base.hex, baseRef, strength, ctx.hex);
 
   const rows = states
-    .map((st, i) => {
+    .map((st) => {
       const content = contentFor(st.hex);
       const contentRatio = contrastRatio(content, st.hex);
       const surfaceRatio = contrastRatio(st.hex, ctx.hex);
@@ -255,11 +301,10 @@ function renderDemo(intent: string, baseToken: string, context: string, strength
             )
           : badge(contentRatio >= 4.5, `${contentRatio.toFixed(1)}:1`);
       const gamut = st.inGamut ? badge(true, 'in gamut') : badge('warn', 'out of sRGB');
-      const sec = secondaryStates[i];
       return `<tr>
         <td class="vr-state">${st.name}${st.isFocus ? ' (ring)' : ''}</td>
         <td><span class="vr-chip" style="background:${st.hex}"></span><code>${st.hex}</code></td>
-        <td><span class="vr-chip" style="background:${sec.surface}"></span><code>${sec.surface}</code></td>
+        <td><code>${content}</code></td>
         <td class="vr-oklch">L ${(st.oklch.l * 100).toFixed(1)} · C ${st.oklch.c.toFixed(3)} · H ${Math.round(st.oklch.h)}</td>
         <td>${contentCheck}</td>
         <td>${surfaceRatio.toFixed(1)}:1</td>
@@ -268,22 +313,17 @@ function renderDemo(intent: string, baseToken: string, context: string, strength
     })
     .join('');
 
-  const primaryBtn = (st: ComputedState) => {
+  const btn = (st: ComputedState) => {
     const ring = st.isFocus ? `box-shadow: 0 0 0 3px ${ctx.hex}, 0 0 0 6px ${FOCUS_RING};` : '';
-    return `<button class="vr-btn" style="background:${st.hex};color:${contentFor(st.hex)};border:2px solid transparent;${ring}" ${st.name === 'Disabled' ? 'disabled' : ''}>Button</button>`;
-  };
-
-  const secondaryBtn = (st: ComputedState, surface: string) => {
-    const ring = st.isFocus ? `box-shadow: 0 0 0 3px ${ctx.hex}, 0 0 0 6px ${FOCUS_RING};` : '';
-    const accent = st.name === 'Disabled' ? st.hex : base.hex;
-    return `<button class="vr-btn" style="background:${surface};color:${st.name === 'Disabled' ? CdrColorText.CdrColorTextSecondary : accent};border:2px solid ${accent};${ring}" ${st.name === 'Disabled' ? 'disabled' : ''}>Button</button>`;
+    const content = contentFor(st.hex);
+    return `<button class="vr-btn" style="background:${st.hex};color:${content};border:2px solid transparent;${ring}" ${st.name === 'Disabled' ? 'disabled' : ''}>${MOUNTAIN_ICON}<span>Button</span></button>`;
   };
 
   const cssLines = states
     .filter((s2) => !s2.isFocus)
     .map((s2) => {
-      const sel = s2.name === 'Rest' ? '' : `:${s2.name.toLowerCase()}`;
-      return `  &${sel || ':not(:disabled)'} { background: ${s2.hex}; /* ${s2.css} */ }`;
+      const sel = s2.name === 'Rest' ? ':not(:disabled)' : `:${s2.name.toLowerCase()}`;
+      return `  &${sel} { background: ${s2.css}; }`;
     })
     .join('\n');
 
@@ -303,20 +343,18 @@ function renderDemo(intent: string, baseToken: string, context: string, strength
     </div>
     <div class="vr-summary">
       ${badge(overallPass, overallPass ? 'Passes system rules' : 'Fails content contrast')}
-      <span class="vr-summary-detail">base <code>${base.token}</code> · strength ${strength}</span>
+      <span class="vr-summary-detail">base <code>${base.token === 'custom' ? base.hex : tokenToCssVar(base.token)}</code> · strength ${strength}</span>
     </div>
     <div class="vr-preview" style="background:${ctx.hex}">
       <div class="vr-variant">
-        <div class="vr-variant-label">Primary (solid surface)</div>
-        ${states.map((st) => `<div class="vr-comp"><div class="vr-comp-label">${st.name}</div>${primaryBtn(st)}</div>`).join('')}
-      </div>
-      <div class="vr-variant">
-        <div class="vr-variant-label">Secondary (trace + accent)</div>
-        ${states.map((st, i) => `<div class="vr-comp"><div class="vr-comp-label">${st.name}</div>${secondaryBtn(st, secondaryStates[i].surface)}</div>`).join('')}
+        <div class="vr-variant-label">Primary button</div>
+        <div class="vr-row">
+          ${states.map((st) => `<div class="vr-comp"><div class="vr-comp-label">${st.name}</div>${btn(st)}</div>`).join('')}
+        </div>
       </div>
     </div>
     <table class="vr-table">
-      <thead><tr><th>State</th><th>Primary surface</th><th>Secondary surface</th><th>OKLCH</th><th>Content ↔ surface</th><th>Surface ↔ context</th><th>Gamut</th></tr></thead>
+      <thead><tr><th>State</th><th>Surface</th><th>Content</th><th>OKLCH</th><th>Content ↔ surface</th><th>Surface ↔ context</th><th>Gamut</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
     <div class="vr-css"><pre>.component {
@@ -380,14 +418,16 @@ const chrome = `
       text-transform: uppercase; letter-spacing: 0.05em; color: var(--cedar-warm-700);
       border-bottom: 1px solid var(--cedar-warm-200); padding-bottom: 6px;
     }
+    .vr-row { display: flex; flex-wrap: wrap; gap: 24px; }
     .vr-comp { text-align: center; }
     .vr-comp-label {
       font-family: Pressura, monospace; font-size: 10px; text-transform: uppercase;
       letter-spacing: 0.05em; color: var(--cedar-warm-600); margin-bottom: 6px;
     }
     .vr-btn {
+      display: inline-flex; align-items: center; gap: 8px;
       font-family: Graphik, 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 500;
-      padding: 10px 20px; border-radius: 6px; cursor: pointer;
+      padding: 10px 20px; border-radius: 4px; cursor: pointer;
     }
     .vr-btn:disabled { cursor: not-allowed; }
     .vr-table {
@@ -492,12 +532,17 @@ export const UtilityColorFunctions: Story = {
               ['action', 'Action'],
               ['control', 'Control'],
               ['selection', 'Selection'],
+              ['options', 'Options ramp (experimental)'],
             ],
             DEFAULTS.intent,
           )}
           <div class="vr-field">
-            <label for="vr-base">Semantic base</label>
+            <label for="vr-base">Surface base token</label>
             <select id="vr-base">${baseOptions(DEFAULTS.intent, DEFAULTS.baseToken)}</select>
+          </div>
+          <div class="vr-field">
+            <label for="vr-custom">Or arbitrary base</label>
+            <input type="color" id="vr-custom" value="${BRAND_SOLID}" />
           </div>
           ${controlSelect('vr-context', 'Context', Object.entries(CONTEXTS).map(([k, v]) => [k, v.label]) as [string, string][], DEFAULTS.context)}
           ${controlSelect(
@@ -512,7 +557,7 @@ export const UtilityColorFunctions: Story = {
           )}
         </div>
 
-        <div id="vr-output">${renderDemo(DEFAULTS.intent, DEFAULTS.baseToken, DEFAULTS.context, DEFAULTS.strength)}</div>
+        <div id="vr-output">${renderDemo(DEFAULTS.intent, DEFAULTS.baseToken, null, DEFAULTS.context, DEFAULTS.strength)}</div>
 
         <div class="vr-scss">
           <h4>Proposed SCSS API (design intent, not color syntax)</h4>
@@ -557,7 +602,7 @@ $state-recipes: (
             <li><strong>Works with approved semantic colors</strong> that have been validated for this recipe — not any color.</li>
             <li><strong>Produces perceptually consistent transformations</strong> and validates accessibility across generated states — OKLCH improves predictability; it does not by itself ensure accessibility.</li>
             <li><strong>States are measured, not tuned:</strong> the hover transform is the measured OKLCH delta between the approved solid endpoint and its faint surface token — the same relationship the component spec encodes as separate roles.</li>
-            <li><strong>Any compatible base inherits the relationship:</strong> applying the transform to a different approved surface reproduces the same state pattern without new tokens.</li>
+            <li><strong>Any compatible base inherits the relationship:</strong> applying the transform to a different approved surface reproduces the same state pattern without new tokens. The arbitrary-base picker demonstrates the limit — a new base only resets the <em>surface</em>; content is re-resolved by contrast, but border and focus roles are separate inputs that still need an approved token.</li>
             <li><strong>Focus is an indicator.</strong> Hover/pressed/selected shift surface color; focus adds a ring so affordance is not lost on adjacent colors.</li>
             <li><strong>Disabled preserves readability.</strong> Lightness is mixed toward the context surface and chroma is reduced — blind alpha can leave content illegible.</li>
           </ul>
@@ -571,8 +616,11 @@ $state-recipes: (
     const baseEl = canvasElement.querySelector<HTMLSelectElement>('#vr-base');
     const contextEl = canvasElement.querySelector<HTMLSelectElement>('#vr-context');
     const strengthEl = canvasElement.querySelector<HTMLSelectElement>('#vr-strength');
+    const customEl = canvasElement.querySelector<HTMLInputElement>('#vr-custom');
     const output = canvasElement.querySelector<HTMLElement>('#vr-output');
-    if (!intentEl || !baseEl || !contextEl || !strengthEl || !output) return;
+    if (!intentEl || !baseEl || !contextEl || !strengthEl || !customEl || !output) return;
+
+    let customHex: string | null = null;
 
     const update = () => {
       const intent = intentEl.value;
@@ -581,7 +629,13 @@ $state-recipes: (
       if (!valid) {
         baseEl.innerHTML = baseOptions(intent, INTENT_BASES[intent][0].token);
       }
-      output.innerHTML = renderDemo(intent, baseEl.value, contextEl.value, strengthEl.value);
+      output.innerHTML = renderDemo(
+        intent,
+        baseEl.value,
+        customHex,
+        contextEl.value,
+        strengthEl.value,
+      );
     };
 
     intentEl.addEventListener('change', () => {
@@ -589,7 +643,14 @@ $state-recipes: (
       update();
     });
     for (const el of [baseEl, contextEl, strengthEl]) {
-      el.addEventListener('change', update);
+      el.addEventListener('change', () => {
+        customHex = null; // picking a token clears the arbitrary override
+        update();
+      });
     }
+    customEl.addEventListener('input', () => {
+      customHex = customEl.value;
+      update();
+    });
   },
 };
