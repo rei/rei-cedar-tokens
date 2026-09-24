@@ -110,6 +110,7 @@
     "validate:contract": "tsx scripts/validate-contract.ts",
     "validate:syntax": "tsx scripts/validate-syntax-boundaries.ts",
     "validate:parity": "tsx scripts/validate-output-parity.ts",
+    "validate:storybook-scss": "node scripts/validate-storybook-scss.js",
     "tokens:update": "tsx ./tokens-studio/token-updater.ts",
     "storybook:release-notes": "tsx ./scripts/storybook-release-notes.ts",
     "docs:release-notes": "node scripts/generate-release-notes.mjs",
@@ -167,7 +168,8 @@
       "oxlint --fix --no-error-on-unmatched-pattern",
       "oxfmt --no-error-on-unmatched-pattern"
     ],
-    "**/*.{css,scss,html,json,jsonc,json5,md,mdx,toml,yml,yaml}": "oxfmt --no-error-on-unmatched-pattern"
+    "**/*.{css,scss,html,json,jsonc,json5,md,mdx,toml,yml,yaml}": "oxfmt --no-error-on-unmatched-pattern",
+    ".storybook/**/*.scss": "pnpm run validate:storybook-scss"
   },
   "config": {
     "commitizen": {
