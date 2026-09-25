@@ -1,7 +1,39 @@
 import type { StoryObj, Meta } from '@storybook/html-vite';
 import { resolvePath } from './color-registry';
-import { CdrProminence } from '../dist/rei-dot-com/types/foundations/cdr-prominence.mjs';
+// Single combined bundle for every non-color foundation — radius, space,
+// type, motion, icon size, prominence — same module Typography.stories.ts
+// reads from, so nothing here is a hand-typed px/rem/ms value.
+import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 import { hexToRgb, rgbToOklch, oklchToRgb } from './oklch-math';
+
+const t = tokens as Record<string, string>;
+
+// Space/radius/icon-size tokens are compiled as bare numbers representing
+// tenths of a rem (space "8" == 0.8rem == 8px at the 16px root) — verified
+// against the compiled CSS custom properties for both families.
+const rem = (raw: string): string => `${Number(raw) / 10}rem`;
+
+// Same compound-style composition Typography.stories.ts uses: a text-style
+// prefix (e.g. "CdrTextHeadingSerif300") maps to Family/Size/Weight/
+// LineHeight/LetterSpacing/Style/Transform tokens.
+function typeStyle(prefix: string): string {
+  const family = t[`${prefix}Family`] ?? '';
+  const size = t[`${prefix}Size`];
+  const weight = t[`${prefix}Weight`];
+  const lineHeight = t[`${prefix}LineHeight`];
+  const letterSpacing = t[`${prefix}LetterSpacing`];
+  const style = t[`${prefix}Style`] ?? 'normal';
+  const transform = t[`${prefix}Transform`] ?? '';
+  const parts: string[] = [];
+  if (family) parts.push(`font-family: ${family};`);
+  if (size) parts.push(`font-size: ${size}px;`);
+  if (weight) parts.push(`font-weight: ${weight};`);
+  if (lineHeight) parts.push(`line-height: ${lineHeight}px;`);
+  if (letterSpacing && letterSpacing !== '0') parts.push(`letter-spacing: ${letterSpacing}px;`);
+  if (style) parts.push(`font-style: ${style};`);
+  if (transform) parts.push(`text-transform: ${transform};`);
+  return parts.join(' ');
+}
 
 const meta: Meta = {
   title: 'OKLCH/Custom Component Composer',
@@ -80,9 +112,9 @@ type FamilyRecipe = {
 };
 
 const PROM = {
-  flat: { name: 'flat', value: CdrProminence.CdrProminenceFlat },
-  raised: { name: 'raised', value: CdrProminence.CdrProminenceRaised },
-  elevated: { name: 'elevated', value: CdrProminence.CdrProminenceElevated },
+  flat: { name: 'flat', value: t.CdrProminenceFlat },
+  raised: { name: 'raised', value: t.CdrProminenceRaised },
+  elevated: { name: 'elevated', value: t.CdrProminenceElevated },
 };
 
 const TEXT_PRIMARY = ref('color/text/primary');
@@ -212,8 +244,10 @@ function badge(pass: boolean | 'warn', label: string): string {
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-const HEART_OUTLINE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
-const HEART_FILLED = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
+// Sized in CSS via .rc-chip-icon svg { width/height: rem(CdrIconSizeSm) } —
+// no literal pixel dimensions on the markup itself.
+const HEART_OUTLINE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
+const HEART_FILLED = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
 
 const PHOTO_PLACEHOLDER = `
   <div class="rc-sky"></div>
@@ -367,72 +401,97 @@ function renderComposition(family: string, activeState: string): string {
 }
 
 // ─── Chrome ────────────────────────────────────────────────────────────────────
+// Every radius, gap/padding/margin, and type style below is a real Cedar token
+// (CdrRadius / CdrSpace / CdrText* / CdrDuration / CdrTimingFunction / CdrIconSize).
+// The only literals left are dimensions Cedar doesn't tokenize at all — card
+// width, photo height, and the two decorative dot indicators — called out
+// inline rather than disguised as tokens.
+
+const RADIUS_PILL = rem(t.CdrRadiusRound);
+const RADIUS_MD = rem(t.CdrRadiusSoftest);
+const RADIUS_SM = rem(t.CdrRadiusSofter);
+
+const SPACE_3XS = rem(t.CdrSpaceThreeSixteenthX);
+const SPACE_2XS = rem(t.CdrSpaceEighthX);
+const SPACE_XS = rem(t.CdrSpaceQuarterX);
+const SPACE_SM = rem(t.CdrSpaceHalfX);
+const SPACE_SM2 = rem(t.CdrSpaceThreeEighthX);
+const SPACE_MD = rem(t.CdrSpaceThreeQuarterX);
+const SPACE_LG = rem(t.CdrSpaceOneX);
+const SPACE_XL = rem(t.CdrSpaceOneAndAHalfX);
+const SPACE_2XL = rem(t.CdrSpaceTwoX);
+
+const ICON_SIZE = rem(t.CdrIconSizeSm);
+const MOTION = `${t.CdrDuration2X} ${t.CdrTimingFunctionEaseOut}`;
+const MONO_FONT = t.CdrFontFamilyMonoBrandFont;
 
 const chrome = `
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     .sb-section-header {
-      display: flex; align-items: baseline; gap: 12px;
-      margin-bottom: 24px; padding-bottom: 10px;
+      display: flex; align-items: baseline; gap: ${SPACE_MD};
+      margin-bottom: ${SPACE_XL}; padding-bottom: ${SPACE_SM};
       border-bottom: 2px solid var(--cedar-warm-100);
     }
     .sb-section-title {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif;
-      font-size: 22px; font-weight: 600; color: var(--cedar-warm-1000);
-      margin: 0; letter-spacing: -0.3px;
+      ${typeStyle('CdrTextHeadingSerifStrong600')}
+      color: var(--cedar-warm-1000); margin: 0;
     }
     .cc-controls {
-      display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px;
-      padding: 16px; margin-bottom: 24px;
-      background: white; border: 1px solid var(--cedar-warm-200); border-radius: 12px;
+      display: flex; flex-wrap: wrap; align-items: flex-end; gap: ${SPACE_LG};
+      padding: ${SPACE_LG}; margin-bottom: ${SPACE_XL};
+      background: white; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
     }
-    .cc-field { display: flex; flex-direction: column; gap: 4px; }
+    .cc-field { display: flex; flex-direction: column; gap: ${SPACE_XS}; }
     .cc-field label {
-      font-family: Pressura, monospace; font-size: 10px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.05em; color: var(--cedar-warm-600);
+      ${typeStyle('CdrTextEyebrow100')} color: var(--cedar-warm-600);
     }
     .cc-field select {
-      padding: 6px 10px; border: 1px solid var(--cedar-warm-300); border-radius: 6px;
-      font-family: Pressura, monospace; font-size: 12px; background: white;
+      padding: ${SPACE_SM2} ${SPACE_SM}; border: 1px solid var(--cedar-warm-300); border-radius: ${RADIUS_SM};
+      ${typeStyle('CdrTextBody300')} background: white;
     }
     .cc-recipe {
       background: var(--cedar-warm-50); border: 1px solid var(--cedar-warm-200);
-      border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;
-      font-size: 13px; color: var(--cedar-warm-800); line-height: 1.5;
+      border-radius: ${RADIUS_MD}; padding: ${SPACE_MD} ${SPACE_LG}; margin-bottom: ${SPACE_LG};
+      ${typeStyle('CdrTextBody300')} color: var(--cedar-warm-800);
     }
-    .cc-cue { margin-top: 6px; font-size: 12px; color: #856404; }
-    .cc-hint { margin-top: 8px; font-size: 12px; color: var(--cedar-warm-600); }
-    .cc-state-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .cc-cue { margin-top: ${SPACE_SM2}; color: #856404; ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
+    .cc-hint { margin-top: ${SPACE_SM}; color: var(--cedar-warm-600); ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
+    .cc-state-nav { display: flex; flex-wrap: wrap; gap: ${SPACE_SM}; margin-bottom: ${SPACE_LG}; }
     .cc-state-btn {
-      font-family: Pressura, monospace; font-size: 11px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.05em;
-      padding: 6px 14px; border-radius: 20px; cursor: pointer;
+      ${typeStyle('CdrTextEyebrow100')}
+      padding: ${SPACE_SM2} ${SPACE_MD}; border-radius: ${RADIUS_PILL}; cursor: pointer;
       background: white; border: 1px solid var(--cedar-warm-300); color: var(--cedar-warm-700);
     }
     .cc-state-btn.active { background: var(--cedar-warm-1000); color: white; border-color: var(--cedar-warm-1000); }
+    .cc-intro { margin-bottom: ${SPACE_XL}; color: var(--cedar-warm-700); max-width: 780px; ${typeStyle('CdrTextBody300')} }
 
-    /* ── Scene ── */
+    /* ── Scene ──
+       Card width, photo height, and the two decorative dot sizes (radio fill,
+       hours indicator) have no Cedar dimension token — they're the only
+       literal numbers left in this file, flagged rather than hidden. */
     .rc-scene {
-      display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;
-      padding: 32px; border: 1px solid var(--cedar-warm-200); border-radius: 12px;
-      margin-bottom: 24px; background: var(--cedar-warm-50);
+      display: flex; flex-wrap: wrap; align-items: flex-start; gap: ${SPACE_2XL};
+      padding: ${SPACE_2XL}; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
+      margin-bottom: ${SPACE_XL}; background: var(--cedar-warm-50);
     }
 
     /* ── Action: card link ──
        Shadow lives on .rc-card (never clipped); photo clipping lives on a
        separate inner wrapper so the box-shadow is never cut off. */
     .rc-card {
-      position: relative; width: 300px; border-radius: 12px; background: white;
+      position: relative; width: 300px; /* no Cedar "component width" token */
+      border-radius: ${RADIUS_MD}; background: white;
       box-shadow: var(--a-shadow);
-      transition: box-shadow 0.18s ease;
+      transition: box-shadow ${MOTION};
     }
     .rc-card:has(.rc-overlay:hover),
     .rc-card:has(.rc-overlay:focus-visible) {
       box-shadow: var(--a-shadow-hover);
     }
     .rc-card:has(.rc-overlay[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
-    .rc-card-clip { border-radius: 12px; overflow: hidden; }
-    .rc-photo { position: relative; height: 200px; overflow: hidden; }
+    .rc-card-clip { border-radius: ${RADIUS_MD}; overflow: hidden; }
+    .rc-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
     .rc-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
     .rc-building {
       position: absolute; left: 0; right: 0; bottom: 0; height: 55%;
@@ -446,23 +505,22 @@ const chrome = `
       opacity: 0.5;
     }
     .rc-overlay {
-      position: absolute; inset: 0; border-radius: 12px; z-index: 1;
+      position: absolute; inset: 0; border-radius: ${RADIUS_MD}; z-index: 1;
       border: 2px solid var(--a-border);
-      transition: border-color 0.18s ease;
+      transition: border-color ${MOTION};
     }
     .rc-overlay:hover, .rc-overlay:focus-visible { border-color: var(--a-border-hover); }
     .rc-overlay[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
     .rc-info {
-      position: relative; z-index: 0; padding: 14px 16px;
-      font-family: Graphik, 'Helvetica Neue', sans-serif;
+      position: relative; z-index: 0; padding: ${SPACE_MD} ${SPACE_LG};
       background: var(--a-surface); color: var(--a-content);
-      transition: background 0.18s ease, color 0.18s ease;
+      transition: background ${MOTION}, color ${MOTION};
     }
     .rc-overlay[aria-disabled="true"] ~ .rc-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
-    .rc-name { margin: 0 0 4px; font-family: Stuart, 'Stuart fallback', Georgia, serif; font-size: 17px; font-weight: 600; }
-    .rc-detail { margin: 0 0 2px; font-size: 12px; text-decoration: underline; }
-    .rc-hours { margin: 8px 0 0; font-size: 12px; display: flex; align-items: center; gap: 6px; }
-    .rc-dot { width: 8px; height: 8px; border-radius: 50%; background: #3a9c50; display: inline-block; }
+    .rc-name { margin: 0 0 ${SPACE_XS}; ${typeStyle('CdrTextHeadingSerif300')} }
+    .rc-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: underline; }
+    .rc-hours { margin: ${SPACE_SM} 0 0; display: flex; align-items: center; gap: ${SPACE_3XS}; ${typeStyle('CdrTextBody300')} }
+    .rc-dot { width: ${SPACE_XS}; height: ${SPACE_XS}; border-radius: 50%; background: #3a9c50; display: inline-block; }
 
     /* ── Control: My REI checkbox ── */
     .sr-only {
@@ -470,13 +528,15 @@ const chrome = `
       overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
     .rc-chip {
-      position: absolute; top: 12px; left: 12px; z-index: 2;
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 12px; border-radius: 999px; cursor: pointer;
-      font-family: Graphik, 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 600;
+      position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
+      display: inline-flex; align-items: center; gap: ${SPACE_3XS};
+      padding: ${SPACE_SM2} ${SPACE_MD}; border-radius: ${RADIUS_PILL}; cursor: pointer;
+      ${typeStyle('CdrTextBodyStrong300')}
       background: var(--c-surface); color: var(--c-content); border: 2px solid var(--c-border);
-      transition: background 0.15s ease;
+      transition: background ${MOTION};
     }
+    .rc-chip-icon { display: inline-flex; }
+    .rc-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; }
     .rc-chip:has(input:hover) { background: var(--c-surface-hover); }
     .rc-chip:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
     .rc-chip:has(input:disabled) { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
@@ -486,73 +546,74 @@ const chrome = `
 
     /* ── Selection: set-as-my-store radio ── */
     .rc-radio {
-      display: flex; align-items: center; gap: 10px; cursor: pointer;
-      background: white; padding: 10px 14px; border-radius: 10px;
+      display: flex; align-items: center; gap: ${SPACE_SM}; cursor: pointer;
+      background: white; padding: ${SPACE_MD} ${SPACE_LG}; border-radius: ${RADIUS_SM};
       box-shadow: var(--s-shadow);
-      transition: box-shadow 0.18s ease;
+      transition: box-shadow ${MOTION};
     }
     .rc-radio:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
     .rc-radio:has(input:checked) { box-shadow: var(--s-shadow-selected); }
     .rc-radio-dot {
-      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: 50%; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       background: var(--s-surface); border: 2px solid var(--s-border);
-      transition: all 0.15s ease;
+      transition: background ${MOTION}, border-color ${MOTION};
     }
     .rc-radio:hover .rc-radio-dot { border-color: var(--s-border-hover); }
     .rc-radio-dot::after {
-      content: ''; width: 10px; height: 10px; border-radius: 50%;
-      background: var(--s-content-selected); opacity: 0; transition: opacity 0.15s ease;
+      content: ''; width: 50%; height: 50%; border-radius: 50%;
+      background: var(--s-content-selected); opacity: 0; transition: opacity ${MOTION};
     }
     .rc-radio:has(input:checked) .rc-radio-dot {
       background: var(--s-surface-selected); border-color: var(--s-border-selected);
     }
     .rc-radio:has(input:checked) .rc-radio-dot::after { opacity: 1; }
-    .rc-radio-label { font-family: Graphik, 'Helvetica Neue', sans-serif; font-size: 13px; color: var(--s-content); }
+    .rc-radio-label { color: var(--s-content); ${typeStyle('CdrTextBodyStrong300')} }
     .rc-radio:has(input:checked) .rc-radio-label { color: var(--s-content-selected); }
     .rc-radio:has(input:disabled) { cursor: not-allowed; }
     .rc-radio:has(input:disabled) .rc-radio-dot { background: var(--s-surface-disabled); }
     .rc-radio:has(input:disabled) .rc-radio-label { color: var(--s-content-disabled); }
 
     .cc-badge {
-      font-family: Pressura, monospace; font-size: 10px; font-weight: 600;
-      padding: 2px 8px; border-radius: 3px; display: inline-block; white-space: nowrap; margin-left: 4px;
+      ${typeStyle('CdrTextEyebrow100')}
+      padding: ${SPACE_2XS} ${SPACE_SM}; border-radius: ${RADIUS_SM}; display: inline-block; white-space: nowrap; margin-left: ${SPACE_XS};
     }
     .cc-badge.pass { background: #d4edda; color: #155724; }
     .cc-badge.warn { background: #fff3cd; color: #856404; }
     .cc-badge.fail { background: #f8d7da; color: #721c24; }
     .cc-table {
       width: 100%; border-collapse: collapse; background: white;
-      border: 1px solid var(--cedar-warm-200); border-radius: 12px; overflow: hidden;
-      margin-bottom: 24px; font-size: 12px;
+      border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD}; overflow: hidden;
+      margin-bottom: ${SPACE_XL};
     }
     .cc-table th {
-      text-align: left; padding: 10px 12px; background: var(--cedar-warm-100);
-      font-family: Pressura, monospace; font-size: 10px; text-transform: uppercase;
-      letter-spacing: 0.05em; color: var(--cedar-warm-700);
+      text-align: left; padding: ${SPACE_SM} ${SPACE_MD}; background: var(--cedar-warm-100);
+      ${typeStyle('CdrTextEyebrow100')} color: var(--cedar-warm-700);
     }
-    .cc-table td { padding: 10px 12px; border-top: 1px solid var(--cedar-warm-200); }
+    .cc-table td { padding: ${SPACE_SM} ${SPACE_MD}; border-top: 1px solid var(--cedar-warm-200); ${typeStyle('CdrTextBody300')} }
     .cc-table tr.active td { background: var(--cedar-warm-50); font-weight: 600; }
     .cc-state { font-weight: 600; text-transform: capitalize; }
     .cc-chip-swatch {
-      display: inline-block; width: 18px; height: 18px; border-radius: 4px;
-      border: 1px solid rgba(0,0,0,0.12); vertical-align: middle; margin-right: 8px;
+      display: inline-block; width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: ${RADIUS_SM};
+      border: 1px solid rgba(0,0,0,0.12); vertical-align: middle; margin-right: ${SPACE_SM};
     }
     .cc-css {
-      background: var(--cedar-warm-900); border-radius: 12px; padding: 20px;
-      margin-bottom: 32px; overflow-x: auto;
+      background: var(--cedar-warm-900); border-radius: ${RADIUS_MD}; padding: ${SPACE_XL};
+      margin-bottom: ${SPACE_2XL}; overflow-x: auto;
     }
-    .cc-css pre { margin: 0; color: #e8e6e3; font-size: 12px; line-height: 1.6; }
+    .cc-css pre {
+      margin: 0; color: #e8e6e3; line-height: 1.6;
+      font-family: ${MONO_FONT}; font-size: ${t.CdrTextBody300Size}px;
+    }
     .cc-notes {
       background: var(--cedar-green-50); border: 1px solid var(--cedar-green-200);
-      border-radius: 12px; padding: 24px;
+      border-radius: ${RADIUS_MD}; padding: ${SPACE_XL};
     }
     .cc-notes h3 {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif; font-size: 18px;
-      font-weight: 600; color: var(--cedar-green-900); margin: 0 0 12px 0;
+      ${typeStyle('CdrTextHeadingSerif500')} color: var(--cedar-green-900); margin: 0 0 ${SPACE_MD};
     }
-    .cc-notes ul { margin: 0; padding-left: 20px; }
-    .cc-notes li { margin-bottom: 10px; color: var(--cedar-green-800); line-height: 1.5; }
+    .cc-notes ul { margin: 0; padding-left: ${SPACE_LG}; }
+    .cc-notes li { margin-bottom: ${SPACE_SM}; color: var(--cedar-green-800); ${typeStyle('CdrTextBody300')} }
   </style>
 `;
 
@@ -572,7 +633,7 @@ export const ComponentComposer: Story = {
         <div class="sb-section-header">
           <h2 class="sb-section-title">Compose a Custom Component</h2>
         </div>
-        <p style="margin-bottom: 24px; color: var(--cedar-warm-700); line-height: 1.5; max-width: 780px;">
+        <p class="cc-intro">
           Use this when Cedar has no component for your pattern yet. All three widgets on this
           store card are real and interactive: the card is a native link, "Set as my store" is a
           radio, and "My REI" is a checkbox. Every color is a resolved token, and every state
