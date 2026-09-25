@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/html-vite';
 import { resolvePath } from './color-registry';
 import { CdrProminence } from '../dist/rei-dot-com/types/foundations/cdr-prominence.mjs';
-import { hexToRgb, rgbToOklch, oklchToRgb, contrastRatio, type Oklch } from './oklch-math';
+import { hexToRgb, rgbToOklch, oklchToRgb } from './oklch-math';
 
 const meta: Meta = {
   title: 'OKLCH/Custom Component Composer',
@@ -17,48 +17,58 @@ type Story = StoryObj;
 // ─── Purpose ──────────────────────────────────────────────────────────────────
 // Cedar doesn't ship a component for every pattern. This page answers: given no
 // component exists yet, how do I safely build one from approved semantic roles?
-// Every color below is resolved live via `resolvePath()` against the compiled
-// token modules — nothing is hand-typed hex. If a path doesn't resolve, this
-// story fails to load, which is the point: it can't drift from the real tokens.
+// Every color is resolved live via `resolvePath()` against the compiled token
+// modules — nothing is hand-typed hex. States are driven by real CSS
+// (:hover, :checked, :disabled) rather than a JS re-render simulation, so
+// hovering, checking, and disabling the actual widgets is what you're seeing.
 
-function lift(hex: string, dL: number, cScale: number): { hex: string; inGamut: boolean } {
+function lift(hex: string, dL: number, cScale: number): string {
   const o = rgbToOklch(hexToRgb(hex));
-  const shifted: Oklch = {
+  const shifted = {
     l: Math.min(1, Math.max(0, o.l + dL)),
     c: Math.max(0, o.c * cScale),
     h: o.h,
   };
-  const { rgb, inGamut } = oklchToRgb(shifted);
+  const { rgb } = oklchToRgb(shifted);
   const to = (v: number) =>
     Math.round(Math.min(1, Math.max(0, v)) * 255)
       .toString(16)
       .padStart(2, '0');
-  return { hex: `#${to(rgb.r)}${to(rgb.g)}${to(rgb.b)}`, inGamut };
+  return `#${to(rgb.r)}${to(rgb.g)}${to(rgb.b)}`;
 }
 
-// Disabled content softens chroma rather than changing hue or lightness.
-function mixTowardGray(hex: string): string {
-  return lift(hex, 0, 0.55).hex;
+// ─── Token references ────────────────────────────────────────────────────────
+// Every value carries its own canonical path so the demo can show *names*,
+// not just resolved colors — that's the artifact a dev actually copies.
+
+type TokenRef = { path: string; value: string; status: 'token' | 'muted' | 'missing' };
+
+function ref(path: string): TokenRef {
+  return { path, value: resolvePath(path), status: 'token' };
 }
 
-function safeResolve(path: string): { value: string; missing: boolean } {
+// Disabled content is softened for legibility — not a distinct approved
+// token, so it's labeled "muted" rather than presented as if it were one.
+function muted(base: TokenRef): TokenRef {
+  return { path: base.path, value: lift(base.value, 0, 0.55), status: 'muted' };
+}
+
+function safeRef(path: string): TokenRef {
   try {
-    return { value: resolvePath(path), missing: false };
+    return ref(path);
   } catch {
-    return { value: '', missing: true };
+    return { path, value: '', status: 'missing' };
   }
 }
 
 // ─── Recipes ──────────────────────────────────────────────────────────────────
-// Each family maps onto one real interaction pattern on the demo card, using
-// only that family's own tokens. Where the compiled set doesn't yet have a
-// token the design intent implies, that's called out rather than invented.
 
+type Prominence = { name: string; value: string };
 type StateSpec = {
-  surface: string;
-  content: string;
-  border: string;
-  prominence: string;
+  surface: TokenRef;
+  content: TokenRef;
+  border: TokenRef;
+  prominence: Prominence;
   note?: string;
 };
 type FamilyRecipe = {
@@ -69,45 +79,56 @@ type FamilyRecipe = {
   states: Record<string, StateSpec>;
 };
 
-const TEXT_PRIMARY = resolvePath('color/text/primary');
+const PROM = {
+  flat: { name: 'flat', value: CdrProminence.CdrProminenceFlat },
+  raised: { name: 'raised', value: CdrProminence.CdrProminenceRaised },
+  elevated: { name: 'elevated', value: CdrProminence.CdrProminenceElevated },
+};
 
-const ACTION_BORDER_FAINT = resolvePath('color/action/border/neutral/faint');
-const ACTION_BORDER_BOLD = safeResolve('color/action/surface/neutral/bold');
-// color.action.surface.neutral.bold isn't compiled anywhere in the token set
-// today (verified across all families, not just action). Approximate it by
-// deepening the faint border the same way the Utility Color Functions demo
-// derives hover from a measured transform, and flag it visibly in the UI.
-const ACTION_BORDER_BOLD_VALUE = ACTION_BORDER_BOLD.missing
-  ? lift(ACTION_BORDER_FAINT, -0.4, 1.15).hex
-  : ACTION_BORDER_BOLD.value;
+const TEXT_PRIMARY = ref('color/text/primary');
+const ACTION_BORDER_FAINT = ref('color/action/border/neutral/faint');
+
+// color.action.surface.neutral.bold is not compiled anywhere in the token set
+// today (checked across every family, not just action). Approximated by
+// deepening the faint border — flagged in the UI, never presented as approved.
+const ACTION_BORDER_BOLD_RAW = safeRef('color/action/surface/neutral/bold');
+const ACTION_BORDER_BOLD: TokenRef =
+  ACTION_BORDER_BOLD_RAW.status === 'missing'
+    ? {
+        path: 'color/action/surface/neutral/bold',
+        value: lift(ACTION_BORDER_FAINT.value, -0.4, 1.15),
+        status: 'missing',
+      }
+    : ACTION_BORDER_BOLD_RAW;
 
 const ACTION_RECIPE: FamilyRecipe = {
   label: 'Action — card link',
   widget: 'link',
   description:
-    'The whole card is a link to the store page. Background and border come from the neutral action pair; prominence moves from flat to raised on hover.',
+    'The whole card is a link to the store page. Background and border come from the neutral action pair; hovering the real link raises the card via CdrProminence.',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
-      surface: resolvePath('color/action/surface/neutral/trace'),
+      surface: ref('color/action/surface/neutral/trace'),
       content: TEXT_PRIMARY,
       border: ACTION_BORDER_FAINT,
-      prominence: CdrProminence.CdrProminenceFlat,
+      prominence: PROM.flat,
     },
     hover: {
-      surface: resolvePath('color/action/surface/neutral/trace'),
+      surface: ref('color/action/surface/neutral/trace'),
       content: TEXT_PRIMARY,
-      border: ACTION_BORDER_BOLD_VALUE,
-      prominence: CdrProminence.CdrProminenceRaised,
-      note: ACTION_BORDER_BOLD.missing
-        ? 'color.action.surface.neutral.bold is not compiled yet — shown as a measured placeholder, not an approved token.'
-        : undefined,
+      border: ACTION_BORDER_BOLD,
+      prominence: PROM.raised,
+      note:
+        ACTION_BORDER_BOLD.status === 'missing'
+          ? 'color.action.surface.neutral.bold is not compiled yet — shown as a measured placeholder, not an approved token.'
+          : undefined,
     },
     disabled: {
-      surface: resolvePath('color/action/surface/neutral/faint'),
-      content: mixTowardGray(TEXT_PRIMARY),
+      surface: ref('color/action/surface/neutral/faint'),
+      content: muted(TEXT_PRIMARY),
       border: ACTION_BORDER_FAINT,
-      prominence: CdrProminence.CdrProminenceFlat,
+      prominence: PROM.flat,
     },
   },
 };
@@ -120,28 +141,28 @@ const SELECTION_RECIPE: FamilyRecipe = {
   order: ['default', 'hover', 'selected', 'disabled'],
   states: {
     default: {
-      surface: resolvePath('color/selection/surface/neutral/trace'),
-      content: resolvePath('color/selection/text/neutral/faint'),
-      border: resolvePath('color/selection/border/neutral/faint'),
-      prominence: CdrProminence.CdrProminenceRaised,
+      surface: ref('color/selection/surface/neutral/trace'),
+      content: ref('color/selection/text/neutral/faint'),
+      border: ref('color/selection/border/neutral/faint'),
+      prominence: PROM.raised,
     },
     hover: {
-      surface: resolvePath('color/selection/surface/neutral/trace'),
-      content: resolvePath('color/selection/text/neutral/faint'),
-      border: resolvePath('color/selection/border/neutral/subtle'),
-      prominence: CdrProminence.CdrProminenceRaised,
+      surface: ref('color/selection/surface/neutral/trace'),
+      content: ref('color/selection/text/neutral/faint'),
+      border: ref('color/selection/border/neutral/subtle'),
+      prominence: PROM.raised,
     },
     selected: {
-      surface: resolvePath('color/selection/surface/natural'),
-      content: resolvePath('color/selection/text/trigger'),
-      border: resolvePath('color/selection/border/trigger'),
-      prominence: CdrProminence.CdrProminenceElevated,
+      surface: ref('color/selection/surface/natural'),
+      content: ref('color/selection/text/trigger'),
+      border: ref('color/selection/border/trigger'),
+      prominence: PROM.elevated,
     },
     disabled: {
-      surface: resolvePath('color/selection/surface/neutral/faint'),
-      content: mixTowardGray(resolvePath('color/selection/text/neutral/faint')),
-      border: resolvePath('color/selection/border/neutral/faint'),
-      prominence: CdrProminence.CdrProminenceRaised,
+      surface: ref('color/selection/surface/neutral/faint'),
+      content: muted(ref('color/selection/text/neutral/faint')),
+      border: ref('color/selection/border/neutral/faint'),
+      prominence: PROM.raised,
     },
   },
 };
@@ -150,26 +171,26 @@ const CONTROL_RECIPE: FamilyRecipe = {
   label: 'Control — save to My REI',
   widget: 'checkbox',
   description:
-    'A checkbox toggling favorite status. Box chrome uses control tokens. Control has no compiled "checked" fill token, so checking it only swaps the heart icon from outline to filled — flagged below as a real gap, not hidden.',
+    'A checkbox toggling favorite status. Box chrome uses control tokens. Control has no compiled "checked" fill token, so checking it swaps the heart icon via CSS — color doesn\u2019t change, which is a real gap, not a design choice.',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
-      surface: resolvePath('color/control/surface/neutral/trace'),
+      surface: ref('color/control/surface/neutral/trace'),
       content: TEXT_PRIMARY,
-      border: resolvePath('color/control/border/neutral/faint'),
-      prominence: CdrProminence.CdrProminenceFlat,
+      border: ref('color/control/border/neutral/faint'),
+      prominence: PROM.flat,
     },
     hover: {
-      surface: resolvePath('color/control/surface/neutral/subtle'),
+      surface: ref('color/control/surface/neutral/subtle'),
       content: TEXT_PRIMARY,
-      border: resolvePath('color/control/border/neutral/faint'),
-      prominence: CdrProminence.CdrProminenceFlat,
+      border: ref('color/control/border/neutral/faint'),
+      prominence: PROM.flat,
     },
     disabled: {
-      surface: resolvePath('color/control/surface/neutral/faint'),
-      content: mixTowardGray(TEXT_PRIMARY),
-      border: resolvePath('color/control/border/neutral/faint'),
-      prominence: CdrProminence.CdrProminenceFlat,
+      surface: ref('color/control/surface/neutral/faint'),
+      content: muted(TEXT_PRIMARY),
+      border: ref('color/control/border/neutral/faint'),
+      prominence: PROM.flat,
     },
   },
 };
@@ -180,13 +201,9 @@ const RECIPES: Record<string, FamilyRecipe> = {
   control: CONTROL_RECIPE,
 };
 // Loaded from the recipe config above — every value in it is a resolved
-// compiled token (or an explicitly flagged placeholder) rather than a mocked
-// string, so this list can't silently drift from what's actually shipped.
+// compiled token (or an explicitly flagged placeholder), so this list can't
+// silently drift from what's actually shipped.
 const FAMILIES = Object.keys(RECIPES);
-
-function styleFor(recipe: FamilyRecipe, stateName: string): StateSpec {
-  return recipe.states[stateName] ?? recipe.states[recipe.order[0]];
-}
 
 function badge(pass: boolean | 'warn', label: string): string {
   const cls = pass === 'warn' ? 'warn' : pass ? 'pass' : 'fail';
@@ -194,8 +211,6 @@ function badge(pass: boolean | 'warn', label: string): string {
 }
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-
-// ─── Icons ────────────────────────────────────────────────────────────────────
 
 const HEART_OUTLINE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
 const HEART_FILLED = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
@@ -206,99 +221,119 @@ const PHOTO_PLACEHOLDER = `
   <div class="rc-windows"></div>
 `;
 
-// ─── Card rendering ─────────────────────────────────────────────────────────
-// All three widgets render together, using their own default-state tokens.
-// The widget for the family selected in the dropdown reflects the state
-// chosen via the state-nav buttons; the other two stay at rest so it's clear
-// which affordance is under inspection.
+// ─── Card ─────────────────────────────────────────────────────────────────────
+// Rendered once. CSS custom properties carry every state's real token values;
+// genuine :hover / :checked / :disabled / [aria-disabled] selectors (defined
+// in `chrome` below) do the state switching — no JS re-render involved. The
+// shadow layer is deliberately kept OUTSIDE the overflow:hidden photo clip,
+// otherwise the prominence box-shadow gets clipped away and never appears.
 
-function renderCard(
-  activeFamily: string,
-  activeState: string,
-  showBorder: boolean,
-  heartChecked: boolean,
-  storeSelected: boolean,
-): string {
-  const actionState = styleFor(ACTION_RECIPE, activeFamily === 'action' ? activeState : 'default');
-  const selectionState = styleFor(
-    SELECTION_RECIPE,
-    activeFamily === 'selection' ? activeState : storeSelected ? 'selected' : 'default',
-  );
-  const controlState = styleFor(
-    CONTROL_RECIPE,
-    activeFamily === 'control' ? activeState : 'default',
-  );
+function cardVars(): string {
+  const a = ACTION_RECIPE.states;
+  const s = SELECTION_RECIPE.states;
+  const c = CONTROL_RECIPE.states;
+  const vars: Record<string, string> = {
+    '--a-surface': a.default.surface.value,
+    '--a-content': a.default.content.value,
+    '--a-border': a.default.border.value,
+    '--a-border-hover': a.hover.border.value,
+    '--a-shadow': a.default.prominence.value,
+    '--a-shadow-hover': a.hover.prominence.value,
+    '--a-surface-disabled': a.disabled.surface.value,
+    '--a-content-disabled': a.disabled.content.value,
 
-  const actionBorder = showBorder ? actionState.border : 'transparent';
+    '--s-surface': s.default.surface.value,
+    '--s-content': s.default.content.value,
+    '--s-border': s.default.border.value,
+    '--s-border-hover': s.hover.border.value,
+    '--s-shadow': s.default.prominence.value,
+    '--s-surface-selected': s.selected.surface.value,
+    '--s-content-selected': s.selected.content.value,
+    '--s-border-selected': s.selected.border.value,
+    '--s-shadow-selected': s.selected.prominence.value,
+    '--s-surface-disabled': s.disabled.surface.value,
+    '--s-content-disabled': s.disabled.content.value,
 
+    '--c-surface': c.default.surface.value,
+    '--c-content': c.default.content.value,
+    '--c-border': c.default.border.value,
+    '--c-surface-hover': c.hover.surface.value,
+    '--c-surface-disabled': c.disabled.surface.value,
+    '--c-content-disabled': c.disabled.content.value,
+  };
+  return Object.entries(vars)
+    .map(([k, v]) => `${k}: ${v};`)
+    .join(' ');
+}
+
+function renderCard(): string {
   return `
     <div class="rc-scene">
-      <div class="rc-card">
-        <a
-          class="rc-overlay"
-          href="#"
-          aria-label="Visit store page"
-          onclick="return false;"
-          style="border: 2px solid ${actionBorder}; box-shadow: ${actionState.prominence};"
-        ></a>
-        <div class="rc-photo">${PHOTO_PLACEHOLDER}</div>
-        <label class="rc-chip" style="background:${controlState.surface};color:${controlState.content};border:2px solid ${controlState.border};box-shadow:${controlState.prominence};">
-          <input type="checkbox" class="sr-only" data-role="fav-toggle" ${heartChecked ? 'checked' : ''} aria-label="Save to My REI" />
-          <span class="rc-chip-icon">${heartChecked ? HEART_FILLED : HEART_OUTLINE}</span>
+      <div class="rc-card" style="${cardVars()}">
+        <div class="rc-card-clip">
+          <div class="rc-photo">${PHOTO_PLACEHOLDER}</div>
+          <a class="rc-overlay" href="#" aria-label="Visit store page" onclick="return false;"></a>
+          <div class="rc-info">
+            <p class="rc-name">REI Example</p>
+            <p class="rc-detail">(206) 555-0142</p>
+            <p class="rc-detail">400 Occidental Ave S, Seattle, WA 98104</p>
+            <p class="rc-hours"><span class="rc-dot"></span> Open until 9pm today</p>
+          </div>
+        </div>
+        <label class="rc-chip">
+          <input type="checkbox" class="sr-only" data-widget="control" aria-label="Save to My REI" />
+          <span class="rc-chip-icon rc-chip-icon-outline">${HEART_OUTLINE}</span>
+          <span class="rc-chip-icon rc-chip-icon-filled">${HEART_FILLED}</span>
           <span>My REI</span>
         </label>
-        <div class="rc-info" style="background:${actionState.surface};color:${actionState.content};">
-          <p class="rc-name">REI Example</p>
-          <p class="rc-detail">(206) 555-0142</p>
-          <p class="rc-detail">400 Occidental Ave S, Seattle, WA 98104</p>
-          <p class="rc-hours"><span class="rc-dot"></span> Open until 9pm today</p>
-        </div>
       </div>
-      <label class="rc-radio" style="box-shadow:${selectionState.prominence};">
-        <input type="radio" name="cc-store-select" class="sr-only" data-role="store-radio" ${storeSelected ? 'checked' : ''} />
-        <span class="rc-radio-dot" style="background:${selectionState.surface};border:2px solid ${selectionState.border};">
-          ${storeSelected ? `<span class="rc-radio-dot-fill" style="background:${selectionState.content};"></span>` : ''}
-        </span>
-        <span class="rc-radio-label" style="color:${selectionState.content};">Set as my store</span>
+      <label class="rc-radio">
+        <input type="radio" name="cc-store-select" class="sr-only" data-widget="selection" />
+        <span class="rc-radio-dot"></span>
+        <span class="rc-radio-label">Set as my store</span>
       </label>
     </div>
   `;
 }
 
+// ─── Inspector (table + generated CSS) ─────────────────────────────────────────
+// This part IS driven by JS — it's documentation of the currently selected
+// state, not the live widget.
+
+function statusBadge(tokenRef: TokenRef): string {
+  if (tokenRef.status === 'missing') return badge('warn', 'not compiled');
+  if (tokenRef.status === 'muted') return badge('warn', 'derived, not a token');
+  return badge(true, 'compiled token');
+}
+
 function renderTable(recipe: FamilyRecipe, activeState: string): string {
   const rows = recipe.order
     .map((name) => {
-      const st = styleFor(recipe, name);
-      const ratio = contrastRatio(st.content, st.surface);
-      const contentCheck =
-        name === 'disabled'
-          ? badge(ratio >= 3 ? 'warn' : false, `${ratio.toFixed(1)}:1`)
-          : badge(ratio >= 4.5, `${ratio.toFixed(1)}:1`);
+      const st = recipe.states[name];
       return `<tr class="${name === activeState ? 'active' : ''}">
         <td class="cc-state">${name}</td>
-        <td><span class="cc-chip-swatch" style="background:${st.surface}"></span><code>${st.surface}</code></td>
-        <td><code>${st.content}</code></td>
-        <td><code>${st.border}</code></td>
-        <td>${contentCheck}</td>
-        <td>${st.note ? badge('warn', 'placeholder') : badge(true, 'compiled token')}</td>
+        <td><span class="cc-chip-swatch" style="background:${st.surface.value}"></span><code>${st.surface.path}</code> ${statusBadge(st.surface)}</td>
+        <td><code>${st.content.path}</code> ${statusBadge(st.content)}</td>
+        <td><code>${st.border.path}</code> ${statusBadge(st.border)}</td>
+        <td><code>CdrProminence.${capitalize(st.prominence.name)}</code></td>
       </tr>`;
     })
     .join('');
   return `<table class="cc-table">
-    <thead><tr><th>State</th><th>Surface</th><th>Content</th><th>Border</th><th>Content ↔ surface</th><th>Token status</th></tr></thead>
+    <thead><tr><th>State</th><th>Surface token</th><th>Content token</th><th>Border token</th><th>Prominence token</th></tr></thead>
     <tbody>${rows}</tbody>
   </table>`;
 }
 
 const WIDGET_SELECTOR: Record<string, string> = {
-  action: '.rc-overlay, .rc-info',
+  action: '.rc-overlay',
   selection: '.rc-radio-dot',
   control: '.rc-chip',
 };
 
 function renderComposition(family: string, activeState: string): string {
   const recipe = RECIPES[family];
-  const st = styleFor(recipe, activeState);
+  const st = recipe.states[activeState];
   const stateNav = recipe.order
     .map(
       (name) =>
@@ -307,19 +342,25 @@ function renderComposition(family: string, activeState: string): string {
     .join('');
 
   const cssBlock = `${WIDGET_SELECTOR[family]}[data-state="${activeState}"] {
-  background: ${st.surface};
-  color: ${st.content};
-  border-color: ${st.border};
-  box-shadow: ${st.prominence};
+  background: ${st.surface.value}; /* ${st.surface.path} */
+  color: ${st.content.value}; /* ${st.content.path} */
+  border-color: ${st.border.value}; /* ${st.border.path} */
+  box-shadow: ${st.prominence.value}; /* CdrProminence.${capitalize(st.prominence.name)} */
 }`;
 
   return `
     <div class="cc-recipe">
       <strong>${recipe.label}</strong> — ${recipe.description}
       ${st.note ? `<div class="cc-cue">⚠ ${st.note}</div>` : ''}
+      <div class="cc-hint">Try it live above: ${
+        recipe.widget === 'link'
+          ? 'hover the card, or tab to it and check focus.'
+          : recipe.widget === 'radio'
+            ? 'hover or click "Set as my store".'
+            : 'hover or click the "My REI" heart.'
+      } The buttons below jump the table to that state\u2019s exact tokens — <code>disabled</code>/<code>selected</code> also apply real <code>disabled</code>/<code>checked</code> attributes so you can see them.</div>
     </div>
     <div class="cc-state-nav">${stateNav}</div>
-    <div id="cc-card-slot">${renderCard(family, activeState, true, false, false)}</div>
     ${renderTable(recipe, activeState)}
     <div class="cc-css"><pre>${cssBlock}</pre></div>
   `;
@@ -354,13 +395,13 @@ const chrome = `
       padding: 6px 10px; border: 1px solid var(--cedar-warm-300); border-radius: 6px;
       font-family: Pressura, monospace; font-size: 12px; background: white;
     }
-    .cc-toggle { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--cedar-warm-700); }
     .cc-recipe {
       background: var(--cedar-warm-50); border: 1px solid var(--cedar-warm-200);
       border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;
       font-size: 13px; color: var(--cedar-warm-800); line-height: 1.5;
     }
     .cc-cue { margin-top: 6px; font-size: 12px; color: #856404; }
+    .cc-hint { margin-top: 8px; font-size: 12px; color: var(--cedar-warm-600); }
     .cc-state-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
     .cc-state-btn {
       font-family: Pressura, monospace; font-size: 11px; font-weight: 600;
@@ -369,15 +410,28 @@ const chrome = `
       background: white; border: 1px solid var(--cedar-warm-300); color: var(--cedar-warm-700);
     }
     .cc-state-btn.active { background: var(--cedar-warm-1000); color: white; border-color: var(--cedar-warm-1000); }
+
+    /* ── Scene ── */
     .rc-scene {
       display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;
-      padding: 24px; border: 1px solid var(--cedar-warm-200); border-radius: 12px;
+      padding: 32px; border: 1px solid var(--cedar-warm-200); border-radius: 12px;
       margin-bottom: 24px; background: var(--cedar-warm-50);
     }
+
+    /* ── Action: card link ──
+       Shadow lives on .rc-card (never clipped); photo clipping lives on a
+       separate inner wrapper so the box-shadow is never cut off. */
     .rc-card {
-      position: relative; width: 300px; border-radius: 12px; overflow: hidden;
-      background: white;
+      position: relative; width: 300px; border-radius: 12px; background: white;
+      box-shadow: var(--a-shadow);
+      transition: box-shadow 0.18s ease;
     }
+    .rc-card:has(.rc-overlay:hover),
+    .rc-card:has(.rc-overlay:focus-visible) {
+      box-shadow: var(--a-shadow-hover);
+    }
+    .rc-card:has(.rc-overlay[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
+    .rc-card-clip { border-radius: 12px; overflow: hidden; }
     .rc-photo { position: relative; height: 200px; overflow: hidden; }
     .rc-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
     .rc-building {
@@ -391,7 +445,26 @@ const chrome = `
                          repeating-linear-gradient(0deg, rgba(255,255,255,0.35) 0 12%, transparent 12% 24%);
       opacity: 0.5;
     }
-    .rc-overlay { position: absolute; inset: 0; border-radius: 12px; z-index: 1; transition: box-shadow 0.15s, border-color 0.15s; }
+    .rc-overlay {
+      position: absolute; inset: 0; border-radius: 12px; z-index: 1;
+      border: 2px solid var(--a-border);
+      transition: border-color 0.18s ease;
+    }
+    .rc-overlay:hover, .rc-overlay:focus-visible { border-color: var(--a-border-hover); }
+    .rc-overlay[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
+    .rc-info {
+      position: relative; z-index: 0; padding: 14px 16px;
+      font-family: Graphik, 'Helvetica Neue', sans-serif;
+      background: var(--a-surface); color: var(--a-content);
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+    .rc-overlay[aria-disabled="true"] ~ .rc-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
+    .rc-name { margin: 0 0 4px; font-family: Stuart, 'Stuart fallback', Georgia, serif; font-size: 17px; font-weight: 600; }
+    .rc-detail { margin: 0 0 2px; font-size: 12px; text-decoration: underline; }
+    .rc-hours { margin: 8px 0 0; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+    .rc-dot { width: 8px; height: 8px; border-radius: 50%; background: #3a9c50; display: inline-block; }
+
+    /* ── Control: My REI checkbox ── */
     .sr-only {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
@@ -401,30 +474,49 @@ const chrome = `
       display: inline-flex; align-items: center; gap: 6px;
       padding: 6px 12px; border-radius: 999px; cursor: pointer;
       font-family: Graphik, 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 600;
+      background: var(--c-surface); color: var(--c-content); border: 2px solid var(--c-border);
+      transition: background 0.15s ease;
     }
-    .rc-chip:has(:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
-    .rc-info {
-      position: relative; z-index: 1; padding: 14px 16px;
-      font-family: Graphik, 'Helvetica Neue', sans-serif;
-    }
-    .rc-name { margin: 0 0 4px; font-family: Stuart, 'Stuart fallback', Georgia, serif; font-size: 17px; font-weight: 600; }
-    .rc-detail { margin: 0 0 2px; font-size: 12px; text-decoration: underline; }
-    .rc-hours { margin: 8px 0 0; font-size: 12px; display: flex; align-items: center; gap: 6px; }
-    .rc-dot { width: 8px; height: 8px; border-radius: 50%; background: #3a9c50; display: inline-block; }
+    .rc-chip:has(input:hover) { background: var(--c-surface-hover); }
+    .rc-chip:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
+    .rc-chip:has(input:disabled) { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
+    .rc-chip-icon-filled { display: none; }
+    .rc-chip:has(input:checked) .rc-chip-icon-outline { display: none; }
+    .rc-chip:has(input:checked) .rc-chip-icon-filled { display: inline-flex; }
+
+    /* ── Selection: set-as-my-store radio ── */
     .rc-radio {
       display: flex; align-items: center; gap: 10px; cursor: pointer;
-      border-radius: 8px; padding: 4px;
+      background: white; padding: 10px 14px; border-radius: 10px;
+      box-shadow: var(--s-shadow);
+      transition: box-shadow 0.18s ease;
     }
-    .rc-radio:has(:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
+    .rc-radio:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
+    .rc-radio:has(input:checked) { box-shadow: var(--s-shadow-selected); }
     .rc-radio-dot {
-      width: 20px; height: 20px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--s-surface); border: 2px solid var(--s-border);
+      transition: all 0.15s ease;
     }
-    .rc-radio-dot-fill { width: 10px; height: 10px; border-radius: 50%; }
-    .rc-radio-label { font-family: Graphik, 'Helvetica Neue', sans-serif; font-size: 13px; }
+    .rc-radio:hover .rc-radio-dot { border-color: var(--s-border-hover); }
+    .rc-radio-dot::after {
+      content: ''; width: 10px; height: 10px; border-radius: 50%;
+      background: var(--s-content-selected); opacity: 0; transition: opacity 0.15s ease;
+    }
+    .rc-radio:has(input:checked) .rc-radio-dot {
+      background: var(--s-surface-selected); border-color: var(--s-border-selected);
+    }
+    .rc-radio:has(input:checked) .rc-radio-dot::after { opacity: 1; }
+    .rc-radio-label { font-family: Graphik, 'Helvetica Neue', sans-serif; font-size: 13px; color: var(--s-content); }
+    .rc-radio:has(input:checked) .rc-radio-label { color: var(--s-content-selected); }
+    .rc-radio:has(input:disabled) { cursor: not-allowed; }
+    .rc-radio:has(input:disabled) .rc-radio-dot { background: var(--s-surface-disabled); }
+    .rc-radio:has(input:disabled) .rc-radio-label { color: var(--s-content-disabled); }
+
     .cc-badge {
       font-family: Pressura, monospace; font-size: 10px; font-weight: 600;
-      padding: 2px 8px; border-radius: 3px; display: inline-block; white-space: nowrap;
+      padding: 2px 8px; border-radius: 3px; display: inline-block; white-space: nowrap; margin-left: 4px;
     }
     .cc-badge.pass { background: #d4edda; color: #155724; }
     .cc-badge.warn { background: #fff3cd; color: #856404; }
@@ -482,9 +574,10 @@ export const ComponentComposer: Story = {
         </div>
         <p style="margin-bottom: 24px; color: var(--cedar-warm-700); line-height: 1.5; max-width: 780px;">
           Use this when Cedar has no component for your pattern yet. All three widgets on this
-          store card are real: the card is a native link, "Set as my store" is a radio, and
-          "My REI" is a checkbox. Every color is resolved live from compiled tokens — pick a
-          family to inspect the states it actually declares.
+          store card are real and interactive: the card is a native link, "Set as my store" is a
+          radio, and "My REI" is a checkbox. Every color is a resolved token, and every state
+          below is driven by real <code>:hover</code>/<code>:checked</code>/<code>:disabled</code>
+          CSS — not a JS simulation.
         </p>
 
         <div class="cc-controls">
@@ -492,18 +585,19 @@ export const ComponentComposer: Story = {
             <label for="cc-family">Family</label>
             <select id="cc-family">${familyOptions(DEFAULTS.family)}</select>
           </div>
-          <label class="cc-toggle"><input type="checkbox" id="cc-border-toggle" checked /> Show link border</label>
         </div>
 
-        <div id="cc-output">${renderComposition(DEFAULTS.family, DEFAULTS.state)}</div>
+        ${renderCard()}
+
+        <div id="cc-inspector">${renderComposition(DEFAULTS.family, DEFAULTS.state)}</div>
 
         <div class="cc-notes">
           <h3>What this proves — and what it doesn't</h3>
           <ul>
-            <li><strong>Every color is a real, resolved token.</strong> Nothing here is hand-typed hex; each value comes from <code>resolvePath()</code> against the compiled foundations at load time, so this story breaks loudly if a path stops resolving.</li>
-            <li><strong>Real HTML patterns, not lookalikes.</strong> The card is an <code>&lt;a&gt;</code>, "Set as my store" is an <code>&lt;input type="radio"&gt;</code>, "My REI" is an <code>&lt;input type="checkbox"&gt;</code> — keyboard and screen reader behavior come from the browser, not from ARIA bolted onto a div.</li>
-            <li><strong>Action and selection move in opposite prominence directions.</strong> Action starts flat and raises on hover; selection starts raised and elevates once chosen — the shadow tokens (<code>CdrProminence</code>) are real, not simulated.</li>
-            <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (flagged inline when you view Action → Hover), and the <code>control</code> family has no "checked" fill token at all — the heart currently only changes via icon swap, not color, when checked.</li>
+            <li><strong>Every color is a real, resolved token.</strong> Values come from <code>resolvePath()</code> against the compiled foundations at load time; the table shows the token <em>path</em>, not just its hex, because the path is what a dev actually copies.</li>
+            <li><strong>States are real, not simulated.</strong> Hover the card, focus it with Tab, check the radio, check the checkbox — the CSS in the "Generated CSS" panel is exactly the rule making that happen, driven by <code>:hover</code>/<code>:focus-visible</code>/<code>:checked</code>/<code>:disabled</code>/<code>[aria-disabled]</code>.</li>
+            <li><strong>Action and selection move in opposite prominence directions.</strong> Action starts flat and raises on hover; selection starts raised and elevates once chosen — both are real <code>CdrProminence</code> box-shadow values, applied on an element that isn't clipped by <code>overflow: hidden</code> (a common reason a shadow silently disappears).</li>
+            <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover), and the <code>control</code> family has no "checked" fill token — the heart only changes via icon swap, not color, when checked.</li>
           </ul>
         </div>
       </div>
@@ -512,58 +606,48 @@ export const ComponentComposer: Story = {
 
   play: async ({ canvasElement }) => {
     const familyEl = canvasElement.querySelector<HTMLSelectElement>('#cc-family');
-    const borderToggle = canvasElement.querySelector<HTMLInputElement>('#cc-border-toggle');
-    const output = canvasElement.querySelector<HTMLElement>('#cc-output');
-    if (!familyEl || !borderToggle || !output) return;
+    const inspector = canvasElement.querySelector<HTMLElement>('#cc-inspector');
+    if (!familyEl || !inspector) return;
 
     let activeState = DEFAULTS.state;
-    let heartChecked = false;
-    let storeSelected = false;
 
-    const renderCardInto = () => {
-      const slot = output.querySelector<HTMLElement>('#cc-card-slot');
-      if (slot) {
-        slot.outerHTML = `<div id="cc-card-slot">${renderCard(
-          familyEl.value,
-          activeState,
-          borderToggle.checked,
-          heartChecked,
-          storeSelected,
-        )}</div>`;
+    const widgetInput = (family: string): HTMLInputElement | HTMLAnchorElement | null => {
+      if (family === 'action') return canvasElement.querySelector<HTMLAnchorElement>('.rc-overlay');
+      return canvasElement.querySelector<HTMLInputElement>(`input[data-widget="${family}"]`);
+    };
+
+    // Reflect the chosen state onto the real widget using real attributes —
+    // disabled/checked are genuine DOM state, not a CSS-class simulation.
+    const applyRealState = (family: string, state: string) => {
+      const el = widgetInput(family);
+      if (!el) return;
+      if (family === 'action' && el instanceof HTMLAnchorElement) {
+        el.toggleAttribute('aria-disabled', state === 'disabled');
+        if (state === 'disabled') el.setAttribute('tabindex', '-1');
+        else el.removeAttribute('tabindex');
+      } else if (el instanceof HTMLInputElement) {
+        el.disabled = state === 'disabled';
+        if (family === 'selection') el.checked = state === 'selected';
       }
     };
 
     const render = () => {
-      output.innerHTML = renderComposition(familyEl.value, activeState);
-      renderCardInto();
+      inspector.innerHTML = renderComposition(familyEl.value, activeState);
+      applyRealState(familyEl.value, activeState);
     };
 
     familyEl.addEventListener('change', () => {
       activeState = DEFAULTS.state;
       render();
     });
-    borderToggle.addEventListener('change', renderCardInto);
 
-    output.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
-      const stateBtn = target.closest<HTMLButtonElement>('.cc-state-btn');
-      if (stateBtn?.dataset.state) {
-        activeState = stateBtn.dataset.state;
-        render();
-        return;
-      }
-      const favToggle = target.closest<HTMLElement>('[data-role="fav-toggle"]');
-      if (favToggle) {
-        heartChecked = !heartChecked;
-        renderCardInto();
-        return;
-      }
-      const storeRadio = target.closest<HTMLElement>('[data-role="store-radio"]');
-      if (storeRadio) {
-        storeSelected = true;
-        if (familyEl.value === 'selection') activeState = 'selected';
-        render();
-      }
+    inspector.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.cc-state-btn');
+      if (!btn?.dataset.state) return;
+      activeState = btn.dataset.state;
+      render();
     });
+
+    render();
   },
 };
