@@ -474,6 +474,35 @@ const chrome = `
       margin: 0; font-size: 12px; line-height: 1.6; overflow-x: auto;
       font-family: 'Monaco', 'Menlo', monospace; color: var(--cedar-warm-900);
     }
+    .vr-handoff {
+      background: var(--cedar-cool-50, #f0f6fa); border: 1px solid var(--cedar-warm-200);
+      border-left: 4px solid #3d6db9; border-radius: 12px; padding: 24px; margin-top: 32px;
+    }
+    .vr-handoff h3 {
+      font-family: Stuart, 'Stuart fallback', Georgia, serif; font-size: 18px;
+      font-weight: 600; color: var(--cedar-warm-1000); margin: 0 0 12px 0;
+    }
+    .vr-handoff h4 {
+      font-family: Pressura, monospace; font-size: 12px; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--cedar-warm-700); margin: 20px 0 8px 0;
+    }
+    .vr-handoff p, .vr-handoff li { color: var(--cedar-warm-800); line-height: 1.6; font-size: 14px; }
+    .vr-handoff ul { margin: 0; padding-left: 20px; }
+    .vr-handoff li { margin-bottom: 8px; }
+    .vr-handoff-table {
+      width: 100%; border-collapse: collapse; margin: 16px 0;
+      background: white; border: 1px solid var(--cedar-warm-200);
+      border-radius: 8px; overflow: hidden; font-size: 13px;
+    }
+    .vr-handoff-table th {
+      text-align: left; padding: 10px 12px; background: var(--cedar-warm-100);
+      font-family: Pressura, monospace; font-size: 10px; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--cedar-warm-700);
+    }
+    .vr-handoff-table td {
+      padding: 10px 12px; border-top: 1px solid var(--cedar-warm-200);
+      color: var(--cedar-warm-800); line-height: 1.5; vertical-align: top;
+    }
   </style>
 `;
 
@@ -605,6 +634,55 @@ $state-recipes: (
             <li><strong>Any compatible base inherits the relationship:</strong> applying the transform to a different approved surface reproduces the same state pattern without new tokens. The arbitrary-base picker demonstrates the limit — a new base only resets the <em>surface</em>; content is re-resolved by contrast, but border and focus roles are separate inputs that still need an approved token.</li>
             <li><strong>Focus is an indicator.</strong> Hover/pressed/selected shift surface color; focus adds a ring so affordance is not lost on adjacent colors.</li>
             <li><strong>Disabled preserves readability.</strong> Lightness is mixed toward the context surface and chroma is reduced — blind alpha can leave content illegible.</li>
+          </ul>
+        </div>
+
+        <div class="vr-handoff">
+          <h3>Handoff notes — what this should become in Cedar</h3>
+          <p>
+            This page is the proof of concept. The target is a <code>CdrButton</code> demo in the
+            <strong>Cedar Storybook</strong> (the component repo) that maps the new action palette
+            onto the real component. Demo controls map to component API like this:
+          </p>
+          <table class="vr-handoff-table">
+            <thead>
+              <tr><th>This demo</th><th>Becomes in Cedar</th><th>Why</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Intent</strong> (action / control / selection)</td>
+                <td>An interaction-pattern prop on the component</td>
+                <td>Same button, different behavioral contract — this is the interesting one. It suggests components could support multiple interaction patterns via a prop rather than per-variant hardcoding.</td>
+              </tr>
+              <tr>
+                <td><strong>Surface base token</strong></td>
+                <td>The base component variant — primary, secondary, sale</td>
+                <td>Each real variant ships with its own expected stateful variant as the default. Use Cedar's real stateful patterns, not invented ones.</td>
+              </tr>
+              <tr>
+                <td><strong>Recipe strength</strong> (subtle / balanced / strong)</td>
+                <td>A stateful-variant prop exposing only named patterns — e.g. <code>nudge</code>, <code>push</code></td>
+                <td>Devs pick from approved, named interaction patterns — never a free-form intensity value.</td>
+              </tr>
+              <tr>
+                <td><strong>Arbitrary base</strong> (color picker)</td>
+                <td>Removed — bases restricted to Cedar-approved primitives</td>
+                <td>The picker exists here only to prove the transform generalizes. In product code, a base is always an approved option/semantic token.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Real stateful patterns to support</h4>
+          <ul>
+            <li><strong>Primary button:</strong> the solid → faint surface math demonstrated here (measured from <code>action.border.brand</code> ↔ <code>action.surface.brand.faint</code>).</li>
+            <li><strong>Secondary:</strong> trace surface + accent border/content — its hover reuses the same faint transform on the surface.</li>
+            <li><strong>Sale:</strong> same relationship structure, measured from the approved sale pair (<code>action.text.sale</code> ↔ <code>action.surface.sale.faint</code>).</li>
+          </ul>
+          <h4>Rules that carry over unchanged</h4>
+          <ul>
+            <li>Focus stays a ring — never a surface recolor.</li>
+            <li>Content resolves per state by contrast — no hardcoded text color.</li>
+            <li>Disabled mixes toward the context surface and drains chroma.</li>
+            <li>Recipes come from measured deltas between approved token pairs — component authors never tune OKLCH values by hand.</li>
           </ul>
         </div>
       </div>
