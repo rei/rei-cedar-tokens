@@ -70,32 +70,55 @@ function lift(hex: string, dL: number, cScale: number): string {
 }
 
 // ─── Token references ────────────────────────────────────────────────────────
-// Every value carries its own canonical path so the demo can show *names*,
-// not just resolved colors — that's the artifact a dev actually copies.
+// Every value carries its own canonical path AND the actual shipped CSS custom
+// property, so the demo — and the generated code sample — can reference
+// `var(--cdr-...)` directly instead of a baked-in resolved color.
 
-type TokenRef = { path: string; value: string; status: 'token' | 'muted' | 'missing' };
+// Verified against the compiled CSS: every family drops "color" from its var
+// name (--cdr-action-surface-neutral-trace) EXCEPT the root `text` family,
+// which is disambiguated as --cdr-color-text-* to avoid colliding with the
+// typography tokens' own --cdr-text-* namespace (e.g. --cdr-text-body-300-size).
+function cssVarForPath(path: string): string {
+  const [, family, ...rest] = path.split('/');
+  const segments = family === 'text' ? ['color', family, ...rest] : [family, ...rest];
+  return `--cdr-${segments.join('-')}`;
+}
+
+type TokenRef = {
+  path: string;
+  value: string;
+  cssVar: string;
+  status: 'token' | 'muted' | 'missing';
+};
 
 function ref(path: string): TokenRef {
-  return { path, value: resolvePath(path), status: 'token' };
+  return { path, value: resolvePath(path), cssVar: cssVarForPath(path), status: 'token' };
 }
 
 // Disabled content is softened for legibility — not a distinct approved
 // token, so it's labeled "muted" rather than presented as if it were one.
+// The generated CSS still credits the source var; the resolved hex is the
+// only part that's derived, not the token identity.
 function muted(base: TokenRef): TokenRef {
-  return { path: base.path, value: lift(base.value, 0, 0.55), status: 'muted' };
+  return {
+    path: base.path,
+    value: lift(base.value, 0, 0.55),
+    cssVar: base.cssVar,
+    status: 'muted',
+  };
 }
 
 function safeRef(path: string): TokenRef {
   try {
     return ref(path);
   } catch {
-    return { path, value: '', status: 'missing' };
+    return { path, value: '', cssVar: cssVarForPath(path), status: 'missing' };
   }
 }
 
 // ─── Recipes ──────────────────────────────────────────────────────────────────
 
-type Prominence = { name: string; value: string };
+type Prominence = { name: string; value: string; cssVar: string };
 type StateSpec = {
   surface: TokenRef;
   content: TokenRef;
@@ -112,9 +135,13 @@ type FamilyRecipe = {
 };
 
 const PROM = {
-  flat: { name: 'flat', value: t.CdrProminenceFlat },
-  raised: { name: 'raised', value: t.CdrProminenceRaised },
-  elevated: { name: 'elevated', value: t.CdrProminenceElevated },
+  flat: { name: 'flat', value: t.CdrProminenceFlat, cssVar: '--cdr-prominence-flat' },
+  raised: { name: 'raised', value: t.CdrProminenceRaised, cssVar: '--cdr-prominence-raised' },
+  elevated: {
+    name: 'elevated',
+    value: t.CdrProminenceElevated,
+    cssVar: '--cdr-prominence-elevated',
+  },
 };
 
 const TEXT_PRIMARY = ref('color/text/primary');
@@ -129,6 +156,7 @@ const ACTION_BORDER_BOLD: TokenRef =
     ? {
         path: 'color/action/surface/neutral/bold',
         value: lift(ACTION_BORDER_FAINT.value, -0.4, 1.15),
+        cssVar: cssVarForPath('color/action/surface/neutral/bold'),
         status: 'missing',
       }
     : ACTION_BORDER_BOLD_RAW;
@@ -262,38 +290,46 @@ const PHOTO_PLACEHOLDER = `
 // shadow layer is deliberately kept OUTSIDE the overflow:hidden photo clip,
 // otherwise the prominence box-shadow gets clipped away and never appears.
 
+// A real, unmodified token chains straight through to its shipped CSS custom
+// property (var(--cdr-action-surface-neutral-trace)) so devtools and the
+// generated CSS panel show the actual variable, not a baked-in color. Muted
+// (derived-for-legibility) and missing (not-yet-compiled) values fall back to
+// the computed literal since there's no matching shipped var to point at.
+const refExpr = (r: TokenRef): string => (r.status === 'token' ? `var(${r.cssVar})` : r.value);
+const promExpr = (p: Prominence): string => `var(${p.cssVar})`;
+
 function cardVars(): string {
   const a = ACTION_RECIPE.states;
   const s = SELECTION_RECIPE.states;
   const c = CONTROL_RECIPE.states;
   const vars: Record<string, string> = {
-    '--a-surface': a.default.surface.value,
-    '--a-content': a.default.content.value,
-    '--a-border': a.default.border.value,
-    '--a-border-hover': a.hover.border.value,
-    '--a-shadow': a.default.prominence.value,
-    '--a-shadow-hover': a.hover.prominence.value,
-    '--a-surface-disabled': a.disabled.surface.value,
-    '--a-content-disabled': a.disabled.content.value,
+    '--a-surface': refExpr(a.default.surface),
+    '--a-content': refExpr(a.default.content),
+    '--a-border': refExpr(a.default.border),
+    '--a-border-hover': refExpr(a.hover.border),
+    '--a-shadow': promExpr(a.default.prominence),
+    '--a-shadow-hover': promExpr(a.hover.prominence),
+    '--a-surface-disabled': refExpr(a.disabled.surface),
+    '--a-content-disabled': refExpr(a.disabled.content),
 
-    '--s-surface': s.default.surface.value,
-    '--s-content': s.default.content.value,
-    '--s-border': s.default.border.value,
-    '--s-border-hover': s.hover.border.value,
-    '--s-shadow': s.default.prominence.value,
-    '--s-surface-selected': s.selected.surface.value,
-    '--s-content-selected': s.selected.content.value,
-    '--s-border-selected': s.selected.border.value,
-    '--s-shadow-selected': s.selected.prominence.value,
-    '--s-surface-disabled': s.disabled.surface.value,
-    '--s-content-disabled': s.disabled.content.value,
+    '--s-surface': refExpr(s.default.surface),
+    '--s-content': refExpr(s.default.content),
+    '--s-border': refExpr(s.default.border),
+    '--s-border-hover': refExpr(s.hover.border),
+    '--s-shadow': promExpr(s.default.prominence),
+    '--s-surface-selected': refExpr(s.selected.surface),
+    '--s-content-selected': refExpr(s.selected.content),
+    '--s-border-selected': refExpr(s.selected.border),
+    '--s-shadow-selected': promExpr(s.selected.prominence),
+    '--s-surface-disabled': refExpr(s.disabled.surface),
+    '--s-content-disabled': refExpr(s.disabled.content),
 
-    '--c-surface': c.default.surface.value,
-    '--c-content': c.default.content.value,
-    '--c-border': c.default.border.value,
-    '--c-surface-hover': c.hover.surface.value,
-    '--c-surface-disabled': c.disabled.surface.value,
-    '--c-content-disabled': c.disabled.content.value,
+    '--c-surface': refExpr(c.default.surface),
+    '--c-content': refExpr(c.default.content),
+    '--c-border': refExpr(c.default.border),
+    '--c-surface-hover': refExpr(c.hover.surface),
+    '--c-surface-disabled': refExpr(c.disabled.surface),
+    '--c-content-disabled': refExpr(c.disabled.content),
   };
   return Object.entries(vars)
     .map(([k, v]) => `${k}: ${v};`)
@@ -340,21 +376,27 @@ function statusBadge(tokenRef: TokenRef): string {
   return badge(true, 'compiled token');
 }
 
+function tokenCell(r: TokenRef): string {
+  const varLine = r.status === 'missing' ? `${r.cssVar} (not compiled)` : r.cssVar;
+  return `<span class="cc-chip-swatch" style="background:${r.value}"></span><code>${varLine}</code>
+    <div class="cc-token-path">${r.path}</div> ${statusBadge(r)}`;
+}
+
 function renderTable(recipe: FamilyRecipe, activeState: string): string {
   const rows = recipe.order
     .map((name) => {
       const st = recipe.states[name];
       return `<tr class="${name === activeState ? 'active' : ''}">
         <td class="cc-state">${name}</td>
-        <td><span class="cc-chip-swatch" style="background:${st.surface.value}"></span><code>${st.surface.path}</code> ${statusBadge(st.surface)}</td>
-        <td><code>${st.content.path}</code> ${statusBadge(st.content)}</td>
-        <td><code>${st.border.path}</code> ${statusBadge(st.border)}</td>
-        <td><code>CdrProminence.${capitalize(st.prominence.name)}</code></td>
+        <td>${tokenCell(st.surface)}</td>
+        <td><code>${st.content.cssVar}</code><div class="cc-token-path">${st.content.path}</div> ${statusBadge(st.content)}</td>
+        <td><code>${st.border.cssVar}</code><div class="cc-token-path">${st.border.path}</div> ${statusBadge(st.border)}</td>
+        <td><code>${st.prominence.cssVar}</code></td>
       </tr>`;
     })
     .join('');
   return `<table class="cc-table">
-    <thead><tr><th>State</th><th>Surface token</th><th>Content token</th><th>Border token</th><th>Prominence token</th></tr></thead>
+    <thead><tr><th>State</th><th>Surface variable</th><th>Content variable</th><th>Border variable</th><th>Prominence variable</th></tr></thead>
     <tbody>${rows}</tbody>
   </table>`;
 }
@@ -376,10 +418,10 @@ function renderComposition(family: string, activeState: string): string {
     .join('');
 
   const cssBlock = `${WIDGET_SELECTOR[family]}[data-state="${activeState}"] {
-  background: ${st.surface.value}; /* ${st.surface.path} */
-  color: ${st.content.value}; /* ${st.content.path} */
-  border-color: ${st.border.value}; /* ${st.border.path} */
-  box-shadow: ${st.prominence.value}; /* CdrProminence.${capitalize(st.prominence.name)} */
+  background: ${refExpr(st.surface)}; /* ${st.surface.path} */
+  color: ${refExpr(st.content)}; /* ${st.content.path} */
+  border-color: ${refExpr(st.border)}; /* ${st.border.path} */
+  box-shadow: ${promExpr(st.prominence)};
 }`;
 
   return `
@@ -597,6 +639,7 @@ const chrome = `
       display: inline-block; width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: ${RADIUS_SM};
       border: 1px solid rgba(0,0,0,0.12); vertical-align: middle; margin-right: ${SPACE_SM};
     }
+    .cc-token-path { color: var(--cedar-warm-500); ${typeStyle('CdrTextEyebrow100')} text-transform: none; letter-spacing: normal; }
     .cc-css {
       background: var(--cedar-warm-900); border-radius: ${RADIUS_MD}; padding: ${SPACE_XL};
       margin-bottom: ${SPACE_2XL}; overflow-x: auto;
