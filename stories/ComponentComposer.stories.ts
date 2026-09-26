@@ -361,11 +361,10 @@ function renderCard(): string {
             <p class="rc-hours"><span class="rc-dot"></span> Open until 9pm today</p>
           </div>
         </div>
-        <label class="rc-chip">
+        <label class="rc-chip" title="Save to My REI">
           <input type="checkbox" class="sr-only" data-widget="control" aria-label="Save to My REI" />
           <span class="rc-chip-icon rc-chip-icon-outline">${HEART_OUTLINE}</span>
           <span class="rc-chip-icon rc-chip-icon-filled">${HEART_FILLED}</span>
-          <span>My REI</span>
         </label>
       </div>
       <label class="rc-radio">
@@ -582,11 +581,14 @@ const chrome = `
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
+    /* Icon-only toggle button — a distinct silhouette from selection's plain
+       list row below: a compact square target overlaying the photo, no
+       visible label (accessible name comes from the input's aria-label). */
     .rc-chip {
       position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
-      display: inline-flex; align-items: center; gap: ${SPACE_3XS};
-      padding: ${SPACE_SM2} ${SPACE_MD}; border-radius: ${RADIUS_MD}; cursor: pointer;
-      ${typeStyle('CdrTextBodyStrong300')}
+      display: inline-flex; align-items: center; justify-content: center;
+      width: calc(${ICON_SIZE} + ${SPACE_LG}); height: calc(${ICON_SIZE} + ${SPACE_LG});
+      border-radius: ${RADIUS_MD}; cursor: pointer;
       background: var(--c-surface); color: var(--c-content); border: 2px solid var(--c-border);
       transition: background ${MOTION};
     }
@@ -599,20 +601,20 @@ const chrome = `
     .rc-chip:has(input:checked) .rc-chip-icon-outline { display: none; }
     .rc-chip:has(input:checked) .rc-chip-icon-filled { display: inline-flex; }
 
-    /* ── Selection: set-as-my-store radio ── */
+    /* ── Selection: set-as-my-store radio ──
+       A bare list row — no box, background, or border chrome — so it reads
+       as a native radio choice rather than a card or a button. Prominence
+       lives entirely on the small circular indicator, not a container. */
     .rc-radio {
       display: flex; align-items: center; gap: ${SPACE_SM}; cursor: pointer;
-      background: white; padding: ${SPACE_MD} ${SPACE_LG}; border-radius: ${RADIUS_SM};
-      box-shadow: var(--s-shadow);
-      transition: box-shadow ${MOTION};
     }
-    .rc-radio:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
-    .rc-radio:has(input:checked) { box-shadow: var(--s-shadow-selected); }
+    .rc-radio:has(input:focus-visible) .rc-radio-dot { outline: 2px solid #3d6db9; outline-offset: 2px; }
     .rc-radio-dot {
       width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: 50%; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       background: var(--s-surface); border: 2px solid var(--s-border);
-      transition: background ${MOTION}, border-color ${MOTION};
+      box-shadow: var(--s-shadow);
+      transition: background ${MOTION}, border-color ${MOTION}, box-shadow ${MOTION};
     }
     .rc-radio:hover .rc-radio-dot { border-color: var(--s-border-hover); }
     .rc-radio-dot::after {
@@ -621,9 +623,10 @@ const chrome = `
     }
     .rc-radio:has(input:checked) .rc-radio-dot {
       background: var(--s-surface-selected); border-color: var(--s-border-selected);
+      box-shadow: var(--s-shadow-selected);
     }
     .rc-radio:has(input:checked) .rc-radio-dot::after { opacity: 1; }
-    .rc-radio-label { color: var(--s-content); ${typeStyle('CdrTextBodyStrong300')} }
+    .rc-radio-label { color: var(--s-content); ${typeStyle('CdrTextBody300')} }
     .rc-radio:has(input:checked) .rc-radio-label { color: var(--s-content-selected); }
     .rc-radio:has(input:disabled) { cursor: not-allowed; }
     .rc-radio:has(input:disabled) .rc-radio-dot { background: var(--s-surface-disabled); }
