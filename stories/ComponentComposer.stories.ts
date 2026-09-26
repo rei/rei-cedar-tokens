@@ -750,7 +750,11 @@ export const ComponentComposer: Story = {
         else el.removeAttribute('tabindex');
       } else if (el instanceof HTMLInputElement) {
         el.disabled = state === 'disabled';
-        if (family === 'selection') el.checked = state === 'selected';
+        // Only ever force it ON to preview "selected" — never force it back
+        // off. A real selection (from clicking the radio, or from the
+        // control↔selection sync) must survive switching families or
+        // jumping to another state's preview.
+        if (family === 'selection' && state === 'selected') el.checked = true;
       }
     };
 
@@ -787,9 +791,19 @@ export const ComponentComposer: Story = {
     );
     storeRadio?.addEventListener('change', () => {
       if (storeRadio.checked && favCheckbox) favCheckbox.checked = true;
+      // Keep the inspector's table/CSS panel truthful about the widget the
+      // user is actually looking at.
+      if (storeRadio.checked && familyEl.value === 'selection') {
+        activeState = 'selected';
+        render();
+      }
     });
     favCheckbox?.addEventListener('change', () => {
       if (favCheckbox.checked && storeRadio) storeRadio.checked = true;
+      if (favCheckbox.checked && familyEl.value === 'selection') {
+        activeState = 'selected';
+        render();
+      }
     });
   },
 };
