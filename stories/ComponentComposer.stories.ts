@@ -142,9 +142,19 @@ const PROM = {
     value: t.CdrProminenceElevated,
     cssVar: '--cdr-prominence-elevated',
   },
+  floating: {
+    name: 'floating',
+    value: t.CdrProminenceFloating,
+    cssVar: '--cdr-prominence-floating',
+  },
 };
 
-const TEXT_PRIMARY = ref('color/text/primary');
+// color.text.primary is a legacy cross-family text color — not part of any
+// of the three families this page demonstrates. The nearest family-scoped
+// equivalent (closest lightness/contrast to the legacy value) is selection's
+// own neutral-faint text; reused across action/control as their default
+// content since neither family has a dark-on-light text role of its own.
+const CONTENT_NEUTRAL = ref('color/selection/text/neutral/faint');
 const ACTION_BORDER_FAINT = ref('color/action/border/neutral/faint');
 
 // color.action.surface.neutral.bold is not compiled anywhere in the token set
@@ -165,18 +175,18 @@ const ACTION_RECIPE: FamilyRecipe = {
   label: 'Action — card link',
   widget: 'link',
   description:
-    'The whole card is a link to the store page. Background and border come from the neutral action pair; hovering the real link raises the card via CdrProminence.',
+    'The whole card is a link to the store page — tight corners and a raise-on-hover shadow read as "this will navigate," not "this is a settled surface."',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
       surface: ref('color/action/surface/neutral/trace'),
-      content: TEXT_PRIMARY,
+      content: CONTENT_NEUTRAL,
       border: ACTION_BORDER_FAINT,
       prominence: PROM.flat,
     },
     hover: {
       surface: ref('color/action/surface/neutral/trace'),
-      content: TEXT_PRIMARY,
+      content: CONTENT_NEUTRAL,
       border: ACTION_BORDER_BOLD,
       prominence: PROM.raised,
       note:
@@ -186,7 +196,7 @@ const ACTION_RECIPE: FamilyRecipe = {
     },
     disabled: {
       surface: ref('color/action/surface/neutral/faint'),
-      content: muted(TEXT_PRIMARY),
+      content: muted(CONTENT_NEUTRAL),
       border: ACTION_BORDER_FAINT,
       prominence: PROM.flat,
     },
@@ -197,30 +207,31 @@ const SELECTION_RECIPE: FamilyRecipe = {
   label: 'Selection — set as my store',
   widget: 'radio',
   description:
-    'A radio choosing this as the primary store. Selection tokens start at a raised prominence and move to elevated once chosen — the opposite direction from action.',
+    'A radio choosing this as the primary store — it reads as a choice waiting to be submitted: hover already lifts it two prominence steps above action\u2019s resting flat, and choosing it lifts it once more.',
   order: ['default', 'hover', 'selected', 'disabled'],
   states: {
     default: {
       surface: ref('color/selection/surface/neutral/trace'),
-      content: ref('color/selection/text/neutral/faint'),
+      content: CONTENT_NEUTRAL,
       border: ref('color/selection/border/neutral/faint'),
       prominence: PROM.raised,
     },
     hover: {
       surface: ref('color/selection/surface/neutral/trace'),
-      content: ref('color/selection/text/neutral/faint'),
+      content: CONTENT_NEUTRAL,
       border: ref('color/selection/border/neutral/subtle'),
-      prominence: PROM.raised,
+      // Two prominence steps above action's resting "flat" (flat -> raised -> elevated).
+      prominence: PROM.elevated,
     },
     selected: {
       surface: ref('color/selection/surface/natural'),
       content: ref('color/selection/text/trigger'),
       border: ref('color/selection/border/trigger'),
-      prominence: PROM.elevated,
+      prominence: PROM.floating,
     },
     disabled: {
       surface: ref('color/selection/surface/neutral/faint'),
-      content: muted(ref('color/selection/text/neutral/faint')),
+      content: muted(CONTENT_NEUTRAL),
       border: ref('color/selection/border/neutral/faint'),
       prominence: PROM.raised,
     },
@@ -231,24 +242,24 @@ const CONTROL_RECIPE: FamilyRecipe = {
   label: 'Control — save to My REI',
   widget: 'checkbox',
   description:
-    'A checkbox toggling favorite status. Box chrome uses control tokens. Control has no compiled "checked" fill token, so checking it swaps the heart icon via CSS — color doesn\u2019t change, which is a real gap, not a design choice.',
+    'A checkbox that acts on something else: checking it also selects "Set as my store" next to it — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves; only color/border chrome changes.',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
       surface: ref('color/control/surface/neutral/trace'),
-      content: TEXT_PRIMARY,
+      content: CONTENT_NEUTRAL,
       border: ref('color/control/border/neutral/faint'),
       prominence: PROM.flat,
     },
     hover: {
       surface: ref('color/control/surface/neutral/subtle'),
-      content: TEXT_PRIMARY,
+      content: CONTENT_NEUTRAL,
       border: ref('color/control/border/neutral/faint'),
       prominence: PROM.flat,
     },
     disabled: {
       surface: ref('color/control/surface/neutral/faint'),
-      content: muted(TEXT_PRIMARY),
+      content: muted(CONTENT_NEUTRAL),
       border: ref('color/control/border/neutral/faint'),
       prominence: PROM.flat,
     },
@@ -370,10 +381,11 @@ function renderCard(): string {
 // This part IS driven by JS — it's documentation of the currently selected
 // state, not the live widget.
 
+// Only flag the exceptions — a plain compiled token needs no badge.
 function statusBadge(tokenRef: TokenRef): string {
   if (tokenRef.status === 'missing') return badge('warn', 'not compiled');
   if (tokenRef.status === 'muted') return badge('warn', 'derived, not a token');
-  return badge(true, 'compiled token');
+  return '';
 }
 
 function tokenCell(r: TokenRef): string {
@@ -450,8 +462,9 @@ function renderComposition(family: string, activeState: string): string {
 // inline rather than disguised as tokens.
 
 const RADIUS_PILL = rem(t.CdrRadiusRound);
-const RADIUS_MD = rem(t.CdrRadiusSoftest);
-const RADIUS_SM = rem(t.CdrRadiusSofter);
+const RADIUS_MD = rem(t.CdrRadiusSoftest); // control widget: bigger than selection, not round
+const RADIUS_SM = rem(t.CdrRadiusSofter); // selection widget
+const RADIUS_ACTION = rem(t.CdrRadiusSoft); // action widget: smallest non-zero — reads as a link, not a settled card
 
 const SPACE_3XS = rem(t.CdrSpaceThreeSixteenthX);
 const SPACE_2XS = rem(t.CdrSpaceEighthX);
@@ -523,7 +536,7 @@ const chrome = `
        separate inner wrapper so the box-shadow is never cut off. */
     .rc-card {
       position: relative; width: 300px; /* no Cedar "component width" token */
-      border-radius: ${RADIUS_MD}; background: white;
+      border-radius: ${RADIUS_ACTION}; background: white;
       box-shadow: var(--a-shadow);
       transition: box-shadow ${MOTION};
     }
@@ -532,7 +545,7 @@ const chrome = `
       box-shadow: var(--a-shadow-hover);
     }
     .rc-card:has(.rc-overlay[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
-    .rc-card-clip { border-radius: ${RADIUS_MD}; overflow: hidden; }
+    .rc-card-clip { border-radius: ${RADIUS_ACTION}; overflow: hidden; }
     .rc-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
     .rc-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
     .rc-building {
@@ -547,7 +560,7 @@ const chrome = `
       opacity: 0.5;
     }
     .rc-overlay {
-      position: absolute; inset: 0; border-radius: ${RADIUS_MD}; z-index: 1;
+      position: absolute; inset: 0; border-radius: ${RADIUS_ACTION}; z-index: 1;
       border: 2px solid var(--a-border);
       transition: border-color ${MOTION};
     }
@@ -572,7 +585,7 @@ const chrome = `
     .rc-chip {
       position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
       display: inline-flex; align-items: center; gap: ${SPACE_3XS};
-      padding: ${SPACE_SM2} ${SPACE_MD}; border-radius: ${RADIUS_PILL}; cursor: pointer;
+      padding: ${SPACE_SM2} ${SPACE_MD}; border-radius: ${RADIUS_MD}; cursor: pointer;
       ${typeStyle('CdrTextBodyStrong300')}
       background: var(--c-surface); color: var(--c-content); border: 2px solid var(--c-border);
       transition: background ${MOTION};
@@ -698,10 +711,13 @@ export const ComponentComposer: Story = {
         <div class="cc-notes">
           <h3>What this proves — and what it doesn't</h3>
           <ul>
-            <li><strong>Every color is a real, resolved token.</strong> Values come from <code>resolvePath()</code> against the compiled foundations at load time; the table shows the token <em>path</em>, not just its hex, because the path is what a dev actually copies.</li>
-            <li><strong>States are real, not simulated.</strong> Hover the card, focus it with Tab, check the radio, check the checkbox — the CSS in the "Generated CSS" panel is exactly the rule making that happen, driven by <code>:hover</code>/<code>:focus-visible</code>/<code>:checked</code>/<code>:disabled</code>/<code>[aria-disabled]</code>.</li>
-            <li><strong>Action and selection move in opposite prominence directions.</strong> Action starts flat and raises on hover; selection starts raised and elevates once chosen — both are real <code>CdrProminence</code> box-shadow values, applied on an element that isn't clipped by <code>overflow: hidden</code> (a common reason a shadow silently disappears).</li>
+            <li><strong>Every color is a real, resolved token</strong> referenced by its actual shipped <code>var(--cdr-...)</code> custom property, not a baked-in hex — check the "Generated CSS" panel or inspect the card in devtools.</li>
+            <li><strong>Radius, spacing, and type are tokens too</strong> — corner radius, padding/gaps, and every font style come from <code>CdrRadius</code>/<code>CdrSpace</code>/<code>CdrText*</code>, not hand-picked pixel values.</li>
+            <li><strong>Three distinct shapes encode three distinct intents.</strong> Action uses the smallest radius (reads as a link, not a settled surface); selection sits between it and control; control is the largest short of fully round.</li>
+            <li><strong>Action and selection move in opposite prominence directions, and selection outranks action.</strong> Action starts flat and raises on hover. Selection starts raised and, on hover alone, already sits two prominence steps above action's resting flat (elevated) — before it's even chosen — reading as "a choice waiting to be submitted." Choosing it raises it once more, to floating.</li>
+            <li><strong>Control's prominence never moves</strong> — only its color/border chrome does. Instead, it acts outward: checking "My REI" also selects "Set as my store," and selecting the store also favorites it — a real cross-widget effect via native <code>change</code> events, demonstrating a control's job is to do something to something else, not just to itself.</li>
             <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover), and the <code>control</code> family has no "checked" fill token — the heart only changes via icon swap, not color, when checked.</li>
+            <li><strong>content/text.primary is legacy</strong> and isn't scoped to any of these three families — this demo instead reuses <code>selection.text.neutral.faint</code>, the closest family-owned equivalent, everywhere a default readable content color is needed.</li>
           </ul>
         </div>
       </div>
@@ -753,5 +769,24 @@ export const ComponentComposer: Story = {
     });
 
     render();
+
+    // Selection and control are two skins on the same underlying "this is my
+    // store" fact, so real user interaction keeps them in sync: choosing the
+    // store also favorites it, and favoriting a store also chooses it. This
+    // is a genuine cross-widget effect (a control "does something to
+    // something else"), not just a within-widget state change — it only
+    // fires on real input, not on the state-nav preview buttons above.
+    const storeRadio = canvasElement.querySelector<HTMLInputElement>(
+      'input[data-widget="selection"]',
+    );
+    const favCheckbox = canvasElement.querySelector<HTMLInputElement>(
+      'input[data-widget="control"]',
+    );
+    storeRadio?.addEventListener('change', () => {
+      if (storeRadio.checked && favCheckbox) favCheckbox.checked = true;
+    });
+    favCheckbox?.addEventListener('change', () => {
+      if (favCheckbox.checked && storeRadio) storeRadio.checked = true;
+    });
   },
 };
