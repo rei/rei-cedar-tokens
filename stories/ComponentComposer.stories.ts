@@ -278,20 +278,20 @@ const FAMILIES = Object.keys(RECIPES);
 
 function badge(pass: boolean | 'warn', label: string): string {
   const cls = pass === 'warn' ? 'warn' : pass ? 'pass' : 'fail';
-  return `<span class="cc-badge ${cls}">${label}</span>`;
+  return `<span class="cdr-demo-badge ${cls}">${label}</span>`;
 }
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-// Sized in CSS via .rc-chip-icon svg { width/height: rem(CdrIconSizeSm) } —
+// Sized in CSS via .cdr-demo-chip-icon svg { width/height: rem(CdrIconSizeSm) } —
 // no literal pixel dimensions on the markup itself.
 const HEART_OUTLINE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
 const HEART_FILLED = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
 
 const PHOTO_PLACEHOLDER = `
-  <div class="rc-sky"></div>
-  <div class="rc-building"></div>
-  <div class="rc-windows"></div>
+  <div class="cdr-demo-sky"></div>
+  <div class="cdr-demo-building"></div>
+  <div class="cdr-demo-windows"></div>
 `;
 
 // ─── Card ─────────────────────────────────────────────────────────────────────
@@ -349,28 +349,28 @@ function cardVars(): string {
 
 function renderCard(): string {
   return `
-    <div class="rc-scene">
-      <div class="rc-card" style="${cardVars()}">
-        <div class="rc-card-clip">
-          <div class="rc-photo">${PHOTO_PLACEHOLDER}</div>
-          <a class="rc-overlay" href="#" aria-label="Visit store page" onclick="return false;"></a>
-          <div class="rc-info">
-            <p class="rc-name">REI Example</p>
-            <p class="rc-detail">(206) 555-0142</p>
-            <p class="rc-detail">400 Occidental Ave S, Seattle, WA 98104</p>
-            <p class="rc-hours"><span class="rc-dot"></span> Open until 9pm today</p>
+    <div class="cdr-demo-scene">
+      <div class="cdr-demo-card" style="${cardVars()}">
+        <div class="cdr-demo-card-clip">
+          <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
+          <a class="cdr-demo-overlay" href="#" aria-label="Visit store page" onclick="return false;"></a>
+          <div class="cdr-demo-info">
+            <p class="cdr-demo-name">REI Example</p>
+            <p class="cdr-demo-detail">(206) 555-0142</p>
+            <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
+            <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
           </div>
         </div>
-        <label class="rc-chip" title="Save to My REI">
+        <label class="cdr-demo-chip" title="Save to My REI">
           <input type="checkbox" class="sr-only" data-widget="control" aria-label="Save to My REI" />
-          <span class="rc-chip-icon rc-chip-icon-outline">${HEART_OUTLINE}</span>
-          <span class="rc-chip-icon rc-chip-icon-filled">${HEART_FILLED}</span>
+          <span class="cdr-demo-chip-icon cdr-demo-chip-icon-outline">${HEART_OUTLINE}</span>
+          <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
         </label>
       </div>
-      <label class="rc-radio">
-        <input type="radio" name="cc-store-select" class="sr-only" data-widget="selection" />
-        <span class="rc-radio-dot"></span>
-        <span class="rc-radio-label">Set as my store</span>
+      <label class="cdr-demo-radio">
+        <input type="radio" name="cdr-demo-store-select" class="sr-only" data-widget="selection" />
+        <span class="cdr-demo-radio-dot"></span>
+        <span class="cdr-demo-radio-label">Set as my store</span>
       </label>
     </div>
   `;
@@ -389,8 +389,8 @@ function statusBadge(tokenRef: TokenRef): string {
 
 function tokenCell(r: TokenRef): string {
   const varLine = r.status === 'missing' ? `${r.cssVar} (not compiled)` : r.cssVar;
-  return `<span class="cc-chip-swatch" style="background:${r.value}"></span><code>${varLine}</code>
-    <div class="cc-token-path">${r.path}</div> ${statusBadge(r)}`;
+  return `<span class="cdr-demo-chip-swatch" style="background:${r.value}"></span><code>${varLine}</code>
+    <div class="cdr-demo-token-path">${r.path}</div> ${statusBadge(r)}`;
 }
 
 function renderTable(recipe: FamilyRecipe, activeState: string): string {
@@ -398,24 +398,24 @@ function renderTable(recipe: FamilyRecipe, activeState: string): string {
     .map((name) => {
       const st = recipe.states[name];
       return `<tr class="${name === activeState ? 'active' : ''}">
-        <td class="cc-state">${name}</td>
+        <td class="cdr-demo-state">${name}</td>
         <td>${tokenCell(st.surface)}</td>
-        <td><code>${st.content.cssVar}</code><div class="cc-token-path">${st.content.path}</div> ${statusBadge(st.content)}</td>
-        <td><code>${st.border.cssVar}</code><div class="cc-token-path">${st.border.path}</div> ${statusBadge(st.border)}</td>
+        <td><code>${st.content.cssVar}</code><div class="cdr-demo-token-path">${st.content.path}</div> ${statusBadge(st.content)}</td>
+        <td><code>${st.border.cssVar}</code><div class="cdr-demo-token-path">${st.border.path}</div> ${statusBadge(st.border)}</td>
         <td><code>${st.prominence.cssVar}</code></td>
       </tr>`;
     })
     .join('');
-  return `<table class="cc-table">
+  return `<table class="cdr-demo-table">
     <thead><tr><th>State</th><th>Surface variable</th><th>Content variable</th><th>Border variable</th><th>Prominence variable</th></tr></thead>
     <tbody>${rows}</tbody>
   </table>`;
 }
 
 const WIDGET_SELECTOR: Record<string, string> = {
-  action: '.rc-overlay',
-  selection: '.rc-radio-dot',
-  control: '.rc-chip',
+  action: '.cdr-demo-overlay',
+  selection: '.cdr-demo-radio-dot',
+  control: '.cdr-demo-chip',
 };
 
 function renderComposition(family: string, activeState: string): string {
@@ -424,7 +424,7 @@ function renderComposition(family: string, activeState: string): string {
   const stateNav = recipe.order
     .map(
       (name) =>
-        `<button type="button" class="cc-state-btn ${name === activeState ? 'active' : ''}" data-state="${name}">${capitalize(name)}</button>`,
+        `<button type="button" class="cdr-demo-state-btn ${name === activeState ? 'active' : ''}" data-state="${name}">${capitalize(name)}</button>`,
     )
     .join('');
 
@@ -436,10 +436,10 @@ function renderComposition(family: string, activeState: string): string {
 }`;
 
   return `
-    <div class="cc-recipe">
+    <div class="cdr-demo-recipe">
       <strong>${recipe.label}</strong> — ${recipe.description}
-      ${st.note ? `<div class="cc-cue">⚠ ${st.note}</div>` : ''}
-      <div class="cc-hint">Try it live above: ${
+      ${st.note ? `<div class="cdr-demo-cue">⚠ ${st.note}</div>` : ''}
+      <div class="cdr-demo-hint">Try it live above: ${
         recipe.widget === 'link'
           ? 'hover the card, or tab to it and check focus.'
           : recipe.widget === 'radio'
@@ -447,9 +447,9 @@ function renderComposition(family: string, activeState: string): string {
             : 'hover or click the "My REI" heart.'
       } The buttons below jump the table to that state\u2019s exact tokens — <code>disabled</code>/<code>selected</code> also apply real <code>disabled</code>/<code>checked</code> attributes so you can see them.</div>
     </div>
-    <div class="cc-state-nav">${stateNav}</div>
+    <div class="cdr-demo-state-nav">${stateNav}</div>
     ${renderTable(recipe, activeState)}
-    <div class="cc-css"><pre>${cssBlock}</pre></div>
+    <div class="cdr-demo-css"><pre>${cssBlock}</pre></div>
   `;
 }
 
@@ -491,90 +491,90 @@ const chrome = `
       ${typeStyle('CdrTextHeadingSerifStrong600')}
       color: var(--cedar-warm-1000); margin: 0;
     }
-    .cc-controls {
+    .cdr-demo-controls {
       display: flex; flex-wrap: wrap; align-items: flex-end; gap: ${SPACE_LG};
       padding: ${SPACE_LG}; margin-bottom: ${SPACE_XL};
       background: white; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
     }
-    .cc-field { display: flex; flex-direction: column; gap: ${SPACE_XS}; }
-    .cc-field label {
+    .cdr-demo-field { display: flex; flex-direction: column; gap: ${SPACE_XS}; }
+    .cdr-demo-field label {
       ${typeStyle('CdrTextEyebrow100')} color: var(--cedar-warm-600);
     }
-    .cc-field select {
+    .cdr-demo-field select {
       padding: ${SPACE_SM2} ${SPACE_SM}; border: 1px solid var(--cedar-warm-300); border-radius: ${RADIUS_SM};
       ${typeStyle('CdrTextBody300')} background: white;
     }
-    .cc-recipe {
+    .cdr-demo-recipe {
       background: var(--cedar-warm-50); border: 1px solid var(--cedar-warm-200);
       border-radius: ${RADIUS_MD}; padding: ${SPACE_MD} ${SPACE_LG}; margin-bottom: ${SPACE_LG};
       ${typeStyle('CdrTextBody300')} color: var(--cedar-warm-800);
     }
-    .cc-cue { margin-top: ${SPACE_SM2}; color: #856404; ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
-    .cc-hint { margin-top: ${SPACE_SM}; color: var(--cedar-warm-600); ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
-    .cc-state-nav { display: flex; flex-wrap: wrap; gap: ${SPACE_SM}; margin-bottom: ${SPACE_LG}; }
-    .cc-state-btn {
+    .cdr-demo-cue { margin-top: ${SPACE_SM2}; color: #856404; ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
+    .cdr-demo-hint { margin-top: ${SPACE_SM}; color: var(--cedar-warm-600); ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
+    .cdr-demo-state-nav { display: flex; flex-wrap: wrap; gap: ${SPACE_SM}; margin-bottom: ${SPACE_LG}; }
+    .cdr-demo-state-btn {
       ${typeStyle('CdrTextEyebrow100')}
       padding: ${SPACE_SM2} ${SPACE_MD}; border-radius: ${RADIUS_PILL}; cursor: pointer;
       background: white; border: 1px solid var(--cedar-warm-300); color: var(--cedar-warm-700);
     }
-    .cc-state-btn.active { background: var(--cedar-warm-1000); color: white; border-color: var(--cedar-warm-1000); }
-    .cc-intro { margin-bottom: ${SPACE_XL}; color: var(--cedar-warm-700); max-width: 780px; ${typeStyle('CdrTextBody300')} }
+    .cdr-demo-state-btn.active { background: var(--cedar-warm-1000); color: white; border-color: var(--cedar-warm-1000); }
+    .cdr-demo-intro { margin-bottom: ${SPACE_XL}; color: var(--cedar-warm-700); max-width: 780px; ${typeStyle('CdrTextBody300')} }
 
     /* ── Scene ──
        Card width, photo height, and the two decorative dot sizes (radio fill,
        hours indicator) have no Cedar dimension token — they're the only
        literal numbers left in this file, flagged rather than hidden. */
-    .rc-scene {
+    .cdr-demo-scene {
       display: flex; flex-wrap: wrap; align-items: flex-start; gap: ${SPACE_2XL};
       padding: ${SPACE_2XL}; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
       margin-bottom: ${SPACE_XL}; background: var(--cedar-warm-50);
     }
 
     /* ── Action: card link ──
-       Shadow lives on .rc-card (never clipped); photo clipping lives on a
+       Shadow lives on .cdr-demo-card (never clipped); photo clipping lives on a
        separate inner wrapper so the box-shadow is never cut off. */
-    .rc-card {
+    .cdr-demo-card {
       position: relative; width: 300px; /* no Cedar "component width" token */
       border-radius: ${RADIUS_ACTION}; background: white;
       box-shadow: var(--a-shadow);
       transition: box-shadow ${MOTION};
     }
-    .rc-card:has(.rc-overlay:hover),
-    .rc-card:has(.rc-overlay:focus-visible) {
+    .cdr-demo-card:has(.cdr-demo-overlay:hover),
+    .cdr-demo-card:has(.cdr-demo-overlay:focus-visible) {
       box-shadow: var(--a-shadow-hover);
     }
-    .rc-card:has(.rc-overlay[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
-    .rc-card-clip { border-radius: ${RADIUS_ACTION}; overflow: hidden; }
-    .rc-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
-    .rc-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
-    .rc-building {
+    .cdr-demo-card:has(.cdr-demo-overlay[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
+    .cdr-demo-card-clip { border-radius: ${RADIUS_ACTION}; overflow: hidden; }
+    .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
+    .cdr-demo-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
+    .cdr-demo-building {
       position: absolute; left: 0; right: 0; bottom: 0; height: 55%;
       background: #4a4a4d;
       clip-path: polygon(0% 100%, 0% 40%, 30% 40%, 30% 15%, 65% 15%, 65% 40%, 100% 40%, 100% 100%);
     }
-    .rc-windows {
+    .cdr-demo-windows {
       position: absolute; left: 8%; right: 8%; bottom: 8%; height: 30%;
       background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.35) 0 10%, transparent 10% 20%),
                          repeating-linear-gradient(0deg, rgba(255,255,255,0.35) 0 12%, transparent 12% 24%);
       opacity: 0.5;
     }
-    .rc-overlay {
+    .cdr-demo-overlay {
       position: absolute; inset: 0; border-radius: ${RADIUS_ACTION}; z-index: 1;
       border: 2px solid var(--a-border);
       transition: border-color ${MOTION};
     }
-    .rc-overlay:hover, .rc-overlay:focus-visible { border-color: var(--a-border-hover); }
-    .rc-overlay[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
-    .rc-info {
+    .cdr-demo-overlay:hover, .cdr-demo-overlay:focus-visible { border-color: var(--a-border-hover); }
+    .cdr-demo-overlay[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
+    .cdr-demo-info {
       position: relative; z-index: 0; padding: ${SPACE_MD} ${SPACE_LG};
       background: var(--a-surface); color: var(--a-content);
       transition: background ${MOTION}, color ${MOTION};
     }
-    .rc-overlay[aria-disabled="true"] ~ .rc-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
-    .rc-name { margin: 0 0 ${SPACE_XS}; ${typeStyle('CdrTextHeadingSerif300')} }
-    .rc-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: underline; }
-    .rc-hours { margin: ${SPACE_SM} 0 0; display: flex; align-items: center; gap: ${SPACE_3XS}; ${typeStyle('CdrTextBody300')} }
-    .rc-dot { width: ${SPACE_XS}; height: ${SPACE_XS}; border-radius: 50%; background: #3a9c50; display: inline-block; }
+    .cdr-demo-overlay[aria-disabled="true"] ~ .cdr-demo-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
+    .cdr-demo-name { margin: 0 0 ${SPACE_XS}; ${typeStyle('CdrTextHeadingSerif300')} }
+    .cdr-demo-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: underline; }
+    .cdr-demo-hours { margin: ${SPACE_SM} 0 0; display: flex; align-items: center; gap: ${SPACE_3XS}; ${typeStyle('CdrTextBody300')} }
+    .cdr-demo-dot { width: ${SPACE_XS}; height: ${SPACE_XS}; border-radius: 50%; background: #3a9c50; display: inline-block; }
 
     /* ── Control: My REI checkbox ── */
     .sr-only {
@@ -584,7 +584,7 @@ const chrome = `
     /* Icon-only toggle button — a distinct silhouette from selection's plain
        list row below: a compact square target overlaying the photo, no
        visible label (accessible name comes from the input's aria-label). */
-    .rc-chip {
+    .cdr-demo-chip {
       position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
       display: inline-flex; align-items: center; justify-content: center;
       width: calc(${ICON_SIZE} + ${SPACE_LG}); height: calc(${ICON_SIZE} + ${SPACE_LG});
@@ -592,87 +592,87 @@ const chrome = `
       background: var(--c-surface); color: var(--c-content); border: 2px solid var(--c-border);
       transition: background ${MOTION};
     }
-    .rc-chip-icon { display: inline-flex; }
-    .rc-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; }
-    .rc-chip:has(input:hover) { background: var(--c-surface-hover); }
-    .rc-chip:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
-    .rc-chip:has(input:disabled) { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
-    .rc-chip-icon-filled { display: none; }
-    .rc-chip:has(input:checked) .rc-chip-icon-outline { display: none; }
-    .rc-chip:has(input:checked) .rc-chip-icon-filled { display: inline-flex; }
+    .cdr-demo-chip-icon { display: inline-flex; }
+    .cdr-demo-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; }
+    .cdr-demo-chip:has(input:hover) { background: var(--c-surface-hover); }
+    .cdr-demo-chip:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
+    .cdr-demo-chip:has(input:disabled) { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
+    .cdr-demo-chip-icon-filled { display: none; }
+    .cdr-demo-chip:has(input:checked) .cdr-demo-chip-icon-outline { display: none; }
+    .cdr-demo-chip:has(input:checked) .cdr-demo-chip-icon-filled { display: inline-flex; }
 
     /* ── Selection: set-as-my-store radio ──
        A bare list row — no box, background, or border chrome — so it reads
        as a native radio choice rather than a card or a button. Prominence
        lives entirely on the small circular indicator, not a container. */
-    .rc-radio {
+    .cdr-demo-radio {
       display: flex; align-items: center; gap: ${SPACE_SM}; cursor: pointer;
     }
-    .rc-radio:has(input:focus-visible) .rc-radio-dot { outline: 2px solid #3d6db9; outline-offset: 2px; }
-    .rc-radio-dot {
+    .cdr-demo-radio:has(input:focus-visible) .cdr-demo-radio-dot { outline: 2px solid #3d6db9; outline-offset: 2px; }
+    .cdr-demo-radio-dot {
       width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: 50%; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       background: var(--s-surface); border: 2px solid var(--s-border);
       box-shadow: var(--s-shadow);
       transition: background ${MOTION}, border-color ${MOTION}, box-shadow ${MOTION};
     }
-    .rc-radio:hover .rc-radio-dot { border-color: var(--s-border-hover); }
-    .rc-radio-dot::after {
+    .cdr-demo-radio:hover .cdr-demo-radio-dot { border-color: var(--s-border-hover); }
+    .cdr-demo-radio-dot::after {
       content: ''; width: 50%; height: 50%; border-radius: 50%;
       background: var(--s-content-selected); opacity: 0; transition: opacity ${MOTION};
     }
-    .rc-radio:has(input:checked) .rc-radio-dot {
+    .cdr-demo-radio:has(input:checked) .cdr-demo-radio-dot {
       background: var(--s-surface-selected); border-color: var(--s-border-selected);
       box-shadow: var(--s-shadow-selected);
     }
-    .rc-radio:has(input:checked) .rc-radio-dot::after { opacity: 1; }
-    .rc-radio-label { color: var(--s-content); ${typeStyle('CdrTextBody300')} }
-    .rc-radio:has(input:checked) .rc-radio-label { color: var(--s-content-selected); }
-    .rc-radio:has(input:disabled) { cursor: not-allowed; }
-    .rc-radio:has(input:disabled) .rc-radio-dot { background: var(--s-surface-disabled); }
-    .rc-radio:has(input:disabled) .rc-radio-label { color: var(--s-content-disabled); }
+    .cdr-demo-radio:has(input:checked) .cdr-demo-radio-dot::after { opacity: 1; }
+    .cdr-demo-radio-label { color: var(--s-content); ${typeStyle('CdrTextBody300')} }
+    .cdr-demo-radio:has(input:checked) .cdr-demo-radio-label { color: var(--s-content-selected); }
+    .cdr-demo-radio:has(input:disabled) { cursor: not-allowed; }
+    .cdr-demo-radio:has(input:disabled) .cdr-demo-radio-dot { background: var(--s-surface-disabled); }
+    .cdr-demo-radio:has(input:disabled) .cdr-demo-radio-label { color: var(--s-content-disabled); }
 
-    .cc-badge {
+    .cdr-demo-badge {
       ${typeStyle('CdrTextEyebrow100')}
       padding: ${SPACE_2XS} ${SPACE_SM}; border-radius: ${RADIUS_SM}; display: inline-block; white-space: nowrap; margin-left: ${SPACE_XS};
     }
-    .cc-badge.pass { background: #d4edda; color: #155724; }
-    .cc-badge.warn { background: #fff3cd; color: #856404; }
-    .cc-badge.fail { background: #f8d7da; color: #721c24; }
-    .cc-table {
+    .cdr-demo-badge.pass { background: #d4edda; color: #155724; }
+    .cdr-demo-badge.warn { background: #fff3cd; color: #856404; }
+    .cdr-demo-badge.fail { background: #f8d7da; color: #721c24; }
+    .cdr-demo-table {
       width: 100%; border-collapse: collapse; background: white;
       border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD}; overflow: hidden;
       margin-bottom: ${SPACE_XL};
     }
-    .cc-table th {
+    .cdr-demo-table th {
       text-align: left; padding: ${SPACE_SM} ${SPACE_MD}; background: var(--cedar-warm-100);
       ${typeStyle('CdrTextEyebrow100')} color: var(--cedar-warm-700);
     }
-    .cc-table td { padding: ${SPACE_SM} ${SPACE_MD}; border-top: 1px solid var(--cedar-warm-200); ${typeStyle('CdrTextBody300')} }
-    .cc-table tr.active td { background: var(--cedar-warm-50); font-weight: 600; }
-    .cc-state { font-weight: 600; text-transform: capitalize; }
-    .cc-chip-swatch {
+    .cdr-demo-table td { padding: ${SPACE_SM} ${SPACE_MD}; border-top: 1px solid var(--cedar-warm-200); ${typeStyle('CdrTextBody300')} }
+    .cdr-demo-table tr.active td { background: var(--cedar-warm-50); font-weight: 600; }
+    .cdr-demo-state { font-weight: 600; text-transform: capitalize; }
+    .cdr-demo-chip-swatch {
       display: inline-block; width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: ${RADIUS_SM};
       border: 1px solid rgba(0,0,0,0.12); vertical-align: middle; margin-right: ${SPACE_SM};
     }
-    .cc-token-path { color: var(--cedar-warm-500); ${typeStyle('CdrTextEyebrow100')} text-transform: none; letter-spacing: normal; }
-    .cc-css {
+    .cdr-demo-token-path { color: var(--cedar-warm-500); ${typeStyle('CdrTextEyebrow100')} text-transform: none; letter-spacing: normal; }
+    .cdr-demo-css {
       background: var(--cedar-warm-900); border-radius: ${RADIUS_MD}; padding: ${SPACE_XL};
       margin-bottom: ${SPACE_2XL}; overflow-x: auto;
     }
-    .cc-css pre {
+    .cdr-demo-css pre {
       margin: 0; color: #e8e6e3; line-height: 1.6;
       font-family: ${MONO_FONT}; font-size: ${t.CdrTextBody300Size}px;
     }
-    .cc-notes {
+    .cdr-demo-notes {
       background: var(--cedar-green-50); border: 1px solid var(--cedar-green-200);
       border-radius: ${RADIUS_MD}; padding: ${SPACE_XL};
     }
-    .cc-notes h3 {
+    .cdr-demo-notes h3 {
       ${typeStyle('CdrTextHeadingSerif500')} color: var(--cedar-green-900); margin: 0 0 ${SPACE_MD};
     }
-    .cc-notes ul { margin: 0; padding-left: ${SPACE_LG}; }
-    .cc-notes li { margin-bottom: ${SPACE_SM}; color: var(--cedar-green-800); ${typeStyle('CdrTextBody300')} }
+    .cdr-demo-notes ul { margin: 0; padding-left: ${SPACE_LG}; }
+    .cdr-demo-notes li { margin-bottom: ${SPACE_SM}; color: var(--cedar-green-800); ${typeStyle('CdrTextBody300')} }
   </style>
 `;
 
@@ -692,7 +692,7 @@ export const ComponentComposer: Story = {
         <div class="sb-section-header">
           <h2 class="sb-section-title">Compose a Custom Component</h2>
         </div>
-        <p class="cc-intro">
+        <p class="cdr-demo-intro">
           Use this when Cedar has no component for your pattern yet. All three widgets on this
           store card are real and interactive: the card is a native link, "Set as my store" is a
           radio, and "My REI" is a checkbox. Every color is a resolved token, and every state
@@ -700,18 +700,18 @@ export const ComponentComposer: Story = {
           CSS — not a JS simulation.
         </p>
 
-        <div class="cc-controls">
-          <div class="cc-field">
-            <label for="cc-family">Family</label>
-            <select id="cc-family">${familyOptions(DEFAULTS.family)}</select>
+        <div class="cdr-demo-controls">
+          <div class="cdr-demo-field">
+            <label for="cdr-demo-family">Family</label>
+            <select id="cdr-demo-family">${familyOptions(DEFAULTS.family)}</select>
           </div>
         </div>
 
         ${renderCard()}
 
-        <div id="cc-inspector">${renderComposition(DEFAULTS.family, DEFAULTS.state)}</div>
+        <div id="cdr-demo-inspector">${renderComposition(DEFAULTS.family, DEFAULTS.state)}</div>
 
-        <div class="cc-notes">
+        <div class="cdr-demo-notes">
           <h3>What this proves — and what it doesn't</h3>
           <ul>
             <li><strong>Every color is a real, resolved token</strong> referenced by its actual shipped <code>var(--cdr-...)</code> custom property, not a baked-in hex — check the "Generated CSS" panel or inspect the card in devtools.</li>
@@ -728,14 +728,15 @@ export const ComponentComposer: Story = {
   },
 
   play: async ({ canvasElement }) => {
-    const familyEl = canvasElement.querySelector<HTMLSelectElement>('#cc-family');
-    const inspector = canvasElement.querySelector<HTMLElement>('#cc-inspector');
+    const familyEl = canvasElement.querySelector<HTMLSelectElement>('#cdr-demo-family');
+    const inspector = canvasElement.querySelector<HTMLElement>('#cdr-demo-inspector');
     if (!familyEl || !inspector) return;
 
     let activeState = DEFAULTS.state;
 
     const widgetInput = (family: string): HTMLInputElement | HTMLAnchorElement | null => {
-      if (family === 'action') return canvasElement.querySelector<HTMLAnchorElement>('.rc-overlay');
+      if (family === 'action')
+        return canvasElement.querySelector<HTMLAnchorElement>('.cdr-demo-overlay');
       return canvasElement.querySelector<HTMLInputElement>(`input[data-widget="${family}"]`);
     };
 
@@ -769,7 +770,7 @@ export const ComponentComposer: Story = {
     });
 
     inspector.addEventListener('click', (e) => {
-      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.cc-state-btn');
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.cdr-demo-state-btn');
       if (!btn?.dataset.state) return;
       activeState = btn.dataset.state;
       render();
