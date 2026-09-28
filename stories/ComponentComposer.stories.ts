@@ -128,7 +128,7 @@ type StateSpec = {
 };
 type FamilyRecipe = {
   label: string;
-  widget: 'link' | 'radio' | 'checkbox';
+  widget: 'link' | 'checkbox' | 'button';
   description: string;
   order: string[];
   states: Record<string, StateSpec>;
@@ -175,8 +175,8 @@ const ACTION_RECIPE: FamilyRecipe = {
   label: 'Action — card link',
   widget: 'link',
   description:
-    'The whole card is a link to the store page — tight corners and a raise-on-hover shadow read as "this will navigate," not "this is a settled surface."',
-  order: ['default', 'hover', 'disabled'],
+    'The card is a real anchor to the store page — a full state flow (default → hover → pressed → disabled), raise-on-hover prominence, and a focus ring on tab.',
+  order: ['default', 'hover', 'pressed', 'disabled'],
   states: {
     default: {
       surface: ref('color/action/surface/neutral/trace'),
@@ -194,6 +194,18 @@ const ACTION_RECIPE: FamilyRecipe = {
           ? 'color.action.surface.neutral.bold is not compiled yet — shown as a measured placeholder, not an approved token.'
           : undefined,
     },
+    // Pressed drops the shadow back to flat and shifts the surface one step —
+    // the anchor is "under your finger," not floating.
+    pressed: {
+      surface: ref('color/action/surface/neutral/subtle'),
+      content: CONTENT_NEUTRAL,
+      border: ACTION_BORDER_BOLD,
+      prominence: PROM.flat,
+      note:
+        ACTION_BORDER_BOLD.status === 'missing'
+          ? 'color.action.surface.neutral.bold is not compiled yet — shown as a measured placeholder, not an approved token.'
+          : undefined,
+    },
     disabled: {
       surface: ref('color/action/surface/neutral/faint'),
       content: muted(CONTENT_NEUTRAL),
@@ -205,9 +217,9 @@ const ACTION_RECIPE: FamilyRecipe = {
 
 const SELECTION_RECIPE: FamilyRecipe = {
   label: 'Selection — set as my store',
-  widget: 'radio',
+  widget: 'checkbox',
   description:
-    'A radio choosing this as the primary store — it reads as a choice waiting to be submitted: hover already lifts it two prominence steps above action\u2019s resting flat, and choosing it lifts it once more.',
+    'A real checkbox that selects the card itself — checking it repaints the card\u2019s surface/border/shadow with the selection\u2019s selected tokens, giving the card a true selected vs. non-selected appearance.',
   order: ['default', 'hover', 'selected', 'disabled'],
   states: {
     default: {
@@ -240,9 +252,9 @@ const SELECTION_RECIPE: FamilyRecipe = {
 
 const CONTROL_RECIPE: FamilyRecipe = {
   label: 'Control — save to My REI',
-  widget: 'checkbox',
+  widget: 'button',
   description:
-    'A checkbox that acts on something else: checking it also selects "Set as my store" next to it — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves; only color/border chrome changes.',
+    'A real button that acts on something else: pressing it opens a confirmation drawer inside the card and marks "Set as my store" — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves.',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
@@ -283,10 +295,11 @@ function badge(pass: boolean | 'warn', label: string): string {
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-// Sized in CSS via .cdr-demo-chip-icon svg { width/height: rem(CdrIconSizeSm) } —
+// Sized in CSS via .cdr-demo-control-icon svg { width/height: rem(CdrIconSizeSm) } —
 // no literal pixel dimensions on the markup itself.
 const HEART_OUTLINE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
 const HEART_FILLED = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
+const CHECK_MARK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>`;
 
 const PHOTO_PLACEHOLDER = `
   <div class="cdr-demo-sky"></div>
@@ -320,14 +333,21 @@ function cardVars(): string {
     '--a-border-hover': refExpr(a.hover.border),
     '--a-shadow': promExpr(a.default.prominence),
     '--a-shadow-hover': promExpr(a.hover.prominence),
+    '--a-surface-pressed': refExpr(a.pressed.surface),
+    '--a-border-pressed': refExpr(a.pressed.border),
     '--a-surface-disabled': refExpr(a.disabled.surface),
     '--a-content-disabled': refExpr(a.disabled.content),
+    // Real action token — the same trigger/faint blue Cedar uses for
+    // interactive affordances — standing in for the focus ring since the
+    // set has no dedicated focus-outline color token.
+    '--a-focus': `var(${ref('color/action/border/trigger/faint').cssVar})`,
 
     '--s-surface': refExpr(s.default.surface),
     '--s-content': refExpr(s.default.content),
     '--s-border': refExpr(s.default.border),
     '--s-border-hover': refExpr(s.hover.border),
     '--s-shadow': promExpr(s.default.prominence),
+    '--s-shadow-hover': promExpr(s.hover.prominence),
     '--s-surface-selected': refExpr(s.selected.surface),
     '--s-content-selected': refExpr(s.selected.content),
     '--s-border-selected': refExpr(s.selected.border),
@@ -341,6 +361,10 @@ function cardVars(): string {
     '--c-surface-hover': refExpr(c.hover.surface),
     '--c-surface-disabled': refExpr(c.disabled.surface),
     '--c-content-disabled': refExpr(c.disabled.content),
+    // control.icon.neutral.* are near-white fills meant for dark surfaces —
+    // invisible on this light button. The family's readable dark is the
+    // shared content token instead.
+    '--c-icon': refExpr(CONTENT_NEUTRAL),
   };
   return Object.entries(vars)
     .map(([k, v]) => `${k}: ${v};`)
@@ -353,24 +377,27 @@ function renderCard(): string {
       <div class="cdr-demo-card" style="${cardVars()}">
         <div class="cdr-demo-card-clip">
           <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
-          <a class="cdr-demo-overlay" href="#" aria-label="Visit store page" onclick="return false;"></a>
+          <a class="cdr-demo-anchor" href="https://www.rei.com/stores/example" target="_blank" rel="noopener" aria-label="Visit the REI Example store page"></a>
           <div class="cdr-demo-info">
             <p class="cdr-demo-name">REI Example</p>
             <p class="cdr-demo-detail">(206) 555-0142</p>
             <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
             <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
           </div>
+          <span class="cdr-demo-store-tag">My store</span>
         </div>
-        <label class="cdr-demo-chip" title="Save to My REI">
-          <input type="checkbox" class="sr-only" data-widget="control" aria-label="Save to My REI" />
-          <span class="cdr-demo-chip-icon cdr-demo-chip-icon-outline">${HEART_OUTLINE}</span>
-          <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
-        </label>
+        <button type="button" class="cdr-demo-control" data-widget="control" aria-expanded="false" aria-controls="cdr-demo-drawer" aria-label="Save to My REI" title="Save to My REI">
+          <span class="cdr-demo-control-icon cdr-demo-control-icon-outline">${HEART_OUTLINE}</span>
+          <span class="cdr-demo-control-icon cdr-demo-control-icon-filled">${HEART_FILLED}</span>
+        </button>
+        <div class="cdr-demo-drawer" id="cdr-demo-drawer" hidden>
+          <p class="cdr-demo-drawer-text"><strong>Saved to My REI.</strong> This store is set as your home store for pickup and availability.</p>
+        </div>
       </div>
-      <label class="cdr-demo-radio">
-        <input type="radio" name="cdr-demo-store-select" class="sr-only" data-widget="selection" />
-        <span class="cdr-demo-radio-dot"></span>
-        <span class="cdr-demo-radio-label">Set as my store</span>
+      <label class="cdr-demo-check">
+        <input type="checkbox" class="sr-only" data-widget="selection" />
+        <span class="cdr-demo-check-box">${CHECK_MARK}</span>
+        <span class="cdr-demo-check-label">Set as my store</span>
       </label>
     </div>
   `;
@@ -413,9 +440,9 @@ function renderTable(recipe: FamilyRecipe, activeState: string): string {
 }
 
 const WIDGET_SELECTOR: Record<string, string> = {
-  action: '.cdr-demo-overlay',
-  selection: '.cdr-demo-radio-dot',
-  control: '.cdr-demo-chip',
+  action: '.cdr-demo-anchor',
+  selection: '.cdr-demo-check-box',
+  control: '.cdr-demo-control',
 };
 
 function renderComposition(family: string, activeState: string): string {
@@ -441,10 +468,10 @@ function renderComposition(family: string, activeState: string): string {
       ${st.note ? `<div class="cdr-demo-cue">⚠ ${st.note}</div>` : ''}
       <div class="cdr-demo-hint">Try it live above: ${
         recipe.widget === 'link'
-          ? 'hover the card, or tab to it and check focus.'
-          : recipe.widget === 'radio'
-            ? 'hover or click "Set as my store".'
-            : 'hover or click the "My REI" heart.'
+          ? 'hover or press the card, or tab to it and check the focus ring.'
+          : recipe.widget === 'checkbox'
+            ? 'hover or click "Set as my store" — checking it selects the card itself.'
+            : 'click the heart button — it opens a drawer and marks the store.'
       } The buttons below jump the table to that state\u2019s exact tokens — <code>disabled</code>/<code>selected</code> also apply real <code>disabled</code>/<code>checked</code> attributes so you can see them.</div>
     </div>
     <div class="cdr-demo-state-nav">${stateNav}</div>
@@ -521,7 +548,7 @@ const chrome = `
     .cdr-demo-intro { margin-bottom: ${SPACE_XL}; color: var(--cedar-warm-700); max-width: 780px; ${typeStyle('CdrTextBody300')} }
 
     /* ── Scene ──
-       Card width, photo height, and the two decorative dot sizes (radio fill,
+       Card width, photo height, and the two decorative dot sizes (check mark,
        hours indicator) have no Cedar dimension token — they're the only
        literal numbers left in this file, flagged rather than hidden. */
     .cdr-demo-scene {
@@ -530,21 +557,21 @@ const chrome = `
       margin-bottom: ${SPACE_XL}; background: var(--cedar-warm-50);
     }
 
-    /* ── Action: card link ──
+    /* ── Action: the card is a real anchor ──
        Shadow lives on .cdr-demo-card (never clipped); photo clipping lives on a
-       separate inner wrapper so the box-shadow is never cut off. */
+       separate inner wrapper so the box-shadow is never cut off. The anchor
+       carries the full state flow: default → hover → pressed → disabled, plus
+       a focus-visible ring for keyboard users. */
     .cdr-demo-card {
       position: relative; width: 300px; /* no Cedar "component width" token */
       border-radius: ${RADIUS_ACTION}; background: white;
       box-shadow: var(--a-shadow);
       transition: box-shadow ${MOTION};
     }
-    .cdr-demo-card:has(.cdr-demo-overlay:hover),
-    .cdr-demo-card:has(.cdr-demo-overlay:focus-visible) {
-      box-shadow: var(--a-shadow-hover);
-    }
-    .cdr-demo-card:has(.cdr-demo-overlay[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
-    .cdr-demo-card-clip { border-radius: ${RADIUS_ACTION}; overflow: hidden; }
+    .cdr-demo-card:has(.cdr-demo-anchor:hover) { box-shadow: var(--a-shadow-hover); }
+    .cdr-demo-card:has(.cdr-demo-anchor:active) { box-shadow: var(--a-shadow); }
+    .cdr-demo-card:has(.cdr-demo-anchor[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
+    .cdr-demo-card-clip { position: relative; border-radius: ${RADIUS_ACTION}; overflow: hidden; }
     .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
     .cdr-demo-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
     .cdr-demo-building {
@@ -558,79 +585,111 @@ const chrome = `
                          repeating-linear-gradient(0deg, rgba(255,255,255,0.35) 0 12%, transparent 12% 24%);
       opacity: 0.5;
     }
-    .cdr-demo-overlay {
+    .cdr-demo-anchor {
       position: absolute; inset: 0; border-radius: ${RADIUS_ACTION}; z-index: 1;
       border: 2px solid var(--a-border);
       transition: border-color ${MOTION};
     }
-    .cdr-demo-overlay:hover, .cdr-demo-overlay:focus-visible { border-color: var(--a-border-hover); }
-    .cdr-demo-overlay[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
+    .cdr-demo-anchor:hover { border-color: var(--a-border-hover); }
+    .cdr-demo-anchor:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; border-color: var(--a-border-hover); }
+    .cdr-demo-anchor:active { border-color: var(--a-border-pressed); }
+    .cdr-demo-anchor:active ~ .cdr-demo-info { background: var(--a-surface-pressed); }
+    .cdr-demo-anchor[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
     .cdr-demo-info {
       position: relative; z-index: 0; padding: ${SPACE_MD} ${SPACE_LG};
       background: var(--a-surface); color: var(--a-content);
       transition: background ${MOTION}, color ${MOTION};
     }
-    .cdr-demo-overlay[aria-disabled="true"] ~ .cdr-demo-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
+    .cdr-demo-anchor[aria-disabled="true"] ~ .cdr-demo-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
     .cdr-demo-name { margin: 0 0 ${SPACE_XS}; ${typeStyle('CdrTextHeadingSerif300')} }
     .cdr-demo-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: underline; }
     .cdr-demo-hours { margin: ${SPACE_SM} 0 0; display: flex; align-items: center; gap: ${SPACE_3XS}; ${typeStyle('CdrTextBody300')} }
     .cdr-demo-dot { width: ${SPACE_XS}; height: ${SPACE_XS}; border-radius: 50%; background: #3a9c50; display: inline-block; }
+    /* "My store" tag — the card-level evidence of the selection checkbox. */
+    .cdr-demo-store-tag {
+      position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
+      padding: ${SPACE_2XS} ${SPACE_SM}; border-radius: ${RADIUS_PILL};
+      background: var(--s-surface-selected); color: var(--s-content-selected);
+      border: 1px solid var(--s-border-selected);
+      ${typeStyle('CdrTextEyebrow100')} display: none;
+    }
+    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-store-tag { display: inline-block; }
 
-    /* ── Control: My REI checkbox ── */
+    /* ── Control: My REI button ──
+       A real <button>, not a labeled input — it opens the drawer below and
+       marks the store, acting on elements other than itself. Prominence
+       deliberately never moves. */
     .sr-only {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
-    /* Icon-only toggle button — a distinct silhouette from selection's plain
-       list row below: a compact square target overlaying the photo, no
-       visible label (accessible name comes from the input's aria-label). */
-    .cdr-demo-chip {
-      position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
+    .cdr-demo-control {
+      position: absolute; top: ${SPACE_MD}; right: ${SPACE_MD}; z-index: 3;
       display: inline-flex; align-items: center; justify-content: center;
       width: calc(${ICON_SIZE} + ${SPACE_LG}); height: calc(${ICON_SIZE} + ${SPACE_LG});
-      border-radius: ${RADIUS_MD}; cursor: pointer;
-      background: var(--c-surface); color: var(--c-content); border: 2px solid var(--c-border);
-      transition: background ${MOTION};
+      padding: 0; border-radius: ${RADIUS_MD}; cursor: pointer;
+      background: var(--c-surface); color: var(--c-icon); border: 2px solid var(--c-border);
+      transition: background ${MOTION}, border-color ${MOTION};
     }
-    .cdr-demo-chip-icon { display: inline-flex; }
-    .cdr-demo-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; }
-    .cdr-demo-chip:has(input:hover) { background: var(--c-surface-hover); }
-    .cdr-demo-chip:has(input:focus-visible) { outline: 2px solid #3d6db9; outline-offset: 2px; }
-    .cdr-demo-chip:has(input:disabled) { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
-    .cdr-demo-chip-icon-filled { display: none; }
-    .cdr-demo-chip:has(input:checked) .cdr-demo-chip-icon-outline { display: none; }
-    .cdr-demo-chip:has(input:checked) .cdr-demo-chip-icon-filled { display: inline-flex; }
+    .cdr-demo-control-icon { display: inline-flex; }
+    .cdr-demo-control-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; }
+    .cdr-demo-control:hover { background: var(--c-surface-hover); }
+    .cdr-demo-control:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; }
+    .cdr-demo-control:disabled { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
+    .cdr-demo-control-icon-filled { display: none; }
+    .cdr-demo-control[aria-expanded="true"] .cdr-demo-control-icon-outline { display: none; }
+    .cdr-demo-control[aria-expanded="true"] .cdr-demo-control-icon-filled { display: inline-flex; }
+    /* In-card drawer — the visible "something else" the button acts on. */
+    .cdr-demo-drawer {
+      position: relative; z-index: 2;
+      background: var(--c-surface); color: var(--c-content);
+      border-top: 1px solid var(--c-border);
+      border-radius: 0 0 ${RADIUS_ACTION} ${RADIUS_ACTION};
+      padding: ${SPACE_MD} ${SPACE_LG};
+    }
+    .cdr-demo-drawer[hidden] { display: none; }
+    .cdr-demo-drawer-text { margin: 0; ${typeStyle('CdrTextBody300')} }
 
-    /* ── Selection: set-as-my-store radio ──
-       A bare list row — no box, background, or border chrome — so it reads
-       as a native radio choice rather than a card or a button. Prominence
-       lives entirely on the small circular indicator, not a container. */
-    .cdr-demo-radio {
+    /* ── Selection: set-as-my-store checkbox ──
+       A bare list row — no container chrome — so it reads as a native form
+       choice rather than a card or a button. Checking it repaints the CARD
+       (border, surface, shadow, "My store" tag) with the selected tokens. */
+    .cdr-demo-check {
       display: flex; align-items: center; gap: ${SPACE_SM}; cursor: pointer;
+      align-self: center;
     }
-    .cdr-demo-radio:has(input:focus-visible) .cdr-demo-radio-dot { outline: 2px solid #3d6db9; outline-offset: 2px; }
-    .cdr-demo-radio-dot {
-      width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: 50%; flex-shrink: 0;
+    .cdr-demo-check:has(input:focus-visible) .cdr-demo-check-box { outline: 2px solid var(--s-border-selected); outline-offset: 2px; }
+    .cdr-demo-check-box {
+      width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: ${RADIUS_SM}; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       background: var(--s-surface); border: 2px solid var(--s-border);
       box-shadow: var(--s-shadow);
+      color: var(--s-content-selected);
       transition: background ${MOTION}, border-color ${MOTION}, box-shadow ${MOTION};
     }
-    .cdr-demo-radio:hover .cdr-demo-radio-dot { border-color: var(--s-border-hover); }
-    .cdr-demo-radio-dot::after {
-      content: ''; width: 50%; height: 50%; border-radius: 50%;
-      background: var(--s-content-selected); opacity: 0; transition: opacity ${MOTION};
-    }
-    .cdr-demo-radio:has(input:checked) .cdr-demo-radio-dot {
+    .cdr-demo-check-box svg { width: 60%; height: 60%; opacity: 0; transition: opacity ${MOTION}; }
+    .cdr-demo-check:hover .cdr-demo-check-box { border-color: var(--s-border-hover); box-shadow: var(--s-shadow-hover); }
+    .cdr-demo-check:has(input:checked) .cdr-demo-check-box {
       background: var(--s-surface-selected); border-color: var(--s-border-selected);
       box-shadow: var(--s-shadow-selected);
     }
-    .cdr-demo-radio:has(input:checked) .cdr-demo-radio-dot::after { opacity: 1; }
-    .cdr-demo-radio-label { color: var(--s-content); ${typeStyle('CdrTextBody300')} }
-    .cdr-demo-radio:has(input:checked) .cdr-demo-radio-label { color: var(--s-content-selected); }
-    .cdr-demo-radio:has(input:disabled) { cursor: not-allowed; }
-    .cdr-demo-radio:has(input:disabled) .cdr-demo-radio-dot { background: var(--s-surface-disabled); }
-    .cdr-demo-radio:has(input:disabled) .cdr-demo-radio-label { color: var(--s-content-disabled); }
+    .cdr-demo-check:has(input:checked) .cdr-demo-check-box svg { opacity: 1; }
+    .cdr-demo-check-label { color: var(--s-content); ${typeStyle('CdrTextBody300')} }
+    .cdr-demo-check:has(input:checked) .cdr-demo-check-label { color: var(--s-content-selected); }
+    .cdr-demo-check:has(input:disabled) { cursor: not-allowed; }
+    .cdr-demo-check:has(input:disabled) .cdr-demo-check-box { background: var(--s-surface-disabled); box-shadow: none; }
+    .cdr-demo-check:has(input:disabled) .cdr-demo-check-label { color: var(--s-content-disabled); }
+    /* The selected CARD — this is the point of the demo: the checkbox gives
+       the card a real selected appearance, not just its own indicator. */
+    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-card {
+      box-shadow: var(--s-shadow-selected);
+    }
+    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-anchor {
+      border-color: var(--s-border-selected);
+    }
+    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-info {
+      background: var(--s-surface-selected); color: var(--s-content-selected);
+    }
 
     .cdr-demo-badge {
       ${typeStyle('CdrTextEyebrow100')}
@@ -694,10 +753,11 @@ export const ComponentComposer: Story = {
         </div>
         <p class="cdr-demo-intro">
           Use this when Cedar has no component for your pattern yet. All three widgets on this
-          store card are real and interactive: the card is a native link, "Set as my store" is a
-          radio, and "My REI" is a checkbox. Every color is a resolved token, and every state
-          below is driven by real <code>:hover</code>/<code>:checked</code>/<code>:disabled</code>
-          CSS — not a JS simulation.
+          store card are real and interactive: the card itself is a native anchor (hover, press,
+          tab-focus it), "Set as my store" is a real checkbox that selects the card, and the
+          heart is a real button that opens a drawer inside the card. Every color is a resolved
+          token, and every state is driven by real <code>:hover</code>/<code>:active</code>/
+          <code>:checked</code>/<code>:disabled</code> CSS — not a JS simulation.
         </p>
 
         <div class="cdr-demo-controls">
@@ -716,10 +776,10 @@ export const ComponentComposer: Story = {
           <ul>
             <li><strong>Every color is a real, resolved token</strong> referenced by its actual shipped <code>var(--cdr-...)</code> custom property, not a baked-in hex — check the "Generated CSS" panel or inspect the card in devtools.</li>
             <li><strong>Radius, spacing, and type are tokens too</strong> — corner radius, padding/gaps, and every font style come from <code>CdrRadius</code>/<code>CdrSpace</code>/<code>CdrText*</code>, not hand-picked pixel values.</li>
-            <li><strong>Three distinct shapes encode three distinct intents.</strong> Action uses the smallest radius (reads as a link, not a settled surface); selection sits between it and control; control is the largest short of fully round.</li>
-            <li><strong>Action and selection move in opposite prominence directions, and selection outranks action.</strong> Action starts flat and raises on hover. Selection starts raised and, on hover alone, already sits two prominence steps above action's resting flat (elevated) — before it's even chosen — reading as "a choice waiting to be submitted." Choosing it raises it once more, to floating.</li>
-            <li><strong>Control's prominence never moves</strong> — only its color/border chrome does. Instead, it acts outward: checking "My REI" also selects "Set as my store," and selecting the store also favorites it — a real cross-widget effect via native <code>change</code> events, demonstrating a control's job is to do something to something else, not just to itself.</li>
-            <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover), and the <code>control</code> family has no "checked" fill token — the heart only changes via icon swap, not color, when checked.</li>
+            <li><strong>Action is a real anchor with a full state flow.</strong> The card's <code>&lt;a&gt;</code> goes default → hover (border deepens, prominence flat→raised) → pressed (<code>:active</code> — surface shifts to neutral/subtle, shadow drops back) → disabled (<code>aria-disabled</code>), with a <code>:focus-visible</code> ring drawn from the real <code>action.border.trigger.faint</code> token.</li>
+            <li><strong>Selection is a real checkbox that selects the card.</strong> Checking "Set as my store" repaints the card's border, info surface, prominence, and reveals the "My store" tag — the selected state belongs to the card, not just the checkbox indicator. Hover alone already lifts it two prominence steps above action's resting flat.</li>
+            <li><strong>Control is a real button that acts on something else.</strong> Pressing it opens a confirmation drawer inside the card and marks "Set as my store"; clearing the checkbox releases it. Its own prominence never moves — a control's job is to do something to something else.</li>
+            <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover/Pressed), and the <code>control</code> family has no "pressed" fill token — the heart only changes via icon swap, not color, when saved.</li>
             <li><strong>content/text.primary is legacy</strong> and isn't scoped to any of these three families — this demo instead reuses <code>selection.text.neutral.faint</code>, the closest family-owned equivalent, everywhere a default readable content color is needed.</li>
           </ul>
         </div>
@@ -734,9 +794,13 @@ export const ComponentComposer: Story = {
 
     let activeState = DEFAULTS.state;
 
-    const widgetInput = (family: string): HTMLInputElement | HTMLAnchorElement | null => {
+    const widgetInput = (
+      family: string,
+    ): HTMLInputElement | HTMLAnchorElement | HTMLButtonElement | null => {
       if (family === 'action')
-        return canvasElement.querySelector<HTMLAnchorElement>('.cdr-demo-overlay');
+        return canvasElement.querySelector<HTMLAnchorElement>('.cdr-demo-anchor');
+      if (family === 'control')
+        return canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-control');
       return canvasElement.querySelector<HTMLInputElement>(`input[data-widget="${family}"]`);
     };
 
@@ -749,12 +813,13 @@ export const ComponentComposer: Story = {
         el.toggleAttribute('aria-disabled', state === 'disabled');
         if (state === 'disabled') el.setAttribute('tabindex', '-1');
         else el.removeAttribute('tabindex');
+      } else if (el instanceof HTMLButtonElement) {
+        el.disabled = state === 'disabled';
       } else if (el instanceof HTMLInputElement) {
         el.disabled = state === 'disabled';
         // Only ever force it ON to preview "selected" — never force it back
-        // off. A real selection (from clicking the radio, or from the
-        // control↔selection sync) must survive switching families or
-        // jumping to another state's preview.
+        // off. A real selection must survive switching families or jumping
+        // to another state's preview.
         if (family === 'selection' && state === 'selected') el.checked = true;
       }
     };
@@ -778,31 +843,37 @@ export const ComponentComposer: Story = {
 
     render();
 
-    // Selection and control are two skins on the same underlying "this is my
-    // store" fact, so real user interaction keeps them in sync: choosing the
-    // store also favorites it, and favoriting a store also chooses it. This
-    // is a genuine cross-widget effect (a control "does something to
-    // something else"), not just a within-widget state change — it only
-    // fires on real input, not on the state-nav preview buttons above.
-    const storeRadio = canvasElement.querySelector<HTMLInputElement>(
+    // Real cross-widget behavior: the control button opens the in-card
+    // drawer AND marks the selection checkbox; un-checking the box by hand
+    // releases the button and closes the drawer. This is a control "doing
+    // something to something else" — and it only fires on real input, not
+    // on the state-nav preview buttons above.
+    const storeCheck = canvasElement.querySelector<HTMLInputElement>(
       'input[data-widget="selection"]',
     );
-    const favCheckbox = canvasElement.querySelector<HTMLInputElement>(
-      'input[data-widget="control"]',
-    );
-    storeRadio?.addEventListener('change', () => {
-      if (storeRadio.checked && favCheckbox) favCheckbox.checked = true;
+    const saveButton = canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-control');
+    const drawer = canvasElement.querySelector<HTMLElement>('#cdr-demo-drawer');
+
+    const setSaved = (saved: boolean) => {
+      if (saveButton) saveButton.setAttribute('aria-expanded', String(saved));
+      if (drawer) drawer.hidden = !saved;
+      if (storeCheck) storeCheck.checked = saved;
+    };
+
+    saveButton?.addEventListener('click', () => {
+      setSaved(saveButton.getAttribute('aria-expanded') !== 'true');
+    });
+
+    storeCheck?.addEventListener('change', () => {
+      // Manually clearing the store releases the saved state too — the two
+      // widgets describe the same underlying fact.
+      if (!storeCheck.checked && saveButton?.getAttribute('aria-expanded') === 'true') {
+        setSaved(false);
+      }
       // Keep the inspector's table/CSS panel truthful about the widget the
       // user is actually looking at.
-      if (storeRadio.checked && familyEl.value === 'selection') {
-        activeState = 'selected';
-        render();
-      }
-    });
-    favCheckbox?.addEventListener('change', () => {
-      if (favCheckbox.checked && storeRadio) storeRadio.checked = true;
-      if (favCheckbox.checked && familyEl.value === 'selection') {
-        activeState = 'selected';
+      if (familyEl.value === 'selection') {
+        activeState = storeCheck.checked ? 'selected' : 'default';
         render();
       }
     });
