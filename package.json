@@ -122,7 +122,8 @@
     "test:coverage": "vitest run --coverage",
     "prepare": "husky",
     "storybook": "pnpm run storybook:release-notes && storybook dev -p 6006",
-    "build-storybook": "pnpm run storybook:release-notes && storybook build"
+    "build-storybook": "pnpm run storybook:release-notes && storybook build",
+    "security:pin-actions": "npx -y pin-github-action .github/workflows/figma-to-tokens.yml"
   },
   "dependencies": {
     "semver": "^7.7.4"
@@ -163,6 +164,10 @@
     "vitest": "^4.0.16"
   },
   "lint-staged": {
+    ".github/workflows/*.yml": [
+      "npx -y pin-github-action",
+      "git add"
+    ],
     "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}": [
       "oxlint --fix --no-error-on-unmatched-pattern",
       "oxfmt --no-error-on-unmatched-pattern"
