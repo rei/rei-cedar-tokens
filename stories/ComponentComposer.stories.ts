@@ -136,6 +136,15 @@ const RADIUS_SM = rem(t.CdrRadiusSofter); // selection
 const RADIUS_MD = rem(t.CdrRadiusSoftest); // control
 const RADIUS_PILL = rem(t.CdrRadiusRound);
 
+// Nested rounded corners need the inner radius reduced by the border
+// thickness, or the inner box's corner doesn't reach the outer border's
+// curve — leaving a visible sliver/gap of background between them right
+// at the corner. Assumes a 16px root (matches `rem()` above).
+function innerRadius(outerRem: string, borderPx: number): string {
+  const outerPx = Number.parseFloat(outerRem) * 16;
+  return `${Math.max(0, outerPx - borderPx) / 16}rem`;
+}
+
 // ─── Recipes ──────────────────────────────────────────────────────────────────
 
 type Prominence = { name: string; value: string; cssVar: string };
@@ -344,6 +353,46 @@ const PHOTO_PLACEHOLDER = `
   <div class="cdr-demo-windows"></div>
 `;
 
+// Store data for the control card's picker — picking one swaps the card's
+// own address/phone/hours text and the placeholder photo's colors, since
+// there's no real photo asset to swap in. This is content the chip
+// controls; the card's token-driven chrome (radius/border/prominence)
+// never changes regardless of which store is picked.
+type StoreInfo = {
+  name: string;
+  phone: string;
+  address: string;
+  hours: string;
+  sky: [string, string];
+  building: string;
+};
+const STORES: Record<string, StoreInfo> = {
+  'REI Example': {
+    name: 'REI Example',
+    phone: '(206) 555-0142',
+    address: '400 Occidental Ave S, Seattle, WA 98104',
+    hours: 'Open until 9pm today',
+    sky: ['#7fb2e8', '#cfe6f7'],
+    building: '#4a4a4d',
+  },
+  'REI Seattle': {
+    name: 'REI Seattle',
+    phone: '(206) 223-1944',
+    address: '222 Yale Ave N, Seattle, WA 98109',
+    hours: 'Open until 9pm today',
+    sky: ['#f2b56b', '#f7dfa5'],
+    building: '#5b4636',
+  },
+  'REI Portland': {
+    name: 'REI Portland',
+    phone: '(503) 221-1938',
+    address: '1798 Jantzen Beach Center, Portland, OR 97217',
+    hours: 'Open until 8pm today',
+    sky: ['#8fd3c8', '#d9f2ea'],
+    building: '#3d5a4c',
+  },
+};
+
 // ─── Card ─────────────────────────────────────────────────────────────────────
 // Rendered once. CSS custom properties carry every state's real token values;
 // genuine :hover / :checked / :disabled / [aria-disabled] selectors (defined
@@ -433,14 +482,15 @@ function controlVars(): string {
 // otherwise visually cover the rounded corner entirely — the shadow must
 // stay on the un-clipped outer card, or it gets cut off instead).
 function cardBody(): string {
+  const store = STORES['REI Example'];
   return `
     <div class="cdr-demo-card-clip">
       <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
       <div class="cdr-demo-info">
-        <p class="cdr-demo-name">REI Example</p>
-        <p class="cdr-demo-detail">(206) 555-0142</p>
-        <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
-        <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
+        <p class="cdr-demo-name" data-field="name">${store.name}</p>
+        <p class="cdr-demo-detail" data-field="phone">${store.phone}</p>
+        <p class="cdr-demo-detail" data-field="address">${store.address}</p>
+        <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> <span data-field="hours">${store.hours}</span></p>
       </div>
     </div>
   `;
@@ -469,7 +519,7 @@ function renderTrio(): string {
           ${cardBody()}
           <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">${HEART_OUTLINE}<span>My REI</span></span>
         </a>
-        <p class="cdr-demo-trio-caption">The whole card is the link — hover/tab it. Radius: smallest non-zero. Prominence: flat → raised on hover.</p>
+        <p class="cdr-demo-trio-caption">The whole card is the link — hover/tab it. The drop shadow (flat → raised), not a thick border, carries the hover signal. Radius: smallest non-zero.</p>
       </div>
 
       <div class="cdr-demo-trio-item">
@@ -510,7 +560,7 @@ function renderTrio(): string {
             <button type="button" class="cdr-demo-store-option" data-store="REI Portland" role="option" aria-selected="false">REI Portland</button>
           </div>
         </div>
-        <p class="cdr-demo-trio-caption">The card itself never changes — the chip controls the picker that drops down over it, not itself. Radius: one tier up from selection. Prominence: never moves.</p>
+        <p class="cdr-demo-trio-caption">The chip controls the picker that drops down over the card, and picking a store swaps the card's own address/phone/hours and photo — content, not tokens. Radius: one tier up from selection. Prominence: never moves.</p>
       </div>
 
     </div>
@@ -703,15 +753,24 @@ const chrome = `
        clip must shrink inside of), and the shadow stays on the un-clipped
        outer card so it isn't cut off. */
     .cdr-demo-card-clip { overflow: hidden; }
-    .cdr-demo-card--action .cdr-demo-card-clip { border-radius: ${RADIUS_ACTION}; }
-    .cdr-demo-card--selection .cdr-demo-card-clip { border-radius: ${RADIUS_SM}; }
-    .cdr-demo-card--control .cdr-demo-card-clip { border-radius: ${RADIUS_MD}; }
+    .cdr-demo-card--action .cdr-demo-card-clip { border-radius: ${innerRadius(RADIUS_ACTION, 1)}; }
+    .cdr-demo-card--selection .cdr-demo-card-clip { border-radius: ${innerRadius(RADIUS_SM, 3)}; }
+    .cdr-demo-card--control .cdr-demo-card-clip { border-radius: ${innerRadius(RADIUS_MD, 3)}; }
     .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
-    .cdr-demo-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
+    /* Colors are custom properties (with the default store's colors as the
+       fallback) so picking a store in the control card can recolor its
+       photo without touching any token — this is plain content, not a
+       design token relationship. */
+    .cdr-demo-sky {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, var(--photo-sky-1, #7fb2e8) 0%, var(--photo-sky-2, #cfe6f7) 100%);
+      transition: background ${MOTION};
+    }
     .cdr-demo-building {
       position: absolute; left: 0; right: 0; bottom: 0; height: 55%;
-      background: #4a4a4d;
+      background: var(--photo-building, #4a4a4d);
       clip-path: polygon(0% 100%, 0% 40%, 30% 40%, 30% 15%, 65% 15%, 65% 40%, 100% 40%, 100% 100%);
+      transition: background ${MOTION};
     }
     .cdr-demo-windows {
       position: absolute; left: 8%; right: 8%; bottom: 8%; height: 30%;
@@ -739,14 +798,20 @@ const chrome = `
     }
     .cdr-demo-chip svg, .cdr-demo-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; color: #2f6f4e; }
     .cdr-demo-chip--decorative { pointer-events: none; }
-    .cdr-demo-chip-icon-filled { display: none; }
+    /* Compound selector so this always beats the later, lower-specificity
+       ".cdr-demo-chip-icon { display: inline-flex }" base rule — without
+       it, both the outline AND filled heart render at once. */
+    .cdr-demo-chip-icon.cdr-demo-chip-icon-filled { display: none; }
 
     /* ── Action: the whole card is a real anchor ──
-       Full state flow: default → hover → pressed → disabled, plus a
-       focus-visible ring for keyboard users. Radius: smallest non-zero. */
+       Full state flow: default → hover → pressed → disabled. Prominence
+       (drop shadow) is the primary hover signal, not a thick border — a
+       thin 1px border was also what let the inner photo's radius nest
+       correctly against the outer border without a visible corner gap.
+       Radius: smallest non-zero. */
     .cdr-demo-card--action {
       border-radius: ${RADIUS_ACTION};
-      border: 3px solid var(--a-border);
+      border: 1px solid var(--a-border);
       box-shadow: var(--a-shadow);
     }
     .cdr-demo-card--action:hover { border-color: var(--a-border-hover); box-shadow: var(--a-shadow-hover); }
@@ -936,7 +1001,7 @@ export const ComponentComposer: Story = {
             <li><strong>Prominence direction differs per family, and the order is real, not invented.</strong> Verified ascending shadow scale: <code>Flat(0) &lt; Raised(2px) &lt; Elevated(4px) &lt; Floating(8px) &lt; Lifted(16px)</code>. Action starts <code>flat</code> and raises on hover. Selection starts one tier higher, at <code>raised</code>, climbs to <code>elevated</code> on hover, and reaches the topmost tier, <code>lifted</code>, once actually selected. Control's prominence never moves at all — it isn't the thing changing.</li>
             <li><strong>Action is a real anchor with a full state flow.</strong> The whole card is an <code>&lt;a&gt;</code>: default → hover (border deepens, shadow raises) → pressed (<code>:active</code> — surface shifts, shadow drops back) → disabled (<code>aria-disabled</code>), with a <code>:focus-visible</code> ring drawn from the real <code>action.border.trigger.faint</code> token. It moves the user to the store page.</li>
             <li><strong>Selection is a real checkbox that selects the card.</strong> The whole card is a <code>&lt;label&gt;</code> wrapping a checkbox — checking it repaints the card's border, surface, and shadow, and reveals a "Selected" tag. It saves a preference, it doesn't navigate.</li>
-            <li><strong>Control is a real button that acts on something else.</strong> The card itself is static; only the "My REI" chip is interactive, and clicking it opens a real store-picker dropdown beside the card — the heart fills in while it's open, and picking a store updates the chip's label — but the card never changes. That's the entire point of a control: it does something to something else.</li>
+            <li><strong>Control is a real button that acts on something else.</strong> Only the "My REI" chip is interactive; clicking it opens a real store-picker dropdown over the card, and picking a store swaps the card's own address/phone/hours and photo colors. That content swap is deliberately <em>not</em> token-driven — the card's radius, border, and prominence never move regardless of which store is shown, because a control's job is to act on something else, not restyle itself.</li>
             <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover/Pressed), and the <code>control</code> family has no "pressed" fill token — the chip only changes via icon swap and color, not a dedicated pressed surface.</li>
             <li><strong>content/text.primary is legacy</strong> and isn't scoped to any of these three families — this demo instead reuses <code>selection.text.neutral.faint</code>, the closest family-owned equivalent, everywhere a default readable content color is needed.</li>
           </ul>
@@ -1039,13 +1104,34 @@ export const ComponentComposer: Story = {
       setPickerOpen(controlButton.getAttribute('aria-expanded') !== 'true');
     });
 
+    // The one real "something else" a control changes: picking a store
+    // updates this same card's own content and photo colors — literal
+    // content, not tokens, which is why it's plain inline custom
+    // properties/text rather than anything in the recipe/table below.
+    const controlCard = canvasElement.querySelector<HTMLElement>('.cdr-demo-card--control');
     storePicker?.addEventListener('click', (e) => {
       const option = (e.target as HTMLElement).closest<HTMLButtonElement>('.cdr-demo-store-option');
-      if (!option) return;
+      const store = option?.dataset.store ? STORES[option.dataset.store] : undefined;
+      if (!option || !store) return;
       storePicker
         .querySelectorAll<HTMLButtonElement>('.cdr-demo-store-option')
         .forEach((o) => o.setAttribute('aria-selected', String(o === option)));
-      controlButton?.setAttribute('aria-label', `My REI: ${option.dataset.store}`);
+      controlButton?.setAttribute('aria-label', `My REI: ${store.name}`);
+
+      if (controlCard) {
+        const setField = (field: string, value: string) => {
+          const el = controlCard.querySelector<HTMLElement>(`[data-field="${field}"]`);
+          if (el) el.textContent = value;
+        };
+        setField('name', store.name);
+        setField('phone', store.phone);
+        setField('address', store.address);
+        setField('hours', store.hours);
+        controlCard.style.setProperty('--photo-sky-1', store.sky[0]);
+        controlCard.style.setProperty('--photo-sky-2', store.sky[1]);
+        controlCard.style.setProperty('--photo-building', store.building);
+      }
+
       setPickerOpen(false);
     });
   },
