@@ -418,16 +418,21 @@ function controlVars(): string {
 // Nothing here shares DOM with the other columns — each card is a fully
 // independent, real, live instance.
 
-function cardBody(showSelectedTag: boolean): string {
+// Photo + info live in their own clipped wrapper so the card's radius
+// actually shows (a square photo sitting directly in the card would
+// otherwise visually cover the rounded corner entirely — the shadow must
+// stay on the un-clipped outer card, or it gets cut off instead).
+function cardBody(): string {
   return `
-    <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
-    <div class="cdr-demo-info">
-      <p class="cdr-demo-name">REI Example</p>
-      <p class="cdr-demo-detail">(206) 555-0142</p>
-      <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
-      <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
+    <div class="cdr-demo-card-clip">
+      <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
+      <div class="cdr-demo-info">
+        <p class="cdr-demo-name">REI Example</p>
+        <p class="cdr-demo-detail">(206) 555-0142</p>
+        <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
+        <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
+      </div>
     </div>
-    ${showSelectedTag ? '<span class="cdr-demo-store-tag">Selected</span>' : ''}
   `;
 }
 
@@ -451,33 +456,34 @@ function renderTrio(): string {
           aria-label="Visit the REI Example store page"
           data-demo-link="true"
         >
+          ${cardBody()}
           <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">${HEART_OUTLINE}<span>My REI</span></span>
-          ${cardBody(false)}
         </a>
-        <p class="cdr-demo-trio-caption">The whole card is the link. Radius: smallest non-zero. Prominence: flat → raised on hover.</p>
+        <p class="cdr-demo-trio-caption">The whole card is the link — hover/tab it. Radius: smallest non-zero. Prominence: flat → raised on hover.</p>
       </div>
 
       <div class="cdr-demo-trio-item">
         ${questionHeader(SELECTION_RECIPE)}
         <label class="cdr-demo-card cdr-demo-card--selection" style="${selectionVars()}">
           <input type="checkbox" class="sr-only" data-widget="selection" aria-label="Set REI Example as my store" />
+          ${cardBody()}
           <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">${HEART_OUTLINE}<span>My REI</span></span>
-          ${cardBody(true)}
+          <span class="cdr-demo-store-tag">Selected</span>
         </label>
-        <p class="cdr-demo-trio-caption">The whole card is a checkbox. Radius: one tier up from action. Prominence: raised → elevated (hover) → lifted (selected).</p>
+        <p class="cdr-demo-trio-caption">The whole card is a checkbox — click it. Radius: one tier up from action. Prominence: raised → elevated (hover) → lifted (selected).</p>
       </div>
 
       <div class="cdr-demo-trio-item">
         ${questionHeader(CONTROL_RECIPE)}
         <div class="cdr-demo-card cdr-demo-card--control" style="${controlVars()}">
+          ${cardBody()}
           <button type="button" class="cdr-demo-chip cdr-demo-chip--button" data-widget="control" aria-pressed="false" aria-label="Save REI Example to My REI">
             <span class="cdr-demo-chip-icon cdr-demo-chip-icon-outline">${HEART_OUTLINE}</span>
             <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
             <span>My REI</span>
           </button>
-          ${cardBody(false)}
         </div>
-        <p class="cdr-demo-trio-caption">The card itself does nothing — the chip button acts on the "Saved stores" tray below. Radius: one tier up from selection. Prominence: never moves.</p>
+        <p class="cdr-demo-trio-caption">The card itself never changes — only the chip is interactive, and it acts on the "Saved stores" tray below. Radius: one tier up from selection. Prominence: never moves.</p>
       </div>
 
     </div>
@@ -640,7 +646,10 @@ const chrome = `
     .cdr-demo-trio {
       display: flex; flex-wrap: wrap; align-items: flex-start; gap: ${SPACE_2XL};
       padding: ${SPACE_2XL}; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
-      margin-bottom: ${SPACE_SM}; background: var(--cedar-warm-50);
+      margin-bottom: ${SPACE_SM};
+      /* Darker than the page background so each card's box-shadow (the
+         prominence token) actually shows up against something. */
+      background: var(--cedar-warm-100);
     }
     .cdr-demo-trio-item { display: flex; flex-direction: column; width: 300px; }
     .cdr-demo-question {
@@ -669,7 +678,19 @@ const chrome = `
       text-decoration: none; color: inherit; cursor: pointer;
       transition: box-shadow ${MOTION}, border-color ${MOTION};
     }
-    .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; border-radius: inherit; /* no photo-aspect token */ }
+    /* Photo/info live inside this clipped wrapper, never directly in
+       .cdr-demo-card — otherwise the square photo sits flush with the
+       card's edge and visually erases the radius entirely, which is why
+       the three cards looked identical regardless of their actual radius
+       tier. Border-radius is set here explicitly per family (not
+       "inherit", since the outer card's border adds extra width the inner
+       clip must shrink inside of), and the shadow stays on the un-clipped
+       outer card so it isn't cut off. */
+    .cdr-demo-card-clip { overflow: hidden; }
+    .cdr-demo-card--action .cdr-demo-card-clip { border-radius: ${RADIUS_ACTION}; }
+    .cdr-demo-card--selection .cdr-demo-card-clip { border-radius: ${RADIUS_SM}; }
+    .cdr-demo-card--control .cdr-demo-card-clip { border-radius: ${RADIUS_MD}; }
+    .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
     .cdr-demo-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
     .cdr-demo-building {
       position: absolute; left: 0; right: 0; bottom: 0; height: 55%;
@@ -705,7 +726,7 @@ const chrome = `
        focus-visible ring for keyboard users. Radius: smallest non-zero. */
     .cdr-demo-card--action {
       border-radius: ${RADIUS_ACTION};
-      border: 2px solid var(--a-border);
+      border: 3px solid var(--a-border);
       box-shadow: var(--a-shadow);
     }
     .cdr-demo-card--action:hover { border-color: var(--a-border-hover); box-shadow: var(--a-shadow-hover); }
@@ -719,7 +740,7 @@ const chrome = `
        raised (rest) -> elevated (hover) -> lifted (selected). */
     .cdr-demo-card--selection {
       border-radius: ${RADIUS_SM};
-      border: 2px solid var(--s-border);
+      border: 3px solid var(--s-border);
       box-shadow: var(--s-shadow);
     }
     .cdr-demo-card--selection:hover { border-color: var(--s-border-hover); box-shadow: var(--s-shadow-hover); }
@@ -748,7 +769,7 @@ const chrome = `
        control's job is to act on the shared tray below, not itself. */
     .cdr-demo-card--control {
       border-radius: ${RADIUS_MD};
-      border: 2px solid var(--c-border);
+      border: 3px solid var(--c-border);
       box-shadow: var(--c-shadow);
       cursor: default;
     }
