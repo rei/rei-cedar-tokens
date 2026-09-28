@@ -5,6 +5,16 @@ import { resolvePath } from './color-registry';
 // reads from, so nothing here is a hand-typed px/rem/ms value.
 import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 import { hexToRgb, rgbToOklch, oklchToRgb } from './oklch-math';
+// These are the actual shipped CSS custom properties this page's live
+// widgets reference via var(--cdr-...). Nothing else in this Storybook
+// loads them — without this import every var(--cdr-action-*/-selection-*/
+// -control-*/-prominence-*) reference resolves to nothing, silently
+// invalidating the border/background/box-shadow declarations that use it
+// (which is why hover/select/shadow appeared completely inert).
+import '../dist/rei-dot-com/css/foundations/cdr-color-action.css';
+import '../dist/rei-dot-com/css/foundations/cdr-color-selection.css';
+import '../dist/rei-dot-com/css/foundations/cdr-color-control.css';
+import '../dist/rei-dot-com/css/foundations/cdr-prominence.css';
 
 const t = tokens as Record<string, string>;
 
@@ -282,7 +292,7 @@ const CONTROL_RECIPE: FamilyRecipe = {
   question: 'Am I controlling something else on the page?',
   radius: RADIUS_MD,
   description:
-    'A real button that acts on something else: pressing it updates the shared "Saved stores" tray below — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves.',
+    'A real button that acts on something else: pressing it opens a store-picker dropdown next to the card — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves.',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
@@ -467,29 +477,42 @@ function renderTrio(): string {
         <label class="cdr-demo-card cdr-demo-card--selection" style="${selectionVars()}">
           <input type="checkbox" class="sr-only" data-widget="selection" aria-label="Set REI Example as my store" />
           ${cardBody()}
-          <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">${HEART_OUTLINE}<span>My REI</span></span>
+          <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">
+            <span class="cdr-demo-chip-icon cdr-demo-chip-icon-outline">${HEART_OUTLINE}</span>
+            <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
+            <span>My REI</span>
+          </span>
           <span class="cdr-demo-store-tag">Selected</span>
         </label>
-        <p class="cdr-demo-trio-caption">The whole card is a checkbox — click it. Radius: one tier up from action. Prominence: raised → elevated (hover) → lifted (selected).</p>
+        <p class="cdr-demo-trio-caption">The whole card is a checkbox — click it. The heart fills in and prominence jumps to its highest tier only once actually selected, higher than hover alone. Radius: one tier up from action.</p>
       </div>
 
       <div class="cdr-demo-trio-item">
         ${questionHeader(CONTROL_RECIPE)}
         <div class="cdr-demo-card cdr-demo-card--control" style="${controlVars()}">
           ${cardBody()}
-          <button type="button" class="cdr-demo-chip cdr-demo-chip--button" data-widget="control" aria-pressed="false" aria-label="Save REI Example to My REI">
+          <button
+            type="button"
+            class="cdr-demo-chip cdr-demo-chip--button"
+            data-widget="control"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="cdr-demo-store-picker"
+            aria-label="Choose which store is My REI"
+          >
             <span class="cdr-demo-chip-icon cdr-demo-chip-icon-outline">${HEART_OUTLINE}</span>
             <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
             <span>My REI</span>
           </button>
         </div>
-        <p class="cdr-demo-trio-caption">The card itself never changes — only the chip is interactive, and it acts on the "Saved stores" tray below. Radius: one tier up from selection. Prominence: never moves.</p>
+        <p class="cdr-demo-trio-caption">The card itself never changes — the chip controls the store picker below it, not itself. Radius: one tier up from selection. Prominence: never moves.</p>
+        <div class="cdr-demo-store-picker" id="cdr-demo-store-picker" role="listbox" aria-label="Choose your store" hidden>
+          <button type="button" class="cdr-demo-store-option" data-store="REI Example" role="option" aria-selected="true">REI Example</button>
+          <button type="button" class="cdr-demo-store-option" data-store="REI Seattle" role="option" aria-selected="false">REI Seattle</button>
+          <button type="button" class="cdr-demo-store-option" data-store="REI Portland" role="option" aria-selected="false">REI Portland</button>
+        </div>
       </div>
 
-    </div>
-    <div class="cdr-demo-tray">
-      <strong>Saved stores:</strong> <span data-tray-count>0</span>
-      <span class="cdr-demo-tray-hint">← this is what the control chip actually changes, not itself</span>
     </div>
   `;
 }
@@ -563,7 +586,7 @@ function renderComposition(family: string, activeState: string): string {
           ? 'hover or press the Action card, or tab to it and check the focus ring.'
           : recipe.widget === 'checkbox'
             ? 'hover or click the Selection card — checking it selects the card itself.'
-            : 'click the "My REI" chip on the Control card — it updates the shared tray below, not itself.'
+            : 'click the "My REI" chip on the Control card — it opens the store picker below it, not itself.'
       } The buttons below jump the table to that state\u2019s exact tokens — <code>disabled</code>/<code>selected</code> also apply real <code>disabled</code>/<code>checked</code> attributes so you can see them.</div>
     </div>
     <div class="cdr-demo-state-nav">${stateNav}</div>
@@ -661,13 +684,6 @@ const chrome = `
     .cdr-demo-trio-caption {
       margin: ${SPACE_SM} 0 0; color: var(--cedar-warm-600); ${typeStyle('CdrTextEyebrow100')} text-transform: none;
     }
-    .cdr-demo-tray {
-      padding: ${SPACE_MD} ${SPACE_LG}; margin-bottom: ${SPACE_XL};
-      background: white; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
-      ${typeStyle('CdrTextBody300')} color: var(--cedar-warm-800);
-      transition: background ${MOTION};
-    }
-    .cdr-demo-tray-hint { margin-left: ${SPACE_SM}; color: var(--cedar-warm-500); ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
 
     /* The card shape itself — identical across all three columns except for
        radius (set per-family below) and which real element carries the
@@ -705,7 +721,10 @@ const chrome = `
     }
     .cdr-demo-info { position: relative; padding: ${SPACE_MD} ${SPACE_LG}; }
     .cdr-demo-name { margin: 0 0 ${SPACE_XS}; ${typeStyle('CdrTextHeadingSerif300')} }
-    .cdr-demo-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: underline; }
+    /* No underline at rest — only the action card gets link-style
+       underline-on-hover below; selection/control never underline since
+       this text isn't a real link in those cards. */
+    .cdr-demo-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: none; }
     .cdr-demo-hours { margin: ${SPACE_SM} 0 0; display: flex; align-items: center; gap: ${SPACE_3XS}; ${typeStyle('CdrTextBody300')} }
     .cdr-demo-dot { width: ${SPACE_XS}; height: ${SPACE_XS}; border-radius: 50%; background: #3a9c50; display: inline-block; }
     /* Brand chip — matches the reference "My REI" pill. Decorative on
@@ -720,6 +739,7 @@ const chrome = `
     }
     .cdr-demo-chip svg, .cdr-demo-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; color: #2f6f4e; }
     .cdr-demo-chip--decorative { pointer-events: none; }
+    .cdr-demo-chip-icon-filled { display: none; }
 
     /* ── Action: the whole card is a real anchor ──
        Full state flow: default → hover → pressed → disabled, plus a
@@ -734,6 +754,10 @@ const chrome = `
     .cdr-demo-card--action:active { border-color: var(--a-border-pressed); box-shadow: var(--a-shadow); }
     .cdr-demo-card--action:active .cdr-demo-info { background: var(--a-surface-pressed); }
     .cdr-demo-card--action .cdr-demo-info { background: var(--a-surface); color: var(--a-content); }
+    /* Underline only appears on hover/focus — an actual link affordance,
+       not decoration that's always on. */
+    .cdr-demo-card--action:hover .cdr-demo-detail,
+    .cdr-demo-card--action:focus-visible .cdr-demo-detail { text-decoration: underline; }
 
     /* ── Selection: the whole card is a real checkbox ──
        Radius: one tier up from action. Prominence climbs the real scale:
@@ -754,6 +778,11 @@ const chrome = `
     }
     .cdr-demo-card--selection:has(input:disabled) { cursor: not-allowed; }
     .cdr-demo-card--selection:has(input:disabled) .cdr-demo-info { background: var(--s-surface-disabled); color: var(--s-content-disabled); }
+    /* Heart fills in only once the card is actually selected — a second,
+       independent confirmation of the same real :checked state. */
+    .cdr-demo-card--selection:has(input:checked) .cdr-demo-chip-icon-outline { display: none; }
+    .cdr-demo-card--selection:has(input:checked) .cdr-demo-chip-icon-filled { display: inline-flex; }
+    .cdr-demo-card--selection:has(input:checked) .cdr-demo-chip-icon-filled svg { color: #b5442e; }
     /* "Selected" tag — only appears once actually checked. */
     .cdr-demo-store-tag {
       position: absolute; top: ${SPACE_MD}; right: ${SPACE_MD}; z-index: 2;
@@ -766,7 +795,7 @@ const chrome = `
 
     /* ── Control: the card is static; the chip is the real button ──
        Radius: one tier up from selection. Prominence never moves — the
-       control's job is to act on the shared tray below, not itself. */
+       control's job is to act on the store picker beside it, not itself. */
     .cdr-demo-card--control {
       border-radius: ${RADIUS_MD};
       border: 3px solid var(--c-border);
@@ -782,10 +811,29 @@ const chrome = `
     .cdr-demo-chip--button:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; }
     .cdr-demo-chip--button:disabled { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
     .cdr-demo-chip-icon { display: inline-flex; }
-    .cdr-demo-chip-icon-filled { display: none; }
-    .cdr-demo-chip--button[aria-pressed="true"] .cdr-demo-chip-icon-outline { display: none; }
-    .cdr-demo-chip--button[aria-pressed="true"] .cdr-demo-chip-icon-filled { display: inline-flex; }
-    .cdr-demo-chip--button[aria-pressed="true"] svg { color: #b5442e; }
+    /* The heart fills in while the store picker it controls is open — the
+       chip's own state reflects the thing it's controlling, not itself. */
+    .cdr-demo-chip--button[aria-expanded="true"] .cdr-demo-chip-icon-outline { display: none; }
+    .cdr-demo-chip--button[aria-expanded="true"] .cdr-demo-chip-icon-filled { display: inline-flex; }
+    .cdr-demo-chip--button[aria-expanded="true"] svg { color: #b5442e; }
+    /* Store picker dropdown — the "something else" the chip controls. */
+    .cdr-demo-store-picker {
+      display: flex; flex-direction: column; gap: ${SPACE_2XS};
+      margin-top: ${SPACE_SM}; padding: ${SPACE_SM};
+      background: white; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_SM};
+    }
+    .cdr-demo-store-picker[hidden] { display: none; }
+    .cdr-demo-store-option {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: ${SPACE_SM2} ${SPACE_SM}; border-radius: ${RADIUS_SM};
+      border: none; background: transparent; cursor: pointer; text-align: left;
+      color: var(--cedar-warm-800); ${typeStyle('CdrTextBody300')}
+    }
+    .cdr-demo-store-option:hover { background: var(--cedar-warm-100); }
+    .cdr-demo-store-option[aria-selected="true"] {
+      background: var(--cedar-warm-100); font-weight: 600;
+    }
+    .cdr-demo-store-option[aria-selected="true"]::after { content: '✓'; }
 
     .cdr-demo-badge {
       ${typeStyle('CdrTextEyebrow100')}
@@ -876,7 +924,7 @@ export const ComponentComposer: Story = {
             <li><strong>Prominence direction differs per family, and the order is real, not invented.</strong> Verified ascending shadow scale: <code>Flat(0) &lt; Raised(2px) &lt; Elevated(4px) &lt; Floating(8px) &lt; Lifted(16px)</code>. Action starts <code>flat</code> and raises on hover. Selection starts one tier higher, at <code>raised</code>, climbs to <code>elevated</code> on hover, and reaches the topmost tier, <code>lifted</code>, once actually selected. Control's prominence never moves at all — it isn't the thing changing.</li>
             <li><strong>Action is a real anchor with a full state flow.</strong> The whole card is an <code>&lt;a&gt;</code>: default → hover (border deepens, shadow raises) → pressed (<code>:active</code> — surface shifts, shadow drops back) → disabled (<code>aria-disabled</code>), with a <code>:focus-visible</code> ring drawn from the real <code>action.border.trigger.faint</code> token. It moves the user to the store page.</li>
             <li><strong>Selection is a real checkbox that selects the card.</strong> The whole card is a <code>&lt;label&gt;</code> wrapping a checkbox — checking it repaints the card's border, surface, and shadow, and reveals a "Selected" tag. It saves a preference, it doesn't navigate.</li>
-            <li><strong>Control is a real button that acts on something else.</strong> The card itself is static; only the "My REI" chip is interactive, and clicking it updates the shared "Saved stores" tray below — never itself. That's the entire point of a control: it does something to something else.</li>
+            <li><strong>Control is a real button that acts on something else.</strong> The card itself is static; only the "My REI" chip is interactive, and clicking it opens a real store-picker dropdown beside the card — the heart fills in while it's open, and picking a store updates the chip's label — but the card never changes. That's the entire point of a control: it does something to something else.</li>
             <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover/Pressed), and the <code>control</code> family has no "pressed" fill token — the chip only changes via icon swap and color, not a dedicated pressed surface.</li>
             <li><strong>content/text.primary is legacy</strong> and isn't scoped to any of these three families — this demo instead reuses <code>selection.text.neutral.faint</code>, the closest family-owned equivalent, everywhere a default readable content color is needed.</li>
           </ul>
@@ -961,15 +1009,29 @@ export const ComponentComposer: Story = {
       }
     });
 
-    // The control card's chip acts on something OTHER than itself: the
-    // shared "Saved stores" tray below all three cards, not its own card.
-    // This is a real toggle via aria-pressed, not a JS-simulated state.
+    // The control chip acts on something OTHER than itself: clicking "My
+    // REI" opens/closes a real store picker dropdown next to the card —
+    // the card and chip never change, only the picker does. Real
+    // aria-expanded/hidden toggling, not a simulated state.
     const controlButton = canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-chip--button');
-    const trayCount = canvasElement.querySelector<HTMLElement>('[data-tray-count]');
+    const storePicker = canvasElement.querySelector<HTMLElement>('#cdr-demo-store-picker');
     controlButton?.addEventListener('click', () => {
-      const pressed = controlButton.getAttribute('aria-pressed') === 'true';
-      controlButton.setAttribute('aria-pressed', String(!pressed));
-      if (trayCount) trayCount.textContent = pressed ? '0' : '1';
+      const expanded = controlButton.getAttribute('aria-expanded') === 'true';
+      controlButton.setAttribute('aria-expanded', String(!expanded));
+      if (storePicker) storePicker.hidden = expanded;
+    });
+
+    storePicker?.addEventListener('click', (e) => {
+      const option = (e.target as HTMLElement).closest<HTMLButtonElement>('.cdr-demo-store-option');
+      if (!option) return;
+      storePicker
+        .querySelectorAll<HTMLButtonElement>('.cdr-demo-store-option')
+        .forEach((o) => o.setAttribute('aria-selected', String(o === option)));
+      if (controlButton) {
+        controlButton.setAttribute('aria-label', `My REI: ${option.dataset.store}`);
+        controlButton.setAttribute('aria-expanded', 'false');
+      }
+      storePicker.hidden = true;
     });
   },
 };
