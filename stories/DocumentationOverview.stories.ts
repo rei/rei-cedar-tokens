@@ -163,11 +163,11 @@ export const DocumentationOverview: Story = {
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
         ${sectionHeader('Cedar Tokens Documentation', 'v14.0.0 Semantic Architecture')}
-        
+
         <div class="category-header">
           <h3 class="category-title">🚀 New Semantic Token System</h3>
           <p class="category-description">
-            The new semantic token system organizes colors by <strong>Family > Intent</strong> 
+            The new semantic token system organizes colors by <strong>Family > Intent</strong>
             rather than component types, providing better clarity, consistency, and platform-aware capabilities.
           </p>
         </div>
@@ -207,7 +207,7 @@ export const DocumentationOverview: Story = {
               Semantic color tokens organized by Family > Intent structure
             </p>
           </a>
-          
+
           <a href="#documentation/accessibility-combinations" class="nav-card">
             <div class="nav-icon">♿</div>
             <h4 class="nav-title">Accessibility Combinations</h4>
@@ -215,7 +215,7 @@ export const DocumentationOverview: Story = {
               Text → Surface color combinations with contrast ratios
             </p>
           </a>
-          
+
           <a href="#documentation/token-migration" class="nav-card">
             <div class="nav-icon">🔄</div>
             <h4 class="nav-title">Token Migration</h4>
@@ -223,7 +223,7 @@ export const DocumentationOverview: Story = {
               Legacy → Semantic token migration guide and timeline
             </p>
           </a>
-          
+
           <a href="#documentation/semantic-imports" class="nav-card">
             <div class="nav-icon">📦</div>
             <h4 class="nav-title">Semantic Imports</h4>
@@ -231,7 +231,7 @@ export const DocumentationOverview: Story = {
               Code examples for consuming semantic tokens
             </p>
           </a>
-          
+
           <a href="#documentation/release-notes" class="nav-card">
             <div class="nav-icon">📋</div>
             <h4 class="nav-title">Release Notes</h4>
@@ -239,7 +239,7 @@ export const DocumentationOverview: Story = {
               v14.0.0 release notes and breaking changes
             </p>
           </a>
-          
+
           <a href="#documentation/usage-context" class="nav-card">
             <div class="nav-icon">💡</div>
             <h4 class="nav-title">Usage Context</h4>
@@ -247,7 +247,7 @@ export const DocumentationOverview: Story = {
               Figma metadata integration for usage guidance
             </p>
           </a>
-          
+
           <a href="#documentation/figma-integration" class="nav-card">
             <div class="nav-icon">🔧</div>
             <h4 class="nav-title">Figma Integration</h4>
@@ -269,31 +269,15 @@ export const DocumentationOverview: Story = {
               Interactive comparison of OKLCH vs HSL color spaces
             </p>
           </a>
-          
-          <a href="#oklch/wide-gamut-showcase" class="nav-card">
-            <div class="nav-icon">✨</div>
-            <h4 class="nav-title">Wide Gamut Showcase</h4>
+
+          <a href="#oklch/custom-component-composer" class="nav-card">
+            <div class="nav-icon">🧩</div>
+            <h4 class="nav-title">Custom Component Composer</h4>
             <p class="nav-description">
-              Display P3 vs sRGB color comparison
+              Build UI Cedar doesn't have a component for yet, from approved semantic roles
             </p>
           </a>
-          
-          <a href="#oklch/perceptual-uniformity-demo" class="nav-card">
-            <div class="nav-icon">🌈</div>
-            <h4 class="nav-title">Perceptual Uniformity</h4>
-            <p class="nav-description">
-              Rainbow test demonstrating smooth color transitions
-            </p>
-          </a>
-          
-          <a href="#oklch/utility-color-functions" class="nav-card">
-            <div class="nav-icon">⚡</div>
-            <h4 class="nav-title">Utility Color Functions</h4>
-            <p class="nav-description">
-              Stateful mixins for hover, focus, active states
-            </p>
-          </a>
-          
+
           <a href="#oklch/color-blindness-simulator" class="nav-card">
             <div class="nav-icon">👁️</div>
             <h4 class="nav-title">Color Blindness Simulator</h4>
