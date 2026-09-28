@@ -134,6 +134,10 @@ type FamilyRecipe = {
   states: Record<string, StateSpec>;
 };
 
+// Verified ascending order from the compiled shadow-blur/offset values
+// (Flat 0 < Raised 2px < Elevated 4px < Floating 8px < Lifted 16px) — Lifted
+// is the *topmost* tier, not a mid-scale step, so recipes must climb through
+// the intermediate tiers rather than jumping straight to it.
 const PROM = {
   flat: { name: 'flat', value: t.CdrProminenceFlat, cssVar: '--cdr-prominence-flat' },
   raised: { name: 'raised', value: t.CdrProminenceRaised, cssVar: '--cdr-prominence-raised' },
@@ -147,6 +151,7 @@ const PROM = {
     value: t.CdrProminenceFloating,
     cssVar: '--cdr-prominence-floating',
   },
+  lifted: { name: 'lifted', value: t.CdrProminenceLifted, cssVar: '--cdr-prominence-lifted' },
 };
 
 // color.text.primary is a legacy cross-family text color — not part of any
@@ -219,27 +224,29 @@ const SELECTION_RECIPE: FamilyRecipe = {
   label: 'Selection — set as my store',
   widget: 'checkbox',
   description:
-    'A real checkbox that selects the card itself — checking it repaints the card\u2019s surface/border/shadow with the selection\u2019s selected tokens, giving the card a true selected vs. non-selected appearance.',
+    'A real checkbox that selects the card itself — checking it repaints the card\u2019s surface/border/shadow with the selection\u2019s selected tokens, giving the card a true selected vs. non-selected appearance. Prominence starts one tier above action\u2019s resting flat (raised) and climbs through the real scale \u2014 elevated on hover, lifted once selected.',
   order: ['default', 'hover', 'selected', 'disabled'],
   states: {
     default: {
       surface: ref('color/selection/surface/neutral/trace'),
       content: CONTENT_NEUTRAL,
       border: ref('color/selection/border/neutral/faint'),
+      // Starts one tier above action's resting "flat".
       prominence: PROM.raised,
     },
     hover: {
       surface: ref('color/selection/surface/neutral/trace'),
       content: CONTENT_NEUTRAL,
       border: ref('color/selection/border/neutral/subtle'),
-      // Two prominence steps above action's resting "flat" (flat -> raised -> elevated).
+      // Next tier up from raised (raised -> elevated).
       prominence: PROM.elevated,
     },
     selected: {
       surface: ref('color/selection/surface/natural'),
       content: ref('color/selection/text/trigger'),
       border: ref('color/selection/border/trigger'),
-      prominence: PROM.floating,
+      // Committing to the selection reaches the topmost tier.
+      prominence: PROM.lifted,
     },
     disabled: {
       surface: ref('color/selection/surface/neutral/faint'),
@@ -373,32 +380,39 @@ function cardVars(): string {
 
 function renderCard(): string {
   return `
-    <div class="cdr-demo-scene">
-      <div class="cdr-demo-card" style="${cardVars()}">
-        <div class="cdr-demo-card-clip">
-          <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
-          <a class="cdr-demo-anchor" href="https://www.rei.com/stores/example" target="_blank" rel="noopener" aria-label="Visit the REI Example store page"></a>
-          <div class="cdr-demo-info">
-            <p class="cdr-demo-name">REI Example</p>
-            <p class="cdr-demo-detail">(206) 555-0142</p>
-            <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
-            <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
+    <div class="cdr-demo-scene" data-active="${DEFAULTS.family}">
+      <div class="cdr-demo-card-column">
+        <p class="cdr-demo-spotlight-tag" data-spotlight="action">▲ previewing this — the whole card is the link</p>
+        <div class="cdr-demo-card" style="${cardVars()}">
+          <div class="cdr-demo-card-clip">
+            <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
+            <a class="cdr-demo-anchor" href="https://www.rei.com/stores/example" aria-label="Visit the REI Example store page" data-demo-link="true"></a>
+            <div class="cdr-demo-info">
+              <p class="cdr-demo-name">REI Example</p>
+              <p class="cdr-demo-detail">(206) 555-0142</p>
+              <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
+              <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
+            </div>
+            <span class="cdr-demo-store-tag">My store</span>
           </div>
-          <span class="cdr-demo-store-tag">My store</span>
+          <button type="button" class="cdr-demo-control" data-widget="control" aria-expanded="false" aria-controls="cdr-demo-drawer" aria-label="Save to My REI" title="Save to My REI">
+            <span class="cdr-demo-control-icon cdr-demo-control-icon-outline">${HEART_OUTLINE}</span>
+            <span class="cdr-demo-control-icon cdr-demo-control-icon-filled">${HEART_FILLED}</span>
+          </button>
+          <div class="cdr-demo-drawer" id="cdr-demo-drawer" hidden>
+            <p class="cdr-demo-drawer-text"><strong>Saved to My REI.</strong> This store is set as your home store for pickup and availability.</p>
+          </div>
         </div>
-        <button type="button" class="cdr-demo-control" data-widget="control" aria-expanded="false" aria-controls="cdr-demo-drawer" aria-label="Save to My REI" title="Save to My REI">
-          <span class="cdr-demo-control-icon cdr-demo-control-icon-outline">${HEART_OUTLINE}</span>
-          <span class="cdr-demo-control-icon cdr-demo-control-icon-filled">${HEART_FILLED}</span>
-        </button>
-        <div class="cdr-demo-drawer" id="cdr-demo-drawer" hidden>
-          <p class="cdr-demo-drawer-text"><strong>Saved to My REI.</strong> This store is set as your home store for pickup and availability.</p>
-        </div>
+        <p class="cdr-demo-spotlight-tag" data-spotlight="control">▲ previewing this — the heart button acts on the card and the checkbox below</p>
       </div>
-      <label class="cdr-demo-check">
-        <input type="checkbox" class="sr-only" data-widget="selection" />
-        <span class="cdr-demo-check-box">${CHECK_MARK}</span>
-        <span class="cdr-demo-check-label">Set as my store</span>
-      </label>
+      <div class="cdr-demo-check-column">
+        <label class="cdr-demo-check">
+          <input type="checkbox" class="sr-only" data-widget="selection" />
+          <span class="cdr-demo-check-box">${CHECK_MARK}</span>
+          <span class="cdr-demo-check-label">Set as my store</span>
+        </label>
+        <p class="cdr-demo-spotlight-tag" data-spotlight="selection">▲ previewing this — checking it selects the card itself</p>
+      </div>
     </div>
   `;
 }
@@ -556,6 +570,34 @@ const chrome = `
       padding: ${SPACE_2XL}; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
       margin-bottom: ${SPACE_XL}; background: var(--cedar-warm-50);
     }
+    /* Spotlight: the "Family" picker above must visibly change something in
+       the live scene, not just the table underneath — it rings the widget
+       that matches the selected family and dims the other two (dimming is
+       opacity-only, so all three stay genuinely clickable/cross-linked). */
+    .cdr-demo-spotlight-tag {
+      display: none; margin: 0 0 ${SPACE_SM}; ${typeStyle('CdrTextEyebrow100')}
+      color: var(--cedar-warm-600);
+    }
+    .cdr-demo-scene[data-active] .cdr-demo-card-clip,
+    .cdr-demo-scene[data-active] .cdr-demo-control,
+    .cdr-demo-scene[data-active] .cdr-demo-check {
+      transition: opacity ${MOTION}, outline-color ${MOTION};
+      outline: 3px solid transparent; outline-offset: 4px;
+    }
+    .cdr-demo-scene[data-active="action"] .cdr-demo-control,
+    .cdr-demo-scene[data-active="action"] .cdr-demo-check { opacity: 0.4; }
+    .cdr-demo-scene[data-active="action"] .cdr-demo-card-clip { outline-color: var(--s-border-selected); }
+    .cdr-demo-scene[data-active="action"] [data-spotlight="action"] { display: block; }
+
+    .cdr-demo-scene[data-active="selection"] .cdr-demo-card-clip,
+    .cdr-demo-scene[data-active="selection"] .cdr-demo-control { opacity: 0.4; }
+    .cdr-demo-scene[data-active="selection"] .cdr-demo-check { outline-color: var(--s-border-selected); }
+    .cdr-demo-scene[data-active="selection"] [data-spotlight="selection"] { display: block; }
+
+    .cdr-demo-scene[data-active="control"] .cdr-demo-card-clip,
+    .cdr-demo-scene[data-active="control"] .cdr-demo-check { opacity: 0.4; }
+    .cdr-demo-scene[data-active="control"] .cdr-demo-control { outline-color: var(--s-border-selected); }
+    .cdr-demo-scene[data-active="control"] [data-spotlight="control"] { display: block; }
 
     /* ── Action: the card is a real anchor ──
        Shadow lives on .cdr-demo-card (never clipped); photo clipping lives on a
@@ -654,9 +696,10 @@ const chrome = `
        A bare list row — no container chrome — so it reads as a native form
        choice rather than a card or a button. Checking it repaints the CARD
        (border, surface, shadow, "My store" tag) with the selected tokens. */
+    .cdr-demo-card-column { display: flex; flex-direction: column; }
+    .cdr-demo-check-column { display: flex; flex-direction: column; align-self: center; max-width: 220px; }
     .cdr-demo-check {
       display: flex; align-items: center; gap: ${SPACE_SM}; cursor: pointer;
-      align-self: center;
     }
     .cdr-demo-check:has(input:focus-visible) .cdr-demo-check-box { outline: 2px solid var(--s-border-selected); outline-offset: 2px; }
     .cdr-demo-check-box {
@@ -754,10 +797,13 @@ export const ComponentComposer: Story = {
         <p class="cdr-demo-intro">
           Use this when Cedar has no component for your pattern yet. All three widgets on this
           store card are real and interactive: the card itself is a native anchor (hover, press,
-          tab-focus it), "Set as my store" is a real checkbox that selects the card, and the
-          heart is a real button that opens a drawer inside the card. Every color is a resolved
-          token, and every state is driven by real <code>:hover</code>/<code>:active</code>/
-          <code>:checked</code>/<code>:disabled</code> CSS — not a JS simulation.
+          tab-focus it — clicking it is intercepted only so the demo doesn't leave Storybook),
+          "Set as my store" is a real checkbox that selects the card, and the heart is a real
+          button that opens a drawer inside the card. Every color is a resolved token, and every
+          state is driven by real <code>:hover</code>/<code>:active</code>/<code>:checked</code>/
+          <code>:disabled</code> CSS — not a JS simulation. <strong>Picking a Family below rings
+          the matching widget and dims the other two</strong> — all three stay live and
+          cross-linked either way.
         </p>
 
         <div class="cdr-demo-controls">
@@ -777,7 +823,7 @@ export const ComponentComposer: Story = {
             <li><strong>Every color is a real, resolved token</strong> referenced by its actual shipped <code>var(--cdr-...)</code> custom property, not a baked-in hex — check the "Generated CSS" panel or inspect the card in devtools.</li>
             <li><strong>Radius, spacing, and type are tokens too</strong> — corner radius, padding/gaps, and every font style come from <code>CdrRadius</code>/<code>CdrSpace</code>/<code>CdrText*</code>, not hand-picked pixel values.</li>
             <li><strong>Action is a real anchor with a full state flow.</strong> The card's <code>&lt;a&gt;</code> goes default → hover (border deepens, prominence flat→raised) → pressed (<code>:active</code> — surface shifts to neutral/subtle, shadow drops back) → disabled (<code>aria-disabled</code>), with a <code>:focus-visible</code> ring drawn from the real <code>action.border.trigger.faint</code> token.</li>
-            <li><strong>Selection is a real checkbox that selects the card.</strong> Checking "Set as my store" repaints the card's border, info surface, prominence, and reveals the "My store" tag — the selected state belongs to the card, not just the checkbox indicator. Hover alone already lifts it two prominence steps above action's resting flat.</li>
+            <li><strong>Selection is a real checkbox that selects the card.</strong> Checking "Set as my store" repaints the card's border, info surface, prominence, and reveals the "My store" tag — the selected state belongs to the card, not just the checkbox indicator. Prominence climbs the real scale in order — <code>raised</code> at rest (one tier above action's resting <code>flat</code>) → <code>elevated</code> on hover → <code>lifted</code>, the topmost tier, once actually selected.</li>
             <li><strong>Control is a real button that acts on something else.</strong> Pressing it opens a confirmation drawer inside the card and marks "Set as my store"; clearing the checkbox releases it. Its own prominence never moves — a control's job is to do something to something else.</li>
             <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover/Pressed), and the <code>control</code> family has no "pressed" fill token — the heart only changes via icon swap, not color, when saved.</li>
             <li><strong>content/text.primary is legacy</strong> and isn't scoped to any of these three families — this demo instead reuses <code>selection.text.neutral.faint</code>, the closest family-owned equivalent, everywhere a default readable content color is needed.</li>
@@ -790,7 +836,16 @@ export const ComponentComposer: Story = {
   play: async ({ canvasElement }) => {
     const familyEl = canvasElement.querySelector<HTMLSelectElement>('#cdr-demo-family');
     const inspector = canvasElement.querySelector<HTMLElement>('#cdr-demo-inspector');
-    if (!familyEl || !inspector) return;
+    const scene = canvasElement.querySelector<HTMLElement>('.cdr-demo-scene');
+    if (!familyEl || !inspector || !scene) return;
+
+    // The anchor is a genuine <a href> so :hover/:focus-visible/:active and
+    // devtools all read a real link — but actually navigating away would
+    // break every other family's preview sharing this same card. Block the
+    // navigation only; every visual/interactive state stays real.
+    canvasElement
+      .querySelector<HTMLAnchorElement>('[data-demo-link="true"]')
+      ?.addEventListener('click', (e) => e.preventDefault());
 
     let activeState = DEFAULTS.state;
 
@@ -831,6 +886,9 @@ export const ComponentComposer: Story = {
 
     familyEl.addEventListener('change', () => {
       activeState = DEFAULTS.state;
+      // This is the live-scene variation the dropdown must actually drive:
+      // ring the widget matching the selected family, dim the other two.
+      scene.dataset.active = familyEl.value;
       render();
     });
 
