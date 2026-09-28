@@ -504,13 +504,13 @@ function renderTrio(): string {
             <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
             <span>My REI</span>
           </button>
+          <div class="cdr-demo-store-picker" id="cdr-demo-store-picker" role="listbox" aria-label="Choose your store" aria-hidden="true">
+            <button type="button" class="cdr-demo-store-option" data-store="REI Example" role="option" aria-selected="true">REI Example</button>
+            <button type="button" class="cdr-demo-store-option" data-store="REI Seattle" role="option" aria-selected="false">REI Seattle</button>
+            <button type="button" class="cdr-demo-store-option" data-store="REI Portland" role="option" aria-selected="false">REI Portland</button>
+          </div>
         </div>
-        <p class="cdr-demo-trio-caption">The card itself never changes — the chip controls the store picker below it, not itself. Radius: one tier up from selection. Prominence: never moves.</p>
-        <div class="cdr-demo-store-picker" id="cdr-demo-store-picker" role="listbox" aria-label="Choose your store" hidden>
-          <button type="button" class="cdr-demo-store-option" data-store="REI Example" role="option" aria-selected="true">REI Example</button>
-          <button type="button" class="cdr-demo-store-option" data-store="REI Seattle" role="option" aria-selected="false">REI Seattle</button>
-          <button type="button" class="cdr-demo-store-option" data-store="REI Portland" role="option" aria-selected="false">REI Portland</button>
-        </div>
+        <p class="cdr-demo-trio-caption">The card itself never changes — the chip controls the picker that drops down over it, not itself. Radius: one tier up from selection. Prominence: never moves.</p>
       </div>
 
     </div>
@@ -816,13 +816,25 @@ const chrome = `
     .cdr-demo-chip--button[aria-expanded="true"] .cdr-demo-chip-icon-outline { display: none; }
     .cdr-demo-chip--button[aria-expanded="true"] .cdr-demo-chip-icon-filled { display: inline-flex; }
     .cdr-demo-chip--button[aria-expanded="true"] svg { color: #b5442e; }
-    /* Store picker dropdown — the "something else" the chip controls. */
+    /* Store picker dropdown — the "something else" the chip controls.
+       Positioned to drop down FROM the badge, overlaying the card, rather
+       than just appearing in the flow below it. Kept in the DOM (not
+       display:none) so the open/close is an actual animated transition;
+       collapsed to zero height + no pointer-events when closed instead. */
     .cdr-demo-store-picker {
-      display: flex; flex-direction: column; gap: ${SPACE_2XS};
-      margin-top: ${SPACE_SM}; padding: ${SPACE_SM};
-      background: white; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_SM};
+      position: absolute; z-index: 4;
+      top: calc(${SPACE_MD} + ${ICON_SIZE} + ${SPACE_LG});
+      left: ${SPACE_MD}; min-width: 160px; padding: ${SPACE_2XS};
+      display: flex; flex-direction: column;
+      background: white; border-radius: ${RADIUS_SM};
+      box-shadow: var(--cdr-prominence-floating);
+      max-height: 0; opacity: 0; overflow: hidden; pointer-events: none;
+      transform-origin: top; transform: scaleY(0.85);
+      transition: max-height ${MOTION}, opacity ${MOTION}, transform ${MOTION};
     }
-    .cdr-demo-store-picker[hidden] { display: none; }
+    .cdr-demo-store-picker.is-open {
+      max-height: 220px; opacity: 1; pointer-events: auto; transform: scaleY(1);
+    }
     .cdr-demo-store-option {
       display: flex; align-items: center; justify-content: space-between;
       padding: ${SPACE_SM2} ${SPACE_SM}; border-radius: ${RADIUS_SM};
@@ -1010,15 +1022,21 @@ export const ComponentComposer: Story = {
     });
 
     // The control chip acts on something OTHER than itself: clicking "My
-    // REI" opens/closes a real store picker dropdown next to the card —
-    // the card and chip never change, only the picker does. Real
-    // aria-expanded/hidden toggling, not a simulated state.
+    // REI" opens/closes a real store picker that drops down FROM the badge
+    // over the card — the card and chip never change, only the picker
+    // does. Toggled via a class (not the `hidden` attribute) so the
+    // open/close is an actual animated transition, not an instant swap.
     const controlButton = canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-chip--button');
     const storePicker = canvasElement.querySelector<HTMLElement>('#cdr-demo-store-picker');
+
+    const setPickerOpen = (open: boolean) => {
+      controlButton?.setAttribute('aria-expanded', String(open));
+      storePicker?.classList.toggle('is-open', open);
+      storePicker?.setAttribute('aria-hidden', String(!open));
+    };
+
     controlButton?.addEventListener('click', () => {
-      const expanded = controlButton.getAttribute('aria-expanded') === 'true';
-      controlButton.setAttribute('aria-expanded', String(!expanded));
-      if (storePicker) storePicker.hidden = expanded;
+      setPickerOpen(controlButton.getAttribute('aria-expanded') !== 'true');
     });
 
     storePicker?.addEventListener('click', (e) => {
@@ -1027,11 +1045,8 @@ export const ComponentComposer: Story = {
       storePicker
         .querySelectorAll<HTMLButtonElement>('.cdr-demo-store-option')
         .forEach((o) => o.setAttribute('aria-selected', String(o === option)));
-      if (controlButton) {
-        controlButton.setAttribute('aria-label', `My REI: ${option.dataset.store}`);
-        controlButton.setAttribute('aria-expanded', 'false');
-      }
-      storePicker.hidden = true;
+      controlButton?.setAttribute('aria-label', `My REI: ${option.dataset.store}`);
+      setPickerOpen(false);
     });
   },
 };
