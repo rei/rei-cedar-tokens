@@ -46,18 +46,26 @@ jobs:
       - name: Generate Deprecation Baseline from Target Branch
         run: |
           echo "Moving current tokens to backup..."
-          mv tokens/global tokens/global-pr-backup
+          mv tokens/legacy/global tokens/global-pr-backup
 
           echo "Pulling token data from ${{ github.base_ref }}..."
-          # This specifically fetches ONLY the tokens from the base branch (master/next)
-          git checkout origin/${{ github.base_ref }} -- tokens/global
+          # The base branch may use either tokens/legacy/global (post-migration) or tokens/global (pre-migration)
+          if git checkout origin/${{ github.base_ref }} -- tokens/legacy/global 2>/dev/null; then
+            echo "Found tokens/legacy/global in base branch"
+          elif git checkout origin/${{ github.base_ref }} -- tokens/global 2>/dev/null; then
+            echo "Found tokens/global in base branch; relocating to tokens/legacy/global"
+            mv tokens/global tokens/legacy/global
+          else
+            echo "No known token path in base branch"
+            exit 1
+          fi
 
           echo "Running baseline generation script..."
           npx tsx scripts/generate-baseline.ts
 
           echo "Restoring PR tokens..."
-          rm -rf tokens/global
-          mv tokens/global-pr-backup tokens/global
+          rm -rf tokens/legacy/global
+          mv tokens/global-pr-backup tokens/legacy/global
 
       # =======================================================================
       # STEP 3: STATIC ANALYSIS & GATES (Pre-Build)

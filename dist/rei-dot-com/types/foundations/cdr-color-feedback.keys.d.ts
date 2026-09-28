@@ -1,0 +1,47 @@
+export declare const CdrColorFeedbackKeys: readonly [
+  "border-error-faint",
+  "border-info-faint",
+  "border-natural",
+  "border-nautral-faint",
+  "border-neutral-trace",
+  "border-success-faint",
+  "border-warning-faint",
+  "icon-error",
+  "icon-neutral",
+  "surface-error-faint",
+  "surface-error-trace",
+  "surface-info-faint",
+  "surface-natural-faint",
+  "surface-neutral-trace",
+  "surface-success-faint",
+  "surface-warning-faint",
+  "text-error",
+  "text-info",
+  "text-natural",
+  "text-neutral-faint",
+  "text-success",
+  "text-warning"
+];
+export type CdrColorFeedbackKey =
+  | "border-error-faint"
+  | "border-info-faint"
+  | "border-natural"
+  | "border-nautral-faint"
+  | "border-neutral-trace"
+  | "border-success-faint"
+  | "border-warning-faint"
+  | "icon-error"
+  | "icon-neutral"
+  | "surface-error-faint"
+  | "surface-error-trace"
+  | "surface-info-faint"
+  | "surface-natural-faint"
+  | "surface-neutral-trace"
+  | "surface-success-faint"
+  | "surface-warning-faint"
+  | "text-error"
+  | "text-info"
+  | "text-natural"
+  | "text-neutral-faint"
+  | "text-success"
+  | "text-warning";

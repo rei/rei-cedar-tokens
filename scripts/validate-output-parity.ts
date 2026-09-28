@@ -3,8 +3,8 @@ import path from 'path';
 import { globSync } from 'glob';
 import {
   componentModulesName as COMPONENTS,
-  foundationsModulesName as FOUNDATIONS,
-} from '../style-dictionary/configs/filters/modules';
+  jsFoundationsModulesName as FOUNDATIONS,
+} from '../style-dictionary/legacy/configs/filters/modules.js';
 
 // Define legal secondary namespaces that a component is allowed to export
 const COMPONENT_ALIASES: Record<string, string[]> = {
@@ -19,6 +19,16 @@ const FOUNDATION_ALIASES: Record<string, string[]> = {
   'motion-duration': ['duration'],
   'text-style': ['transform', 'text-eyebrow', 'text-italic'],
   'space-icon': ['icon-size'],
+  'color-action': ['action'],
+  'color-background': ['background'],
+  'color-border': ['border'],
+  'color-control': ['control'],
+  'color-feedback': ['feedback'],
+  'color-graphik': ['graphic'],
+  'color-icon': ['icon'],
+  'color-selection': ['selection'],
+  'color-surface': ['surface'],
+  'color-text': ['text'],
 };
 
 function extractNormalizedTokens(filePath: string, content: string): string[] {
@@ -139,8 +149,13 @@ function runOutputParityCheck() {
           // Check 1: Direct Prefix (e.g. 'color-background-primary')
           if (token.startsWith(namespace)) return true;
 
-          // Check 2: Sandwich Check (e.g. 'text-body-line-height' matches 'text-line-height')
           const nsParts = namespace.split('-');
+
+          // Check 1.5: Whole-segment match for single-word namespaces
+          // (e.g. 'action-text-trigger-faint' in cdr-color-text.css matches 'text')
+          if (nsParts.length === 1 && token.split('-').includes(namespace)) return true;
+
+          // Check 2: Sandwich Check (e.g. 'text-body-line-height' matches 'text-line-height')
           if (nsParts.length >= 2) {
             const first = nsParts[0];
             const last = nsParts[nsParts.length - 1];

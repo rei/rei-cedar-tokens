@@ -4,6 +4,12 @@
 // do NOT conflict with the runtime CSS custom properties used by components.
 @use '../dist/docsite/scss/cdr-tokens' as *;
 
+// Tokens removed from the docsite SCSS bundle; preserve Storybook chrome values.
+$cdr-color-background-primary: #ffffff !default;
+$cdr-color-background-secondary: #f4f2ed !default;
+$cdr-color-background-table-header: #f7f5f3 !default;
+$cdr-color-background-message-warning-01: #fefcf1 !default;
+
 @font-face {
   font-display: swap;
   font-family: Stuart;

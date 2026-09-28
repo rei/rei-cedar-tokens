@@ -1,0 +1,166 @@
+{
+  "title": "Cedar Token Schema",
+  "description": "Authoritative schema defining token structure, validation, and Figma Input Contract (ADR-0003). Single source of truth for design-to-engineering token governance.",
+  "type": "object",
+  "inputs": {
+    "figma": {
+      "collections": {
+        "warm-grey": {
+          "canonicalPrefix": "color.option.warm-grey",
+          "colorFamily": "warm-grey",
+          "tokens": "auto"
+        },
+        "alpine-lake-blue": {
+          "canonicalPrefix": "color.option.alpine-lake-blue",
+          "colorFamily": "alpine-lake-blue",
+          "tokens": "auto"
+        },
+        "blue-spruce-green": {
+          "canonicalPrefix": "color.option.blue-spruce-green",
+          "colorFamily": "blue-spruce-green",
+          "tokens": "auto"
+        },
+        "sage-green": {
+          "canonicalPrefix": "color.option.sage-green",
+          "colorFamily": "sage-green",
+          "tokens": "auto"
+        },
+        "natural-grey": {
+          "canonicalPrefix": "color.option.natural-grey",
+          "colorFamily": "natural-grey",
+          "tokens": "auto"
+        },
+        "info-blue": {
+          "canonicalPrefix": "color.option.info-blue",
+          "colorFamily": "info-blue",
+          "tokens": "auto"
+        },
+        "success-green": {
+          "canonicalPrefix": "color.option.success-green",
+          "colorFamily": "success-green",
+          "tokens": "auto"
+        },
+        "warning-yellow": {
+          "canonicalPrefix": "color.option.warning-yellow",
+          "colorFamily": "warning-yellow",
+          "tokens": "auto"
+        },
+        "error-red": {
+          "canonicalPrefix": "color.option.error-red",
+          "colorFamily": "error-red",
+          "tokens": "auto"
+        },
+        "sale-red": {
+          "canonicalPrefix": "color.option.sale-red",
+          "colorFamily": "new-sale-red",
+          "tokens": "auto"
+        },
+        "membership-text": {
+          "canonicalPrefix": "color.option.membership-text",
+          "colorFamily": "membership-text",
+          "tokens": "auto"
+        },
+        "lichen": {
+          "canonicalPrefix": "color.option.lichen",
+          "colorFamily": "highlight-lichen",
+          "tokens": "auto"
+        },
+        "apex-moss": {
+          "canonicalPrefix": "color.option.apex-moss",
+          "colorFamily": "appex-moss",
+          "tokens": "auto"
+        },
+        "golden-moss": {
+          "canonicalPrefix": "color.option.golden-moss",
+          "colorFamily": "golden-moss",
+          "tokens": "auto"
+        },
+        "membership-yellow": {
+          "canonicalPrefix": "color.option.membership-yellow",
+          "colorFamily": "membership-yellow",
+          "tokens": "auto"
+        },
+        "golden-yellow": {
+          "canonicalPrefix": "color.option.golden-yellow",
+          "colorFamily": "golden-yellow",
+          "tokens": "auto"
+        },
+        "greyscale": {
+          "canonicalPrefix": "color.option.greyscale",
+          "colorFamily": "greyscale",
+          "tokens": "auto"
+        },
+        "text": {
+          "tokens": "auto",
+          "letter-spacing": {
+            "canonicalPrefix": "text.letter.spacing",
+            "tokens": {
+              "tightest": "tightest",
+              "tighter": "tighter",
+              "tight": "tight",
+              "compact": "compact",
+              "none": "none",
+              "loose": "loose",
+              "loosest": "loosest"
+            }
+          },
+          "family": {
+            "canonicalPrefix": "text.family",
+            "tokens": {
+              "graphik": "graphik",
+              "stuart": "stuart"
+            }
+          },
+          "line-height": {
+            "canonicalPrefix": "text.line.height",
+            "tokens": {
+              "0": "0",
+              "1": "1",
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5"
+            }
+          },
+          "size": {
+            "canonicalPrefix": "text.size",
+            "tokens": {
+              "100": "100",
+              "200": "200",
+              "300": "300",
+              "400": "400",
+              "500": "500"
+            }
+          },
+          "style": {
+            "canonicalPrefix": "text.style",
+            "tokens": {
+              "normal": "normal",
+              "italic": "italic"
+            }
+          },
+          "weight": {
+            "canonicalPrefix": "text.weight",
+            "tokens": {
+              "normal": "normal",
+              "medium": "medium",
+              "semibold": "semibold",
+              "bold": "bold"
+            }
+          }
+        }
+      }
+    },
+    "palettes": {
+      "default": {
+        "scope": "root",
+        "isBaseline": true
+      },
+      "sale": {
+        "scope": "surface",
+        "inheritsFrom": "default",
+        "cssAttribute": "data-palette"
+      }
+    }
+  }
+}

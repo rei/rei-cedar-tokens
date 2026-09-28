@@ -42,7 +42,7 @@ function extractDeprecations(obj: any) {
 function run() {
   console.log('********** Comparing PR against main branch baseline **********');
 
-  const files = globSync('tokens/global/*.json');
+  const files = globSync('tokens/legacy/global/*.json');
 
   files.forEach((file) => {
     const content = JSON.parse(fs.readFileSync(file, 'utf-8'));
