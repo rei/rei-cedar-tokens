@@ -116,6 +116,16 @@ function safeRef(path: string): TokenRef {
   }
 }
 
+// ─── Radius ───────────────────────────────────────────────────────────────────
+// Verified ascending order from the compiled values (Soft 2 < Softer 4 <
+// Softest 6 < Round 9999). Each family's card uses the next tier up:
+// action gets the smallest non-zero radius (reads as a link, not a settled
+// surface), selection the next, control the largest short of fully round.
+const RADIUS_ACTION = rem(t.CdrRadiusSoft);
+const RADIUS_SM = rem(t.CdrRadiusSofter); // selection
+const RADIUS_MD = rem(t.CdrRadiusSoftest); // control
+const RADIUS_PILL = rem(t.CdrRadiusRound);
+
 // ─── Recipes ──────────────────────────────────────────────────────────────────
 
 type Prominence = { name: string; value: string; cssVar: string };
@@ -130,6 +140,11 @@ type FamilyRecipe = {
   label: string;
   widget: 'link' | 'checkbox' | 'button';
   description: string;
+  // The diagnostic question a team should ask themselves before building a
+  // custom UI element — this is the actual point of the page: the same
+  // visual card answers all three differently depending on the answer.
+  question: string;
+  radius: string;
   order: string[];
   states: Record<string, StateSpec>;
 };
@@ -179,6 +194,8 @@ const ACTION_BORDER_BOLD: TokenRef =
 const ACTION_RECIPE: FamilyRecipe = {
   label: 'Action — card link',
   widget: 'link',
+  question: 'Am I moving the user somewhere?',
+  radius: RADIUS_ACTION,
   description:
     'The card is a real anchor to the store page — a full state flow (default → hover → pressed → disabled), raise-on-hover prominence, and a focus ring on tab.',
   order: ['default', 'hover', 'pressed', 'disabled'],
@@ -223,6 +240,8 @@ const ACTION_RECIPE: FamilyRecipe = {
 const SELECTION_RECIPE: FamilyRecipe = {
   label: 'Selection — set as my store',
   widget: 'checkbox',
+  question: 'Am I setting or saving a preference?',
+  radius: RADIUS_SM,
   description:
     'A real checkbox that selects the card itself — checking it repaints the card\u2019s surface/border/shadow with the selection\u2019s selected tokens, giving the card a true selected vs. non-selected appearance. Prominence starts one tier above action\u2019s resting flat (raised) and climbs through the real scale \u2014 elevated on hover, lifted once selected.',
   order: ['default', 'hover', 'selected', 'disabled'],
@@ -260,8 +279,10 @@ const SELECTION_RECIPE: FamilyRecipe = {
 const CONTROL_RECIPE: FamilyRecipe = {
   label: 'Control — save to My REI',
   widget: 'button',
+  question: 'Am I controlling something else on the page?',
+  radius: RADIUS_MD,
   description:
-    'A real button that acts on something else: pressing it opens a confirmation drawer inside the card and marks "Set as my store" — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves.',
+    'A real button that acts on something else: pressing it updates the shared "Saved stores" tray below — a control\u2019s job is to do something to something else, not just to itself. Its own prominence never moves.',
   order: ['default', 'hover', 'disabled'],
   states: {
     default: {
@@ -302,11 +323,10 @@ function badge(pass: boolean | 'warn', label: string): string {
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-// Sized in CSS via .cdr-demo-control-icon svg { width/height: rem(CdrIconSizeSm) } —
+// Sized in CSS via .cdr-demo-chip-icon svg / .cdr-demo-chip svg { width/height: rem(CdrIconSizeSm) } —
 // no literal pixel dimensions on the markup itself.
 const HEART_OUTLINE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
 const HEART_FILLED = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.702 20.712a.997.997 0 0 1-1.43-.026c-5.05-4.985-7.763-7.71-8.137-8.173C2.575 11.818 2 10.312 2 9a6 6 0 0 1 10-4.472A6 6 0 0 1 20.701 12.728c-.542.683-3.208 3.344-8 7.984z"/></svg>`;
-const CHECK_MARK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>`;
 
 const PHOTO_PLACEHOLDER = `
   <div class="cdr-demo-sky"></div>
@@ -329,11 +349,16 @@ const PHOTO_PLACEHOLDER = `
 const refExpr = (r: TokenRef): string => (r.status === 'token' ? `var(${r.cssVar})` : r.value);
 const promExpr = (p: Prominence): string => `var(${p.cssVar})`;
 
-function cardVars(): string {
+const toVarString = (vars: Record<string, string>): string =>
+  Object.entries(vars)
+    .map(([k, v]) => `${k}: ${v};`)
+    .join(' ');
+
+// Each column below is its own independent, self-contained card instance —
+// these three functions each carry only the CSS vars that one card needs.
+function actionVars(): string {
   const a = ACTION_RECIPE.states;
-  const s = SELECTION_RECIPE.states;
-  const c = CONTROL_RECIPE.states;
-  const vars: Record<string, string> = {
+  return toVarString({
     '--a-surface': refExpr(a.default.surface),
     '--a-content': refExpr(a.default.content),
     '--a-border': refExpr(a.default.border),
@@ -348,7 +373,12 @@ function cardVars(): string {
     // interactive affordances — standing in for the focus ring since the
     // set has no dedicated focus-outline color token.
     '--a-focus': `var(${ref('color/action/border/trigger/faint').cssVar})`,
+  });
+}
 
+function selectionVars(): string {
+  const s = SELECTION_RECIPE.states;
+  return toVarString({
     '--s-surface': refExpr(s.default.surface),
     '--s-content': refExpr(s.default.content),
     '--s-border': refExpr(s.default.border),
@@ -361,58 +391,99 @@ function cardVars(): string {
     '--s-shadow-selected': promExpr(s.selected.prominence),
     '--s-surface-disabled': refExpr(s.disabled.surface),
     '--s-content-disabled': refExpr(s.disabled.content),
+  });
+}
 
+function controlVars(): string {
+  const c = CONTROL_RECIPE.states;
+  return toVarString({
     '--c-surface': refExpr(c.default.surface),
     '--c-content': refExpr(c.default.content),
     '--c-border': refExpr(c.default.border),
     '--c-surface-hover': refExpr(c.hover.surface),
     '--c-surface-disabled': refExpr(c.disabled.surface),
     '--c-content-disabled': refExpr(c.disabled.content),
+    '--c-shadow': promExpr(c.default.prominence),
     // control.icon.neutral.* are near-white fills meant for dark surfaces —
     // invisible on this light button. The family's readable dark is the
     // shared content token instead.
     '--c-icon': refExpr(CONTENT_NEUTRAL),
-  };
-  return Object.entries(vars)
-    .map(([k, v]) => `${k}: ${v};`)
-    .join(' ');
+  });
 }
 
-function renderCard(): string {
+// The same visual "shape" — photo, brand chip, name/phone/address/hours —
+// rendered three times, once per family. What changes between columns is
+// only what the tokens/design system dictate: which element is the
+// interactive widget, its radius tier, and its prominence direction.
+// Nothing here shares DOM with the other columns — each card is a fully
+// independent, real, live instance.
+
+function cardBody(showSelectedTag: boolean): string {
   return `
-    <div class="cdr-demo-scene" data-active="${DEFAULTS.family}">
-      <div class="cdr-demo-card-column">
-        <p class="cdr-demo-spotlight-tag" data-spotlight="action">▲ previewing this — the whole card is the link</p>
-        <div class="cdr-demo-card" style="${cardVars()}">
-          <div class="cdr-demo-card-clip">
-            <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
-            <a class="cdr-demo-anchor" href="https://www.rei.com/stores/example" aria-label="Visit the REI Example store page" data-demo-link="true"></a>
-            <div class="cdr-demo-info">
-              <p class="cdr-demo-name">REI Example</p>
-              <p class="cdr-demo-detail">(206) 555-0142</p>
-              <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
-              <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
-            </div>
-            <span class="cdr-demo-store-tag">My store</span>
-          </div>
-          <button type="button" class="cdr-demo-control" data-widget="control" aria-expanded="false" aria-controls="cdr-demo-drawer" aria-label="Save to My REI" title="Save to My REI">
-            <span class="cdr-demo-control-icon cdr-demo-control-icon-outline">${HEART_OUTLINE}</span>
-            <span class="cdr-demo-control-icon cdr-demo-control-icon-filled">${HEART_FILLED}</span>
-          </button>
-          <div class="cdr-demo-drawer" id="cdr-demo-drawer" hidden>
-            <p class="cdr-demo-drawer-text"><strong>Saved to My REI.</strong> This store is set as your home store for pickup and availability.</p>
-          </div>
-        </div>
-        <p class="cdr-demo-spotlight-tag" data-spotlight="control">▲ previewing this — the heart button acts on the card and the checkbox below</p>
+    <div class="cdr-demo-photo">${PHOTO_PLACEHOLDER}</div>
+    <div class="cdr-demo-info">
+      <p class="cdr-demo-name">REI Example</p>
+      <p class="cdr-demo-detail">(206) 555-0142</p>
+      <p class="cdr-demo-detail">400 Occidental Ave S, Seattle, WA 98104</p>
+      <p class="cdr-demo-hours"><span class="cdr-demo-dot"></span> Open until 9pm today</p>
+    </div>
+    ${showSelectedTag ? '<span class="cdr-demo-store-tag">Selected</span>' : ''}
+  `;
+}
+
+function questionHeader(recipe: FamilyRecipe): string {
+  return `
+    <p class="cdr-demo-question">${recipe.question}</p>
+    <p class="cdr-demo-answer">→ ${recipe.label.split(' — ')[0]}</p>
+  `;
+}
+
+function renderTrio(): string {
+  return `
+    <div class="cdr-demo-trio">
+
+      <div class="cdr-demo-trio-item">
+        ${questionHeader(ACTION_RECIPE)}
+        <a
+          class="cdr-demo-card cdr-demo-card--action"
+          style="${actionVars()}"
+          href="https://www.rei.com/stores/example"
+          aria-label="Visit the REI Example store page"
+          data-demo-link="true"
+        >
+          <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">${HEART_OUTLINE}<span>My REI</span></span>
+          ${cardBody(false)}
+        </a>
+        <p class="cdr-demo-trio-caption">The whole card is the link. Radius: smallest non-zero. Prominence: flat → raised on hover.</p>
       </div>
-      <div class="cdr-demo-check-column">
-        <label class="cdr-demo-check">
-          <input type="checkbox" class="sr-only" data-widget="selection" />
-          <span class="cdr-demo-check-box">${CHECK_MARK}</span>
-          <span class="cdr-demo-check-label">Set as my store</span>
+
+      <div class="cdr-demo-trio-item">
+        ${questionHeader(SELECTION_RECIPE)}
+        <label class="cdr-demo-card cdr-demo-card--selection" style="${selectionVars()}">
+          <input type="checkbox" class="sr-only" data-widget="selection" aria-label="Set REI Example as my store" />
+          <span class="cdr-demo-chip cdr-demo-chip--decorative" aria-hidden="true">${HEART_OUTLINE}<span>My REI</span></span>
+          ${cardBody(true)}
         </label>
-        <p class="cdr-demo-spotlight-tag" data-spotlight="selection">▲ previewing this — checking it selects the card itself</p>
+        <p class="cdr-demo-trio-caption">The whole card is a checkbox. Radius: one tier up from action. Prominence: raised → elevated (hover) → lifted (selected).</p>
       </div>
+
+      <div class="cdr-demo-trio-item">
+        ${questionHeader(CONTROL_RECIPE)}
+        <div class="cdr-demo-card cdr-demo-card--control" style="${controlVars()}">
+          <button type="button" class="cdr-demo-chip cdr-demo-chip--button" data-widget="control" aria-pressed="false" aria-label="Save REI Example to My REI">
+            <span class="cdr-demo-chip-icon cdr-demo-chip-icon-outline">${HEART_OUTLINE}</span>
+            <span class="cdr-demo-chip-icon cdr-demo-chip-icon-filled">${HEART_FILLED}</span>
+            <span>My REI</span>
+          </button>
+          ${cardBody(false)}
+        </div>
+        <p class="cdr-demo-trio-caption">The card itself does nothing — the chip button acts on the "Saved stores" tray below. Radius: one tier up from selection. Prominence: never moves.</p>
+      </div>
+
+    </div>
+    <div class="cdr-demo-tray">
+      <strong>Saved stores:</strong> <span data-tray-count>0</span>
+      <span class="cdr-demo-tray-hint">← this is what the control chip actually changes, not itself</span>
     </div>
   `;
 }
@@ -454,9 +525,9 @@ function renderTable(recipe: FamilyRecipe, activeState: string): string {
 }
 
 const WIDGET_SELECTOR: Record<string, string> = {
-  action: '.cdr-demo-anchor',
-  selection: '.cdr-demo-check-box',
-  control: '.cdr-demo-control',
+  action: '.cdr-demo-card--action',
+  selection: '.cdr-demo-card--selection',
+  control: '.cdr-demo-chip--button',
 };
 
 function renderComposition(family: string, activeState: string): string {
@@ -474,18 +545,19 @@ function renderComposition(family: string, activeState: string): string {
   color: ${refExpr(st.content)}; /* ${st.content.path} */
   border-color: ${refExpr(st.border)}; /* ${st.border.path} */
   box-shadow: ${promExpr(st.prominence)};
+  border-radius: ${recipe.radius};
 }`;
 
   return `
     <div class="cdr-demo-recipe">
       <strong>${recipe.label}</strong> — ${recipe.description}
       ${st.note ? `<div class="cdr-demo-cue">⚠ ${st.note}</div>` : ''}
-      <div class="cdr-demo-hint">Try it live above: ${
+      <div class="cdr-demo-hint">Try it live above (${recipe.question}): ${
         recipe.widget === 'link'
-          ? 'hover or press the card, or tab to it and check the focus ring.'
+          ? 'hover or press the Action card, or tab to it and check the focus ring.'
           : recipe.widget === 'checkbox'
-            ? 'hover or click "Set as my store" — checking it selects the card itself.'
-            : 'click the heart button — it opens a drawer and marks the store.'
+            ? 'hover or click the Selection card — checking it selects the card itself.'
+            : 'click the "My REI" chip on the Control card — it updates the shared tray below, not itself.'
       } The buttons below jump the table to that state\u2019s exact tokens — <code>disabled</code>/<code>selected</code> also apply real <code>disabled</code>/<code>checked</code> attributes so you can see them.</div>
     </div>
     <div class="cdr-demo-state-nav">${stateNav}</div>
@@ -500,11 +572,6 @@ function renderComposition(family: string, activeState: string): string {
 // The only literals left are dimensions Cedar doesn't tokenize at all — card
 // width, photo height, and the two decorative dot indicators — called out
 // inline rather than disguised as tokens.
-
-const RADIUS_PILL = rem(t.CdrRadiusRound);
-const RADIUS_MD = rem(t.CdrRadiusSoftest); // control widget: bigger than selection, not round
-const RADIUS_SM = rem(t.CdrRadiusSofter); // selection widget
-const RADIUS_ACTION = rem(t.CdrRadiusSoft); // action widget: smallest non-zero — reads as a link, not a settled card
 
 const SPACE_3XS = rem(t.CdrSpaceThreeSixteenthX);
 const SPACE_2XS = rem(t.CdrSpaceEighthX);
@@ -561,60 +628,48 @@ const chrome = `
     .cdr-demo-state-btn.active { background: var(--cedar-warm-1000); color: white; border-color: var(--cedar-warm-1000); }
     .cdr-demo-intro { margin-bottom: ${SPACE_XL}; color: var(--cedar-warm-700); max-width: 780px; ${typeStyle('CdrTextBody300')} }
 
-    /* ── Scene ──
-       Card width, photo height, and the two decorative dot sizes (check mark,
-       hours indicator) have no Cedar dimension token — they're the only
-       literal numbers left in this file, flagged rather than hidden. */
-    .cdr-demo-scene {
+    /* ── Trio layout ──
+       The same visual card, three independent live instances, one per
+       family. Card width, photo height, and the decorative dot sizes have
+       no Cedar dimension token — the only literal numbers left in this
+       file, flagged rather than hidden. */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .cdr-demo-trio {
       display: flex; flex-wrap: wrap; align-items: flex-start; gap: ${SPACE_2XL};
       padding: ${SPACE_2XL}; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
-      margin-bottom: ${SPACE_XL}; background: var(--cedar-warm-50);
+      margin-bottom: ${SPACE_SM}; background: var(--cedar-warm-50);
     }
-    /* Spotlight: the "Family" picker above must visibly change something in
-       the live scene, not just the table underneath — it rings the widget
-       that matches the selected family and dims the other two (dimming is
-       opacity-only, so all three stay genuinely clickable/cross-linked). */
-    .cdr-demo-spotlight-tag {
-      display: none; margin: 0 0 ${SPACE_SM}; ${typeStyle('CdrTextEyebrow100')}
-      color: var(--cedar-warm-600);
+    .cdr-demo-trio-item { display: flex; flex-direction: column; width: 300px; }
+    .cdr-demo-question {
+      margin: 0; ${typeStyle('CdrTextEyebrow100')} color: var(--cedar-warm-600); text-transform: none;
     }
-    .cdr-demo-scene[data-active] .cdr-demo-card-clip,
-    .cdr-demo-scene[data-active] .cdr-demo-control,
-    .cdr-demo-scene[data-active] .cdr-demo-check {
-      transition: opacity ${MOTION}, outline-color ${MOTION};
-      outline: 3px solid transparent; outline-offset: 4px;
+    .cdr-demo-answer {
+      margin: 0 0 ${SPACE_SM}; ${typeStyle('CdrTextHeadingSerif300')} color: var(--cedar-warm-1000);
     }
-    .cdr-demo-scene[data-active="action"] .cdr-demo-control,
-    .cdr-demo-scene[data-active="action"] .cdr-demo-check { opacity: 0.4; }
-    .cdr-demo-scene[data-active="action"] .cdr-demo-card-clip { outline-color: var(--s-border-selected); }
-    .cdr-demo-scene[data-active="action"] [data-spotlight="action"] { display: block; }
+    .cdr-demo-trio-caption {
+      margin: ${SPACE_SM} 0 0; color: var(--cedar-warm-600); ${typeStyle('CdrTextEyebrow100')} text-transform: none;
+    }
+    .cdr-demo-tray {
+      padding: ${SPACE_MD} ${SPACE_LG}; margin-bottom: ${SPACE_XL};
+      background: white; border: 1px solid var(--cedar-warm-200); border-radius: ${RADIUS_MD};
+      ${typeStyle('CdrTextBody300')} color: var(--cedar-warm-800);
+      transition: background ${MOTION};
+    }
+    .cdr-demo-tray-hint { margin-left: ${SPACE_SM}; color: var(--cedar-warm-500); ${typeStyle('CdrTextEyebrow100')} text-transform: none; }
 
-    .cdr-demo-scene[data-active="selection"] .cdr-demo-card-clip,
-    .cdr-demo-scene[data-active="selection"] .cdr-demo-control { opacity: 0.4; }
-    .cdr-demo-scene[data-active="selection"] .cdr-demo-check { outline-color: var(--s-border-selected); }
-    .cdr-demo-scene[data-active="selection"] [data-spotlight="selection"] { display: block; }
-
-    .cdr-demo-scene[data-active="control"] .cdr-demo-card-clip,
-    .cdr-demo-scene[data-active="control"] .cdr-demo-check { opacity: 0.4; }
-    .cdr-demo-scene[data-active="control"] .cdr-demo-control { outline-color: var(--s-border-selected); }
-    .cdr-demo-scene[data-active="control"] [data-spotlight="control"] { display: block; }
-
-    /* ── Action: the card is a real anchor ──
-       Shadow lives on .cdr-demo-card (never clipped); photo clipping lives on a
-       separate inner wrapper so the box-shadow is never cut off. The anchor
-       carries the full state flow: default → hover → pressed → disabled, plus
-       a focus-visible ring for keyboard users. */
+    /* The card shape itself — identical across all three columns except for
+       radius (set per-family below) and which real element carries the
+       state-driven surface/border/shadow (bound via that family's own
+       --a-/--s-/--c- vars declared on the same node). */
     .cdr-demo-card {
-      position: relative; width: 300px; /* no Cedar "component width" token */
-      border-radius: ${RADIUS_ACTION}; background: white;
-      box-shadow: var(--a-shadow);
-      transition: box-shadow ${MOTION};
+      position: relative; display: block; width: 300px; background: white;
+      text-decoration: none; color: inherit; cursor: pointer;
+      transition: box-shadow ${MOTION}, border-color ${MOTION};
     }
-    .cdr-demo-card:has(.cdr-demo-anchor:hover) { box-shadow: var(--a-shadow-hover); }
-    .cdr-demo-card:has(.cdr-demo-anchor:active) { box-shadow: var(--a-shadow); }
-    .cdr-demo-card:has(.cdr-demo-anchor[aria-disabled="true"]) { box-shadow: var(--a-shadow); }
-    .cdr-demo-card-clip { position: relative; border-radius: ${RADIUS_ACTION}; overflow: hidden; }
-    .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; /* no photo-aspect token */ }
+    .cdr-demo-photo { position: relative; height: 200px; overflow: hidden; border-radius: inherit; /* no photo-aspect token */ }
     .cdr-demo-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2e8 0%, #cfe6f7 100%); }
     .cdr-demo-building {
       position: absolute; left: 0; right: 0; bottom: 0; height: 55%;
@@ -627,112 +682,89 @@ const chrome = `
                          repeating-linear-gradient(0deg, rgba(255,255,255,0.35) 0 12%, transparent 12% 24%);
       opacity: 0.5;
     }
-    .cdr-demo-anchor {
-      position: absolute; inset: 0; border-radius: ${RADIUS_ACTION}; z-index: 1;
-      border: 2px solid var(--a-border);
-      transition: border-color ${MOTION};
-    }
-    .cdr-demo-anchor:hover { border-color: var(--a-border-hover); }
-    .cdr-demo-anchor:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; border-color: var(--a-border-hover); }
-    .cdr-demo-anchor:active { border-color: var(--a-border-pressed); }
-    .cdr-demo-anchor:active ~ .cdr-demo-info { background: var(--a-surface-pressed); }
-    .cdr-demo-anchor[aria-disabled="true"] { pointer-events: none; border-color: var(--a-border); opacity: 0.7; }
-    .cdr-demo-info {
-      position: relative; z-index: 0; padding: ${SPACE_MD} ${SPACE_LG};
-      background: var(--a-surface); color: var(--a-content);
-      transition: background ${MOTION}, color ${MOTION};
-    }
-    .cdr-demo-anchor[aria-disabled="true"] ~ .cdr-demo-info { background: var(--a-surface-disabled); color: var(--a-content-disabled); }
+    .cdr-demo-info { position: relative; padding: ${SPACE_MD} ${SPACE_LG}; }
     .cdr-demo-name { margin: 0 0 ${SPACE_XS}; ${typeStyle('CdrTextHeadingSerif300')} }
     .cdr-demo-detail { margin: 0 0 ${SPACE_2XS}; ${typeStyle('CdrTextBody300')} text-decoration: underline; }
     .cdr-demo-hours { margin: ${SPACE_SM} 0 0; display: flex; align-items: center; gap: ${SPACE_3XS}; ${typeStyle('CdrTextBody300')} }
     .cdr-demo-dot { width: ${SPACE_XS}; height: ${SPACE_XS}; border-radius: 50%; background: #3a9c50; display: inline-block; }
-    /* "My store" tag — the card-level evidence of the selection checkbox. */
-    .cdr-demo-store-tag {
+    /* Brand chip — matches the reference "My REI" pill. Decorative on
+       action/selection (the card itself carries the semantics); on control
+       it's the one real interactive element. */
+    .cdr-demo-chip {
       position: absolute; top: ${SPACE_MD}; left: ${SPACE_MD}; z-index: 2;
+      display: inline-flex; align-items: center; gap: ${SPACE_XS};
+      padding: ${SPACE_XS} ${SPACE_SM}; border-radius: ${RADIUS_PILL};
+      background: white; color: var(--cedar-warm-900);
+      ${typeStyle('CdrTextBodyStrong300')}
+    }
+    .cdr-demo-chip svg, .cdr-demo-chip-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; color: #2f6f4e; }
+    .cdr-demo-chip--decorative { pointer-events: none; }
+
+    /* ── Action: the whole card is a real anchor ──
+       Full state flow: default → hover → pressed → disabled, plus a
+       focus-visible ring for keyboard users. Radius: smallest non-zero. */
+    .cdr-demo-card--action {
+      border-radius: ${RADIUS_ACTION};
+      border: 2px solid var(--a-border);
+      box-shadow: var(--a-shadow);
+    }
+    .cdr-demo-card--action:hover { border-color: var(--a-border-hover); box-shadow: var(--a-shadow-hover); }
+    .cdr-demo-card--action:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; border-color: var(--a-border-hover); }
+    .cdr-demo-card--action:active { border-color: var(--a-border-pressed); box-shadow: var(--a-shadow); }
+    .cdr-demo-card--action:active .cdr-demo-info { background: var(--a-surface-pressed); }
+    .cdr-demo-card--action .cdr-demo-info { background: var(--a-surface); color: var(--a-content); }
+
+    /* ── Selection: the whole card is a real checkbox ──
+       Radius: one tier up from action. Prominence climbs the real scale:
+       raised (rest) -> elevated (hover) -> lifted (selected). */
+    .cdr-demo-card--selection {
+      border-radius: ${RADIUS_SM};
+      border: 2px solid var(--s-border);
+      box-shadow: var(--s-shadow);
+    }
+    .cdr-demo-card--selection:hover { border-color: var(--s-border-hover); box-shadow: var(--s-shadow-hover); }
+    .cdr-demo-card--selection:has(input:focus-visible) { outline: 2px solid var(--s-border-selected); outline-offset: 2px; }
+    .cdr-demo-card--selection .cdr-demo-info { background: var(--s-surface); color: var(--s-content); }
+    .cdr-demo-card--selection:has(input:checked) {
+      border-color: var(--s-border-selected); box-shadow: var(--s-shadow-selected);
+    }
+    .cdr-demo-card--selection:has(input:checked) .cdr-demo-info {
+      background: var(--s-surface-selected); color: var(--s-content-selected);
+    }
+    .cdr-demo-card--selection:has(input:disabled) { cursor: not-allowed; }
+    .cdr-demo-card--selection:has(input:disabled) .cdr-demo-info { background: var(--s-surface-disabled); color: var(--s-content-disabled); }
+    /* "Selected" tag — only appears once actually checked. */
+    .cdr-demo-store-tag {
+      position: absolute; top: ${SPACE_MD}; right: ${SPACE_MD}; z-index: 2;
       padding: ${SPACE_2XS} ${SPACE_SM}; border-radius: ${RADIUS_PILL};
       background: var(--s-surface-selected); color: var(--s-content-selected);
       border: 1px solid var(--s-border-selected);
       ${typeStyle('CdrTextEyebrow100')} display: none;
     }
-    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-store-tag { display: inline-block; }
+    .cdr-demo-card--selection:has(input:checked) .cdr-demo-store-tag { display: inline-block; }
 
-    /* ── Control: My REI button ──
-       A real <button>, not a labeled input — it opens the drawer below and
-       marks the store, acting on elements other than itself. Prominence
-       deliberately never moves. */
-    .sr-only {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    /* ── Control: the card is static; the chip is the real button ──
+       Radius: one tier up from selection. Prominence never moves — the
+       control's job is to act on the shared tray below, not itself. */
+    .cdr-demo-card--control {
+      border-radius: ${RADIUS_MD};
+      border: 2px solid var(--c-border);
+      box-shadow: var(--c-shadow);
+      cursor: default;
     }
-    .cdr-demo-control {
-      position: absolute; top: ${SPACE_MD}; right: ${SPACE_MD}; z-index: 3;
-      display: inline-flex; align-items: center; justify-content: center;
-      width: calc(${ICON_SIZE} + ${SPACE_LG}); height: calc(${ICON_SIZE} + ${SPACE_LG});
-      padding: 0; border-radius: ${RADIUS_MD}; cursor: pointer;
-      background: var(--c-surface); color: var(--c-icon); border: 2px solid var(--c-border);
-      transition: background ${MOTION}, border-color ${MOTION};
+    .cdr-demo-card--control .cdr-demo-info { background: var(--c-surface); color: var(--c-content); }
+    .cdr-demo-chip--button {
+      cursor: pointer; border: none; font: inherit;
+      transition: background ${MOTION};
     }
-    .cdr-demo-control-icon { display: inline-flex; }
-    .cdr-demo-control-icon svg { width: ${ICON_SIZE}; height: ${ICON_SIZE}; }
-    .cdr-demo-control:hover { background: var(--c-surface-hover); }
-    .cdr-demo-control:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; }
-    .cdr-demo-control:disabled { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
-    .cdr-demo-control-icon-filled { display: none; }
-    .cdr-demo-control[aria-expanded="true"] .cdr-demo-control-icon-outline { display: none; }
-    .cdr-demo-control[aria-expanded="true"] .cdr-demo-control-icon-filled { display: inline-flex; }
-    /* In-card drawer — the visible "something else" the button acts on. */
-    .cdr-demo-drawer {
-      position: relative; z-index: 2;
-      background: var(--c-surface); color: var(--c-content);
-      border-top: 1px solid var(--c-border);
-      border-radius: 0 0 ${RADIUS_ACTION} ${RADIUS_ACTION};
-      padding: ${SPACE_MD} ${SPACE_LG};
-    }
-    .cdr-demo-drawer[hidden] { display: none; }
-    .cdr-demo-drawer-text { margin: 0; ${typeStyle('CdrTextBody300')} }
-
-    /* ── Selection: set-as-my-store checkbox ──
-       A bare list row — no container chrome — so it reads as a native form
-       choice rather than a card or a button. Checking it repaints the CARD
-       (border, surface, shadow, "My store" tag) with the selected tokens. */
-    .cdr-demo-card-column { display: flex; flex-direction: column; }
-    .cdr-demo-check-column { display: flex; flex-direction: column; align-self: center; max-width: 220px; }
-    .cdr-demo-check {
-      display: flex; align-items: center; gap: ${SPACE_SM}; cursor: pointer;
-    }
-    .cdr-demo-check:has(input:focus-visible) .cdr-demo-check-box { outline: 2px solid var(--s-border-selected); outline-offset: 2px; }
-    .cdr-demo-check-box {
-      width: ${SPACE_LG}; height: ${SPACE_LG}; border-radius: ${RADIUS_SM}; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--s-surface); border: 2px solid var(--s-border);
-      box-shadow: var(--s-shadow);
-      color: var(--s-content-selected);
-      transition: background ${MOTION}, border-color ${MOTION}, box-shadow ${MOTION};
-    }
-    .cdr-demo-check-box svg { width: 60%; height: 60%; opacity: 0; transition: opacity ${MOTION}; }
-    .cdr-demo-check:hover .cdr-demo-check-box { border-color: var(--s-border-hover); box-shadow: var(--s-shadow-hover); }
-    .cdr-demo-check:has(input:checked) .cdr-demo-check-box {
-      background: var(--s-surface-selected); border-color: var(--s-border-selected);
-      box-shadow: var(--s-shadow-selected);
-    }
-    .cdr-demo-check:has(input:checked) .cdr-demo-check-box svg { opacity: 1; }
-    .cdr-demo-check-label { color: var(--s-content); ${typeStyle('CdrTextBody300')} }
-    .cdr-demo-check:has(input:checked) .cdr-demo-check-label { color: var(--s-content-selected); }
-    .cdr-demo-check:has(input:disabled) { cursor: not-allowed; }
-    .cdr-demo-check:has(input:disabled) .cdr-demo-check-box { background: var(--s-surface-disabled); box-shadow: none; }
-    .cdr-demo-check:has(input:disabled) .cdr-demo-check-label { color: var(--s-content-disabled); }
-    /* The selected CARD — this is the point of the demo: the checkbox gives
-       the card a real selected appearance, not just its own indicator. */
-    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-card {
-      box-shadow: var(--s-shadow-selected);
-    }
-    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-anchor {
-      border-color: var(--s-border-selected);
-    }
-    .cdr-demo-scene:has(.cdr-demo-check input:checked) .cdr-demo-info {
-      background: var(--s-surface-selected); color: var(--s-content-selected);
-    }
+    .cdr-demo-chip--button:hover { background: var(--c-surface-hover); }
+    .cdr-demo-chip--button:focus-visible { outline: 2px solid var(--a-focus); outline-offset: 2px; }
+    .cdr-demo-chip--button:disabled { background: var(--c-surface-disabled); color: var(--c-content-disabled); cursor: not-allowed; }
+    .cdr-demo-chip-icon { display: inline-flex; }
+    .cdr-demo-chip-icon-filled { display: none; }
+    .cdr-demo-chip--button[aria-pressed="true"] .cdr-demo-chip-icon-outline { display: none; }
+    .cdr-demo-chip--button[aria-pressed="true"] .cdr-demo-chip-icon-filled { display: inline-flex; }
+    .cdr-demo-chip--button[aria-pressed="true"] svg { color: #b5442e; }
 
     .cdr-demo-badge {
       ${typeStyle('CdrTextEyebrow100')}
@@ -795,37 +827,36 @@ export const ComponentComposer: Story = {
           <h2 class="sb-section-title">Compose a Custom Component</h2>
         </div>
         <p class="cdr-demo-intro">
-          Use this when Cedar has no component for your pattern yet. All three widgets on this
-          store card are real and interactive: the card itself is a native anchor (hover, press,
-          tab-focus it — clicking it is intercepted only so the demo doesn't leave Storybook),
-          "Set as my store" is a real checkbox that selects the card, and the heart is a real
-          button that opens a drawer inside the card. Every color is a resolved token, and every
-          state is driven by real <code>:hover</code>/<code>:active</code>/<code>:checked</code>/
-          <code>:disabled</code> CSS — not a JS simulation. <strong>Picking a Family below rings
-          the matching widget and dims the other two</strong> — all three stay live and
-          cross-linked either way.
+          Use this when Cedar has no component for your pattern yet. Before building anything,
+          ask: am I moving the user somewhere (<strong>action</strong>), setting or saving a
+          preference (<strong>selection</strong>), or controlling something else on the page
+          (<strong>control</strong>)? Below is the exact same visual card — photo, chip, name,
+          detail, hours — built three times to answer that question three different ways. Same
+          shape, same tokens vocabulary, three real and independently interactive outcomes: no
+          extra Cedar component was needed, just the right semantic role.
         </p>
+
+        ${renderTrio()}
 
         <div class="cdr-demo-controls">
           <div class="cdr-demo-field">
-            <label for="cdr-demo-family">Family</label>
+            <label for="cdr-demo-family">Inspect tokens for</label>
             <select id="cdr-demo-family">${familyOptions(DEFAULTS.family)}</select>
           </div>
         </div>
-
-        ${renderCard()}
 
         <div id="cdr-demo-inspector">${renderComposition(DEFAULTS.family, DEFAULTS.state)}</div>
 
         <div class="cdr-demo-notes">
           <h3>What this proves — and what it doesn't</h3>
           <ul>
-            <li><strong>Every color is a real, resolved token</strong> referenced by its actual shipped <code>var(--cdr-...)</code> custom property, not a baked-in hex — check the "Generated CSS" panel or inspect the card in devtools.</li>
-            <li><strong>Radius, spacing, and type are tokens too</strong> — corner radius, padding/gaps, and every font style come from <code>CdrRadius</code>/<code>CdrSpace</code>/<code>CdrText*</code>, not hand-picked pixel values.</li>
-            <li><strong>Action is a real anchor with a full state flow.</strong> The card's <code>&lt;a&gt;</code> goes default → hover (border deepens, prominence flat→raised) → pressed (<code>:active</code> — surface shifts to neutral/subtle, shadow drops back) → disabled (<code>aria-disabled</code>), with a <code>:focus-visible</code> ring drawn from the real <code>action.border.trigger.faint</code> token.</li>
-            <li><strong>Selection is a real checkbox that selects the card.</strong> Checking "Set as my store" repaints the card's border, info surface, prominence, and reveals the "My store" tag — the selected state belongs to the card, not just the checkbox indicator. Prominence climbs the real scale in order — <code>raised</code> at rest (one tier above action's resting <code>flat</code>) → <code>elevated</code> on hover → <code>lifted</code>, the topmost tier, once actually selected.</li>
-            <li><strong>Control is a real button that acts on something else.</strong> Pressing it opens a confirmation drawer inside the card and marks "Set as my store"; clearing the checkbox releases it. Its own prominence never moves — a control's job is to do something to something else.</li>
-            <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover/Pressed), and the <code>control</code> family has no "pressed" fill token — the heart only changes via icon swap, not color, when saved.</li>
+            <li><strong>Every color is a real, resolved token</strong> referenced by its actual shipped <code>var(--cdr-...)</code> custom property, not a baked-in hex — check the "Generated CSS" panel or inspect any card in devtools.</li>
+            <li><strong>Radius is the same shape, three real tiers.</strong> Verified ascending order in the compiled set: <code>Soft(2) &lt; Softer(4) &lt; Softest(6) &lt; Round(9999)</code>. Action uses the smallest non-zero tier (reads as a link), selection the next tier up, control the next tier up from that — never fully round.</li>
+            <li><strong>Prominence direction differs per family, and the order is real, not invented.</strong> Verified ascending shadow scale: <code>Flat(0) &lt; Raised(2px) &lt; Elevated(4px) &lt; Floating(8px) &lt; Lifted(16px)</code>. Action starts <code>flat</code> and raises on hover. Selection starts one tier higher, at <code>raised</code>, climbs to <code>elevated</code> on hover, and reaches the topmost tier, <code>lifted</code>, once actually selected. Control's prominence never moves at all — it isn't the thing changing.</li>
+            <li><strong>Action is a real anchor with a full state flow.</strong> The whole card is an <code>&lt;a&gt;</code>: default → hover (border deepens, shadow raises) → pressed (<code>:active</code> — surface shifts, shadow drops back) → disabled (<code>aria-disabled</code>), with a <code>:focus-visible</code> ring drawn from the real <code>action.border.trigger.faint</code> token. It moves the user to the store page.</li>
+            <li><strong>Selection is a real checkbox that selects the card.</strong> The whole card is a <code>&lt;label&gt;</code> wrapping a checkbox — checking it repaints the card's border, surface, and shadow, and reveals a "Selected" tag. It saves a preference, it doesn't navigate.</li>
+            <li><strong>Control is a real button that acts on something else.</strong> The card itself is static; only the "My REI" chip is interactive, and clicking it updates the shared "Saved stores" tray below — never itself. That's the entire point of a control: it does something to something else.</li>
+            <li><strong>Two real gaps surfaced by building this honestly:</strong> <code>color.action.surface.neutral.bold</code> doesn't exist in the compiled set (see Action → Hover/Pressed), and the <code>control</code> family has no "pressed" fill token — the chip only changes via icon swap and color, not a dedicated pressed surface.</li>
             <li><strong>content/text.primary is legacy</strong> and isn't scoped to any of these three families — this demo instead reuses <code>selection.text.neutral.faint</code>, the closest family-owned equivalent, everywhere a default readable content color is needed.</li>
           </ul>
         </div>
@@ -836,13 +867,12 @@ export const ComponentComposer: Story = {
   play: async ({ canvasElement }) => {
     const familyEl = canvasElement.querySelector<HTMLSelectElement>('#cdr-demo-family');
     const inspector = canvasElement.querySelector<HTMLElement>('#cdr-demo-inspector');
-    const scene = canvasElement.querySelector<HTMLElement>('.cdr-demo-scene');
-    if (!familyEl || !inspector || !scene) return;
+    if (!familyEl || !inspector) return;
 
-    // The anchor is a genuine <a href> so :hover/:focus-visible/:active and
-    // devtools all read a real link — but actually navigating away would
-    // break every other family's preview sharing this same card. Block the
-    // navigation only; every visual/interactive state stays real.
+    // The action card is a genuine <a href> so :hover/:focus-visible/:active
+    // and devtools all read a real link — but actually navigating away
+    // would leave the story. Block the navigation only; every
+    // visual/interactive state stays real.
     canvasElement
       .querySelector<HTMLAnchorElement>('[data-demo-link="true"]')
       ?.addEventListener('click', (e) => e.preventDefault());
@@ -853,9 +883,9 @@ export const ComponentComposer: Story = {
       family: string,
     ): HTMLInputElement | HTMLAnchorElement | HTMLButtonElement | null => {
       if (family === 'action')
-        return canvasElement.querySelector<HTMLAnchorElement>('.cdr-demo-anchor');
+        return canvasElement.querySelector<HTMLAnchorElement>('.cdr-demo-card--action');
       if (family === 'control')
-        return canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-control');
+        return canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-chip--button');
       return canvasElement.querySelector<HTMLInputElement>(`input[data-widget="${family}"]`);
     };
 
@@ -886,9 +916,6 @@ export const ComponentComposer: Story = {
 
     familyEl.addEventListener('change', () => {
       activeState = DEFAULTS.state;
-      // This is the live-scene variation the dropdown must actually drive:
-      // ring the widget matching the selected family, dim the other two.
-      scene.dataset.active = familyEl.value;
       render();
     });
 
@@ -901,39 +928,27 @@ export const ComponentComposer: Story = {
 
     render();
 
-    // Real cross-widget behavior: the control button opens the in-card
-    // drawer AND marks the selection checkbox; un-checking the box by hand
-    // releases the button and closes the drawer. This is a control "doing
-    // something to something else" — and it only fires on real input, not
-    // on the state-nav preview buttons above.
-    const storeCheck = canvasElement.querySelector<HTMLInputElement>(
+    // Keep the inspector truthful about a real selection made directly on
+    // the selection card (not just via the state-nav preview buttons).
+    const selectionInput = canvasElement.querySelector<HTMLInputElement>(
       'input[data-widget="selection"]',
     );
-    const saveButton = canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-control');
-    const drawer = canvasElement.querySelector<HTMLElement>('#cdr-demo-drawer');
-
-    const setSaved = (saved: boolean) => {
-      if (saveButton) saveButton.setAttribute('aria-expanded', String(saved));
-      if (drawer) drawer.hidden = !saved;
-      if (storeCheck) storeCheck.checked = saved;
-    };
-
-    saveButton?.addEventListener('click', () => {
-      setSaved(saveButton.getAttribute('aria-expanded') !== 'true');
-    });
-
-    storeCheck?.addEventListener('change', () => {
-      // Manually clearing the store releases the saved state too — the two
-      // widgets describe the same underlying fact.
-      if (!storeCheck.checked && saveButton?.getAttribute('aria-expanded') === 'true') {
-        setSaved(false);
-      }
-      // Keep the inspector's table/CSS panel truthful about the widget the
-      // user is actually looking at.
+    selectionInput?.addEventListener('change', () => {
       if (familyEl.value === 'selection') {
-        activeState = storeCheck.checked ? 'selected' : 'default';
+        activeState = selectionInput.checked ? 'selected' : 'default';
         render();
       }
+    });
+
+    // The control card's chip acts on something OTHER than itself: the
+    // shared "Saved stores" tray below all three cards, not its own card.
+    // This is a real toggle via aria-pressed, not a JS-simulated state.
+    const controlButton = canvasElement.querySelector<HTMLButtonElement>('.cdr-demo-chip--button');
+    const trayCount = canvasElement.querySelector<HTMLElement>('[data-tray-count]');
+    controlButton?.addEventListener('click', () => {
+      const pressed = controlButton.getAttribute('aria-pressed') === 'true';
+      controlButton.setAttribute('aria-pressed', String(!pressed));
+      if (trayCount) trayCount.textContent = pressed ? '0' : '1';
     });
   },
 };
