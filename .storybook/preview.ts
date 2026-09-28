@@ -28,7 +28,12 @@ const preview: Preview = {
             'Figma Integration',
           ],
           'OKLCH',
-          ['Color Space Explorer', 'Custom Component Composer', 'Color Blindness Simulator'],
+          [
+            'Color Space Explorer',
+            'Custom Component Composer',
+            'Stacking Functions',
+            'Color Blindness Simulator',
+          ],
           'Tokens',
           ['Colors', 'Typography', 'Spacing', 'Motion', 'Breakpoints', 'Radius', 'Prominence'],
           '*',
