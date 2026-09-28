@@ -164,7 +164,7 @@
     "vitest": "^4.0.16"
   },
   "lint-staged": {
-    ".github/workflows/*.yml": [
+    ".github/workflows/figma-to-tokens.yml": [
       "npx -y pin-github-action",
       "git add"
     ],
