@@ -354,8 +354,9 @@ function getCliArg(index: number): string | undefined {
 async function main() {
   try {
     const tokenArgIdx = process.argv.indexOf('--token');
-    const token =
-      tokenArgIdx !== -1 ? getCliArg(tokenArgIdx + 1) : process.env.PERSONAL_ACCESS_TOKEN;
+    const token = (
+      tokenArgIdx !== -1 ? getCliArg(tokenArgIdx + 1) : process.env.PERSONAL_ACCESS_TOKEN
+    )?.trim();
     if (!token) {
       throw new Error('PERSONAL_ACCESS_TOKEN env var or --token <token> CLI flag is required');
     }
@@ -365,11 +366,11 @@ async function main() {
     let rawKeys: string | undefined;
 
     if (fileKeysArgIdx !== -1) {
-      rawKeys = getCliArg(fileKeysArgIdx + 1);
+      rawKeys = getCliArg(fileKeysArgIdx + 1)?.trim();
     } else if (fileKeysArgIdxLegacy !== -1) {
-      rawKeys = getCliArg(fileKeysArgIdxLegacy + 1);
+      rawKeys = getCliArg(fileKeysArgIdxLegacy + 1)?.trim();
     } else {
-      rawKeys = process.env.FILE_KEYS || process.env.FILE_KEY;
+      rawKeys = (process.env.FILE_KEYS || process.env.FILE_KEY)?.trim();
     }
 
     if (!rawKeys) {
