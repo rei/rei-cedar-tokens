@@ -88,7 +88,7 @@ jobs:
       - name: Build Storybook
         run: pnpm build-storybook
         env:
-          STORYBOOK_BASE_URL: /rei-cedar-token-pipeline-spike/pr/${{ env.PR_BRANCH }}/
+          STORYBOOK_BASE_URL: /${{ github.event.repository.name }}/pr/${{ env.PR_BRANCH }}/
 
       # ── 8. Deploy Storybook to GH Pages under /pr/update-tokens/ ─────────────
       #
