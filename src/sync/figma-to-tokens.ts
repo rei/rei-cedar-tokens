@@ -400,15 +400,14 @@ async function main() {
     let totalFilesWritten = 0;
 
     try {
-      if (fs.existsSync(baseOutputDir)) {
-        fs.rmSync(baseOutputDir, { recursive: true });
-        console.log(`Cleared output directory: ${baseOutputDir}`);
-      }
+      // Create the output directory if it doesn't exist, but do not wipe it.
+      // Wiping would remove legacy/option token files that the build pipeline
+      // still needs, which causes the subsequent build to produce no tokens.
       fs.mkdirSync(baseOutputDir, { recursive: true });
-      console.log(`Created output directory: ${baseOutputDir}`);
+      console.log(`Ensured output directory exists: ${baseOutputDir}`);
     } catch (error) {
       throw new Error(
-        `Failed to reset output directory "${baseOutputDir}": ${
+        `Failed to create output directory "${baseOutputDir}": ${
           error instanceof Error ? error.message : String(error)
         }`,
       );
