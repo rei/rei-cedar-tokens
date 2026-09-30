@@ -78,15 +78,19 @@ jobs:
       - name: Build current snapshot
         run: pnpm tokens:snapshot current
 
-      # ── 6. Build Storybook (snapshots are baked in as static assets) ─────────
+      # ── 6. Build tokens (snapshots are baked in as static assets) ────────────
+      - name: Build tokens
+        run: pnpm build
+
+      # ── 7. Build Storybook ───────────────────────────────────────────────────
       # STORYBOOK_BASE_URL tells Vite the sub-path it will be served from so
       # all asset references in the built HTML are correct.
-      - name: Build tokens and Storybook
-        run: pnpm build
+      - name: Build Storybook
+        run: pnpm build-storybook
         env:
           STORYBOOK_BASE_URL: /rei-cedar-token-pipeline-spike/pr/${{ env.PR_BRANCH }}/
 
-      # ── 7. Deploy Storybook to GH Pages under /pr/update-tokens/ ─────────────
+      # ── 8. Deploy Storybook to GH Pages under /pr/update-tokens/ ─────────────
       #
       # We use a dedicated orphan branch (gh-pages) and place the built site
       # under a PR-specific sub-directory so multiple PRs can coexist without
