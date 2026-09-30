@@ -20,7 +20,7 @@ export const CdrColorFeedback = {
   CdrColorFeedbackTextNatural: "#756e5c",
   CdrColorFeedbackTextNeutralFaint: "#746e63",
   CdrColorFeedbackTextSuccess: "#3d8044",
-  CdrColorFeedbackTextWarning: "#8a6b00",
+  CdrColorFeedbackTextWarning: "#8a6a00",
 };
 
 export default CdrColorFeedback;
