@@ -74,13 +74,13 @@ jobs:
           FILE_KEYS: ${{ secrets.FIGMA_FILE_KEYS }}
           PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_ACTION_VARIABLES_SYNC_FIGMA_TOKEN }}
 
-      # ── 5. Current snapshot (AFTER Figma sync) ───────────────────────────────
-      - name: Build current snapshot
-        run: pnpm tokens:snapshot current
-
-      # ── 6. Build tokens (snapshots are baked in as static assets) ────────────
+      # ── 5. Build tokens (snapshots are baked in as static assets) ────────────
       - name: Build tokens
         run: pnpm build
+
+      # ── 6. Current snapshot (AFTER normalization) ────────────────────────────
+      - name: Build current snapshot
+        run: pnpm tokens:snapshot current
 
       # ── 7. Build Storybook ───────────────────────────────────────────────────
       # STORYBOOK_BASE_URL tells Vite the sub-path it will be served from so

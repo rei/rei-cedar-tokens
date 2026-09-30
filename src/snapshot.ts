@@ -13,7 +13,7 @@
  *   pnpm tokens:snapshot current    # save as dist/normalized/current.json
  *
  * Source: canonical/tokens.json  (produced by `pnpm tokens:normalize`)
- * Dest:   dist/normalized/<slot>.json
+ * Dest:   .storybook/generated/snapshots/<slot>.json
  * Archive: canonical/snapshots/<timestamp>.json  (current slot only)
  *
  * The script is intentionally minimal — it reads canonical/tokens.json verbatim and
@@ -54,7 +54,7 @@ if (slot !== 'baseline' && slot !== 'current') {
 // ─── Paths ────────────────────────────────────────────────────────────────────
 
 const src = path.join(root, 'canonical/tokens.json');
-const destDir = path.join(root, 'dist/normalized');
+const destDir = path.join(root, '.storybook/generated/snapshots');
 const dest = path.join(destDir, `${slot}.json`);
 const archiveDir = path.join(root, 'canonical/snapshots');
 const timestamp = new Date().toISOString();
