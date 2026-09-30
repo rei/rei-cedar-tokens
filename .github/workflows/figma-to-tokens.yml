@@ -90,19 +90,36 @@ jobs:
         env:
           STORYBOOK_BASE_URL: /${{ github.event.repository.name }}/pr/${{ env.PR_BRANCH }}/
 
-      # ── 8. Deploy Storybook to GH Pages under /pr/update-tokens/ ─────────────
-      #
-      # We use a dedicated orphan branch (gh-pages) and place the built site
-      # under a PR-specific sub-directory so multiple PRs can coexist without
-      # overwriting each other.  The action only touches the sub-directory it
-      # writes; other paths on the branch are left intact.
+      # ── 8. Prepare GitHub Pages bundle ───────────────────────────────────────
+      # GitHub Pages requires an index.html at the branch root when source is
+      # set to /(root). We keep the PR preview under pr/update-tokens/ and add
+      # a redirect at the root for convenience.
+      - name: Stage GitHub Pages bundle
+        run: |
+          rm -rf gh-pages-site
+          mkdir -p gh-pages-site/pr/${{ env.PR_BRANCH }}
+          cp -rT storybook-static gh-pages-site/pr/${{ env.PR_BRANCH }}
+          cat > gh-pages-site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0; url=./pr/${{ env.PR_BRANCH }}/">
+              <title>Token preview</title>
+            </head>
+            <body>
+              <a href="./pr/${{ env.PR_BRANCH }}/">Token preview for ${{ env.PR_BRANCH }}</a>
+            </body>
+          </html>
+          EOF
+
+      # ── 9. Deploy Storybook preview to GitHub Pages under /pr/update-tokens/ ─
       - name: Deploy Storybook preview to GitHub Pages
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./gh-pages-site
           publish_branch: gh-pages
-          destination_dir: pr/${{ env.PR_BRANCH }}
           keep_files: true
 
       # ── 8. Create (or update) the Pull Request ───────────────────────────────
