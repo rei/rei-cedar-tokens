@@ -56,7 +56,7 @@ jobs:
 
       # ── 3. Baseline snapshot (BEFORE Figma sync) ─────────────────────────────
       - name: Build baseline snapshot
-        run: pnpm diff:baseline
+        run: pnpm tokens:snapshot baseline
 
       # ── 4. Figma → tokens sync ───────────────────────────────────────────────
       - name: Sync variables in Figma files to tokens
@@ -76,7 +76,7 @@ jobs:
 
       # ── 5. Current snapshot (AFTER Figma sync) ───────────────────────────────
       - name: Build current snapshot
-        run: pnpm diff:current
+        run: pnpm tokens:snapshot current
 
       # ── 6. Build Storybook (snapshots are baked in as static assets) ─────────
       # STORYBOOK_BASE_URL tells Vite the sub-path it will be served from so
