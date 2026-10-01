@@ -5,6 +5,8 @@
  * without hitting the filesystem.
  */
 
+import type { TokenAccessibility, TokenDeprecation } from '../types/canonical-token.js';
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export type TokenNode =
@@ -65,7 +67,18 @@ export function parseTokenDescription(
   const trimmed = raw.trim();
   if (!trimmed) return undefined;
 
-  const KNOWN_KEYS = new Set(['usage', 'design', 'aliases']);
+  const KNOWN_KEYS = new Set([
+    'usage',
+    'design',
+    'aliases',
+    'removedIn',
+    'migrateToToken',
+    'reason',
+    'deprecated',
+    'legacy',
+    'aaa',
+    'aa',
+  ]);
   const lines = trimmed.split('\n');
 
   const summaryLines: string[] = [];
@@ -73,7 +86,7 @@ export function parseTokenDescription(
   let currentKey: string | null = null;
 
   for (const line of lines) {
-    const keyMatch = line.match(/^([a-z]+):\s*(.*)$/i);
+    const keyMatch = line.match(/^\s*[^a-zA-Z0-9_\s]*\s*([a-zA-Z0-9_]+):\s*(.*)$/i);
     if (keyMatch && KNOWN_KEYS.has(keyMatch[1].toLowerCase())) {
       currentKey = keyMatch[1].toLowerCase();
       fields[currentKey] = keyMatch[2].trim();
@@ -106,6 +119,76 @@ export function parseTokenDescription(
   return Object.keys(result).length > 0 ? result : undefined;
 }
 
+export function parseTokenDeprecation(raw: string): TokenDeprecation | undefined {
+  const trimmed = raw.trim();
+  if (!trimmed) return undefined;
+
+  const result: TokenDeprecation = {};
+  const legacyValues: string[] = [];
+
+  const segments = trimmed.split(';');
+  for (const segment of segments) {
+    const cleaned = segment.trim().replace(/\s+/g, ' ');
+    const legacyMatch = cleaned.match(/^Legacy:\s*(.+)$/i);
+    if (legacyMatch) {
+      legacyValues.push(legacyMatch[1].trim());
+      continue;
+    }
+
+    const removedInMatch = cleaned.match(/^removedIn:\s*(.+)$/i);
+    if (removedInMatch) {
+      result.removedIn = removedInMatch[1].trim();
+      continue;
+    }
+
+    const migrateToMatch = cleaned.match(/^migrateToToken:\s*(.+)$/i);
+    if (migrateToMatch) {
+      result.migrateToToken = migrateToMatch[1].trim();
+      continue;
+    }
+
+    const reasonMatch = cleaned.match(/^reason:\s*(.+)$/i);
+    if (reasonMatch && !result.reason) {
+      result.reason = reasonMatch[1].trim();
+    }
+  }
+
+  if (legacyValues.length === 1) {
+    result.reason = legacyValues[0];
+  } else if (legacyValues.length > 1) {
+    result.reason = legacyValues;
+  }
+
+  return Object.keys(result).length > 0 ? result : undefined;
+}
+
+export function parseTokenAccessibility(raw: string): TokenAccessibility | undefined {
+  const trimmed = raw.trim();
+  if (!trimmed) return undefined;
+
+  const values: { AAA: string[]; AA: string[] } = { AAA: [], AA: [] };
+  const segments = trimmed.split(';');
+
+  for (const segment of segments) {
+    const cleaned = segment.trim().replace(/\s+/g, ' ');
+    const match = cleaned.match(/^\s*[^a-zA-Z0-9_\s]*\s*(AAA|AA):\s*(.+)$/i);
+    if (match) {
+      const label = match[1].toUpperCase() as 'AAA' | 'AA';
+      const items = match[2]
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean);
+      values[label].push(...items);
+    }
+  }
+
+  const result: TokenAccessibility = {};
+  if (values.AAA.length) result.AAA = values.AAA;
+  if (values.AA.length) result.AA = values.AA;
+
+  return Object.keys(result).length > 0 ? result : undefined;
+}
+
 // ─── applyTokenMapping ────────────────────────────────────────────────────────
 
 export function applyTokenMapping(
@@ -119,6 +202,8 @@ export function applyTokenMapping(
     $type: string;
     $value: string;
     docs?: ReturnType<typeof parseTokenDescription>;
+    deprecation?: TokenDeprecation;
+    accessibility?: TokenAccessibility;
     colorFamily?: string;
   };
 }> {
@@ -128,6 +213,8 @@ export function applyTokenMapping(
       $type: string;
       $value: string;
       docs?: ReturnType<typeof parseTokenDescription>;
+      deprecation?: TokenDeprecation;
+      accessibility?: TokenAccessibility;
       colorFamily?: string;
     };
   }> = [];
@@ -152,6 +239,8 @@ export function applyTokenMapping(
           $type: string;
           $value: string;
           docs?: ReturnType<typeof parseTokenDescription>;
+          deprecation?: TokenDeprecation;
+          accessibility?: TokenAccessibility;
           colorFamily?: string;
         } = {
           $type: (value as any).$type,
@@ -163,6 +252,10 @@ export function applyTokenMapping(
         if (rawDescription && typeof rawDescription === 'string') {
           const docs = parseTokenDescription(rawDescription);
           if (docs) token.docs = docs;
+          const deprecation = parseTokenDeprecation(rawDescription);
+          if (deprecation) token.deprecation = deprecation;
+          const accessibility = parseTokenAccessibility(rawDescription);
+          if (accessibility) token.accessibility = accessibility;
         }
         results.push({
           canonicalPath,
@@ -187,6 +280,8 @@ export function buildOptionTree(
       $type: string;
       $value: string;
       docs?: ReturnType<typeof parseTokenDescription>;
+      deprecation?: TokenDeprecation;
+      accessibility?: TokenAccessibility;
       colorFamily?: string;
     };
   }>,
@@ -208,10 +303,12 @@ export function buildOptionTree(
       $value: token.$value,
     };
 
-    if (token.docs || token.colorFamily) {
+    if (token.docs || token.deprecation || token.accessibility || token.colorFamily) {
       tokenNode.$extensions = {
         cedar: {
           ...(token.docs && { docs: token.docs }),
+          ...(token.deprecation && { deprecation: token.deprecation }),
+          ...(token.accessibility && { accessibility: token.accessibility }),
           ...(token.colorFamily && { colorFamily: token.colorFamily }),
         },
       };
@@ -412,6 +509,14 @@ export function clean(
         const docs = parseTokenDescription(rawDescription);
         if (docs) {
           cedarExtensions.docs = docs;
+        }
+        const deprecation = parseTokenDeprecation(rawDescription);
+        if (deprecation) {
+          cedarExtensions.deprecation = deprecation;
+        }
+        const accessibility = parseTokenAccessibility(rawDescription);
+        if (accessibility) {
+          cedarExtensions.accessibility = accessibility;
         }
       }
 

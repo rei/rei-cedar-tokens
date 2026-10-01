@@ -4,7 +4,7 @@
       "brand": {
         "$type": "color",
         "$value": "{blue-spruce-green.1400}",
-        "$description": "Replaces: --cdr-color-background-brand-spruce",
+        "$description": "Legacy: --cdr-color-background-brand-spruce",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -46,7 +46,7 @@
       "sale": {
         "$type": "color",
         "$value": "{sale-red.1000}",
-        "$description": "Replaces: --cdr-color-background-sale",
+        "$description": "Legacy: --cdr-color-background-sale",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -60,7 +60,7 @@
       "natural": {
         "$type": "color",
         "$value": "{natural-grey.050}",
-        "$description": "Replaces: --cdr-color-background-secondary",
+        "$description": "Legacy: --cdr-color-background-secondary",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -88,7 +88,7 @@
       "neutral": {
         "$type": "color",
         "$value": "{warm-grey.100}",
-        "$description": "",
+        "$description": "Legacy: --cdr-color-table-row-header",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -102,7 +102,7 @@
       "neutral-subtle": {
         "$type": "color",
         "$value": "{warm-grey.050}",
-        "$description": "",
+        "$description": "Legacy: --cdr-color-table-row-alt\n",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -116,7 +116,7 @@
       "neutral-trace": {
         "$type": "color",
         "$value": "{warm-grey.000}",
-        "$description": "",
+        "$description": "Legacy: --cdr-color-background-primary;                                   Legacy: --cdr-color-table-row\n\n",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -132,7 +132,7 @@
       "brand": {
         "$type": "color",
         "$value": "{blue-spruce-green.1400}",
-        "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+        "$description": "✓ AAA: surface/neutral-trace (13.4:1), surface/natural (12.5:1), surface/neutral-subtle (12.5:1), surface/neutral (11.7:1);\n✗ Avoid: surface/brand (1.0:1), surface/neutral-intense (1.0:1), surface/brand-subtle (2.7:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -146,7 +146,7 @@
       "accent": {
         "$type": "color",
         "$value": "{lichen.100}",
-        "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1)\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1)\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1)\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
+        "$description": "✓ AAA: surface/neutral-intense (12.3:1), surface/brand (12.0:1);\n△ Large only: surface/brand-subtle (4.5:1), surface/sale (4.0:1)\n✗ Avoid: surface/neutral (1.0:1), surface/neutral-subtle (1.0:1), surface/natural (1.0:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -160,7 +160,7 @@
       "neutral-bold": {
         "$type": "color",
         "$value": "{warm-grey.900}",
-        "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+        "$description": "Legacy: --cdr-color-table-border-header;                      △ Large only: surface/neutral-intense (3.9:1), surface/brand (3.8:1), surface/neutral-trace (3.5:1);\n✗ Avoid: surface/sale (1.3:1), surface/brand-subtle (1.4:1), surface/membership (2.6:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -174,7 +174,7 @@
       "neutral-prominent": {
         "$type": "color",
         "$value": "{warm-grey.850}",
-        "$description": "△ Large only: surface/neutral-intense (4.4:1), control/surface/neutral-intense (4.4:1), surface/brand (4.3:1)\n✗ Avoid: action/surface/neutral-bold (1.1:1), control/surface/neutral-prominent (1.1:1), graphic/surface/rating-bold (1.1:1)",
+        "$description": "Legacy: --cdr-color-border-secondary;                    △ Large only: surface/neutral-intense (4.4:1), surface/brand (4.3:1), surface/neutral-trace (3.1:1);\n✗ Avoid: surface/sale (1.4:1), surface/brand-subtle (1.6:1), surface/membership (2.3:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -188,7 +188,7 @@
       "neutral": {
         "$type": "color",
         "$value": "{warm-grey.500}",
-        "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+        "$description": "Legacy: --cdr-color-border-primary;\n✓ AAA: surface/neutral-intense (8.4:1), surface/brand (8.2:1);\n△ Large only: surface/brand-subtle (3.1:1);\n✗ Avoid: surface/membership (1.2:1), surface/neutral (1.4:1), surface/neutral-subtle (1.5:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -202,7 +202,7 @@
       "neutral-subtle": {
         "$type": "color",
         "$value": "{warm-grey.400}",
-        "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+        "$description": "Legacy: --cdr-color-table-border-default;                         ✓ AAA: surface/neutral-intense (9.2:1), surface/brand (9.0:1);\n△ Large only: surface/brand-subtle (3.4:1), surface/sale (3.0:1);\n✗ Avoid: surface/membership (1.1:1), surface/neutral (1.3:1), surface/neutral-subtle (1.4:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -216,7 +216,7 @@
       "neutral-trace": {
         "$type": "color",
         "$value": "{warm-grey.000}",
-        "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+        "$description": "✓ AAA: surface/neutral-intense (13.7:1), surface/brand (13.4:1);\n✓ AA: surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), surface/natural (1.1:1), surface/neutral-subtle (1.1:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -232,7 +232,7 @@
       "neutral-bold": {
         "$type": "color",
         "$value": "{warm-grey.1400}",
-        "$description": "✓ AAA: surface/neutral-trace (13.7:1), control/surface/neutral-trace (13.7:1), selection/surface/neutral-trace (13.7:1), feedback/surface/neutral-trace (13.7:1)\n△ Large only: action/surface/neutral-bold (3.9:1), control/surface/neutral-prominent (3.9:1), graphic/surface/rating-bold (3.9:1)\n✗ Avoid: surface/neutral-intense (1.0:1), control/surface/neutral-intense (1.0:1), surface/brand (1.0:1)",
+        "$description": "Legacy: --cdr-color-text-emphasis;\n✓ AAA: surface/neutral-trace (13.7:1), surface/natural (12.8:1), surface/neutral-subtle (12.8:1), surface/neutral (12.0:1);\n△ Large only: surface/sale (3.1:1);\n✗ Avoid: surface/neutral-intense (1.0:1), surface/brand (1.0:1), surface/brand-subtle (2.7:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -246,7 +246,7 @@
       "neutral-prominent": {
         "$type": "color",
         "$value": "{warm-grey.1300}",
-        "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+        "$description": "Legacy: --cdr-color-text-primary;\n✓ AAA: surface/neutral-trace (9.2:1), surface/natural (8.6:1), surface/neutral-subtle (8.6:1), surface/neutral (8.1:1);\n✓ AA: surface/membership (6.8:1);\n✗ Avoid: surface/brand (1.5:1), surface/neutral-intense (1.5:1), surface/brand-subtle (1.8:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -260,7 +260,7 @@
       "neutral": {
         "$type": "color",
         "$value": "{warm-grey.1100}",
-        "$description": "Replaces: --cdr-color-text-primary\n✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+        "$description": "Legacy: --cdr-color-text-secondary;\n✓ AA: surface/neutral-trace (5.1:1), surface/natural (4.7:1), surface/neutral-subtle (4.7:1);\n△ Large only: surface/neutral (4.4:1), surface/membership (3.7:1);\n✗ Avoid: surface/brand-subtle (1.0:1), surface/sale (1.1:1), surface/brand (2.6:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -274,7 +274,7 @@
       "neutral-subtle": {
         "$type": "color",
         "$value": "{warm-grey.400}",
-        "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+        "$description": "Legacy: --cdr-color-text-disabled;\n✓ AAA: surface/neutral-intense (9.2:1), surface/brand (9.0:1);\n△ Large only: surface/brand-subtle (3.4:1), surface/sale (3.0:1);\n✗ Avoid: surface/membership (1.1:1), surface/neutral (1.3:1), surface/neutral-subtle (1.4:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -288,7 +288,7 @@
       "neutral-trace": {
         "$type": "color",
         "$value": "{warm-grey.000}",
-        "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+        "$description": "Legacy: --cdr-color-text-inverse;\n✓ AAA: surface/neutral-intense (13.7:1), surface/brand (13.4:1);\n✓ AA: surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), surface/natural (1.1:1), surface/neutral-subtle (1.1:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -302,7 +302,7 @@
       "sale": {
         "$type": "color",
         "$value": "{sale-red.1000}",
-        "$description": "Replaces: --cdr-color-text-sale\n△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+        "$description": "Legacy: --cdr-color-text-sale;\n△ Large only: surface/neutral-trace (4.5:1), surface/natural (4.2:1), surface/neutral-subtle (4.2:1);\n✗ Avoid: surface/sale (1.0:1), surface/brand-subtle (1.1:1), surface/brand (3.0:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -316,7 +316,7 @@
       "brand": {
         "$type": "color",
         "$value": "{blue-spruce-green.1400}",
-        "$description": "Replaces: --cdr-color-text-brand\n✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+        "$description": "Legacy: --cdr-color-text-brand;\n✓ AAA: surface/neutral-trace (13.4:1), surface/natural (12.5:1), surface/neutral-subtle (12.5:1), surface/neutral (11.7:1);\n✗ Avoid: surface/brand (1.0:1), surface/neutral-intense (1.0:1), surface/brand-subtle (2.7:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -330,7 +330,7 @@
       "accent": {
         "$type": "color",
         "$value": "{lichen.100}",
-        "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1)\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1)\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1)\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
+        "$description": "✓ AAA: surface/neutral-intense (12.3:1), surface/brand (12.0:1);\n△ Large only: surface/brand-subtle (4.5:1), surface/sale (4.0:1);\n✗ Avoid: surface/neutral (1.0:1), surface/neutral-subtle (1.0:1), surface/natural (1.0:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -344,7 +344,7 @@
       "natural": {
         "$type": "color",
         "$value": "{natural-grey.050}",
-        "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/natural (1.0:1), feedback/surface/natural-faint (1.0:1), graphic/surface/natural (1.0:1)",
+        "$description": "✓ AAA: surface/neutral-intense (12.8:1), surface/brand (12.5:1);\n✓ AA: surface/brand-subtle (4.7:1);\n△ Large only: surface/sale (4.2:1);\n✗ Avoid: surface/natural (1.0:1), surface/neutral-subtle (1.0:1), surface/neutral (1.1:1)",
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": false,
@@ -517,7 +517,7 @@
         "brand": {
           "$type": "color",
           "$value": "{blue-spruce-green.1400}",
-          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1);\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1);\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -531,7 +531,7 @@
         "accent-bold": {
           "$type": "color",
           "$value": "{golden-moss.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.0:1), control/surface/neutral-trace (5.0:1), selection/surface/neutral-trace (5.0:1), feedback/surface/neutral-trace (5.0:1)\n△ Large only: graphic/surface/accent-faint (4.5:1), selection/surface/natural (4.4:1), surface/neutral (4.4:1)\n✗ Avoid: surface/brand-subtle (1.0:1), graphic/surface/accent-bold (1.0:1), feedback/surface/warning-bold (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.0:1), control/surface/neutral-trace (5.0:1), selection/surface/neutral-trace (5.0:1), feedback/surface/neutral-trace (5.0:1);\n△ Large only: graphic/surface/accent-faint (4.5:1), selection/surface/natural (4.4:1), surface/neutral (4.4:1);\n✗ Avoid: surface/brand-subtle (1.0:1), graphic/surface/accent-bold (1.0:1), feedback/surface/warning-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -545,7 +545,7 @@
         "accent": {
           "$type": "color",
           "$value": "{apex-moss.500}",
-          "$description": "✓ AAA: surface/neutral-intense (8.6:1), control/surface/neutral-intense (8.6:1), surface/brand (8.4:1), action/surface/brand (8.4:1)\n✓ AA: action/surface/neutral-intense (5.8:1), control/surface/neutral-bold (5.8:1)\n△ Large only: feedback/surface/error-bold (3.5:1), feedback/surface/natural-bold (3.2:1), feedback/surface/warning-bold (3.2:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$description": "✓ AAA: surface/neutral-intense (8.6:1), control/surface/neutral-intense (8.6:1), surface/brand (8.4:1), action/surface/brand (8.4:1);\n✓ AA: action/surface/neutral-intense (5.8:1), control/surface/neutral-bold (5.8:1);\n△ Large only: feedback/surface/error-bold (3.5:1), feedback/surface/natural-bold (3.2:1), feedback/surface/warning-bold (3.2:1);\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -559,7 +559,7 @@
         "accent-faint": {
           "$type": "color",
           "$value": "{lichen.100}",
-          "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1)\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1)\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1)\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (12.3:1), control/surface/neutral-intense (12.3:1), surface/brand (12.0:1), action/surface/brand (12.0:1);\n✓ AA: feedback/surface/error-bold (5.0:1), feedback/surface/natural-bold (4.6:1), feedback/surface/warning-bold (4.6:1);\n△ Large only: surface/brand-subtle (4.5:1), graphic/surface/accent-bold (4.5:1), feedback/surface/info-bold (4.4:1);\n✗ Avoid: graphic/surface/accent-faint (1.0:1), feedback/surface/error-faint (1.0:1), selection/surface/natural (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -573,7 +573,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -587,7 +587,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -601,7 +601,7 @@
         "sale": {
           "$type": "color",
           "$value": "{sale-red.1000}",
-          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1);\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -615,7 +615,7 @@
         "membership": {
           "$type": "color",
           "$value": "{membership-yellow.300}",
-          "$description": "✓ AAA: surface/neutral-intense (10.0:1), control/surface/neutral-intense (10.0:1), surface/brand (9.8:1), action/surface/brand (9.8:1)\n✓ AA: action/surface/neutral-intense (6.8:1), control/surface/neutral-bold (6.8:1)\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.7:1), feedback/surface/warning-bold (3.7:1)\n✗ Avoid: surface/membership (1.0:1), graphic/surface/membership (1.0:1), feedback/surface/natural (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (10.0:1), control/surface/neutral-intense (10.0:1), surface/brand (9.8:1), action/surface/brand (9.8:1);\n✓ AA: action/surface/neutral-intense (6.8:1), control/surface/neutral-bold (6.8:1);\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.7:1), feedback/surface/warning-bold (3.7:1);\n✗ Avoid: surface/membership (1.0:1), graphic/surface/membership (1.0:1), feedback/surface/natural (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -629,7 +629,7 @@
         "rating": {
           "$type": "color",
           "$value": "{golden-yellow.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: graphic/surface/rating-bold (1.0:1), action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: graphic/surface/rating-bold (1.0:1), action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -643,7 +643,7 @@
         "natural": {
           "$type": "color",
           "$value": "{natural-grey.050}",
-          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/natural (1.0:1), feedback/surface/natural-faint (1.0:1), graphic/surface/natural (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1);\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1);\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1);\n✗ Avoid: surface/natural (1.0:1), feedback/surface/natural-faint (1.0:1), graphic/surface/natural (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -831,7 +831,7 @@
         "info-faint": {
           "$type": "color",
           "$value": "{info-blue.050}",
-          "$description": "",
+          "$description": "Legacy: --cdr-color-background-info",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -873,7 +873,7 @@
         "success-faint": {
           "$type": "color",
           "$value": "{success-green.050}",
-          "$description": "",
+          "$description": "Legacy: --cdr-color-background-success",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -915,7 +915,7 @@
         "warning-faint": {
           "$type": "color",
           "$value": "{warning-yellow.050}",
-          "$description": "",
+          "$description": "Legacy: --cdr-color-background-warning",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -957,7 +957,7 @@
         "error-faint": {
           "$type": "color",
           "$value": "{error-red.050}",
-          "$description": "",
+          "$description": "Legacy: --cdr-color-background-error",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -990,7 +990,9 @@
             "com.figma": {
               "hiddenFromPublishing": false,
               "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-              "codeSyntax": {}
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-surface-neutral-trace"
+              }
             }
           }
         }
@@ -1013,7 +1015,7 @@
         "nautral-faint": {
           "$type": "color",
           "$value": "{natural-grey.300}",
-          "$description": "✓ AAA: surface/neutral-intense (10.1:1), control/surface/neutral-intense (10.1:1), surface/brand (9.9:1), action/surface/brand (9.9:1)\n✓ AA: action/surface/neutral-intense (6.8:1), control/surface/neutral-bold (6.8:1)\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/natural (1.0:1), feedback/surface/warning (1.0:1), surface/membership (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (10.1:1), control/surface/neutral-intense (10.1:1), surface/brand (9.9:1), action/surface/brand (9.9:1);\n✓ AA: action/surface/neutral-intense (6.8:1), control/surface/neutral-bold (6.8:1);\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1);\n✗ Avoid: feedback/surface/natural (1.0:1), feedback/surface/warning (1.0:1), surface/membership (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1027,7 +1029,7 @@
         "info": {
           "$type": "color",
           "$value": "{info-blue.1100}",
-          "$description": "✓ AA: surface/neutral-trace (4.9:1), control/surface/neutral-trace (4.9:1), selection/surface/neutral-trace (4.9:1), feedback/surface/neutral-trace (4.9:1)\n△ Large only: feedback/surface/error-faint (4.4:1), graphic/surface/accent-faint (4.4:1), selection/surface/natural (4.3:1)\n✗ Avoid: feedback/surface/info-bold (1.0:1), feedback/surface/success-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (4.9:1), control/surface/neutral-trace (4.9:1), selection/surface/neutral-trace (4.9:1), feedback/surface/neutral-trace (4.9:1);\n△ Large only: feedback/surface/error-faint (4.4:1), graphic/surface/accent-faint (4.4:1), selection/surface/natural (4.3:1);\n✗ Avoid: feedback/surface/info-bold (1.0:1), feedback/surface/success-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1041,7 +1043,7 @@
         "info-faint": {
           "$type": "color",
           "$value": "{info-blue.300}",
-          "$description": "✓ AAA: surface/neutral-intense (10.3:1), control/surface/neutral-intense (10.3:1), surface/brand (10.1:1), action/surface/brand (10.1:1)\n✓ AA: action/surface/neutral-intense (6.9:1), control/surface/neutral-bold (6.9:1)\n△ Large only: feedback/surface/error-bold (4.2:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/info (1.0:1), feedback/surface/success (1.0:1), feedback/surface/warning (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (10.3:1), control/surface/neutral-intense (10.3:1), surface/brand (10.1:1), action/surface/brand (10.1:1);\n✓ AA: action/surface/neutral-intense (6.9:1), control/surface/neutral-bold (6.9:1);\n△ Large only: feedback/surface/error-bold (4.2:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1);\n✗ Avoid: feedback/surface/info (1.0:1), feedback/surface/success (1.0:1), feedback/surface/warning (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1055,7 +1057,7 @@
         "success": {
           "$type": "color",
           "$value": "{success-green.1100}",
-          "$description": "✓ AA: surface/neutral-trace (4.8:1), control/surface/neutral-trace (4.8:1), selection/surface/neutral-trace (4.8:1), feedback/surface/neutral-trace (4.8:1)\n△ Large only: feedback/surface/warning-faint (4.5:1), surface/natural (4.5:1), feedback/surface/natural-faint (4.5:1)\n✗ Avoid: feedback/surface/success-bold (1.0:1), feedback/surface/info-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (4.8:1), control/surface/neutral-trace (4.8:1), selection/surface/neutral-trace (4.8:1), feedback/surface/neutral-trace (4.8:1);\n△ Large only: feedback/surface/warning-faint (4.5:1), surface/natural (4.5:1), feedback/surface/natural-faint (4.5:1);\n✗ Avoid: feedback/surface/success-bold (1.0:1), feedback/surface/info-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1069,7 +1071,7 @@
         "success-faint": {
           "$type": "color",
           "$value": "{success-green.300}",
-          "$description": "✓ AAA: surface/neutral-intense (10.3:1), control/surface/neutral-intense (10.3:1), surface/brand (10.1:1), action/surface/brand (10.1:1)\n✓ AA: action/surface/neutral-intense (7.0:1), control/surface/neutral-bold (7.0:1)\n△ Large only: feedback/surface/error-bold (4.2:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/success (1.0:1), feedback/surface/info (1.0:1), feedback/surface/warning (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (10.3:1), control/surface/neutral-intense (10.3:1), surface/brand (10.1:1), action/surface/brand (10.1:1);\n✓ AA: action/surface/neutral-intense (7.0:1), control/surface/neutral-bold (7.0:1);\n△ Large only: feedback/surface/error-bold (4.2:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1);\n✗ Avoid: feedback/surface/success (1.0:1), feedback/surface/info (1.0:1), feedback/surface/warning (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1083,7 +1085,7 @@
         "warning": {
           "$type": "color",
           "$value": "{warning-yellow.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.5:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: selection/surface/natural (4.5:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1);\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1097,7 +1099,7 @@
         "warning-faint": {
           "$type": "color",
           "$value": "{warning-yellow.300}",
-          "$description": "✓ AAA: surface/neutral-intense (10.2:1), control/surface/neutral-intense (10.2:1), surface/brand (10.0:1), action/surface/brand (10.0:1)\n✓ AA: action/surface/neutral-intense (6.9:1), control/surface/neutral-bold (6.9:1)\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1)\n✗ Avoid: feedback/surface/warning (1.0:1), feedback/surface/natural (1.0:1), feedback/surface/info (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (10.2:1), control/surface/neutral-intense (10.2:1), surface/brand (10.0:1), action/surface/brand (10.0:1);\n✓ AA: action/surface/neutral-intense (6.9:1), control/surface/neutral-bold (6.9:1);\n△ Large only: feedback/surface/error-bold (4.1:1), feedback/surface/natural-bold (3.8:1), feedback/surface/warning-bold (3.8:1);\n✗ Avoid: feedback/surface/warning (1.0:1), feedback/surface/natural (1.0:1), feedback/surface/info (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1111,7 +1113,7 @@
         "error": {
           "$type": "color",
           "$value": "{error-red.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.6:1), control/surface/neutral-trace (5.6:1), selection/surface/neutral-trace (5.6:1), feedback/surface/neutral-trace (5.6:1)\n△ Large only: feedback/surface/success (4.2:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1)\n✗ Avoid: feedback/surface/error-bold (1.0:1), feedback/surface/natural-bold (1.1:1), feedback/surface/warning-bold (1.1:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.6:1), control/surface/neutral-trace (5.6:1), selection/surface/neutral-trace (5.6:1), feedback/surface/neutral-trace (5.6:1);\n△ Large only: feedback/surface/success (4.2:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1);\n✗ Avoid: feedback/surface/error-bold (1.0:1), feedback/surface/natural-bold (1.1:1), feedback/surface/warning-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1125,7 +1127,7 @@
         "error-faint": {
           "$type": "color",
           "$value": "{error-red.300}",
-          "$description": "✓ AAA: surface/neutral-intense (9.5:1), control/surface/neutral-intense (9.5:1), surface/brand (9.3:1), action/surface/brand (9.3:1)\n✓ AA: action/surface/neutral-intense (6.4:1), control/surface/neutral-bold (6.4:1)\n△ Large only: feedback/surface/error-bold (3.9:1), feedback/surface/natural-bold (3.5:1), feedback/surface/warning-bold (3.5:1)\n✗ Avoid: feedback/surface/error (1.0:1), graphic/surface/rating (1.0:1), action/surface/brand-faint (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (9.5:1), control/surface/neutral-intense (9.5:1), surface/brand (9.3:1), action/surface/brand (9.3:1);\n✓ AA: action/surface/neutral-intense (6.4:1), control/surface/neutral-bold (6.4:1);\n△ Large only: feedback/surface/error-bold (3.9:1), feedback/surface/natural-bold (3.5:1), feedback/surface/warning-bold (3.5:1);\n✗ Avoid: feedback/surface/error (1.0:1), graphic/surface/rating (1.0:1), action/surface/brand-faint (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1139,12 +1141,14 @@
         "neutral-trace": {
           "$type": "color",
           "$value": "{warm-grey.000}",
-          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), surface/brand (13.4:1);\n✓ AA: surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), surface/natural (1.1:1), surface/neutral-subtle (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
               "scopes": ["STROKE_COLOR"],
-              "codeSyntax": {}
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-border-neutral-trace"
+              }
             }
           }
         }
@@ -1223,12 +1227,14 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), surface/natural (4.7:1), surface/neutral-subtle (4.7:1);\n△ Large only: surface/neutral (4.4:1), surface/membership (3.7:1);\n✗ Avoid: surface/brand-subtle (1.0:1), surface/sale (1.1:1), surface/brand (2.6:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
               "scopes": ["TEXT_FILL"],
-              "codeSyntax": {}
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-text-neutral-faint"
+              }
             }
           }
         }
@@ -1237,7 +1243,7 @@
         "error": {
           "$type": "color",
           "$value": "{error-red.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.6:1), control/surface/neutral-trace (5.6:1), selection/surface/neutral-trace (5.6:1), feedback/surface/neutral-trace (5.6:1)\n△ Large only: feedback/surface/success (4.2:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1)\n✗ Avoid: feedback/surface/error-bold (1.0:1), feedback/surface/natural-bold (1.1:1), feedback/surface/warning-bold (1.1:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.6:1), control/surface/neutral-trace (5.6:1), selection/surface/neutral-trace (5.6:1), feedback/surface/neutral-trace (5.6:1);\n△ Large only: feedback/surface/success (4.2:1), feedback/surface/info (4.2:1), feedback/surface/warning (4.1:1);\n✗ Avoid: feedback/surface/error-bold (1.0:1), feedback/surface/natural-bold (1.1:1), feedback/surface/warning-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1251,12 +1257,14 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.000}",
-          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), surface/brand (13.4:1);\n✓ AA: surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), surface/natural (1.1:1), surface/neutral-subtle (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
               "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-              "codeSyntax": {}
+              "codeSyntax": {
+                "WEB": "--cdr-feedback-icon-neutral"
+              }
             }
           }
         }
@@ -1423,7 +1431,7 @@
         "trigger": {
           "$type": "color",
           "$value": "{alpine-lake-blue.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1);\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1437,7 +1445,7 @@
         "trigger-faint": {
           "$type": "color",
           "$value": "{alpine-lake-blue.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1451,7 +1459,7 @@
         "brand": {
           "$type": "color",
           "$value": "{blue-spruce-green.1400}",
-          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1);\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1);\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1465,7 +1473,7 @@
         "sale": {
           "$type": "color",
           "$value": "{sale-red.1000}",
-          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1);\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1479,7 +1487,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1493,7 +1501,7 @@
         "neutral-prominent": {
           "$type": "color",
           "$value": "{warm-grey.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1);\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1507,7 +1515,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1521,7 +1529,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.400}",
-          "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1);\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1);\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1);\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1537,7 +1545,7 @@
         "brand": {
           "$type": "color",
           "$value": "{blue-spruce-green.1400}",
-          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1)\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1)\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-trace (13.4:1), control/surface/neutral-trace (13.4:1), selection/surface/neutral-trace (13.4:1), feedback/surface/neutral-trace (13.4:1);\n△ Large only: action/surface/neutral-bold (3.8:1), control/surface/neutral-prominent (3.8:1), graphic/surface/rating-bold (3.8:1);\n✗ Avoid: surface/brand (1.0:1), action/surface/brand (1.0:1), graphic/surface/brand (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1551,7 +1559,7 @@
         "sale": {
           "$type": "color",
           "$value": "{sale-red.1000}",
-          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1);\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1565,7 +1573,7 @@
         "trigger-bold": {
           "$type": "color",
           "$value": "{alpine-lake-blue.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.3:1), control/surface/neutral-trace (9.3:1), selection/surface/neutral-trace (9.3:1), feedback/surface/neutral-trace (9.3:1)\n✓ AA: feedback/surface/info (7.0:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.9:1), surface/membership (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.4:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.3:1), control/surface/neutral-trace (9.3:1), selection/surface/neutral-trace (9.3:1), feedback/surface/neutral-trace (9.3:1);\n✓ AA: feedback/surface/info (7.0:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.9:1), surface/membership (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.4:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1579,7 +1587,7 @@
         "trigger": {
           "$type": "color",
           "$value": "{alpine-lake-blue.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1);\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1593,7 +1601,7 @@
         "trigger-faint": {
           "$type": "color",
           "$value": "{alpine-lake-blue.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1607,7 +1615,7 @@
         "neutral-intense": {
           "$type": "color",
           "$value": "{warm-grey.1500}",
-          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1)\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1)\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1)\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
+          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1);\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1);\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1);\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1621,7 +1629,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1635,7 +1643,7 @@
         "neutral-prominent": {
           "$type": "color",
           "$value": "{warm-grey.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1);\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1649,7 +1657,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1663,7 +1671,7 @@
         "neutral-subtle": {
           "$type": "color",
           "$value": "{warm-grey.500}",
-          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1);\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1);\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1);\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1677,7 +1685,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.050}",
-          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1);\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1);\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1);\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1691,7 +1699,7 @@
         "neutral-trace": {
           "$type": "color",
           "$value": "{warm-grey.000}",
-          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1);\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1707,7 +1715,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1721,7 +1729,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1735,7 +1743,7 @@
         "neutral-subtle": {
           "$type": "color",
           "$value": "{warm-grey.400}",
-          "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1)\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1)\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1)\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (9.2:1), control/surface/neutral-intense (9.2:1), surface/brand (9.0:1), action/surface/brand (9.0:1);\n✓ AA: action/surface/neutral-intense (6.2:1), control/surface/neutral-bold (6.2:1);\n△ Large only: feedback/surface/error-bold (3.8:1), feedback/surface/natural-bold (3.4:1), feedback/surface/warning-bold (3.4:1);\n✗ Avoid: action/surface/neutral-prominent (1.0:1), control/surface/natural-bold (1.0:1), action/surface/brand-faint (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1749,7 +1757,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.050}",
-          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1);\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1);\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1);\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1763,7 +1771,7 @@
         "neutral-trace": {
           "$type": "color",
           "$value": "{warm-grey.000}",
-          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1);\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1777,7 +1785,7 @@
         "sale": {
           "$type": "color",
           "$value": "{sale-red.1000}",
-          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1)\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
+          "$description": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1);\n✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1937,7 +1945,7 @@
         "neutral-intense": {
           "$type": "color",
           "$value": "{warm-grey.1500}",
-          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1)\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1)\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1)\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
+          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1);\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1);\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1);\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1951,7 +1959,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1965,7 +1973,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1979,7 +1987,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.500}",
-          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1);\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1);\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1);\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -1995,7 +2003,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1500}",
-          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1)\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1)\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1)\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
+          "$description": "✓ AAA: surface/neutral-trace (18.1:1), control/surface/neutral-trace (18.1:1), selection/surface/neutral-trace (18.1:1), feedback/surface/neutral-trace (18.1:1);\n✓ AA: action/surface/neutral-bold (5.1:1), control/surface/neutral-prominent (5.1:1), graphic/surface/rating-bold (5.1:1);\n△ Large only: surface/sale (4.1:1), action/surface/sale (4.1:1), graphic/surface/sale (4.1:1);\n✗ Avoid: surface/neutral-intense (1.3:1), control/surface/neutral-intense (1.3:1), surface/brand (1.4:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2009,7 +2017,7 @@
         "neutral-prominent": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2023,7 +2031,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1);\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2037,7 +2045,7 @@
         "neutral-subtle": {
           "$type": "color",
           "$value": "{warm-grey.700}",
-          "$description": "✓ AA: surface/neutral-intense (6.3:1), control/surface/neutral-intense (6.3:1), surface/brand (6.1:1), action/surface/brand (6.1:1)\n△ Large only: action/surface/neutral-intense (4.2:1), control/surface/neutral-bold (4.2:1)\n✗ Avoid: graphic/surface/accent (1.4:1), action/surface/neutral-prominent (1.5:1), control/surface/natural-bold (1.5:1)",
+          "$description": "✓ AA: surface/neutral-intense (6.3:1), control/surface/neutral-intense (6.3:1), surface/brand (6.1:1), action/surface/brand (6.1:1);\n△ Large only: action/surface/neutral-intense (4.2:1), control/surface/neutral-bold (4.2:1);\n✗ Avoid: graphic/surface/accent (1.4:1), action/surface/neutral-prominent (1.5:1), control/surface/natural-bold (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2051,7 +2059,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.500}",
-          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1);\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1);\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1);\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2067,7 +2075,7 @@
         "neutral-intense": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2081,7 +2089,7 @@
         "neutral-bold": {
           "$type": "color",
           "$value": "{warm-grey.1200}",
-          "$description": "✓ AA: surface/neutral-trace (6.8:1), control/surface/neutral-trace (6.8:1), selection/surface/neutral-trace (6.8:1), feedback/surface/neutral-trace (6.8:1)\n△ Large only: graphic/surface/accent (4.3:1)\n✗ Avoid: feedback/surface/error-bold (1.2:1), feedback/surface/natural-bold (1.3:1), feedback/surface/warning-bold (1.3:1)",
+          "$description": "✓ AA: surface/neutral-trace (6.8:1), control/surface/neutral-trace (6.8:1), selection/surface/neutral-trace (6.8:1), feedback/surface/neutral-trace (6.8:1);\n△ Large only: graphic/surface/accent (4.3:1);\n✗ Avoid: feedback/surface/error-bold (1.2:1), feedback/surface/natural-bold (1.3:1), feedback/surface/warning-bold (1.3:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2095,7 +2103,7 @@
         "neutral-prominent": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2109,7 +2117,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.500}",
-          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1);\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1);\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1);\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2123,7 +2131,7 @@
         "neutral-subtle": {
           "$type": "color",
           "$value": "{warm-grey.050}",
-          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1)\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1)\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1)\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (12.8:1), control/surface/neutral-intense (12.8:1), surface/brand (12.5:1), action/surface/brand (12.5:1);\n✓ AA: feedback/surface/error-bold (5.2:1), feedback/surface/natural-bold (4.7:1), feedback/surface/warning-bold (4.7:1), surface/brand-subtle (4.7:1);\n△ Large only: feedback/surface/success-bold (4.5:1), surface/sale (4.2:1), action/surface/sale (4.2:1);\n✗ Avoid: surface/neutral-subtle (1.0:1), action/surface/neutral-faint (1.0:1), control/surface/neutral-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2137,7 +2145,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.010}",
-          "$description": "✓ AAA: surface/neutral-intense (13.3:1), control/surface/neutral-intense (13.3:1), surface/brand (13.0:1), action/surface/brand (13.0:1)\n✓ AA: feedback/surface/error-bold (5.4:1), feedback/surface/natural-bold (4.9:1), feedback/surface/warning-bold (4.9:1), surface/brand-subtle (4.9:1)\n△ Large only: surface/sale (4.4:1), action/surface/sale (4.4:1), graphic/surface/sale (4.4:1)\n✗ Avoid: action/surface/neutral-trace (1.0:1), control/surface/neutral-faint (1.0:1), graphic/surface/rating-faint (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (13.3:1), control/surface/neutral-intense (13.3:1), surface/brand (13.0:1), action/surface/brand (13.0:1);\n✓ AA: feedback/surface/error-bold (5.4:1), feedback/surface/natural-bold (4.9:1), feedback/surface/warning-bold (4.9:1), surface/brand-subtle (4.9:1);\n△ Large only: surface/sale (4.4:1), action/surface/sale (4.4:1), graphic/surface/sale (4.4:1);\n✗ Avoid: action/surface/neutral-trace (1.0:1), control/surface/neutral-faint (1.0:1), graphic/surface/rating-faint (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2151,7 +2159,7 @@
         "neutral-trace": {
           "$type": "color",
           "$value": "{warm-grey.000}",
-          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1)\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1)\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1)\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
+          "$description": "✓ AAA: surface/neutral-intense (13.7:1), control/surface/neutral-intense (13.7:1), surface/brand (13.4:1), action/surface/brand (13.4:1);\n✓ AA: feedback/surface/error-bold (5.6:1), feedback/surface/natural-bold (5.1:1), feedback/surface/warning-bold (5.1:1), surface/brand-subtle (5.0:1);\n△ Large only: surface/sale (4.5:1), action/surface/sale (4.5:1), graphic/surface/sale (4.5:1);\n✗ Avoid: surface/neutral-trace (1.0:1), control/surface/neutral-trace (1.0:1), selection/surface/neutral-trace (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2241,7 +2249,7 @@
         "trigger": {
           "$type": "color",
           "$value": "{alpine-lake-blue.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1);\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2255,7 +2263,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.900}",
-          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1)\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
+          "$description": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1);\n✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2269,7 +2277,7 @@
         "neutral-subtle": {
           "$type": "color",
           "$value": "{warm-grey.850}",
-          "$description": "△ Large only: surface/neutral-intense (4.4:1), control/surface/neutral-intense (4.4:1), surface/brand (4.3:1)\n✗ Avoid: action/surface/neutral-bold (1.1:1), control/surface/neutral-prominent (1.1:1), graphic/surface/rating-bold (1.1:1)",
+          "$description": "△ Large only: surface/neutral-intense (4.4:1), control/surface/neutral-intense (4.4:1), surface/brand (4.3:1);\n✗ Avoid: action/surface/neutral-bold (1.1:1), control/surface/neutral-prominent (1.1:1), graphic/surface/rating-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2283,7 +2291,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.500}",
-          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1)\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1)\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1)\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
+          "$description": "✓ AAA: surface/neutral-intense (8.4:1), control/surface/neutral-intense (8.4:1), surface/brand (8.2:1), action/surface/brand (8.2:1);\n✓ AA: action/surface/neutral-intense (5.6:1), control/surface/neutral-bold (5.6:1);\n△ Large only: feedback/surface/error-bold (3.4:1), feedback/surface/natural-bold (3.1:1), feedback/surface/warning-bold (3.1:1);\n✗ Avoid: graphic/surface/accent (1.0:1), action/surface/neutral-prominent (1.1:1), control/surface/natural-bold (1.1:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2299,7 +2307,7 @@
         "trigger": {
           "$type": "color",
           "$value": "{alpine-lake-blue.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1)\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: action/surface/sale-faint (4.4:1), control/surface/natural (4.2:1), action/surface/neutral (4.2:1);\n✗ Avoid: feedback/surface/natural-bold (1.0:1), feedback/surface/warning-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2313,7 +2321,7 @@
         "neutral": {
           "$type": "color",
           "$value": "{warm-grey.1300}",
-          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1)\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1)\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
+          "$description": "✓ AAA: surface/neutral-trace (9.2:1), control/surface/neutral-trace (9.2:1), selection/surface/neutral-trace (9.2:1), feedback/surface/neutral-trace (9.2:1);\n✓ AA: feedback/surface/success (7.0:1), feedback/surface/info (6.9:1), feedback/surface/warning (6.9:1), feedback/surface/natural (6.8:1);\n✗ Avoid: action/surface/neutral-intense (1.0:1), control/surface/neutral-bold (1.0:1), surface/brand (1.5:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
@@ -2327,7 +2335,7 @@
         "neutral-faint": {
           "$type": "color",
           "$value": "{warm-grey.1100}",
-          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1)\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1)\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
+          "$description": "✓ AA: surface/neutral-trace (5.1:1), control/surface/neutral-trace (5.1:1), selection/surface/neutral-trace (5.1:1), feedback/surface/neutral-trace (5.1:1);\n△ Large only: selection/surface/natural (4.4:1), surface/neutral (4.4:1), action/surface/neutral-subtle (4.4:1);\n✗ Avoid: feedback/surface/warning-bold (1.0:1), feedback/surface/natural-bold (1.0:1), surface/brand-subtle (1.0:1)",
           "$extensions": {
             "com.figma": {
               "hiddenFromPublishing": false,
