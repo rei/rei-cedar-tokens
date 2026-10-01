@@ -105,7 +105,7 @@ export interface CdrColorFeedbackTokens {
    */
   readonly CdrColorFeedbackTextSuccess: string;
   /**
-   * @value #8a6b00
+   * @value #8a6a00
    * @cssvar --cdr-color-feedback-text-warning
    */
   readonly CdrColorFeedbackTextWarning: string;
