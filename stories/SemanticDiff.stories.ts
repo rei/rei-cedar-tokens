@@ -21,6 +21,7 @@ type DiffRow = {
   path: string;
   oldValue: string;
   newValue: string;
+  tokenType?: string;
   type: 'changed' | 'added' | 'removed';
 };
 
@@ -30,7 +31,12 @@ function formatValue(value: unknown): string {
   return JSON.stringify(value);
 }
 
-function flatten(node: unknown, prefix: string, out: Record<string, string>) {
+type TokenLeaf = {
+  value: string;
+  tokenType: string;
+};
+
+function flatten(node: unknown, prefix: string, out: Record<string, TokenLeaf>) {
   if (node === null || typeof node !== 'object') return;
 
   if (Array.isArray(node)) {
@@ -41,7 +47,10 @@ function flatten(node: unknown, prefix: string, out: Record<string, string>) {
   const record = node as TokenNode;
 
   if ('$value' in record) {
-    out[prefix] = formatValue(record.$value);
+    out[prefix] = {
+      value: formatValue(record.$value),
+      tokenType: (record.$type as string) || 'unknown',
+    };
     return;
   }
 
@@ -52,8 +61,8 @@ function flatten(node: unknown, prefix: string, out: Record<string, string>) {
 }
 
 function computeDiff(b: unknown, c: unknown): DiffRow[] {
-  const base: Record<string, string> = {};
-  const curr: Record<string, string> = {};
+  const base: Record<string, TokenLeaf> = {};
+  const curr: Record<string, TokenLeaf> = {};
   flatten(b, '', base);
   flatten(c, '', curr);
 
@@ -61,16 +70,43 @@ function computeDiff(b: unknown, c: unknown): DiffRow[] {
   const allPaths = new Set([...Object.keys(base), ...Object.keys(curr)]);
 
   for (const p of allPaths) {
+    const tokenType = base[p]?.tokenType ?? curr[p]?.tokenType;
     if (p in base && !(p in curr)) {
-      rows.push({ path: p, oldValue: base[p], newValue: '', type: 'removed' });
+      rows.push({ path: p, oldValue: base[p].value, newValue: '', tokenType, type: 'removed' });
     } else if (p in curr && !(p in base)) {
-      rows.push({ path: p, oldValue: '', newValue: curr[p], type: 'added' });
-    } else if (base[p] !== curr[p]) {
-      rows.push({ path: p, oldValue: base[p], newValue: curr[p], type: 'changed' });
+      rows.push({ path: p, oldValue: '', newValue: curr[p].value, tokenType, type: 'added' });
+    } else if (base[p].value !== curr[p].value) {
+      rows.push({
+        path: p,
+        oldValue: base[p].value,
+        newValue: curr[p].value,
+        tokenType,
+        type: 'changed',
+      });
     }
   }
 
   return rows.sort((a, b) => a.path.localeCompare(b.path));
+}
+
+function looksLikeCssColor(value: string): boolean {
+  if (!value) return false;
+  return (
+    value.startsWith('#') ||
+    value.startsWith('oklch(') ||
+    value.startsWith('rgb(') ||
+    value.startsWith('hsl(') ||
+    value.startsWith('hwb(') ||
+    value.startsWith('lch(') ||
+    value.startsWith('lab(')
+  );
+}
+
+function renderValue(value: string, tokenType?: string): string {
+  if (tokenType === 'color' && looksLikeCssColor(value)) {
+    return `<span class="color-swatch" style="background: ${value}"></span>${value}`;
+  }
+  return value;
 }
 
 const diff = computeDiff(baseline, current);
@@ -150,6 +186,15 @@ const styles = `
       color: var(--cedar-warm-600, #6a6a6a);
       font-size: 14px;
     }
+    .color-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      border: 1px solid var(--cedar-warm-200, #d6d6d6);
+      border-radius: 2px;
+      vertical-align: middle;
+    }
   </style>
 `;
 
@@ -177,8 +222,8 @@ export const LiveDiff: Story = {
         <tr>
           <td class="diff-path">${row.path}</td>
           <td class="diff-type diff-type--${row.type}">${row.type}</td>
-          <td class="diff-value">${row.oldValue}</td>
-          <td class="diff-value">${row.newValue}</td>
+          <td class="diff-value">${renderValue(row.oldValue, row.tokenType)}</td>
+          <td class="diff-value">${renderValue(row.newValue, row.tokenType)}</td>
         </tr>
       `,
       )
