@@ -34,12 +34,14 @@ jobs:
       # ── 1. Checkout ──────────────────────────────────────────────────────────
       - name: Clone repo
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          ref: ${{ env.BASE_BRANCH }}
+        # with:
+        #   ref: ${{ env.BASE_BRANCH }}
 
       # ── 2. Toolchain ─────────────────────────────────────────────────────────
       - name: Setup pnpm
         uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        with:
+          version: 10
 
       - name: Install Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
@@ -54,7 +56,7 @@ jobs:
 
       # ── 3. Baseline snapshot (BEFORE Figma sync) ─────────────────────────────
       - name: Build baseline snapshot
-        run: pnpm diff:baseline
+        run: pnpm tokens:snapshot baseline
 
       # ── 4. Figma → tokens sync ───────────────────────────────────────────────
       - name: Sync variables in Figma files to tokens
@@ -72,31 +74,52 @@ jobs:
           FILE_KEYS: ${{ secrets.FIGMA_FILE_KEYS }}
           PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_ACTION_VARIABLES_SYNC_FIGMA_TOKEN }}
 
-      # ── 5. Current snapshot (AFTER Figma sync) ───────────────────────────────
-      - name: Build current snapshot
-        run: pnpm diff:current
+      # ── 5. Build tokens (snapshots are baked in as static assets) ────────────
+      - name: Build tokens
+        run: pnpm build
 
-      # ── 6. Build Storybook (snapshots are baked in as static assets) ─────────
+      # ── 6. Current snapshot (AFTER normalization) ────────────────────────────
+      - name: Build current snapshot
+        run: pnpm tokens:snapshot current
+
+      # ── 7. Build Storybook ───────────────────────────────────────────────────
       # STORYBOOK_BASE_URL tells Vite the sub-path it will be served from so
       # all asset references in the built HTML are correct.
-      - name: Build tokens and Storybook
-        run: pnpm build
+      - name: Build Storybook
+        run: pnpm build-storybook
         env:
-          STORYBOOK_BASE_URL: /rei-cedar-token-pipeline-spike/pr/${{ env.PR_BRANCH }}/
+          STORYBOOK_BASE_URL: /${{ github.event.repository.name }}/pr/${{ env.PR_BRANCH }}/
 
-      # ── 7. Deploy Storybook to GH Pages under /pr/update-tokens/ ─────────────
-      #
-      # We use a dedicated orphan branch (gh-pages) and place the built site
-      # under a PR-specific sub-directory so multiple PRs can coexist without
-      # overwriting each other.  The action only touches the sub-directory it
-      # writes; other paths on the branch are left intact.
+      # ── 8. Prepare GitHub Pages bundle ───────────────────────────────────────
+      # GitHub Pages requires an index.html at the branch root when source is
+      # set to /(root). We keep the PR preview under pr/update-tokens/ and add
+      # a redirect at the root for convenience.
+      - name: Stage GitHub Pages bundle
+        run: |
+          rm -rf gh-pages-site
+          mkdir -p gh-pages-site/pr/${{ env.PR_BRANCH }}
+          cp -rT storybook-static gh-pages-site/pr/${{ env.PR_BRANCH }}
+          cat > gh-pages-site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0; url=./pr/${{ env.PR_BRANCH }}/">
+              <title>Token preview</title>
+            </head>
+            <body>
+              <a href="./pr/${{ env.PR_BRANCH }}/">Token preview for ${{ env.PR_BRANCH }}</a>
+            </body>
+          </html>
+          EOF
+
+      # ── 9. Deploy Storybook preview to GitHub Pages under /pr/update-tokens/ ─
       - name: Deploy Storybook preview to GitHub Pages
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./gh-pages-site
           publish_branch: gh-pages
-          destination_dir: pr/${{ env.PR_BRANCH }}
           keep_files: true
 
       # ── 8. Create (or update) the Pull Request ───────────────────────────────
