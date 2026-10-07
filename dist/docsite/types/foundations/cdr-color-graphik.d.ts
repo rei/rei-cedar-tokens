@@ -30,7 +30,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicBorderRating: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-graphic-border-sale
    */
   readonly CdrColorGraphicBorderSale: string;
@@ -65,7 +65,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicSurfaceRatingFaint: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-graphic-surface-sale
    */
   readonly CdrColorGraphicSurfaceSale: string;

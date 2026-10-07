@@ -6,7 +6,7 @@ export const CdrColorText = {
   CdrColorTextInfo: "#1b437e",
   CdrColorTextInverse: "#fafbf9",
   CdrColorTextPrimary: "rgba(46, 46, 43, 0.9)",
-  CdrColorTextSale: "#d44703",
+  CdrColorTextSale: "#d93f00",
   CdrColorTextSecondary: "#4b4a48",
   CdrColorTextSuccess: "#2e6b34",
   CdrColorTextWarning: "#854714",
