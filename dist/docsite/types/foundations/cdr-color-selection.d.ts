@@ -1,5 +1,10 @@
 export interface CdrColorSelectionTokens {
   /**
+   * @value #8e887d
+   * @cssvar --cdr-color-selection-border-neutral
+   */
+  readonly CdrColorSelectionBorderNeutral: string;
+  /**
    * @value #cecac3
    * @cssvar --cdr-color-selection-border-neutral-faint
    */
@@ -20,6 +25,11 @@ export interface CdrColorSelectionTokens {
    */
   readonly CdrColorSelectionSurfaceNatural: string;
   /**
+   * @value #eae7e4
+   * @cssvar --cdr-color-selection-surface-neutral
+   */
+  readonly CdrColorSelectionSurfaceNeutral: string;
+  /**
    * @value #f7f7f5
    * @cssvar --cdr-color-selection-surface-neutral-faint
    */
@@ -34,6 +44,11 @@ export interface CdrColorSelectionTokens {
    * @cssvar --cdr-color-selection-surface-neutral-trace
    */
   readonly CdrColorSelectionSurfaceNeutralTrace: string;
+  /**
+   * @value #4c473e
+   * @cssvar --cdr-color-selection-text-neutral
+   */
+  readonly CdrColorSelectionTextNeutral: string;
   /**
    * @value #746e63
    * @cssvar --cdr-color-selection-text-neutral-faint

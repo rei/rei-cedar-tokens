@@ -1,41 +1,77 @@
 export declare const CdrColorActionKeys: readonly [
   "border-brand",
+  "border-neutral",
+  "border-neutral-bold",
   "border-neutral-faint",
+  "border-neutral-prominent",
   "border-sale",
+  "border-trigger",
   "border-trigger-faint",
+  "icon-neutral",
+  "icon-neutral-bold",
   "icon-neutral-faint",
   "icon-neutral-subtle",
   "icon-neutral-trace",
   "icon-sale",
+  "surface-brand",
   "surface-brand-faint",
+  "surface-neutral",
+  "surface-neutral-bold",
   "surface-neutral-faint",
+  "surface-neutral-intense",
+  "surface-neutral-prominent",
   "surface-neutral-subtle",
   "surface-neutral-trace",
+  "surface-sale",
   "surface-sale-faint",
   "text-brand",
+  "text-neutral",
+  "text-neutral-bold",
   "text-neutral-faint",
+  "text-neutral-intense",
+  "text-neutral-prominent",
   "text-neutral-subtle",
   "text-neutral-trace",
   "text-sale",
+  "text-trigger",
+  "text-trigger-bold",
   "text-trigger-faint"
 ];
 export type CdrColorActionKey =
   | "border-brand"
+  | "border-neutral"
+  | "border-neutral-bold"
   | "border-neutral-faint"
+  | "border-neutral-prominent"
   | "border-sale"
+  | "border-trigger"
   | "border-trigger-faint"
+  | "icon-neutral"
+  | "icon-neutral-bold"
   | "icon-neutral-faint"
   | "icon-neutral-subtle"
   | "icon-neutral-trace"
   | "icon-sale"
+  | "surface-brand"
   | "surface-brand-faint"
+  | "surface-neutral"
+  | "surface-neutral-bold"
   | "surface-neutral-faint"
+  | "surface-neutral-intense"
+  | "surface-neutral-prominent"
   | "surface-neutral-subtle"
   | "surface-neutral-trace"
+  | "surface-sale"
   | "surface-sale-faint"
   | "text-brand"
+  | "text-neutral"
+  | "text-neutral-bold"
   | "text-neutral-faint"
+  | "text-neutral-intense"
+  | "text-neutral-prominent"
   | "text-neutral-subtle"
   | "text-neutral-trace"
   | "text-sale"
+  | "text-trigger"
+  | "text-trigger-bold"
   | "text-trigger-faint";
