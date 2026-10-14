@@ -9,6 +9,7 @@ import { androidColorTransform } from './transforms/android/android-color-transf
 import { webCssAction } from './actions/web/web-css-transform.js';
 import { webScssAction } from './actions/web/web-scss-transform.js';
 import { webConfig, docsiteWebConfig } from './configs/web.js';
+import { generateIntentOutputs } from './utils/intents-output.js';
 
 // ****** Beggining Legacy Imports ******
 import { register } from '@tokens-studio/sd-transforms';
@@ -338,6 +339,8 @@ async function buildAll() {
   }
 
   await buildAllThemesAndPlatforms();
+
+  generateIntentOutputs();
 
   console.log('==============================================\n');
 }

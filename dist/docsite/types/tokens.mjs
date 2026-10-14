@@ -54,3 +54,8 @@ export * from './foundations/cdr-text-weight.keys.mjs';
 export * from './foundations/cdr-text-weight.mjs';
 export * from './foundations/cdr-type.keys.mjs';
 export * from './foundations/cdr-type.mjs';
+export { CdrColorBorderOrder } from './intents/cdr-border.order.mjs';
+export { CdrColorIconOrder } from './intents/cdr-icon.order.mjs';
+export { CdrColorSurfaceOrder } from './intents/cdr-surface.order.mjs';
+export { CdrColorTextOrder } from './intents/cdr-text.order.mjs';
+

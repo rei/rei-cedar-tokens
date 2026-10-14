@@ -1,11 +1,21 @@
 export interface CdrColorGraphikTokens {
   /**
+   * @value #c5d82a
+   * @cssvar --cdr-color-graphic-border-accent
+   */
+  readonly CdrColorGraphicBorderAccent: string;
+  /**
+   * @value #7a7105
+   * @cssvar --cdr-color-graphic-border-accent-bold
+   */
+  readonly CdrColorGraphicBorderAccentBold: string;
+  /**
    * @value #e5fd9c
    * @cssvar --cdr-color-graphic-border-accent-faint
    */
   readonly CdrColorGraphicBorderAccentFaint: string;
   /**
-   * @value #143528
+   * @value #800080
    * @cssvar --cdr-color-graphic-border-brand
    */
   readonly CdrColorGraphicBorderBrand: string;
@@ -25,22 +35,37 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicBorderNeutral: string;
   /**
+   * @value #4c473e
+   * @cssvar --cdr-color-graphic-border-neutral-bold
+   */
+  readonly CdrColorGraphicBorderNeutralBold: string;
+  /**
    * @value #ba7b00
    * @cssvar --cdr-color-graphic-border-rating
    */
   readonly CdrColorGraphicBorderRating: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-graphic-border-sale
    */
   readonly CdrColorGraphicBorderSale: string;
+  /**
+   * @value #c5d82a
+   * @cssvar --cdr-color-graphic-surface-accent
+   */
+  readonly CdrColorGraphicSurfaceAccent: string;
+  /**
+   * @value #7a7105
+   * @cssvar --cdr-color-graphic-surface-accent-bold
+   */
+  readonly CdrColorGraphicSurfaceAccentBold: string;
   /**
    * @value #e5fd9c
    * @cssvar --cdr-color-graphic-surface-accent-faint
    */
   readonly CdrColorGraphicSurfaceAccentFaint: string;
   /**
-   * @value #143528
+   * @value #800080
    * @cssvar --cdr-color-graphic-surface-brand
    */
   readonly CdrColorGraphicSurfaceBrand: string;
@@ -60,12 +85,22 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicSurfaceNeutralFaint: string;
   /**
+   * @value #ffd378
+   * @cssvar --cdr-color-graphic-surface-rating
+   */
+  readonly CdrColorGraphicSurfaceRating: string;
+  /**
+   * @value #ba7b00
+   * @cssvar --cdr-color-graphic-surface-rating-bold
+   */
+  readonly CdrColorGraphicSurfaceRatingBold: string;
+  /**
    * @value #fcfcfb
    * @cssvar --cdr-color-graphic-surface-rating-faint
    */
   readonly CdrColorGraphicSurfaceRatingFaint: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-graphic-surface-sale
    */
   readonly CdrColorGraphicSurfaceSale: string;
