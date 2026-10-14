@@ -39,6 +39,11 @@ export { CdrType } from './foundations/cdr-type.mjs';
 export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
 export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order.mjs';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order.mjs';
+export { CdrColorBorderOrder } from './intents/cdr-border.order.mjs';
+export { CdrColorIconOrder } from './intents/cdr-icon.order.mjs';
+export { CdrColorSurfaceOrder } from './intents/cdr-surface.order.mjs';
+export { CdrColorTextOrder } from './intents/cdr-text.order.mjs';
+
 
 // Deprecated v13 backward-compat: flat token values
 export * from './_compat-deprecated.mjs';
