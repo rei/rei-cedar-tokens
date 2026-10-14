@@ -1,6 +1,11 @@
 export interface CdrColorSurfaceTokens {
   /**
-   * @value #797119
+   * @value #143528
+   * @cssvar --cdr-color-surface-brand
+   */
+  readonly CdrColorSurfaceBrand: string;
+  /**
+   * @value #7a7105
    * @cssvar --cdr-color-surface-brand-subtle
    */
   readonly CdrColorSurfaceBrandSubtle: string;
@@ -15,6 +20,16 @@ export interface CdrColorSurfaceTokens {
    */
   readonly CdrColorSurfaceNatural: string;
   /**
+   * @value #f1f0ed
+   * @cssvar --cdr-color-surface-neutral
+   */
+  readonly CdrColorSurfaceNeutral: string;
+  /**
+   * @value #312d27
+   * @cssvar --cdr-color-surface-neutral-intense
+   */
+  readonly CdrColorSurfaceNeutralIntense: string;
+  /**
    * @value #f7f7f5
    * @cssvar --cdr-color-surface-neutral-subtle
    */
@@ -25,7 +40,7 @@ export interface CdrColorSurfaceTokens {
    */
   readonly CdrColorSurfaceNeutralTrace: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-surface-sale
    */
   readonly CdrColorSurfaceSale: string;

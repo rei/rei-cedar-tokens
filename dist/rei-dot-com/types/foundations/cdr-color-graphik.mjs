@@ -1,18 +1,25 @@
 export const CdrColorGraphik = {
+  CdrColorGraphicBorderAccent: "#c5d82a",
+  CdrColorGraphicBorderAccentBold: "#7a7105",
   CdrColorGraphicBorderAccentFaint: "#e5fd9c",
   CdrColorGraphicBorderBrand: "#143528",
   CdrColorGraphicBorderMembership: "#ffdb22",
   CdrColorGraphicBorderNatural: "#f8f7f2",
   CdrColorGraphicBorderNeutral: "#8e887d",
+  CdrColorGraphicBorderNeutralBold: "#4c473e",
   CdrColorGraphicBorderRating: "#ba7b00",
-  CdrColorGraphicBorderSale: "#d44703",
+  CdrColorGraphicBorderSale: "#d93f00",
+  CdrColorGraphicSurfaceAccent: "#c5d82a",
+  CdrColorGraphicSurfaceAccentBold: "#7a7105",
   CdrColorGraphicSurfaceAccentFaint: "#e5fd9c",
   CdrColorGraphicSurfaceBrand: "#143528",
   CdrColorGraphicSurfaceMembership: "#ffdb22",
   CdrColorGraphicSurfaceNatural: "#f8f7f2",
   CdrColorGraphicSurfaceNeutralFaint: "#f7f7f5",
+  CdrColorGraphicSurfaceRating: "#ffd378",
+  CdrColorGraphicSurfaceRatingBold: "#ba7b00",
   CdrColorGraphicSurfaceRatingFaint: "#fcfcfb",
-  CdrColorGraphicSurfaceSale: "#d44703",
+  CdrColorGraphicSurfaceSale: "#d93f00",
 };
 
 export default CdrColorGraphik;

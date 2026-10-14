@@ -41,7 +41,7 @@ export interface CdrColorTextTokens {
    */
   readonly CdrColorTextPrimary: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-text-sale
    */
   readonly CdrColorTextSale: string;
