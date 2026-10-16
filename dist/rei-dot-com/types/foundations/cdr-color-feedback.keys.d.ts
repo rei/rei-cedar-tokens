@@ -1,19 +1,37 @@
 export declare const CdrColorFeedbackKeys: readonly [
+  "border-error",
   "border-error-faint",
+  "border-info",
   "border-info-faint",
   "border-natural",
   "border-nautral-faint",
   "border-neutral-trace",
+  "border-success",
   "border-success-faint",
+  "border-warning",
   "border-warning-faint",
   "icon-error",
+  "icon-info",
+  "icon-natural",
   "icon-neutral",
+  "icon-success",
+  "icon-warning",
+  "surface-error",
+  "surface-error-bold",
   "surface-error-faint",
   "surface-error-trace",
+  "surface-info",
+  "surface-info-bold",
   "surface-info-faint",
+  "surface-natural",
+  "surface-natural-bold",
   "surface-natural-faint",
   "surface-neutral-trace",
+  "surface-success",
+  "surface-success-bold",
   "surface-success-faint",
+  "surface-warning",
+  "surface-warning-bold",
   "surface-warning-faint",
   "text-error",
   "text-info",
@@ -23,21 +41,39 @@ export declare const CdrColorFeedbackKeys: readonly [
   "text-warning"
 ];
 export type CdrColorFeedbackKey =
+  | "border-error"
   | "border-error-faint"
+  | "border-info"
   | "border-info-faint"
   | "border-natural"
   | "border-nautral-faint"
   | "border-neutral-trace"
+  | "border-success"
   | "border-success-faint"
+  | "border-warning"
   | "border-warning-faint"
   | "icon-error"
+  | "icon-info"
+  | "icon-natural"
   | "icon-neutral"
+  | "icon-success"
+  | "icon-warning"
+  | "surface-error"
+  | "surface-error-bold"
   | "surface-error-faint"
   | "surface-error-trace"
+  | "surface-info"
+  | "surface-info-bold"
   | "surface-info-faint"
+  | "surface-natural"
+  | "surface-natural-bold"
   | "surface-natural-faint"
   | "surface-neutral-trace"
+  | "surface-success"
+  | "surface-success-bold"
   | "surface-success-faint"
+  | "surface-warning"
+  | "surface-warning-bold"
   | "surface-warning-faint"
   | "text-error"
   | "text-info"

@@ -920,3 +920,8 @@ export const CdrTextUtilitySerifStrong800Weight: string;
 export const CdrTextUtilitySerifStrong800LetterSpacing: string;
 export const CdrTextUtilitySerifStrong800Size: string;
 export const CdrTextUtilitySerifStrong800LineHeight: string;
+export * from './intents/cdr-border';
+export * from './intents/cdr-icon';
+export * from './intents/cdr-surface';
+export * from './intents/cdr-text';
+export * from './intents/cdr-text-emphasis';

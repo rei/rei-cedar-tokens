@@ -21,7 +21,7 @@ export default class FigmaApi {
    * @param token - Personal access token for Figma API authentication
    */
   constructor(token: string) {
-    this.token = token;
+    this.token = token.trim();
   }
 
   /**

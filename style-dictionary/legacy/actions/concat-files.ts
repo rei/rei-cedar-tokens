@@ -3,7 +3,11 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
-import { componentModulesName, foundationsModulesName } from '../configs/filters/modules';
+import {
+  componentModulesName,
+  foundationsModulesName,
+  intentsModulesName,
+} from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
@@ -14,16 +18,9 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   const imports = [
     ...foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`),
     ...componentModulesName.map((name: string) => `./components/cdr-${name}`),
+    ...intentsModulesName.map((name: string) => `./intents/cdr-${name}`),
   ];
   const extensionImports: string[] = [];
-
-  if (isScss) {
-    imports.push(
-      './utilities/cdr-breakpoint-mixins',
-      './utilities/cdr-display-mixins',
-      './utilities/cdr-type-mixins',
-    );
-  }
 
   if (filePath.includes('rei-dot-com')) {
     imports.push(
@@ -36,18 +33,13 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
     return isScss ? importLine : importLine + fileExtension;
   });
 
-  const breakpointForwardHide =
-    ' hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg';
-
   importsExtension.forEach((importFile: string) => {
     const fsPath = isScss
       ? path.join(outputDir, `${importFile}.scss`)
       : path.join(outputDir, importFile);
 
     if (fs.pathExistsSync(fsPath)) {
-      const hideClause =
-        isScss && importFile === './utilities/cdr-breakpoint-mixins' ? breakpointForwardHide : '';
-      extensionImports.push(`${importStatement} "${importFile}"${hideClause};`);
+      extensionImports.push(`${importStatement} "${importFile}";`);
     }
   });
 
@@ -84,8 +76,9 @@ export const concatFiles = (sd: typeof StyleDictionary): void => {
           (f) => f.endsWith('.scss') || f.endsWith('.css') || f.endsWith('.less'),
         );
 
-        // Determine the file extension from the first file
-        const extension = !sampleFile ? '.css' : path.extname(sampleFile);
+        // Determine the file extension from the first file; fall back based on build path
+        const fallbackExtension = config.buildPath?.toString().includes('scss') ? '.scss' : '.css';
+        const extension = !sampleFile ? fallbackExtension : path.extname(sampleFile);
         const outFile = path.resolve(config.buildPath, `cdr-tokens${extension}`);
         const allPaths = files.map((f) => path.join(buildPath, f));
 
