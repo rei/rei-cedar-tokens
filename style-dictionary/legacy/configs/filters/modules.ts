@@ -75,3 +75,5 @@ export const componentModulesName = [
   'toggle-button',
   'tooltip',
 ];
+
+export const intentsModulesName = ['border', 'icon', 'surface', 'text-emphasis', 'text'];

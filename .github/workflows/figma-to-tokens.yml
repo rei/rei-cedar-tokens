@@ -129,9 +129,18 @@ jobs:
       # ── 11. Guard against unexpected files in sync PR
       - name: Guard against unexpected files in sync PR
         run: |
-          CHANGED=$(git status --porcelain | wc -l)
-          if [ "$CHANGED" -gt 200 ]; then
-            echo "::error::$CHANGED files changed — expected only tokens/, canonical/, dist/. Check for stray build output (e.g. gh-pages-site/) before this becomes a PR."
+          MAX_ALLOWED=1000
+          CHANGED_FILES=$(git status --porcelain --no-renames | cut -c4- | sed '/^$/d')
+          CHANGED_COUNT=$(echo "$CHANGED_FILES" | awk 'END {print NR}')
+          if [ "$CHANGED_COUNT" -gt "$MAX_ALLOWED" ]; then
+            echo "::error::$CHANGED_COUNT files changed — exceeds the safe threshold of $MAX_ALLOWED. Check for stray build output before this becomes a PR."
+            git status --porcelain
+            exit 1
+          fi
+          UNEXPECTED=$(echo "$CHANGED_FILES" | grep -vE '^(tokens/|canonical/|dist/|metadata/)' | sed '/^$/d') || true
+          if [ -n "$UNEXPECTED" ]; then
+            echo "::error::The following changed files are outside the allowed paths (tokens/, canonical/, dist/, metadata/):"
+            echo "$UNEXPECTED"
             git status --porcelain
             exit 1
           fi
