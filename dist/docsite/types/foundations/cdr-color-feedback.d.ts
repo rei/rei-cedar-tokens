@@ -60,10 +60,30 @@ export interface CdrColorFeedbackTokens {
    */
   readonly CdrColorFeedbackIconError: string;
   /**
+   * @value #257d81
+   * @cssvar --cdr-color-feedback-icon-info
+   */
+  readonly CdrColorFeedbackIconInfo: string;
+  /**
+   * @value #746e63
+   * @cssvar --cdr-color-feedback-icon-natural
+   */
+  readonly CdrColorFeedbackIconNatural: string;
+  /**
    * @value #ffffff
    * @cssvar --cdr-color-feedback-icon-neutral
    */
   readonly CdrColorFeedbackIconNeutral: string;
+  /**
+   * @value #3d8044
+   * @cssvar --cdr-color-feedback-icon-success
+   */
+  readonly CdrColorFeedbackIconSuccess: string;
+  /**
+   * @value #8a6a00
+   * @cssvar --cdr-color-feedback-icon-warning
+   */
+  readonly CdrColorFeedbackIconWarning: string;
   /**
    * @value #ffccc1
    * @cssvar --cdr-color-feedback-surface-error

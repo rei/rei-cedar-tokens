@@ -11,7 +11,11 @@ export declare const CdrColorFeedbackKeys: readonly [
   "border-warning",
   "border-warning-faint",
   "icon-error",
+  "icon-info",
+  "icon-natural",
   "icon-neutral",
+  "icon-success",
+  "icon-warning",
   "surface-error",
   "surface-error-bold",
   "surface-error-faint",
@@ -49,7 +53,11 @@ export type CdrColorFeedbackKey =
   | "border-warning"
   | "border-warning-faint"
   | "icon-error"
+  | "icon-info"
+  | "icon-natural"
   | "icon-neutral"
+  | "icon-success"
+  | "icon-warning"
   | "surface-error"
   | "surface-error-bold"
   | "surface-error-faint"

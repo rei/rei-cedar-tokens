@@ -1035,3 +1035,4 @@ export * from './intents/cdr-border.mjs';
 export * from './intents/cdr-icon.mjs';
 export * from './intents/cdr-surface.mjs';
 export * from './intents/cdr-text.mjs';
+export * from './intents/cdr-text-emphasis.mjs';

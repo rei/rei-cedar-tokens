@@ -70,6 +70,11 @@ export interface CdrColorControlTokens {
    */
   readonly CdrColorControlSurfaceNaturalFaint: string;
   /**
+   * @value #f8f7f226
+   * @cssvar --cdr-color-control-surface-natural-subtle
+   */
+  readonly CdrColorControlSurfaceNaturalSubtle: string;
+  /**
    * @value #eae7e4
    * @cssvar --cdr-color-control-surface-neutral
    */

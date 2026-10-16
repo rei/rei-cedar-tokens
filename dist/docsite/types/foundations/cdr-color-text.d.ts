@@ -1,6 +1,6 @@
 export interface CdrColorTextTokens {
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-text-brand
    */
   readonly CdrColorTextBrand: string;

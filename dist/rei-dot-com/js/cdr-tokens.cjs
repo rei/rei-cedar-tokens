@@ -981,7 +981,7 @@ module.exports = {
   CdrColorBrandIcon: "#ffffff",
   CdrColorPrimaryIcon: "#4c473e",
   CdrColorSecondaryIcon: "#746e63",
-  CdrColorBrandSurface: "#800080",
+  CdrColorBrandSurface: "#143528",
   CdrColorPrimarySurface: "#ffffff",
   CdrColorSecondarySurface: "#f8f7f2",
   CdrColorBrandText: "#ffffff",
@@ -990,4 +990,5 @@ module.exports = {
   CdrColorLinkVisited: "#1e4683",
   CdrColorPrimaryText: "#4c473e",
   CdrColorSecondaryText: "#746e63",
+  CdrColorPrimaryTextEmphasis: "#312d27",
 };
