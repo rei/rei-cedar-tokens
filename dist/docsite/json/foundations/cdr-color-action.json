@@ -1,0 +1,482 @@
+{
+  "color": {
+    "action": {
+      "surface": {
+        "sale": {
+          "$value": "#d93f00",
+          "$type": "color",
+          "name": "cdr-color-action-surface-sale",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "sale",
+            "deprecated": false
+          }
+        },
+        "sale-faint": {
+          "$value": "#ffe9df",
+          "$type": "color",
+          "name": "cdr-color-action-surface-sale-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "sale-faint",
+            "deprecated": false
+          }
+        },
+        "brand": {
+          "$value": "#143528",
+          "$type": "color",
+          "name": "cdr-color-action-surface-brand",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "brand",
+            "deprecated": false
+          }
+        },
+        "brand-faint": {
+          "$value": "#bfddca",
+          "$type": "color",
+          "name": "cdr-color-action-surface-brand-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "brand-faint",
+            "deprecated": false
+          }
+        },
+        "neutral-intense": {
+          "$value": "#4c473e",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral-intense",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral-intense",
+            "deprecated": false
+          }
+        },
+        "neutral-bold": {
+          "$value": "#8e887d",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral-bold",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral-bold",
+            "deprecated": false
+          }
+        },
+        "neutral-prominent": {
+          "$value": "#d7d4ce",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral-prominent",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral-prominent",
+            "deprecated": false
+          }
+        },
+        "neutral": {
+          "$value": "#eae7e4",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral",
+            "deprecated": false
+          }
+        },
+        "neutral-subtle": {
+          "$value": "#f1f0ed",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral-subtle",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral-subtle",
+            "deprecated": false
+          }
+        },
+        "neutral-faint": {
+          "$value": "#f7f7f5",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral-faint",
+            "deprecated": false
+          }
+        },
+        "neutral-trace": {
+          "$value": "#fcfcfb",
+          "$type": "color",
+          "name": "cdr-color-action-surface-neutral-trace",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "surface",
+            "subitem": "neutral-trace",
+            "deprecated": false
+          }
+        }
+      },
+      "border": {
+        "trigger": {
+          "$value": "#3d6db9",
+          "$type": "color",
+          "name": "cdr-color-action-border-trigger",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "trigger",
+            "deprecated": false
+          }
+        },
+        "trigger-faint": {
+          "$value": "#5889d6",
+          "$type": "color",
+          "name": "cdr-color-action-border-trigger-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "trigger-faint",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1); ✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)"
+          }
+        },
+        "brand": {
+          "$value": "#143528",
+          "$type": "color",
+          "name": "cdr-color-action-border-brand",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "brand",
+            "deprecated": false
+          }
+        },
+        "sale": {
+          "$value": "#d93f00",
+          "$type": "color",
+          "name": "cdr-color-action-border-sale",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "sale",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1); ✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)"
+          }
+        },
+        "neutral-bold": {
+          "$value": "#4c473e",
+          "$type": "color",
+          "name": "cdr-color-action-border-neutral-bold",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "neutral-bold",
+            "deprecated": false
+          }
+        },
+        "neutral-prominent": {
+          "$value": "#746e63",
+          "$type": "color",
+          "name": "cdr-color-action-border-neutral-prominent",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "neutral-prominent",
+            "deprecated": false
+          }
+        },
+        "neutral": {
+          "$value": "#8e887d",
+          "$type": "color",
+          "name": "cdr-color-action-border-neutral",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "neutral",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1); ✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)"
+          }
+        },
+        "neutral-faint": {
+          "$value": "#d7d4ce",
+          "$type": "color",
+          "name": "cdr-color-action-border-neutral-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "border",
+            "subitem": "neutral-faint",
+            "deprecated": false
+          }
+        }
+      },
+      "text": {
+        "brand": {
+          "$value": "#143528",
+          "$type": "color",
+          "name": "cdr-color-action-text-brand",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "brand",
+            "deprecated": false
+          }
+        },
+        "sale": {
+          "$value": "#d93f00",
+          "$type": "color",
+          "name": "cdr-color-action-text-sale",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "sale",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1); ✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)"
+          }
+        },
+        "trigger-bold": {
+          "$value": "#1e4683",
+          "$type": "color",
+          "name": "cdr-color-action-text-trigger-bold",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "trigger-bold",
+            "deprecated": false
+          }
+        },
+        "trigger": {
+          "$value": "#3d6db9",
+          "$type": "color",
+          "name": "cdr-color-action-text-trigger",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "trigger",
+            "deprecated": false
+          }
+        },
+        "trigger-faint": {
+          "$value": "#5889d6",
+          "$type": "color",
+          "name": "cdr-color-action-text-trigger-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "trigger-faint",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1); ✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)"
+          }
+        },
+        "neutral-intense": {
+          "$value": "#171613",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral-intense",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral-intense",
+            "deprecated": false
+          }
+        },
+        "neutral-bold": {
+          "$value": "#4c473e",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral-bold",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral-bold",
+            "deprecated": false
+          }
+        },
+        "neutral-prominent": {
+          "$value": "#746e63",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral-prominent",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral-prominent",
+            "deprecated": false
+          }
+        },
+        "neutral": {
+          "$value": "#8e887d",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1); ✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)"
+          }
+        },
+        "neutral-subtle": {
+          "$value": "#cecac3",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral-subtle",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral-subtle",
+            "deprecated": false
+          }
+        },
+        "neutral-faint": {
+          "$value": "#f7f7f5",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral-faint",
+            "deprecated": false
+          }
+        },
+        "neutral-trace": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "name": "cdr-color-action-text-neutral-trace",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "text",
+            "subitem": "neutral-trace",
+            "deprecated": false
+          }
+        }
+      },
+      "icon": {
+        "neutral-bold": {
+          "$value": "#4c473e",
+          "$type": "color",
+          "name": "cdr-color-action-icon-neutral-bold",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "icon",
+            "subitem": "neutral-bold",
+            "deprecated": false
+          }
+        },
+        "neutral": {
+          "$value": "#8e887d",
+          "$type": "color",
+          "name": "cdr-color-action-icon-neutral",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "icon",
+            "subitem": "neutral",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1); ✗ Avoid: action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1), graphic/surface/rating-bold (1.0:1)"
+          }
+        },
+        "neutral-subtle": {
+          "$value": "#d7d4ce",
+          "$type": "color",
+          "name": "cdr-color-action-icon-neutral-subtle",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "icon",
+            "subitem": "neutral-subtle",
+            "deprecated": false
+          }
+        },
+        "neutral-faint": {
+          "$value": "#f7f7f5",
+          "$type": "color",
+          "name": "cdr-color-action-icon-neutral-faint",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "icon",
+            "subitem": "neutral-faint",
+            "deprecated": false
+          }
+        },
+        "neutral-trace": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "name": "cdr-color-action-icon-neutral-trace",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "icon",
+            "subitem": "neutral-trace",
+            "deprecated": false
+          }
+        },
+        "sale": {
+          "$value": "#d93f00",
+          "$type": "color",
+          "name": "cdr-color-action-icon-sale",
+          "attributes": {
+            "category": "color",
+            "type": "action",
+            "item": "icon",
+            "subitem": "sale",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-trace (4.5:1), control/surface/neutral-trace (4.5:1), selection/surface/neutral-trace (4.5:1); ✗ Avoid: surface/sale (1.0:1), action/surface/sale (1.0:1), graphic/surface/sale (1.0:1)"
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,8 +5,8 @@ import path from 'path';
 import { getDirname } from '../utils';
 import {
   componentModulesName,
-  foundationsModulesName,
   intentsModulesName,
+  jsFoundationsModulesName,
 } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
@@ -16,7 +16,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   const importStatement = isScss ? '@forward' : '@import';
   const outputDir = path.dirname(filePath);
   const imports = [
-    ...foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`),
+    ...jsFoundationsModulesName.map((name: string) => `./foundations/cdr-${name}`),
     ...componentModulesName.map((name: string) => `./components/cdr-${name}`),
     ...intentsModulesName.map((name: string) => `./intents/cdr-${name}`),
   ];
