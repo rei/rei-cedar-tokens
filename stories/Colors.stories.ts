@@ -440,43 +440,48 @@ export const Semantic: Story = {
     const grid = (items: [string, string, string][]) =>
       `<div class="semantic-grid">${items.map(([l, k, v]) => semanticCard(l, k, v)).join('')}</div>`;
 
+    const getSubcategory = (key: string): string => {
+      const m = key.replace(/^CdrColor/, '').match(/^([A-Z][a-z]+)([A-Z][a-z]+)/);
+      return m ? m[2] : 'Other';
+    };
+
+    const renderGroupedSection = (title: string, items: [string, string, string][]): string => {
+      const groups: Record<string, [string, string, string][]> = {};
+      items.forEach((item) => {
+        const sub = getSubcategory(item[1]);
+        if (!groups[sub]) groups[sub] = [];
+        groups[sub].push(item);
+      });
+
+      const subsections = Object.entries(groups)
+        .sort(([a], [b]) => a.localeCompare(b))
+        .map(
+          ([sub, group]) => `
+          <div class="comp-section" style="margin-bottom: 24px;">
+            <p class="comp-section-label">${sub} <span style="font-weight:400;opacity:0.6;">(${group.length})</span></p>
+            ${grid(group)}
+          </div>
+        `,
+        )
+        .join('');
+
+      return `
+        <div class="sb-section">
+          ${sectionHeader(title, items.length)}
+          ${subsections}
+        </div>`;
+    };
+
     return `${chrome}<div class="sb-page">
-      <div class="sb-section">
-        ${sectionHeader('Surface', surfaceTokens.length)}
-        ${grid(surfaceTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Text', textTokens.length)}
-        ${grid(textTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Border', borderTokens.length)}
-        ${grid(borderTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Icon', iconTokens.length)}
-        ${grid(iconTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Action', actionTokens.length)}
-        ${grid(actionTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Control', controlTokens.length)}
-        ${grid(controlTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Feedback', feedbackTokens.length)}
-        ${grid(feedbackTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Graphik', graphikTokens.length)}
-        ${grid(graphikTokens)}
-      </div>
-      <div class="sb-section">
-        ${sectionHeader('Selection', selectionTokens.length)}
-        ${grid(selectionTokens)}
-      </div>
+      ${renderGroupedSection('Surface', surfaceTokens)}
+      ${renderGroupedSection('Text', textTokens)}
+      ${renderGroupedSection('Border', borderTokens)}
+      ${renderGroupedSection('Icon', iconTokens)}
+      ${renderGroupedSection('Action', actionTokens)}
+      ${renderGroupedSection('Control', controlTokens)}
+      ${renderGroupedSection('Feedback', feedbackTokens)}
+      ${renderGroupedSection('Graphik', graphikTokens)}
+      ${renderGroupedSection('Selection', selectionTokens)}
     </div>`;
   },
 };
