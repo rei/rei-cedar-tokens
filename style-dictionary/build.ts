@@ -40,8 +40,6 @@ import { fontFamilyQuotes } from './legacy/transforms/font/font-family-quotes.js
 import { sizeRemOverride } from './legacy/transforms/size/rem-override.js';
 
 // ==== Include custom formats ====
-import { scssTypography } from './legacy/formats/scss-typography.js';
-import { scssMap } from './legacy/formats/scss-map.js';
 import { iosTextFormat } from './legacy/formats/ios/ios-text-format.js';
 import { figma as figmaFormat } from './legacy/formats/figma.js';
 import { typescriptModuleValues } from './legacy/formats/typescript-module-values.js';
@@ -51,10 +49,6 @@ import { typescriptTokenKeyUnion } from './legacy/formats/typescript-token-key-u
 
 // ==== Include custom actions ====
 import { concatFiles } from './legacy/actions/concat-files.js';
-import {
-  includeDisplayScss,
-  includeQueriesFileScss,
-} from './legacy/actions/include-utility-file.js';
 import { generateTypesBarrel } from './legacy/actions/generate-types-barrel.js';
 import { deprecateComponentFiles } from './legacy/actions/deprecate-component-files.js';
 // ==== Include custom legacy filters ====
@@ -153,8 +147,6 @@ clamp(StyleDictionary);
 fontFamilyQuotes(StyleDictionary);
 
 // ==== Register custom formats ====
-scssTypography(StyleDictionary);
-scssMap(StyleDictionary);
 iosTextFormat(StyleDictionary);
 figmaFormat(StyleDictionary);
 typescriptModuleValues(StyleDictionary);
@@ -163,8 +155,6 @@ typescriptTokenNameUnion(StyleDictionary);
 typescriptTokenKeyUnion(StyleDictionary);
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);
-includeDisplayScss(StyleDictionary);
-includeQueriesFileScss(StyleDictionary);
 generateTypesBarrel(StyleDictionary);
 deprecateComponentFiles(StyleDictionary);
 

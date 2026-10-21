@@ -267,7 +267,7 @@ function insertAfterFoundations(filePath: string, content: string): void {
   let lastFoundations = -1;
 
   for (let i = lines.length - 1; i >= 0; i--) {
-    if (lines[i].includes("'./foundations/")) {
+    if (lines[i].includes('./foundations/')) {
       lastFoundations = i;
       break;
     }
@@ -334,6 +334,20 @@ function updateTypesBarrels(themeRoot: string, categories: string[]): void {
   }
 }
 
+function updateCssBarrels(themeRoot: string, categories: string[]): void {
+  const cssPath = path.join(themeRoot, 'css', 'cdr-tokens.css');
+  if (!fs.existsSync(cssPath)) return;
+  const lines = categories.map((cat) => `@import "./intents/cdr-${cat}.css";`).join('\n') + '\n';
+  insertAfterFoundations(cssPath, lines);
+}
+
+function updateScssBarrels(themeRoot: string, categories: string[]): void {
+  const scssPath = path.join(themeRoot, 'scss', 'cdr-tokens.scss');
+  if (!fs.existsSync(scssPath)) return;
+  const lines = categories.map((cat) => `@forward "./intents/cdr-${cat}";`).join('\n') + '\n';
+  insertAfterFoundations(scssPath, lines);
+}
+
 export function generateIntentOutputs(): void {
   const tokens = JSON.parse(fs.readFileSync(canonicalTokensPath, 'utf8')) as unknown;
   const uiTokens = collectUiTokens(tokens);
@@ -368,6 +382,8 @@ export function generateIntentOutputs(): void {
 
     updateJsAggregate(themeRoot, allValues, categories);
     updateTypesBarrels(themeRoot, categories);
+    updateCssBarrels(themeRoot, categories);
+    updateScssBarrels(themeRoot, categories);
   }
 }
 

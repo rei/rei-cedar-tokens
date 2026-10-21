@@ -13,6 +13,7 @@ export type CdrColorControlTokenName =
   | "CdrColorControlSurfaceNatural"
   | "CdrColorControlSurfaceNaturalBold"
   | "CdrColorControlSurfaceNaturalFaint"
+  | "CdrColorControlSurfaceNaturalSubtle"
   | "CdrColorControlSurfaceNeutral"
   | "CdrColorControlSurfaceNeutralBold"
   | "CdrColorControlSurfaceNeutralFaint"

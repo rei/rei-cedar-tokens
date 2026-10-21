@@ -1,5 +1,5 @@
 export const CdrColorSurface = {
-  CdrColorSurfaceBrand: "#800080",
+  CdrColorSurfaceBrand: "#143528",
   CdrColorSurfaceBrandSubtle: "#7a7105",
   CdrColorSurfaceMembership: "#ffdb22",
   CdrColorSurfaceNatural: "#f8f7f2",

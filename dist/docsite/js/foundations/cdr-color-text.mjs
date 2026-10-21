@@ -1,8 +1,8 @@
 export const CdrColorTextPrimary = "rgba(46, 46, 43, 0.9)";
 export const CdrColorTextSecondary = "#4b4a48";
 export const CdrColorTextEmphasis = "#2e2e2b";
-export const CdrColorTextBrand = "#1f513f";
-export const CdrColorTextSale = "#c7370f";
+export const CdrColorTextBrand = "#143528";
+export const CdrColorTextSale = "#d93f00";
 export const CdrColorTextInverse = "#fafbf9";
 export const CdrColorTextDisabled = "#d5cfc3";
 export const CdrColorTextSuccess = "#2e6b34";

@@ -13,6 +13,7 @@ export const CdrColorControl = {
   CdrColorControlSurfaceNatural: "#eee7d8",
   CdrColorControlSurfaceNaturalBold: "#ddd4bc",
   CdrColorControlSurfaceNaturalFaint: "#f4f0e626",
+  CdrColorControlSurfaceNaturalSubtle: "#f8f7f226",
   CdrColorControlSurfaceNeutral: "#eae7e4",
   CdrColorControlSurfaceNeutralBold: "#4c473e",
   CdrColorControlSurfaceNeutralFaint: "#fcfcfb",

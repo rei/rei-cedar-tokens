@@ -1,6 +1,6 @@
 export interface CdrColorActionTokens {
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-action-border-brand
    */
   readonly CdrColorActionBorderBrand: string;
@@ -70,7 +70,7 @@ export interface CdrColorActionTokens {
    */
   readonly CdrColorActionIconSale: string;
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-action-surface-brand
    */
   readonly CdrColorActionSurfaceBrand: string;
@@ -125,7 +125,7 @@ export interface CdrColorActionTokens {
    */
   readonly CdrColorActionSurfaceSaleFaint: string;
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-action-text-brand
    */
   readonly CdrColorActionTextBrand: string;

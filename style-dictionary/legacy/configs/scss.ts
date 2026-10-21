@@ -62,20 +62,7 @@ export const scss = (theme: Theme): PlatformConfig => ({
             },
           ]
         : []),
-      {
-        destination: 'utilities/cdr-type-mixins.scss',
-        format: 'scss/typography',
-      },
-      {
-        destination: 'utility-map.no_concat.scss',
-        format: 'scss/map',
-      },
     ],
-    actions: [
-      'deprecate-component-files',
-      'include-queries-file-scss',
-      'include-display-scss',
-      'concat-files',
-    ],
+    actions: ['deprecate-component-files', 'concat-files'],
   },
 });

@@ -10,7 +10,7 @@ import { describe, it, expect, beforeAll } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const DIST_ROOT = resolve(__dirname, '../dist/rei-dot-com');
+const DIST_ROOT = resolve(__dirname, '../../dist/rei-dot-com');
 const BP_MJS = resolve(DIST_ROOT, 'js/foundations/cdr-breakpoint.mjs');
 const BP_ORDER_MJS = resolve(DIST_ROOT, 'types/foundations/cdr-breakpoint-order.mjs');
 const BP_ORDER_DTS = resolve(DIST_ROOT, 'types/foundations/cdr-breakpoint-order.d.ts');

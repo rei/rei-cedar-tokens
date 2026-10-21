@@ -16,12 +16,12 @@ import type { Config, PlatformConfig } from 'style-dictionary/types';
 const getSources = (platform: Platform) => {
   const sources: Record<Platform, string[]> = {
     'site/global': [],
-    'site/web': ['tokens/legacy/web/**/*.json'],
+    'site/web': ['canonical/tokens.json', 'tokens/legacy/web/**/*.json'],
     'site/ios': ['tokens/legacy/mobile/**/*.json'],
     canonical: ['tokens/legacy/web/**/*.json', 'tokens/legacy/mobile/**/*.json'],
-    web: ['tokens/legacy/web/**/*.json'],
+    web: ['canonical/tokens.json', 'tokens/legacy/web/**/*.json'],
     ios: ['tokens/legacy/mobile/**/*.json'],
-    figma: ['tokens/legacy/web/**/*.json'],
+    figma: ['canonical/tokens.json', 'tokens/legacy/web/**/*.json'],
     types: ['canonical/tokens.json', 'tokens/legacy/web/**/*.json'],
   };
 

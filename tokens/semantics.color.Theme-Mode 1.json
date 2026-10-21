@@ -1267,6 +1267,54 @@
               }
             }
           }
+        },
+        "natural": {
+          "$type": "color",
+          "$value": "{warm-grey.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {}
+            }
+          }
+        },
+        "success": {
+          "$type": "color",
+          "$value": "{success-green.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {}
+            }
+          }
+        },
+        "info": {
+          "$type": "color",
+          "$value": "{info-blue.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {}
+            }
+          }
+        },
+        "warning": {
+          "$type": "color",
+          "$value": "{warning-yellow.1100}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {}
+            }
+          }
         }
       }
     },
@@ -1831,6 +1879,20 @@
         "natural-faint": {
           "$type": "color",
           "$value": "#f4f0e626",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "codeSyntax": {
+                "WEB": "--cdr-control-surface-natural-faint"
+              }
+            }
+          }
+        },
+        "natural-subtle": {
+          "$type": "color",
+          "$value": "#f8f7f226",
           "$description": "",
           "$extensions": {
             "com.figma": {

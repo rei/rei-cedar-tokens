@@ -1,6 +1,6 @@
 export interface CdrColorSurface {
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-brand-surface
    */
   readonly CdrColorBrandSurface: string;

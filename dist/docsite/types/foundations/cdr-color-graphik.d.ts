@@ -15,7 +15,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicBorderAccentFaint: string;
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-graphic-border-brand
    */
   readonly CdrColorGraphicBorderBrand: string;
@@ -65,7 +65,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicSurfaceAccentFaint: string;
   /**
-   * @value #800080
+   * @value #143528
    * @cssvar --cdr-color-graphic-surface-brand
    */
   readonly CdrColorGraphicSurfaceBrand: string;

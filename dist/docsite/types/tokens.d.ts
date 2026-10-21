@@ -91,4 +91,6 @@ export { CdrColorSurfaceOrder } from './intents/cdr-surface.order';
 export type { CdrColorSurfaceOrderKey } from './intents/cdr-surface.order';
 export { CdrColorTextOrder } from './intents/cdr-text.order';
 export type { CdrColorTextOrderKey } from './intents/cdr-text.order';
+export { CdrColorTextEmphasisOrder } from './intents/cdr-text-emphasis.order';
+export type { CdrColorTextEmphasisOrderKey } from './intents/cdr-text-emphasis.order';
 

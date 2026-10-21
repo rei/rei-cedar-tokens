@@ -1,5 +1,5 @@
 export const CdrColorText = {
-  CdrColorTextBrand: "#800080",
+  CdrColorTextBrand: "#143528",
   CdrColorTextDisabled: "#d5cfc3",
   CdrColorTextEmphasis: "#2e2e2b",
   CdrColorTextError: "#811823",

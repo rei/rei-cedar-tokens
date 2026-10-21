@@ -61,4 +61,5 @@ export { CdrColorBorderOrder } from './intents/cdr-border.order.mjs';
 export { CdrColorIconOrder } from './intents/cdr-icon.order.mjs';
 export { CdrColorSurfaceOrder } from './intents/cdr-surface.order.mjs';
 export { CdrColorTextOrder } from './intents/cdr-text.order.mjs';
+export { CdrColorTextEmphasisOrder } from './intents/cdr-text-emphasis.order.mjs';
 

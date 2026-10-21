@@ -13,6 +13,7 @@ export declare const CdrColorControlKeys: readonly [
   "surface-natural",
   "surface-natural-bold",
   "surface-natural-faint",
+  "surface-natural-subtle",
   "surface-neutral",
   "surface-neutral-bold",
   "surface-neutral-faint",
@@ -41,6 +42,7 @@ export type CdrColorControlKey =
   | "surface-natural"
   | "surface-natural-bold"
   | "surface-natural-faint"
+  | "surface-natural-subtle"
   | "surface-neutral"
   | "surface-neutral-bold"
   | "surface-neutral-faint"
