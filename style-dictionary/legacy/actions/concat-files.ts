@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import concat from 'concat';
 import path from 'path';
 import { getDirname } from '../utils';
-import { componentModulesName, foundationsModulesName } from '../configs/filters/modules';
+import { componentModulesName, jsFoundationsModulesName } from '../configs/filters/modules';
 
 const __dirname = getDirname(import.meta.url);
 
@@ -12,7 +12,10 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   const importStatement = isScss ? '@forward' : '@import';
   const outputDir = path.dirname(filePath);
   const imports = [
-    ...foundationsModulesName.map((name: string) => `./foundations/cdr-${name}`),
+    ...jsFoundationsModulesName.map((name: string) => `./foundations/cdr-${name}`),
+    // Universal border and text tokens are generated from canonical tokens by the
+    // web actions rather than by the legacy foundation module registry.
+    './foundations/cdr-color-universal',
     ...componentModulesName.map((name: string) => `./components/cdr-${name}`),
   ];
   const extensionImports: string[] = [];

@@ -326,6 +326,7 @@ export function clean(
           const mappingEntry = tokenMapping?.collections[firstSegment];
 
           let resolvedPath = inner;
+          let flattenHyphens = false;
 
           if (mappingEntry) {
             const figmaSubPath = segments.slice(1).join('.');
@@ -333,6 +334,7 @@ export function clean(
               mappingEntry.tokens === 'auto' ? figmaSubPath : mappingEntry.tokens[figmaSubPath];
             if (canonicalSub !== undefined) {
               resolvedPath = `${mappingEntry.canonicalPrefix ?? firstSegment}.${canonicalSub}`;
+              flattenHyphens = true;
             } else {
               throw new Error(
                 `[clean] Alias reference "{${inner}}" has no entry in src/schema/token-schema.json (inputs.figma.collections) ` +
@@ -379,11 +381,17 @@ export function clean(
 
             if (section && section !== firstSegment) {
               resolvedPath = `${section}.${inner}`;
+              flattenHyphens = true;
             }
           }
 
-          // Ensure ALL hyphens inside the token reference path are rewritten to dots
-          return `{${resolvedPath.replace(/-/g, '.')}}`;
+          // Only rewrite hyphens to dots for references that were remapped through a
+          // collection/primitive prefix (e.g. {blue-spruce-green.600} ->
+          // {color.option.blue.spruce.green.600}, matching expandHyphenatedTokens'
+          // group-level key expansion). References already in canonical space
+          // ({color.text.neutral-prominent}) keep hyphens literal so compound
+          // variant names resolve against their literal keys.
+          return `{${flattenHyphens ? resolvedPath.replace(/-/g, '.') : resolvedPath}}`;
         }
         return valStr;
       };
@@ -705,7 +713,13 @@ export function expandHyphenatedTokens(obj: Record<string, any>): TokenNode {
 
   for (const [key, value] of Object.entries(obj)) {
     const processedValue = expandHyphenatedTokens(value);
-    const segments = key.split('-');
+    // Leaf tokens keep hyphenated names literal (e.g. "neutral-prominent" is a
+    // single variant name in semantic files, and splitting it would collide
+    // with a sibling "neutral" token). Only non-leaf group keys (e.g.
+    // "blue-spruce-green" containing numeric stops) expand into nested levels.
+    const isTokenLeaf =
+      processedValue !== null && typeof processedValue === 'object' && '$value' in processedValue;
+    const segments = isTokenLeaf ? [key] : key.split('-');
     let currentLevel = root;
 
     segments.forEach((segment, index) => {

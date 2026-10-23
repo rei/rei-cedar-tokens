@@ -220,14 +220,16 @@ describe('clean', () => {
   });
 
   it('does NOT rewrite alias references that already point to a section root', () => {
-    // "color" maps to itself — no double-prefixing
+    // "color" maps to itself — no double-prefixing, and hyphens in
+    // canonical-space references stay literal (compound variant names like
+    // "neutral-prominent" must resolve against their literal keys)
     const map = new Map([['color', 'color']]);
     const input = {
-      text: { link: FIGMA_LEAF('{color.brand-palette.blue.600}') },
+      text: { link: FIGMA_LEAF('{color.text.neutral-prominent}') },
     };
     const result = clean(input, map) as Record<string, Record<string, unknown>>;
     expect((result.text.link as Record<string, unknown>).$value).toBe(
-      '{color.brand.palette.blue.600}',
+      '{color.text.neutral-prominent}',
     );
   });
 
@@ -277,7 +279,7 @@ describe('clean', () => {
 
     const result = clean(input, map) as Record<string, Record<string, Record<string, unknown>>>;
     expect(result.text.link).toEqual({
-      $value: '{brand.palette.blue.600}',
+      $value: '{brand-palette.blue.600}',
       $type: 'color',
       $extensions: {
         cedar: {

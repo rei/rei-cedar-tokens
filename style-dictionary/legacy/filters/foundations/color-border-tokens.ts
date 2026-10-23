@@ -15,6 +15,7 @@ export const foundationsColorBorderTokens = (sd: typeof StyleDictionary): void =
     name: 'foundations-color-border-tokens',
     filter: (token: Token) => {
       const borderTokens = [
+        // Legacy foundations
         'transparent',
         'primary',
         'secondary',
@@ -22,6 +23,14 @@ export const foundationsColorBorderTokens = (sd: typeof StyleDictionary): void =
         'warning',
         'error',
         'info',
+        // Universal semantic foundations
+        'accent',
+        'brand',
+        'neutral',
+        'neutral-bold',
+        'neutral-prominent',
+        'neutral-subtle',
+        'neutral-trace',
       ];
 
       return (
@@ -29,8 +38,7 @@ export const foundationsColorBorderTokens = (sd: typeof StyleDictionary): void =
         token.path[0] !== 'theme' &&
         token.path[0] === 'color' &&
         token.path[1] === 'border' &&
-        borderTokens.includes(token.path[2]) &&
-        !(token.filePath as string).endsWith('canonical/tokens.json')
+        borderTokens.includes(token.path[2])
       );
     },
   });

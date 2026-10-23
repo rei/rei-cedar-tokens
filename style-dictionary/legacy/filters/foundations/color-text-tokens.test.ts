@@ -13,11 +13,36 @@ describe('color-text-tokens filter', () => {
   });
 
   // Test the filter logic directly
-  const colorTextTokensFilter = (token: Token): boolean =>
-    token.path[0] !== 'options' &&
-    token.path[0] !== 'theme' &&
-    token.path[0] === 'color' &&
-    token.path[1] === 'text';
+  const colorTextTokensFilter = (token: Token): boolean => {
+    const textTokens = [
+      'primary',
+      'secondary',
+      'emphasis',
+      'brand',
+      'sale',
+      'inverse',
+      'disabled',
+      'success',
+      'warning',
+      'error',
+      'info',
+      'accent',
+      'natural',
+      'neutral',
+      'neutral-bold',
+      'neutral-prominent',
+      'neutral-subtle',
+      'neutral-trace',
+    ];
+
+    return (
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path[0] === 'color' &&
+      token.path[1] === 'text' &&
+      textTokens.includes(token.path[2])
+    );
+  };
 
   it('should include tokens in color.text namespace', () => {
     const token = createToken(['color', 'text', 'primary']);
@@ -25,9 +50,17 @@ describe('color-text-tokens filter', () => {
   });
 
   it('should include deeply nested color.text tokens', () => {
-    const token = createToken(['color', 'text', 'link', 'hover']);
+    const token = createToken(['color', 'text', 'neutral', 'subtle']);
     expect(colorTextTokensFilter(token)).toBe(true);
   });
+
+  it.each(['neutral', 'neutral-bold', 'neutral-prominent', 'neutral-subtle', 'neutral-trace'])(
+    'should include universal text token "%s"',
+    (name) => {
+      const token = createToken(['color', 'text', name]);
+      expect(colorTextTokensFilter(token)).toBe(true);
+    },
+  );
 
   it('should filter out tokens in options namespace', () => {
     const token = createToken(['options', 'color', 'text']);
