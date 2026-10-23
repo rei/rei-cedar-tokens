@@ -1,6 +1,13 @@
 export type CdrColorBorderTokenName =
+  | "CdrColorBorderAccent"
+  | "CdrColorBorderBrand"
   | "CdrColorBorderError"
   | "CdrColorBorderInfo"
+  | "CdrColorBorderNeutral"
+  | "CdrColorBorderNeutralBold"
+  | "CdrColorBorderNeutralProminent"
+  | "CdrColorBorderNeutralSubtle"
+  | "CdrColorBorderNeutralTrace"
   | "CdrColorBorderPrimary"
   | "CdrColorBorderSecondary"
   | "CdrColorBorderSuccess"

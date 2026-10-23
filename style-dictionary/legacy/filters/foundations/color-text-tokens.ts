@@ -15,6 +15,7 @@ export const foundationsColorTextTokens = (sd: typeof StyleDictionary): void => 
     name: 'foundations-color-text-tokens',
     filter: (token: Token) => {
       const textTokens = [
+        // Legacy foundations
         'primary',
         'secondary',
         'emphasis',
@@ -26,6 +27,14 @@ export const foundationsColorTextTokens = (sd: typeof StyleDictionary): void => 
         'warning',
         'error',
         'info',
+        // Universal semantic foundations
+        'accent',
+        'natural',
+        'neutral',
+        'neutral-bold',
+        'neutral-prominent',
+        'neutral-subtle',
+        'neutral-trace',
       ];
 
       return (

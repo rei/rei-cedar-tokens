@@ -82,6 +82,52 @@ describe('webCssAction', () => {
     expect(surfaceCss).toContain(':root {');
   });
 
+  it('writes universal border and text tokens to a shared file', () => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const buildPath = fs.mkdtempSync(path.join(os.tmpdir(), 'web-css-action-'));
+    tempDirs.push(buildPath);
+
+    const dictionary = {
+      allTokens: [
+        {
+          name: 'borderNeutral',
+          path: ['color', 'border', 'neutral'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#cecac3', dark: '#111111' },
+              },
+            },
+          },
+        },
+        {
+          name: 'textNeutralBold',
+          path: ['color', 'text', 'neutral-bold'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#312d27', dark: '#ffffff' },
+              },
+            },
+          },
+        },
+      ],
+      tokens: {},
+    };
+
+    webCssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
+
+    const universalCss = fs.readFileSync(
+      path.join(buildPath, 'foundations', 'cdr-color-universal.css'),
+      'utf8',
+    );
+    expect(universalCss).toContain('--cdr-border-neutral: #cecac3;');
+    expect(universalCss).toContain('--cdr-text-neutral-bold: #312d27;');
+  });
+
   it('writes hex fallback before oklch color declarations', () => {
     vi.spyOn(console, 'log').mockImplementation(() => {});
     vi.spyOn(console, 'warn').mockImplementation(() => {});
