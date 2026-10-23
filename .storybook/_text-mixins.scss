@@ -1,0 +1,73 @@
+@use '../dist/docsite/scss/cdr-tokens' as *;
+
+@mixin cdr-text-body-300 {
+  font-family: $cdr-text-body-300-family;
+  font-size: $cdr-text-body-300-size;
+  font-style: $cdr-text-body-300-style;
+  font-weight: $cdr-text-body-300-weight;
+  line-height: $cdr-text-body-300-line-height;
+  letter-spacing: $cdr-text-body-300-letter-spacing;
+}
+
+@mixin cdr-text-body-400 {
+  font-family: $cdr-text-body-400-family;
+  font-size: $cdr-text-body-400-size;
+  font-style: $cdr-text-body-400-style;
+  font-weight: $cdr-text-body-400-weight;
+  line-height: $cdr-text-body-400-line-height;
+  letter-spacing: $cdr-text-body-400-letter-spacing;
+}
+
+@mixin cdr-text-heading-sans-300 {
+  font-family: $cdr-text-heading-sans-300-family;
+  font-size: $cdr-text-heading-sans-300-size;
+  font-style: $cdr-text-heading-sans-300-style;
+  font-weight: $cdr-text-heading-sans-300-weight;
+  line-height: $cdr-text-heading-sans-300-line-height;
+  letter-spacing: $cdr-text-heading-sans-300-letter-spacing;
+}
+
+@mixin cdr-text-heading-sans-400 {
+  font-family: $cdr-text-heading-sans-400-family;
+  font-size: $cdr-text-heading-sans-400-size;
+  font-style: $cdr-text-heading-sans-400-style;
+  font-weight: $cdr-text-heading-sans-400-weight;
+  line-height: $cdr-text-heading-sans-400-line-height;
+  letter-spacing: $cdr-text-heading-sans-400-letter-spacing;
+}
+
+@mixin cdr-text-heading-sans-500 {
+  font-family: $cdr-text-heading-sans-500-family;
+  font-size: $cdr-text-heading-sans-500-size;
+  font-style: $cdr-text-heading-sans-500-style;
+  font-weight: $cdr-text-heading-sans-500-weight;
+  line-height: $cdr-text-heading-sans-500-line-height;
+  letter-spacing: $cdr-text-heading-sans-500-letter-spacing;
+}
+
+@mixin cdr-text-heading-sans-600 {
+  font-family: $cdr-text-heading-sans-600-family;
+  font-size: $cdr-text-heading-sans-600-size;
+  font-style: $cdr-text-heading-sans-600-style;
+  font-weight: $cdr-text-heading-sans-600-weight;
+  line-height: $cdr-text-heading-sans-600-line-height;
+  letter-spacing: $cdr-text-heading-sans-600-letter-spacing;
+}
+
+@mixin cdr-text-utility-sans-200 {
+  font-family: $cdr-text-utility-sans-200-family;
+  font-size: $cdr-text-utility-sans-200-size;
+  font-style: $cdr-text-utility-sans-200-style;
+  font-weight: $cdr-text-utility-sans-200-weight;
+  line-height: $cdr-text-utility-sans-200-line-height;
+  letter-spacing: $cdr-text-utility-sans-200-letter-spacing;
+}
+
+@mixin cdr-text-utility-sans-strong-200 {
+  font-family: $cdr-text-utility-sans-strong-200-family;
+  font-size: $cdr-text-utility-sans-strong-200-size;
+  font-style: $cdr-text-utility-sans-strong-200-style;
+  font-weight: $cdr-text-utility-sans-strong-200-weight;
+  line-height: $cdr-text-utility-sans-strong-200-line-height;
+  letter-spacing: $cdr-text-utility-sans-strong-200-letter-spacing;
+}
