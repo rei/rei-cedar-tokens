@@ -10,6 +10,7 @@ const config: StorybookConfig = {
   },
   viteFinal: async (config) =>
     mergeConfig(config, {
+      base: process.env.STORYBOOK_BASE_URL ?? config.base ?? '/',
       css: {
         preprocessorOptions: {
           scss: {

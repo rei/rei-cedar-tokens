@@ -14,6 +14,13 @@ export const componentSurfaceTokens = (sd: typeof StyleDictionary): void => {
   sd.registerFilter({
     name: 'component-surface-tokens',
     filter: (token: Token) =>
-      token.path[0] !== 'options' && token.path[0] !== 'theme' && token.path.includes('surface'),
+      token.path[0] !== 'options' &&
+      token.path[0] !== 'theme' &&
+      token.path.includes('surface') &&
+      (token.path[0] !== 'color' ||
+        token.path[1] === 'surface' ||
+        token.path[1] === 'background' ||
+        token.path[1] === 'border' ||
+        token.path[1] === 'ui'),
   });
 };

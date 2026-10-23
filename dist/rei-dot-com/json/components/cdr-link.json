@@ -188,5 +188,70 @@
         }
       }
     }
+  },
+  "UI": {
+    "link": {
+      "rest": {
+        "$value": "#3d6db9",
+        "$type": "color",
+        "name": "cdr-ui-link-rest",
+        "attributes": {
+          "category": "UI",
+          "type": "link",
+          "item": "rest",
+          "deprecated": false
+        }
+      },
+      "active": {
+        "$value": "#5889d6",
+        "$type": "color",
+        "name": "cdr-ui-link-active",
+        "attributes": {
+          "category": "UI",
+          "type": "link",
+          "item": "active",
+          "deprecated": false
+        },
+        "docs": {
+          "summary": "active link text color"
+        }
+      },
+      "visited": {
+        "$value": "#1e4683",
+        "$type": "color",
+        "name": "cdr-ui-link-visited",
+        "attributes": {
+          "category": "UI",
+          "type": "link",
+          "item": "visited",
+          "deprecated": false
+        },
+        "docs": {
+          "summary": "visited link text color"
+        }
+      },
+      "border hover": {
+        "$value": "#3d6db9",
+        "$type": "color",
+        "name": "cdr-ui-link-border-hover",
+        "attributes": {
+          "category": "UI",
+          "type": "link",
+          "item": "border hover",
+          "deprecated": false
+        }
+      },
+      "border active": {
+        "$value": "#5889d6",
+        "$type": "color",
+        "name": "cdr-ui-link-border-active",
+        "attributes": {
+          "category": "UI",
+          "type": "link",
+          "item": "border active",
+          "deprecated": false
+        }
+      }
+    }
   }
 }

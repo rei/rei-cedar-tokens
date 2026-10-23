@@ -1,4 +1,8 @@
-import type { CanonicalRoot } from '../types/canonical-token.js';
+import type {
+  CanonicalRoot,
+  TokenAccessibility,
+  TokenDeprecation,
+} from '../types/canonical-token.js';
 
 export type NormalizeSuccess = { success: true; data: CanonicalRoot };
 export type NormalizeError = { success: false; error: string };
@@ -16,6 +20,8 @@ export interface TokenLeaf {
   $extensions?: {
     cedar?: {
       docs?: TokenDocs;
+      deprecation?: TokenDeprecation;
+      accessibility?: TokenAccessibility;
       appearances?: Record<string, string>;
       platformOverrides?: Record<string, Record<string, string>>;
       resolved?: Record<string, Record<string, string>>;

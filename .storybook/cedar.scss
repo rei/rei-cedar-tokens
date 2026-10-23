@@ -3,6 +3,7 @@
 // The SCSS tokens below compile to static values at build time, so they
 // do NOT conflict with the runtime CSS custom properties used by components.
 @use '../dist/docsite/scss/cdr-tokens' as *;
+@use './text-mixins' as *;
 
 // Tokens removed from the docsite SCSS bundle; preserve Storybook chrome values.
 $cdr-color-background-primary: #ffffff !default;

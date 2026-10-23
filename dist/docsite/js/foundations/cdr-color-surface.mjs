@@ -1,0 +1,9 @@
+export const CdrColorSurfaceBrand = "#143528";
+export const CdrColorSurfaceBrandSubtle = "#7a7105";
+export const CdrColorSurfaceMembership = "#ffdb22";
+export const CdrColorSurfaceSale = "#d93f00";
+export const CdrColorSurfaceNatural = "#f8f7f2";
+export const CdrColorSurfaceNeutralIntense = "#312d27";
+export const CdrColorSurfaceNeutral = "#f1f0ed";
+export const CdrColorSurfaceNeutralSubtle = "#f7f7f5";
+export const CdrColorSurfaceNeutralTrace = "#ffffff";
