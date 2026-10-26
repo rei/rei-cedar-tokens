@@ -1,5 +1,10 @@
 export interface CdrColorSurfaceTokens {
   /**
+   * @value #143528
+   * @cssvar --cdr-color-surface-brand
+   */
+  readonly CdrColorSurfaceBrand: string;
+  /**
    * @value #797119
    * @cssvar --cdr-color-surface-brand-subtle
    */
@@ -14,6 +19,16 @@ export interface CdrColorSurfaceTokens {
    * @cssvar --cdr-color-surface-natural
    */
   readonly CdrColorSurfaceNatural: string;
+  /**
+   * @value #f1f0ed
+   * @cssvar --cdr-color-surface-neutral
+   */
+  readonly CdrColorSurfaceNeutral: string;
+  /**
+   * @value #312d27
+   * @cssvar --cdr-color-surface-neutral-intense
+   */
+  readonly CdrColorSurfaceNeutralIntense: string;
   /**
    * @value #f7f7f5
    * @cssvar --cdr-color-surface-neutral-subtle
