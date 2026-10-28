@@ -8,7 +8,7 @@
  *   dist/{buildPath}/foundations/cdr-color-surface.css   — Surface color tokens
  *   dist/{buildPath}/foundations/cdr-color-text.css      — Text color tokens
  *   dist/{buildPath}/foundations/cdr-color-border.css    — Border color tokens
- *   dist/{buildPath}/foundations/cdr-color-universal.css — Universal border/text tokens
+ *   dist/{buildPath}/foundations/cdr-color-universal.css — Universal semantic tokens
  *   ...
  *
  * Resolution order for color values:
@@ -85,6 +85,7 @@ export const webCssAction: Action = {
       graphic: 'graphik',
       border: 'universal',
       text: 'universal',
+      icon: 'universal',
     };
     const VALID_COLOR_FAMILIES = [
       'background',
@@ -109,6 +110,7 @@ export const webCssAction: Action = {
       'surface',
       'border',
       'text',
+      'icon',
     ];
 
     function getColorCategory(token: any): string | undefined {

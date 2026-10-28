@@ -13,7 +13,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   const outputDir = path.dirname(filePath);
   const imports = [
     ...jsFoundationsModulesName.map((name: string) => `./foundations/cdr-${name}`),
-    // Universal border and text tokens are generated from canonical tokens by the
+    // Universal semantic tokens are generated from canonical tokens by the
     // web actions rather than by the legacy foundation module registry.
     './foundations/cdr-color-universal',
     ...componentModulesName.map((name: string) => `./components/cdr-${name}`),

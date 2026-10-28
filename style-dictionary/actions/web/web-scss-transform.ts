@@ -7,7 +7,7 @@
  *   dist/{buildPath}/foundations/cdr-color-surface.scss   — Surface color tokens as SCSS variables
  *   dist/{buildPath}/foundations/cdr-color-text.scss      — Text color tokens as SCSS variables
  *   dist/{buildPath}/foundations/cdr-color-border.scss    — Border color tokens as SCSS variables
- *   dist/{buildPath}/foundations/cdr-color-universal.scss — Universal border/text tokens
+ *   dist/{buildPath}/foundations/cdr-color-universal.scss — Universal semantic tokens
  *   ...
  *
  * Resolution order for color values:
@@ -83,6 +83,7 @@ export const webScssAction: Action = {
       graphic: 'graphik',
       border: 'universal',
       text: 'universal',
+      icon: 'universal',
     };
     const VALID_COLOR_FAMILIES = [
       'background',
@@ -107,6 +108,7 @@ export const webScssAction: Action = {
       'surface',
       'border',
       'text',
+      'icon',
     ];
 
     function getColorCategory(token: any): string | undefined {
