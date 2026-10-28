@@ -82,7 +82,7 @@ describe('webCssAction', () => {
     expect(surfaceCss).toContain(':root {');
   });
 
-  it('writes universal border and text tokens to a shared file', () => {
+  it('writes universal surface, border, text, and icon tokens to a shared file', () => {
     vi.spyOn(console, 'log').mockImplementation(() => {});
     vi.spyOn(console, 'warn').mockImplementation(() => {});
     const buildPath = fs.mkdtempSync(path.join(os.tmpdir(), 'web-css-action-'));
@@ -90,6 +90,18 @@ describe('webCssAction', () => {
 
     const dictionary = {
       allTokens: [
+        {
+          name: 'surfaceNatural',
+          path: ['color', 'surface', 'natural'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#f8f7f2', dark: '#111111' },
+              },
+            },
+          },
+        },
         {
           name: 'borderNeutral',
           path: ['color', 'border', 'neutral'],
@@ -114,6 +126,18 @@ describe('webCssAction', () => {
             },
           },
         },
+        {
+          name: 'iconBrand',
+          path: ['color', 'icon', 'brand'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#143528', dark: '#ffffff' },
+              },
+            },
+          },
+        },
       ],
       tokens: {},
     };
@@ -124,8 +148,10 @@ describe('webCssAction', () => {
       path.join(buildPath, 'foundations', 'cdr-color-universal.css'),
       'utf8',
     );
+    expect(universalCss).toContain('--cdr-surface-natural: #f8f7f2;');
     expect(universalCss).toContain('--cdr-border-neutral: #cecac3;');
     expect(universalCss).toContain('--cdr-text-neutral-bold: #312d27;');
+    expect(universalCss).toContain('--cdr-icon-brand: #143528;');
   });
 
   it('writes hex fallback before oklch color declarations', () => {
