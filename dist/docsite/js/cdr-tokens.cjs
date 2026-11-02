@@ -639,7 +639,7 @@ module.exports = {
   CdrColorFeedbackSurfaceErrorTrace: "#fff8f6",
   CdrColorFeedbackSurfaceNeutralTrace: "#ffffff",
   CdrColorFeedbackBorderNatural: "#756e5c",
-  CdrColorFeedbackBorderNautralFaint: "#e6ddc9",
+  CdrColorFeedbackBorderNaturalFaint: "#e6ddc9",
   CdrColorFeedbackBorderInfo: "#257d81",
   CdrColorFeedbackBorderInfoFaint: "#c8e5e6",
   CdrColorFeedbackBorderSuccess: "#3d8044",

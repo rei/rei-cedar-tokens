@@ -5,9 +5,9 @@
  *
  * Output layout:
  *   dist/{buildPath}/cdr-foundations.css              — @import index
- *   dist/{buildPath}/foundations/cdr-color-surface.css — Surface color tokens
- *   dist/{buildPath}/foundations/cdr-color-text.css    — Text color tokens
- *   dist/{buildPath}/foundations/cdr-color-border.css  — Border color tokens
+ *   dist/{buildPath}/foundations/cdr-color-border.css   — Legacy border tokens
+ *   dist/{buildPath}/foundations/cdr-color-text.css     — Legacy text tokens
+ *   dist/{buildPath}/foundations/cdr-color-universal.css — Surface, border, text, and icon tokens
  *   ...
  *
  * Resolution order for color values:
@@ -82,6 +82,10 @@ export const webCssAction: Action = {
     const colorByCategory: Record<string, string[]> = {};
     const CATEGORY_FILE_MAP: Record<string, string> = {
       graphic: 'graphik',
+      surface: 'universal',
+      border: 'universal',
+      text: 'universal',
+      icon: 'universal',
     };
     const VALID_COLOR_FAMILIES = [
       'background',
@@ -97,7 +101,17 @@ export const webCssAction: Action = {
       'navigation',
       'overlay',
     ];
-    const NEW_COLOR_FAMILIES = ['action', 'control', 'feedback', 'graphic', 'selection', 'surface'];
+    const NEW_COLOR_FAMILIES = [
+      'action',
+      'control',
+      'feedback',
+      'graphic',
+      'selection',
+      'surface',
+      'border',
+      'text',
+      'icon',
+    ];
 
     function getColorCategory(token: any): string | undefined {
       if (token.path[0] !== 'color') return undefined;

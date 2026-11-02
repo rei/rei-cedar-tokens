@@ -1,5 +1,10 @@
 export interface CdrColorTextTokens {
   /**
+   * @value #e5fd9c
+   * @cssvar --cdr-color-text-accent
+   */
+  readonly CdrColorTextAccent: string;
+  /**
    * @value #143528
    * @cssvar --cdr-color-text-brand
    */
@@ -34,6 +39,36 @@ export interface CdrColorTextTokens {
    * @cssvar --cdr-color-text-inverse
    */
   readonly CdrColorTextInverse: string;
+  /**
+   * @value #f8f7f2
+   * @cssvar --cdr-color-text-natural
+   */
+  readonly CdrColorTextNatural: string;
+  /**
+   * @value #746e63
+   * @cssvar --cdr-color-text-neutral
+   */
+  readonly CdrColorTextNeutral: string;
+  /**
+   * @value #312d27
+   * @cssvar --cdr-color-text-neutral-bold
+   */
+  readonly CdrColorTextNeutralBold: string;
+  /**
+   * @value #4c473e
+   * @cssvar --cdr-color-text-neutral-prominent
+   */
+  readonly CdrColorTextNeutralProminent: string;
+  /**
+   * @value #d7d4ce
+   * @cssvar --cdr-color-text-neutral-subtle
+   */
+  readonly CdrColorTextNeutralSubtle: string;
+  /**
+   * @value #ffffff
+   * @cssvar --cdr-color-text-neutral-trace
+   */
+  readonly CdrColorTextNeutralTrace: string;
   /**
    * The default, primary text color
    * @value #4b4a48

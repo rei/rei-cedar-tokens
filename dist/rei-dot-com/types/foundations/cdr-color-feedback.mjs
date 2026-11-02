@@ -4,7 +4,7 @@ export const CdrColorFeedback = {
   CdrColorFeedbackBorderInfo: "#257d81",
   CdrColorFeedbackBorderInfoFaint: "#c8e5e6",
   CdrColorFeedbackBorderNatural: "#756e5c",
-  CdrColorFeedbackBorderNautralFaint: "#e6ddc9",
+  CdrColorFeedbackBorderNaturalFaint: "#e6ddc9",
   CdrColorFeedbackBorderNeutralTrace: "#ffffff",
   CdrColorFeedbackBorderSuccess: "#3d8044",
   CdrColorFeedbackBorderSuccessFaint: "#c8e8c9",

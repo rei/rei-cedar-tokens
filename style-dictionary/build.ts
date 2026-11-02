@@ -51,6 +51,7 @@ import { typescriptTokenKeyUnion } from './legacy/formats/typescript-token-key-u
 import { concatFiles } from './legacy/actions/concat-files.js';
 import { generateTypesBarrel } from './legacy/actions/generate-types-barrel.js';
 import { deprecateComponentFiles } from './legacy/actions/deprecate-component-files.js';
+import { emitUtilityFiles } from './legacy/actions/emit-utility-files.js';
 // ==== Include custom legacy filters ====
 import { colorBackgroundTokens } from './legacy/filters/legacy/color-background-tokens.js';
 import { colorBorderTokens } from './legacy/filters/legacy/color-border-tokens.js';
@@ -157,6 +158,7 @@ typescriptTokenKeyUnion(StyleDictionary);
 concatFiles(StyleDictionary);
 generateTypesBarrel(StyleDictionary);
 deprecateComponentFiles(StyleDictionary);
+emitUtilityFiles(StyleDictionary);
 
 // ==== Register custom legacy filters ====
 colorBackgroundTokens(StyleDictionary);
