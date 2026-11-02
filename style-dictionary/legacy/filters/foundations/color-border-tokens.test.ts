@@ -22,6 +22,13 @@ describe('color-border-tokens filter', () => {
       'warning',
       'error',
       'info',
+      'accent',
+      'brand',
+      'neutral',
+      'neutral-bold',
+      'neutral-prominent',
+      'neutral-subtle',
+      'neutral-trace',
     ];
 
     return (
@@ -42,6 +49,14 @@ describe('color-border-tokens filter', () => {
     const token = createToken(['color', 'border', 'success']);
     expect(colorBorderTokensFilter(token)).toBe(true);
   });
+
+  it.each(['neutral', 'neutral-bold', 'neutral-prominent', 'neutral-subtle', 'neutral-trace'])(
+    'should include universal border token "%s"',
+    (name) => {
+      const token = createToken(['color', 'border', name]);
+      expect(colorBorderTokensFilter(token)).toBe(true);
+    },
+  );
 
   it('should include deeply nested allowed color.border tokens', () => {
     // Passes because path[2] is 'error'

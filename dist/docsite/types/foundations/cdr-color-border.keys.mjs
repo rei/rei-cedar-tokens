@@ -1,6 +1,13 @@
 export const CdrColorBorderKeys = [
+  "accent",
+  "brand",
   "error",
   "info",
+  "neutral",
+  "neutral-bold",
+  "neutral-prominent",
+  "neutral-subtle",
+  "neutral-trace",
   "primary",
   "secondary",
   "success",

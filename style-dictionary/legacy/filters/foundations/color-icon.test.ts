@@ -1,6 +1,20 @@
 import { describe, it, expect } from 'vitest';
 import type { Token } from 'style-dictionary';
 
+const universalIconTokens = [
+  // Legacy foundations
+  'default',
+  'emphasis',
+  'link',
+  'disabled',
+  // Universal semantic foundations
+  'accent',
+  'brand',
+  'membership',
+  'natural',
+  'sale',
+];
+
 describe('foundations-color-icon-tokens filter', () => {
   const createToken = (path: string[], filePath = 'tokens/global/color.json'): Token => ({
     name: 'test-token',
@@ -17,9 +31,9 @@ describe('foundations-color-icon-tokens filter', () => {
     token.path[0] !== 'theme' &&
     token.path[0] === 'color' &&
     token.path[1] === 'icon' &&
-    (token.filePath as string).endsWith('color.json');
+    universalIconTokens.includes(token.path[2]);
 
-  it('should include color.icon tokens from color.json', () => {
+  it('should include legacy color.icon tokens', () => {
     const validPaths = [
       ['color', 'icon', 'default'],
       ['color', 'icon', 'emphasis'],
@@ -33,17 +47,23 @@ describe('foundations-color-icon-tokens filter', () => {
     });
   });
 
-  it('should include any color.icon token from color.json', () => {
-    const token = createToken(['color', 'icon', 'new-semantic-state']);
-    expect(foundationsColorIconTokensFilter(token)).toBe(true);
+  it('should include universal semantic color.icon tokens', () => {
+    const validPaths = [
+      ['color', 'icon', 'accent', 'bold'],
+      ['color', 'icon', 'accent', 'faint'],
+      ['color', 'icon', 'brand'],
+      ['color', 'icon', 'membership'],
+      ['color', 'icon', 'natural'],
+      ['color', 'icon', 'sale'],
+    ];
+
+    validPaths.forEach((path) => {
+      const token = createToken(path, 'tokens/semantics.color.value.json');
+      expect(foundationsColorIconTokensFilter(token)).toBe(true);
+    });
   });
 
-  it('should include tokens from theme-level color.json files', () => {
-    const token = createToken(['color', 'icon', 'default'], 'tokens/themes/docsite/color.json');
-    expect(foundationsColorIconTokensFilter(token)).toBe(true);
-  });
-
-  it('should filter out color.icon tokens from component token files', () => {
+  it('should filter out icon tokens outside the foundation allowlist', () => {
     const token = createToken(['color', 'icon', 'switch'], 'tokens/global/switch.json');
     expect(foundationsColorIconTokensFilter(token)).toBe(false);
   });
@@ -68,8 +88,8 @@ describe('foundations-color-icon-tokens filter', () => {
     expect(foundationsColorIconTokensFilter(token)).toBe(false);
   });
 
-  it('should include deeply nested tokens from color.json', () => {
-    const token = createToken(['color', 'icon', 'default', 'active']);
+  it('should include deeply nested universal icon tokens', () => {
+    const token = createToken(['color', 'icon', 'accent', 'hover']);
     expect(foundationsColorIconTokensFilter(token)).toBe(true);
   });
 });

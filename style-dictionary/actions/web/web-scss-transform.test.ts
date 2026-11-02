@@ -88,6 +88,78 @@ describe('webScssAction', () => {
     expect(textScss).not.toContain('--cdr-');
   });
 
+  it('writes universal surface, border, text, and icon tokens to a shared file', () => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const buildPath = fs.mkdtempSync(path.join(os.tmpdir(), 'web-scss-action-'));
+    tempDirs.push(buildPath);
+
+    const dictionary = {
+      allTokens: [
+        {
+          name: 'surfaceNatural',
+          path: ['color', 'surface', 'natural'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#f8f7f2', dark: '#111111' },
+              },
+            },
+          },
+        },
+        {
+          name: 'borderNeutral',
+          path: ['color', 'border', 'neutral'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#cecac3', dark: '#111111' },
+              },
+            },
+          },
+        },
+        {
+          name: 'textNeutralBold',
+          path: ['color', 'text', 'neutral-bold'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#312d27', dark: '#ffffff' },
+              },
+            },
+          },
+        },
+        {
+          name: 'iconBrand',
+          path: ['color', 'icon', 'brand'],
+          $type: 'color',
+          $extensions: {
+            cedar: {
+              resolved: {
+                web: { light: '#143528', dark: '#ffffff' },
+              },
+            },
+          },
+        },
+      ],
+      tokens: {},
+    };
+
+    webScssAction.do?.(dictionary as any, { buildPath } as any, {} as never, {} as never);
+
+    const universalScss = fs.readFileSync(
+      path.join(buildPath, 'foundations', 'cdr-color-universal.scss'),
+      'utf8',
+    );
+    expect(universalScss).toContain('$cdr-surface-natural: #f8f7f2;');
+    expect(universalScss).toContain('$cdr-border-neutral: #cecac3;');
+    expect(universalScss).toContain('$cdr-text-neutral-bold: #312d27;');
+    expect(universalScss).toContain('$cdr-icon-brand: #143528;');
+  });
+
   it('preserves alpha from 8-digit hex in oklch declarations', () => {
     vi.spyOn(console, 'log').mockImplementation(() => {});
     vi.spyOn(console, 'warn').mockImplementation(() => {});

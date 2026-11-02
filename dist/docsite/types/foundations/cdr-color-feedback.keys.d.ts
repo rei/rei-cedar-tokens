@@ -4,7 +4,7 @@ export declare const CdrColorFeedbackKeys: readonly [
   "border-info",
   "border-info-faint",
   "border-natural",
-  "border-nautral-faint",
+  "border-natural-faint",
   "border-neutral-trace",
   "border-success",
   "border-success-faint",
@@ -46,7 +46,7 @@ export type CdrColorFeedbackKey =
   | "border-info"
   | "border-info-faint"
   | "border-natural"
-  | "border-nautral-faint"
+  | "border-natural-faint"
   | "border-neutral-trace"
   | "border-success"
   | "border-success-faint"

@@ -4,7 +4,7 @@ export type CdrColorFeedbackTokenName =
   | "CdrColorFeedbackBorderInfo"
   | "CdrColorFeedbackBorderInfoFaint"
   | "CdrColorFeedbackBorderNatural"
-  | "CdrColorFeedbackBorderNautralFaint"
+  | "CdrColorFeedbackBorderNaturalFaint"
   | "CdrColorFeedbackBorderNeutralTrace"
   | "CdrColorFeedbackBorderSuccess"
   | "CdrColorFeedbackBorderSuccessFaint"

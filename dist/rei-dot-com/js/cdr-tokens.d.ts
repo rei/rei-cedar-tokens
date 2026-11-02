@@ -619,7 +619,7 @@ export const CdrColorFeedbackSurfaceErrorFaint: string;
 export const CdrColorFeedbackSurfaceErrorTrace: string;
 export const CdrColorFeedbackSurfaceNeutralTrace: string;
 export const CdrColorFeedbackBorderNatural: string;
-export const CdrColorFeedbackBorderNautralFaint: string;
+export const CdrColorFeedbackBorderNaturalFaint: string;
 export const CdrColorFeedbackBorderInfo: string;
 export const CdrColorFeedbackBorderInfoFaint: string;
 export const CdrColorFeedbackBorderSuccess: string;

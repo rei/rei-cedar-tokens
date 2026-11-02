@@ -1,5 +1,11 @@
 export type CdrColorIconTokenName =
+  | "CdrColorIconAccentBold"
+  | "CdrColorIconAccentFaint"
+  | "CdrColorIconBrand"
   | "CdrColorIconDefault"
   | "CdrColorIconDisabled"
   | "CdrColorIconEmphasis"
-  | "CdrColorIconLink";
+  | "CdrColorIconLink"
+  | "CdrColorIconMembership"
+  | "CdrColorIconNatural"
+  | "CdrColorIconSale";

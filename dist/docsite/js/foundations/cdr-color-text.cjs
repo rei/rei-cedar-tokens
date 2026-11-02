@@ -10,4 +10,11 @@ module.exports = {
   CdrColorTextWarning: "#854714",
   CdrColorTextError: "#811823",
   CdrColorTextInfo: "#1b437e",
+  CdrColorTextNeutralBold: "#312d27",
+  CdrColorTextNeutralProminent: "#4c473e",
+  CdrColorTextNeutral: "#746e63",
+  CdrColorTextNeutralSubtle: "#d7d4ce",
+  CdrColorTextNeutralTrace: "#ffffff",
+  CdrColorTextAccent: "#e5fd9c",
+  CdrColorTextNatural: "#f8f7f2",
 };

@@ -26,9 +26,9 @@ export interface CdrColorFeedbackTokens {
   readonly CdrColorFeedbackBorderNatural: string;
   /**
    * @value #e6ddc9
-   * @cssvar --cdr-color-feedback-border-nautral-faint
+   * @cssvar --cdr-color-feedback-border-natural-faint
    */
-  readonly CdrColorFeedbackBorderNautralFaint: string;
+  readonly CdrColorFeedbackBorderNaturalFaint: string;
   /**
    * @value #ffffff
    * @cssvar --cdr-color-feedback-border-neutral-trace
