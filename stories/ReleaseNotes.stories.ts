@@ -35,6 +35,11 @@ const allReleaseNotes = releaseNotesData.allReleaseNotes || [];
 
 // Export each version as a named story
 // Only actual cedar-tokens releases are exported
+export const V15_0_0: StoryObj = createReleaseNoteStory(
+  '15.0.0',
+  allReleaseNotes.find((rn) => rn.version === '15.0.0')?.markdown || '',
+);
+
 export const V14_0_0: StoryObj = createReleaseNoteStory(
   '14.0.0',
   allReleaseNotes.find((rn) => rn.version === '14.0.0')?.markdown || releaseNotesData.markdown,
