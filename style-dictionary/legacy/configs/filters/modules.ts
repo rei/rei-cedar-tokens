@@ -1,5 +1,6 @@
 export const foundationsModulesName = [
   'breakpoint',
+  'color-background',
   'color-border',
   'color-icon',
   'color-text',

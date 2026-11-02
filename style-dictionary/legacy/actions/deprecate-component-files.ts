@@ -6,8 +6,7 @@ import { getDirname } from '../utils';
 
 const __dirname = getDirname(import.meta.url);
 
-const DEPRECATION_MESSAGE =
-  'Component tokens are deprecated and will be removed in a future release.';
+const DEPRECATION_MESSAGE = 'These tokens are deprecated and will be removed in a future release.';
 
 const getDeprecationHeader = (fileExtension: string): string => {
   if (fileExtension === '.css' || fileExtension === '.scss') {
@@ -32,10 +31,16 @@ export const deprecateComponentFiles = (sd: typeof StyleDictionary): void => {
       }
 
       const buildPath = path.join(__dirname, '../../../', config.buildPath);
-      const componentFiles = globSync('components/**/*.{css,scss,mjs,cjs,d.ts}', {
-        cwd: buildPath,
-        nodir: true,
-      });
+      const componentFiles = globSync(
+        [
+          'components/**/*.{css,scss,mjs,cjs,d.ts}',
+          'foundations/cdr-color-background.{css,scss,mjs,cjs,d.ts}',
+        ],
+        {
+          cwd: buildPath,
+          nodir: true,
+        },
+      );
 
       for (const relativePath of componentFiles) {
         const filePath = path.join(buildPath, relativePath);
