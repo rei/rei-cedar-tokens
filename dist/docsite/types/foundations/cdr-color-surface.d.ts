@@ -5,7 +5,7 @@ export interface CdrColorSurfaceTokens {
    */
   readonly CdrColorSurfaceBrand: string;
   /**
-   * @value #797119
+   * @value #7a7105
    * @cssvar --cdr-color-surface-brand-subtle
    */
   readonly CdrColorSurfaceBrandSubtle: string;
@@ -40,7 +40,7 @@ export interface CdrColorSurfaceTokens {
    */
   readonly CdrColorSurfaceNeutralTrace: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-surface-sale
    */
   readonly CdrColorSurfaceSale: string;

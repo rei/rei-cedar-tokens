@@ -25,7 +25,7 @@ export interface CdrColorActionTokens {
    */
   readonly CdrColorActionBorderNeutralProminent: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-action-border-sale
    */
   readonly CdrColorActionBorderSale: string;
@@ -65,7 +65,7 @@ export interface CdrColorActionTokens {
    */
   readonly CdrColorActionIconNeutralTrace: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-action-icon-sale
    */
   readonly CdrColorActionIconSale: string;
@@ -115,12 +115,12 @@ export interface CdrColorActionTokens {
    */
   readonly CdrColorActionSurfaceNeutralTrace: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-action-surface-sale
    */
   readonly CdrColorActionSurfaceSale: string;
   /**
-   * @value #ffe9e0
+   * @value #ffe9df
    * @cssvar --cdr-color-action-surface-sale-faint
    */
   readonly CdrColorActionSurfaceSaleFaint: string;
@@ -165,7 +165,7 @@ export interface CdrColorActionTokens {
    */
   readonly CdrColorActionTextNeutralTrace: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-action-text-sale
    */
   readonly CdrColorActionTextSale: string;

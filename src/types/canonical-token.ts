@@ -5,9 +5,22 @@ export interface TokenDocumentation {
   aliases?: string[];
 }
 
+export interface TokenDeprecation {
+  removedIn?: string;
+  migrateToToken?: string;
+  reason?: string | string[];
+}
+
+export interface TokenAccessibility {
+  AAA?: string[];
+  AA?: string[];
+}
+
 export interface CanonicalTokenExtensions {
   cedar?: {
     docs?: TokenDocumentation;
+    deprecation?: TokenDeprecation;
+    accessibility?: TokenAccessibility;
     [key: string]: unknown;
   };
   [key: string]: unknown;

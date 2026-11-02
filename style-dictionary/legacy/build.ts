@@ -46,8 +46,6 @@ import { fontFamilyQuotes } from './transforms/font/font-family-quotes';
 import { sizeRemOverride } from './transforms/size/rem-override';
 
 // ==== Include custom formats ====
-import { scssTypography } from './formats/scss-typography';
-import { scssMap } from './formats/scss-map';
 import { iosTextFormat } from './formats/ios/ios-text-format';
 import { figma as figmaFormat } from './formats/figma';
 import { typescriptModuleValues } from './formats/typescript-module-values';
@@ -57,9 +55,9 @@ import { typescriptTokenKeyUnion } from './formats/typescript-token-key-union';
 
 // ==== Include custom actions ====
 import { concatFiles } from './actions/concat-files';
-import { includeDisplayScss, includeQueriesFileScss } from './actions/include-utility-file';
 import { generateTypesBarrel } from './actions/generate-types-barrel';
 import { deprecateComponentFiles } from './actions/deprecate-component-files';
+import { emitUtilityFiles } from './actions/emit-utility-files';
 // ==== Include custom legacy filters ====
 import { colorBackgroundTokens } from './filters/legacy/color-background-tokens';
 import { colorBorderTokens } from './filters/legacy/color-border-tokens';
@@ -148,8 +146,6 @@ clamp(StyleDictionary);
 fontFamilyQuotes(StyleDictionary);
 
 // ==== Register custom formats ====
-scssTypography(StyleDictionary);
-scssMap(StyleDictionary);
 iosTextFormat(StyleDictionary);
 figmaFormat(StyleDictionary);
 typescriptModuleValues(StyleDictionary);
@@ -158,10 +154,9 @@ typescriptTokenNameUnion(StyleDictionary);
 typescriptTokenKeyUnion(StyleDictionary);
 // ==== Register custom actions ====
 concatFiles(StyleDictionary);
-includeDisplayScss(StyleDictionary);
-includeQueriesFileScss(StyleDictionary);
 generateTypesBarrel(StyleDictionary);
 deprecateComponentFiles(StyleDictionary);
+emitUtilityFiles(StyleDictionary);
 
 // ==== Register custom legacy filters ====
 colorBackgroundTokens(StyleDictionary);

@@ -13,7 +13,7 @@ export const CdrColorText = {
   CdrColorTextNeutralSubtle: "#d7d4ce",
   CdrColorTextNeutralTrace: "#ffffff",
   CdrColorTextPrimary: "rgba(46, 46, 43, 0.9)",
-  CdrColorTextSale: "#d44703",
+  CdrColorTextSale: "#d93f00",
   CdrColorTextSecondary: "#4b4a48",
   CdrColorTextSuccess: "#2e6b34",
   CdrColorTextWarning: "#854714",

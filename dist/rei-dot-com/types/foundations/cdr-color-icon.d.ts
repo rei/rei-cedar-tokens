@@ -1,6 +1,6 @@
 export interface CdrColorIconTokens {
   /**
-   * @value #797119
+   * @value #7a7105
    * @cssvar --cdr-color-icon-accent-bold
    */
   readonly CdrColorIconAccentBold: string;
@@ -49,7 +49,7 @@ export interface CdrColorIconTokens {
    */
   readonly CdrColorIconNatural: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-icon-sale
    */
   readonly CdrColorIconSale: string;

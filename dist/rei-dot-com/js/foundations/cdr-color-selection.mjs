@@ -1,0 +1,12 @@
+export const CdrColorSelectionSurfaceNatural = "#f4f0e6";
+export const CdrColorSelectionSurfaceNeutral = "#eae7e4";
+export const CdrColorSelectionSurfaceNeutralSubtle = "#f1f0ed";
+export const CdrColorSelectionSurfaceNeutralFaint = "#f7f7f5";
+export const CdrColorSelectionSurfaceNeutralTrace = "#ffffff";
+export const CdrColorSelectionBorderTrigger = "#3d6db9";
+export const CdrColorSelectionBorderNeutral = "#8e887d";
+export const CdrColorSelectionBorderNeutralSubtle = "#979187";
+export const CdrColorSelectionBorderNeutralFaint = "#cecac3";
+export const CdrColorSelectionTextTrigger = "#3d6db9";
+export const CdrColorSelectionTextNeutral = "#4c473e";
+export const CdrColorSelectionTextNeutralFaint = "#746e63";

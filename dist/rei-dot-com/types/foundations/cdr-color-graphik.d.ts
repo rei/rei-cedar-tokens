@@ -5,7 +5,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicBorderAccent: string;
   /**
-   * @value #797119
+   * @value #7a7105
    * @cssvar --cdr-color-graphic-border-accent-bold
    */
   readonly CdrColorGraphicBorderAccentBold: string;
@@ -45,7 +45,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicBorderRating: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-graphic-border-sale
    */
   readonly CdrColorGraphicBorderSale: string;
@@ -55,7 +55,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicSurfaceAccent: string;
   /**
-   * @value #797119
+   * @value #7a7105
    * @cssvar --cdr-color-graphic-surface-accent-bold
    */
   readonly CdrColorGraphicSurfaceAccentBold: string;
@@ -100,7 +100,7 @@ export interface CdrColorGraphikTokens {
    */
   readonly CdrColorGraphicSurfaceRatingFaint: string;
   /**
-   * @value #d44703
+   * @value #d93f00
    * @cssvar --cdr-color-graphic-surface-sale
    */
   readonly CdrColorGraphicSurfaceSale: string;

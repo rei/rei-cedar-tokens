@@ -91,6 +91,7 @@
     "prepublishOnly": "pnpm run build",
     "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
     "tokens:normalize": "tsx src/normalization/normalize.ts",
+    "tokens:snapshot": "tsx src/snapshot.ts",
     "build:base-types": "tsx ./style-dictionary/legacy/generate-base-types.ts",
     "build:tokens": "pnpm run clean && pnpm run build:base-types && pnpm run tokens:normalize && tsx ./style-dictionary/build.ts",
     "clean": "rimraf dist/",

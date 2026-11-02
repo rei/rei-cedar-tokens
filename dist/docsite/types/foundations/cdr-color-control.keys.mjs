@@ -13,6 +13,7 @@ export const CdrColorControlKeys = [
   "surface-natural",
   "surface-natural-bold",
   "surface-natural-faint",
+  "surface-natural-subtle",
   "surface-neutral",
   "surface-neutral-bold",
   "surface-neutral-faint",

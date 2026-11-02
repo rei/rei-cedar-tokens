@@ -1,4 +1,5 @@
 @forward "./foundations/cdr-breakpoint";
+@forward "./foundations/cdr-color-background";
 @forward "./foundations/cdr-color-action";
 @forward "./foundations/cdr-color-border";
 @forward "./foundations/cdr-color-control";
@@ -25,6 +26,12 @@
 @forward "./foundations/cdr-text-line-height";
 @forward "./foundations/cdr-type";
 @forward "./foundations/cdr-color-universal";
+@forward "./intents/cdr-border";
+@forward "./intents/cdr-icon";
+@forward "./intents/cdr-surface";
+@forward "./intents/cdr-text";
+@forward "./intents/cdr-text-emphasis";
+
 @forward "./components/cdr-accordion";
 @forward "./components/cdr-button";
 @forward "./components/cdr-chip";
@@ -43,6 +50,3 @@
 @forward "./components/cdr-table";
 @forward "./components/cdr-toggle-button";
 @forward "./components/cdr-tooltip";
-@forward "./utilities/cdr-breakpoint-mixins" hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg;
-@forward "./utilities/cdr-display-mixins";
-@forward "./utilities/cdr-type-mixins";

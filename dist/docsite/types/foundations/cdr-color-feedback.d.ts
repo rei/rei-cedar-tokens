@@ -45,7 +45,7 @@ export interface CdrColorFeedbackTokens {
    */
   readonly CdrColorFeedbackBorderSuccessFaint: string;
   /**
-   * @value #8a6b00
+   * @value #8a6a00
    * @cssvar --cdr-color-feedback-border-warning
    */
   readonly CdrColorFeedbackBorderWarning: string;
@@ -60,10 +60,30 @@ export interface CdrColorFeedbackTokens {
    */
   readonly CdrColorFeedbackIconError: string;
   /**
+   * @value #257d81
+   * @cssvar --cdr-color-feedback-icon-info
+   */
+  readonly CdrColorFeedbackIconInfo: string;
+  /**
+   * @value #746e63
+   * @cssvar --cdr-color-feedback-icon-natural
+   */
+  readonly CdrColorFeedbackIconNatural: string;
+  /**
    * @value #ffffff
    * @cssvar --cdr-color-feedback-icon-neutral
    */
   readonly CdrColorFeedbackIconNeutral: string;
+  /**
+   * @value #3d8044
+   * @cssvar --cdr-color-feedback-icon-success
+   */
+  readonly CdrColorFeedbackIconSuccess: string;
+  /**
+   * @value #8a6a00
+   * @cssvar --cdr-color-feedback-icon-warning
+   */
+  readonly CdrColorFeedbackIconWarning: string;
   /**
    * @value #ffccc1
    * @cssvar --cdr-color-feedback-surface-error
@@ -140,7 +160,7 @@ export interface CdrColorFeedbackTokens {
    */
   readonly CdrColorFeedbackSurfaceWarning: string;
   /**
-   * @value #8a6b00
+   * @value #8a6a00
    * @cssvar --cdr-color-feedback-surface-warning-bold
    */
   readonly CdrColorFeedbackSurfaceWarningBold: string;
@@ -175,7 +195,7 @@ export interface CdrColorFeedbackTokens {
    */
   readonly CdrColorFeedbackTextSuccess: string;
   /**
-   * @value #8a6b00
+   * @value #8a6a00
    * @cssvar --cdr-color-feedback-text-warning
    */
   readonly CdrColorFeedbackTextWarning: string;

@@ -6,4 +6,11 @@ module.exports = {
   CdrColorBorderWarning: "#b68b37",
   CdrColorBorderError: "#bb4045",
   CdrColorBorderInfo: "#406eb5",
+  CdrColorBorderBrand: "#143528",
+  CdrColorBorderAccent: "#e5fd9c",
+  CdrColorBorderNeutralBold: "#8e887d",
+  CdrColorBorderNeutralProminent: "#979187",
+  CdrColorBorderNeutral: "#cecac3",
+  CdrColorBorderNeutralSubtle: "#d7d4ce",
+  CdrColorBorderNeutralTrace: "#ffffff",
 };

@@ -1,0 +1,150 @@
+[
+  {
+    "id": "rei-cedar-tokens/15.0.0/breaking/utility-map-removed",
+    "repo": "rei-cedar-tokens",
+    "changeType": "breaking",
+    "category": "build",
+    "subject": "scss/utility-map.scss removed from output",
+    "before": "dist/rei-dot-com/scss/utility-map.scss",
+    "after": null,
+    "resolvedValue": null,
+    "breaking": true,
+    "consumerActionRequired": true,
+    "consumerImpact": "@rei/cdr-tokens/scss/* deep imports of the aggregated Sass map return module-not-found",
+    "compatibilityRange": {
+      "safeFrom": "14.0.2",
+      "requiresMigrationFrom": "15.0.0"
+    },
+    "crossRepoImpact": null,
+    "visualImpact": "none",
+    "figmaAction": null,
+    "deprecation": null,
+    "affectedComponents": [],
+    "migrationSteps": [
+      "Replace map lookups with the individual $cdr-* variables, which are unchanged",
+      "Or migrate to the equivalent map provided by @rei/cedar when it ships"
+    ],
+    "signalSource": "intent"
+  },
+  {
+    "id": "rei-cedar-tokens/15.0.0/breaking/color-background-renamed",
+    "repo": "rei-cedar-tokens",
+    "changeType": "breaking",
+    "category": "token",
+    "subject": "cdr-color-background family renamed to cdr-surface taxonomy",
+    "before": "--cdr-color-background-primary et al. (9 vars)",
+    "after": "--cdr-surface-*",
+    "resolvedValue": null,
+    "breaking": true,
+    "consumerActionRequired": false,
+    "consumerImpact": "Old variable names still emitted but marked @deprecated; they will be removed in the next major",
+    "compatibilityRange": {
+      "safeFrom": "14.0.2",
+      "requiresMigrationFrom": "16.0.0"
+    },
+    "crossRepoImpact": null,
+    "visualImpact": "minor",
+    "figmaAction": null,
+    "deprecation": {
+      "deprecated": true,
+      "replacement": "cdr-surface",
+      "sinceVersion": "15.0.0"
+    },
+    "affectedComponents": [],
+    "migrationSteps": [
+      "Swap --cdr-color-background-* for the matching --cdr-surface-* variable (see Tokens/Colors story)"
+    ],
+    "signalSource": "intent"
+  },
+  {
+    "id": "rei-cedar-tokens/15.0.0/breaking/android-output-removed",
+    "repo": "rei-cedar-tokens",
+    "changeType": "breaking",
+    "category": "platform",
+    "subject": "Android token output removed",
+    "before": "v14 Android outputs",
+    "after": null,
+    "resolvedValue": null,
+    "breaking": true,
+    "consumerActionRequired": true,
+    "consumerImpact": "Android consumers have no token output in v15; pin to v14",
+    "compatibilityRange": {
+      "safeFrom": "14.0.2",
+      "requiresMigrationFrom": "15.0.0"
+    },
+    "crossRepoImpact": {
+      "affectedRepo": "cedar-android-app",
+      "impactType": "breaking",
+      "description": "No Android artifacts ship in v15; re-enablement tracked in docs/tickets/android-reenablement.md",
+      "automatable": false
+    },
+    "visualImpact": "none",
+    "figmaAction": null,
+    "deprecation": null,
+    "affectedComponents": [],
+    "migrationSteps": ["Pin Android consumers to @rei/cdr-tokens@14"],
+    "signalSource": "intent"
+  },
+  {
+    "id": "rei-cedar-tokens/15.0.0/breaking/ios-output-reduced",
+    "repo": "rei-cedar-tokens",
+    "changeType": "breaking",
+    "category": "platform",
+    "subject": "iOS output reduced to typography tokens only",
+    "before": "v14 CdrColor/CdrSize outputs",
+    "after": "CedarText.swift only",
+    "resolvedValue": null,
+    "breaking": true,
+    "consumerActionRequired": true,
+    "consumerImpact": "iOS consumers needing colors/sizes must stay on v14; restoration tracked in docs/tickets/ios-canonical-migration.md",
+    "compatibilityRange": {
+      "safeFrom": "14.0.2",
+      "requiresMigrationFrom": "15.0.0"
+    },
+    "crossRepoImpact": {
+      "affectedRepo": "cedar-ios-app",
+      "impactType": "breaking",
+      "description": "Only text tokens ship for iOS in v15",
+      "automatable": false
+    },
+    "visualImpact": "none",
+    "figmaAction": null,
+    "deprecation": null,
+    "affectedComponents": [],
+    "migrationSteps": ["Pin iOS consumers to @rei/cdr-tokens@14 if CdrColor/CdrSize are required"],
+    "signalSource": "intent"
+  },
+  {
+    "id": "rei-cedar-tokens/15.0.0/deprecated/scss-utility-mixins",
+    "repo": "rei-cedar-tokens",
+    "changeType": "deprecated",
+    "category": "build",
+    "subject": "scss/utilities mixin files deprecated (breakpoint, display, type)",
+    "before": "scss/utilities/cdr-{breakpoint,display,type}-mixins.scss",
+    "after": "equivalents shipped by @rei/cedar",
+    "resolvedValue": null,
+    "breaking": false,
+    "consumerActionRequired": false,
+    "consumerImpact": "Files still resolve via @rei/cdr-tokens/scss/* but carry @deprecated headers; removal planned next major",
+    "compatibilityRange": {
+      "safeFrom": "15.0.0",
+      "requiresMigrationFrom": "16.0.0"
+    },
+    "crossRepoImpact": {
+      "affectedRepo": "rei-cedar",
+      "impactType": "additive",
+      "description": "Cedar will ship canonical replacements; tracked in docs/tickets/mixin-deprecation-cedar-handoff.md",
+      "automatable": false
+    },
+    "visualImpact": "none",
+    "figmaAction": null,
+    "deprecation": {
+      "deprecated": true,
+      "replacement": "@rei/cedar mixins",
+      "sinceVersion": "15.0.0"
+    },
+    "affectedComponents": [],
+    "migrationSteps": ["Migrate to the Cedar-provided mixins when they ship"],
+    "signalSource": "intent"
+  }
+]

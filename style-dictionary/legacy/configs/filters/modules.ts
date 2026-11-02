@@ -1,5 +1,6 @@
 export const foundationsModulesName = [
   'breakpoint',
+  'color-background',
   'color-border',
   'color-icon',
   'color-text',
@@ -75,3 +76,5 @@ export const componentModulesName = [
   'toggle-button',
   'tooltip',
 ];
+
+export const intentsModulesName = ['border', 'icon', 'surface', 'text-emphasis', 'text'];

@@ -8,7 +8,7 @@ import { describe, expect, it, beforeAll } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const DIST_ROOT = resolve(__dirname, '../dist/rei-dot-com');
+const DIST_ROOT = resolve(__dirname, '../../dist/rei-dot-com');
 const BP_MJS = resolve(DIST_ROOT, 'js/foundations/cdr-breakpoint.mjs');
 const BP_KEYS_MJS = resolve(DIST_ROOT, 'types/foundations/cdr-breakpoint.keys.mjs');
 const SPACE_MJS = resolve(DIST_ROOT, 'js/foundations/cdr-space.mjs');

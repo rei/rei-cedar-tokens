@@ -1,5 +1,5 @@
 export const CdrColorIcon = {
-  CdrColorIconAccentBold: "#797119",
+  CdrColorIconAccentBold: "#7a7105",
   CdrColorIconAccentFaint: "#e5fd9c",
   CdrColorIconBrand: "#143528",
   CdrColorIconDefault: "#958e83",
@@ -8,7 +8,7 @@ export const CdrColorIcon = {
   CdrColorIconLink: "#406eb5",
   CdrColorIconMembership: "#ffdb22",
   CdrColorIconNatural: "#f8f7f2",
-  CdrColorIconSale: "#d44703",
+  CdrColorIconSale: "#d93f00",
 };
 
 export default CdrColorIcon;

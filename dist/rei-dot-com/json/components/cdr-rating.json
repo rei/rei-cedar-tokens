@@ -137,6 +137,39 @@
           }
         }
       }
+    },
+    "graphic": {
+      "surface": {
+        "rating": {
+          "$value": "#ffd378",
+          "$type": "color",
+          "name": "cdr-color-graphic-surface-rating",
+          "attributes": {
+            "category": "color",
+            "type": "graphic",
+            "item": "surface",
+            "subitem": "rating",
+            "deprecated": false
+          }
+        }
+      },
+      "border": {
+        "rating": {
+          "$value": "#ba7b00",
+          "$type": "color",
+          "name": "cdr-color-graphic-border-rating",
+          "attributes": {
+            "category": "color",
+            "type": "graphic",
+            "item": "border",
+            "subitem": "rating",
+            "deprecated": false
+          },
+          "docs": {
+            "summary": "△ Large only: surface/neutral-intense (3.9:1), control/surface/neutral-intense (3.9:1), surface/brand (3.8:1); ✗ Avoid: graphic/surface/rating-bold (1.0:1), action/surface/neutral-bold (1.0:1), control/surface/neutral-prominent (1.0:1)"
+          }
+        }
+      }
     }
   }
 }

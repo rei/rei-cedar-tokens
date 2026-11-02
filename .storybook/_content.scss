@@ -24,6 +24,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 @use '../dist/docsite/scss/cdr-tokens' as *;
+@use './text-mixins' as *;
 
 // Tokens removed from the docsite SCSS bundle; preserve Storybook chrome values.
 $cdr-color-background-primary: #ffffff !default;

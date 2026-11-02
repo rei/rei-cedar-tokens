@@ -53,14 +53,8 @@
         }
       },
       "brand": {
-        "$value": "#1f513f",
+        "$value": "#143528",
         "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "Text set in our primary brand color"
-        },
         "name": "cdr-color-text-brand",
         "attributes": {
           "category": "color",
@@ -70,14 +64,8 @@
         }
       },
       "sale": {
-        "$value": "#c7370f",
+        "$value": "#d93f00",
         "$type": "color",
-        "docs": {
-          "category": "colors",
-          "type": "text",
-          "example": "color",
-          "description": "The color of sale text"
-        },
         "name": "cdr-color-text-sale",
         "attributes": {
           "category": "color",
@@ -185,6 +173,83 @@
           "category": "color",
           "type": "text",
           "item": "info",
+          "deprecated": false
+        }
+      },
+      "neutral-bold": {
+        "$value": "#312d27",
+        "$type": "color",
+        "name": "cdr-color-text-neutral-bold",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "neutral-bold",
+          "deprecated": false
+        }
+      },
+      "neutral-prominent": {
+        "$value": "#4c473e",
+        "$type": "color",
+        "name": "cdr-color-text-neutral-prominent",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "neutral-prominent",
+          "deprecated": false
+        }
+      },
+      "neutral": {
+        "$value": "#746e63",
+        "$type": "color",
+        "name": "cdr-color-text-neutral",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "neutral",
+          "deprecated": false
+        }
+      },
+      "neutral-subtle": {
+        "$value": "#d7d4ce",
+        "$type": "color",
+        "name": "cdr-color-text-neutral-subtle",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "neutral-subtle",
+          "deprecated": false
+        }
+      },
+      "neutral-trace": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "name": "cdr-color-text-neutral-trace",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "neutral-trace",
+          "deprecated": false
+        }
+      },
+      "accent": {
+        "$value": "#e5fd9c",
+        "$type": "color",
+        "name": "cdr-color-text-accent",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "accent",
+          "deprecated": false
+        }
+      },
+      "natural": {
+        "$value": "#f8f7f2",
+        "$type": "color",
+        "name": "cdr-color-text-natural",
+        "attributes": {
+          "category": "color",
+          "type": "text",
+          "item": "natural",
           "deprecated": false
         }
       }

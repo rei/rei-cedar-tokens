@@ -1,6 +1,6 @@
 export const CdrColorGraphik = {
   CdrColorGraphicBorderAccent: "#c5d82a",
-  CdrColorGraphicBorderAccentBold: "#797119",
+  CdrColorGraphicBorderAccentBold: "#7a7105",
   CdrColorGraphicBorderAccentFaint: "#e5fd9c",
   CdrColorGraphicBorderBrand: "#143528",
   CdrColorGraphicBorderMembership: "#ffdb22",
@@ -8,9 +8,9 @@ export const CdrColorGraphik = {
   CdrColorGraphicBorderNeutral: "#8e887d",
   CdrColorGraphicBorderNeutralBold: "#4c473e",
   CdrColorGraphicBorderRating: "#ba7b00",
-  CdrColorGraphicBorderSale: "#d44703",
+  CdrColorGraphicBorderSale: "#d93f00",
   CdrColorGraphicSurfaceAccent: "#c5d82a",
-  CdrColorGraphicSurfaceAccentBold: "#797119",
+  CdrColorGraphicSurfaceAccentBold: "#7a7105",
   CdrColorGraphicSurfaceAccentFaint: "#e5fd9c",
   CdrColorGraphicSurfaceBrand: "#143528",
   CdrColorGraphicSurfaceMembership: "#ffdb22",
@@ -19,7 +19,7 @@ export const CdrColorGraphik = {
   CdrColorGraphicSurfaceRating: "#ffd378",
   CdrColorGraphicSurfaceRatingBold: "#ba7b00",
   CdrColorGraphicSurfaceRatingFaint: "#fcfcfb",
-  CdrColorGraphicSurfaceSale: "#d44703",
+  CdrColorGraphicSurfaceSale: "#d93f00",
 };
 
 export default CdrColorGraphik;

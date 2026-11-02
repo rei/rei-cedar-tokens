@@ -198,7 +198,8 @@ export function tokenFilesFromLocalVariables(localVariablesResponse: GetLocalVar
     const collection = localVariableCollections[variable.variableCollectionId];
 
     collection.modes.forEach((mode) => {
-      const fileName = `${collection.name}.${mode.name}.json`;
+      const safeName = (name: string) => name.replace(/[\\/:*?"<>|]/g, '-');
+      const fileName = `${safeName(collection.name)}.${safeName(mode.name)}.json`;
 
       if (!tokenFiles[fileName]) {
         tokenFiles[fileName] = {};
