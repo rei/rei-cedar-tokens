@@ -168,52 +168,7 @@ function renderDts(values: IntentToken[]): string {
   return ['/* This file is auto-generated. Do not edit manually. */', '', ...lines, ''].join('\n');
 }
 
-function pascalCategory(category: string): string {
-  return toPascalName(category);
-}
-
-export function renderTypesMjs(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const objName = `CdrIntent${pascal}`;
-  const props = values
-    .map((token) => `  ${token.jsName}: ${JSON.stringify(token.value)},`)
-    .join('\n');
-  return `export const ${objName} = {\n${props}\n};\n\nexport default ${objName};\n`;
-}
-
-function renderTypesDts(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const objName = `CdrIntent${pascal}`;
-
-  const props = values
-    .map((token) => {
-      const cssVar = `--${token.cssName}`;
-      return `  /**\n   * @value ${token.value}\n   * @cssvar ${cssVar}\n   */\n  readonly ${token.jsName}: string;`;
-    })
-    .join('\n');
-
-  return `export interface ${objName} {\n${props}\n}\n\nexport declare const ${objName}: ${objName};\nexport default ${objName};\n`;
-}
-
-function renderOrderMjs(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const keys = values.map((token) => token.cssName.replace('cdr-color-', ''));
-  const objName = `CdrColor${pascal}Order`;
-  return `export const ${objName} = [\n${keys.map((k) => `  "${k}",`).join('\n')}\n];\n`;
-}
-
-function renderOrderDts(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const keys = values.map((token) => token.cssName.replace('cdr-color-', ''));
-  const objName = `CdrColor${pascal}Order`;
-  return `export declare const ${objName}: readonly [\n${keys.map((k) => `  "${k}",`).join('\n')}\n];\nexport type ${objName}Key = (typeof ${objName})[number];\n`;
-}
-
-function renderNamesDts(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const names = values.map((token) => `  | "${token.jsName}"`).join('\n');
-  return `export type CdrIntent${pascal}TokenName =\n${names};\n`;
-}
+type IntentBundle = Record<string, unknown>;
 
 function renderJson(values: IntentToken[]): string {
   const obj: Record<string, string> = {};
@@ -234,8 +189,6 @@ function renderFigma(values: IntentToken[]): string {
   }
   return JSON.stringify(obj, null, 2) + '\n';
 }
-
-type IntentBundle = Record<string, unknown>;
 
 function toCamelKey(value: string): string {
   const kebab = toKebab(value);
@@ -278,7 +231,10 @@ function renderJsValue(node: unknown, indent: string): string {
 }
 
 export function renderBundleMjs(bundle: IntentBundle): string {
-  return `export const CdrIntents = ${renderJsValue(bundle, '')};\n\nexport default CdrIntents;\n`;
+  const order = Object.keys(bundle)
+    .map((k) => `  "${k}",`)
+    .join('\n');
+  return `export const CdrIntents = ${renderJsValue(bundle, '')};\n\nexport const CdrIntentOrder = [\n${order}\n];\n\nexport default CdrIntents;\n`;
 }
 
 function renderTsType(node: unknown, indent: string): string {
@@ -297,8 +253,12 @@ export function renderBundleDts(bundle: IntentBundle): string {
     '',
     `export type CdrIntentsType = ${renderTsType(bundle, '')};`,
     '',
+    'export type CdrIntentKey = keyof CdrIntentsType;',
+    '',
     'export declare const CdrIntents: CdrIntentsType;',
     'export default CdrIntents;',
+    '',
+    `export declare const CdrIntentOrder: readonly CdrIntentKey[];`,
     '',
   ].join('\n');
 }
@@ -307,7 +267,6 @@ function writePlatformFiles(themeRoot: string, category: string, values: IntentT
   const cssDir = path.join(themeRoot, 'css', 'intents');
   const scssDir = path.join(themeRoot, 'scss', 'intents');
   const jsDir = path.join(themeRoot, 'js', 'intents');
-  const typesDir = path.join(themeRoot, 'types', 'intents');
   const jsonDir = path.join(themeRoot, 'json', 'intents');
   const figmaDir = path.join(themeRoot, 'figma', 'intents');
 
@@ -316,11 +275,6 @@ function writePlatformFiles(themeRoot: string, category: string, values: IntentT
   writeFile(path.join(jsDir, `cdr-${category}.mjs`), renderMjs(values));
   writeFile(path.join(jsDir, `cdr-${category}.cjs`), renderCjs(values));
   writeFile(path.join(jsDir, `cdr-${category}.d.ts`), renderDts(values));
-  writeFile(path.join(typesDir, `cdr-${category}.mjs`), renderTypesMjs(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.d.ts`), renderTypesDts(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.order.mjs`), renderOrderMjs(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.order.d.ts`), renderOrderDts(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.names.d.ts`), renderNamesDts(values, category));
   writeFile(path.join(jsonDir, `cdr-${category}.json`), renderJson(values));
   writeFile(path.join(figmaDir, `cdr-${category}.json`), renderFigma(values));
 }
@@ -377,36 +331,16 @@ function updateJsAggregate(themeRoot: string, values: IntentToken[], categories:
   }
 }
 
-function updateTypesBarrels(themeRoot: string, categories: string[]): void {
+function updateTypesBarrels(themeRoot: string, _categories: string[]): void {
   const typesDir = path.join(themeRoot, 'types');
   const files = ['index.d.ts', 'index.mjs', 'tokens.d.ts', 'tokens.mjs'];
   for (const file of files) {
     const filePath = path.join(typesDir, file);
     if (!fs.existsSync(filePath)) continue;
     const isMjs = file.endsWith('.mjs');
-    const lines =
-      categories
-        .map((cat) => {
-          const pascal = pascalCategory(cat);
-          const base = `CdrIntent${pascal}`;
-          const orderBase = `CdrColor${pascal}`;
-          if (isMjs) {
-            return [
-              `export { ${base} } from './intents/cdr-${cat}.mjs';`,
-              `export { ${orderBase}Order } from './intents/cdr-${cat}.order.mjs';`,
-            ].join('\n');
-          }
-          return [
-            `export { ${base} } from './intents/cdr-${cat}';`,
-            `export type { ${base}TokenName } from './intents/cdr-${cat}.names';`,
-            `export { ${orderBase}Order } from './intents/cdr-${cat}.order';`,
-            `export type { ${orderBase}OrderKey } from './intents/cdr-${cat}.order';`,
-          ].join('\n');
-        })
-        .join('\n') +
-      (isMjs
-        ? `\nexport { CdrIntents } from './intents/cdr-intents.mjs';\n`
-        : `\nexport { CdrIntents } from './intents/cdr-intents';\nexport type { CdrIntentsType } from './intents/cdr-intents';\n`);
+    const lines = isMjs
+      ? `export { CdrIntents, CdrIntentOrder } from './intents/cdr-intents.mjs';\n`
+      : `export { CdrIntents, CdrIntentOrder } from './intents/cdr-intents';\nexport type { CdrIntentsType, CdrIntentKey } from './intents/cdr-intents';\n`;
     insertAfterFoundations(filePath, lines);
   }
 }

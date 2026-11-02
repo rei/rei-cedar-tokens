@@ -54,9 +54,9 @@ import type {
   CdrTextSizeOrderKey as CdrTextSizeOrderKeyFromTypes,
 } from '@rei/cdr-tokens/types';
 
-// ─── Intent modules and bundles ───────────────────────────────────────────────
-import { CdrIntents, CdrIntentText } from '@rei/cdr-tokens';
-import type { CdrIntentsType, CdrIntentTextTokenName } from '@rei/cdr-tokens';
+// ─── Intent bundles ───────────────────────────────────────────────────────────
+import { CdrIntents, CdrIntentOrder } from '@rei/cdr-tokens';
+import type { CdrIntentsType, CdrIntentKey } from '@rei/cdr-tokens';
 import { CdrIntents as CdrIntentsFromTypes } from '@rei/cdr-tokens/types';
 
 // ─── Value shape assertions ───────────────────────────────────────────────────
@@ -159,20 +159,18 @@ const _linkBorderHover: string = CdrIntents.Link.border.hover;
 const _intents: CdrIntentsType = CdrIntentsFromTypes;
 void _intents;
 
-// Per-category intent module + its token-name union
-const _linkRestFromModule: string = CdrIntentText.CdrColorLinkRest;
-const _intentTextName: CdrIntentTextTokenName = 'CdrColorLinkRest';
+// Intent enumeration — CdrIntentOrder is the intent-name list for pickers
+const _intentNames: ReadonlyArray<CdrIntentKey> = CdrIntentOrder;
 
 // ─── Suppress unused variable warnings ───────────────────────────────────────
 void order;
 void CdrIntents;
-void CdrIntentText;
+void CdrIntentOrder;
 void _primarySurface;
 void _primaryTextEmphasis;
 void _linkRest;
 void _linkBorderHover;
-void _linkRestFromModule;
-void _intentTextName;
+void _intentNames;
 void _orderFromTypes;
 void _spaceScaleOrderFromTypes;
 void _textSizeOrderFromTypes;

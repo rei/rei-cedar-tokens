@@ -31,4 +31,11 @@ export const CdrIntents = {
   },
 };
 
+export const CdrIntentOrder = [
+  "Primary",
+  "Secondary",
+  "Brand",
+  "Link",
+];
+
 export default CdrIntents;

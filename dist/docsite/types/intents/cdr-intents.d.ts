@@ -33,5 +33,9 @@ export type CdrIntentsType = {
   };
 };
 
+export type CdrIntentKey = keyof CdrIntentsType;
+
 export declare const CdrIntents: CdrIntentsType;
 export default CdrIntents;
+
+export declare const CdrIntentOrder: readonly CdrIntentKey[];

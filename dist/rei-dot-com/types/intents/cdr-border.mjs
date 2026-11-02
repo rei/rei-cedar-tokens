@@ -1,9 +1,0 @@
-export const CdrIntentBorder = {
-  CdrColorBrandBorder: "#e5fd9c",
-  CdrColorLinkBorderActive: "#5889d6",
-  CdrColorLinkBorderHover: "#3d6db9",
-  CdrColorPrimaryBorder: "#cecac3",
-  CdrColorSecondaryBorder: "#979187",
-};
-
-export default CdrIntentBorder;

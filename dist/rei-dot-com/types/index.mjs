@@ -39,15 +39,5 @@ export { CdrType } from './foundations/cdr-type.mjs';
 export { CdrBreakpointOrder } from './foundations/cdr-breakpoint-order.mjs';
 export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order.mjs';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order.mjs';
-export { CdrIntentBorder } from './intents/cdr-border.mjs';
-export { CdrColorBorderOrder } from './intents/cdr-border.order.mjs';
-export { CdrIntentIcon } from './intents/cdr-icon.mjs';
-export { CdrColorIconOrder } from './intents/cdr-icon.order.mjs';
-export { CdrIntentSurface } from './intents/cdr-surface.mjs';
-export { CdrColorSurfaceOrder } from './intents/cdr-surface.order.mjs';
-export { CdrIntentText } from './intents/cdr-text.mjs';
-export { CdrColorTextOrder } from './intents/cdr-text.order.mjs';
-export { CdrIntentTextEmphasis } from './intents/cdr-text-emphasis.mjs';
-export { CdrColorTextEmphasisOrder } from './intents/cdr-text-emphasis.order.mjs';
-export { CdrIntents } from './intents/cdr-intents.mjs';
+export { CdrIntents, CdrIntentOrder } from './intents/cdr-intents.mjs';
 

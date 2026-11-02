@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   buildIntentsBundle,
   collectUiTokens,
+  renderBundleDts,
   renderBundleMjs,
-  renderTypesMjs,
 } from './intents-output';
 
 const fixture = {
@@ -38,15 +38,6 @@ describe('collectUiTokens', () => {
   });
 });
 
-describe('renderTypesMjs', () => {
-  it('names the exported object CdrIntent*, never CdrColor* (foundation collision guard)', () => {
-    const tokens = collectUiTokens(fixture).filter((t) => t.category === 'text');
-    const output = renderTypesMjs(tokens, 'text');
-    expect(output).toContain('export const CdrIntentText');
-    expect(output).not.toContain('export const CdrColorText');
-  });
-});
-
 describe('buildIntentsBundle', () => {
   it('bundles each intent with its coordinated category values', () => {
     const bundle = buildIntentsBundle(collectUiTokens(fixture));
@@ -78,10 +69,22 @@ describe('buildIntentsBundle', () => {
 });
 
 describe('renderBundleMjs', () => {
-  it('emits a CdrIntents export', () => {
+  it('emits CdrIntents and a CdrIntentOrder array of intent names', () => {
     const bundle = buildIntentsBundle(collectUiTokens(fixture));
     const output = renderBundleMjs(bundle);
     expect(output).toContain('export const CdrIntents');
     expect(output).toContain('Primary: {');
+    expect(output).toContain('export const CdrIntentOrder');
+    expect(output).toMatch(/CdrIntentOrder = \[\s*"Primary",\s*"Brand",\s*"Link",?\s*\]/s);
+  });
+});
+
+describe('renderBundleDts', () => {
+  it('emits CdrIntentsType and a CdrIntentKey union', () => {
+    const bundle = buildIntentsBundle(collectUiTokens(fixture));
+    const output = renderBundleDts(bundle);
+    expect(output).toContain('export type CdrIntentsType');
+    expect(output).toContain('export type CdrIntentKey = keyof CdrIntentsType');
+    expect(output).toContain('export declare const CdrIntentOrder');
   });
 });
