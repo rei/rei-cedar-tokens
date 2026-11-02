@@ -1,4 +1,4 @@
-export type CdrColorTextTokenName =
+export type CdrIntentTextTokenName =
   | "CdrColorBrandText"
   | "CdrColorLinkActive"
   | "CdrColorLinkRest"

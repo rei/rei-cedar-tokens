@@ -1,4 +1,4 @@
-export type CdrColorIconTokenName =
+export type CdrIntentIconTokenName =
   | "CdrColorBrandIcon"
   | "CdrColorPrimaryIcon"
   | "CdrColorSecondaryIcon";

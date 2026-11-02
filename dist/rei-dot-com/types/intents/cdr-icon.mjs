@@ -1,7 +1,7 @@
-export const CdrColorIcon = {
+export const CdrIntentIcon = {
   CdrColorBrandIcon: "#ffffff",
   CdrColorPrimaryIcon: "#4c473e",
   CdrColorSecondaryIcon: "#746e63",
 };
 
-export default CdrColorIcon;
+export default CdrIntentIcon;

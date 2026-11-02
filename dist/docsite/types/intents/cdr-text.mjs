@@ -1,4 +1,4 @@
-export const CdrColorText = {
+export const CdrIntentText = {
   CdrColorBrandText: "#ffffff",
   CdrColorLinkActive: "#5889d6",
   CdrColorLinkRest: "#3d6db9",
@@ -7,4 +7,4 @@ export const CdrColorText = {
   CdrColorSecondaryText: "#746e63",
 };
 
-export default CdrColorText;
+export default CdrIntentText;

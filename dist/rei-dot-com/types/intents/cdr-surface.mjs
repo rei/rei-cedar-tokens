@@ -1,7 +1,7 @@
-export const CdrColorSurface = {
+export const CdrIntentSurface = {
   CdrColorBrandSurface: "#143528",
   CdrColorPrimarySurface: "#ffffff",
   CdrColorSecondarySurface: "#f8f7f2",
 };
 
-export default CdrColorSurface;
+export default CdrIntentSurface;

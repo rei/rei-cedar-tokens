@@ -1,4 +1,4 @@
-export interface CdrColorIcon {
+export interface CdrIntentIcon {
   /**
    * @value #ffffff
    * @cssvar --cdr-color-brand-icon
@@ -16,5 +16,5 @@ export interface CdrColorIcon {
   readonly CdrColorSecondaryIcon: string;
 }
 
-export declare const CdrColorIcon: CdrColorIcon;
-export default CdrColorIcon;
+export declare const CdrIntentIcon: CdrIntentIcon;
+export default CdrIntentIcon;

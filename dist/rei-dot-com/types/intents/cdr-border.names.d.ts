@@ -1,4 +1,4 @@
-export type CdrColorBorderTokenName =
+export type CdrIntentBorderTokenName =
   | "CdrColorBrandBorder"
   | "CdrColorLinkBorderActive"
   | "CdrColorLinkBorderHover"

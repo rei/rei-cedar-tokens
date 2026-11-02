@@ -1,4 +1,4 @@
-export interface CdrColorBorder {
+export interface CdrIntentBorder {
   /**
    * @value #e5fd9c
    * @cssvar --cdr-color-brand-border
@@ -26,5 +26,5 @@ export interface CdrColorBorder {
   readonly CdrColorSecondaryBorder: string;
 }
 
-export declare const CdrColorBorder: CdrColorBorder;
-export default CdrColorBorder;
+export declare const CdrIntentBorder: CdrIntentBorder;
+export default CdrIntentBorder;

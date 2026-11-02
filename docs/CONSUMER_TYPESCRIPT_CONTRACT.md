@@ -187,6 +187,43 @@ const bg: Partial<CdrColorBackgroundTokens> = {
 - Public: module interfaces from theme-specific type barrels
 - Internal: generated interface fragments
 
+## 4) Intent Modules and Bundles
+
+### What it is
+
+Intents are coordinated color sets chosen by designers — `Primary`, `Secondary`, `Brand`, and `Link`. Each intent module (`CdrIntentText`, `CdrIntentBorder`, `CdrIntentIcon`, `CdrIntentSurface`, `CdrIntentTextEmphasis`) groups the intent values for one category; `CdrIntents` bundles all categories per intent in a single object.
+
+### Why it exists
+
+Picking an intent should be one choice, not four separate token lookups a consumer has to reassemble. The bundle shape is the contract for "apply the designer-approved set": text, icon, border, and surface stay coordinated by construction.
+
+### How to import it
+
+```ts
+import { CdrIntents, CdrIntentText } from '@rei/cdr-tokens/types';
+import type { CdrIntentsType, CdrIntentTextTokenName } from '@rei/cdr-tokens/types';
+```
+
+### How to use it
+
+```ts
+// Whole coordinated set in one reference
+const primary = CdrIntents.Primary;
+// { surface, text, icon, border, textEmphasis }
+
+// Link keeps its interaction states nested
+const link = CdrIntents.Link;
+// { text: { rest, active, visited }, border: { hover, active } }
+
+// Per-category modules when you only need one dimension
+const linkText = CdrIntentText.CdrColorLinkRest;
+```
+
+### Public vs internal
+
+- Public: `CdrIntents`, `CdrIntent*` modules and `CdrColor*Order` arrays re-exported by theme-specific type barrels
+- Internal: generated intent module source files under `types/intents/`
+
 ## Theme, Platform, Responsibility Model
 
 Consumers should treat tokens as dimensioned by:

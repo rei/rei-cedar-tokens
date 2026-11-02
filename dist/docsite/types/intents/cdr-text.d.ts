@@ -1,4 +1,4 @@
-export interface CdrColorText {
+export interface CdrIntentText {
   /**
    * @value #ffffff
    * @cssvar --cdr-color-brand-text
@@ -31,5 +31,5 @@ export interface CdrColorText {
   readonly CdrColorSecondaryText: string;
 }
 
-export declare const CdrColorText: CdrColorText;
-export default CdrColorText;
+export declare const CdrIntentText: CdrIntentText;
+export default CdrIntentText;

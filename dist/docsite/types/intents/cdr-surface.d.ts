@@ -1,4 +1,4 @@
-export interface CdrColorSurface {
+export interface CdrIntentSurface {
   /**
    * @value #143528
    * @cssvar --cdr-color-brand-surface
@@ -16,5 +16,5 @@ export interface CdrColorSurface {
   readonly CdrColorSecondarySurface: string;
 }
 
-export declare const CdrColorSurface: CdrColorSurface;
-export default CdrColorSurface;
+export declare const CdrIntentSurface: CdrIntentSurface;
+export default CdrIntentSurface;

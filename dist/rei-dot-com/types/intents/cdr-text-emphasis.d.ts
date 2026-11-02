@@ -1,4 +1,4 @@
-export interface CdrColorTextEmphasis {
+export interface CdrIntentTextEmphasis {
   /**
    * @value #312d27
    * @cssvar --cdr-color-primary-text-emphasis
@@ -6,5 +6,5 @@ export interface CdrColorTextEmphasis {
   readonly CdrColorPrimaryTextEmphasis: string;
 }
 
-export declare const CdrColorTextEmphasis: CdrColorTextEmphasis;
-export default CdrColorTextEmphasis;
+export declare const CdrIntentTextEmphasis: CdrIntentTextEmphasis;
+export default CdrIntentTextEmphasis;

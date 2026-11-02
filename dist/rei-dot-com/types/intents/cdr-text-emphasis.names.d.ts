@@ -1,2 +1,2 @@
-export type CdrColorTextEmphasisTokenName =
+export type CdrIntentTextEmphasisTokenName =
   | "CdrColorPrimaryTextEmphasis";

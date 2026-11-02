@@ -54,6 +54,11 @@ import type {
   CdrTextSizeOrderKey as CdrTextSizeOrderKeyFromTypes,
 } from '@rei/cdr-tokens/types';
 
+// ─── Intent modules and bundles ───────────────────────────────────────────────
+import { CdrIntents, CdrIntentText } from '@rei/cdr-tokens';
+import type { CdrIntentsType, CdrIntentTextTokenName } from '@rei/cdr-tokens';
+import { CdrIntents as CdrIntentsFromTypes } from '@rei/cdr-tokens/types';
+
 // ─── Value shape assertions ───────────────────────────────────────────────────
 
 // CdrSpace is a plain object — spot-check a known key
@@ -140,8 +145,34 @@ const _typedRadius: CdrRadiusTokens = CdrRadius;
 // CdrTextSizeTokens
 const _typedTextSize: CdrTextSizeTokens = CdrTextSize;
 
+// ─── Intent bundle shape assertions ──────────────────────────────────────────
+
+// Coordinated bundle — every category key present for a flat intent
+const _primarySurface: string = CdrIntents.Primary.surface;
+const _primaryTextEmphasis: string = CdrIntents.Primary.textEmphasis;
+
+// Link keeps interaction states nested
+const _linkRest: string = CdrIntents.Link.text.rest;
+const _linkBorderHover: string = CdrIntents.Link.border.hover;
+
+// Bundle type + root and ./types barrels agree
+const _intents: CdrIntentsType = CdrIntentsFromTypes;
+void _intents;
+
+// Per-category intent module + its token-name union
+const _linkRestFromModule: string = CdrIntentText.CdrColorLinkRest;
+const _intentTextName: CdrIntentTextTokenName = 'CdrColorLinkRest';
+
 // ─── Suppress unused variable warnings ───────────────────────────────────────
 void order;
+void CdrIntents;
+void CdrIntentText;
+void _primarySurface;
+void _primaryTextEmphasis;
+void _linkRest;
+void _linkBorderHover;
+void _linkRestFromModule;
+void _intentTextName;
 void _orderFromTypes;
 void _spaceScaleOrderFromTypes;
 void _textSizeOrderFromTypes;

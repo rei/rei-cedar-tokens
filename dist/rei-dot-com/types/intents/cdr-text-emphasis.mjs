@@ -1,5 +1,5 @@
-export const CdrColorTextEmphasis = {
+export const CdrIntentTextEmphasis = {
   CdrColorPrimaryTextEmphasis: "#312d27",
 };
 
-export default CdrColorTextEmphasis;
+export default CdrIntentTextEmphasis;
