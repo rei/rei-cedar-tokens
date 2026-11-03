@@ -1,5 +1,7 @@
 # Ticket: Ship Intents as Coordinated Bundles, Not Scattered Category Lookups
 
+**Status: Done — implemented in PR #313.** Shipped tighter than the original criteria: per-category intent modules were removed entirely (not just un-barreled), and the public surface is `CdrIntents` + `CdrIntentOrder` (+ `CdrIntentsType`/`CdrIntentKey`) exported from `.` and `./types`. The `CdrColorText` collision became moot — no per-category intent objects exist to collide.
+
 ## Goal
 
 An "intent" (Primary, Secondary, Brand, link) is supposed to be one choice that gives a consumer a coordinated, designer-approved set of colors — text, icon, border, surface — instead of them picking each one separately and risking a combination that was never designed to go together. Today the token output doesn't actually deliver that: intent values are split across separate category modules (one for text, one for border, one for icon, one for surface), so a consumer who wants "everything for Primary" still has to manually reach into four places and assemble it themselves — the exact thing intents were meant to replace. We want intents importable as a single bundle per intent name, reachable from the normal package import.

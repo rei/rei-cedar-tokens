@@ -17,4 +17,4 @@ The entire point of intents is that an author picks one semantic choice and gets
 
 ## Reference
 
-Related to two other tickets: `docs/tickets/intents-export-surface.md` (the TypeScript/JS side of grouping intents as coordinated bundles rather than by individual category) and `docs/tickets/mixin-deprecation-cedar-handoff.md` (both are part of moving CSS consumption patterns into Cedar rather than the token package). Existing convention to follow: `CdrSurface.module.scss`'s `[data-*]` attribute-selector pattern.
+Related to two other tickets: `docs/tickets/intents-export-surface.md` (**done, PR #313** — the TypeScript/JS side shipped as `CdrIntents` + `CdrIntentOrder`; this ticket is the CSS-side half of the same idea) and `docs/tickets/mixin-deprecation-cedar-handoff.md` (both are part of moving CSS consumption patterns into Cedar rather than the token package). Existing convention to follow: `CdrSurface.module.scss`'s `[data-*]` attribute-selector pattern.
