@@ -1,0 +1,24 @@
+# Ticket: Restore Sass Mixins as Deprecated, Hand Ownership to Cedar
+
+## Status: release blocker
+
+## Goal
+
+Teams building pages today use a set of Sass mixins (responsive breakpoints, typography styles, container/display helpers) that ship from the token package. We removed these outright. We want them back and working, marked as deprecated, while Cedar builds the long-term replacement — so no one's build breaks on upgrade, and there's a clear path forward.
+
+## Why this matters
+
+These mixins are relied on for everyday page-building (e.g. `@include cdr-sm-mq-up`). Deleting them with no warning and no replacement means any consumer upgrading immediately breaks, with no migration window. Mixins are also arguably the wrong thing for a _token_ package to own long-term — Cedar, as the component/web layer, should own how tokens get turned into usable CSS patterns. But that handoff needs to happen with an overlap period, not a cliff.
+
+## Acceptance Criteria
+
+- [ ] All previously-available mixins (breakpoint media queries, container queries, display/utility helpers, typography mixins) work again exactly as before.
+- [ ] Each one now warns at build time that it's deprecated and will move to Cedar, with a version/timeframe if known.
+- [ ] A corresponding story exists on the Cedar side to build the real replacement.
+- [ ] Nothing currently using these mixins breaks on upgrade.
+
+## Reference
+
+Full list of affected mixins and the deleted source files is in the PR discussion / git history if needed for implementation — not required reading to scope this ticket. There's also a previously started (unmerged) branch exploring a modern replacement for the typography mixins specifically, worth checking before rebuilding from scratch.
+
+Related, but separate scope: `docs/tickets/intent-css-attribute-selector.md` — a new CSS consumption pattern for intents (not a restoration of removed mixins), filed separately since it's net-new work rather than put-back-what-we-broke.
