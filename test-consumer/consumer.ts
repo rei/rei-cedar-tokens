@@ -54,6 +54,11 @@ import type {
   CdrTextSizeOrderKey as CdrTextSizeOrderKeyFromTypes,
 } from '@rei/cdr-tokens/types';
 
+// ─── Intent bundles ───────────────────────────────────────────────────────────
+import { CdrIntents, CdrIntentOrder } from '@rei/cdr-tokens';
+import type { CdrIntentsType, CdrIntentKey } from '@rei/cdr-tokens';
+import { CdrIntents as CdrIntentsFromTypes } from '@rei/cdr-tokens/types';
+
 // ─── Value shape assertions ───────────────────────────────────────────────────
 
 // CdrSpace is a plain object — spot-check a known key
@@ -140,8 +145,32 @@ const _typedRadius: CdrRadiusTokens = CdrRadius;
 // CdrTextSizeTokens
 const _typedTextSize: CdrTextSizeTokens = CdrTextSize;
 
+// ─── Intent bundle shape assertions ──────────────────────────────────────────
+
+// Coordinated bundle — every category key present for a flat intent
+const _primarySurface: string = CdrIntents.Primary.surface;
+const _primaryTextEmphasis: string = CdrIntents.Primary.textEmphasis;
+
+// Link keeps interaction states nested
+const _linkRest: string = CdrIntents.Link.text.rest;
+const _linkBorderHover: string = CdrIntents.Link.border.hover;
+
+// Bundle type + root and ./types barrels agree
+const _intents: CdrIntentsType = CdrIntentsFromTypes;
+void _intents;
+
+// Intent enumeration — CdrIntentOrder is the intent-name list for pickers
+const _intentNames: ReadonlyArray<CdrIntentKey> = CdrIntentOrder;
+
 // ─── Suppress unused variable warnings ───────────────────────────────────────
 void order;
+void CdrIntents;
+void CdrIntentOrder;
+void _primarySurface;
+void _primaryTextEmphasis;
+void _linkRest;
+void _linkBorderHover;
+void _intentNames;
 void _orderFromTypes;
 void _spaceScaleOrderFromTypes;
 void _textSizeOrderFromTypes;

@@ -12,7 +12,7 @@ const canonicalTokensPath = path.join(rootDir, 'canonical/tokens.json');
 const THEMES = ['rei-dot-com', 'docsite'];
 const KNOWN_CATEGORIES = ['surface', 'text', 'icon', 'border'];
 
-type IntentToken = {
+export type IntentToken = {
   path: string[];
   name: string;
   cssName: string;
@@ -72,7 +72,7 @@ function resolveColorValue(value: string, tokens: unknown): string {
   return value;
 }
 
-function getCategory(tokenPath: string[]): string {
+export function getCategory(tokenPath: string[]): string {
   const leaf = tokenPath[tokenPath.length - 1];
   const leafKebab = toKebab(leaf);
 
@@ -92,7 +92,7 @@ function getCategory(tokenPath: string[]): string {
   return leafKebab;
 }
 
-function collectUiTokens(tokens: unknown): IntentToken[] {
+export function collectUiTokens(tokens: unknown): IntentToken[] {
   const ui = (tokens as Record<string, unknown>)?.['UI'];
   if (!isRecord(ui)) {
     return [];
@@ -168,52 +168,7 @@ function renderDts(values: IntentToken[]): string {
   return ['/* This file is auto-generated. Do not edit manually. */', '', ...lines, ''].join('\n');
 }
 
-function pascalCategory(category: string): string {
-  return toPascalName(category);
-}
-
-function renderTypesMjs(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const objName = `CdrColor${pascal}`;
-  const props = values
-    .map((token) => `  ${token.jsName}: ${JSON.stringify(token.value)},`)
-    .join('\n');
-  return `export const ${objName} = {\n${props}\n};\n\nexport default ${objName};\n`;
-}
-
-function renderTypesDts(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const objName = `CdrColor${pascal}`;
-
-  const props = values
-    .map((token) => {
-      const cssVar = `--${token.cssName}`;
-      return `  /**\n   * @value ${token.value}\n   * @cssvar ${cssVar}\n   */\n  readonly ${token.jsName}: string;`;
-    })
-    .join('\n');
-
-  return `export interface ${objName} {\n${props}\n}\n\nexport declare const ${objName}: ${objName};\nexport default ${objName};\n`;
-}
-
-function renderOrderMjs(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const keys = values.map((token) => token.cssName.replace('cdr-color-', ''));
-  const objName = `CdrColor${pascal}Order`;
-  return `export const ${objName} = [\n${keys.map((k) => `  "${k}",`).join('\n')}\n];\n`;
-}
-
-function renderOrderDts(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const keys = values.map((token) => token.cssName.replace('cdr-color-', ''));
-  const objName = `CdrColor${pascal}Order`;
-  return `export declare const ${objName}: readonly [\n${keys.map((k) => `  "${k}",`).join('\n')}\n];\nexport type ${objName}Key = (typeof ${objName})[number];\n`;
-}
-
-function renderNamesDts(values: IntentToken[], category: string): string {
-  const pascal = pascalCategory(category);
-  const names = values.map((token) => `  | "${token.jsName}"`).join('\n');
-  return `export type CdrColor${pascal}TokenName =\n${names};\n`;
-}
+type IntentBundle = Record<string, unknown>;
 
 function renderJson(values: IntentToken[]): string {
   const obj: Record<string, string> = {};
@@ -235,11 +190,83 @@ function renderFigma(values: IntentToken[]): string {
   return JSON.stringify(obj, null, 2) + '\n';
 }
 
+function toCamelKey(value: string): string {
+  const kebab = toKebab(value);
+  return kebab.replace(/-([a-z])/g, (_, c: string) => c.toUpperCase());
+}
+
+export function buildIntentsBundle(uiTokens: IntentToken[]): IntentBundle {
+  const bundle: IntentBundle = {};
+
+  for (const token of uiTokens) {
+    const [, intentName, ...rest] = token.path;
+    if (!intentName || rest.length === 0) continue;
+    const intent = toPascalName(intentName);
+    const entry = (bundle[intent] ??= {});
+    const leaf = rest[0];
+
+    if (KNOWN_CATEGORIES.includes(toKebab(leaf)) || toKebab(leaf) === 'text-emphasis') {
+      (entry as Record<string, string>)[toCamelKey(leaf)] = token.value;
+    } else if (toKebab(leaf).startsWith('border')) {
+      const state = toCamelKey(leaf.replace(/^border[\s-]*/i, ''));
+      const borders = (entry['border'] ??= {});
+      (borders as Record<string, string>)[state] = token.value;
+    } else {
+      const texts = (entry['text'] ??= {});
+      (texts as Record<string, string>)[toCamelKey(leaf)] = token.value;
+    }
+  }
+
+  return bundle;
+}
+
+function renderJsValue(node: unknown, indent: string): string {
+  if (typeof node === 'string') {
+    return JSON.stringify(node);
+  }
+  const lines = Object.entries(node as Record<string, unknown>).map(
+    ([key, val]) => `${indent}  ${key}: ${renderJsValue(val, indent + '  ')},`,
+  );
+  return `{\n${lines.join('\n')}\n${indent}}`;
+}
+
+export function renderBundleMjs(bundle: IntentBundle): string {
+  const order = Object.keys(bundle)
+    .map((k) => `  "${k}",`)
+    .join('\n');
+  return `export const CdrIntents = ${renderJsValue(bundle, '')};\n\nexport const CdrIntentOrder = [\n${order}\n];\n\nexport default CdrIntents;\n`;
+}
+
+function renderTsType(node: unknown, indent: string): string {
+  if (typeof node === 'string') {
+    return 'string';
+  }
+  const lines = Object.entries(node as Record<string, unknown>).map(
+    ([key, val]) => `${indent}  readonly ${key}: ${renderTsType(val, indent + '  ')};`,
+  );
+  return `{\n${lines.join('\n')}\n${indent}}`;
+}
+
+export function renderBundleDts(bundle: IntentBundle): string {
+  return [
+    '/* This file is auto-generated. Do not edit manually. */',
+    '',
+    `export type CdrIntentsType = ${renderTsType(bundle, '')};`,
+    '',
+    'export type CdrIntentKey = keyof CdrIntentsType;',
+    '',
+    'export declare const CdrIntents: CdrIntentsType;',
+    'export default CdrIntents;',
+    '',
+    `export declare const CdrIntentOrder: readonly CdrIntentKey[];`,
+    '',
+  ].join('\n');
+}
+
 function writePlatformFiles(themeRoot: string, category: string, values: IntentToken[]): void {
   const cssDir = path.join(themeRoot, 'css', 'intents');
   const scssDir = path.join(themeRoot, 'scss', 'intents');
   const jsDir = path.join(themeRoot, 'js', 'intents');
-  const typesDir = path.join(themeRoot, 'types', 'intents');
   const jsonDir = path.join(themeRoot, 'json', 'intents');
   const figmaDir = path.join(themeRoot, 'figma', 'intents');
 
@@ -248,11 +275,6 @@ function writePlatformFiles(themeRoot: string, category: string, values: IntentT
   writeFile(path.join(jsDir, `cdr-${category}.mjs`), renderMjs(values));
   writeFile(path.join(jsDir, `cdr-${category}.cjs`), renderCjs(values));
   writeFile(path.join(jsDir, `cdr-${category}.d.ts`), renderDts(values));
-  writeFile(path.join(typesDir, `cdr-${category}.mjs`), renderTypesMjs(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.d.ts`), renderTypesDts(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.order.mjs`), renderOrderMjs(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.order.d.ts`), renderOrderDts(values, category));
-  writeFile(path.join(typesDir, `cdr-${category}.names.d.ts`), renderNamesDts(values, category));
   writeFile(path.join(jsonDir, `cdr-${category}.json`), renderJson(values));
   writeFile(path.join(figmaDir, `cdr-${category}.json`), renderFigma(values));
 }
@@ -309,27 +331,16 @@ function updateJsAggregate(themeRoot: string, values: IntentToken[], categories:
   }
 }
 
-function updateTypesBarrels(themeRoot: string, categories: string[]): void {
+function updateTypesBarrels(themeRoot: string, _categories: string[]): void {
   const typesDir = path.join(themeRoot, 'types');
   const files = ['index.d.ts', 'index.mjs', 'tokens.d.ts', 'tokens.mjs'];
   for (const file of files) {
     const filePath = path.join(typesDir, file);
     if (!fs.existsSync(filePath)) continue;
     const isMjs = file.endsWith('.mjs');
-    const lines =
-      categories
-        .map((cat) => {
-          const pascal = pascalCategory(cat);
-          const base = `CdrColor${pascal}`;
-          if (isMjs) {
-            return `export { ${base}Order } from './intents/cdr-${cat}.order.mjs';`;
-          }
-          return [
-            `export { ${base}Order } from './intents/cdr-${cat}.order';`,
-            `export type { ${base}OrderKey } from './intents/cdr-${cat}.order';`,
-          ].join('\n');
-        })
-        .join('\n') + '\n';
+    const lines = isMjs
+      ? `export { CdrIntents, CdrIntentOrder } from './intents/cdr-intents.mjs';\n`
+      : `export { CdrIntents, CdrIntentOrder } from './intents/cdr-intents';\nexport type { CdrIntentsType, CdrIntentKey } from './intents/cdr-intents';\n`;
     insertAfterFoundations(filePath, lines);
   }
 }
@@ -379,6 +390,12 @@ export function generateIntentOutputs(): void {
       allValues.push(...values);
       console.log(`  ✓ dist/${theme}/.../intents/cdr-${category}.* (${values.length} tokens)`);
     }
+
+    const bundle = buildIntentsBundle(uiTokens);
+    const typesDir = path.join(themeRoot, 'types', 'intents');
+    writeFile(path.join(typesDir, 'cdr-intents.mjs'), renderBundleMjs(bundle));
+    writeFile(path.join(typesDir, 'cdr-intents.d.ts'), renderBundleDts(bundle));
+    console.log(`  ✓ dist/${theme}/.../intents/cdr-intents.* (bundle)`);
 
     updateJsAggregate(themeRoot, allValues, categories);
     updateTypesBarrels(themeRoot, categories);

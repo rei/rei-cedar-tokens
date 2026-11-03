@@ -187,6 +187,46 @@ const bg: Partial<CdrColorBackgroundTokens> = {
 - Public: module interfaces from theme-specific type barrels
 - Internal: generated interface fragments
 
+## 4) Intent Bundles
+
+### What it is
+
+Intents are coordinated color sets chosen by designers — `Primary`, `Secondary`, `Brand`, and `Link`. `CdrIntents` is the only way intents are exposed: each key carries that intent's full set (surface, text, icon, border, textEmphasis) in one object. `CdrIntentOrder` is the ordered list of intent names for iterating intents in pickers and tooling.
+
+### Why it exists
+
+Picking an intent is meant to be a single designer-approved choice, not a set of per-category lookups a consumer reassembles (and can combine wrongly). Exposing intents only as bundles keeps the contract honest — the coordinated set is the unit, so text/icon/border/surface stay paired by construction. Mix-and-match across categories is what semantic tokens are for; intents deliberately don't support it.
+
+### How to import it
+
+```ts
+import { CdrIntents, CdrIntentOrder } from '@rei/cdr-tokens';
+import type { CdrIntentsType, CdrIntentKey } from '@rei/cdr-tokens';
+```
+
+### How to use it
+
+```ts
+// Whole coordinated set in one reference
+const primary = CdrIntents.Primary;
+// { surface, text, icon, border, textEmphasis }
+
+// Link keeps its interaction states nested
+const link = CdrIntents.Link;
+// { text: { rest, active, visited }, border: { hover, active } }
+
+// Enumerate available intents (e.g. to render a picker)
+for (const name of CdrIntentOrder) {
+  const set = CdrIntents[name];
+  // render one option per intent
+}
+```
+
+### Public vs internal
+
+- Public: `CdrIntents`, `CdrIntentOrder`, `CdrIntentsType`, `CdrIntentKey` re-exported by theme-specific type barrels
+- Internal: per-category intent CSS/SCSS files under `css|scss/intents/` feed the stylesheet layer — they are not part of the TypeScript import surface
+
 ## Theme, Platform, Responsibility Model
 
 Consumers should treat tokens as dimensioned by:

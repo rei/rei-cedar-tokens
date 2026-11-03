@@ -89,14 +89,6 @@ export { CdrSpaceScaleOrder } from './foundations/cdr-space-scale-order';
 export type { CdrSpaceScaleOrderKey } from './foundations/cdr-space-scale-order';
 export { CdrTextSizeOrder } from './foundations/cdr-text-size-order';
 export type { CdrTextSizeOrderKey } from './foundations/cdr-text-size-order';
-export { CdrColorBorderOrder } from './intents/cdr-border.order';
-export type { CdrColorBorderOrderKey } from './intents/cdr-border.order';
-export { CdrColorIconOrder } from './intents/cdr-icon.order';
-export type { CdrColorIconOrderKey } from './intents/cdr-icon.order';
-export { CdrColorSurfaceOrder } from './intents/cdr-surface.order';
-export type { CdrColorSurfaceOrderKey } from './intents/cdr-surface.order';
-export { CdrColorTextOrder } from './intents/cdr-text.order';
-export type { CdrColorTextOrderKey } from './intents/cdr-text.order';
-export { CdrColorTextEmphasisOrder } from './intents/cdr-text-emphasis.order';
-export type { CdrColorTextEmphasisOrderKey } from './intents/cdr-text-emphasis.order';
+export { CdrIntents, CdrIntentOrder } from './intents/cdr-intents';
+export type { CdrIntentsType, CdrIntentKey } from './intents/cdr-intents';
 
