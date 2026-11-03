@@ -52,11 +52,13 @@ Recommended improvements to get the most out of this update.
 
 Brand new capabilities available in this release.
 
-- [ ] **New:** Intent token modules — coordinated Primary/Secondary/Brand/link color sets:
+- [ ] **New:** Intent bundles — coordinated Primary/Secondary/Brand/Link color sets in one object:
 
   ```typescript
-  import '@rei/cdr-tokens/css/intents/cdr-text';
-  // or in SCSS: @use '@rei/cdr-tokens/rei-dot-com/scss/intents/cdr-text';
+  import { CdrIntents, CdrIntentOrder } from '@rei/cdr-tokens';
+
+  const primary = CdrIntents.Primary;
+  // { surface, text, icon, border, textEmphasis }
   ```
 
 - [ ] **New:** Universal semantic layer — `--cdr-surface-*`, `--cdr-border-*`, `--cdr-text-*`, `--cdr-icon-*` covering all 163 canonical semantic colors:
@@ -86,9 +88,9 @@ This release enables the following new capabilities:
   **Business value:** Faster design-to-dev handoff → fewer spec misreads → fewer visual QA cycles.
   To get started: browse the Tokens/Colors stories in this Storybook — family and subcategory groupings match the Figma panel structure
 
-- **Intent color modules** — `cdr-border`, `cdr-icon`, `cdr-surface`, `cdr-text`, and `cdr-text-emphasis` intent outputs expose Primary/Secondary/Brand/link sets. Before this release, applying "the brand look" meant hand-picking 4 separate tokens and hoping the combination was legal. Now the legal combinations ship as data.
+- **Intent bundles** — `CdrIntents` exposes Primary/Secondary/Brand/Link as coordinated sets (surface, text, icon, border together), with `CdrIntentOrder` for enumerating intent names in pickers. Before this release, applying "the brand look" meant hand-picking 4 separate tokens and hoping the combination was legal. Now the legal combinations ship as data — and per-category mix-and-match is deliberately not exposed.
   **Business value:** Fewer arbitrary color combinations in production → more consistent brand application → less design-review churn.
-  To get started: `import { CdrColorTextOrder } from '@rei/cdr-tokens'` to enumerate available intents
+  To get started: `import { CdrIntents, CdrIntentOrder } from '@rei/cdr-tokens'`
 
 - **Universal semantic layer** — `cdr-color-universal` emits all 163 canonical semantic colors under `--cdr-surface-*`/`--cdr-border-*`/`--cdr-text-*`/`--cdr-icon-*`. Before this release, 7 canonical tokens (including `--cdr-border-neutral` and `--cdr-text-neutral-prominent`) never reached output at all. Now coverage is complete.
   **Business value:** No more gaps between the design spec and shipped tokens → fewer one-off hex overrides in product code.
@@ -145,7 +147,7 @@ This release enables the following new capabilities:
 ### Notices
 
 - **`node >= 24` is required** to build or consume this package's tooling; the engines field was raised this release
-- **Intent values are not yet barrel-exported** — `import { CdrColorPrimaryText } from '@rei/cdr-tokens'` won't resolve yet; intent _order_ arrays are exported, values are reachable via deep imports today. Root-level intent exports are tracked in `docs/tickets/intents-export-surface.md`
+- **Intents are exposed only as bundles** — `CdrIntents` gives each intent's coordinated set; there is intentionally no per-category intent import (mix-and-match is what semantic tokens are for). Use `CdrIntentOrder` to enumerate intent names
 - **Token descriptions/deprecation metadata don't reach output yet** — descriptions exist in the canonical data but are stripped at emit; tracked in `docs/tickets/token-metadata-emission.md`
 - **The release-notes generator's commit filter still drops `chore:`/`refactor:` commits** — some consumer-facing changes in this release wouldn't appear in auto-generated notes; tracked in `docs/tickets/commit-hygiene-release-notes-readiness.md`
 
