@@ -5,6 +5,22 @@
 Proposed — direction-setting. The manifest draft exists (`metadata/intents.json`);
 the sync, push, and audit machinery described here does not yet.
 
+## Governed paths
+
+Claims in this ADR depend on these paths; a commit touching them may invalidate the status below (see the `docs-drift` skill):
+
+- `metadata/intents.json`
+- `canonical/tokens.json` (legacy `UI` section — to be superseded by the manifest)
+- `style-dictionary/utils/intents-output.ts` (intents build output)
+- `src/sync/` (future push machinery; `sync:tokens-to-figma` does not push intents yet)
+- `dist/*/intents/` (generated outputs)
+
+## Implementation Status
+
+- **Done:** `metadata/intents.json` manifest draft exists.
+- **Done:** intents build output exists today via the legacy `UI` section → `style-dictionary/utils/intents-output.ts` → `dist/*/…/intents/cdr-*` + `figma/intents/cdr-*.json` stub.
+- **Not started:** migration of intent compositions out of `canonical/tokens.json` `UI` section into the manifest; push of intents to Figma via the variables API; per-platform usage-evidence auditors; build-time WCAG validation of intent compositions.
+
 ## TL;DR
 
 - Intent compositions ("Primary = this surface + this text + this border") move

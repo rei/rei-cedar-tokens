@@ -5,6 +5,21 @@
 Accepted (decision); normative grammar lives in
 [`docs/TOKEN_DESCRIPTION_CONTRACT.md`](../TOKEN_DESCRIPTION_CONTRACT.md).
 
+## Governed paths
+
+Claims in this ADR depend on these paths; a commit touching them may invalidate the status below (see the `docs-drift` skill):
+
+- `src/normalization/normalize-utils.ts` (`parseTokenDescription`, `parseTokenDeprecation`, accessibility parsing)
+- `src/sync/figma-to-tokens.ts`, `src/sync/tokens-to-figma.ts`
+- `docs/TOKEN_DESCRIPTION_CONTRACT.md`
+- `canonical/tokens.json`, `tokens/` (`$description` fields)
+
+## Implementation Status
+
+- **Done:** line-by-line `$description` parsing into `$extensions.cedar.{docs,deprecation,accessibility}` exists in `src/normalization/normalize-utils.ts`; unmatched prose becomes `docs.summary`.
+- **Done:** Figma → repo description sync (`src/sync/figma-to-tokens.ts` copies `variable.description` verbatim into `$description`).
+- **Ongoing (policy):** the "human guidance only, no authored contrast data" rule is enforced by convention + the contract doc, not by a validator. Descriptions violating the grammar are a known parser hazard (unrecognized `key:` lines append to the previous field) — no mechanical gate exists yet.
+
 ## TL;DR
 
 - The Figma variable `description` field is **consumer-facing tooltip text** —

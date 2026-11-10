@@ -11,6 +11,7 @@ import webJson from '../dist/rei-dot-com/json/web.json';
 
 interface RawTokenEntry {
   name: string;
+  attributes?: { deprecated?: boolean };
   docs?: {
     description?: string | { what?: string; when?: string; alternatives?: string[] };
   };
@@ -24,9 +25,9 @@ function flattenTokens(obj: unknown): RawTokenEntry[] {
     const entry = node as Record<string, unknown>;
 
     if (entry.$value !== undefined) {
-      const { name, docs } = entry;
+      const { name, docs, attributes } = entry;
       if (typeof name === 'string') {
-        tokens.push({ name, docs: docs as RawTokenEntry['docs'] });
+        tokens.push({ name, docs: docs as RawTokenEntry['docs'], attributes });
       }
       return;
     }
@@ -59,21 +60,26 @@ function formatDesc(
   return [d.what, d.when].filter(Boolean).join(' ');
 }
 
-const tokenMeta = new Map<string, { cssvar: string; description: string }>();
+const tokenMeta = new Map<string, { cssvar: string; description: string; deprecated: boolean }>();
 
 for (const token of flattenTokens(webJson)) {
   if (!token.name) continue;
   tokenMeta.set(toPascal(token.name), {
     cssvar: '--' + token.name,
     description: formatDesc(token.docs?.description),
+    deprecated: token.attributes?.deprecated === true,
   });
 }
 
-/** Get CSS custom property name and description for a JS token name.
- *  Returns empty strings when not found.
+/** Get CSS custom property name, description and deprecation flag for a JS
+ *  token name. Returns empty values when not found.
  */
-export function getMeta(jsName: string): { cssvar: string; description: string } {
-  return tokenMeta.get(jsName) ?? { cssvar: '', description: '' };
+export function getMeta(jsName: string): {
+  cssvar: string;
+  description: string;
+  deprecated: boolean;
+} {
+  return tokenMeta.get(jsName) ?? { cssvar: '', description: '', deprecated: false };
 }
 
 /** Get the CSS custom property name for a JS token name.
