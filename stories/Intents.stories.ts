@@ -84,12 +84,11 @@ export const Playground: Story = {
             if(typeof s.surface==='string'){
               p.style.background=s.surface; p.style.color=s.text;
               p.style.border='2px solid '+(s.border||s.text);
-              document.getElementById('ip-icon').setAttribute('fill',s.icon);
+              p.innerHTML='<div style=&quot;display:flex;align-items:center;gap:8px;font-family:Graphik,sans-serif;font-size:16px;font-weight:700;&quot;><svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;'+s.icon+'&quot;><path d=&quot;M10 2a8 8 0 100 16A8 8 0 0010 2zm.75 4.25h-1.5v4.5l3.75 2.25.75-1.23-3-1.77v-3.75z&quot;/></svg>'+this.value+' region</div><p style=&quot;font-family:Graphik,sans-serif;font-size:13px;line-height:1.6;margin:10px 0 0;&quot;>Every value — surface, text, icon, border — comes from <code style=&quot;font-family:Pressura,monospace;&quot;>CdrIntents.'+this.value+'</code>.</p>';
             } else {
               p.style.background='#fff'; p.style.color='#333';
               p.style.border='1px solid rgba(0,0,0,0.08)';
-              p.innerHTML='${name} is not a container — inline states only.';
-              document.getElementById('ip-name').textContent=this.value;
+              p.innerHTML=this.value+' is not a container — it styles elements by state: '+Object.keys(s.text||{}).map(function(st){return '<a href=&quot;#&quot; style=&quot;color:'+s.text[st]+';font-weight:600;&quot;>'+st+'</a>';}).join(', ')+'.';
             }
           ">
           ${options}
@@ -106,7 +105,7 @@ export const Playground: Story = {
         </p>
       </div>
       <div id="ip-legend" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;">
-        ${flattenSlots('Brand')
+        ${[...flattenSlots('Brand')]
           .map(
             ([slot, hex]) =>
               `<div style="display:flex;align-items:center;gap:8px;font-family:Pressura,monospace;font-size:10px;color:var(--cedar-warm-750);"><span style="width:20px;height:20px;border-radius:4px;border:1px solid rgba(0,0,0,0.1);background:${hex};"></span><span>${slot}</span><span style="opacity:0.6;">${hex}</span></div>`,

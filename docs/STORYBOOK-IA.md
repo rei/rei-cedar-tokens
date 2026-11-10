@@ -74,6 +74,15 @@ Cedar Tokens     — Semantic Diff (maintainer QA tool)
 - M3 dynamic-color generator; Carbon's dark docs chrome.
 - Folding palette/component tokens into the main contract pages (ADR 0001 forbids).
 
+## Guardrail
+
+`src/contract/storybook-stories.smoke.test.ts` calls every Tokens story's
+`render()` and asserts non-empty markup without throwing. Render-time failures
+(ReferenceError, bad template logic) still serve HTTP 200 — "it compiles" is
+never sufficient. Rule: any change to `stories/*` requires this spec green plus
+a real render check in the browser (iframe or MCP render tool) before claiming
+done. It caught a `Map.map()` bug and a dead-variable ReferenceError on day one.
+
 ## Known gaps / open questions
 
 - **SCSS-only consumers can't engage palettes** — palette switching is
