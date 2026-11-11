@@ -7,7 +7,8 @@ import { getDirname } from '../utils';
 const __dirname = getDirname(import.meta.url);
 
 const DEPRECATION_HEADER =
-  '/* @deprecated These utility mixins are deprecated and will be removed in a future major release. Migrate to the equivalent mixins provided by @rei/cedar. */\n';
+  '/* @deprecated These utility mixins are deprecated and will be removed in the next major release of @rei/cdr-tokens (v16). Migrate to the equivalent mixins provided by @rei/cedar. */\n' +
+  '@warn "[@rei/cdr-tokens] scss/utilities mixins are deprecated and will be removed in the next major release (v16). Migrate to the equivalent mixins provided by @rei/cedar.";\n';
 
 /**
  * Registers a Style Dictionary action that copies the deprecated SCSS utility
