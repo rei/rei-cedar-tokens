@@ -1,6 +1,11 @@
 # Ticket: Restore Sass Mixins as Deprecated, Hand Ownership to Cedar
 
-## Status: release blocker
+## Status: token-package side complete (PR #316); Cedar replacement still open
+
+All acceptance criteria below are satisfied on the `@rei/cdr-tokens` side. The
+release blocker now lives entirely on the Cedar side —
+`rei-cedar/docs/tickets/scss-mixin-replacement.md` must ship before the
+deprecated mixins can be removed in v16.
 
 ## Goal
 
@@ -12,10 +17,10 @@ These mixins are relied on for everyday page-building (e.g. `@include cdr-sm-mq-
 
 ## Acceptance Criteria
 
-- [ ] All previously-available mixins (breakpoint media queries, container queries, display/utility helpers, typography mixins) work again exactly as before.
-- [ ] Each one now warns at build time that it's deprecated and will move to Cedar, with a version/timeframe if known.
-- [ ] A corresponding story exists on the Cedar side to build the real replacement.
-- [ ] Nothing currently using these mixins breaks on upgrade.
+- [x] All previously-available mixins (breakpoint media queries, container queries, display/utility helpers, typography mixins) work again exactly as before. (Restored via `emit-utility-files.ts`; verified `cdr-sm-mq-up` compiles identically under Dart Sass.)
+- [x] Each one now warns at build time that it's deprecated and will move to Cedar, with a version/timeframe if known. (`@warn` naming v16, added in PR #316; verified end-to-end that `@use` prints the warning.)
+- [x] A corresponding story exists on the Cedar side to build the real replacement. (`rei-cedar/docs/tickets/scss-mixin-replacement.md`)
+- [x] Nothing currently using these mixins breaks on upgrade. (`@rei/cdr-tokens/scss/*` export paths unchanged; output CSS identical — verified.)
 
 ## Reference
 
