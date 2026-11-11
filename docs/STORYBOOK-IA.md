@@ -19,6 +19,8 @@ Tokens
   UI Intents     — value sets: curated multi-slot compositions (ADR 0007)
     Playground (interactive) · Reference
   Palette        — primitive ramps, internal ref layer (ADR 0001: not a contract)
+  (legacy)       — Typography · Spacing · BorderRadius · Breakpoints · Motion ·
+                   Prominence: pre-existing token pages, not yet re-tiered
 Guides
   Using tokens   — per-format consumption contracts (type/css/scss/js/json)
 Cedar Tokens     — Semantic Diff (maintainer QA tool)
@@ -76,15 +78,29 @@ Cedar Tokens     — Semantic Diff (maintainer QA tool)
 
 ## Guardrail
 
-`src/contract/storybook-stories.smoke.test.ts` calls every Tokens story's
-`render()` and asserts non-empty markup without throwing. Render-time failures
-(ReferenceError, bad template logic) still serve HTTP 200 — "it compiles" is
-never sufficient. Rule: any change to `stories/*` requires this spec green plus
-a real render check in the browser (iframe or MCP render tool) before claiming
-done. It caught a `Map.map()` bug and a dead-variable ReferenceError on day one.
+`src/contract/storybook-stories.smoke.test.ts` calls every story module's
+`render()` (all Tokens/_, Guides/_, Release Notes, Semantic Diff — 59 tests)
+and asserts non-empty markup without throwing. Two residual holes it cannot
+cover: (a) inline event handlers (`onchange` in Playground) — it caught a
+`Map.map()` bug and a dead-variable ReferenceError but the `ip-name` crash
+only fired in-browser on second interaction; (b) copy correctness — it checks
+shape, not claims. Rule: any change to `stories/*` requires this spec green
+plus a real render check in the browser (iframe or MCP render tool) before
+claiming done.
 
 ## Known gaps / open questions
 
+- **`color.surface.*` emits no CSS foundation file** — JS/types declare
+  `--cdr-color-surface-*` vars (`.d.ts` `@cssvar`) and docs now show them, but
+  no `css/foundations/cdr-color-surface.css` exists; the only surface CSS is
+  the deprecated `components/cdr-surface.css` (`--cdr-color-background-surface-*`).
+  Pipeline gap, not a docs bug — decide whether the family should emit a
+  foundations file or whether docs should down-label the tier. Found by the
+  content-designer audit (PR #315 review).
+- **Docs-time WCAG math vs. FOUNDATIONS §1.6** — previews compute ratios
+  client-side (`colors-shared.ts`); the contract fix is ticketed in
+  `docs/tickets/accessibility-metadata-in-contract.md`. Until it ships the
+  storybook is the math's only home — deliberate interim, not precedent.
 - **SCSS-only consumers can't engage palettes** — palette switching is
   `data-palette` + CSS vars; no SCSS-native map exists. Documented as a known
   gap on the SCSS guide; needs a contract-level decision (emit palette maps in

@@ -54,6 +54,9 @@ describe('storybook render smoke', () => {
           expect(html.length).toBeGreaterThan(200);
           expect(html).not.toContain('undefined is not');
           expect(html).not.toContain('[object Object]');
+          // Interpolated misses: a stray `undefined`/`NaN` rendered into
+          // markup (e.g. `>${undefined}<`) is a defect, not content.
+          expect(html).not.toMatch(/>\s*(undefined|NaN)\s*</);
         });
       }
     });

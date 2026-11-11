@@ -62,10 +62,20 @@ function formatDesc(
 
 const tokenMeta = new Map<string, { cssvar: string; description: string; deprecated: boolean }>();
 
+// The CSS pipeline drops `color-` for the renamed families
+// (cdr-color-action → --cdr-action-*) and graphik → graphic; web.json `name`
+// still carries `cdr-color-`. Derive the emitted var, not the JSON name.
+const emittedVar = (name: string): string =>
+  '--' +
+  name.replace(
+    /^cdr-color-(action|control|feedback|selection|graphik)-/,
+    (_m, f) => `cdr-${f === 'graphik' ? 'graphic' : f}-`,
+  );
+
 for (const token of flattenTokens(webJson)) {
   if (!token.name) continue;
   tokenMeta.set(toPascal(token.name), {
-    cssvar: '--' + token.name,
+    cssvar: emittedVar(token.name),
     description: formatDesc(token.docs?.description),
     deprecated: token.attributes?.deprecated === true,
   });

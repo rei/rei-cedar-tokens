@@ -561,7 +561,7 @@ export const Overview: Story = {
               ['json', '@rei/cdr-tokens/json', 'Tooling, pipelines, non-JS environments'],
               [
                 'intents',
-                'CdrIntents (@rei/cdr-tokens/types) · css/intents/* · scss/intents/*',
+                'CdrIntents (@rei/cdr-tokens/types) · rei-dot-com/css|scss/intents/*',
                 'Coordinated multi-slot color sets — Primary, Secondary, Brand, Link (ADR 0007)',
               ],
             ],
@@ -770,7 +770,7 @@ export const Type: Story = {
           heading: 'What it is',
           prose: [
             'The type contract exposes generated .d.ts definitions for Cedar token modules. These definitions describe the shape of semantic token objects and attach metadata directly to each property so your IDE can show it inline.',
-            'Every property in a Cedar .d.ts file carries three layers of JSDoc: a @value annotation with the resolved token value (e.g. #1f513f), a @cssvar annotation with the corresponding CSS custom property name (e.g. --cdr-color-text-brand), and a description that explains what the token is for.',
+            'Properties in a Cedar .d.ts file carry JSDoc annotations: a @value with the resolved token value (e.g. #143528) and a @cssvar with the corresponding CSS custom property name (e.g. --cdr-color-text-brand), plus an authored description where one exists.',
             'The .d.ts files exist alongside the runtime .mjs modules. The .mjs files contain values; the .d.ts files describe those values to TypeScript and surface the metadata in editors.',
           ],
         },
@@ -795,8 +795,7 @@ export const Type: Story = {
               language: 'ts',
               code: `export interface CdrColorTextTokens {
   /**
-   * Text set in our primary brand color
-   * @value #1f513f
+   * @value #143528
    * @cssvar --cdr-color-text-brand
    */
   readonly CdrColorTextBrand: string;
@@ -1107,7 +1106,7 @@ export const Css: Story = {
                 'One module per token family (color-text, color-background, space, …)',
               ],
               [
-                'css/intents/cdr-{surface|text|icon|border|text-emphasis}.css',
+                'rei-dot-com/css/intents/cdr-{surface|text|icon|border|text-emphasis}.css',
                 'UI intent slot variables (--cdr-color-{intent}-{slot})',
               ],
               [
@@ -1129,8 +1128,8 @@ export const Css: Story = {
               title: 'What the emitted CSS looks like',
               language: 'css',
               code: `:root {
-  --cdr-color-action: #2c6b45;            /* sRGB fallback */
-  --cdr-color-action: oklch(52% 0.08 155); /* P3-capable override */
+  --cdr-action-surface-sale: #d93f00;            /* sRGB fallback */
+  --cdr-action-surface-sale: oklch(58.994% 0.1988 36.71); /* P3-capable override */
 }`,
             },
           ],
@@ -1198,7 +1197,7 @@ export const Scss: Story = {
 .my-component {
   padding: 8px;
 
-  @include bp.cdr-md-mq {
+  @include bp.cdr-md-mq-up {
     padding: 16px;
   }
 }`,
@@ -1218,7 +1217,7 @@ export const Scss: Story = {
               ['scss/cdr-tokens.scss', 'All Cedar tokens as Sass values'],
               ['scss/utilities/cdr-breakpoint-mixins.scss', 'Breakpoint mixins'],
               ['scss/utilities/cdr-type-mixins.scss', 'Typography mixins'],
-              ['scss/intents/*', 'UI intent slot partials ($cdr-color-{intent}-{slot})'],
+              ['rei-dot-com/scss/intents/*', 'UI intent slot partials ($cdr-{intent}-{slot} vars)'],
             ],
           },
         },
@@ -1226,7 +1225,7 @@ export const Scss: Story = {
           id: 'color-gamut',
           heading: 'Color gamut note',
           prose: [
-            'SCSS variables hold the sRGB hex only — the OKLCH dual-declaration lives in the css contract. If your Sass pipeline must emit P3 values, reference the css modules or the json artifacts.',
+            'SCSS output mirrors the css contract: the renamed-prefix families (action, control, feedback, selection, graphic) emit oklch() values; the cdr-color-* families are sRGB hex.',
           ],
         },
         {

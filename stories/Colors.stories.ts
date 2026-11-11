@@ -134,7 +134,7 @@ export const AllTokens: Story = {
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
         ${sectionHeader('All color tokens', items.length, 'Stable contract')}
-        <input class="token-filter" type="search" placeholder="Filter by name, var, role or hex…"
+        <input class="token-filter" type="search" aria-label="Filter tokens by name, var, role or hex" placeholder="Filter by name, var, role or hex…"
           oninput="var q=this.value.toLowerCase();var n=0;this.closest('.sb-page').querySelectorAll('.alltokens-row').forEach(function(r){var hit=r.textContent.toLowerCase().indexOf(q)>-1;r.style.display=hit?'':'none';if(hit)n++});document.getElementById('atc').textContent=n+' shown';" />
         <span id="atc" style="font-family:Pressura,monospace;font-size:11px;color:var(--cedar-warm-600);margin-left:10px;">${items.length} shown</span>
         <table class="comp-table">
@@ -146,7 +146,7 @@ export const AllTokens: Story = {
           <code>--cdr-color-*</code> ·
           <code>CdrColor*</code> ·
           <code>$cdr-color-*</code> —
-          see <a href="index.html?path=/story/guides-using-tokens--choosing-a-contract" target="_top">Using tokens</a>
+          see <a href="index.html?path=/story/guides-using-tokens--overview" target="_top">Using tokens</a>
         </div>
       </div>
     </div>`;

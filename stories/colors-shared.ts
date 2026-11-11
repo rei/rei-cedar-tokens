@@ -194,8 +194,8 @@ export const chrome = `
     .ramp-strip { display: flex; gap: 2px; }
     .ramp-step { flex: 1; min-width: 40px; }
     .ramp-step-swatch { height: 56px; border: 1px solid rgba(0,0,0,0.06); }
-    .ramp-step-swatch:first-child { border-radius: 6px 0 0 6px; }
-    .ramp-step-swatch:last-child { border-radius: 0 6px 6px 0; }
+    .ramp-step:first-child .ramp-step-swatch { border-radius: 6px 0 0 6px; }
+    .ramp-step:last-child .ramp-step-swatch { border-radius: 0 6px 6px 0; }
     .ramp-step-label {
       font-family: Pressura, monospace;
       font-size: 10px;
@@ -704,13 +704,17 @@ export function sectionHeader(title: string, count?: number, tier?: string): str
  *  family across the three public entrypoints (ADR 0001), linking to the
  *  consumption guides. */
 export function shipsAs(familySlug: string, pascal: string): string {
+  // Renamed-prefix families emit cdr-{slug}-*, not cdr-color-{slug}-*.
+  const short = ['action', 'control', 'feedback', 'selection', 'graphic'];
+  const prefix = short.includes(familySlug) ? `cdr-${familySlug}` : `cdr-color-${familySlug}`;
+  const jsName = familySlug === 'graphic' ? 'Graphik' : pascal;
   return `
     <div class="ships-footer">
       <b>Ships as</b>&nbsp;
-      <code>--cdr-color-${familySlug}-*</code> ·
-      <code>CdrColor${pascal}*</code> ·
-      <code>$cdr-color-${familySlug}-*</code> —
-      see <a href="index.html?path=/story/guides-using-tokens--choosing-a-contract" target="_top">Using tokens</a>
+      <code>--${prefix}-*</code> ·
+      <code>CdrColor${jsName}*</code> ·
+      <code>$${prefix}-*</code> —
+      see <a href="index.html?path=/story/guides-using-tokens--overview" target="_top">Using tokens</a>
     </div>`;
 }
 
@@ -871,7 +875,7 @@ export const familyGuides: Record<string, { solves: string; do: string; dont: st
   },
   Graphic: {
     solves:
-      'Graphic (non-icon) roles — accents, brand marks, membership, rating and sale visuals. Typed import: CdrColorGraphik (legacy filename; the tokens themselves are --cdr-color-graphic-*).',
+      'Graphic (non-icon) roles — accents, brand marks, membership, rating and sale visuals. Typed import: CdrColorGraphik (legacy filename); the vars are --cdr-graphic-*.',
     do: 'Use for decorative and brand graphics with a defined role.',
     dont: 'Substitute them for text or icon families — separate contract, separate guarantees.',
   },

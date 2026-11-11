@@ -75,8 +75,7 @@ export const Playground: Story = {
           style="display:block;margin-top:6px;font-family:Pressura,monospace;font-size:13px;padding:6px 10px;border:1px solid var(--cedar-warm-300,#ccc);border-radius:6px;background:#fff;"
           onchange="
             var I=JSON.parse(this.dataset.intents), s=I[this.value];
-            var p=document.getElementById('ip-preview'), lg=document.getElementById('ip-legend'), nm=document.getElementById('ip-name');
-            nm.textContent=this.value;
+            var p=document.getElementById('ip-preview'), lg=document.getElementById('ip-legend');
             var flat=[];
             Object.keys(s).forEach(function(k){var v=s[k];
               if(typeof v==='string'){flat.push([k,v]);}else{Object.keys(v).forEach(function(st){flat.push([k+'.'+st,v[st]]);});}});
@@ -330,7 +329,7 @@ export const Reference: Story = {
             intent vars directly — <code>CdrSurface</code> applies the same coordinated
             values:
           </p>
-          <pre>&lt;CdrSurface background="brand"&gt;
+          <pre>&lt;CdrSurface background="brand-spruce"&gt;
   &lt;!-- content inherits the brand text/icon treatment --&gt;
 &lt;/CdrSurface&gt;</pre>
           <p>
@@ -369,7 +368,7 @@ export const Reference: Story = {
             </div>
             <div class="dodont-body">
               Surface, text, icon and border from the <b>same</b> intent, applied to the
-              container — <code>CdrSurface background="brand"</code> or the
+              container — <code>CdrSurface background="brand-spruce"</code> or the
               <code>--cdr-color-brand-*</code> set together.
             </div>
           </div>
@@ -432,8 +431,8 @@ export const Reference: Story = {
           <b>Ships as</b>&nbsp;
           <code>--cdr-color-{intent}-{slot}</code> (<code>@rei/cdr-tokens/css</code> intents) ·
           <code>CdrIntents</code> (<code>@rei/cdr-tokens/types</code>) ·
-          <code>@use</code> partials under <code>scss/intents/</code> —
-          see <a href="index.html?path=/story/guides-using-tokens--choosing-a-contract" target="_top">Using tokens</a>
+          <code>@use</code> partials under <code>rei-dot-com/scss/intents/</code> —
+          see <a href="index.html?path=/story/guides-using-tokens--overview" target="_top">Using tokens</a>
         </div>
       </div>
       ${
