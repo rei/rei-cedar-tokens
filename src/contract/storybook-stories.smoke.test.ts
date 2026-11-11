@@ -8,14 +8,32 @@
  * suffices. If a story ever needs a browser, move it to a Playwright spec.
  */
 import { describe, it, expect } from 'vitest';
+import * as borderRadius from '../../stories/BorderRadius.stories';
+import * as breakpoints from '../../stories/Breakpoints.stories';
 import * as colors from '../../stories/Colors.stories';
+import * as consumerContract from '../../stories/ConsumerTypeScriptContract.stories';
 import * as intents from '../../stories/Intents.stories';
+import * as motion from '../../stories/Motion.stories';
 import * as palette from '../../stories/Palette.stories';
+import * as prominence from '../../stories/Prominence.stories';
+import * as releaseNotes from '../../stories/ReleaseNotes.stories';
+import * as semanticDiff from '../../stories/SemanticDiff.stories';
+import * as spacing from '../../stories/Spacing.stories';
+import * as typography from '../../stories/Typography.stories';
 
 const suites: Record<string, Record<string, unknown>> = {
   'Tokens/UI Semantics': colors as unknown as Record<string, unknown>,
   'Tokens/UI Intents': intents as unknown as Record<string, unknown>,
   'Tokens/Palette': palette as unknown as Record<string, unknown>,
+  'Tokens/BorderRadius': borderRadius as unknown as Record<string, unknown>,
+  'Tokens/Breakpoints': breakpoints as unknown as Record<string, unknown>,
+  'Tokens/Motion': motion as unknown as Record<string, unknown>,
+  'Tokens/Prominence': prominence as unknown as Record<string, unknown>,
+  'Tokens/Spacing': spacing as unknown as Record<string, unknown>,
+  'Tokens/Typography': typography as unknown as Record<string, unknown>,
+  'Guides/Using tokens': consumerContract as unknown as Record<string, unknown>,
+  'Release Notes': releaseNotes as unknown as Record<string, unknown>,
+  'Semantic Diff': semanticDiff as unknown as Record<string, unknown>,
 };
 
 describe('storybook render smoke', () => {
