@@ -60,7 +60,10 @@ function formatDesc(
   return [d.what, d.when].filter(Boolean).join(' ');
 }
 
-const tokenMeta = new Map<string, { cssvar: string; description: string; deprecated: boolean }>();
+const tokenMeta = new Map<
+  string,
+  { cssvar: string; scssvar: string; description: string; deprecated: boolean }
+>();
 
 // The CSS pipeline drops `color-` for the renamed families
 // (cdr-color-action → --cdr-action-*) and graphik → graphic; web.json `name`
@@ -72,24 +75,34 @@ const emittedVar = (name: string): string =>
     (_m, f) => `cdr-${f === 'graphik' ? 'graphic' : f}-`,
   );
 
+// SCSS variables use the same naming as CSS but with $ prefix instead of --
+const emittedScssVar = (name: string): string =>
+  '$' +
+  name.replace(
+    /^cdr-color-(action|control|feedback|selection|graphik)-/,
+    (_m, f) => `cdr-${f === 'graphik' ? 'graphic' : f}-`,
+  );
+
 for (const token of flattenTokens(webJson)) {
   if (!token.name) continue;
   tokenMeta.set(toPascal(token.name), {
     cssvar: emittedVar(token.name),
+    scssvar: emittedScssVar(token.name),
     description: formatDesc(token.docs?.description),
     deprecated: token.attributes?.deprecated === true,
   });
 }
 
-/** Get CSS custom property name, description and deprecation flag for a JS
+/** Get CSS custom property name, SCSS variable name, description and deprecation flag for a JS
  *  token name. Returns empty values when not found.
  */
 export function getMeta(jsName: string): {
   cssvar: string;
+  scssvar: string;
   description: string;
   deprecated: boolean;
 } {
-  return tokenMeta.get(jsName) ?? { cssvar: '', description: '', deprecated: false };
+  return tokenMeta.get(jsName) ?? { cssvar: '', scssvar: '', description: '', deprecated: false };
 }
 
 /** Get the CSS custom property name for a JS token name.
@@ -97,6 +110,13 @@ export function getMeta(jsName: string): {
  */
 export function getCssVar(jsName: string): string {
   return getMeta(jsName).cssvar;
+}
+
+/** Get the SCSS variable name for a JS token name.
+ *  e.g. getScssVar('CdrColorTextPrimary') → '$cdr-color-text-primary'
+ */
+export function getScssVar(jsName: string): string {
+  return getMeta(jsName).scssvar;
 }
 
 /** Get the usage description for a JS token name. Returns '' if not found. */

@@ -14,11 +14,11 @@ import {
   familyGuides,
   allTokens,
   swatchCell,
-  compNameCell,
   previewCell,
   copyChip,
   type SemanticKind,
 } from './colors-shared';
+import { getMeta } from './token-metadata';
 
 const meta: Meta = {
   title: 'Tokens/UI Semantics',
@@ -119,24 +119,50 @@ export const AllTokens: Story = {
   name: 'All tokens',
   render: () => {
     const items = allTokens();
+
     const rows = items
-      .map(
-        ([key, val]) => `
-        <tr class="alltokens-row">
+      .map(([key, val]) => {
+        const { cssvar, scssvar, description, deprecated } = getMeta(key);
+        const desc = description
+          ? `<span class="token-desc"><b>Role:</b> ${description}</span>`
+          : '';
+        const dep = deprecated ? '<span class="dep-badge">deprecated</span>' : '';
+        return `
+        <tr class="alltokens-row" data-js="${key}" data-css="${cssvar}" data-scss="${scssvar}" data-desc="${description.replace(/"/g, '&quot;')}" data-dep="${deprecated}">
           <td class="swatch-col">${swatchCell(val)}</td>
-          <td>${compNameCell(key)}</td>
+          <td class="token-col">
+            ${copyChip('comp-token-name', key, key)}${dep}
+            ${cssvar ? copyChip('token-cssvar', cssvar, cssvar) : ''}
+            ${desc}
+          </td>
           <td class="preview-col">${previewCell(val, kindOf(key))}</td>
           <td class="comp-value value-col">${copyChip('comp-value', val, val)}</td>
-        </tr>`,
-      )
+        </tr>`;
+      })
       .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
         ${sectionHeader('All color tokens', items.length, 'Stable contract')}
-        <input class="token-filter" type="search" aria-label="Filter tokens by name, var, role or hex" placeholder="Filter by name, var, role or hex…"
-          oninput="var q=this.value.toLowerCase();var n=0;this.closest('.sb-page').querySelectorAll('.alltokens-row').forEach(function(r){var hit=r.textContent.toLowerCase().indexOf(q)>-1;r.style.display=hit?'':'none';if(hit)n++});document.getElementById('atc').textContent=n+' shown';" />
-        <span id="atc" style="font-family:Pressura,monospace;font-size:11px;color:var(--cedar-warm-600);margin-left:10px;">${items.length} shown</span>
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;">
+          <input class="token-filter" type="search" aria-label="Filter tokens by name, var, role or hex" placeholder="Filter by name, var, role or hex…"
+            oninput="var q=this.value.toLowerCase();var n=0;this.closest('.sb-page').querySelectorAll('.alltokens-row').forEach(function(r){var hit=r.textContent.toLowerCase().indexOf(q)>-1;r.style.display=hit?'':'none';if(hit)n++});document.getElementById('atc').textContent=n+' shown';" />
+          <span id="atc" style="font-family:Pressura,monospace;font-size:11px;color:var(--cedar-warm-600);">${items.length} shown</span>
+        </div>
+        <div style="display:flex;gap:16px;margin-bottom:16px;">
+          <label style="font-family:Graphik,sans-serif;font-size:12px;color:var(--cedar-warm-900);display:flex;align-items:center;gap:6px;">
+            <input type="radio" name="syntax" value="js" onchange="window.setSyntax('js')" />
+            <span>JS (CdrColor*)</span>
+          </label>
+          <label style="font-family:Graphik,sans-serif;font-size:12px;color:var(--cedar-warm-900);display:flex;align-items:center;gap:6px;">
+            <input type="radio" name="syntax" value="css" checked onchange="window.setSyntax('css')" />
+            <span>CSS (--cdr-*)</span>
+          </label>
+          <label style="font-family:Graphik,sans-serif;font-size:12px;color:var(--cedar-warm-900);display:flex;align-items:center;gap:6px;">
+            <input type="radio" name="syntax" value="scss" onchange="window.setSyntax('scss')" />
+            <span>SCSS ($cdr-*)</span>
+          </label>
+        </div>
         <table class="comp-table">
           <thead><tr><th></th><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
           <tbody>${rows}</tbody>
@@ -149,7 +175,27 @@ export const AllTokens: Story = {
           see <a href="index.html?path=/story/guides-using-tokens--overview" target="_top">Using tokens</a>
         </div>
       </div>
-    </div>`;
+    </div>
+    <script>
+      window.setSyntax = function(syntax) {
+        document.querySelectorAll('.alltokens-row').forEach(function(row) {
+          var js = row.dataset.js;
+          var css = row.dataset.css;
+          var scss = row.dataset.scss;
+          var desc = row.dataset.desc;
+          var dep = row.dataset.dep === 'true';
+          var primary = syntax === 'js' ? js : syntax === 'css' ? css : scss;
+          var secondary = syntax === 'js' ? css : syntax === 'css' ? css : scss;
+          var depHtml = dep ? '<span class="dep-badge">deprecated</span>' : '';
+          var descHtml = desc ? '<span class="token-desc"><b>Role:</b> ' + desc + '</span>' : '';
+          row.querySelector('.token-col').innerHTML =
+            '<button class="comp-token-name copy-chip" data-copy="' + primary + '" title="Click to copy ' + primary + '" onclick="if(navigator.clipboard){navigator.clipboard.writeText(this.dataset.copy)}">' + primary + '</button>' +
+            depHtml +
+            (secondary ? '<button class="token-cssvar copy-chip" data-copy="' + secondary + '" title="Click to copy ' + secondary + '" onclick="if(navigator.clipboard){navigator.clipboard.writeText(this.dataset.copy)}">' + secondary + '</button>' : '') +
+            descHtml;
+        });
+      };
+    </script>`;
   },
 };
 

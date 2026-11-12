@@ -8,6 +8,8 @@
  * suffices. If a story ever needs a browser, move it to a Playwright spec.
  */
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 import * as borderRadius from '../../stories/BorderRadius.stories';
 import * as breakpoints from '../../stories/Breakpoints.stories';
 import * as colors from '../../stories/Colors.stories';
@@ -61,4 +63,32 @@ describe('storybook render smoke', () => {
       }
     });
   }
+});
+
+describe('storybook configuration', () => {
+  it('main.ts includes required addons', () => {
+    const mainPath = resolve(__dirname, '../../.storybook/main.ts');
+    const mainContent = readFileSync(mainPath, 'utf-8');
+
+    // Required addons for Storybook to function correctly
+    expect(mainContent).toContain('@storybook/addon-docs');
+    expect(mainContent).toContain('@storybook/addon-mcp');
+  });
+
+  it('preview.ts has controls disabled globally', () => {
+    const previewPath = resolve(__dirname, '../../.storybook/preview.ts');
+    const previewContent = readFileSync(previewPath, 'utf-8');
+
+    // Controls should be disabled for reference pages
+    expect(previewContent).toContain('controls: { disable: true }');
+  });
+
+  it('preview.ts has docs enabled', () => {
+    const previewPath = resolve(__dirname, '../../.storybook/preview.ts');
+    const previewContent = readFileSync(previewPath, 'utf-8');
+
+    // Docs should be enabled for user guide section
+    expect(previewContent).toContain('docs: {');
+    expect(previewContent).not.toContain('docs: { disable: true }');
+  });
 });

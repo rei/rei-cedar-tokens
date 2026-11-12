@@ -80,13 +80,25 @@ Cedar Tokens     — Semantic Diff (maintainer QA tool)
 
 `src/contract/storybook-stories.smoke.test.ts` calls every story module's
 `render()` (all Tokens/_, Guides/_, Release Notes, Semantic Diff — 59 tests)
-and asserts non-empty markup without throwing. Two residual holes it cannot
-cover: (a) inline event handlers (`onchange` in Playground) — it caught a
-`Map.map()` bug and a dead-variable ReferenceError but the `ip-name` crash
-only fired in-browser on second interaction; (b) copy correctness — it checks
-shape, not claims. Rule: any change to `stories/*` requires this spec green
-plus a real render check in the browser (iframe or MCP render tool) before
-claiming done.
+and asserts non-empty markup without throwing. Additionally, it validates
+Storybook configuration to prevent accidental removal of required addons or
+misconfiguration of global parameters.
+
+Two residual holes it cannot cover: (a) inline event handlers (`onchange` in
+Playground) — it caught a `Map.map()` bug and a dead-variable ReferenceError
+but the `ip-name` crash only fired in-browser on second interaction; (b) copy
+correctness — it checks shape, not claims. Rule: any change to `stories/*` or
+`.storybook/*` requires this spec green plus a real render check in the browser
+(iframe or MCP render tool) before claiming done.
+
+## Configuration requirements
+
+The following Storybook configuration is enforced by tests and must not be
+removed or modified without updating the corresponding test:
+
+- `.storybook/main.ts` must include `@storybook/addon-docs` and `@storybook/addon-mcp`
+- `.storybook/preview.ts` must have `controls: { disable: true }` globally
+- `.storybook/preview.ts` must have docs enabled (not disabled) for the user guide section
 
 ## Known gaps / open questions
 
