@@ -1,17 +1,31 @@
 import type { StoryObj, Meta } from '@storybook/html-vite';
-import * as tokens from '../dist/rei-dot-com/js/cdr-tokens.mjs';
 import { CdrColorAction } from '../dist/rei-dot-com/types/foundations/cdr-color-action.mjs';
 import { CdrColorControl } from '../dist/rei-dot-com/types/foundations/cdr-color-control.mjs';
 import { CdrColorFeedback } from '../dist/rei-dot-com/types/foundations/cdr-color-feedback.mjs';
 import { CdrColorGraphik } from '../dist/rei-dot-com/types/foundations/cdr-color-graphik.mjs';
 import { CdrColorSelection } from '../dist/rei-dot-com/types/foundations/cdr-color-selection.mjs';
 import { CdrColorSurface } from '../dist/rei-dot-com/types/foundations/cdr-color-surface.mjs';
-import { getCssVar, getDesc } from './token-metadata';
+import {
+  chrome,
+  sectionHeader,
+  elementSection,
+  familyTokens,
+  flatFamily,
+  familyGuides,
+  allTokens,
+  swatchCell,
+  compNameCell,
+  previewCell,
+  copyChip,
+  type SemanticKind,
+} from './colors-shared';
 
 const meta: Meta = {
-  title: 'Tokens/Colors',
+  title: 'Tokens/UI Semantics',
   parameters: {
     layout: 'fullscreen',
+    // Reference pages are static — the addon panel only earns its place on
+    // interactive stories (see Tokens/UI Intents → Playground).
     controls: { disable: true },
   },
 };
@@ -19,646 +33,141 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// Sidebar order = element-level navigation (Carbon-style): users look tokens up
+// by the element they color — Surface, Text, Border, Icon — not by bundle order.
+// Each token table lives on exactly one page; Overview is the landing/index and
+// "All tokens" the exhaustive lookup table.
 
-type TokenEntry = [string, string];
-
-// ─── Shared chrome ────────────────────────────────────────────────────────────
-
-const chrome = `
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-
-    /* ── Section chrome ── */
-    .sb-section { margin-bottom: 64px; }
-    .sb-section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 24px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--cedar-warm-100);
-    }
-    .sb-section-title {
-      font-family: Stuart, 'Stuart fallback', Georgia, serif;
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--cedar-warm-1000);
-      margin: 0;
-      letter-spacing: -0.3px;
-    }
-    .sb-section-count {
-      font-family: Pressura, monospace;
-      font-size: 11px;
-      color: var(--cedar-warm-600);
-      background: var(--cedar-warm-100);
-      border-radius: 20px;
-      padding: 2px 8px;
-    }
-
-    /* ── Palette strip ── */
-    .palette-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-    .palette-chip {
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-      border: 1px solid rgba(0,0,0,0.08);
-      cursor: default;
-      position: relative;
-      flex-shrink: 0;
-    }
-    .palette-chip-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-    }
-
-    /* ── Semantic section: big swatches with label ── */
-    .semantic-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 12px;
-    }
-    .semantic-card {
-      display: flex;
-      flex-direction: column;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.07);
-    }
-    .semantic-swatch {
-      height: 80px;
-      position: relative;
-    }
-    .semantic-swatch-checker {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(45deg, #bbb 25%, transparent 25%),
-        linear-gradient(-45deg, #bbb 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #bbb 75%),
-        linear-gradient(-45deg, transparent 75%, #bbb 75%);
-      background-size: 10px 10px;
-      background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
-      opacity: 0.25;
-    }
-    .semantic-swatch-fill {
-      position: absolute;
-      inset: 0;
-    }
-    .semantic-info {
-      background: #fff;
-      padding: 8px 10px 10px;
-    }
-    .semantic-name {
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--cedar-warm-900);
-      margin-bottom: 2px;
-      line-height: 1.3;
-    }
-    .semantic-token {
-      font-family: Pressura, monospace;
-      font-size: 9px;
-      color: var(--cedar-warm-600);
-      line-height: 1.4;
-      word-break: break-all;
-    }
-    .semantic-value {
-      font-family: Pressura, monospace;
-      font-size: 9px;
-      color: var(--cedar-warm-600);
-      opacity: 0.75;
-      margin-top: 1px;
-    }
-
-    /* ── Component group tables ── */
-    .comp-section { margin-bottom: 48px; }
-    .comp-section-label {
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--cedar-warm-750);
-      margin: 0 0 10px;
-    }
-    .comp-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .comp-table thead tr {
-      border-bottom: 1px solid var(--cedar-warm-100);
-    }
-    .comp-table th {
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--cedar-warm-600);
-      padding: 4px 8px 8px;
-      text-align: left;
-    }
-    .comp-table th:first-child { padding-left: 0; }
-    .comp-table tbody tr {
-      border-bottom: 1px solid var(--cedar-warm-100);
-    }
-    .comp-table tbody tr:last-child { border-bottom: none; }
-    .comp-table td {
-      padding: 7px 8px;
-      vertical-align: middle;
-    }
-    .comp-table td:first-child { padding-left: 0; }
-    .comp-swatch-cell {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
-    }
-    .comp-swatch {
-      width: 28px;
-      height: 28px;
-      border-radius: 5px;
-      border: 1px solid rgba(0,0,0,0.07);
-      flex-shrink: 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .comp-swatch-checker {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(45deg, #ccc 25%, transparent 25%),
-        linear-gradient(-45deg, #ccc 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ccc 75%),
-        linear-gradient(-45deg, transparent 75%, #ccc 75%);
-      background-size: 8px 8px;
-      background-position: 0 0, 0 4px, 4px -4px, -4px 0;
-      opacity: 0.25;
-    }
-    .comp-swatch-fill {
-      position: absolute;
-      inset: 0;
-    }
-    .comp-token-name {
-      font-family: Pressura, monospace;
-      font-size: 11px;
-      color: var(--cedar-warm-1000);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      min-width: 0;
-    }
-    .comp-value {
-      font-family: Pressura, monospace;
-      font-size: 11px;
-      color: var(--cedar-warm-750);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .role-badge {
-      display: inline-block;
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      border-radius: 4px;
-      padding: 2px 6px;
-      white-space: nowrap;
-    }
-    .role-bg   { color: #2a5c3e; background: #d5ede6; }
-    .role-text { color: #1b437e; background: #ddeafb; }
-    .role-border { color: #5a3a00; background: #fdf0d0; }
-    .role-icon { color: #6b2121; background: #fce4e4; }
-
-    /* ── Token metadata ── */
-    .token-cssvar {
-      display: block;
-      font-family: Pressura, monospace;
-      font-size: 8px;
-      color: var(--cedar-warm-500);
-      margin-top: 2px;
-      opacity: 0.85;
-    }
-    .token-desc {
-      display: block;
-      font-family: Graphik, 'Graphik fallback', sans-serif;
-      font-size: 9px;
-      font-style: italic;
-      color: var(--cedar-warm-600);
-      line-height: 1.4;
-      margin-top: 2px;
-    }
-
-    /* ── Mobile tweaks ── */
-    @media (max-width: 480px) {
-      .comp-table .comp-value { display: none; }
-      .comp-table th:last-child { display: none; }
-    }
-  </style>
-`;
-
-// ─── Helpers ─────────────────────────────────────────────────────────────────
-
-function swatchCell(value: string): string {
-  return `
-    <div class="comp-swatch">
-      <div class="comp-swatch-checker"></div>
-      <div class="comp-swatch-fill" style="background:${value};"></div>
-    </div>`;
-}
-
-function semanticCard(label: string, tokenName: string, value: string): string {
-  const cssvar = getCssVar(tokenName);
-  const desc = getDesc(tokenName);
-  return `
-    <div class="semantic-card">
-      <div class="semantic-swatch">
-        <div class="semantic-swatch-checker"></div>
-        <div class="semantic-swatch-fill" style="background:${value};"></div>
-      </div>
-      <div class="semantic-info">
-        <div class="semantic-name">${label}</div>
-        <div class="semantic-token">${tokenName}</div>
-        <div class="semantic-value">${value}</div>
-        ${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}
-        ${desc ? `<span class="token-desc">${desc}</span>` : ''}
-      </div>
-    </div>`;
-}
-
-function roleBadge(role: string): string {
-  const cls =
-    role === 'Background'
-      ? 'role-bg'
-      : role === 'Text'
-        ? 'role-text'
-        : role === 'Border'
-          ? 'role-border'
-          : 'role-icon';
-  const short =
-    role === 'Background' ? 'bg' : role === 'Text' ? 'text' : role === 'Border' ? 'border' : 'icon';
-  return `<span class="role-badge ${cls}">${short}</span>`;
-}
-
-/** Render the token name + CSS var sub-line for a comp table row */
-function compNameCell(key: string): string {
-  const cssvar = getCssVar(key);
-  return `<div>
-    <span class="comp-token-name">${key}</span>
-    ${cssvar ? `<span class="token-cssvar">${cssvar}</span>` : ''}
-  </div>`;
-}
-
-function allTokens(): TokenEntry[] {
-  return Object.entries(tokens)
-    .filter(([key]) => key.startsWith('CdrColor'))
-    .map(([key, value]) => [key, String(value)]);
-}
-
-function getRole(key: string): string {
-  const m = key.match(/^CdrColor(Background|Text|Border|Icon)/);
-  return m ? m[1] : 'Other';
-}
-
-function getComponent(key: string): string {
-  const role = getRole(key);
-  const rest = key.replace(`CdrColor${role}`, '');
-  const m = rest.match(/^([A-Z][a-z]+(?:[A-Z][a-z]+)?)/);
-  return m ? m[1] : 'Other';
-}
-
-function sectionHeader(title: string, count: number): string {
-  return `
-    <div class="sb-section-header">
-      <h2 class="sb-section-title">${title}</h2>
-      <span class="sb-section-count">${count}</span>
-    </div>`;
-}
-
-// ─── Stories ─────────────────────────────────────────────────────────────────
-
-/** Full palette of unique color values */
-export const Palette: Story = {
-  name: 'Palette',
-  render: () => {
-    const entries = allTokens();
-    const unique = [...new Set(entries.map(([, v]) => v))].sort();
-
-    const chips = unique
-      .map(
-        (v) => `
-        <div class="palette-chip" title="${v}">
-          <div class="palette-chip-inner" style="background:${v};"></div>
-        </div>`,
-      )
-      .join('');
-
-    // Deduplicate for display: group by hue family manually
-    return `${chrome}<div class="sb-page">
-      <div class="sb-section">
-        ${sectionHeader('Unique Colors', unique.length)}
-        <p style="font-size:13px;color:var(--cedar-warm-750);margin:0 0 20px;line-height:1.6;">
-          ${entries.length} total tokens resolve to ${unique.length} unique color values across the Cedar design system.
-          Hover a chip to see the raw value.
-        </p>
-        <div class="palette-strip">${chips}</div>
-      </div>
-    </div>`;
+const FAMILIES: { name: string; story: string; items: [string, string, string][] }[] = [
+  { name: 'Surface', story: 'tokens-ui-semantics--surface', items: familyTokens(CdrColorSurface) },
+  { name: 'Text', story: 'tokens-ui-semantics--text', items: flatFamily('CdrColorText') },
+  { name: 'Border', story: 'tokens-ui-semantics--border', items: flatFamily('CdrColorBorder') },
+  { name: 'Icon', story: 'tokens-ui-semantics--icon', items: flatFamily('CdrColorIcon') },
+  { name: 'Action', story: 'tokens-ui-semantics--action', items: familyTokens(CdrColorAction) },
+  { name: 'Control', story: 'tokens-ui-semantics--control', items: familyTokens(CdrColorControl) },
+  {
+    name: 'Feedback',
+    story: 'tokens-ui-semantics--feedback',
+    items: familyTokens(CdrColorFeedback),
   },
-};
+  {
+    name: 'Selection',
+    story: 'tokens-ui-semantics--selection',
+    items: familyTokens(CdrColorSelection),
+  },
+  { name: 'Graphic', story: 'tokens-ui-semantics--graphic', items: familyTokens(CdrColorGraphik) },
+];
 
-/** Semantic color tokens — the small set designers use most */
-export const Semantic: Story = {
-  name: 'Semantic',
+/** Landing: what semantic tokens are + index into the element pages. */
+export const Overview: Story = {
+  name: 'Overview',
   render: () => {
-    const t = tokens as Record<string, string>;
-
-    const familyTokens = (source: Record<string, string>): [string, string, string][] =>
-      Object.entries(source)
-        .filter(([, v]) => typeof v === 'string')
-        .map(([key, value]) => [
-          key
-            .replace(/^CdrColor/, '')
-            .replace(/([A-Z])/g, ' $1')
-            .trim(),
-          key,
-          value,
-        ]);
-
-    const surfaceTokens: [string, string, string][] = familyTokens(CdrColorSurface);
-    const actionTokens: [string, string, string][] = familyTokens(CdrColorAction);
-    const controlTokens: [string, string, string][] = familyTokens(CdrColorControl);
-    const feedbackTokens: [string, string, string][] = familyTokens(CdrColorFeedback);
-    const graphikTokens: [string, string, string][] = familyTokens(CdrColorGraphik);
-    const selectionTokens: [string, string, string][] = familyTokens(CdrColorSelection);
-
-    const textTokens: [string, string, string][] = [
-      ['Primary text', 'CdrColorTextPrimary', t.CdrColorTextPrimary],
-      ['Secondary text', 'CdrColorTextSecondary', t.CdrColorTextSecondary],
-      ['Emphasis text', 'CdrColorTextEmphasis', t.CdrColorTextEmphasis],
-      ['Inverse text', 'CdrColorTextInverse', t.CdrColorTextInverse],
-      ['Disabled text', 'CdrColorTextDisabled', t.CdrColorTextDisabled],
-      ['Brand text', 'CdrColorTextBrand', t.CdrColorTextBrand],
-      ['Error text', 'CdrColorTextError', t.CdrColorTextError],
-      ['Warning text', 'CdrColorTextWarning', t.CdrColorTextWarning],
-      ['Success text', 'CdrColorTextSuccess', t.CdrColorTextSuccess],
-      ['Info text', 'CdrColorTextInfo', t.CdrColorTextInfo],
-      ['Sale text', 'CdrColorTextSale', t.CdrColorTextSale],
-    ];
-
-    const borderTokens: [string, string, string][] = [
-      ['Primary border', 'CdrColorBorderPrimary', t.CdrColorBorderPrimary],
-      ['Secondary border', 'CdrColorBorderSecondary', t.CdrColorBorderSecondary],
-      ['Error border', 'CdrColorBorderError', t.CdrColorBorderError],
-      ['Warning border', 'CdrColorBorderWarning', t.CdrColorBorderWarning],
-      ['Success border', 'CdrColorBorderSuccess', t.CdrColorBorderSuccess],
-      ['Info border', 'CdrColorBorderInfo', t.CdrColorBorderInfo],
-      ['Transparent', 'CdrColorBorderTransparent', t.CdrColorBorderTransparent],
-    ];
-
-    const iconTokens: [string, string, string][] = [
-      ['Default icon', 'CdrColorIconDefault', t.CdrColorIconDefault],
-      ['Emphasis icon', 'CdrColorIconEmphasis', t.CdrColorIconEmphasis],
-      ['Disabled icon', 'CdrColorIconDisabled', t.CdrColorIconDisabled],
-      ['Link icon', 'CdrColorIconLink', t.CdrColorIconLink],
-      ['Error icon', 'CdrColorIconMessageError', t.CdrColorIconMessageError],
-      ['Warning icon', 'CdrColorIconMessageWarning', t.CdrColorIconMessageWarning],
-      ['Success icon', 'CdrColorIconMessageSuccess', t.CdrColorIconMessageSuccess],
-      ['Info icon', 'CdrColorIconMessageInfo', t.CdrColorIconMessageInfo],
-    ];
-
-    const grid = (items: [string, string, string][]) =>
-      `<div class="semantic-grid">${items.map(([l, k, v]) => semanticCard(l, k, v)).join('')}</div>`;
-
-    const getSubcategory = (key: string): string => {
-      const m = key.replace(/^CdrColor/, '').match(/^([A-Z][a-z]+)([A-Z][a-z]+)/);
-      return m ? m[2] : 'Other';
-    };
-
-    const renderGroupedSection = (title: string, items: [string, string, string][]): string => {
-      const groups: Record<string, [string, string, string][]> = {};
-      items.forEach((item) => {
-        const sub = getSubcategory(item[1]);
-        if (!groups[sub]) groups[sub] = [];
-        groups[sub].push(item);
-      });
-
-      const subsections = Object.entries(groups)
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(
-          ([sub, group]) => `
-          <div class="comp-section" style="margin-bottom: 24px;">
-            <p class="comp-section-label">${sub} <span style="font-weight:400;opacity:0.6;">(${group.length})</span></p>
-            ${grid(group)}
-          </div>
-        `,
-        )
+    const indexCards = FAMILIES.map(({ name, story, items }) => {
+      // A representative swatch strip previews the family's contents —
+      // index cards must show color, not just label it.
+      const strip = items
+        .slice(0, 6)
+        .map(([, , v]) => `<span style="flex:1;height:18px;background:${v};"></span>`)
         .join('');
-
       return `
-        <div class="sb-section">
-          ${sectionHeader(title, items.length)}
-          ${subsections}
-        </div>`;
-    };
-
-    return `${chrome}<div class="sb-page">
-      ${renderGroupedSection('Surface', surfaceTokens)}
-      ${renderGroupedSection('Text', textTokens)}
-      ${renderGroupedSection('Border', borderTokens)}
-      ${renderGroupedSection('Icon', iconTokens)}
-      ${renderGroupedSection('Action', actionTokens)}
-      ${renderGroupedSection('Control', controlTokens)}
-      ${renderGroupedSection('Feedback', feedbackTokens)}
-      ${renderGroupedSection('Graphik', graphikTokens)}
-      ${renderGroupedSection('Selection', selectionTokens)}
-    </div>`;
-  },
-};
-
-/** All tokens organized by component group, showing role (bg/text/border/icon) per row */
-export const ByComponent: Story = {
-  name: 'By Component',
-  render: () => {
-    const entries = allTokens();
-
-    // Group by component
-    const groups: Record<string, TokenEntry[]> = {};
-    entries.forEach(([k, v]) => {
-      const comp = getComponent(k);
-      if (!groups[comp]) groups[comp] = [];
-      groups[comp].push([k, v]);
-    });
-
-    const sorted = Object.entries(groups).sort(([a], [b]) => a.localeCompare(b));
-
-    const sections = sorted
-      .map(([comp, rows]) => {
-        const tableRows = rows
-          .map(([key, val]) => {
-            const role = getRole(key);
-            return `
-              <tr>
-                <td>
-                  <div class="comp-swatch-cell">
-                    ${swatchCell(val)}
-                    ${compNameCell(key)}
-                  </div>
-                </td>
-                <td>${roleBadge(role)}</td>
-                <td class="comp-value">${val}</td>
-              </tr>`;
-          })
-          .join('');
-
-        return `
-          <div class="comp-section">
-            <p class="comp-section-label">${comp} <span style="font-weight:400;opacity:0.6;">(${rows.length})</span></p>
-            <table class="comp-table">
-              <thead>
-                <tr>
-                  <th>Token</th>
-                  <th>Role</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>${tableRows}</tbody>
-            </table>
-          </div>`;
-      })
-      .join('');
+        <a href="index.html?path=/story/${story}" target="_top" style="text-decoration:none;">
+          <div class="dodont-card" style="height:100%;">
+            <div style="display:flex;gap:2px;padding:0 0 2px;">${strip}</div>
+            <div class="dodont-body">
+              <b style="font-size:13px;color:var(--cedar-warm-1000);">${name} →</b>
+              <p style="margin:6px 0 0;color:var(--cedar-warm-750);">${familyGuides[name]?.solves ?? ''}</p>
+            </div>
+          </div>
+        </a>`;
+    }).join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader('All Color Tokens by Component', entries.length)}
-        ${sections}
+        ${sectionHeader('UI Semantics')}
+        <p class="sb-section-intro">
+          Semantic tokens are <b>single values</b> bound to a role — the stable, typed
+          contract (ADR 0001 §Foundations) that components and pages consume. Pick the
+          element you are coloring below or in the sidebar; each token carries its CSS
+          var and role note. For a coordinated multi-slot set, use
+          <a href="index.html?path=/story/tokens-ui-intents--reference" target="_top"><b>UI Intents</b></a> instead of
+          composing these by hand. Need one exhaustive list? See
+          <a href="index.html?path=/story/tokens-ui-semantics--all-tokens" target="_top"><b>All tokens</b></a>.
+        </p>
+        <div class="dodont-grid">${indexCards}</div>
       </div>
     </div>`;
   },
 };
 
-/* The cdr-color-action, control, feedback, graphik, selection and surface
-   families are rendered inside the Semantic story above. */
+/** Preview kind is derived from the token prefix — the element the color is for. */
+function kindOf(key: string): SemanticKind {
+  return key.startsWith('CdrColorText')
+    ? 'text'
+    : key.startsWith('CdrColorIcon')
+      ? 'icon'
+      : key.startsWith('CdrColorBorder')
+        ? 'border'
+        : 'fill';
+}
 
-/** Text tokens only */
-export const TextColors: Story = {
-  name: 'Text',
+/**
+ * All tokens — the exhaustive, filterable lookup table (Carbon's central
+ * pattern). Client-side filter over name / CSS var / role text via an inline
+ * handler, the only scripting that survives html-story rendering.
+ */
+export const AllTokens: Story = {
+  name: 'All tokens',
   render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorText'));
-
-    const tableRows = entries
+    const items = allTokens();
+    const rows = items
       .map(
         ([key, val]) => `
-        <tr>
-          <td>
-            <div class="comp-swatch-cell">
-              ${swatchCell(val)}
-              ${compNameCell(key)}
-            </div>
-          </td>
-          <td>
-            <span style="color:${val};font-family:Graphik,sans-serif;font-size:13px;font-weight:600;
-              text-shadow: 0 0 6px rgba(0,0,0,0.06);">
-              Aa
-            </span>
-          </td>
-          <td class="comp-value">${val}</td>
+        <tr class="alltokens-row">
+          <td class="swatch-col">${swatchCell(val)}</td>
+          <td>${compNameCell(key)}</td>
+          <td class="preview-col">${previewCell(val, kindOf(key))}</td>
+          <td class="comp-value value-col">${copyChip('comp-value', val, val)}</td>
         </tr>`,
       )
       .join('');
 
     return `${chrome}<div class="sb-page">
       <div class="sb-section">
-        ${sectionHeader('Text Colors', entries.length)}
+        ${sectionHeader('All color tokens', items.length, 'Stable contract')}
+        <input class="token-filter" type="search" aria-label="Filter tokens by name, var, role or hex" placeholder="Filter by name, var, role or hex…"
+          oninput="var q=this.value.toLowerCase();var n=0;this.closest('.sb-page').querySelectorAll('.alltokens-row').forEach(function(r){var hit=r.textContent.toLowerCase().indexOf(q)>-1;r.style.display=hit?'':'none';if(hit)n++});document.getElementById('atc').textContent=n+' shown';" />
+        <span id="atc" style="font-family:Pressura,monospace;font-size:11px;color:var(--cedar-warm-600);margin-left:10px;">${items.length} shown</span>
         <table class="comp-table">
-          <thead><tr><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
-          <tbody>${tableRows}</tbody>
+          <thead><tr><th></th><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
+          <tbody>${rows}</tbody>
         </table>
+        <div class="ships-footer">
+          <b>Ships as</b>&nbsp;
+          <code>--cdr-color-*</code> ·
+          <code>CdrColor*</code> ·
+          <code>$cdr-color-*</code> —
+          see <a href="index.html?path=/story/guides-using-tokens--overview" target="_top">Using tokens</a>
+        </div>
       </div>
     </div>`;
   },
 };
 
-/** Border tokens only */
-export const BorderColors: Story = {
-  name: 'Border',
-  render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorBorder'));
+const familyPage = (
+  name: string,
+  items: [string, string, string][],
+  kind: SemanticKind = 'fill',
+): Story => ({
+  name,
+  render: () => `${chrome}<div class="sb-page">${elementSection(name, items, kind)}</div>`,
+});
 
-    const tableRows = entries
-      .map(
-        ([key, val]) => `
-        <tr>
-          <td>
-            <div class="comp-swatch-cell">
-              ${swatchCell(val)}
-              ${compNameCell(key)}
-            </div>
-          </td>
-          <td>
-            <div style="width:48px;height:24px;border-radius:4px;border:2px solid ${val};"></div>
-          </td>
-          <td class="comp-value">${val}</td>
-        </tr>`,
-      )
-      .join('');
-
-    return `${chrome}<div class="sb-page">
-      <div class="sb-section">
-        ${sectionHeader('Border Colors', entries.length)}
-        <table class="comp-table">
-          <thead><tr><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
-          <tbody>${tableRows}</tbody>
-        </table>
-      </div>
-    </div>`;
-  },
-};
-
-/** Icon tokens only */
-export const IconColors: Story = {
-  name: 'Icon',
-  render: () => {
-    const entries = allTokens().filter(([k]) => k.startsWith('CdrColorIcon'));
-
-    const tableRows = entries
-      .map(
-        ([key, val]) => `
-        <tr>
-          <td>
-            <div class="comp-swatch-cell">
-              ${swatchCell(val)}
-              ${compNameCell(key)}
-            </div>
-          </td>
-          <td>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="${val}" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14.5A6.5 6.5 0 1110 3.5a6.5 6.5 0 010 13zm.75-10.25h-1.5v4.5l3.75 2.25.75-1.23-3-1.77v-3.75z"/>
-            </svg>
-          </td>
-          <td class="comp-value">${val}</td>
-        </tr>`,
-      )
-      .join('');
-
-    return `${chrome}<div class="sb-page">
-      <div class="sb-section">
-        ${sectionHeader('Icon Colors', entries.length)}
-        <table class="comp-table">
-          <thead><tr><th>Token</th><th>Preview</th><th>Value</th></tr></thead>
-          <tbody>${tableRows}</tbody>
-        </table>
-      </div>
-    </div>`;
-  },
-};
+export const Surface = familyPage('Surface', FAMILIES[0].items);
+export const Text = familyPage('Text', FAMILIES[1].items, 'text');
+export const Border = familyPage('Border', FAMILIES[2].items, 'border');
+export const Icon = familyPage('Icon', FAMILIES[3].items, 'icon');
+export const Action = familyPage('Action', FAMILIES[4].items);
+export const Control = familyPage('Control', FAMILIES[5].items);
+export const Feedback = familyPage('Feedback', FAMILIES[6].items);
+export const Selection = familyPage('Selection', FAMILIES[7].items);
+export const Graphic = familyPage('Graphic', FAMILIES[8].items);

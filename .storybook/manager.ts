@@ -12,6 +12,8 @@ addons.register('rei/release-notes', () => {
   addons.add('rei/release-notes/panel', {
     title: 'Release Notes',
     type: types.PANEL,
+    // Tab only appears on stories that set `parameters.releaseNotes.disable = false`
+    paramKey: 'releaseNotes',
     render: ({ active, key }) =>
       React.createElement(
         AddonPanel,

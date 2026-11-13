@@ -11,6 +11,8 @@ This document explains the TypeScript token tooling end-to-end:
 
 Decision-level contract details (consumer API boundaries and TokenDictionary acceptance) are defined in [ADR 0001](./adr/0001-modular-output-architecture.md).
 
+Description metadata contract and forward direction (generated descriptions, UI intents manifest, Figma sync) are defined in [ADR 0006](./adr/0006-figma-variable-description-contract.md), [ADR 0007](./adr/0007-ui-intents-manifest.md), and [TOKEN_DESCRIPTION_CONTRACT.md](./TOKEN_DESCRIPTION_CONTRACT.md).
+
 ## System At A Glance
 
 REI Cedar Tokens transforms source token JSON into platform-specific assets and TypeScript consumer surfaces.
