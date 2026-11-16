@@ -19,9 +19,9 @@ import * as motion from '../../stories/Motion.stories';
 import * as palette from '../../stories/Palette.stories';
 import * as prominence from '../../stories/Prominence.stories';
 import * as releaseNotes from '../../stories/ReleaseNotes.stories';
-import * as semanticDiff from '../../stories/SemanticDiff.stories';
 import * as spacing from '../../stories/Spacing.stories';
 import * as typography from '../../stories/Typography.stories';
+import * as semanticDiff from '../../stories/SemanticDiff.stories';
 
 const suites: Record<string, Record<string, unknown>> = {
   'Tokens/UI Semantics': colors as unknown as Record<string, unknown>,

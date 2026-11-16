@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from '@storybook/html-vite';
 
 // Snapshots are produced by `pnpm tokens:snapshot <baseline|current>`.
 // They live in .storybook/generated (gitignored) so they survive `pnpm build`.
-import baseline from '../.storybook/generated/snapshots/baseline.json';
-import current from '../.storybook/generated/snapshots/current.json';
+// Imports are dynamic to avoid module load failures when snapshots don't exist (e.g., in CI).
 
 const meta: Meta = {
   title: 'Cedar Tokens/Semantic Diff',
@@ -109,11 +108,6 @@ function renderValue(value: string, tokenType?: string): string {
   return value;
 }
 
-const diff = computeDiff(baseline, current);
-const changed = diff.filter((r) => r.type === 'changed');
-const added = diff.filter((r) => r.type === 'added');
-const removed = diff.filter((r) => r.type === 'removed');
-
 const styles = `
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -201,50 +195,71 @@ const styles = `
 export const LiveDiff: Story = {
   name: 'Live Diff',
   render: () => {
-    const summary = `
-      <div class="diff-header">
-        <h1 class="diff-title">Semantic token diff</h1>
-        <div class="diff-summary">
-          <span class="diff-count diff-count--changed">${changed.length} changed</span>
-          <span class="diff-count diff-count--added">${added.length} added</span>
-          <span class="diff-count diff-count--removed">${removed.length} removed</span>
+    try {
+      // Dynamic import to avoid module load failures when snapshots don't exist
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const baseline = require('../.storybook/generated/snapshots/baseline.json');
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const current = require('../.storybook/generated/snapshots/current.json');
+
+      const diff = computeDiff(baseline, current);
+      const changed = diff.filter((r) => r.type === 'changed');
+      const added = diff.filter((r) => r.type === 'added');
+      const removed = diff.filter((r) => r.type === 'removed');
+
+      const summary = `
+        <div class="diff-header">
+          <h1 class="diff-title">Semantic token diff</h1>
+          <div class="diff-summary">
+            <span class="diff-count diff-count--changed">${changed.length} changed</span>
+            <span class="diff-count diff-count--added">${added.length} added</span>
+            <span class="diff-count diff-count--removed">${removed.length} removed</span>
+          </div>
         </div>
-      </div>
-    `;
+      `;
 
-    if (diff.length === 0) {
-      return `${styles}<div class="diff-page">${summary}<div class="diff-empty">No changes between baseline and current snapshots.</div></div>`;
+      if (diff.length === 0) {
+        return `${styles}<div class="diff-page">${summary}<div class="diff-empty">No changes between baseline and current snapshots.</div></div>`;
+      }
+
+      const rows = diff
+        .map(
+          (row) => `
+          <tr>
+            <td class="diff-path">${row.path}</td>
+            <td class="diff-type diff-type--${row.type}">${row.type}</td>
+            <td class="diff-value">${renderValue(row.oldValue, row.tokenType)}</td>
+            <td class="diff-value">${renderValue(row.newValue, row.tokenType)}</td>
+          </tr>
+        `,
+        )
+        .join('');
+
+      const table = `
+        <div class="diff-table-wrap">
+          <table class="diff-table">
+            <thead>
+              <tr>
+                <th>Token path</th>
+                <th>Change</th>
+                <th>Baseline</th>
+                <th>Current</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+
+      return `${styles}<div class="diff-page">${summary}${table}</div>`;
+    } catch {
+      // Snapshots not available (e.g., in CI or before running pnpm tokens:snapshot)
+      return `${styles}<div class="diff-page">
+        <div class="diff-header">
+          <h1 class="diff-title">Semantic token diff</h1>
+        </div>
+        <div class="diff-empty">Snapshot files not found. Run <code>pnpm tokens:snapshot baseline</code> and <code>pnpm tokens:snapshot current</code> to generate them.</div>
+      </div>`;
     }
-
-    const rows = diff
-      .map(
-        (row) => `
-        <tr>
-          <td class="diff-path">${row.path}</td>
-          <td class="diff-type diff-type--${row.type}">${row.type}</td>
-          <td class="diff-value">${renderValue(row.oldValue, row.tokenType)}</td>
-          <td class="diff-value">${renderValue(row.newValue, row.tokenType)}</td>
-        </tr>
-      `,
-      )
-      .join('');
-
-    const table = `
-      <div class="diff-table-wrap">
-        <table class="diff-table">
-          <thead>
-            <tr>
-              <th>Token path</th>
-              <th>Change</th>
-              <th>Baseline</th>
-              <th>Current</th>
-            </tr>
-          </thead>
-          <tbody>${rows}</tbody>
-        </table>
-      </div>
-    `;
-
-    return `${styles}<div class="diff-page">${summary}${table}</div>`;
   },
 };
