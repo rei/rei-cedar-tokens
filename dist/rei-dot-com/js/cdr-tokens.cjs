@@ -726,6 +726,7 @@ module.exports = {
   CdrIconSizeSm: "16",
   CdrIconSize: "24",
   CdrIconSizeLg: "32",
+  CdrIconSizeMixin: "2.4rem",
   CdrDuration1X: "100ms",
   CdrDuration2X: "200ms",
   CdrDuration3X: "300ms",

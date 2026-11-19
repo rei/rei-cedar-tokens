@@ -725,6 +725,7 @@ export const CdrFormFigureSizeLarge: string;
 export const CdrIconSizeSm: string;
 export const CdrIconSize: string;
 export const CdrIconSizeLg: string;
+export const CdrIconSizeMixin: string;
 export const CdrDuration1X: string;
 export const CdrDuration2X: string;
 export const CdrDuration3X: string;
