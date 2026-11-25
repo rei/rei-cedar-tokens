@@ -27,9 +27,9 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
 
   if (isScss) {
     imports.push(
-      './utilities/cdr-breakpoint-mixins',
-      './utilities/cdr-display-mixins',
-      './utilities/cdr-type-mixins',
+      './foundations/cdr-text-mixins',
+      './foundations/cdr-display-mixins',
+      './foundations/cdr-breakpoint-mixins',
     );
   }
 
@@ -51,7 +51,7 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
 
     if (fs.pathExistsSync(fsPath)) {
       const hideClause =
-        isScss && importFile === './utilities/cdr-breakpoint-mixins'
+        isScss && importFile === './foundations/cdr-breakpoint-mixins'
           ? ' hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg'
           : '';
       extensionImports.push(`${importStatement} "${importFile}"${hideClause};`);
