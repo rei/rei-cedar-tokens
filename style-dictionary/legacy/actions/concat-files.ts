@@ -25,6 +25,14 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
   ];
   const extensionImports: string[] = [];
 
+  if (isScss) {
+    imports.push(
+      './utilities/cdr-breakpoint-mixins',
+      './utilities/cdr-display-mixins',
+      './utilities/cdr-type-mixins',
+    );
+  }
+
   if (filePath.includes('rei-dot-com')) {
     imports.push(
       './palettes/cdr-palette-membership-subtle',
@@ -42,7 +50,11 @@ const createImportLine = (fileExtension: string, filePath: string): string => {
       : path.join(outputDir, importFile);
 
     if (fs.pathExistsSync(fsPath)) {
-      extensionImports.push(`${importStatement} "${importFile}";`);
+      const hideClause =
+        isScss && importFile === './utilities/cdr-breakpoint-mixins'
+          ? ' hide $cdr-breakpoint-xs, $cdr-breakpoint-sm, $cdr-breakpoint-md, $cdr-breakpoint-lg'
+          : '';
+      extensionImports.push(`${importStatement} "${importFile}"${hideClause};`);
     }
   });
 

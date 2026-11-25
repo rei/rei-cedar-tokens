@@ -1,11 +1,11 @@
-@use '../foundations/cdr-space-icon' as icon;
-
+/* @deprecated These utility mixins are deprecated and will be removed in the next major release of @rei/cdr-tokens (v16). Migrate to the equivalent mixins provided by @rei/cedar. */
+@warn "[@rei/cdr-tokens] scss/utilities mixins are deprecated and will be removed in the next major release (v16). Migrate to the equivalent mixins provided by @rei/cedar.";
 @mixin cdr-icon() {
-  font-size: icon.$cdr-icon-size-mixin;
+  font-size: 2.4rem;
 }
 
 %cdr-icon {
-  font-size: icon.$cdr-icon-size-mixin;
+  font-size: 2.4rem;
 }
 
 @mixin cdr-text-italic() {
