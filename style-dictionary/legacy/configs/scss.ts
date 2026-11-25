@@ -63,11 +63,6 @@ export const scss = (theme: Theme): PlatformConfig => ({
           ]
         : []),
     ],
-    actions: [
-      'emit-utility-files',
-      'emit-text-mixins',
-      'deprecate-component-files',
-      'concat-files',
-    ],
+    actions: ['emit-utility-files', 'deprecate-component-files', 'concat-files'],
   },
 });
