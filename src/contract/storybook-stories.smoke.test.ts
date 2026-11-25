@@ -75,12 +75,13 @@ describe('storybook configuration', () => {
     expect(mainContent).toContain('@storybook/addon-mcp');
   });
 
-  it('preview.ts has controls disabled globally', () => {
+  it('preview.ts has controls configured with matchers', () => {
     const previewPath = resolve(__dirname, '../../.storybook/preview.ts');
     const previewContent = readFileSync(previewPath, 'utf-8');
 
-    // Controls should be disabled for reference pages
-    expect(previewContent).toContain('controls: { disable: true }');
+    // Controls should be configured with matchers for color and date
+    expect(previewContent).toContain('controls: {');
+    expect(previewContent).toContain('matchers: {');
   });
 
   it('preview.ts has docs enabled', () => {
