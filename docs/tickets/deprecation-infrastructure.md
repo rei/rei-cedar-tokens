@@ -12,6 +12,13 @@ Once semantic keys and token names are published in the stable channel, renaming
 
 **Note:** No tokens are currently deprecated. This ticket implements the infrastructure so the pipeline is ready when the first deprecation is needed. The work is generator-only — no token data changes until a deprecation is actually required.
 
+## Current State (as of the v15 token-architecture branch)
+
+- The README's `deprecated-<year>-<release>.json` source-file convention is **documented but unwired**. The `attribute/deprecated` transform (`style-dictionary/legacy/transforms/attribute/deprecated.ts`) does mark matching tokens with `deprecated: true` + year/release attributes — but **nothing consumes those attributes downstream**: no Sass `@warn` emitter, no `@deprecated` JSDoc passthrough, no routing to deprecated-only outputs. The attribute is set and dropped at emit time.
+- No `deprecated-*.json` source files exist in `tokens/` — the convention has never been exercised end to end.
+- As a stopgap on the v15 branch, deprecated artifacts are marked at the **file level** instead: `deprecate-component-files` prepends `/* @deprecated */` headers (now covering `components/**` and `foundations/cdr-color-background.*`), and `emit-utility-files` copies the restored v14 utility mixins into `scss/utilities/` with headers. These are the first real "deprecated" artifacts in the package — when this ticket lands, the token-level path should replace the file-level headers for tokens (mixins remain file-level since they aren't tokens).
+- Open design question this ticket should resolve: the README convention deprecates by **file relocation** (`deprecated-*.json`), while this ticket proposes **in-place metadata** (`$extensions.rei.*`). Pick one and update the README — the metadata approach is the one that works with canonical/normalization-generated tokens, which have no hand-authored source file to relocate.
+
 ## Deprecation Record Format
 
 Deprecations should be declared in source token data as DTCG extension fields. Add the following optional fields to token entries in `tokens/` source files:

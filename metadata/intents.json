@@ -1,0 +1,166 @@
+{
+  "$schema": "Draft — UI intents manifest. Not yet consumed by the build. Source of truth for intent compositions; pushed to Figma as the 'UI intents' collection and validated by computed contrast checks.",
+  "conventions": {
+    "slots": "Named roles an intent composes. Every slot value is a semantic token alias.",
+    "states": "Optional interaction/state variants of the intent (rest, active, selected, disabled...).",
+    "summary": "Short what-is-it line (<=80 chars) — becomes the Figma/TS tooltip summary.",
+    "usage": "Selection condition (<=120 chars) — the predicate a designer/dev/agent matches a task against."
+  },
+  "intents": {
+    "Primary": {
+      "summary": "Primary emphasis UI treatment",
+      "usage": "Default emphasis for content and controls that should read as primary",
+      "slots": {
+        "surface": "{color.surface.neutral-trace}",
+        "text": "{color.text.neutral-prominent}",
+        "icon": "{color.text.neutral-prominent}",
+        "border": "{color.border.neutral}",
+        "text-emphasis": "{color.text.neutral-bold}"
+      }
+    },
+    "Secondary": {
+      "summary": "Secondary emphasis UI treatment",
+      "usage": "Receded emphasis for supporting content; pairs under Primary",
+      "slots": {
+        "surface": "{color.surface.natural}",
+        "text": "{color.text.neutral}",
+        "icon": "{color.text.neutral}",
+        "border": "{color.border.neutral-prominent}"
+      }
+    },
+    "Brand": {
+      "summary": "Brand UI treatment",
+      "usage": "When a surface or element needs the brand treatment",
+      "slots": {
+        "surface": "{color.surface.brand}",
+        "text": "{color.text.neutral-trace}",
+        "icon": "{color.text.neutral-trace}",
+        "border": "{color.border.accent}"
+      }
+    },
+    "Selection": {
+      "summary": "Selected-state treatment",
+      "usage": "Active/selected state for list items, tabs, checkboxes, tree rows",
+      "slots": {
+        "surface": "{color.selection.surface.neutral-subtle}",
+        "text": "{color.selection.text.neutral}",
+        "border": "{color.selection.border.neutral}"
+      },
+      "states": {
+        "rest": {
+          "surface": "{color.selection.surface.neutral-trace}",
+          "border": "{color.selection.border.neutral-faint}"
+        },
+        "selected": {
+          "surface": "{color.selection.surface.neutral-subtle}",
+          "text": "{color.selection.text.neutral}",
+          "border": "{color.selection.border.neutral-bold}"
+        },
+        "trigger": {
+          "text": "{color.selection.text.trigger}",
+          "border": "{color.selection.border.trigger}"
+        }
+      }
+    },
+    "Link": {
+      "summary": "Inline link treatment",
+      "usage": "Text links and inline interactive text by state",
+      "states": {
+        "rest": { "text": "{color.action.text.trigger}" },
+        "active": { "text": "{color.action.text.trigger-faint}" },
+        "visited": { "text": "{color.action.text.trigger-bold}" },
+        "border-hover": { "border": "{color.action.border.trigger}" },
+        "border-active": { "border": "{color.action.border.trigger-faint}" }
+      }
+    },
+    "Feedback": {
+      "summary": "Status feedback treatment",
+      "usage": "Banners, toasts, inline messages communicating status",
+      "slots": {
+        "border-neutral": "{color.feedback.border.neutral-trace}"
+      },
+      "states": {
+        "info": {
+          "surface": "{color.feedback.surface.info-faint}",
+          "surface-bold": "{color.feedback.surface.info}",
+          "text": "{color.feedback.text.info}",
+          "icon": "{color.feedback.icon.info}",
+          "border": "{color.feedback.border.info}",
+          "border-subtle": "{color.feedback.border.info-faint}"
+        },
+        "success": {
+          "surface": "{color.feedback.surface.success-faint}",
+          "surface-bold": "{color.feedback.surface.success}",
+          "text": "{color.feedback.text.success}",
+          "icon": "{color.feedback.icon.success}",
+          "border": "{color.feedback.border.success}",
+          "border-subtle": "{color.feedback.border.success-faint}"
+        },
+        "warning": {
+          "surface": "{color.feedback.surface.warning-faint}",
+          "surface-bold": "{color.feedback.surface.warning}",
+          "text": "{color.feedback.text.warning}",
+          "icon": "{color.feedback.icon.warning}",
+          "border": "{color.feedback.border.warning}",
+          "border-subtle": "{color.feedback.border.warning-faint}"
+        },
+        "error": {
+          "surface": "{color.feedback.surface.error-faint}",
+          "surface-bold": "{color.feedback.surface.error}",
+          "surface-trace": "{color.feedback.surface.error-trace}",
+          "text": "{color.feedback.text.error}",
+          "icon": "{color.feedback.icon.error}",
+          "border": "{color.feedback.border.error}",
+          "border-subtle": "{color.feedback.border.error-faint}"
+        },
+        "neutral": {
+          "surface": "{color.feedback.surface.natural-faint}",
+          "surface-bold": "{color.feedback.surface.natural}",
+          "text": "{color.feedback.text.natural}",
+          "icon": "{color.feedback.icon.natural}",
+          "border": "{color.feedback.border.natural}",
+          "border-subtle": "{color.feedback.border.natural-faint}"
+        }
+      }
+    },
+    "Membership": {
+      "summary": "Membership UI treatment",
+      "usage": "Surfaces and accents communicating member status or rewards",
+      "slots": {
+        "surface": "{color.surface.membership}",
+        "border": "{color.graphic.border.membership}",
+        "graphic-surface": "{color.graphic.surface.membership}"
+      }
+    },
+    "Sale": {
+      "summary": "Sale/promotional UI treatment",
+      "usage": "Price markdowns, promos, sale messaging",
+      "slots": {
+        "surface": "{color.surface.sale}",
+        "text": "{color.text.sale}",
+        "border": "{color.action.border.sale}",
+        "graphic-surface": "{color.graphic.surface.sale}",
+        "graphic-border": "{color.graphic.border.sale}"
+      },
+      "states": {
+        "rest": { "action-surface": "{color.action.surface.sale}" },
+        "active": { "action-surface": "{color.action.surface.sale-faint}" }
+      }
+    },
+    "Rating": {
+      "summary": "Review/rating UI treatment",
+      "usage": "Star ratings and review scores",
+      "slots": {
+        "graphic-surface": "{color.graphic.surface.rating}",
+        "graphic-surface-bold": "{color.graphic.surface.rating-bold}",
+        "graphic-surface-faint": "{color.graphic.surface.rating-faint}",
+        "graphic-border": "{color.graphic.border.rating}"
+      }
+    }
+  },
+  "gaps": {
+    "Disabled": "No disabled-state semantic tokens exist in the semantic collection — flag for design: which tokens serve disabled states?",
+    "Action states": "color.action.* has a full emphasis scale (trace/subtle/faint/prominent/bold/intense) but no explicit state names — needs a decision on whether rest/hover/active/disabled map to scale steps or stay open.",
+    "Control": "color.control.* (27 tokens) has no intent owner — likely needs its own intent or absorption into state variants."
+  }
+}

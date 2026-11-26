@@ -1,9 +1,11 @@
+@use '../foundations/cdr-space-icon' as icon;
+
 @mixin cdr-icon() {
-  font-size: 2.4rem;
+  font-size: icon.$cdr-icon-size-mixin;
 }
 
 %cdr-icon {
-  font-size: 2.4rem;
+  font-size: icon.$cdr-icon-size-mixin;
 }
 
 @mixin cdr-text-italic() {

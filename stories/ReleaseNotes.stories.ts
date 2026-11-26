@@ -8,6 +8,9 @@ const meta: Meta = {
     layout: 'fullscreen',
     controls: { disable: true },
     actions: { disable: true },
+    // The rei/release-notes manager panel is gated by paramKey 'releaseNotes'
+    // and globally disabled in preview.ts — re-enable it only on these pages.
+    releaseNotes: { disable: false },
   },
 };
 

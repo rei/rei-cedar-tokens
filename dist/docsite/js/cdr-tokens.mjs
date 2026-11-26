@@ -747,6 +747,7 @@ export const CdrFormFigureSizeLarge = "20";
 export const CdrIconSizeSm = "16";
 export const CdrIconSize = "24";
 export const CdrIconSizeLg = "32";
+export const CdrIconSizeMixin = "2.4rem";
 export const CdrDuration1X = "100ms";
 export const CdrDuration2X = "200ms";
 export const CdrDuration3X = "300ms";

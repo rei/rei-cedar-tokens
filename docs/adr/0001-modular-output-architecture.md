@@ -2,7 +2,17 @@
 
 ## Status
 
-Accepted
+Accepted — partially implemented (see Implementation Status)
+
+## Governed paths
+
+Claims in this ADR depend on these paths; a commit touching them may invalidate the status below (see the `docs-drift` skill):
+
+- `package.json` (`exports` map — public entrypoints)
+- `style-dictionary/legacy/actions/concat-files.ts` (default-entrypoint composition incl. palette auto-forwarding)
+- `src/contract/canonical-contract.test.ts` (skipped assertions = known gaps)
+- `style-dictionary/legacy/generate-base-types.ts`, `dist/{rei-dot-com,docsite}/types/` (type barrels)
+- `validate.ts` (`validateExportMap()`)
 
 ## TL;DR
 
@@ -18,7 +28,7 @@ Read this before interpreting the architecture sections — some describe planne
 
 - **Done:** Modular `.d.ts` files, literal token-name unions, and module interfaces in generated type outputs.
 - **Done:** Stable barrel export `./types` wired in package exports.
-- **Planned:** `./docsite/types` barrel (`./dist/docsite/types/index.d.ts`) and its package export. `generateSemanticContract` currently writes `index.{mjs,d.ts}` only for `rei-dot-com`; docsite only has the `export *` `tokens.d.ts` barrel from `generate-types-barrel`. ADR-0001 previously listed this as Done — corrected to Planned after the Story 0.8 contract suite flagged it (see the skipped `./docsite/types` assertions in `src/contract/canonical-contract.test.ts`).
+- **Planned:** `./docsite/types` barrel (`./dist/docsite/types/index.d.ts`) and its package export. `generateSemanticContract` currently writes `index.{mjs,d.ts}` only for `rei-dot-com`; docsite only has the `export *` `tokens.d.ts` barrel from `generate-types-barrel`. Note: a `./docsite/types/*` wildcard subpath export has since landed in `package.json`, but the `index.d.ts` barrel it should resolve to still does not exist. ADR-0001 previously listed this as Done — corrected to Planned after the Story 0.8 contract suite flagged it (see the skipped `./docsite/types` assertions in `src/contract/canonical-contract.test.ts`).
 - **Planned:** Palette exclusion from default entrypoint. ADR-0001 "Default Entrypoint Contract" excludes palettes from `cdr-tokens.scss`/`.css`, but `concat-files.ts` currently auto-forwards palette files for `rei-dot-com`. The Story 0.8 contract suite flags this (see the skipped `excludes palettes from the default entrypoint` assertion in `src/contract/canonical-contract.test.ts`).
 - **Done:** Theme-scoped type export patterns (`./rei-dot-com/types/*`, `./docsite/types/*`) available.
 - **Done:** Legacy `cdr-tokens.d.mts` generation and exports removed.

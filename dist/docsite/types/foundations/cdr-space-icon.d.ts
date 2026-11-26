@@ -15,6 +15,13 @@ export interface CdrSpaceIconTokens {
    */
   readonly CdrIconSizeLg: string;
   /**
+   * @usage Icon size for cdr-icon() mixin
+   * @design Used in the cdr-icon() SCSS mixin
+   * @value 2.4rem
+   * @cssvar --cdr-icon-size-mixin
+   */
+  readonly CdrIconSizeMixin: string;
+  /**
    * @usage Small icon size
    * @design Use for dense UI
    * @alternatives {icon.size}

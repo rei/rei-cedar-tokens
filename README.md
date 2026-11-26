@@ -50,6 +50,8 @@ Tokens are generated using [Style Dictionary v4](https://styledictionary.com/).
 **Documentation**:
 
 - [Architecture Guide](./docs/ARCHITECTURE.md) - System architecture and design decisions
+- [Token Description Contract](./docs/TOKEN_DESCRIPTION_CONTRACT.md) - Grammar and policy for token descriptions (ADR 0006), generated not hand-authored
+- [Token & Intent Roadmap](./docs/TOKEN_INTENT_ROADMAP.md) - Phased implementation plan for descriptions, intents, and Figma sync (ADR 0007)
 - [Transform Guide](./docs/TRANSFORMS.md) - Transform ordering, usage, and creation
 - [Contract Alignment Review Map](./docs/CONTRACT_ALIGNMENT_REVIEW_MAP.md) - Reviewer-oriented summary of source and generated output changes for contract-alignment PRs
 

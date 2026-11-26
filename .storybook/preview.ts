@@ -14,9 +14,20 @@ const preview: Preview = {
     docs: {
       theme: cedarTheme,
     },
+    // Reference pages are static — no addon panel tabs unless a story opts in.
+    interactions: { disable: true },
+    actions: { disable: true },
+    releaseNotes: { disable: true },
     options: {
       storySort: {
-        order: ['Release Notes', '*'],
+        order: [
+          'Release Notes',
+          'Tokens',
+          ['UI Semantics', 'UI Intents', 'Palette'],
+          'Guides',
+          ['Using tokens'],
+          '*',
+        ],
       },
     },
     backgrounds: {
